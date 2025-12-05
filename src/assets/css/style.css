@@ -1,2 +1,214 @@
 @import 'tailwindcss';
 @plugin "daisyui";
+
+/* Light Mode Theme - Matching your design */
+@plugin "daisyui/theme" {
+  name: 'diana-light';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Base Colors - Light Mode */
+  --color-base-100: #fafafa; /* Off-white background */
+  --color-base-200: #f4f4f5; /* Light gray */
+  --color-base-300: #e4e4e7; /* Light border */
+  --color-base-content: #09090b; /* Almost black text */
+
+  /* Primary Colors - Purple */
+  --color-primary: #7c3aed; /* Vibrant purple */
+  --color-primary-content: #fafafa; /* White text */
+
+  /* Secondary Colors */
+  --color-secondary: #f4f4f5; /* Light gray */
+  --color-secondary-content: #09090b; /* Dark text */
+
+  /* Accent Colors - Light Purple */
+  --color-accent: #a78bfa; /* Light purple */
+  --color-accent-content: #18181b; /* Dark text */
+
+  /* Neutral Colors */
+  --color-neutral: #71717a; /* Medium gray */
+  --color-neutral-content: #fafafa; /* White text */
+
+  /* State Colors */
+  --color-info: #22d3ee; /* Cyan */
+  --color-info-content: #09090b; /* Dark text */
+
+  --color-success: #34d399; /* Green */
+  --color-success-content: #09090b; /* Dark text */
+
+  --color-warning: #fbbf24; /* Amber */
+  --color-warning-content: #09090b; /* Dark text */
+
+  --color-error: #dc2626; /* Darker red */
+  --color-error-content: #fafafa; /* White text */
+
+  /* Border & Input */
+  --border: 1px;
+
+  /* Border Radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  --radius-btn: 0.5rem;
+  --radius-badge: 0.375rem;
+
+  /* Sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Mode Theme - Matching your design */
+@plugin "daisyui/theme" {
+  name: 'diana-dark';
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* Base Colors - Dark Mode */
+  --color-base-100: #09090b; /* Almost black background */
+  --color-base-200: #18181b; /* Dark gray card background */
+  --color-base-300: #27272a; /* Medium dark borders */
+  --color-base-content: #fafafa; /* Off-white text */
+
+  /* Primary Colors - Light Purple */
+  --color-primary: #a78bfa; /* Light purple */
+  --color-primary-content: #18181b; /* Dark text */
+
+  /* Secondary Colors */
+  --color-secondary: #27272a; /* Dark gray */
+  --color-secondary-content: #fafafa; /* White text */
+
+  /* Accent Colors - Vibrant Purple */
+  --color-accent: #7c3aed; /* Vibrant purple */
+  --color-accent-content: #fafafa; /* White text */
+
+  /* Neutral Colors */
+  --color-neutral: #a1a1aa; /* Gray muted text */
+  --color-neutral-content: #18181b; /* Dark text */
+
+  /* State Colors */
+  --color-info: #22d3ee; /* Cyan */
+  --color-info-content: #09090b; /* Dark text */
+
+  --color-success: #34d399; /* Green */
+  --color-success-content: #09090b; /* Dark text */
+
+  --color-warning: #fbbf24; /* Amber */
+  --color-warning-content: #09090b; /* Dark text */
+
+  --color-error: #f87171; /* Light red/coral */
+  --color-error-content: #18181b; /* Dark text */
+
+  /* Border & Input */
+  --border: 1px;
+
+  /* Border Radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  --radius-btn: 0.5rem;
+  --radius-badge: 0.375rem;
+
+  /* Sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+}
+
+/* RTL Support */
+body {
+  direction: rtl;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    background-color: var(--color-base-100);
+  }
+}
+
+/* Custom Utilities */
+@utility dir-ltr {
+  direction: ltr;
+}
+
+@utility dir-rtl {
+  direction: rtl;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@utility badge-warning {
+  @apply text-white;
+}
+
+@utility divider {
+  @apply my-1;
+}
+
+/* Scrollbar Styling (optional) */
+@layer base {
+  /* Dark mode scrollbar */
+  :root[data-theme='diana-dark'] * {
+    scrollbar-width: thin;
+    scrollbar-color: #3f3f46 transparent;
+  }
+
+  :root[data-theme='diana-dark'] *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  :root[data-theme='diana-dark'] *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :root[data-theme='diana-dark'] *::-webkit-scrollbar-thumb {
+    background-color: #3f3f46;
+    border-radius: 4px;
+  }
+
+  :root[data-theme='diana-dark'] *::-webkit-scrollbar-thumb:hover {
+    background-color: #52525b;
+  }
+
+  /* Light mode scrollbar */
+  :root[data-theme='lastsecond'] * {
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4d8 transparent;
+  }
+
+  :root[data-theme='lastsecond'] *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  :root[data-theme='lastsecond'] *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :root[data-theme='lastsecond'] *::-webkit-scrollbar-thumb {
+    background-color: #d4d4d8;
+    border-radius: 4px;
+  }
+
+  :root[data-theme='lastsecond'] *::-webkit-scrollbar-thumb:hover {
+    background-color: #a1a1aa;
+  }
+}
