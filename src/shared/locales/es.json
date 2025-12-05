@@ -1,0 +1,7 @@
+{
+  "greeting": "Hola",
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
+  }
+}
