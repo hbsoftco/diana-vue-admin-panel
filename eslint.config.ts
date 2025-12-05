@@ -14,6 +14,34 @@ export default antfu(
       '**/coverage/**',
     ],
   },
+  {
+    rules: {
+      'vue/max-attributes-per-line': ['error', {
+        singleline: {
+          max: 2,
+        },
+        multiline: {
+          max: 1,
+        },
+      }],
+      'ts/no-redeclare': 'off',
+      'ts/consistent-type-definitions': ['error', 'type'],
+      'no-console': ['warn'],
+      'antfu/no-top-level-await': ['off'],
+      'node/prefer-global/process': ['off'],
+      'node/no-process-env': ['off'],
+      'perfectionist/sort-imports': ['error', {
+        tsconfigRootDir: '.',
+      }],
+      'unicorn/filename-case': ['error', {
+        cases: {
+          kebabCase: true,
+          pascalCase: true,
+        },
+        ignore: ['README.md'],
+      }],
+    },
+  },
 
   // ========================================
   // 🧪 Vitest Rules
