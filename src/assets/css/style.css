@@ -1,3 +1,4 @@
+@import './fonts.css';
 @import 'tailwindcss';
 @plugin "daisyui";
 
@@ -13,6 +14,9 @@
   --color-base-200: #f4f4f5; /* Light gray */
   --color-base-300: #e4e4e7; /* Light border */
   --color-base-content: #09090b; /* Almost black text */
+
+  --color-menu-bg: #111c43;
+  --color-menu-prime: #a3aed1;
 
   /* Primary Colors - Purple */
   --color-primary: #7c3aed; /* Vibrant purple */
@@ -75,6 +79,10 @@
   --color-base-300: #27272a; /* Medium dark borders */
   --color-base-content: #fafafa; /* Off-white text */
 
+  /* Menu Colors */
+  --color-menu-bg: #1a1c1e;
+  --color-menu-prime: #8f9bb3;
+
   /* Primary Colors - Light Purple */
   --color-primary: #a78bfa; /* Light purple */
   --color-primary-content: #18181b; /* Dark text */
@@ -130,31 +138,19 @@
     height: 100%;
   }
   body {
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
     background-color: var(--color-base-100);
   }
 }
 
 /* Custom Utilities */
-@utility dir-ltr {
-  direction: ltr;
+@utility bg-menu-bg {
+  background-color: var(--color-menu-bg);
 }
 
-@utility dir-rtl {
-  direction: rtl;
-}
-
-@utility container {
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
-
-@utility badge-warning {
-  @apply text-white;
-}
-
-@utility divider {
-  @apply my-1;
+@utility text-menu-prime {
+  color: var(--color-menu-prime);
 }
 
 /* Scrollbar Styling (optional) */
