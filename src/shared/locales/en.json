@@ -3,5 +3,10 @@
   "theme": {
     "light": "Light",
     "dark": "Dark"
+  },
+  "menu": {
+    "dashboards": "Dashboards",
+    "users": "Users",
+    "settings": "Settings"
   }
 }

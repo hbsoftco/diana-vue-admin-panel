@@ -3,5 +3,10 @@
   "theme": {
     "light": "روشن",
     "dark": "تاریک"
+  },
+  "menu": {
+    "dashboards": "داشبوردها",
+    "users": "کاربران",
+    "settings": "تنظیمات"
   }
 }

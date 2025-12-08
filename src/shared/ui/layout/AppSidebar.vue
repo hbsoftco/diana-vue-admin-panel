@@ -1,69 +1,43 @@
 <script setup lang="ts">
+import IconCircle from '~icons/material-symbols/circle'
+import IconCircleOutline from '~icons/material-symbols/circle-outline'
+import IconMaterialSymbolsHomeOutlineRounded from '~icons/material-symbols/home-outline-rounded'
+import IconMdiChevronRight from '~icons/mdi/chevron-right'
+import IconMdiFolderMultiple from '~icons/mdi/folder-multiple'
+import IconMdiPackageVariant from '~icons/mdi/package-variant'
 import { ref } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 
 import type { MenuItem } from '@/shared/types/models'
 
+const route = useRoute()
+
 const menuItems = ref<MenuItem[]>([
   {
-    id: 'dashboard',
-    label: 'Dashboard',
-    icon: '📊',
-    route: '/dashboard',
+    id: 'dashboards',
+    label: 'menu.dashboards',
+    icon: IconMaterialSymbolsHomeOutlineRounded,
+    children: [
+      { id: 'crm', label: 'CRM', route: '/dashboards/crm' },
+      { id: 'ecommerce', label: 'Ecommerce', route: '/dashboards/ecommerce' },
+    ],
   },
   {
     id: 'projects',
     label: 'Projects',
-    icon: '📁',
+    icon: IconMdiFolderMultiple,
     children: [
-      { id: 'all-projects', label: 'All Projects', icon: '📋', route: '/projects' },
-      { id: 'active', label: 'Active', icon: '✅', route: '/projects/active' },
-      { id: 'archived', label: 'Archived', icon: '📦', route: '/projects/archived' },
-    ],
-  },
-  {
-    id: 'team',
-    label: 'Team',
-    icon: '👥',
-    children: [
-      { id: 'members', label: 'Members', icon: '👤', route: '/team/members' },
-      { id: 'departments', label: 'Departments', icon: '🏢', route: '/team/departments' },
-      { id: 'roles', label: 'Roles', icon: '🎭', route: '/team/roles' },
-    ],
-  },
-  {
-    id: 'analytics',
-    label: 'Analytics',
-    icon: '📈',
-    route: '/analytics',
-  },
-  {
-    id: 'settings',
-    label: 'Settings',
-    icon: '⚙️',
-    children: [
-      { id: 'general', label: 'General', icon: '🔧', route: '/settings/general' },
-      { id: 'security', label: 'Security', icon: '🔒', route: '/settings/security' },
-      { id: 'notifications', label: 'Notifications', icon: '🔔', route: '/settings/notifications' },
-    ],
-  },
-  {
-    id: 'settings2',
-    label: 'Settings',
-    icon: '⚙️',
-    children: [
-      { id: 'general', label: 'General', icon: '🔧', route: '/settings/general' },
-      { id: 'security', label: 'Security', icon: '🔒', route: '/settings/security' },
-      { id: 'notifications', label: 'Notifications', icon: '🔔', route: '/settings/notifications' },
-    ],
-  },
-  {
-    id: 'settings3',
-    label: 'Settings',
-    icon: '⚙️',
-    children: [
-      { id: 'general', label: 'General', icon: '🔧', route: '/settings/general' },
-      { id: 'security', label: 'Security', icon: '🔒', route: '/settings/security' },
-      { id: 'notifications', label: 'Notifications', icon: '🔔', route: '/settings/notifications' },
+      { id: 'all-projects', label: 'All Projects', route: '/projects' },
+      { id: 'active', label: 'Active', route: '/projects/active' },
+      {
+        id: 'archived',
+        label: 'Archived',
+        icon: IconMdiPackageVariant,
+        children: [
+          { id: 'archived-2023', label: '2023', route: '/projects/archived/2023' },
+          { id: 'archived-2024', label: '2024', route: '/projects/archived/2024' },
+        ],
+      },
     ],
   },
 ])
@@ -71,28 +45,31 @@ const menuItems = ref<MenuItem[]>([
 const expandedMenus = ref<Set<string>>(new Set())
 
 function toggleMenu(id: string) {
-  if (expandedMenus.value.has(id)) {
+  if (expandedMenus.value.has(id))
     expandedMenus.value.delete(id)
-  }
-  else {
-    expandedMenus.value.add(id)
-  }
+  else expandedMenus.value.add(id)
 }
 
 const isExpanded = (id: string) => expandedMenus.value.has(id)
+
+function getIcon(item: MenuItem) {
+  if (item.route && item.route === route.path)
+    return IconCircle
+  return IconCircleOutline
+}
 </script>
 
 <template>
-  <aside class="w-64 bg-base-100 border-r border-base-300 flex flex-col">
-    <!-- Logo/Brand -->
+  <aside class="w-64 bg-menu-bg border-r rtl:border-l border-base-300 flex flex-col">
+    <!-- Logo -->
     <div class="h-16 flex items-center px-4 border-b border-base-300">
       <div class="flex items-center gap-2">
         <div
           class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-content font-bold"
         >
-          A
+          D
         </div>
-        <span class="font-semibold text-lg">AppName</span>
+        <span class="font-semibold text-lg">Diana</span>
       </div>
     </div>
 
@@ -100,51 +77,85 @@ const isExpanded = (id: string) => expandedMenus.value.has(id)
     <nav class="flex-1 overflow-y-auto py-4">
       <ul class="space-y-1 px-2">
         <li v-for="item in menuItems" :key="item.id">
-          <!-- Parent menu item -->
+          <!-- Parent with children -->
           <div
             v-if="item.children"
-            class="flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer hover:bg-base-200 transition-colors"
-            :class="{ 'bg-base-200': isExpanded(item.id) }"
+            class="flex items-center justify-between font-medium px-3 py-2.5 rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors text-menu-prime"
+            :class="{ 'bg-[#27272a] font-bold': isExpanded(item.id) }"
             @click="toggleMenu(item.id)"
           >
             <div class="flex items-center gap-3">
-              <span class="text-lg">{{ item.icon }}</span>
-              <span class="text-sm font-medium">{{ item.label }}</span>
+              <component :is="item.icon" class="text-lg" />
+              <span class="text-[.85rem] font-medium">{{ $t(item.label) }}</span>
             </div>
-            <span
-              class="text-xs transition-transform"
+            <IconMdiChevronRight
+              class="text-[13.6px] transition-transform"
               :class="{ 'rotate-90': isExpanded(item.id) }"
-            >
-              ▶
-            </span>
+            />
           </div>
 
-          <!-- Single menu item (no children) -->
+          <!-- Parent without children -->
           <RouterLink
             v-else-if="item.route"
             :to="item.route"
-            class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-colors"
+            class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-colors text-menu-prime"
             active-class="bg-primary text-primary-content"
           >
-            <span class="text-lg">{{ item.icon }}</span>
-            <span class="text-sm font-medium">{{ item.label }}</span>
+            <component :is="getIcon(item)" class="text-lg" />
+            <span class="text-[.85rem] font-medium">{{ $t(item.label) }}</span>
           </RouterLink>
 
-          <!-- Nested menu items -->
+          <!-- Level 2 -->
           <ul
             v-if="item.children && isExpanded(item.id)"
-            class="mt-1 ml-4 space-y-1 border-l-2 border-base-300 pl-2"
+            class="mt-1 ltr:ml-4 rtl:mr-4 space-y-1 ltr:border-l-2 rtl:border-r-2 border-base-300 ltr:pl-2 rtl:pr-2"
           >
             <li v-for="child in item.children" :key="child.id">
+              <!-- Level 2 parent -->
+              <div
+                v-if="child.children"
+                class="flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors text-sm"
+                :class="{ 'bg-[#27272a]': isExpanded(child.id) }"
+                @click="toggleMenu(child.id)"
+              >
+                <div class="flex items-center gap-3">
+                  <component :is="child.icon" class="text-sm" />
+                  <span class="text-[.85rem]">{{ child.label }}</span>
+                </div>
+                <IconMdiChevronRight
+                  class="text-xs transition-transform"
+                  :class="{ 'rotate-90': isExpanded(child.id) }"
+                />
+              </div>
+
+              <!-- Level 2 child without children -->
               <RouterLink
-                v-if="child.route"
+                v-else-if="child.route"
                 :to="child.route"
                 class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-colors text-sm"
-                active-class="bg-primary text-primary-content"
+                active-class="text-white"
               >
-                <span>{{ child.icon }}</span>
-                <span>{{ child.label }}</span>
+                <component :is="getIcon(child)" class="text-[.4rem]" />
+                <span class="text-[.78rem]">{{ child.label }}</span>
               </RouterLink>
+
+              <!-- Level 3 -->
+              <ul
+                v-if="child.children && isExpanded(child.id)"
+                class="mt-1 ml-4 space-y-1 border-l-2 border-base-300 pl-2"
+              >
+                <li v-for="grandchild in child.children" :key="grandchild.id">
+                  <RouterLink
+                    v-if="grandchild.route"
+                    :to="grandchild.route"
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-colors text-xs"
+                    active-class="text-white"
+                  >
+                    <component :is="getIcon(grandchild)" class="text-[.4rem]" />
+                    <span>{{ grandchild.label }}</span>
+                  </RouterLink>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
