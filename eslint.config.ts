@@ -8,38 +8,34 @@ export default antfu(
     vue: true,
     typescript: true,
 
-    ignores: [
-      '**/dist/**',
-      '**/dist-ssr/**',
-      '**/coverage/**',
-    ],
+    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
   {
     rules: {
-      'vue/max-attributes-per-line': ['error', {
-        singleline: {
-          max: 2,
-        },
-        multiline: {
-          max: 1,
-        },
-      }],
+      'vue/max-attributes-per-line': 'off',
+      'vue/first-attribute-linebreak': 'off',
       'ts/no-redeclare': 'off',
       'ts/consistent-type-definitions': ['error', 'type'],
       'no-console': ['warn'],
       'antfu/no-top-level-await': ['off'],
       'node/prefer-global/process': ['off'],
       'node/no-process-env': ['off'],
-      'perfectionist/sort-imports': ['error', {
-        tsconfigRootDir: '.',
-      }],
-      'unicorn/filename-case': ['error', {
-        cases: {
-          kebabCase: true,
-          pascalCase: true,
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          tsconfigRootDir: '.',
         },
-        ignore: ['README.md'],
-      }],
+      ],
+      'unicorn/filename-case': [
+        'error',
+        {
+          cases: {
+            kebabCase: true,
+            pascalCase: true,
+          },
+          ignore: ['README.md'],
+        },
+      ],
     },
   },
 
