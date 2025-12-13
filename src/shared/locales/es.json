@@ -3,5 +3,88 @@
   "theme": {
     "light": "Claro",
     "dark": "Oscuro"
+  },
+  "menu": {
+    "dashboards": "Paneles",
+    "users": "Usuarios",
+    "settings": "Configuración"
+  },
+  "pages": {
+    "alerts": {
+      "title": "Elementos de UI",
+      "alerts": "Alertas"
+    },
+    "badge": {
+      "title": "Elementos de UI",
+      "badge": "Insignia"
+    },
+    "breadcrumb": {
+      "title": "Elementos de UI",
+      "breadcrumb": "Migas de pan"
+    },
+    "buttons": {
+      "title": "Elementos de UI",
+      "buttons": "Botones"
+    },
+    "buttonGroup": {
+      "title": "Elementos de UI",
+      "buttonGroup": "Grupo de botones"
+    },
+    "card": {
+      "title": "Elementos de UI",
+      "cards": "Tarjetas"
+    },
+    "dropdowns": {
+      "title": "Elementos de UI",
+      "dropdowns": "Menús desplegables"
+    },
+    "imagesFigures": {
+      "title": "Elementos de UI",
+      "imagesFigures": "Imágenes y figuras"
+    },
+    "linksInteractions": {
+      "title": "Elementos de UI",
+      "linksInteractions": "Enlaces e interacciones"
+    },
+    "listGroup": {
+      "title": "Elementos de UI",
+      "listGroup": "Grupo de lista"
+    },
+    "navsTabs": {
+      "title": "Elementos de UI",
+      "navsTabs": "Navegación y pestañas"
+    },
+    "objectFit": {
+      "title": "Elementos de UI",
+      "objectFit": "Ajuste de objeto"
+    },
+    "pagination": {
+      "title": "Elementos de UI",
+      "pagination": "Paginación"
+    },
+    "popovers": {
+      "title": "Elementos de UI",
+      "popovers": "Popovers"
+    },
+    "progress": {
+      "title": "Elementos de UI",
+      "progress": "Progreso"
+    },
+    "spinners": {
+      "title": "Elementos de UI",
+      "spinners": "Spinners"
+    },
+    "toasts": {
+      "title": "Elementos de UI",
+      "toasts": "Toasts"
+    },
+    "tooltips": {
+      "title": "Elementos de UI",
+      "tooltips": "Tooltips"
+    },
+    "typography": {
+      "title": "Elementos de UI",
+      "typography": "Tipografía"
+    }
   }
 }

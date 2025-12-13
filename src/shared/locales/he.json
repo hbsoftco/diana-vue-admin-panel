@@ -3,5 +3,88 @@
   "theme": {
     "light": "בהיר",
     "dark": "כהה"
+  },
+  "menu": {
+    "dashboards": "לוחות בקרה",
+    "users": "משתמשים",
+    "settings": "הגדרות"
+  },
+  "pages": {
+    "alerts": {
+      "title": "אלמנטי ממשק",
+      "alerts": "התראות"
+    },
+    "badge": {
+      "title": "אלמנטי ממשק",
+      "badge": "תג"
+    },
+    "breadcrumb": {
+      "title": "אלמנטי ממשק",
+      "breadcrumb": "נתיב ניווט"
+    },
+    "buttons": {
+      "title": "אלמנטי ממשק",
+      "buttons": "כפתורים"
+    },
+    "buttonGroup": {
+      "title": "אלמנטי ממשק",
+      "buttonGroup": "קבוצת כפתורים"
+    },
+    "card": {
+      "title": "אלמנטי ממשק",
+      "cards": "כרטיסים"
+    },
+    "dropdowns": {
+      "title": "אלמנטי ממשק",
+      "dropdowns": "תפריטים נפתחים"
+    },
+    "imagesFigures": {
+      "title": "אלמנטי ממשק",
+      "imagesFigures": "תמונות וצורות"
+    },
+    "linksInteractions": {
+      "title": "אלמנטי ממשק",
+      "linksInteractions": "קישורים ואינטראקציות"
+    },
+    "listGroup": {
+      "title": "אלמנטי ממשק",
+      "listGroup": "קבוצת רשימה"
+    },
+    "navsTabs": {
+      "title": "אלמנטי ממשק",
+      "navsTabs": "ניווט ולשוניות"
+    },
+    "objectFit": {
+      "title": "אלמנטי ממשק",
+      "objectFit": "התאמת אובייקט"
+    },
+    "pagination": {
+      "title": "אלמנטי ממשק",
+      "pagination": "עמודים"
+    },
+    "popovers": {
+      "title": "אלמנטי ממשק",
+      "popovers": "חלונות קופצים"
+    },
+    "progress": {
+      "title": "אלמנטי ממשק",
+      "progress": "התקדמות"
+    },
+    "spinners": {
+      "title": "אלמנטי ממשק",
+      "spinners": "ספינרים"
+    },
+    "toasts": {
+      "title": "אלמנטי ממשק",
+      "toasts": "הודעות"
+    },
+    "tooltips": {
+      "title": "אלמנטי ממשק",
+      "tooltips": "הסברים"
+    },
+    "typography": {
+      "title": "אלמנטי ממשק",
+      "typography": "טיפוגרפיה"
+    }
   }
 }

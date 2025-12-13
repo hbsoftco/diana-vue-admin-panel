@@ -8,5 +8,83 @@
     "dashboards": "Dashboards",
     "users": "Users",
     "settings": "Settings"
+  },
+  "pages": {
+    "alerts": {
+      "title": "Ui Elements",
+      "alerts": "Alerts"
+    },
+    "badge": {
+      "title": "Ui Elements",
+      "badge": "Badge"
+    },
+    "breadcrumb": {
+      "title": "Ui Elements",
+      "breadcrumb": "Breadcrumb"
+    },
+    "buttons": {
+      "title": "Ui Elements",
+      "buttons": "Buttons"
+    },
+    "buttonGroup": {
+      "title": "Ui Elements",
+      "buttonGroup": "Button Group"
+    },
+    "card": {
+      "title": "Ui Elements",
+      "cards": "Cards"
+    },
+    "dropdowns": {
+      "title": "Ui Elements",
+      "dropdowns": "Dropdowns"
+    },
+    "imagesFigures": {
+      "title": "Ui Elements",
+      "imagesFigures": "Images & Figures"
+    },
+    "linksInteractions": {
+      "title": "Ui Elements",
+      "linksInteractions": "Links & Interactions"
+    },
+    "listGroup": {
+      "title": "Ui Elements",
+      "listGroup": "List Group"
+    },
+    "navsTabs": {
+      "title": "Ui Elements",
+      "navsTabs": "Navs & Tabs"
+    },
+    "objectFit": {
+      "title": "Ui Elements",
+      "objectFit": "Object Fit"
+    },
+    "pagination": {
+      "title": "Ui Elements",
+      "pagination": "Pagination"
+    },
+    "popovers": {
+      "title": "Ui Elements",
+      "popovers": "Popovers"
+    },
+    "progress": {
+      "title": "Ui Elements",
+      "progress": "Progress"
+    },
+    "spinners": {
+      "title": "Ui Elements",
+      "spinners": "Spinners"
+    },
+    "toasts": {
+      "title": "Ui Elements",
+      "toasts": "Toasts"
+    },
+    "tooltips": {
+      "title": "Ui Elements",
+      "tooltips": "Tooltips"
+    },
+    "typography": {
+      "title": "Ui Elements",
+      "typography": "Typography"
+    }
   }
 }

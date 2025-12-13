@@ -3,5 +3,88 @@
   "theme": {
     "light": "Clair",
     "dark": "Sombre"
+  },
+  "menu": {
+    "dashboards": "Tableaux de bord",
+    "users": "Utilisateurs",
+    "settings": "Paramètres"
+  },
+  "pages": {
+    "alerts": {
+      "title": "Éléments UI",
+      "alerts": "Alertes"
+    },
+    "badge": {
+      "title": "Éléments UI",
+      "badge": "Badge"
+    },
+    "breadcrumb": {
+      "title": "Éléments UI",
+      "breadcrumb": "Fil d'Ariane"
+    },
+    "buttons": {
+      "title": "Éléments UI",
+      "buttons": "Boutons"
+    },
+    "buttonGroup": {
+      "title": "Éléments UI",
+      "buttonGroup": "Groupe de boutons"
+    },
+    "card": {
+      "title": "Éléments UI",
+      "cards": "Cartes"
+    },
+    "dropdowns": {
+      "title": "Éléments UI",
+      "dropdowns": "Menus déroulants"
+    },
+    "imagesFigures": {
+      "title": "Éléments UI",
+      "imagesFigures": "Images et figures"
+    },
+    "linksInteractions": {
+      "title": "Éléments UI",
+      "linksInteractions": "Liens et interactions"
+    },
+    "listGroup": {
+      "title": "Éléments UI",
+      "listGroup": "Groupe de liste"
+    },
+    "navsTabs": {
+      "title": "Éléments UI",
+      "navsTabs": "Navigation et onglets"
+    },
+    "objectFit": {
+      "title": "Éléments UI",
+      "objectFit": "Ajustement d'objet"
+    },
+    "pagination": {
+      "title": "Éléments UI",
+      "pagination": "Pagination"
+    },
+    "popovers": {
+      "title": "Éléments UI",
+      "popovers": "Popovers"
+    },
+    "progress": {
+      "title": "Éléments UI",
+      "progress": "Progression"
+    },
+    "spinners": {
+      "title": "Éléments UI",
+      "spinners": "Spinners"
+    },
+    "toasts": {
+      "title": "Éléments UI",
+      "toasts": "Toasts"
+    },
+    "tooltips": {
+      "title": "Éléments UI",
+      "tooltips": "Info-bulles"
+    },
+    "typography": {
+      "title": "Éléments UI",
+      "typography": "Typographie"
+    }
   }
 }
