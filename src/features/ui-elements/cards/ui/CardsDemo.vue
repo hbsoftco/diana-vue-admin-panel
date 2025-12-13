@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4">
+  <div>
     <p class="text-gray-400">
       Cards component demo coming soon...
     </p>

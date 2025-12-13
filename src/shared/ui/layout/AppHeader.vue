@@ -2,26 +2,6 @@
 import LanguageToggle from '@shared/ui/layout/LanguageToggle.vue'
 import ThemeToggle from '@shared/ui/layout/ThemeToggle.vue'
 import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-
-// Get page title from route meta or generate from path
-const pageTitle = computed(() => {
-  if (route.meta.title) {
-    return route.meta.title as string
-  }
-
-  // Generate title from route path
-  const segments = route.path.split('/').filter(Boolean)
-  if (segments.length === 0)
-    return 'Dashboard'
-
-  return segments[segments.length - 1]
-    ?.split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-})
 
 // Search functionality
 const searchQuery = ref('')
@@ -88,14 +68,10 @@ function closeAllDropdowns() {
 </script>
 
 <template>
-  <header class="h-16 border-b border-base-300 bg-base-100 sticky top-0 z-10">
+  <header class="h-16 border-b border-base-300 bg-menu-bg sticky top-0 z-10">
     <div class="h-full flex items-center justify-between px-6 gap-4">
       <!-- Left: Page Title & Search -->
       <div class="flex items-center gap-4 flex-1 min-w-0">
-        <h1 class="text-xl font-semibold truncate">
-          {{ pageTitle }}
-        </h1>
-
         <!-- Search Bar -->
         <div class="relative max-w-md w-full hidden md:block">
           <input
@@ -108,7 +84,6 @@ function closeAllDropdowns() {
             @blur="isSearchFocused = false"
             @keyup.enter="handleSearch"
           >
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-base-content/50"> 🔍 </span>
         </div>
       </div>
 

@@ -3,5 +3,88 @@
   "theme": {
     "light": "فاتح",
     "dark": "داكن"
+  },
+  "menu": {
+    "dashboards": "لوحات المعلومات",
+    "users": "المستخدمون",
+    "settings": "الإعدادات"
+  },
+  "pages": {
+    "alerts": {
+      "title": "عناصر واجهة المستخدم",
+      "alerts": "التنبيهات"
+    },
+    "badge": {
+      "title": "عناصر واجهة المستخدم",
+      "badge": "الشارة"
+    },
+    "breadcrumb": {
+      "title": "عناصر واجهة المستخدم",
+      "breadcrumb": "مسار التنقل"
+    },
+    "buttons": {
+      "title": "عناصر واجهة المستخدم",
+      "buttons": "الأزرار"
+    },
+    "buttonGroup": {
+      "title": "عناصر واجهة المستخدم",
+      "buttonGroup": "مجموعة الأزرار"
+    },
+    "card": {
+      "title": "عناصر واجهة المستخدم",
+      "cards": "البطاقات"
+    },
+    "dropdowns": {
+      "title": "عناصر واجهة المستخدم",
+      "dropdowns": "القوائم المنسدلة"
+    },
+    "imagesFigures": {
+      "title": "عناصر واجهة المستخدم",
+      "imagesFigures": "الصور والأشكال"
+    },
+    "linksInteractions": {
+      "title": "عناصر واجهة المستخدم",
+      "linksInteractions": "الروابط والتفاعلات"
+    },
+    "listGroup": {
+      "title": "عناصر واجهة المستخدم",
+      "listGroup": "مجموعة القائمة"
+    },
+    "navsTabs": {
+      "title": "عناصر واجهة المستخدم",
+      "navsTabs": "التنقل والتبويبات"
+    },
+    "objectFit": {
+      "title": "عناصر واجهة المستخدم",
+      "objectFit": "ملاءمة الكائن"
+    },
+    "pagination": {
+      "title": "عناصر واجهة المستخدم",
+      "pagination": "ترقيم الصفحات"
+    },
+    "popovers": {
+      "title": "عناصر واجهة المستخدم",
+      "popovers": "النوافذ المنبثقة"
+    },
+    "progress": {
+      "title": "عناصر واجهة المستخدم",
+      "progress": "التقدم"
+    },
+    "spinners": {
+      "title": "عناصر واجهة المستخدم",
+      "spinners": "الدوائر"
+    },
+    "toasts": {
+      "title": "عناصر واجهة المستخدم",
+      "toasts": "الإشعارات"
+    },
+    "tooltips": {
+      "title": "عناصر واجهة المستخدم",
+      "tooltips": "تلميحات"
+    },
+    "typography": {
+      "title": "عناصر واجهة المستخدم",
+      "typography": "الطباعة"
+    }
   }
 }

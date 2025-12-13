@@ -75,9 +75,9 @@
 
   /* Base Colors - Dark Mode */
   --color-base-100: #09090b; /* Almost black background */
-  --color-base-200: #18181b; /* Dark gray card background */
+  --color-base-200: #222224; /* Dark gray card background */
   --color-base-300: #27272a; /* Medium dark borders */
-  --color-base-content: #fafafa; /* Off-white text */
+  --color-base-content: #ffffffb3; /* Off-white text */
 
   /* Menu Colors */
   --color-menu-bg: #1a1c1e;

@@ -8,5 +8,83 @@
     "dashboards": "داشبوردها",
     "users": "کاربران",
     "settings": "تنظیمات"
+  },
+  "pages": {
+    "alerts": {
+      "title": "المان‌های ظاهری",
+      "alerts": "هشدارها"
+    },
+    "badge": {
+      "title": "المان‌های ظاهری",
+      "badge": "نشان"
+    },
+    "breadcrumb": {
+      "title": "المان‌های ظاهری",
+      "breadcrumb": "مسیر ناوبری"
+    },
+    "buttons": {
+      "title": "المان‌های ظاهری",
+      "buttons": "دکمه‌ها"
+    },
+    "buttonGroup": {
+      "title": "المان‌های ظاهری",
+      "buttonGroup": "گروه دکمه"
+    },
+    "card": {
+      "title": "المان‌های ظاهری",
+      "cards": "کاردها"
+    },
+    "dropdowns": {
+      "title": "المان‌های ظاهری",
+      "dropdowns": "منوهای کشویی"
+    },
+    "imagesFigures": {
+      "title": "المان‌های ظاهری",
+      "imagesFigures": "تصاویر و اشکال"
+    },
+    "linksInteractions": {
+      "title": "المان‌های ظاهری",
+      "linksInteractions": "لینک‌ها و تعاملات"
+    },
+    "listGroup": {
+      "title": "المان‌های ظاهری",
+      "listGroup": "گروه لیست"
+    },
+    "navsTabs": {
+      "title": "المان‌های ظاهری",
+      "navsTabs": "ناوبری و تب‌ها"
+    },
+    "objectFit": {
+      "title": "المان‌های ظاهری",
+      "objectFit": "تناسب شیء"
+    },
+    "pagination": {
+      "title": "المان‌های ظاهری",
+      "pagination": "صفحه‌بندی"
+    },
+    "popovers": {
+      "title": "المان‌های ظاهری",
+      "popovers": "پاپ‌آورها"
+    },
+    "progress": {
+      "title": "المان‌های ظاهری",
+      "progress": "پیشرفت"
+    },
+    "spinners": {
+      "title": "المان‌های ظاهری",
+      "spinners": "چرخ‌اندن‌ها"
+    },
+    "toasts": {
+      "title": "المان‌های ظاهری",
+      "toasts": "اعلان‌ها"
+    },
+    "tooltips": {
+      "title": "المان‌های ظاهری",
+      "tooltips": "راهنماها"
+    },
+    "typography": {
+      "title": "المان‌های ظاهری",
+      "typography": "تایپوگرافی"
+    }
   }
 }
