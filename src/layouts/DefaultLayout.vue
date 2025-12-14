@@ -27,7 +27,7 @@ watchEffect(() => {
           <h1 class="font-semibold text-base-content text-lg">
             {{ $t((route?.meta?.pageTitle as string) || 'menu.dashboards') }}
           </h1>
-          <div class="breadcrumbs text-xs">
+          <div class="breadcrumbs text-[13px]">
             <ul>
               <li
                 v-for="(crumb, index) in (route.meta.breadcrumb as {
@@ -37,10 +37,14 @@ watchEffect(() => {
                 :key="index"
                 class="font-medium"
               >
-                <RouterLink v-if="crumb.link" :to="crumb.link">
+                <RouterLink
+                  v-if="crumb.link"
+                  :to="crumb.link"
+                  class="no-underline text-base-content"
+                >
                   {{ $t(crumb.label) }}
                 </RouterLink>
-                <span v-else>{{ $t(crumb.label) }}</span>
+                <span v-else class="no-underline">{{ $t(crumb.label) }}</span>
               </li>
             </ul>
           </div>

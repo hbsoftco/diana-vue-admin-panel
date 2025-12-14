@@ -3,17 +3,6 @@ import LanguageToggle from '@shared/ui/layout/LanguageToggle.vue'
 import ThemeToggle from '@shared/ui/layout/ThemeToggle.vue'
 import { computed, ref } from 'vue'
 
-// Search functionality
-const searchQuery = ref('')
-const isSearchFocused = ref(false)
-
-function handleSearch() {
-  if (searchQuery.value.trim()) {
-    console.log('Searching for:', searchQuery.value)
-    // Implement your search logic here
-  }
-}
-
 // Notifications
 const notifications = ref([
   {
@@ -70,22 +59,9 @@ function closeAllDropdowns() {
 <template>
   <header class="h-16 border-b border-base-300 bg-menu-bg sticky top-0 z-10">
     <div class="h-full flex items-center justify-between px-6 gap-4">
-      <!-- Left: Page Title & Search -->
-      <div class="flex items-center gap-4 flex-1 min-w-0">
-        <!-- Search Bar -->
-        <div class="relative max-w-md w-full hidden md:block">
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="Search..."
-            class="input input-sm input-bordered w-full pl-10 pr-4"
-            :class="{ 'input-primary': isSearchFocused }"
-            @focus="isSearchFocused = true"
-            @blur="isSearchFocused = false"
-            @keyup.enter="handleSearch"
-          >
-        </div>
-      </div>
+      <button class="cursor-pointer">
+        <i-hugeicons-menu-02 class="text-xl" />
+      </button>
 
       <!-- Right: Actions -->
       <div class="flex items-center gap-2">
@@ -102,8 +78,8 @@ function closeAllDropdowns() {
 
         <!-- Notifications -->
         <div class="relative">
-          <button class="btn btn-ghost btn-sm btn-circle relative" @click="toggleNotifications">
-            🔔
+          <button class="btn btn-circle p-2 relative" @click="toggleNotifications">
+            <i-iconoir-bell-notification class="text-xl" />
             <span
               v-if="unreadCount > 0"
               class="absolute top-1 right-1 w-4 h-4 bg-error rounded-full text-xs text-error-content flex items-center justify-center font-bold"

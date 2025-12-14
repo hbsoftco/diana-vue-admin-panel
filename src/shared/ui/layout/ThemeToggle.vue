@@ -25,6 +25,7 @@ function toggleTheme() {
     @click="toggleTheme"
   >
     <i-tabler-sun v-if="isDark" class="text-xl" />
+
     <i-tabler-moon v-else class="text-xl" />
   </button>
 </template>
