@@ -15,6 +15,8 @@
   --color-base-300: #e4e4e7; /* Light border */
   --color-base-content: #09090b; /* Almost black text */
 
+  --color-bg-background: '#ffffff';
+
   --color-menu-bg: #111c43;
   --color-menu-prime: #a3aed1;
 
@@ -75,9 +77,11 @@
 
   /* Base Colors - Dark Mode */
   --color-base-100: #09090b; /* Almost black background */
-  --color-base-200: #222224; /* Dark gray card background */
+  --color-base-200: #252729; /* Dark gray card background */
   --color-base-300: #27272a; /* Medium dark borders */
   --color-base-content: #ffffffb3; /* Off-white text */
+
+  --color-bg-background: '#1a1c1e';
 
   /* Menu Colors */
   --color-menu-bg: #1a1c1e;
@@ -147,6 +151,10 @@
 /* Custom Utilities */
 @utility bg-menu-bg {
   background-color: var(--color-menu-bg);
+}
+
+@utility bg-background {
+  background-color: var(--color-bg-background);
 }
 
 @utility text-menu-prime {
