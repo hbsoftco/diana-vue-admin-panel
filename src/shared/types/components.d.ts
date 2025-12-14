@@ -11,8 +11,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IHugeiconsMenu02: typeof import('~icons/hugeicons/menu02')['default']
+    'IIconoir=bellNotification': typeof import('~icons/iconoir/=bell-notification')['default']
+    IIconoirBellNotification: typeof import('~icons/iconoir/bell-notification')['default']
     IMdiMoonWaningCrescent: typeof import('~icons/mdi/moon-waning-crescent')['default']
     IMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
+    ITablerCode: typeof import('~icons/tabler/code')['default']
     ITablerMoon: typeof import('~icons/tabler/moon')['default']
     ITablerSun: typeof import('~icons/tabler/sun')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
