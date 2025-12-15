@@ -24,6 +24,7 @@ function switchLanguage(lang: string) {
   locale.value = lang
 
   document.documentElement.dir = languages.find(l => l.code === lang)?.dir || 'ltr'
+  document.documentElement.lang = lang
 }
 
 onMounted(() => {
