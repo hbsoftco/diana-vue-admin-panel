@@ -25,26 +25,26 @@
   --color-primary-content: #fafafa; /* White text */
 
   /* Secondary Colors */
-  --color-secondary: #f4f4f5; /* Light gray */
-  --color-secondary-content: #09090b; /* Dark text */
+  --color-secondary: #e42c8e; /* Light gray */
+  --color-secondary-content: #fafafa; /* Dark text */
 
   /* Accent Colors - Light Purple */
   --color-accent: #a78bfa; /* Light purple */
-  --color-accent-content: #18181b; /* Dark text */
+  --color-accent-content: #fafafa; /* Dark text */
 
   /* Neutral Colors */
-  --color-neutral: #71717a; /* Medium gray */
-  --color-neutral-content: #fafafa; /* White text */
+  --color-neutral: #2b2e31; /* Medium gray */
+  --color-neutral-content: #ffffffb3; /* White text */
 
   /* State Colors */
   --color-info: #22d3ee; /* Cyan */
-  --color-info-content: #09090b; /* Dark text */
+  --color-info-content: #fafafa; /* Dark text */
 
   --color-success: #34d399; /* Green */
-  --color-success-content: #09090b; /* Dark text */
+  --color-success-content: #fafafa; /* Dark text */
 
   --color-warning: #fbbf24; /* Amber */
-  --color-warning-content: #09090b; /* Dark text */
+  --color-warning-content: #fafafa; /* Dark text */
 
   --color-error: #dc2626; /* Darker red */
   --color-error-content: #fafafa; /* White text */
@@ -88,11 +88,11 @@
   --color-menu-prime: #8f9bb3;
 
   /* Primary Colors - Light Purple */
-  --color-primary: #a78bfa; /* Light purple */
-  --color-primary-content: #18181b; /* Dark text */
+  --color-primary: #845adf; /* Light purple */
+  --color-primary-content: #fafafa; /* Dark text */
 
   /* Secondary Colors */
-  --color-secondary: #27272a; /* Dark gray */
+  --color-secondary: #e42c8e; /* Dark gray */
   --color-secondary-content: #fafafa; /* White text */
 
   /* Accent Colors - Vibrant Purple */
@@ -100,21 +100,21 @@
   --color-accent-content: #fafafa; /* White text */
 
   /* Neutral Colors */
-  --color-neutral: #a1a1aa; /* Gray muted text */
-  --color-neutral-content: #18181b; /* Dark text */
+  --color-neutral: #2b2e31; /* Gray muted text */
+  --color-neutral-content: #ffffffb3; /* Dark text */
 
   /* State Colors */
-  --color-info: #22d3ee; /* Cyan */
-  --color-info-content: #09090b; /* Dark text */
+  --color-info: #49b6f5; /* Cyan */
+  --color-info-content: #fafafa; /* Dark text */
 
-  --color-success: #34d399; /* Green */
-  --color-success-content: #09090b; /* Dark text */
+  --color-success: #26bf94; /* Green */
+  --color-success-content: #fafafa; /* Dark text */
 
   --color-warning: #fbbf24; /* Amber */
-  --color-warning-content: #09090b; /* Dark text */
+  --color-warning-content: #fafafa; /* Dark text */
 
-  --color-error: #f87171; /* Light red/coral */
-  --color-error-content: #18181b; /* Dark text */
+  --color-error: #e6533c; /* Light red/coral */
+  --color-error-content: #fafafa; /* Dark text */
 
   /* Border & Input */
   --border: 1px;
@@ -138,14 +138,18 @@
 
 /* Base Styles */
 @layer base {
-  html {
-    height: 100%;
-  }
   body {
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    background-color: var(--color-base-100);
   }
+
+  html:lang(fa) body,
+  html:lang(ar) body {
+    font-family: 'Dana', sans-serif;
+  }
+}
+
+@utility btn {
+  @apply shadow-none font-medium active:translate-0;
 }
 
 /* Custom Utilities */

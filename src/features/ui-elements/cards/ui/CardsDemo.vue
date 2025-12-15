@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Card from '@shared/ui/Card.vue'
+
+import Button from '@/shared/ui/Button.vue'
 </script>
 
 <template>
@@ -9,10 +11,13 @@ import Card from '@shared/ui/Card.vue'
         <template #header>
           <div class="flex items-center justify-between w-full">
             <span class="text-sm font-semibold text-base-content">Default Buttons</span>
-            <button class="btn btn-xs btn-primary btn-soft">
+            <Button variant="primary" size="sm" :soft="true">
               Show Code
-              <span class="ml-1">&lt;/&gt;</span>
-            </button>
+
+              <template #icon-right>
+                <i-material-symbols-light-code class="text-sm" />
+              </template>
+            </Button>
           </div>
         </template>
         <div class="flex flex-wrap gap-2">
@@ -34,11 +39,8 @@ import Card from '@shared/ui/Card.vue'
           <button class="btn btn-info">
             Info
           </button>
-          <button class="btn bg-base-300 text-base-content hover:bg-base-300/80">
-            Light
-          </button>
-          <button class="btn bg-base-100 text-base-content hover:bg-base-100/80">
-            Dark
+          <button class="btn btn-neutral">
+            Neutral
           </button>
           <button class="btn btn-link">
             Link
