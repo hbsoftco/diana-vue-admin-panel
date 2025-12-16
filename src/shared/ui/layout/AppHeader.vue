@@ -57,7 +57,9 @@ function closeAllDropdowns() {
 </script>
 
 <template>
-  <header class="h-16 border-b border-base-300 bg-menu-bg sticky top-0 z-10">
+  <header
+    class="h-16 border-b border-(--color-border-header) bg-(--color-bg-header) sticky top-0 z-10"
+  >
     <div class="h-full flex items-center justify-between px-6 gap-4">
       <button class="cursor-pointer">
         <i-hugeicons-menu-02 class="text-xl" />

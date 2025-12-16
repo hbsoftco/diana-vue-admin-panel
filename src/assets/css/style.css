@@ -15,11 +15,6 @@
   --color-base-300: #e4e4e7; /* Light border */
   --color-base-content: #09090b; /* Almost black text */
 
-  --color-bg-background: '#ffffff';
-
-  --color-menu-bg: #111c43;
-  --color-menu-prime: #a3aed1;
-
   /* Primary Colors - Purple */
   --color-primary: #7c3aed; /* Vibrant purple */
   --color-primary-content: #fafafa; /* White text */
@@ -67,6 +62,18 @@
   --depth: 1;
   --noise: 0;
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+  /* Custom Colors */
+
+  --color-bg-background: '#f0f1f7';
+  --color-bg-hover: '#1d284d';
+
+  --color-border-header: #e6e6e6;
+  --color-bg-header: '#ffffff';
+
+  --color-menu-bg: #111c43;
+  --color-menu-prime: #a3aed1;
+  --color-menu-border: #293356;
 }
 
 /* Dark Mode Theme - Matching your design */
@@ -80,12 +87,6 @@
   --color-base-200: #252729; /* Dark gray card background */
   --color-base-300: #27272a; /* Medium dark borders */
   --color-base-content: #ffffffb3; /* Off-white text */
-
-  --color-bg-background: '#1a1c1e';
-
-  /* Menu Colors */
-  --color-menu-bg: #1a1c1e;
-  --color-menu-prime: #8f9bb3;
 
   /* Primary Colors - Light Purple */
   --color-primary: #845adf; /* Light purple */
@@ -134,9 +135,28 @@
   --depth: 1;
   --noise: 0;
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+
+  /* Custom Colors  */
+  --color-bg-background: '#252729';
+  --color-bg-hover: '#27272a';
+
+  --color-border-header: #313335;
+  --color-bg-header: '#1a1c1e';
+
+  --color-menu-bg: #1a1c1e;
+  --color-menu-prime: #8f9bb3;
+  --color-menu-border: #313335;
 }
 
-/* Base Styles */
+@utility btn {
+  @apply shadow-none font-medium active:translate-0;
+}
+
+@utility text-menu-prime {
+  color: var(--color-menu-prime);
+}
+
+/* Scrollbar Styling (optional) */
 @layer base {
   body {
     font-family: 'Montserrat', sans-serif;
@@ -146,36 +166,16 @@
   html:lang(ar) body {
     font-family: 'Dana', sans-serif;
   }
-}
 
-@utility btn {
-  @apply shadow-none font-medium active:translate-0;
-}
+  :root *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
 
-/* Custom Utilities */
-@utility bg-menu-bg {
-  background-color: var(--color-menu-bg);
-}
-
-@utility bg-background {
-  background-color: var(--color-bg-background);
-}
-
-@utility text-menu-prime {
-  color: var(--color-menu-prime);
-}
-
-/* Scrollbar Styling (optional) */
-@layer base {
   /* Dark mode scrollbar */
   :root[data-theme='diana-dark'] * {
     scrollbar-width: thin;
     scrollbar-color: #3f3f46 transparent;
-  }
-
-  :root[data-theme='diana-dark'] *::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
   }
 
   :root[data-theme='diana-dark'] *::-webkit-scrollbar-track {
@@ -192,26 +192,21 @@
   }
 
   /* Light mode scrollbar */
-  :root[data-theme='lastsecond'] * {
+  :root[data-theme='diana-light'] * {
     scrollbar-width: thin;
     scrollbar-color: #d4d4d8 transparent;
   }
 
-  :root[data-theme='lastsecond'] *::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  :root[data-theme='lastsecond'] *::-webkit-scrollbar-track {
+  :root[data-theme='diana-light'] *::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  :root[data-theme='lastsecond'] *::-webkit-scrollbar-thumb {
+  :root[data-theme='diana-light'] *::-webkit-scrollbar-thumb {
     background-color: #d4d4d8;
     border-radius: 4px;
   }
 
-  :root[data-theme='lastsecond'] *::-webkit-scrollbar-thumb:hover {
+  :root[data-theme='diana-light'] *::-webkit-scrollbar-thumb:hover {
     background-color: #a1a1aa;
   }
 }
