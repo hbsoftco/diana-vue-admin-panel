@@ -41,19 +41,18 @@ const isExpanded = () => props.expandedMenus.has(props.item.id)
 const hasActiveRoute = () => (props.item.children ? hasActiveChild(props.item) : false)
 const getIcon = () => (props.item.route === route.path ? IconCircle : IconCircleOutline)
 
+function isActive() {
+  return props.item.route === route.path || hasActiveRoute()
+}
+
 // Dynamic classes based on level
 function getLevelClasses() {
   const baseClasses = {
     parent:
-      'flex items-center justify-between px-3 py-2.5 rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors text-menu-prime',
-    link: 'flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-colors',
+      'flex items-center justify-between px-3 py-2.5 rounded-lg cursor-pointer hover:bg-(--color-bg-hover) transition-colors text-menu-prime',
+    link: 'flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-(--color-bg-hover) transition-colors',
     icon: props.level === 1 ? 'text-lg' : props.level === 2 ? 'text-[.4rem]' : 'text-[.4rem]',
-    text:
-      props.level === 1
-        ? 'text-[.85rem] font-medium'
-        : props.level === 2
-          ? 'text-[.78rem]'
-          : 'text-xs',
+    text: props.level === 1 ? 'text-[.85rem]' : props.level === 2 ? 'text-[.78rem]' : 'text-xs',
   }
   return baseClasses
 }
@@ -69,8 +68,8 @@ const classes = getLevelClasses()
       :class="[
         classes.parent,
         {
-          'bg-[#27272a] font-bold': isExpanded() || hasActiveRoute(),
-          'text-white': hasActiveRoute(),
+          'bg-(--color-bg-hover)': isExpanded(),
+          'font-semibold text-white': isActive(),
         },
       ]"
       @click="emit('toggle', item.id)"
@@ -89,7 +88,11 @@ const classes = getLevelClasses()
     <RouterLink
       v-else-if="item.route"
       :to="item.route"
-      :class="[classes.link, level === 1 ? '' : 'text-menu-prime']"
+      :class="[
+        classes.link,
+        level === 1 ? '' : 'text-menu-prime',
+        { 'font-semibold': route.path === item.route },
+      ]"
       :active-class="level === 1 ? 'text-menu-prime' : 'text-white'"
     >
       <component :is="getIcon()" :class="classes.icon" />
@@ -100,7 +103,7 @@ const classes = getLevelClasses()
     <Transition name="collapse">
       <ul
         v-if="item.children && isExpanded()"
-        class="mt-1 space-y-1 border-base-300 overflow-hidden"
+        class="mt-1 space-y-1 border-(--color-menu-border) overflow-hidden"
         :class="[
           level === 1
             ? 'ltr:ml-4 rtl:mr-4 ltr:border-l-2 rtl:border-r-2 ltr:pl-2 rtl:pr-2'

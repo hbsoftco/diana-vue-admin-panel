@@ -16,7 +16,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="flex h-screen bg-base-200">
+  <div class="flex h-screen bg-(--color-bg-background)">
     <AppSidebar />
 
     <div class="flex-1 flex flex-col">

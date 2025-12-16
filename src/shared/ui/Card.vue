@@ -19,7 +19,7 @@ type Slots = {
 const props = withDefaults(defineProps<Props>(), {
   bordered: true,
   width: 'w-full',
-  bgColor: 'bg-background',
+  bgColor: 'bg-(--color-bg-header)',
   accentColor: '',
   showSeparator: true,
   actionsPosition: 'end',

@@ -133,21 +133,18 @@ watch(
 </script>
 
 <template>
-  <aside class="w-64 bg-menu-bg border-r rtl:border-l border-base-300 flex flex-col">
+  <aside
+    class="w-64 bg-(--color-menu-bg) border-r rtl:border-l border-(--color-menu-border) flex flex-col"
+  >
     <!-- Logo -->
-    <div class="h-16 flex items-center px-4 border-b border-base-300">
-      <div class="flex items-center gap-2">
-        <div
-          class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-content font-bold"
-        >
-          D
-        </div>
-        <span class="font-semibold text-lg">Diana</span>
-      </div>
+    <div class="h-16 flex items-center px-4 border-b border-(--color-menu-border)">
+      <RouterLink to="/">
+        <img src="@/assets/images/logo.png" alt="Diana Logo" class="h-8 ml-6 w-auto">
+      </RouterLink>
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 overflow-y-auto py-4">
+    <nav class="flex-1 overflow-y-auto py-4 sidebar-scrollbar">
       <ul class="space-y-1 px-2">
         <MenuItem
           v-for="item in menuItems"
