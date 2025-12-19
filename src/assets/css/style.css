@@ -74,6 +74,8 @@
   --color-menu-bg: #111c43;
   --color-menu-prime: #a3aed1;
   --color-menu-border: #293356;
+
+  --color-bg-content-background: '#ffffff';
 }
 
 /* Dark Mode Theme - Matching your design */
@@ -146,6 +148,8 @@
   --color-menu-bg: #1a1c1e;
   --color-menu-prime: #8f9bb3;
   --color-menu-border: #313335;
+
+  --color-bg-content-background: '#1a1c1e';
 }
 
 @utility btn {
@@ -154,6 +158,10 @@
 
 @utility text-menu-prime {
   color: var(--color-menu-prime);
+}
+
+@utility bg-content-background {
+  background-color: var(--color-bg-content-background);
 }
 
 /* Scrollbar Styling (optional) */

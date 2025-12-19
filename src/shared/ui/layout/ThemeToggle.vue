@@ -2,6 +2,8 @@
 import { useLocalStorage, usePreferredDark } from '@vueuse/core'
 import { watch } from 'vue'
 
+import Button from '@/shared/ui/Button.vue'
+
 const preferredDark = usePreferredDark()
 const isDark = useLocalStorage('theme', preferredDark.value)
 
@@ -19,13 +21,15 @@ function toggleTheme() {
 </script>
 
 <template>
-  <button
-    class="btn btn-circle p-2"
+  <Button
+    size="sm"
+    variant="ghost"
+    circle
     :aria-label="isDark ? 'Switch to light theme' : 'Switch to dark theme'"
     @click="toggleTheme"
   >
-    <i-tabler-sun v-if="isDark" class="text-xl" />
+    <i-tabler-sun v-if="isDark" class="text-sm" />
 
-    <i-tabler-moon v-else class="text-xl" />
-  </button>
+    <i-tabler-moon v-else class="text-sm" />
+  </Button>
 </template>

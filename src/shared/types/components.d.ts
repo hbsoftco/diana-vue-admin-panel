@@ -11,10 +11,18 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IClarityFullscreen: typeof import('~icons/clarity/fullscreen')['default']
+    IClarityLanguageSolid: typeof import('~icons/clarity/language-solid')['default']
     IHugeiconsMenu02: typeof import('~icons/hugeicons/menu02')['default']
     'IIconoir=bellNotification': typeof import('~icons/iconoir/=bell-notification')['default']
     IIconoirBellNotification: typeof import('~icons/iconoir/bell-notification')['default']
+    IMaterialSymbolsFullscreen: typeof import('~icons/material-symbols/fullscreen')['default']
+    IMaterialSymbolsFullscreenExit: typeof import('~icons/material-symbols/fullscreen-exit')['default']
+    IMaterialSymbolsFullscreenExitRounded: typeof import('~icons/material-symbols/fullscreen-exit-rounded')['default']
+    IMaterialSymbolsFullscreenRounded: typeof import('~icons/material-symbols/fullscreen-rounded')['default']
     IMaterialSymbolsLightCode: typeof import('~icons/material-symbols-light/code')['default']
+    IMaterialSymbolsLightFullscreen: typeof import('~icons/material-symbols-light/fullscreen')['default']
+    IMaterialSymbolsLightFullscreenExit: typeof import('~icons/material-symbols-light/fullscreen-exit')['default']
     IMdiMoonWaningCrescent: typeof import('~icons/mdi/moon-waning-crescent')['default']
     IMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     IOuiTokenElement: typeof import('~icons/oui/token-element')['default']
