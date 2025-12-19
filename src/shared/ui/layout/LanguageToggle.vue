@@ -36,13 +36,13 @@ watch(
   <Dropdown
     v-model="currentLang"
     :options="languages"
-    size="xs"
+    size="md"
     label-key="label"
     value-key="code"
     position="bottom"
-    align="end"
+    align="center"
     close-on-click
-    width="w-52"
+    width="w-38"
   >
     <!-- Trigger -->
     <template #trigger>
