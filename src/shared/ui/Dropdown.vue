@@ -23,7 +23,7 @@ export type DropdownProps<T = any> = {
   bgColor?: string
   rounded?: boolean | string
   shadow?: boolean | string
-  zIndex?: string | number
+  zIndex?: number
 
   triggerClass?: string
   buttonClass?: string
@@ -40,6 +40,7 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   position: 'bottom',
   align: 'start',
   size: 'md',
+
   hover: false,
   closeOnClick: false,
 
@@ -47,7 +48,7 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   bgColor: 'bg-base-100',
   rounded: 'rounded-box',
   shadow: 'shadow',
-  zIndex: 1,
+  zIndex: 10,
 })
 
 /* ----------------------------------
@@ -58,6 +59,30 @@ const emit = defineEmits<{
 }>()
 
 /* ----------------------------------
+ * Static class maps (Tailwind v4 safe)
+ * ---------------------------------- */
+const POSITION_CLASS_MAP = {
+  top: 'dropdown-top',
+  bottom: 'dropdown-bottom',
+  left: 'dropdown-left',
+  right: 'dropdown-right',
+} as const
+
+const ALIGN_CLASS_MAP = {
+  start: 'dropdown-start',
+  center: 'dropdown-center',
+  end: 'dropdown-end',
+} as const
+
+const SIZE_CLASS_MAP = {
+  xs: 'menu-xs',
+  sm: 'menu-sm',
+  md: '',
+  lg: 'menu-lg',
+  xl: 'menu-xl',
+} as const
+
+/* ----------------------------------
  * v-model
  * ---------------------------------- */
 const model = defineModel<any>()
@@ -66,15 +91,10 @@ const model = defineModel<any>()
  * Helpers
  * ---------------------------------- */
 function resolveValue<T>(option: T, key: KeyGetter<T> | undefined, fallbackKey?: keyof T) {
-  if (key == null) {
+  if (!key) {
     return fallbackKey ? (option as any)?.[fallbackKey] : option
   }
-
-  if (typeof key === 'function') {
-    return key(option)
-  }
-
-  return (option as any)?.[key]
+  return typeof key === 'function' ? key(option) : (option as any)?.[key]
 }
 
 function getLabel(option: any) {
@@ -95,8 +115,8 @@ function isSelected(option: any) {
 const dropdownClasses = computed(() =>
   [
     'dropdown',
-    `dropdown-${props.position}`,
-    `dropdown-${props.align}`,
+    POSITION_CLASS_MAP[props.position],
+    ALIGN_CLASS_MAP[props.align],
     props.hover && 'dropdown-hover',
     props.class,
   ]
@@ -108,7 +128,7 @@ const contentClasses = computed(() =>
   [
     'dropdown-content',
     'menu',
-    props.size !== 'md' && `menu-${props.size}`,
+    SIZE_CLASS_MAP[props.size],
     props.width,
     props.bgColor,
     typeof props.rounded === 'string' ? props.rounded : props.rounded && 'rounded-box',
@@ -125,13 +145,8 @@ const contentClasses = computed(() =>
  * ---------------------------------- */
 function handleSelect(option: any) {
   const value = getValue(option)
-
   model.value = value
-
-  emit('select', {
-    option,
-    value,
-  })
+  emit('select', { option, value })
 }
 
 function handleContentClick(e: MouseEvent) {
@@ -162,7 +177,6 @@ function handleContentClick(e: MouseEvent) {
           :select="() => handleSelect(option)"
           :selected="isSelected(option)"
         >
-          <!-- Fallback UI -->
           <button
             class="w-full text-left"
             :class="{ 'bg-base-200 font-medium': isSelected(option) }"

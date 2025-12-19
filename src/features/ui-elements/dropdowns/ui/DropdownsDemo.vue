@@ -23,7 +23,7 @@ const hbsoft = ref<string | null>(null)
         { label1: 'Settings', value: 'settings' },
         { label1: 'Logout', value: 'logout', class: 'text-error' },
       ]"
-      align="start"
+      align="center"
       position="bottom"
       label-key="label1"
       close-on-click
