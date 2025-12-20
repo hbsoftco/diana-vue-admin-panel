@@ -11,9 +11,7 @@ const { toggleSidebar, isSidebarCollapsed } = useSidebar()
 </script>
 
 <template>
-  <header
-    class="h-16 border-b border-(--color-border-header) bg-content-background sticky top-0 z-10"
-  >
+  <header class="h-16 border-b border-content bg-content-background sticky top-0 z-10">
     <div class="h-full flex items-center justify-between px-6 gap-4">
       <button class="cursor-pointer relative w-6 h-6" @click="toggleSidebar">
         <Transition name="icon-fade" mode="out-in">

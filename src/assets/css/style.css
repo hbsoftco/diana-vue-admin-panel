@@ -78,6 +78,7 @@
   --color-menu-border: #293356;
 
   --color-bg-content-background: '#ffffff';
+  --color-border-content: '#e6e6e6';
 }
 
 /* Dark Mode Theme - Matching your design */
@@ -152,6 +153,7 @@
   --color-menu-border: #313335;
 
   --color-bg-content-background: '#1a1c1e';
+  --color-border-content: '#313335';
 }
 
 @utility btn {
@@ -164,6 +166,10 @@
 
 @utility bg-content-background {
   background-color: var(--color-bg-content-background);
+}
+
+@utility border-content {
+  border-color: var(--color-border-content);
 }
 
 /* Scrollbar Styling (optional) */

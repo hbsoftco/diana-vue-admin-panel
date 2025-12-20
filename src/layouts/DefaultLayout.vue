@@ -54,9 +54,7 @@ watchEffect(() => {
           <RouterView />
         </div>
 
-        <footer
-          class="footer py-3 text-center mt-8 bg-content-background border-t border-(--color-border-header)"
-        >
+        <footer class="footer py-3 text-center mt-8 bg-content-background border-t border-content">
           <div class="flex justify-center items-center w-full">
             <span class="flex gap-1 text-[13.6px]">
               Copyright © <span id="year">2025</span>

@@ -2,75 +2,83 @@
 import { ref } from 'vue'
 
 import Button from '@/shared/ui/Button.vue'
+import Dropdown from '@/shared/ui/Dropdown.vue'
 
-// User menu
-const showUserMenu = ref(false)
+const selected = ref(null)
+
+const menuOptions = [
+  { label: 'Dashboard', value: 'dashboard', icon: 'i-mdi-view-dashboard' },
+  { label: 'Profile', value: 'profile', icon: 'i-mdi-account' },
+  { label: 'Messages', value: 'messages', icon: 'i-mdi-message', badge: '3' },
+  { divider: true },
+  { label: 'Settings', value: 'settings', icon: 'i-mdi-cog' },
+  { label: 'Help', value: 'help', icon: 'i-mdi-help-circle' },
+  { divider: true },
+  { label: 'Logout', value: 'logout', icon: 'i-mdi-logout' },
+]
 </script>
 
 <template>
   <div class="relative">
-    <Button variant="ghost" class="px-2" rounded>
-      <div>
-        <i-solar:user-bold class="text-lg" />
-      </div>
-      <span class="hidden lg:block text-sm font-medium">John Doe</span>
-      <i-hugeicons:arrow-down-01 class="text-md" />
-    </Button>
-
-    <!-- User Dropdown Menu -->
-    <div
-      v-if="showUserMenu"
-      class="absolute right-0 mt-2 w-56 bg-base-100 border border-base-300 rounded-lg shadow-lg z-50"
-      @click.stop
+    <Dropdown
+      v-model="selected"
+      :options="menuOptions"
+      header="User Menu"
+      footer="Version 1.0.0"
+      :show-header-divider="true"
+      :show-footer-divider="true"
+      width="w-64"
+      position="bottom"
+      align="end"
+      border="border border-solid border-content"
     >
-      <div class="p-3 border-b border-base-300">
-        <p class="font-medium text-sm">
-          John Doe
-        </p>
-        <p class="text-xs text-base-content/60">
-          john@example.com
-        </p>
-      </div>
-      <ul class="py-2">
-        <li>
-          <RouterLink
-            to="/profile"
-            class="flex items-center gap-3 px-4 py-2 hover:bg-base-200 transition-colors text-sm"
-            @click="showUserMenu = false"
-          >
-            <span>👤</span>
-            <span>Profile</span>
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink
-            to="/settings"
-            class="flex items-center gap-3 px-4 py-2 hover:bg-base-200 transition-colors text-sm"
-            @click="showUserMenu = false"
-          >
-            <span>⚙️</span>
-            <span>Settings</span>
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink
-            to="/help"
-            class="flex items-center gap-3 px-4 py-2 hover:bg-base-200 transition-colors text-sm"
-            @click="showUserMenu = false"
-          >
-            <span>❓</span>
-            <span>Help & Support</span>
-          </RouterLink>
-        </li>
-      </ul>
-      <div class="border-t border-base-300 p-2">
+      <template #trigger>
+        <Button variant="ghost" class="px-2" rounded>
+          <div>
+            <i-solar:user-bold class="text-lg" />
+          </div>
+          <span class="hidden lg:block text-sm font-medium">John Doe</span>
+          <i-hugeicons:arrow-down-01 class="text-md" />
+        </Button>
+      </template>
+
+      <template #header>
+        <div class="flex items-center gap-3 px-3 py-2">
+          <div class="avatar">
+            <div class="w-10 rounded-full">
+              <img src="@assets/images/user.png" alt="User">
+            </div>
+          </div>
+          <div>
+            <div class="font-semibold">
+              John Doe
+            </div>
+            <div class="text-xs opacity-70">
+              john@example.com
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <template #option="{ option, select, selected }">
         <button
-          class="flex items-center gap-3 px-4 py-2 hover:bg-base-200 transition-colors text-sm w-full text-left text-error"
+          class="flex items-center gap-3 w-full"
+          :class="{ 'bg-base-200': selected }"
+          @click="select"
         >
-          <span>🚪</span>
-          <span>Logout</span>
+          <component :is="option.icon" class="text-lg" />
+          <span>{{ option.label }}</span>
+          <span v-if="option.badge" class="badge badge-sm ml-auto">
+            {{ option.badge }}
+          </span>
         </button>
-      </div>
-    </div>
+      </template>
+
+      <template #footer>
+        <div class="px-3 py-1 text-xs text-center opacity-60">
+          Last login: 2 hours ago
+        </div>
+      </template>
+    </Dropdown>
   </div>
 </template>

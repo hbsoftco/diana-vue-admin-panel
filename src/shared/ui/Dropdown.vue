@@ -6,8 +6,13 @@ import { computed } from 'vue'
  * ---------------------------------- */
 type KeyGetter<T> = keyof T | ((option: T) => any)
 
+export type DropdownOption<T = any> = T & {
+  divider?: boolean
+  disabled?: boolean
+}
+
 export type DropdownProps<T = any> = {
-  options?: T[]
+  options?: DropdownOption<T>[]
 
   labelKey?: KeyGetter<T>
   valueKey?: KeyGetter<T>
@@ -23,11 +28,21 @@ export type DropdownProps<T = any> = {
   bgColor?: string
   rounded?: boolean | string
   shadow?: boolean | string
+  border?: boolean | string
   zIndex?: number
+
+  // New props
+  header?: string
+  footer?: string
+  showHeaderDivider?: boolean
+  showFooterDivider?: boolean
 
   triggerClass?: string
   buttonClass?: string
   contentClass?: string
+  headerClass?: string
+  footerClass?: string
+  dividerClass?: string
   class?: string
 }
 
@@ -45,10 +60,17 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   closeOnClick: false,
 
   width: 'w-52',
-  bgColor: 'bg-base-100',
+  bgColor: 'bg-content-background',
   rounded: 'rounded-box',
   shadow: 'shadow',
   zIndex: 10,
+
+  showHeaderDivider: true,
+  showFooterDivider: true,
+
+  headerClass: 'px-4 py-2 text-sm font-semibold text-base-content',
+  footerClass: 'px-4 py-2 text-sm text-base-content',
+  dividerClass: 'divider my-0',
 })
 
 /* ----------------------------------
@@ -56,6 +78,17 @@ const props = withDefaults(defineProps<DropdownProps>(), {
  * ---------------------------------- */
 const emit = defineEmits<{
   select: [{ option: any, value: any }]
+}>()
+
+/* ----------------------------------
+ * Slots
+ * ---------------------------------- */
+const slots = defineSlots<{
+  trigger?: any
+  option?: any
+  header?: any
+  footer?: any
+  divider?: any
 }>()
 
 /* ----------------------------------
@@ -88,6 +121,12 @@ const SIZE_CLASS_MAP = {
 const model = defineModel<any>()
 
 /* ----------------------------------
+ * Computed
+ * ---------------------------------- */
+const hasHeader = computed(() => props.header || !!slots.header)
+const hasFooter = computed(() => props.footer || !!slots.footer)
+
+/* ----------------------------------
  * Helpers
  * ---------------------------------- */
 function resolveValue<T>(option: T, key: KeyGetter<T> | undefined, fallbackKey?: keyof T) {
@@ -107,6 +146,14 @@ function getValue(option: any) {
 
 function isSelected(option: any) {
   return model.value === getValue(option)
+}
+
+function isDivider(option: DropdownOption) {
+  return option.divider === true
+}
+
+function isDisabled(option: DropdownOption) {
+  return option.disabled === true
 }
 
 /* ----------------------------------
@@ -133,6 +180,7 @@ const contentClasses = computed(() =>
     props.bgColor,
     typeof props.rounded === 'string' ? props.rounded : props.rounded && 'rounded-box',
     typeof props.shadow === 'string' ? props.shadow : props.shadow && 'shadow',
+    typeof props.border === 'string' ? props.border : props.border && 'border',
     `z-${props.zIndex}`,
     props.contentClass,
   ]
@@ -144,6 +192,10 @@ const contentClasses = computed(() =>
  * Handlers
  * ---------------------------------- */
 function handleSelect(option: any) {
+  if (isDisabled(option) || isDivider(option)) {
+    return
+  }
+
   const value = getValue(option)
   model.value = value
   emit('select', { option, value })
@@ -170,20 +222,72 @@ function handleContentClick(e: MouseEvent) {
 
     <!-- Content -->
     <ul tabindex="-1" :class="contentClasses" @click="handleContentClick">
-      <li v-for="(option, index) in options" :key="index">
-        <slot
-          name="option"
-          :option="option"
-          :select="() => handleSelect(option)"
-          :selected="isSelected(option)"
-        >
-          <button
-            class="w-full text-left"
-            :class="{ 'bg-base-200 font-medium': isSelected(option) }"
-            @click="handleSelect(option)"
+      <!-- Header -->
+      <li v-if="hasHeader" class="menu-title pointer-events-none">
+        <slot name="header">
+          <div :class="headerClass">
+            {{ header }}
+          </div>
+        </slot>
+      </li>
+
+      <!-- Header Divider -->
+      <li v-if="hasHeader && showHeaderDivider" class="pointer-events-none">
+        <slot name="divider">
+          <div :class="dividerClass" />
+        </slot>
+      </li>
+
+      <!-- Options -->
+      <li
+        v-for="(option, index) in options"
+        :key="index"
+        :class="{ 'pointer-events-none': isDisabled(option) || isDivider(option) }"
+      >
+        <!-- Divider -->
+        <template v-if="isDivider(option)">
+          <slot name="divider">
+            <div :class="dividerClass" />
+          </slot>
+        </template>
+
+        <!-- Regular Option -->
+        <template v-else>
+          <slot
+            name="option"
+            :option="option"
+            :select="() => handleSelect(option)"
+            :selected="isSelected(option)"
+            :disabled="isDisabled(option)"
           >
-            {{ getLabel(option) }}
-          </button>
+            <button
+              class="w-full text-left"
+              :class="{
+                'bg-base-200 font-medium': isSelected(option),
+                'opacity-50 cursor-not-allowed': isDisabled(option),
+              }"
+              :disabled="isDisabled(option)"
+              @click="handleSelect(option)"
+            >
+              {{ getLabel(option) }}
+            </button>
+          </slot>
+        </template>
+      </li>
+
+      <!-- Footer Divider -->
+      <li v-if="hasFooter && showFooterDivider" class="pointer-events-none">
+        <slot name="divider">
+          <div :class="dividerClass" />
+        </slot>
+      </li>
+
+      <!-- Footer -->
+      <li v-if="hasFooter" class="menu-title pointer-events-none">
+        <slot name="footer">
+          <div :class="footerClass">
+            {{ footer }}
+          </div>
         </slot>
       </li>
     </ul>
