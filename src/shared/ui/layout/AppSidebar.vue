@@ -6,7 +6,11 @@ import { useRoute } from 'vue-router'
 
 import type { MenuItem as MenuItemType } from '@/shared/types/models'
 
+import { useSidebar } from '@/shared/utils/use-sidebar'
+
 import MenuItem from './MenuItem.vue'
+
+const { isSidebarCollapsed } = useSidebar()
 
 const menuItems = ref<MenuItemType[]>([
   {
@@ -134,12 +138,24 @@ watch(
 
 <template>
   <aside
-    class="w-64 bg-(--color-menu-bg) border-r rtl:border-l border-(--color-menu-border) flex flex-col"
+    class="bg-(--color-menu-bg) border-r rtl:border-l border-(--color-menu-border) flex flex-col transition-all duration-300 ease-in-out"
+    :class="[isSidebarCollapsed ? 'w-20' : 'w-64']"
   >
     <!-- Logo -->
     <div class="h-16 flex items-center px-4 border-b border-(--color-menu-border)">
-      <RouterLink to="/">
-        <img src="@/assets/images/logo.png" alt="Diana Logo" class="h-8 ml-6 w-auto">
+      <RouterLink to="/" class="overflow-hidden">
+        <img
+          v-if="!isSidebarCollapsed"
+          src="@/assets/images/logo.png"
+          alt="Diana Logo"
+          class="h-8 w-auto transition-all duration-300 ltr:ml-6 rtl:mr-6"
+        >
+        <img
+          v-else
+          src="@/assets/images/logo-mini.png"
+          alt="Diana Logo"
+          class="h-8 w-auto transition-all duration-300"
+        >
       </RouterLink>
     </div>
 
@@ -151,6 +167,7 @@ watch(
           :key="item.id"
           :item="item"
           :expanded-menus="expandedMenus"
+          :is-collapsed="isSidebarCollapsed"
           @toggle="toggleMenu"
         />
       </ul>

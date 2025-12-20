@@ -2,6 +2,7 @@
 import IconCircle from '~icons/material-symbols/circle'
 import IconCircleOutline from '~icons/material-symbols/circle-outline'
 import IconMdiChevronRight from '~icons/mdi/chevron-right'
+import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 
 import type { MenuItem } from '@/shared/types/models'
@@ -10,10 +11,12 @@ type Props = {
   item: MenuItem
   level?: number
   expandedMenus: Set<string>
+  isCollapsed?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   level: 1,
+  isCollapsed: false,
 })
 
 const emit = defineEmits<{
@@ -58,6 +61,16 @@ function getLevelClasses() {
 }
 
 const classes = getLevelClasses()
+
+// Tooltip content for collapsed state
+const tooltipContent = computed(() => {
+  return props.item.label.startsWith('menu.') ? props.item.label : props.item.label
+})
+
+// Show children only when not collapsed or when it's a nested item
+const shouldShowChildren = computed(() => {
+  return !props.isCollapsed || props.level > 1
+})
 </script>
 
 <template>
@@ -70,15 +83,21 @@ const classes = getLevelClasses()
         {
           'bg-(--color-bg-hover)': isExpanded(),
           'font-semibold text-white': isActive(),
+          'justify-center': isCollapsed && level === 1,
         },
       ]"
+      :title="isCollapsed && level === 1 ? $t(tooltipContent) : ''"
       @click="emit('toggle', item.id)"
     >
-      <div class="flex items-center gap-3">
+      <div
+        class="flex items-center gap-3"
+        :class="{ 'justify-center': isCollapsed && level === 1 }"
+      >
         <component :is="item.icon" class="text-lg" :class="{ 'text-white': hasActiveRoute() }" />
-        <span :class="classes.text">{{ $t(item.label) }}</span>
+        <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ $t(item.label) }}</span>
       </div>
       <IconMdiChevronRight
+        v-if="!isCollapsed || level > 1"
         class="text-[13.6px] transition-transform"
         :class="{ 'rotate-90': isExpanded(), 'text-white': hasActiveRoute() }"
       />
@@ -91,18 +110,22 @@ const classes = getLevelClasses()
       :class="[
         classes.link,
         level === 1 ? '' : 'text-menu-prime',
-        { 'font-semibold': route.path === item.route },
+        {
+          'font-semibold': route.path === item.route,
+          'justify-center': isCollapsed && level === 1,
+        },
       ]"
       :active-class="level === 1 ? 'text-menu-prime' : 'text-white'"
+      :title="isCollapsed && level === 1 ? item.label : ''"
     >
       <component :is="getIcon()" :class="classes.icon" />
-      <span :class="classes.text">{{ item.label }}</span>
+      <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ item.label }}</span>
     </RouterLink>
 
     <!-- Recursive children -->
     <Transition name="collapse">
       <ul
-        v-if="item.children && isExpanded()"
+        v-if="item.children && isExpanded() && shouldShowChildren"
         class="mt-1 space-y-1 border-(--color-menu-border) overflow-hidden"
         :class="[
           level === 1
@@ -116,33 +139,10 @@ const classes = getLevelClasses()
           :item="child"
           :level="level + 1"
           :expanded-menus="expandedMenus"
+          :is-collapsed="isCollapsed"
           @toggle="emit('toggle', $event)"
         />
       </ul>
     </Transition>
   </li>
 </template>
-
-<style scoped>
-.collapse-enter-active {
-  transition: all 0.3s ease-out;
-  overflow: hidden;
-}
-
-.collapse-leave-active {
-  transition: all 0.2s ease-in;
-  overflow: hidden;
-}
-
-.collapse-enter-from,
-.collapse-leave-to {
-  max-height: 0;
-  opacity: 0;
-}
-
-.collapse-enter-to,
-.collapse-leave-from {
-  max-height: 500px;
-  opacity: 1;
-}
-</style>

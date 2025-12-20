@@ -1,4 +1,6 @@
 @import './fonts.css';
+@import './transitions.css';
+
 @import 'tailwindcss';
 @plugin "daisyui";
 
