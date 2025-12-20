@@ -32,6 +32,7 @@ type Props = {
   circle?: boolean
   square?: boolean
   glass?: boolean
+  rounded?: boolean
 
   // HTML attributes
   tag?: 'button' | 'a' | 'input'
@@ -57,6 +58,7 @@ const props = withDefaults(defineProps<Props>(), {
   circle: false,
   square: false,
   glass: false,
+  rounded: false,
 })
 
 const emit = defineEmits<{
@@ -99,6 +101,8 @@ const buttonClasses = computed(() => {
     classes.push('btn-square')
   if (props.glass)
     classes.push('glass')
+  if (props.rounded)
+    classes.push('rounded-full')
 
   // Custom classes
   if (props.customClass)
