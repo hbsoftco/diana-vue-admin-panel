@@ -28,6 +28,7 @@ declare module 'vue' {
     IMaterialSymbolsLightCode: typeof import('~icons/material-symbols-light/code')['default']
     IMaterialSymbolsLightFullscreen: typeof import('~icons/material-symbols-light/fullscreen')['default']
     IMaterialSymbolsLightFullscreenExit: typeof import('~icons/material-symbols-light/fullscreen-exit')['default']
+    IMdiDotsVertical: typeof import('~icons/mdi/dots-vertical')['default']
     IMdiMoonWaningCrescent: typeof import('~icons/mdi/moon-waning-crescent')['default']
     IMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     'IMingcute:closeLine': typeof import('~icons/mingcute/close-line')['default']

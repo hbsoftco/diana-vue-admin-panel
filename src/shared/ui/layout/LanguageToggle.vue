@@ -43,6 +43,7 @@ watch(
     align="center"
     close-on-click
     width="w-38"
+    border="border border-content"
   >
     <!-- Trigger -->
     <template #trigger>
