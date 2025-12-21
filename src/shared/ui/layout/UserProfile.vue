@@ -28,6 +28,7 @@ const menuOptions = [
       :show-header-divider="true"
       :show-footer-divider="true"
       width="w-64"
+      size="md"
       position="bottom"
       align="end"
       border="border border-solid border-content"
@@ -37,8 +38,8 @@ const menuOptions = [
           <div>
             <i-solar:user-bold class="text-lg" />
           </div>
-          <span class="hidden lg:block text-sm font-medium">John Doe</span>
-          <i-hugeicons:arrow-down-01 class="text-md" />
+          <span class="hidden lg:block text-md font-semibold">John Doe</span>
+          <i-hugeicons:arrow-down-01 />
         </Button>
       </template>
 

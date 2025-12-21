@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onBeforeUnmount, ref } from 'vue'
 
 /* ----------------------------------
  * Types
@@ -31,7 +31,6 @@ export type DropdownProps<T = any> = {
   border?: boolean | string
   zIndex?: number
 
-  // New props
   header?: string
   footer?: string
   showHeaderDivider?: boolean
@@ -57,7 +56,7 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   size: 'md',
 
   hover: false,
-  closeOnClick: false,
+  closeOnClick: true,
 
   width: 'w-52',
   bgColor: 'bg-content-background',
@@ -68,8 +67,8 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   showHeaderDivider: true,
   showFooterDivider: true,
 
-  headerClass: 'px-4 py-2 text-sm font-semibold text-base-content',
-  footerClass: 'px-4 py-2 text-sm text-base-content',
+  headerClass: 'px-3 py-1 text-sm font-semibold text-base-content',
+  footerClass: 'px-3 py-1 text-sm text-base-content',
   dividerClass: 'divider my-0',
 })
 
@@ -92,7 +91,7 @@ const slots = defineSlots<{
 }>()
 
 /* ----------------------------------
- * Static class maps (Tailwind v4 safe)
+ * Static class maps
  * ---------------------------------- */
 const POSITION_CLASS_MAP = {
   top: 'dropdown-top',
@@ -110,15 +109,18 @@ const ALIGN_CLASS_MAP = {
 const SIZE_CLASS_MAP = {
   xs: 'menu-xs',
   sm: 'menu-sm',
-  md: '',
+  md: 'menu-md',
   lg: 'menu-lg',
   xl: 'menu-xl',
 } as const
 
 /* ----------------------------------
- * v-model
+ * State
  * ---------------------------------- */
 const model = defineModel<any>()
+const isOpen = ref(false)
+const dropdownRef = ref<HTMLDivElement | null>(null)
+const triggerRef = ref<HTMLDivElement | null>(null)
 
 /* ----------------------------------
  * Computed
@@ -157,6 +159,47 @@ function isDisabled(option: DropdownOption) {
 }
 
 /* ----------------------------------
+ * Dropdown control
+ * ---------------------------------- */
+function open() {
+  isOpen.value = true
+  // Add click outside listener immediately
+  setTimeout(() => {
+    document.addEventListener('mousedown', handleClickOutside, { capture: true })
+  }, 10)
+}
+
+function close() {
+  isOpen.value = false
+  document.removeEventListener('mousedown', handleClickOutside, { capture: true })
+}
+
+function toggle() {
+  if (isOpen.value) {
+    close()
+  }
+  else {
+    open()
+  }
+}
+
+/* ----------------------------------
+ * Click outside handler
+ * ---------------------------------- */
+function handleClickOutside(event: MouseEvent) {
+  const target = event.target as Node
+
+  if (dropdownRef.value && !dropdownRef.value.contains(target)) {
+    close()
+  }
+}
+
+// Cleanup on unmount
+onBeforeUnmount(() => {
+  document.removeEventListener('mousedown', handleClickOutside, { capture: true })
+})
+
+/* ----------------------------------
  * Classes
  * ---------------------------------- */
 const dropdownClasses = computed(() =>
@@ -165,6 +208,7 @@ const dropdownClasses = computed(() =>
     POSITION_CLASS_MAP[props.position],
     ALIGN_CLASS_MAP[props.align],
     props.hover && 'dropdown-hover',
+    isOpen.value && 'dropdown-open',
     props.class,
   ]
     .filter(Boolean)
@@ -199,29 +243,55 @@ function handleSelect(option: any) {
   const value = getValue(option)
   model.value = value
   emit('select', { option, value })
+
+  if (props.closeOnClick) {
+    close()
+  }
 }
 
-function handleContentClick(e: MouseEvent) {
-  if (!props.closeOnClick) {
-    return
+function handleTriggerMouseDown(event: MouseEvent) {
+  event.preventDefault()
+  event.stopPropagation()
+  toggle()
+}
+
+function handleMouseEnter() {
+  if (props.hover) {
+    open()
   }
-  ;(e.target as HTMLElement | null)?.blur()
+}
+
+function handleMouseLeave() {
+  if (props.hover) {
+    close()
+  }
 }
 </script>
 
 <template>
-  <div :class="dropdownClasses">
+  <div
+    ref="dropdownRef"
+    :class="dropdownClasses"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
     <!-- Trigger -->
-    <button tabindex="0" :class="triggerClass">
+    <div
+      ref="triggerRef"
+      role="button"
+      tabindex="0"
+      :class="triggerClass"
+      @mousedown="handleTriggerMouseDown"
+    >
       <slot name="trigger">
         <button :class="buttonClass">
           Menu
         </button>
       </slot>
-    </button>
+    </div>
 
     <!-- Content -->
-    <ul tabindex="-1" :class="contentClasses" @click="handleContentClick">
+    <ul v-if="isOpen" tabindex="-1" :class="contentClasses">
       <!-- Header -->
       <li v-if="hasHeader" class="menu-title pointer-events-none">
         <slot name="header">
@@ -242,6 +312,7 @@ function handleContentClick(e: MouseEvent) {
       <li
         v-for="(option, index) in options"
         :key="index"
+        class="my-0.5"
         :class="{ 'pointer-events-none': isDisabled(option) || isDivider(option) }"
       >
         <!-- Divider -->
@@ -261,7 +332,7 @@ function handleContentClick(e: MouseEvent) {
             :disabled="isDisabled(option)"
           >
             <button
-              class="w-full text-left"
+              class="w-full text-left text-md"
               :class="{
                 'bg-base-200 font-medium': isSelected(option),
                 'opacity-50 cursor-not-allowed': isDisabled(option),
