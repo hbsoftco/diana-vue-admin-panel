@@ -172,10 +172,18 @@
   border-color: var(--color-border-content);
 }
 
+@utility font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@utility text-md {
+  @apply text-[.813rem];
+}
+
 /* Scrollbar Styling (optional) */
 @layer base {
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   html:lang(fa) body,
