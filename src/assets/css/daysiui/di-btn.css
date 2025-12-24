@@ -1,0 +1,3 @@
+@utility btn {
+  @apply shadow-none font-medium active:translate-0;
+}

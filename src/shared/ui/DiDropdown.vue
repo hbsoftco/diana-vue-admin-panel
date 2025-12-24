@@ -332,7 +332,7 @@ function handleMouseLeave() {
             :disabled="isDisabled(option)"
           >
             <button
-              class="w-full text-left text-md"
+              class="w-full text-left text-di-sm"
               :class="{
                 'bg-base-200 font-medium': isSelected(option),
                 'opacity-50 cursor-not-allowed': isDisabled(option),

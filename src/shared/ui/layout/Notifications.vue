@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-import Button from '@/shared/ui/Button.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
 
 // Notifications
 const notifications = ref([
@@ -45,7 +45,7 @@ function markAsRead(id: number) {
 
 <template>
   <div class="relative">
-    <Button
+    <DiButton
       size="sm"
       variant="ghost"
       circle
@@ -60,7 +60,7 @@ function markAsRead(id: number) {
       >
         {{ unreadCount > 9 ? '9+' : unreadCount }}
       </span>
-    </Button>
+    </DiButton>
 
     <!-- Notifications Dropdown -->
     <div

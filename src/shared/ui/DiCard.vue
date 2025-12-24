@@ -21,8 +21,10 @@ export type CardProps = {
   centered?: boolean
   accentColor?: string
   showSeparator?: boolean
+  showFooterSeparator?: boolean
   actionsPosition?: 'start' | 'end' | 'center'
   headerClass?: string
+  footerClass?: string
 }
 
 const props = withDefaults(defineProps<CardProps>(), {
@@ -35,6 +37,7 @@ const props = withDefaults(defineProps<CardProps>(), {
   shadow: 'shadow-xs',
   centered: false,
   showSeparator: true,
+  showFooterSeparator: true,
   actionsPosition: 'end',
   bgColor: 'bg-content-background',
 })
@@ -143,10 +146,20 @@ const figureClasses = computed(() => {
 })
 
 const headerWrapperClasses = computed(() => {
-  const classes = ['mb-3']
+  const classes = []
 
   if (props.headerClass) {
     classes.push(props.headerClass)
+  }
+
+  return classes.join(' ')
+})
+
+const footerWrapperClasses = computed(() => {
+  const classes = ['mt-3']
+
+  if (props.footerClass) {
+    classes.push(props.footerClass)
   }
 
   return classes.join(' ')
@@ -162,6 +175,23 @@ const customStyle = computed(() => props.style || undefined)
       <slot name="figure" />
     </figure>
 
+    <!-- Card Header (optional slot for badges, etc) -->
+    <div v-if="$slots.header" :class="headerWrapperClasses">
+      <div class="flex items-center gap-2 py-4 px-5">
+        <!-- Accent Color Bar -->
+        <div
+          v-if="accentColor"
+          class="w-0.5 h-4 rounded"
+          :style="{ backgroundColor: accentColor }"
+        />
+        <div class="flex-1">
+          <slot name="header" />
+        </div>
+      </div>
+      <!-- Separator Line -->
+      <div v-if="showSeparator" class="border-t border-base-300" />
+    </div>
+
     <!-- Card Body -->
     <div
       v-if="
@@ -169,23 +199,6 @@ const customStyle = computed(() => props.style || undefined)
       "
       :class="bodyClasses"
     >
-      <!-- Card Header (optional slot for badges, etc) -->
-      <div v-if="$slots.header" :class="headerWrapperClasses">
-        <div class="flex items-center gap-2">
-          <!-- Accent Color Bar -->
-          <div
-            v-if="accentColor"
-            class="w-0.5 h-4 rounded"
-            :style="{ backgroundColor: accentColor }"
-          />
-          <div class="flex-1">
-            <slot name="header" />
-          </div>
-        </div>
-        <!-- Separator Line -->
-        <div v-if="showSeparator" class="mt-3 border-t border-base-300" />
-      </div>
-
       <!-- Card Title -->
       <h2 v-if="$slots.title || title" :class="titleClasses">
         <slot name="title">
@@ -196,14 +209,18 @@ const customStyle = computed(() => props.style || undefined)
       <!-- Card Content -->
       <slot />
 
-      <!-- Card Footer (optional slot for additional content) -->
-      <div v-if="$slots.footer" class="mt-4">
-        <slot name="footer" />
-      </div>
-
       <!-- Card Actions -->
       <div v-if="$slots.actions" :class="actionsClasses">
         <slot name="actions" />
+      </div>
+    </div>
+
+    <!-- Card Footer (optional slot for additional content at bottom) -->
+    <div v-if="$slots.footer" :class="footerWrapperClasses">
+      <!-- Separator Line -->
+      <div v-if="showFooterSeparator" class="border-t border-base-300" />
+      <div class="py-3 px-5">
+        <slot name="footer" />
       </div>
     </div>
 

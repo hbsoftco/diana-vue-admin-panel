@@ -160,7 +160,7 @@ watch(
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 overflow-y-auto py-4 sidebar-scrollbar font-montserrat">
+    <nav class="flex-1 overflow-y-auto py-4 sidebar-scrollbar ltr:font-montserrat rtl:font-dana">
       <ul class="space-y-1 px-2">
         <MenuItem
           v-for="item in menuItems"
