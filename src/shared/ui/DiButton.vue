@@ -132,7 +132,3 @@ function handleClick(event: MouseEvent) {
     <slot name="icon-right" />
   </component>
 </template>
-
-<style scoped>
-/* Additional custom styles if needed */
-</style>

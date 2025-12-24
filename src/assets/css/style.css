@@ -29,9 +29,6 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 
-/* Customize daysiui components */
-@import './daysiui/di-btn.css';
-
 /* Light Mode Theme - Matching your design */
 @plugin "daisyui/theme" {
   name: 'diana-light';
@@ -75,18 +72,18 @@
   --color-error-content: #fafafa; /* White text */
 
   /* Custom Colors */
-  --color-bg-background: '#f0f1f7';
+  --color-bg-background: #f0f1f7;
   --color-bg-hover: '#1d284d';
 
   --color-border-header: #e6e6e6;
-  --color-bg-header: '#ffffff';
+  --color-bg-header: #ffffff;
 
   --color-menu-bg: #111c43;
   --color-menu-prime: #a3aed1;
   --color-menu-border: #293356;
 
-  --color-bg-content-background: '#ffffff';
-  --color-border-content: '#e6e6e6';
+  --color-bg-content-background: #ffffff;
+  --color-border-content: #e6e6e6;
 }
 
 /* Dark Mode Theme - Matching your design */
@@ -131,19 +128,22 @@
   --color-error-content: #fafafa; /* Dark text */
 
   /* Custom Colors  */
-  --color-bg-background: '#252729';
-  --color-bg-hover: '#27272a';
+  --color-bg-background: #252729;
+  --color-bg-hover: #27272a;
 
   --color-border-header: #313335;
-  --color-bg-header: '#1a1c1e';
+  --color-bg-header: #1a1c1e;
 
   --color-menu-bg: #1a1c1e;
   --color-menu-prime: #8f9bb3;
   --color-menu-border: #313335;
 
-  --color-bg-content-background: '#1a1c1e';
-  --color-border-content: '#313335';
+  --color-bg-content-background: #1a1c1e;
+  --color-border-content: #313335;
 }
+
+/* Customize daysiui components */
+@import './daysiui/di-btn.css';
 
 @utility text-menu-prime {
   color: var(--color-menu-prime);
