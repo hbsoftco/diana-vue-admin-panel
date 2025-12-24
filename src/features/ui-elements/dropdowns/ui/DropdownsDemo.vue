@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import Dropdown from '@/shared/ui/Dropdown.vue'
+import DiDropdown from '@/shared/ui/DiDropdown.vue'
 
 const selected = ref(null)
 
@@ -18,7 +18,7 @@ const menuOptions = [
 </script>
 
 <template>
-  <Dropdown
+  <DiDropdown
     v-model="selected"
     :options="menuOptions"
     header="User Menu"
@@ -72,5 +72,5 @@ const menuOptions = [
         Last login: 2 hours ago
       </div>
     </template>
-  </Dropdown>
+  </DiDropdown>
 </template>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import Button from '@/shared/ui/Button.vue'
-import Dropdown from '@/shared/ui/Dropdown.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
+import DiDropdown from '@/shared/ui/DiDropdown.vue'
 
 const selected = ref(null)
 
@@ -20,7 +20,7 @@ const menuOptions = [
 
 <template>
   <div class="relative">
-    <Dropdown
+    <DiDropdown
       v-model="selected"
       :options="menuOptions"
       header="User Menu"
@@ -34,13 +34,13 @@ const menuOptions = [
       border="border border-solid border-content"
     >
       <template #trigger>
-        <Button variant="ghost" class="px-2" rounded>
+        <DiButton variant="ghost" class="px-2" rounded>
           <div>
             <i-solar:user-bold class="text-lg" />
           </div>
-          <span class="hidden lg:block text-md font-semibold">{{ $t('author') }}</span>
+          <span class="hidden lg:block text-di-sm font-semibold">{{ $t('author') }}</span>
           <i-hugeicons:arrow-down-01 />
-        </Button>
+        </DiButton>
       </template>
 
       <template #header>
@@ -79,6 +79,6 @@ const menuOptions = [
           Last login: 2 hours ago
         </div>
       </template>
-    </Dropdown>
+    </DiDropdown>
   </div>
 </template>

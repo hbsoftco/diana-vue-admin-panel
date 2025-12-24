@@ -2,7 +2,7 @@
 import { useLocalStorage, usePreferredDark } from '@vueuse/core'
 import { watch } from 'vue'
 
-import Button from '@/shared/ui/Button.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
 
 const preferredDark = usePreferredDark()
 const isDark = useLocalStorage('theme', preferredDark.value)
@@ -21,7 +21,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <Button
+  <DiButton
     size="sm"
     variant="ghost"
     circle
@@ -31,5 +31,5 @@ function toggleTheme() {
     <i-tabler-sun v-if="isDark" class="text-sm" />
 
     <i-tabler-moon v-else class="text-sm" />
-  </Button>
+  </DiButton>
 </template>

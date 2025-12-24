@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import Button from '@/shared/ui/Button.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
 
 const clickCount = ref(0)
 
@@ -18,33 +18,33 @@ function handleClick() {
         Button Variants
       </h2>
       <div class="flex flex-wrap gap-4">
-        <Button variant="neutral">
+        <DiButton variant="neutral">
           Neutral
-        </Button>
-        <Button variant="primary">
+        </DiButton>
+        <DiButton variant="primary">
           Primary
-        </Button>
-        <Button variant="secondary">
+        </DiButton>
+        <DiButton variant="secondary">
           Secondary
-        </Button>
-        <Button variant="info">
+        </DiButton>
+        <DiButton variant="info">
           Info
-        </Button>
-        <Button variant="success">
+        </DiButton>
+        <DiButton variant="success">
           Success
-        </Button>
-        <Button variant="warning">
+        </DiButton>
+        <DiButton variant="warning">
           Warning
-        </Button>
-        <Button variant="error">
+        </DiButton>
+        <DiButton variant="error">
           Error
-        </Button>
-        <Button variant="ghost">
+        </DiButton>
+        <DiButton variant="ghost">
           Ghost
-        </Button>
-        <Button variant="link">
+        </DiButton>
+        <DiButton variant="link">
           Link
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -54,18 +54,18 @@ function handleClick() {
         Button Sizes
       </h2>
       <div class="flex flex-wrap items-center gap-4">
-        <Button size="xs" variant="primary">
+        <DiButton size="xs" variant="primary">
           Extra Small
-        </Button>
-        <Button size="sm" variant="primary">
+        </DiButton>
+        <DiButton size="sm" variant="primary">
           Small
-        </Button>
-        <Button size="md" variant="primary">
+        </DiButton>
+        <DiButton size="md" variant="primary">
           Medium
-        </Button>
-        <Button size="lg" variant="primary">
+        </DiButton>
+        <DiButton size="lg" variant="primary">
           Large
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -75,30 +75,30 @@ function handleClick() {
         Outline Buttons
       </h2>
       <div class="flex flex-wrap gap-4">
-        <Button outline>
+        <DiButton outline>
           Neutral
-        </Button>
-        <Button outline variant="primary">
+        </DiButton>
+        <DiButton outline variant="primary">
           Primary
-        </Button>
-        <Button outline variant="secondary">
+        </DiButton>
+        <DiButton outline variant="secondary">
           Secondary
-        </Button>
-        <Button outline variant="accent">
+        </DiButton>
+        <DiButton outline variant="accent">
           Accent
-        </Button>
-        <Button outline variant="info">
+        </DiButton>
+        <DiButton outline variant="info">
           Info
-        </Button>
-        <Button outline variant="success">
+        </DiButton>
+        <DiButton outline variant="success">
           Success
-        </Button>
-        <Button outline variant="warning">
+        </DiButton>
+        <DiButton outline variant="warning">
           Warning
-        </Button>
-        <Button outline variant="error">
+        </DiButton>
+        <DiButton outline variant="error">
           Error
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -108,18 +108,18 @@ function handleClick() {
         Button States
       </h2>
       <div class="flex flex-wrap gap-4">
-        <Button variant="primary">
+        <DiButton variant="primary">
           Normal
-        </Button>
-        <Button variant="primary" active>
+        </DiButton>
+        <DiButton variant="primary" active>
           Active
-        </Button>
-        <Button variant="primary" disabled>
+        </DiButton>
+        <DiButton variant="primary" disabled>
           Disabled
-        </Button>
-        <Button variant="primary" loading>
+        </DiButton>
+        <DiButton variant="primary" loading>
           Loading
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -129,7 +129,7 @@ function handleClick() {
         Buttons with Icons
       </h2>
       <div class="flex flex-wrap gap-4">
-        <Button variant="primary">
+        <DiButton variant="primary">
           <template #icon-left>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -147,9 +147,9 @@ function handleClick() {
             </svg>
           </template>
           With Icon Left
-        </Button>
+        </DiButton>
 
-        <Button variant="secondary">
+        <DiButton variant="secondary">
           With Icon Right
           <template #icon-right>
             <svg
@@ -167,7 +167,7 @@ function handleClick() {
               />
             </svg>
           </template>
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -177,7 +177,7 @@ function handleClick() {
         Icon Only Buttons
       </h2>
       <div class="flex flex-wrap gap-4">
-        <Button square variant="primary">
+        <DiButton square variant="primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -192,9 +192,9 @@ function handleClick() {
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
-        </Button>
+        </DiButton>
 
-        <Button circle variant="accent">
+        <DiButton circle variant="accent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -209,7 +209,7 @@ function handleClick() {
               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
             />
           </svg>
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -219,12 +219,12 @@ function handleClick() {
         Wide and Block Buttons
       </h2>
       <div class="space-y-4">
-        <Button wide variant="primary">
+        <DiButton wide variant="primary">
           Wide Button
-        </Button>
-        <Button block variant="secondary">
+        </DiButton>
+        <DiButton block variant="secondary">
           Block Button
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -233,9 +233,9 @@ function handleClick() {
       <h2 class="text-2xl font-bold mb-4 text-white">
         Glass Button
       </h2>
-      <Button glass>
+      <DiButton glass>
         Glass Button
-      </Button>
+      </DiButton>
     </section>
 
     <!-- No Animation -->
@@ -244,12 +244,12 @@ function handleClick() {
         No Animation Button
       </h2>
       <div class="flex gap-4">
-        <Button variant="primary">
+        <DiButton variant="primary">
           With Animation
-        </Button>
-        <Button variant="primary" no-animation>
+        </DiButton>
+        <DiButton variant="primary" no-animation>
           No Animation
-        </Button>
+        </DiButton>
       </div>
     </section>
 
@@ -258,9 +258,9 @@ function handleClick() {
       <h2 class="text-2xl font-bold mb-4">
         Button as Link
       </h2>
-      <Button tag="a" variant="primary">
+      <DiButton tag="a" variant="primary">
         Link Button
-      </Button>
+      </DiButton>
     </section>
 
     <!-- Interactive Example -->
@@ -268,9 +268,9 @@ function handleClick() {
       <h2 class="text-2xl font-bold mb-4">
         Interactive Example
       </h2>
-      <Button variant="primary" @click="handleClick">
+      <DiButton variant="primary" @click="handleClick">
         Click Me ({{ clickCount }})
-      </Button>
+      </DiButton>
     </section>
   </div>
 </template>

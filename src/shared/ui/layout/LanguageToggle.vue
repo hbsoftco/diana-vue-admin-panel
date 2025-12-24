@@ -3,8 +3,8 @@ import { useLocalStorage } from '@vueuse/core'
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import Button from '@/shared/ui/Button.vue'
-import Dropdown from '@/shared/ui/Dropdown.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
+import DiDropdown from '@/shared/ui/DiDropdown.vue'
 
 const { locale } = useI18n()
 
@@ -33,7 +33,7 @@ watch(
 </script>
 
 <template>
-  <Dropdown
+  <DiDropdown
     v-model="currentLang"
     :options="languages"
     size="md"
@@ -47,11 +47,11 @@ watch(
   >
     <!-- Trigger -->
     <template #trigger>
-      <Button size="sm" variant="ghost" circle>
+      <DiButton size="sm" variant="ghost" circle>
         <span class="text-lg">
           {{ languages.find((l) => l.code === currentLang)?.flag }}
         </span>
-      </Button>
+      </DiButton>
     </template>
 
     <!-- Option -->
@@ -66,5 +66,5 @@ watch(
         <span v-if="selected" class="rtl:mr-auto ltr:ml-auto">✓</span>
       </button>
     </template>
-  </Dropdown>
+  </DiDropdown>
 </template>

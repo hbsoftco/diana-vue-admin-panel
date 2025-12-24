@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 
-import Button from '@/shared/ui/Button.vue'
+import DiButton from '@/shared/ui/DiButton.vue'
 
 const isFullscreen = ref(false)
 
@@ -30,7 +30,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Button
+  <DiButton
     size="sm"
     variant="ghost"
     circle
@@ -39,5 +39,5 @@ onUnmounted(() => {
   >
     <i-material-symbols-fullscreen-exit v-if="isFullscreen" class="text-sm" />
     <i-material-symbols-fullscreen v-else class="text-sm" />
-  </Button>
+  </DiButton>
 </template>
