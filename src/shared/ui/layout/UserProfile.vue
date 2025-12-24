@@ -7,14 +7,14 @@ import Dropdown from '@/shared/ui/Dropdown.vue'
 const selected = ref(null)
 
 const menuOptions = [
-  { label: 'Dashboard', value: 'dashboard', icon: 'i-mdi-view-dashboard' },
-  { label: 'Profile', value: 'profile', icon: 'i-mdi-account' },
-  { label: 'Messages', value: 'messages', icon: 'i-mdi-message', badge: '3' },
+  { label: 'Dashboard', value: 'dashboard' },
+  { label: 'Profile', value: 'profile' },
+  { label: 'Messages', value: 'messages', badge: '3' },
   { divider: true },
-  { label: 'Settings', value: 'settings', icon: 'i-mdi-cog' },
-  { label: 'Help', value: 'help', icon: 'i-mdi-help-circle' },
+  { label: 'Settings', value: 'settings' },
+  { label: 'Help', value: 'help' },
   { divider: true },
-  { label: 'Logout', value: 'logout', icon: 'i-mdi-logout' },
+  { label: 'Logout', value: 'logout' },
 ]
 </script>
 
@@ -38,7 +38,7 @@ const menuOptions = [
           <div>
             <i-solar:user-bold class="text-lg" />
           </div>
-          <span class="hidden lg:block text-md font-semibold">John Doe</span>
+          <span class="hidden lg:block text-md font-semibold">{{ $t('author') }}</span>
           <i-hugeicons:arrow-down-01 />
         </Button>
       </template>
@@ -67,9 +67,8 @@ const menuOptions = [
           :class="{ 'bg-base-200': selected }"
           @click="select"
         >
-          <component :is="option.icon" class="text-lg" />
           <span>{{ option.label }}</span>
-          <span v-if="option.badge" class="badge badge-sm ml-auto">
+          <span v-if="option.badge" class="badge badge-sm ltr:ml-auto rtl:mr-auto">
             {{ option.badge }}
           </span>
         </button>
