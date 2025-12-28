@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import DiButton from '@/shared/ui/DiButton.vue'
-import DiDropdown from '@/shared/ui/DiDropdown.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 
 const selected = ref(null)
 
