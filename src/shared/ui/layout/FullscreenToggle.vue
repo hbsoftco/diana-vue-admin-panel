@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 
-import DiButton from '@/shared/ui/DiButton.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
 
 const isFullscreen = ref(false)
 

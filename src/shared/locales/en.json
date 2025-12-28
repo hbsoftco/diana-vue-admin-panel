@@ -87,5 +87,13 @@
       "title": "Ui Elements",
       "typography": "Typography"
     }
+  },
+  "patterns": {
+    "previewCodeCard": {
+      "showPreview": "Show Preview",
+      "showCode": "Show Code",
+      "copy": "Copy",
+      "copied": "Copied!"
+    }
   }
 }

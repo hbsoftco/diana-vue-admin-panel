@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import DiCard from '@shared/ui/DiCard.vue'
+import DiCard from '@shared/ui/base/DiCard.vue'
 
-import DiButton from '@/shared/ui/DiButton.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
+
+const buttonCode = `<DiButton>Example</DiButton>`
 </script>
 
 <template>
@@ -103,5 +106,9 @@ import DiButton from '@/shared/ui/DiButton.vue'
         </template>
       </DiCard>
     </div>
+
+    <PreviewCodeCard title="Default Buttons" accent-color="#14b8a6" :code="buttonCode">
+      <DiButton>Example</DiButton>
+    </PreviewCodeCard>
   </div>
 </template>

@@ -2,7 +2,7 @@
 import { useLocalStorage, usePreferredDark } from '@vueuse/core'
 import { watch } from 'vue'
 
-import DiButton from '@/shared/ui/DiButton.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
 
 const preferredDark = usePreferredDark()
 const isDark = useLocalStorage('theme', preferredDark.value)
