@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type Props = {
-  // Button variants
-  variant?:
-    | 'neutral'
+/* =======================
+   Types
+======================= */
+type Variant
+  = | 'neutral'
     | 'primary'
     | 'secondary'
     | 'accent'
@@ -15,15 +16,16 @@ type Props = {
     | 'ghost'
     | 'link'
 
-  // Button sizes
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
-  // Button states
+type Props = {
+  variant?: Variant
+  size?: Size
+
   active?: boolean
   disabled?: boolean
   loading?: boolean
 
-  // Button styles
   outline?: boolean
   dash?: boolean
   soft?: boolean
@@ -34,14 +36,15 @@ type Props = {
   glass?: boolean
   rounded?: boolean
 
-  // HTML attributes
   tag?: 'button' | 'a' | 'input'
   nativeType?: 'button' | 'submit' | 'reset'
 
-  // Custom classes
   customClass?: string
 }
 
+/* =======================
+   Defaults
+======================= */
 const props = withDefaults(defineProps<Props>(), {
   variant: 'neutral',
   size: 'md',
@@ -61,60 +64,70 @@ const props = withDefaults(defineProps<Props>(), {
   rounded: false,
 })
 
+/* =======================
+   Emits
+======================= */
 const emit = defineEmits<{
   click: [event: MouseEvent]
 }>()
 
-const buttonClasses = computed(() => {
-  const classes = ['btn']
+/* =======================
+   Static class maps
+======================= */
+const VARIANT_CLASSES: Record<Variant, string> = {
+  neutral: 'btn-neutral',
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  accent: 'btn-accent',
+  info: 'btn-info',
+  success: 'btn-success',
+  warning: 'btn-warning',
+  error: 'btn-error',
+  ghost: 'btn-ghost',
+  link: 'btn-link',
+}
 
-  // Variant classes
-  if (props.variant && props.variant !== 'neutral') {
-    classes.push(`btn-${props.variant}`)
-  }
+const SIZE_CLASSES: Record<Size, string> = {
+  xs: 'btn-xs',
+  sm: 'btn-sm',
+  md: '',
+  lg: 'btn-lg',
+  xl: 'btn-xl',
+}
 
-  // Size classes
-  if (props.size !== 'md') {
-    classes.push(`btn-${props.size}`)
-  }
+/* =======================
+   Computed classes
+======================= */
+const buttonClasses = computed(() => [
+  'btn',
 
-  // State classes
-  if (props.active)
-    classes.push('btn-active')
-  if (props.disabled)
-    classes.push('btn-disabled')
+  VARIANT_CLASSES[props.variant],
+  SIZE_CLASSES[props.size],
 
-  // Style classes
-  if (props.outline)
-    classes.push('btn-outline')
-  if (props.dash)
-    classes.push('btn-dash')
-  if (props.soft)
-    classes.push('btn-soft')
-  if (props.wide)
-    classes.push('btn-wide')
-  if (props.block)
-    classes.push('btn-block')
-  if (props.circle)
-    classes.push('btn-circle')
-  if (props.square)
-    classes.push('btn-square')
-  if (props.glass)
-    classes.push('glass')
-  if (props.rounded)
-    classes.push('rounded-full')
+  props.active && 'btn-active',
+  props.disabled && 'btn-disabled',
 
-  // Custom classes
-  if (props.customClass)
-    classes.push(props.customClass)
+  props.outline && 'btn-outline',
+  props.dash && 'btn-dash',
+  props.soft && 'btn-soft',
+  props.wide && 'btn-wide',
+  props.block && 'btn-block',
+  props.circle && 'btn-circle',
+  props.square && 'btn-square',
+  props.glass && 'glass',
+  props.rounded && 'rounded-full',
 
-  return classes.join(' ')
-})
+  props.customClass,
+])
 
+/* =======================
+   Methods
+======================= */
 function handleClick(event: MouseEvent) {
-  if (!props.disabled && !props.loading) {
-    emit('click', event)
-  }
+  if (props.disabled || props.loading)
+    return
+
+  emit('click', event)
 }
 </script>
 
