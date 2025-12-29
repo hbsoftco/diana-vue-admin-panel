@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 import { codeToHtml } from 'shiki'
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import { useDirection } from '@/shared/composables/use-direction'
+import { useTheme } from '@/shared/composables/use-theme'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiCard from '@/shared/ui/base/DiCard.vue'
 
+/* =======================
+   Types
+======================= */
 type Props = {
   title?: string
   accentColor?: string
@@ -22,26 +26,43 @@ const props = withDefaults(defineProps<Props>(), {
   language: 'vue',
 })
 
+/* =======================
+   Composables
+======================= */
 const { t } = useI18n()
 const { isRtl } = useDirection()
 const { copy, copied } = useClipboard()
+const { isDark } = useTheme()
 
-const buttonLabel = computed(() => props.codeButtonLabel || t('patterns.previewCodeCard.showCode'))
-
+/* =======================
+   State
+======================= */
 const showCode = ref(false)
 const highlightedCode = ref('')
 
 /* =======================
+   Computed
+======================= */
+const buttonLabel = computed(() => props.codeButtonLabel || t('patterns.previewCodeCard.showCode'))
+
+/* =======================
    Methods
 ======================= */
+async function highlightCode() {
+  if (!props.code)
+    return
+
+  highlightedCode.value = await codeToHtml(props.code, {
+    lang: props.language,
+    theme: isDark.value ? 'dracula' : 'catppuccin-latte',
+  })
+}
+
 async function toggleCode() {
   showCode.value = !showCode.value
 
-  if (showCode.value && !highlightedCode.value && props.code) {
-    highlightedCode.value = await codeToHtml(props.code, {
-      lang: props.language,
-      theme: 'github-dark',
-    })
+  if (showCode.value && !highlightedCode.value) {
+    await highlightCode()
   }
 }
 
@@ -50,6 +71,15 @@ function copyCode() {
     copy(props.code)
   }
 }
+
+/* =======================
+   Watchers
+======================= */
+watch(isDark, async () => {
+  if (showCode.value) {
+    await highlightCode()
+  }
+})
 </script>
 
 <template>
