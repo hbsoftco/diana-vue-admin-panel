@@ -27,6 +27,10 @@
       "title": "Ui Elements",
       "buttons": "Buttons"
     },
+    "loadings": {
+      "title": "Ui Elements",
+      "loadings": "Loadings"
+    },
     "buttonGroup": {
       "title": "Ui Elements",
       "buttonGroup": "Button Group"
@@ -88,6 +92,9 @@
       "typography": "Typography"
     }
   },
+  "base": {
+    "button": {}
+  },
   "patterns": {
     "previewCodeCard": {
       "showPreview": "Show Preview",
@@ -95,5 +102,108 @@
       "copy": "Copy",
       "copied": "Copied!"
     }
+  },
+  "features": {
+    "ui-elements": {
+      "buttons": {
+        "defaultButtons": "Default Buttons",
+        "softButtons": "Soft Buttons",
+        "softRoundedButtons": "Soft Rounded Buttons",
+        "outlineButtons": "Outline Buttons",
+        "outlineRoundedButtons": "Outline Rounded Buttons",
+        "gradientButtons": "Gradient Buttons",
+        "gradientRoundedButtons": "Gradient Rounded Buttons",
+        "dashButtons": "Dash Buttons",
+        "dashRoundedButtons": "Dash Rounded Buttons",
+        "roundedButtons": "Rounded Buttons",
+        "htmlTags": "Html Tags",
+        "disabledButtons": "Disabled Buttons",
+        "loadingButtons": "Loading Buttons",
+        "iconButtons": "Icon Buttons",
+        "iconCircleButtons": "Icon Circle Buttons",
+        "iconOutlineCircleButtons": "Icon Outline Circle Buttons",
+        "wideButtons": "Wide Buttons",
+        "blockButtons": "Block Buttons",
+        "buttonSizes": "Button Sizes",
+        "buttonWithIcon": "Button with Icon",
+        "socialButtons": "Social Login Buttons",
+        "socialIconButtons": "Social Icon Buttons"
+      },
+      "loading": {
+        "spinnerLoading": "Spinner Loading",
+        "dotsLoading": "Dots Loading",
+        "ringLoading": "Ring Loading",
+        "ballLoading": "Ball Loading",
+        "barsLoading": "Bars Loading",
+        "infinityLoading": "Infinity Loading",
+        "coloredSpinner": "Colored Spinner",
+        "coloredDots": "Colored Dots",
+        "coloredRing": "Colored Ring",
+        "coloredBall": "Colored Ball",
+        "coloredBars": "Colored Bars",
+        "coloredInfinity": "Colored Infinity",
+        "allVariants": "All Variants"
+      },
+      "badge": {
+        "defaultBadge": "Default Badge",
+        "badgeSizes": "Badge Sizes",
+        "coloredBadges": "Colored Badges",
+        "largeColoredBadges": "Large Colored Badges",
+        "softBadges": "Soft Badges",
+        "outlineBadges": "Outline Badges",
+        "dashBadges": "Dash Badges",
+        "mixedStyleBadges": "Mixed Style Badges",
+        "ghostBadge": "Ghost Badge",
+        "emptyBadges": "Empty Badges",
+        "badgeWithIcons": "Badge with Icons",
+        "badgeInText": "Badge in Text"
+      },
+      "alert": {
+        "defaultAlert": "Default Alert",
+        "coloredAlerts": "Colored Alerts",
+        "softAlerts": "Soft Style Alerts",
+        "outlineAlerts": "Outline Style Alerts",
+        "dashAlerts": "Dash Style Alerts",
+        "closableAlerts": "Closable Alerts",
+        "alertWithTitle": "Alert with Title",
+        "alertWithActions": "Alert with Actions",
+        "alertWithCustomIcon": "Alert with Custom Icon",
+        "verticalAlert": "Vertical Layout Alert",
+        "alertWithTitleAndActions": "Alert with Title and Actions",
+        "messages": {
+          "newUpdate": "New software update available.",
+          "purchaseConfirmed": "Your purchase has been confirmed!",
+          "invalidEmail": "Warning: Invalid email address!",
+          "taskFailed": "Error! Task failed successfully.",
+          "unreadMessages": "12 unread messages. Tap to see.",
+          "clickToClose": "Click the X button to close this alert.",
+          "successClosable": "Success! You can close this alert.",
+          "warningClosable": "Warning! This alert is closable.",
+          "errorClosable": "Error! Click to dismiss this alert.",
+          "newMessageTitle": "New message!",
+          "newMessageDesc": "You have 1 unread message",
+          "cookiesMessage": "We use cookies for no reason.",
+          "congratulations": "Congratulations! You've won a prize!",
+          "verticalLayout": "This is a vertical layout alert, good for mobile screens."
+        },
+        "actions": {
+          "deny": "Deny",
+          "accept": "Accept",
+          "see": "See",
+          "action": "Action"
+        }
+      }
+    }
+  },
+  "variants": {
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "info": "Info",
+    "accent": "Accent",
+    "success": "Success",
+    "warning": "Warning",
+    "error": "Error",
+    "neutral": "Neutral",
+    "link": "Link"
   }
 }
