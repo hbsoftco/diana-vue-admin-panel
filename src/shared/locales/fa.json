@@ -27,6 +27,10 @@
       "title": "المان‌های ظاهری",
       "buttons": "دکمه‌ها"
     },
+    "loadings": {
+      "title": "المان‌های ظاهری",
+      "loadings": "لودینگ"
+    },
     "buttonGroup": {
       "title": "المان‌های ظاهری",
       "buttonGroup": "گروه دکمه"
@@ -98,5 +102,108 @@
       "copy": "کپی",
       "copied": "کپی شد!"
     }
+  },
+  "features": {
+    "ui-elements": {
+      "buttons": {
+        "defaultButtons": "دکمه‌های پیشفرض",
+        "softButtons": "دکمه‌های شفاف",
+        "softRoundedButtons": "دکمه‌های شفاف گرد شده",
+        "outlineButtons": "دکمه‌های خطی",
+        "outlineRoundedButtons": "دکمه‌های خطی گرد شده",
+        "gradientButtons": "دکمه‌های گرادینتی",
+        "gradientRoundedButtons": "دکمه‌های گرادینتی گرد شده",
+        "dashButtons": "دکمه‌های خط‌چین",
+        "dashRoundedButtons": "دکمه‌های خط‌چین گرد شده",
+        "roundedButtons": "دکمه‌های گرد شده ",
+        "htmlTags": "تگ‌ها HTML",
+        "disabledButtons": "دکمه‌های غیرفعال",
+        "loadingButtons": "دکمه‌های لودینگ",
+        "iconButtons": "دکمه‌های آیکون",
+        "iconCircleButtons": "دکمه‌های آیکون دایره‌ای",
+        "iconOutlineCircleButtons": "دکمه‌های آیکون دایره‌ای محیطی",
+        "wideButtons": "دکمه‌های پهن",
+        "blockButtons": "دکمه‌های بلوکی",
+        "buttonSizes": "اندازه‌های دکمه",
+        "buttonWithIcon": "دکمه با آیکن",
+        "socialButtons": "دکمه‌های ورود با شبکه‌های اجتماعی",
+        "socialIconButtons": "دکمه‌های آیکن شبکه‌های اجتماعی"
+      },
+      "loading": {
+        "spinnerLoading": "لودینگ چرخشی",
+        "dotsLoading": "لودینگ نقطه‌ای",
+        "ringLoading": "لودینگ حلقه‌ای",
+        "ballLoading": "لودینگ توپی",
+        "barsLoading": "لودینگ میله‌ای",
+        "infinityLoading": "لودینگ بی‌نهایت",
+        "coloredSpinner": "چرخشی رنگی",
+        "coloredDots": "نقطه‌ای رنگی",
+        "coloredRing": "حلقه‌ای رنگی",
+        "coloredBall": "توپی رنگی",
+        "coloredBars": "میله‌ای رنگی",
+        "coloredInfinity": "بی‌نهایت رنگی",
+        "allVariants": "همه انواع"
+      },
+      "badge": {
+        "defaultBadge": "نشان پیشفرض",
+        "badgeSizes": "اندازه‌های نشان",
+        "coloredBadges": "نشان‌های رنگی",
+        "largeColoredBadges": "نشان‌های رنگی بزرگ",
+        "softBadges": "نشان‌های شفاف",
+        "outlineBadges": "نشان‌های خطی",
+        "dashBadges": "نشان‌های خط‌چین",
+        "mixedStyleBadges": "نشان‌های ترکیبی",
+        "ghostBadge": "نشان شبح",
+        "emptyBadges": "نشان‌های خالی",
+        "badgeWithIcons": "نشان با آیکون",
+        "badgeInText": "نشان در متن"
+      },
+      "alert": {
+        "defaultAlert": "هشدار پیشفرض",
+        "coloredAlerts": "هشدارهای رنگی",
+        "softAlerts": "هشدارهای شفاف",
+        "outlineAlerts": "هشدارهای خطی",
+        "dashAlerts": "هشدارهای خط‌چین",
+        "closableAlerts": "هشدارهای قابل بستن",
+        "alertWithTitle": "هشدار با عنوان",
+        "alertWithActions": "هشدار با اکشن‌ها",
+        "alertWithCustomIcon": "هشدار با آیکون سفارشی",
+        "verticalAlert": "هشدار عمودی",
+        "alertWithTitleAndActions": "هشدار با عنوان و اکشن‌ها",
+        "messages": {
+          "newUpdate": "نسخه جدید نرم‌افزار در دسترس است.",
+          "purchaseConfirmed": "خرید شما تایید شد!",
+          "invalidEmail": "هشدار: آدرس ایمیل نامعتبر است!",
+          "taskFailed": "خطا! وظیفه با موفقیت شکست خورد.",
+          "unreadMessages": "12 پیام خوانده نشده. برای مشاهده کلیک کنید.",
+          "clickToClose": "روی دکمه X کلیک کنید تا این هشدار بسته شود.",
+          "successClosable": "موفق! می‌توانید این هشدار را ببندید.",
+          "warningClosable": "هشدار! این هشدار قابل بستن است.",
+          "errorClosable": "خطا! برای بستن این هشدار کلیک کنید.",
+          "newMessageTitle": "پیام جدید!",
+          "newMessageDesc": "شما 1 پیام خوانده نشده دارید",
+          "cookiesMessage": "ما بدون دلیل از کوکی استفاده می‌کنیم.",
+          "congratulations": "تبریک! شما یک جایزه برنده شده‌اید!",
+          "verticalLayout": "این یک هشدار با چیدمان عمودی است، مناسب برای صفحات موبایل."
+        },
+        "actions": {
+          "deny": "رد کردن",
+          "accept": "قبول",
+          "see": "مشاهده",
+          "action": "اکشن"
+        }
+      }
+    }
+  },
+  "variants": {
+    "primary": "اصلی",
+    "secondary": "ثانویه",
+    "info": "اطلاعاتی",
+    "accent": "تاکیدی",
+    "success": "موفق",
+    "warning": "هشدار",
+    "error": "خطا",
+    "neutral": "خنثی",
+    "link": "لینکی"
   }
 }

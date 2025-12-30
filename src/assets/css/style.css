@@ -23,7 +23,7 @@
   /* Effects */
   --depth: 1;
   --noise: 0;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: nane;
 }
 
 @import 'tailwindcss';
@@ -40,7 +40,7 @@
   --color-base-100: #fafafa; /* Off-white background */
   --color-base-200: #f4f4f5; /* Light gray */
   --color-base-300: #e4e4e7; /* Light border */
-  --color-base-content: #09090b; /* Almost black text */
+  --color-base-content: #333335; /* Almost black text */
 
   /* Primary Colors - Purple */
   --color-primary: #7c3aed; /* Vibrant purple */
@@ -96,7 +96,7 @@
   --color-base-100: #09090b; /* Almost black background */
   --color-base-200: #252729; /* Dark gray card background */
   --color-base-300: #27272a; /* Medium dark borders */
-  --color-base-content: #ffffffb3; /* Off-white text */
+  --color-base-content: #bcbbbb; /* Off-white text */
 
   /* Primary Colors - Light Purple */
   --color-primary: #845adf; /* Light purple */
@@ -112,7 +112,7 @@
 
   /* Neutral Colors */
   --color-neutral: #2b2e31; /* Gray muted text */
-  --color-neutral-content: #ffffffb3; /* Dark text */
+  --color-neutral-content: #bcbbbb; /* Dark text */
 
   /* State Colors */
   --color-info: #49b6f5; /* Cyan */
@@ -143,7 +143,7 @@
 }
 
 /* Customize daysiui components */
-@import './daysiui/di-btn.css';
+@import './di-ui/di-btn.css';
 
 @utility text-menu-prime {
   color: var(--color-menu-prime);

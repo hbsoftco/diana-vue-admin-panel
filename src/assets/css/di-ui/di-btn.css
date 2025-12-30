@@ -1,0 +1,33 @@
+@utility btn {
+  @apply shadow-none font-semibold active:translate-0 no-underline;
+}
+
+.btn-gradient {
+  border: transparent;
+
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--btn-color) 85%, #afa9a9),
+    color-mix(in oklab, var(--btn-color) 45%, #161111)
+  );
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--btn-color) 90%, #afa9a9),
+    color-mix(in oklab, var(--btn-color) 60%, #251e1e)
+  );
+}
+
+.btn-gradient:active {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--btn-color) 75%, #5a5a5a),
+    color-mix(in oklab, var(--btn-color) 55%, black)
+  );
+}
+
+[data-theme='diana-dark'] .btn-neutral:not(:disabled) {
+  @apply text-[#bcbbbb];
+}

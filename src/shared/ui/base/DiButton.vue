@@ -1,30 +1,43 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import type { Size, Variant } from '@/shared/types/models'
+
+import DiLoading from '@/shared/ui/base/DiLoading.vue'
+
 /* =======================
    Types
 ======================= */
-type Variant
-  = | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-    | 'ghost'
-    | 'link'
 
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type LoadingVariant = 'spinner' | 'dots' | 'ring' | 'ball' | 'bars' | 'infinity'
+
+type SocialProvider
+  = | 'email'
+    | 'github'
+    | 'google'
+    | 'facebook'
+    | 'x'
+    | 'kakao'
+    | 'apple'
+    | 'amazon'
+    | 'microsoft'
+    | 'line'
+    | 'slack'
+    | 'linkedin'
+    | 'vk'
+    | 'wechat'
+    | 'metamask'
 
 type Props = {
   variant?: Variant
   size?: Size
+  social?: SocialProvider
 
   active?: boolean
   disabled?: boolean
   loading?: boolean
+  loadingDisabled?: boolean
+  loadingVariant?: LoadingVariant
 
   outline?: boolean
   dash?: boolean
@@ -35,9 +48,10 @@ type Props = {
   square?: boolean
   glass?: boolean
   rounded?: boolean
+  gradient?: boolean
 
   tag?: 'button' | 'a' | 'input'
-  nativeType?: 'button' | 'submit' | 'reset'
+  nativeType?: 'button' | 'submit' | 'reset' | 'radio' | 'checkbox'
 
   customClass?: string
 }
@@ -53,6 +67,8 @@ const props = withDefaults(defineProps<Props>(), {
   active: false,
   disabled: false,
   loading: false,
+  loadingDisabled: true,
+  loadingVariant: 'spinner',
   outline: false,
   dash: false,
   soft: false,
@@ -62,6 +78,7 @@ const props = withDefaults(defineProps<Props>(), {
   square: false,
   glass: false,
   rounded: false,
+  gradient: false,
 })
 
 /* =======================
@@ -74,6 +91,24 @@ const emit = defineEmits<{
 /* =======================
    Static class maps
 ======================= */
+const SOCIAL_CLASSES: Record<SocialProvider, string> = {
+  email: 'bg-white !text-black border-white',
+  github: 'bg-black !text-white border-black',
+  google: 'bg-white !text-black border-white',
+  facebook: 'bg-[#1A77F2] !text-white border-[#1A77F2]',
+  x: 'bg-black !text-white border-black',
+  kakao: 'bg-[#FEE502] !text-[#181600] border-[#FEE502]',
+  apple: 'bg-black !text-white border-black',
+  amazon: 'bg-[#FF9900] !text-black border-[#FF9900]',
+  microsoft: 'bg-[#2F2F2F] !text-white border-[#2F2F2F]',
+  line: 'bg-[#03C755] !text-white border-[#03C755]',
+  slack: 'bg-[#622069] !text-white border-[#622069]',
+  linkedin: 'bg-[#0967C2] !text-white border-[#0967C2]',
+  vk: 'bg-[#47698F] !text-white border-[#47698F]',
+  wechat: 'bg-[#5EBB2B] !text-white border-[#5EBB2B]',
+  metamask: 'bg-white !text-black border-white',
+}
+
 const VARIANT_CLASSES: Record<Variant, string> = {
   neutral: 'btn-neutral',
   primary: 'btn-primary',
@@ -85,6 +120,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
   error: 'btn-error',
   ghost: 'btn-ghost',
   link: 'btn-link',
+  gradient: 'btn-link',
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -95,9 +131,28 @@ const SIZE_CLASSES: Record<Size, string> = {
   xl: 'btn-xl',
 }
 
+// Map button sizes to loading sizes
+const LOADING_SIZE_MAP: Record<Size, Size> = {
+  xs: 'xs',
+  sm: 'xs',
+  md: 'sm',
+  lg: 'md',
+  xl: 'lg',
+}
+
 /* =======================
-   Computed classes
+   Computed properties
 ======================= */
+const isDisabled = computed(() => {
+  if (props.disabled)
+    return true
+  if (props.loading && props.loadingDisabled)
+    return true
+  return false
+})
+
+const socialClass = computed(() => (props.social ? SOCIAL_CLASSES[props.social] : ''))
+
 const buttonClasses = computed(() => [
   'btn',
 
@@ -105,7 +160,7 @@ const buttonClasses = computed(() => [
   SIZE_CLASSES[props.size],
 
   props.active && 'btn-active',
-  props.disabled && 'btn-disabled',
+  isDisabled.value && 'btn-disabled',
 
   props.outline && 'btn-outline',
   props.dash && 'btn-dash',
@@ -116,15 +171,20 @@ const buttonClasses = computed(() => [
   props.square && 'btn-square',
   props.glass && 'glass',
   props.rounded && 'rounded-full',
+  props.gradient && 'btn-gradient',
+
+  socialClass.value,
 
   props.customClass,
 ])
+
+const loadingSize = computed(() => LOADING_SIZE_MAP[props.size])
 
 /* =======================
    Methods
 ======================= */
 function handleClick(event: MouseEvent) {
-  if (props.disabled || props.loading)
+  if (isDisabled.value)
     return
 
   emit('click', event)
@@ -135,11 +195,11 @@ function handleClick(event: MouseEvent) {
   <component
     :is="tag"
     :type="nativeType"
-    :disabled="disabled || loading"
+    :disabled="isDisabled"
     :class="buttonClasses"
     @click="handleClick"
   >
-    <span v-if="loading" class="loading loading-spinner" />
+    <DiLoading v-if="loading" :variant="loadingVariant" :size="loadingSize" />
     <slot name="icon-left" />
     <slot />
     <slot name="icon-right" />

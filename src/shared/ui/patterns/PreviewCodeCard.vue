@@ -4,7 +4,6 @@ import { codeToHtml } from 'shiki'
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import { useDirection } from '@/shared/composables/use-direction'
 import { useTheme } from '@/shared/composables/use-theme'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiCard from '@/shared/ui/base/DiCard.vue'
@@ -30,7 +29,6 @@ const props = withDefaults(defineProps<Props>(), {
    Composables
 ======================= */
 const { t } = useI18n()
-const { isRtl } = useDirection()
 const { copy, copied } = useClipboard()
 const { isDark } = useTheme()
 
@@ -54,7 +52,7 @@ async function highlightCode() {
 
   highlightedCode.value = await codeToHtml(props.code, {
     lang: props.language,
-    theme: isDark.value ? 'dracula' : 'catppuccin-latte',
+    theme: isDark.value ? 'aurora-x' : 'catppuccin-latte',
   })
 }
 
@@ -87,7 +85,7 @@ watch(isDark, async () => {
     <!-- Header -->
     <template #header>
       <div class="flex items-center justify-between w-full">
-        <span v-if="title" class="text-sm font-semibold text-base-content">
+        <span v-if="title" class="text-[15px] font-bold text-base-content pt-1">
           {{ title }}
         </span>
 
@@ -118,12 +116,7 @@ watch(isDark, async () => {
       <DiButton size="xs" variant="ghost" class="absolute top-2 right-2 z-10" @click="copyCode">
         {{ copied ? $t('patterns.previewCodeCard.copied') : $t('patterns.previewCodeCard.copy') }}
 
-        <template v-if="!isRtl" #icon-right>
-          <i-material-symbols-light-content-copy v-if="!copied" class="text-xs" />
-          <i-material-symbols-light-check v-else class="text-xs" />
-        </template>
-
-        <template v-else #icon-left>
+        <template #icon-right>
           <i-material-symbols-light-content-copy v-if="!copied" class="text-xs" />
           <i-material-symbols-light-check v-else class="text-xs" />
         </template>
@@ -143,6 +136,7 @@ watch(isDark, async () => {
 .code-preview {
   overflow-x: auto;
   border-radius: 0.5rem;
+  direction: ltr;
 }
 
 /* Shiki output */
