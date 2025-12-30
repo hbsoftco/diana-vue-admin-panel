@@ -41,6 +41,7 @@ const menuItems = ref<MenuItemType[]>([
       { id: 'badge', label: 'Badge', route: '/ui-elements/badge' },
       { id: 'breadcrumb', label: 'Breadcrumb', route: '/ui-elements/breadcrumb' },
       { id: 'buttons', label: 'Buttons', route: '/ui-elements/buttons' },
+      { id: 'loadings', label: 'Loadings', route: '/ui-elements/loadings' },
       { id: 'button-group', label: 'Button Group', route: '/ui-elements/button-group' },
       { id: 'cards', label: 'Cards', route: '/ui-elements/cards' },
       { id: 'dropdowns', label: 'Dropdowns', route: '/ui-elements/dropdowns' },
