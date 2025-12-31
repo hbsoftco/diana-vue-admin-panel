@@ -10,7 +10,7 @@
   --border: 1px;
 
   /* Border Radius */
-  --radius-selector: 0.5rem;
+  --radius-selector: 0.25rem;
   --radius-field: 0.375rem;
   --radius-box: 0.5rem;
   --radius-btn: 0.5rem;
@@ -165,9 +165,9 @@
   font-family: 'Dana', sans-serif;
 }
 
-@utility text-md {
+/* @utility text-md {
   @apply text-[1rem];
-}
+} */
 
 @utility text-di-sm {
   @apply text-[.813rem];
