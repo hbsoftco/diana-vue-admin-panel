@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 const selected = ref(null)
 
@@ -36,10 +37,10 @@ const menuOptions = [
       <template #trigger>
         <DiButton variant="ghost" class="px-2" rounded>
           <div>
-            <i-solar:user-bold class="text-lg" />
+            <DiIcon name="user" size="md" />
           </div>
           <span class="hidden lg:block text-di-sm font-semibold">{{ $t('author') }}</span>
-          <i-hugeicons:arrow-down-01 />
+          <DiIcon name="arrowDown" size="sm" />
         </DiButton>
       </template>
 

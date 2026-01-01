@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 const isFullscreen = ref(false)
 
@@ -37,7 +38,6 @@ onUnmounted(() => {
     :title="isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'"
     @click="toggleFullscreen"
   >
-    <i-material-symbols-fullscreen-exit v-if="isFullscreen" class="text-sm" />
-    <i-material-symbols-fullscreen v-else class="text-sm" />
+    <DiIcon :name="!isFullscreen ? 'fullscreen' : 'fullscreenExit'" size="sm" />
   </DiButton>
 </template>

@@ -5,6 +5,35 @@
     "light": "روشن",
     "dark": "تاریک"
   },
+  "sidebar": {
+    "dashboards": {
+      "title": "داشبوردها"
+    },
+    "ui-elements": {
+      "title": "المان‌های ظاهری",
+      "icons": "آیکن‌ها",
+      "alerts": "هشدارها",
+      "badge": "نشان",
+      "breadcrumb": "مسیر ناوبری",
+      "buttons": "دکمه‌ها",
+      "loadings": "لودینگ",
+      "buttonGroup": "گروه دکمه",
+      "card": "کاردها",
+      "dropdowns": "منوهای کشویی",
+      "imagesFigures": "تصاویر و اشکال",
+      "linksInteractions": "لینک‌ها و تعاملات",
+      "listGroup": "گروه لیست",
+      "navsTabs": "ناوبری و تب‌ها",
+      "objectFit": "تناسب شیء",
+      "pagination": "صفحه‌بندی",
+      "popovers": "پاپ‌آورها",
+      "progress": "پیشرفت",
+      "spinners": "چرخ‌اندن‌ها",
+      "toasts": "اعلان‌ها",
+      "tooltips": "راهنماها",
+      "typography": "تایپوگرافی"
+    }
+  },
   "menu": {
     "dashboards": "داشبوردها",
     "users": "کاربران",
@@ -192,6 +221,9 @@
           "see": "مشاهده",
           "action": "اکشن"
         }
+      },
+      "icons": {
+        "customIcons": "آیکن‌های سفارشی"
       }
     }
   },

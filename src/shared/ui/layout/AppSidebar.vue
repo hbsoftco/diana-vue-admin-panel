@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import IconMaterialSymbolsHomeOutlineRounded from '~icons/material-symbols/home-outline-rounded'
-import IconMdiTokenElement from '~icons/oui/token-element'
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -16,7 +14,7 @@ const menuItems = ref<MenuItemType[]>([
   {
     id: 'dashboards',
     label: 'menu.dashboards',
-    icon: IconMaterialSymbolsHomeOutlineRounded,
+    icon: 'homeOutlineRounded',
     children: [
       { id: 'crm', label: 'CRM', route: '/dashboards/crm' },
       { id: 'ecommerce', label: 'Ecommerce', route: '/dashboards/ecommerce' },
@@ -35,12 +33,13 @@ const menuItems = ref<MenuItemType[]>([
   {
     id: 'ui-elements',
     label: 'UI Elements',
-    icon: IconMdiTokenElement,
+    icon: 'tokenElement',
     children: [
       { id: 'alerts', label: 'Alerts', route: '/ui-elements/alerts' },
       { id: 'badge', label: 'Badge', route: '/ui-elements/badge' },
       { id: 'breadcrumb', label: 'Breadcrumb', route: '/ui-elements/breadcrumb' },
       { id: 'buttons', label: 'Buttons', route: '/ui-elements/buttons' },
+      { id: 'icons', label: 'Icons', route: '/ui-elements/icons' },
       { id: 'loadings', label: 'Loadings', route: '/ui-elements/loadings' },
       { id: 'button-group', label: 'Button Group', route: '/ui-elements/button-group' },
       { id: 'cards', label: 'Cards', route: '/ui-elements/cards' },
@@ -66,14 +65,14 @@ const menuItems = ref<MenuItemType[]>([
   {
     id: 'projects',
     label: 'Projects',
-    icon: IconMdiTokenElement,
+    icon: 'tokenElement',
     children: [
       { id: 'all-projects', label: 'All Projects', route: '/projects' },
       { id: 'active', label: 'Active', route: '/projects/active' },
       {
         id: 'archived',
         label: 'Archived',
-        icon: IconMdiTokenElement,
+        icon: 'tokenElement',
         children: [
           { id: 'archived-2023', label: '2023', route: '/projects/archived/2023' },
           { id: 'archived-2024', label: '2024', route: '/projects/archived/2024' },

@@ -7,6 +7,7 @@ import { useI18n } from 'vue-i18n'
 import { useTheme } from '@/shared/composables/use-theme'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiCard from '@/shared/ui/base/DiCard.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 /* =======================
    Types
@@ -99,8 +100,7 @@ watch(isDark, async () => {
           {{ showCode ? $t('patterns.previewCodeCard.showPreview') : buttonLabel }}
 
           <template #icon-right>
-            <i-material-symbols-light-code v-if="!showCode" class="text-sm" />
-            <i-material-symbols-light-code-off v-else class="text-sm" />
+            <DiIcon :name="!showCode ? 'code' : 'codeClose'" size="sm" />
           </template>
         </DiButton>
       </div>
@@ -117,8 +117,7 @@ watch(isDark, async () => {
         {{ copied ? $t('patterns.previewCodeCard.copied') : $t('patterns.previewCodeCard.copy') }}
 
         <template #icon-right>
-          <i-material-symbols-light-content-copy v-if="!copied" class="text-xs" />
-          <i-material-symbols-light-check v-else class="text-xs" />
+          <DiIcon :name="!copied ? 'copy' : 'lightCheck'" size="xs" />
         </template>
       </DiButton>
 

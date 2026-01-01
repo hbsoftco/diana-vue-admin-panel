@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import AlertsDemo from './ui/AlertsDemo.vue'
+import IconsDemo from './ui/IconsDemo.vue'
 </script>
 
 <template>
   <div>
-    <AlertsDemo />
+    <IconsDemo />
   </div>
 </template>

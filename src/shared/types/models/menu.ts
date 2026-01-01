@@ -1,9 +1,9 @@
-import type { FunctionalComponent, SVGAttributes } from 'vue'
+import type { IconName } from '@/shared/icons/registry'
 
 export type MenuItem = {
   id: string
   label: string
-  icon?: FunctionalComponent<SVGAttributes> | string
+  icon?: IconName
   route?: string
   children?: MenuItem[]
 }
