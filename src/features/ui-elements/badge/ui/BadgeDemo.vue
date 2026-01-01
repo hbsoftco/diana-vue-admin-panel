@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import DiBadge from '@/shared/ui/base/DiBadge.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 const defaultBadges = `<div class="flex flex-wrap gap-2 items-center">
@@ -183,6 +184,95 @@ const badgeInText = `<div class="flex flex-col gap-3">
   <p class="text-xs">
     Paragraph <DiBadge size="xs">Badge</DiBadge>
   </p>
+</div>`
+
+const defaultButtons = `<div class="flex flex-wrap gap-2">
+  <DiButton
+    variant="primary"
+    badge-position="right"
+    badge-value="32"
+    badge-outline
+    badge-variant="warning"
+    badge-size="sm"
+  >
+    Primary
+  </DiButton>
+  <DiButton
+    variant="info"
+    badge-position="right"
+    badge-value="Hot"
+    badge-variant="error"
+    badge-size="sm"
+  >
+    Info
+  </DiButton>
+  <DiButton
+    variant="warning"
+    badge-position="left"
+    badge-value="New"
+    badge-variant="info"
+    badge-size="sm"
+  >
+    Warning
+  </DiButton>
+  <DiButton
+    variant="warning"
+    dash
+    badge-position="left"
+    badge-value="21"
+    badge-variant="error"
+    badge-size="sm"
+    rounded
+  >
+    Warning
+  </DiButton>
+  <DiButton
+    variant="neutral"
+    badge-position="left"
+    badge-dash
+    badge-value="122"
+    badge-variant="primary"
+    badge-size="sm"
+  >
+    Neutral
+  </DiButton>
+  <DiButton
+    variant="success"
+    dash
+    rounded
+    badge-position="left"
+    badge-dash
+    badge-value="122"
+    badge-variant="error"
+    badge-size="sm"
+  >
+    Success
+  </DiButton>
+  <DiButton
+    variant="error"
+    rounded
+    badge-position="right"
+    badge-value="2421"
+    badge-pill
+    badge-variant="info"
+    badge-size="xs"
+  >
+    Error
+  </DiButton>
+  <DiButton
+    outline
+    rounded
+    variant="secondary"
+    badge-position="right"
+    badge-value="New"
+    badge-variant="secondary"
+    badge-pill
+  >
+    Secondary
+  </DiButton>
+  <DiButton variant="link">
+    Link
+  </DiButton>
 </div>`
 </script>
 
@@ -514,6 +604,103 @@ const badgeInText = `<div class="flex flex-col gap-3">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge>Badge</DiBadge>
+      </div>
+    </PreviewCodeCard>
+
+    <!-- Default Buttons -->
+    <PreviewCodeCard
+      :title="$t('features.ui-elements.buttons.defaultButtons')"
+      accent-color="#14b8a6"
+      :code="defaultButtons"
+      language="html"
+    >
+      <div class="flex flex-wrap gap-2">
+        <DiButton
+          variant="primary"
+          badge-position="right"
+          badge-value="32"
+          badge-outline
+          badge-variant="warning"
+          badge-size="sm"
+        >
+          Messages
+        </DiButton>
+        <DiButton
+          variant="info"
+          badge-position="right"
+          badge-value="Hot"
+          badge-variant="error"
+          badge-size="sm"
+        >
+          Badge Buttons
+        </DiButton>
+        <DiButton
+          variant="warning"
+          badge-position="left"
+          badge-value="New"
+          badge-variant="info"
+          badge-size="sm"
+        >
+          {{ $t('variants.warning') }}
+        </DiButton>
+        <DiButton
+          variant="warning"
+          dash
+          badge-position="left"
+          badge-value="21"
+          badge-variant="error"
+          badge-size="sm"
+          rounded
+        >
+          {{ $t('variants.warning') }}
+        </DiButton>
+        <DiButton
+          variant="neutral"
+          rounded
+          badge-position="left"
+          badge-value="New"
+          badge-variant="error"
+          badge-size="lg"
+          badge-pill
+          badge-dash
+        >
+          Notifications
+        </DiButton>
+        <DiButton
+          variant="success"
+          dash
+          rounded
+          badge-position="left"
+          badge-value="122"
+          badge-variant="success"
+          badge-size="sm"
+        >
+          {{ $t('variants.success') }}
+        </DiButton>
+        <DiButton
+          variant="error"
+          rounded
+          badge-position="right"
+          badge-value="242"
+          badge-variant="neutral"
+          badge-size="xl"
+        >
+          {{ $t('variants.error') }}
+        </DiButton>
+        <DiButton
+          outline
+          rounded
+          variant="secondary"
+          badge-position="right"
+          badge-value="New"
+          badge-variant="secondary"
+          badge-pill
+        >
+          {{ $t('variants.secondary') }}
+        </DiButton>
+        <DiButton variant="link">
+          {{ $t('variants.link') }}
+        </DiButton>
       </div>
     </PreviewCodeCard>
 

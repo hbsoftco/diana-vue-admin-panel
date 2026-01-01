@@ -53,6 +53,17 @@ export const uiElementRoutes = {
       },
     },
     {
+      path: 'loadings',
+      component: () => import('@/pages/ui-elements/loadings.vue'),
+      meta: {
+        pageTitle: 'pages.loadings.loadings',
+        breadcrumb: [
+          { label: 'pages.loadings.title', link: '/ui-elements' },
+          { label: 'pages.loadings.loadings' },
+        ],
+      },
+    },
+    {
       path: 'button-group',
       component: () => import('@/pages/ui-elements/button-group.vue'),
       meta: {
