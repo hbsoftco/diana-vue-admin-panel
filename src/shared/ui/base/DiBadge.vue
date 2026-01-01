@@ -1,24 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import type { Size } from '@/shared/types/models'
+import type { BadgeVariant, Size } from '@/shared/types/models'
 
 /* =======================
    Types
 ======================= */
-type Variant
-  = | 'neutral'
-    | 'primary'
-    | 'secondary'
-    | 'accent'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'error'
-    | 'ghost'
-
 type Props = {
-  variant?: Variant
+  variant?: BadgeVariant
   size?: Size
 
   outline?: boolean
@@ -54,7 +43,7 @@ const emit = defineEmits<{
 /* =======================
    Static class maps
 ======================= */
-const VARIANT_CLASSES: Record<Variant, string> = {
+const VARIANT_CLASSES: Record<BadgeVariant, string> = {
   neutral: 'badge-neutral',
   primary: 'badge-primary',
   secondary: 'badge-secondary',

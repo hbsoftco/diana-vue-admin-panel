@@ -250,7 +250,7 @@ const buttonWithIcon = `<div class="flex flex-wrap items-center gap-2">
 const socialButtons = `<div class="flex flex-wrap items-center gap-2">
   <DiButton social="google" wide>
     <template #icon-left>
-      <i-logos:google-icon class="text-md" />
+      <i-logos:google-icon class="text-base" />
     </template>
     Continue with Google
   </DiButton>
@@ -306,7 +306,7 @@ const socialButtons = `<div class="flex flex-wrap items-center gap-2">
 
   <DiButton social="line" wide>
     <template #icon-left>
-      <i-fontisto:line class="text-md" />
+      <i-fontisto:line class="text-base" />
     </template>
     Continue with LINE
   </DiButton>
@@ -372,10 +372,10 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     <i-mdi:linkedin class="text-lg" />
   </DiButton>
   <DiButton social="slack" square>
-    <i-logos:slack-icon class="text-md" />
+    <i-logos:slack-icon class="text-base" />
   </DiButton>
   <DiButton social="microsoft" square>
-    <i-logos:microsoft-icon class="text-md" />
+    <i-logos:microsoft-icon class="text-base" />
   </DiButton>
   <DiButton social="line" square>
     <i-fontisto:line class="text-lg" />
@@ -393,7 +393,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     <i-basil:vk-solid class="text-lg" />
   </DiButton>
   <DiButton social="metamask" square>
-    <i-logos:metamask-icon class="text-md" />
+    <i-logos:metamask-icon class="text-base" />
   </DiButton>
 </div>`
 </script>
@@ -1021,7 +1021,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
       <div class="flex flex-wrap items-center gap-2">
         <DiButton social="google" wide>
           <template #icon-left>
-            <i-logos:google-icon class="text-md" />
+            <i-logos:google-icon class="text-base" />
           </template>
           Continue with Google
         </DiButton>
@@ -1077,7 +1077,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
         <DiButton social="line" wide>
           <template #icon-left>
-            <i-fontisto:line class="text-md" />
+            <i-fontisto:line class="text-base" />
           </template>
           Continue with LINE
         </DiButton>
@@ -1152,11 +1152,11 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
         </DiButton>
 
         <DiButton social="slack" square>
-          <i-logos:slack-icon class="text-md" />
+          <i-logos:slack-icon class="text-base" />
         </DiButton>
 
         <DiButton social="microsoft" square>
-          <i-logos:microsoft-icon class="text-md" />
+          <i-logos:microsoft-icon class="text-base" />
         </DiButton>
 
         <DiButton social="line" square>
@@ -1180,7 +1180,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
         </DiButton>
 
         <DiButton social="metamask" square>
-          <i-logos:metamask-icon class="text-md" />
+          <i-logos:metamask-icon class="text-base" />
         </DiButton>
       </div>
     </PreviewCodeCard>

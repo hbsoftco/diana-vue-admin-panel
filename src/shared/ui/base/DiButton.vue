@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import type { Size, Variant } from '@/shared/types/models'
+import type { BadgeVariant, BtnVariant, Size } from '@/shared/types/models'
 
+import DiBadge from '@/shared/ui/base/DiBadge.vue'
 import DiLoading from '@/shared/ui/base/DiLoading.vue'
 
 /* =======================
@@ -28,8 +29,10 @@ type SocialProvider
     | 'wechat'
     | 'metamask'
 
+type BadgePosition = 'left' | 'right'
+
 type Props = {
-  variant?: Variant
+  variant?: BtnVariant
   size?: Size
   social?: SocialProvider
 
@@ -52,6 +55,16 @@ type Props = {
 
   tag?: 'button' | 'a' | 'input'
   nativeType?: 'button' | 'submit' | 'reset' | 'radio' | 'checkbox'
+
+  // Badge props
+  badgeValue?: string | number
+  badgePosition?: BadgePosition
+  badgeVariant?: BadgeVariant
+  badgeSize?: Size
+  badgePill?: boolean
+  badgeOutline?: boolean
+  badgeDash?: boolean
+  badgeSoft?: boolean
 
   customClass?: string
 }
@@ -79,6 +92,13 @@ const props = withDefaults(defineProps<Props>(), {
   glass: false,
   rounded: false,
   gradient: false,
+  badgePosition: 'right',
+  badgeVariant: 'primary',
+  badgeSize: 'xs',
+  badgePill: false,
+  badgeOutline: false,
+  badgeDash: false,
+  badgeSoft: false,
 })
 
 /* =======================
@@ -109,7 +129,7 @@ const SOCIAL_CLASSES: Record<SocialProvider, string> = {
   metamask: 'bg-white !text-black border-white',
 }
 
-const VARIANT_CLASSES: Record<Variant, string> = {
+const VARIANT_CLASSES: Record<BtnVariant, string> = {
   neutral: 'btn-neutral',
   primary: 'btn-primary',
   secondary: 'btn-secondary',
@@ -180,6 +200,14 @@ const buttonClasses = computed(() => [
 
 const loadingSize = computed(() => LOADING_SIZE_MAP[props.size])
 
+const hasBadge = computed(
+  () => props.badgeValue !== undefined && props.badgeValue !== null && props.badgeValue !== '',
+)
+
+const showLeftBadge = computed(() => hasBadge.value && props.badgePosition === 'left')
+
+const showRightBadge = computed(() => hasBadge.value && props.badgePosition === 'right')
+
 /* =======================
    Methods
 ======================= */
@@ -200,8 +228,35 @@ function handleClick(event: MouseEvent) {
     @click="handleClick"
   >
     <DiLoading v-if="loading" :variant="loadingVariant" :size="loadingSize" />
+
+    <DiBadge
+      v-if="showLeftBadge"
+      :variant="badgeVariant"
+      :size="badgeSize"
+      :pill="badgePill"
+      :outline="badgeOutline"
+      :dash="badgeDash"
+      :soft="badgeSoft"
+      custom-class="px-1.5"
+    >
+      {{ badgeValue }}
+    </DiBadge>
+
     <slot name="icon-left" />
     <slot />
     <slot name="icon-right" />
+
+    <DiBadge
+      v-if="showRightBadge"
+      :variant="badgeVariant"
+      :size="badgeSize"
+      :pill="badgePill"
+      :outline="badgeOutline"
+      :dash="badgeDash"
+      :soft="badgeSoft"
+      custom-class="px-1.5"
+    >
+      {{ badgeValue }}
+    </DiBadge>
   </component>
 </template>
