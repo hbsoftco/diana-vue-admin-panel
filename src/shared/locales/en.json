@@ -11,6 +11,10 @@
     "settings": "Settings"
   },
   "pages": {
+    "icons": {
+      "title": "Ui Elements",
+      "icons": "Icons"
+    },
     "alerts": {
       "title": "Ui Elements",
       "alerts": "Alerts"
@@ -192,6 +196,9 @@
           "see": "See",
           "action": "Action"
         }
+      },
+      "icons": {
+        "customIcons": "Custom Icons"
       }
     }
   },

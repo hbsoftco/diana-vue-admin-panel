@@ -47,7 +47,7 @@ export const uiElementRoutes = {
       meta: {
         pageTitle: 'pages.buttons.buttons',
         breadcrumb: [
-          { label: 'pages.buttons.title', link: '/ui-elements' },
+          { label: '', link: '/ui-elements' },
           { label: 'pages.buttons.buttons' },
         ],
       },
@@ -60,6 +60,17 @@ export const uiElementRoutes = {
         breadcrumb: [
           { label: 'pages.loadings.title', link: '/ui-elements' },
           { label: 'pages.loadings.loadings' },
+        ],
+      },
+    },
+    {
+      path: 'icons',
+      component: () => import('@/pages/ui-elements/icons.vue'),
+      meta: {
+        pageTitle: 'pages.icons.icons',
+        breadcrumb: [
+          { label: 'pages.icons.title', link: '/ui-elements' },
+          { label: 'pages.icons.icons' },
         ],
       },
     },
