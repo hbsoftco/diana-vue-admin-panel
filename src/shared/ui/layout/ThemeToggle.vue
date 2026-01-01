@@ -3,6 +3,7 @@ import { useLocalStorage, usePreferredDark } from '@vueuse/core'
 import { watch } from 'vue'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 const preferredDark = usePreferredDark()
 const isDark = useLocalStorage('theme', preferredDark.value)
@@ -28,8 +29,6 @@ function toggleTheme() {
     :aria-label="isDark ? 'Switch to light theme' : 'Switch to dark theme'"
     @click="toggleTheme"
   >
-    <i-tabler-sun v-if="isDark" class="text-sm" />
-
-    <i-tabler-moon v-else class="text-sm" />
+    <DiIcon :name="!isDark ? 'moon' : 'sun'" size="sm" />
   </DiButton>
 </template>
