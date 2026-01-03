@@ -224,6 +224,31 @@
       },
       "icons": {
         "customIcons": "آیکن‌های سفارشی"
+      },
+      "breadcrumb": {
+        "defaultBreadcrumb": "مسیر ناوبری پیشفرض",
+        "breadcrumbWithIcons": "مسیر ناوبری با آیکون",
+        "singleItem": "مسیر ناوبری تک آیتم",
+        "breadcrumbWithHome": "مسیر ناوبری با خانه",
+        "breadcrumbVariants": "انواع مسیر ناوبری",
+        "customSeparators": "جداکننده‌های سفارشی مسیر ناوبری",
+        "complexBreadcrumb": "مسیر ناوبری پیچیده",
+        "longBreadcrumb": "مسیر ناوبری طولانی",
+        "home": "خانه",
+        "products": "محصولات",
+        "electronics": "الکترونیک",
+        "settings": "تنظیمات",
+        "profile": "پروفایل",
+        "dashboard": "داشبورد",
+        "reports": "گزارش‌ها",
+        "monthly": "ماهانه",
+        "projects": "پروژه‌ها",
+        "webDevelopment": "توسعه وب",
+        "adminDashboard": "داشبورد مدیریت",
+        "currentPage": "صفحه فعلی",
+        "computers": "کامپیوترها",
+        "laptops": "لپ‌تاپ‌ها",
+        "gamingLaptops": "لپ‌تاپ‌های گیمینگ"
       }
     }
   },

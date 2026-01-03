@@ -199,6 +199,31 @@
       },
       "icons": {
         "customIcons": "Custom Icons"
+      },
+      "breadcrumb": {
+        "defaultBreadcrumb": "Default Breadcrumb",
+        "breadcrumbWithIcons": "Breadcrumb with Icons",
+        "singleItem": "Single Item Breadcrumb",
+        "breadcrumbWithHome": "Breadcrumb with Home",
+        "breadcrumbVariants": "Breadcrumb Variants",
+        "customSeparators": "Custom Separators Breadcrumb",
+        "complexBreadcrumb": "Complex Breadcrumb",
+        "longBreadcrumb": "Long Breadcrumb",
+        "home": "Home",
+        "products": "Products",
+        "electronics": "Electronics",
+        "settings": "Settings",
+        "profile": "Profile",
+        "dashboard": "Dashboard",
+        "reports": "Reports",
+        "monthly": "Monthly",
+        "projects": "Projects",
+        "webDevelopment": "Web Development",
+        "adminDashboard": "Admin Dashboard",
+        "currentPage": "Current Page",
+        "computers": "Computers",
+        "laptops": "Laptops",
+        "gamingLaptops": "Gaming Laptops"
       }
     }
   },

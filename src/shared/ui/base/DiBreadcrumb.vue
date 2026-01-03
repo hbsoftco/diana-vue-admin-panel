@@ -1,11 +1,28 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 
 import type { IconName } from '@/shared/icons/registry'
 
+import { useDirection } from '@/shared/composables/use-direction'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
+/* =======================
+   Defaults
+======================= */
+const props = withDefaults(defineProps<Props>(), {
+  separator: 'chevronDoubleRight',
+  separatorColor: 'text-base-content/10',
+  variant: 'primary',
+  showHome: false,
+  homeIcon: 'homeOutlineRounded',
+  customClass: '',
+})
+
+const { t } = useI18n()
+
+const { isRtl } = useDirection()
 /* =======================
    Types
 ======================= */
@@ -34,18 +51,6 @@ type Props = {
   homeIcon?: IconName
   customClass?: string
 }
-
-/* =======================
-   Defaults
-======================= */
-const props = withDefaults(defineProps<Props>(), {
-  separator: 'chevronDoubleRight',
-  separatorColor: '',
-  variant: 'primary',
-  showHome: false,
-  homeIcon: 'homeOutlineRounded',
-  customClass: '',
-})
 
 /* =======================
    Variant Colors
@@ -86,7 +91,10 @@ const VARIANT_COLORS = {
 ======================= */
 const breadcrumbItems = computed(() => {
   if (props.showHome && props.items.length > 0 && props.items[0]?.label !== 'Home') {
-    return [{ label: 'Home', icon: props.homeIcon, to: '/' }, ...props.items]
+    return [
+      { label: t('features.ui-elements.breadcrumb.home'), icon: props.homeIcon, to: '/' },
+      ...props.items,
+    ]
   }
   return props.items
 })
@@ -145,11 +153,12 @@ function isLastItem(index: number) {
         <li v-if="index < breadcrumbItems.length - 1" class="flex items-center" aria-hidden="true">
           <DiIcon
             v-if="isIconSeparator"
+            :rotate="isRtl ? 180 : 0"
             size="xs"
             :name="separator as IconName"
             :custom-class="separatorColor"
           />
-          <span v-else class="text-sm text-base-content" :class="separatorColor">
+          <span v-else class="text-sm" :class="separatorColor">
             {{ separator }}
           </span>
         </li>
