@@ -26,6 +26,9 @@ export const iconRegistry = {
   camera: () => import('~icons/heroicons/camera'),
   calendarDays: () => import('~icons/heroicons/calendar-days-16-solid'),
   user: () => import('~icons/heroicons/user'),
+  chevronDoubleRight: () => import('~icons/heroicons/chevron-double-right-20-solid'),
+  chevronRightHero: () => import('~icons/heroicons/chevron-right-20-solid'),
+  home: () => import('~icons/heroicons/home'),
   // Hugeicons Icons
   menu: () => import('~icons/hugeicons/menu-02'),
   arrowDown: () => import('~icons/hugeicons/arrow-down-01'),
@@ -39,6 +42,9 @@ export const iconRegistry = {
   code: () => import('~icons/prime/code'),
   // Humbleicons Icons
   codeClose: () => import('~icons/humbleicons/code'),
+  // Line-md Icons
+  chevronRightAnimate: () => import('~icons/line-md/chevron-right'),
+
 } as const
 
 export type IconName = keyof typeof iconRegistry
