@@ -17,8 +17,8 @@ ${colors.map(c => `  <DiIcon name="sun" size="lg" color="${c}" />`).join('\n')}
 
 // Spin & Pulse examples
 const animateExamples = `<div class="flex flex-wrap gap-4 items-center">
-  <DiIcon name="star" size="lg" spin />
-  <DiIcon name="star" size="lg" pulse />
+  <DiIcon name="sun" size="lg" spin />
+  <DiIcon name="bell" size="lg" pulse />
 </div>`
 
 // Rotate & Flip examples
@@ -30,16 +30,31 @@ const transformExamples = `<div class="flex flex-wrap gap-4 items-center">
 
 // Badge examples
 const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
-  <DiIcon name="moon" size="lg" :badge="3" />
-  <DiIcon name="sun" size="lg" :badge="true" badgeVariant="success" />
-  <DiIcon name="star" size="lg" :badge="'!' " badgeVariant="warning" badgePill />
+  <DiIcon name="bell" size="lg" :badge="3" />
+  <DiIcon name="sun" size="lg" badge="Hot" badge-variant="secondary" />
+  <DiIcon name="star" size="lg" badge="!" badge-variant="warning" badge-pill />
+</div>`
+
+// Custom examples
+const customExamples = `<div class="flex flex-wrap gap-2 items-center">
+  <DiIcon name="bell" size="2rem" />
+  <DiIcon name="heart" color="orange" size="xl" />
+  <DiIcon name="camera" color="#14b8a6" size="25px" />
+  <DiIcon name="calendarDays" color="warning" size="lg" title="Calendar" />
+  <DiIcon name="sun" color="warning" spin size="3rem" title="Calendar" />
+  <DiIcon name="bell" size="2rem" :rotate="180" />
 </div>`
 </script>
 
 <template>
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Size Examples -->
-    <PreviewCodeCard title="Icon Sizes" accent-color="#14b8a6" :code="sizeExamples" language="html">
+    <PreviewCodeCard
+      :title="$t('features.ui-elements.icons.iconSizes')"
+      accent-color="#14b8a6"
+      :code="sizeExamples"
+      language="html"
+    >
       <div class="flex flex-wrap gap-4 items-center">
         <DiIcon v-for="s in sizes" :key="s" name="moon" :size="s" />
       </div>
@@ -47,7 +62,7 @@ const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Color Examples -->
     <PreviewCodeCard
-      title="Icon Colors"
+      :title="$t('features.ui-elements.icons.iconColors')"
       accent-color="#14b8a6"
       :code="colorExamples"
       language="html"
@@ -59,7 +74,7 @@ const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Spin & Pulse -->
     <PreviewCodeCard
-      title="Spin & Pulse"
+      :title="$t('features.ui-elements.icons.spinAndPulse')"
       accent-color="#14b8a6"
       :code="animateExamples"
       language="html"
@@ -72,7 +87,7 @@ const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Rotate & Flip -->
     <PreviewCodeCard
-      title="Rotate & Flip"
+      :title="$t('features.ui-elements.icons.rotateAndFlip')"
       accent-color="#14b8a6"
       :code="transformExamples"
       language="html"
@@ -86,10 +101,11 @@ const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Badges -->
     <PreviewCodeCard
-      title="Icons with Badges"
+      :title="$t('features.ui-elements.icons.iconsWithBadges')"
       accent-color="#14b8a6"
       :code="badgeExamples"
       language="html"
+      class="lg:col-span-2"
     >
       <div class="flex flex-wrap gap-4 items-center">
         <DiIcon name="bell" size="lg" :badge="3" />
@@ -102,7 +118,7 @@ const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
     <PreviewCodeCard
       :title="$t('features.ui-elements.icons.customIcons')"
       accent-color="#14b8a6"
-      :code="colorExamples"
+      :code="customExamples"
       language="html"
       class="lg:col-span-2"
     >
