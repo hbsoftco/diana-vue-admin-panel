@@ -223,7 +223,12 @@
         }
       },
       "icons": {
-        "customIcons": "آیکن‌های سفارشی"
+        "iconSizes": "اندازه‌های آیکون",
+        "iconColors": "رنگ‌های آیکون",
+        "spinAndPulse": "چرخش و پالس",
+        "rotateAndFlip": "چرخش و برگردان",
+        "iconsWithBadges": "آیکون با نشان",
+        "customIcons": "آیکون‌های سفارشی"
       },
       "breadcrumb": {
         "defaultBreadcrumb": "مسیر ناوبری پیشفرض",

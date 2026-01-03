@@ -198,6 +198,11 @@
         }
       },
       "icons": {
+        "iconSizes": "Icon Sizes",
+        "iconColors": "Icon Colors",
+        "spinAndPulse": "Spin & Pulse",
+        "rotateAndFlip": "Rotate & Flip",
+        "iconsWithBadges": "Icons with Badges",
         "customIcons": "Custom Icons"
       },
       "breadcrumb": {
