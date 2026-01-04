@@ -53,6 +53,7 @@ export const iconRegistry = {
   tilde: () => import('~icons/ph/tilde'),
   // Solar Icons
   arrowRightOutline: () => import('~icons/solar/arrow-right-outline'),
+  heartBold: () => import('~icons/solar/heart-bold'), //
 } as const
 
 export type IconName = keyof typeof iconRegistry
