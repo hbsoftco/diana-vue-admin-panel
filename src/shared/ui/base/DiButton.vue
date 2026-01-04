@@ -208,12 +208,17 @@ const showLeftBadge = computed(() => hasBadge.value && props.badgePosition === '
 
 const showRightBadge = computed(() => hasBadge.value && props.badgePosition === 'right')
 
+// Only pass disabled for button and input tags, not for anchor tags
+const shouldUseDisabled = computed(() => props.tag === 'button' || props.tag === 'input')
+
 /* =======================
    Methods
 ======================= */
 function handleClick(event: MouseEvent) {
-  if (isDisabled.value)
+  if (isDisabled.value) {
+    event.preventDefault()
     return
+  }
 
   emit('click', event)
 }
@@ -223,7 +228,7 @@ function handleClick(event: MouseEvent) {
   <component
     :is="tag"
     :type="nativeType"
-    :disabled="isDisabled"
+    :disabled="shouldUseDisabled ? isDisabled : undefined"
     :class="buttonClasses"
     @click="handleClick"
   >
