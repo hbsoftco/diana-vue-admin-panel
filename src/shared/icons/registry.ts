@@ -34,6 +34,7 @@ export const iconRegistry = {
   chevronRightHero: () => import('~icons/heroicons/chevron-right-20-solid'),
   home: () => import('~icons/heroicons/home'),
   slash: () => import('~icons/heroicons/slash'),
+  xMark: () => import('~icons/heroicons/x-mark-20-solid'),
   // Hugeicons Icons
   menu: () => import('~icons/hugeicons/menu-02'),
   arrowDown: () => import('~icons/hugeicons/arrow-down-01'),

@@ -196,13 +196,13 @@ export const uiElementRoutes = {
       },
     },
     {
-      path: 'spinners',
-      component: () => import('@/pages/ui-elements/spinners.vue'),
+      path: 'modals',
+      component: () => import('@/pages/ui-elements/modals.vue'),
       meta: {
-        pageTitle: 'pages.spinners.spinners',
+        pageTitle: 'pages.modals.modals',
         breadcrumb: [
-          { label: 'pages.spinners.title', link: '/ui-elements' },
-          { label: 'pages.spinners.spinners' },
+          { label: 'pages.modals.title', link: '/ui-elements' },
+          { label: 'pages.modals.modals' },
         ],
       },
     },

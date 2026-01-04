@@ -144,6 +144,7 @@
 
 /* Customize daysiui components */
 @import './di-ui/di-btn.css';
+@import './di-ui/di-modal.css';
 
 @utility text-menu-prime {
   color: var(--color-menu-prime);

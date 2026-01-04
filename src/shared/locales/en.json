@@ -79,9 +79,9 @@
       "title": "Ui Elements",
       "progress": "Progress"
     },
-    "spinners": {
+    "modals": {
       "title": "Ui Elements",
-      "spinners": "Spinners"
+      "modals": "Modals"
     },
     "toasts": {
       "title": "Ui Elements",
@@ -229,6 +229,62 @@
         "computers": "Computers",
         "laptops": "Laptops",
         "gamingLaptops": "Gaming Laptops"
+      },
+      "modal": {
+        "actions": {
+          "open": "Open Modal",
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "delete": "Delete"
+        },
+
+        "basic": {
+          "title": "Basic Modal",
+          "header": "Modal Title",
+          "description": "This is a basic modal with default settings."
+        },
+
+        "position": {
+          "title": "Position Variants",
+          "top": "Top",
+          "bottom": "Bottom",
+          "topDesc": "This modal appears at the top of the screen.",
+          "bottomDesc": "This modal appears at the bottom of the screen."
+        },
+
+        "size": {
+          "title": "Size Variants",
+          "sm": "This is a small modal.",
+          "md": "This is a medium modal.",
+          "lg": "This is a large modal.",
+          "xl": "This is an extra large modal.",
+          "full": "Full Screen",
+          "fullDesc": "This modal takes up the entire screen."
+        },
+
+        "blur": {
+          "title": "Backdrop Blur",
+          "xs": "Extra small backdrop blur.",
+          "sm": "Small backdrop blur.",
+          "md": "Medium backdrop blur."
+        },
+
+        "behavior": {
+          "title": "Behavior Options",
+          "noBackdrop": "No Backdrop Close",
+          "noEsc": "No ESC Close",
+          "noCloseButton": "No Close Button",
+          "noBackdropDesc": "Clicking the backdrop will not close this modal.",
+          "noEscDesc": "Pressing the ESC key will not close this modal.",
+          "noCloseButtonDesc": "This modal does not have a close button."
+        },
+
+        "confirmation": {
+          "title": "Confirmation Dialog",
+          "open": "Delete Account",
+          "header": "Delete Account?",
+          "description": "Are you sure you want to delete your account? This action cannot be undone."
+        }
       }
     }
   },
