@@ -1,17 +1,32 @@
 <script setup lang="ts">
 import AppHeader from '@shared/ui/layout/AppHeader.vue'
 import AppSidebar from '@shared/ui/layout/AppSidebar.vue'
-import { watchEffect } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
+
+import type { BreadcrumbItem } from '@/shared/ui/base/DiBreadcrumb.vue'
+
+import DiBreadcrumb from '@/shared/ui/base/DiBreadcrumb.vue'
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 const route = useRoute()
 const { t } = useI18n()
 
-// Set document title from route meta
 watchEffect(() => {
   const pageTitle = (route.meta.pageTitle as string) || 'menu.dashboards'
   document.title = t(pageTitle)
+})
+
+const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
+  const crumbs = (route.meta.breadcrumb as { label: string, link?: string }[]) || []
+
+  return crumbs.map((crumb, index) => ({
+    label: t(crumb.label),
+    to: crumb.link,
+    active: index === crumbs.length - 1,
+  }))
 })
 </script>
 
@@ -28,27 +43,13 @@ watchEffect(() => {
             <h1 class="font-semibold text-base-content text-lg">
               {{ $t((route?.meta?.pageTitle as string) || 'menu.dashboards') }}
             </h1>
-            <div class="breadcrumbs text-[13px]">
-              <ul>
-                <li
-                  v-for="(crumb, index) in (route.meta.breadcrumb as {
-                    label: string
-                    link?: string
-                  }[]) || []"
-                  :key="index"
-                  class="font-medium"
-                >
-                  <RouterLink
-                    v-if="crumb.link"
-                    :to="crumb.link"
-                    class="no-underline text-base-content"
-                  >
-                    {{ $t(crumb.label) }}
-                  </RouterLink>
-                  <span v-else class="no-underline">{{ $t(crumb.label) }}</span>
-                </li>
-              </ul>
-            </div>
+
+            <DiBreadcrumb
+              v-if="breadcrumbItems.length > 0"
+              :items="breadcrumbItems"
+              variant="primary"
+              separator-color="text-base-content/30"
+            />
           </div>
 
           <RouterView />
@@ -56,16 +57,24 @@ watchEffect(() => {
 
         <footer class="footer py-3 text-center mt-8 bg-content-background border-t border-content">
           <div class="flex justify-center items-center w-full">
-            <span class="flex gap-1 text-[13.6px]">
-              Copyright © <span id="year">2025</span>
-              <a href="javascript:void(0);" class="font-semibold">Diana</a>. Designed with
-              <i-solar-heart-bold class="text-error relative top-0.5" /> by
-              <a href="https://hosseinbajan.ir/" target="_blank">
-                <span class="font-semibold text-primary text-decoration-underline">
-                  Diana's father
-                </span>
-              </a>
-              All rights reserved
+            <span class="flex gap-1 text-di-sm">
+              Copyright © <span id="year">2026</span>
+              <DiButton variant="link" size="xs" custom-class="px-0.5 relative -top-0.5 text-di-sm">
+                Diana
+              </DiButton>
+              . Designed with
+              <DiIcon name="heartBold" color="error" custom-class="relative top-0.5" /> by
+              <DiButton
+                custom-class="px-0.5 text-di-sm relative -top-0.5 text-primary"
+                tag="a"
+                href="https://hosseinbajan.ir/"
+                target="_blank"
+                variant="link"
+                size="xs"
+              >
+                Diana's father
+              </DiButton>
+              . Open Source under the MIT License
             </span>
           </div>
         </footer>
