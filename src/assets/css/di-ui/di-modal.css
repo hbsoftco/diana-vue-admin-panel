@@ -1,0 +1,7 @@
+@utility modal-box {
+  @apply p-0 bg-content-background;
+}
+
+@utility modal-open {
+  @apply bg-(--color-bg-background)/75;
+}

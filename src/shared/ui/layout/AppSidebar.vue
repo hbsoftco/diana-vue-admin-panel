@@ -56,7 +56,7 @@ const menuItems = ref<MenuItemType[]>([
       { id: 'pagination', label: 'Pagination', route: '/ui-elements/pagination' },
       { id: 'popovers', label: 'Popovers', route: '/ui-elements/popovers' },
       { id: 'progress', label: 'Progress', route: '/ui-elements/progress' },
-      { id: 'spinners', label: 'Spinners', route: '/ui-elements/spinners' },
+      { id: 'modals', label: 'Modals', route: '/ui-elements/modals' },
       { id: 'toasts', label: 'Toasts', route: '/ui-elements/toasts' },
       { id: 'tooltips', label: 'Tooltips', route: '/ui-elements/tooltips' },
       { id: 'typography', label: 'Typography', route: '/ui-elements/typography' },
