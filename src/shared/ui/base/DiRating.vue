@@ -4,29 +4,6 @@ import { computed, ref, watch } from 'vue'
 import { useDirection } from '@/shared/composables/use-direction'
 
 /* =======================
-   Defaults
-======================= */
-const props = withDefaults(defineProps<Props>(), {
-  modelValue: 0,
-  max: 5,
-  size: 'md',
-  variant: 'warning',
-  half: false,
-  hidden: false,
-  disabled: false,
-  readOnly: false,
-  mask: 'star',
-})
-/* =======================
-   Emits
-======================= */
-const emit = defineEmits<{
-  'update:modelValue': [value: number]
-  'change': [value: number]
-  'hover': [value: number | null]
-}>()
-const { isRtl } = useDirection()
-/* =======================
    Types
 ======================= */
 type RatingSize = 'xs' | 'sm' | 'md' | 'lg'
@@ -62,8 +39,33 @@ type Props = {
 }
 
 /* =======================
+   Defaults
+======================= */
+const props = withDefaults(defineProps<Props>(), {
+  modelValue: 0,
+  max: 5,
+  size: 'md',
+  variant: 'warning',
+  half: false,
+  hidden: false,
+  disabled: false,
+  readOnly: false,
+  mask: 'star',
+})
+
+/* =======================
+   Emits
+======================= */
+const emit = defineEmits<{
+  'update:modelValue': [value: number]
+  'change': [value: number]
+  'hover': [value: number | null]
+}>()
+
+/* =======================
    State
 ======================= */
+const { isRtl } = useDirection()
 const currentValue = ref(props.modelValue)
 const hoverValue = ref<number | null>(null)
 
@@ -118,11 +120,8 @@ const SPACING_CLASSES: Record<RatingSpacing, { ml: string, mr: string }> = {
    Computed
 ======================= */
 const spacingClasses = computed(() => {
-  if (!props.spacing) {
+  if (!props.spacing)
     return { ml: '', mr: '' }
-  }
-
-  // 🔒 runtime-safe fallback
   return SPACING_CLASSES[props.spacing] ?? { ml: '', mr: '' }
 })
 
@@ -137,15 +136,13 @@ const itemClasses = computed(() => [
   'mask',
   MASK_CLASSES[props.mask],
   'bg-current',
-  !props.disabled && !props.readOnly && 'cursor-pointer',
-  (props.disabled || props.readOnly) && 'cursor-default',
+  !props.disabled && !props.readOnly ? 'cursor-pointer' : 'cursor-default',
 ])
 
 const colorClass = computed(() => VARIANT_CLASSES[props.variant])
 
 const items = computed(() => {
   const result: number[] = []
-
   if (props.half) {
     for (let i = 1; i <= props.max; i++) {
       result.push(i - 0.5)
@@ -157,7 +154,6 @@ const items = computed(() => {
       result.push(i)
     }
   }
-
   return result
 })
 
@@ -171,7 +167,6 @@ const displayValue = computed(() =>
 function handleClick(value: number) {
   if (props.disabled || props.readOnly)
     return
-
   currentValue.value = value
   emit('update:modelValue', value)
   emit('change', value)
@@ -180,7 +175,6 @@ function handleClick(value: number) {
 function handleMouseEnter(value: number) {
   if (props.disabled || props.readOnly)
     return
-
   hoverValue.value = value
   emit('hover', value)
 }
@@ -188,7 +182,6 @@ function handleMouseEnter(value: number) {
 function handleMouseLeave() {
   if (props.disabled || props.readOnly)
     return
-
   hoverValue.value = null
   emit('hover', null)
 }
@@ -229,9 +222,10 @@ function getInputId(value: number) {
         item % 1 === 0 && props.half && 'mask-half-2',
         item % 1 === 0 && (isRtl ? spacingClasses.ml : spacingClasses.mr),
         item % 1 !== 0 && props.half && (isRtl ? spacingClasses.mr : spacingClasses.ml),
+        readOnly && 'pointer-events-none', // <--- این خط اضافه شد
       ]"
       :checked="isChecked(item)"
-      :disabled="disabled || readOnly"
+      :disabled="disabled"
       :aria-label="`Rating ${item} out of ${max}`"
       @click="handleClick(item)"
       @mouseenter="handleMouseEnter(item)"

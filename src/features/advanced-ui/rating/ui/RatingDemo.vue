@@ -9,7 +9,7 @@ import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 ======================= */
 const basicValue = ref(3)
 const halfValue = ref(2.5)
-const readonlyValue = ref(4)
+const readonlyValue = ref(1)
 
 /* =======================
    Code samples
