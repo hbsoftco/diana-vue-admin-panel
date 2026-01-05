@@ -35,6 +35,14 @@ export const iconRegistry = {
   home: () => import('~icons/heroicons/home'),
   slash: () => import('~icons/heroicons/slash'),
   xMark: () => import('~icons/heroicons/x-mark-20-solid'),
+  informationCircle: () => import('~icons/heroicons/information-circle'),
+  checkCircle: () => import('~icons/heroicons/check-circle'),
+  questionMarkCircle: () => import('~icons/heroicons/question-mark-circle'),
+  exclamationTriangle: () => import('~icons/heroicons/exclamation-triangle'),
+  xCircle: () => import('~icons/heroicons/x-circle'),
+  cogHero: () => import('~icons/heroicons/cog-20-solid'),
+  paperClip: () => import('~icons/heroicons/paper-clip'),
+  trash: () => import('~icons/heroicons/trash'),
   // Hugeicons Icons
   menu: () => import('~icons/hugeicons/menu-02'),
   arrowDown: () => import('~icons/hugeicons/arrow-down-01'),
@@ -54,7 +62,12 @@ export const iconRegistry = {
   tilde: () => import('~icons/ph/tilde'),
   // Solar Icons
   arrowRightOutline: () => import('~icons/solar/arrow-right-outline'),
-  heartBold: () => import('~icons/solar/heart-bold'), //
+  heartBold: () => import('~icons/solar/heart-bold'),
+  // bx Icons
+  party: () => import('~icons/bx/party'),
+  // tdesign Icons
+  componentDropdown: () => import('~icons/tdesign/component-dropdown'),
+  // Add new icons here
 } as const
 
 export type IconName = keyof typeof iconRegistry

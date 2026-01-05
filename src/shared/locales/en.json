@@ -94,6 +94,30 @@
     "typography": {
       "title": "Ui Elements",
       "typography": "Typography"
+    },
+    "accordion": {
+      "title": "Advanced UI",
+      "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "Advanced UI",
+      "carousel": "Carousel"
+    },
+    "collapse": {
+      "title": "Advanced UI",
+      "collapse": "Collapse"
+    },
+    "navbar": {
+      "title": "Advanced UI",
+      "navbar": "Navbar"
+    },
+    "skeleton": {
+      "title": "Advanced UI",
+      "skeleton": "Skeleton"
+    },
+    "rating": {
+      "title": "Advanced UI",
+      "rating": "Rating"
     }
   },
   "base": {
@@ -285,6 +309,127 @@
           "header": "Delete Account?",
           "description": "Are you sure you want to delete your account? This action cannot be undone."
         }
+      },
+      "tooltip": {
+        "basicTooltip": "Basic Tooltip",
+        "positionTooltips": "Position Tooltips",
+        "coloredTooltips": "Colored Tooltips",
+        "statusTooltips": "Status Tooltips",
+        "openTooltips": "Always Open Tooltips",
+        "tooltipWithButtons": "Tooltip with Buttons",
+        "combinedTooltips": "Combined Positions & Colors",
+        "tooltipOnIcons": "Tooltip on Icons",
+        "multiLineTooltips": "Multi-line Tooltips",
+        "interactiveElements": "Interactive Elements",
+
+        "hoverMe": "Hover me",
+        "top": "Top",
+        "right": "Right",
+        "bottom": "Bottom",
+        "left": "Left",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "accent": "Accent",
+        "info": "Info",
+        "success": "Success",
+        "warning": "Warning",
+        "error": "Error",
+        "neutral": "Neutral",
+
+        "tooltipOnTop": "Tooltip on top",
+        "tooltipOnRight": "Tooltip on right",
+        "tooltipOnBottom": "Tooltip on bottom",
+        "tooltipOnLeft": "Tooltip on left",
+
+        "primaryTooltip": "Primary tooltip",
+        "secondaryTooltip": "Secondary tooltip",
+        "accentTooltip": "Accent tooltip",
+        "infoTooltip": "Info tooltip",
+        "successTooltip": "Success tooltip",
+        "warningTooltip": "Warning tooltip",
+        "errorTooltip": "Error tooltip",
+        "neutralTooltip": "Neutral tooltip",
+
+        "alwaysVisible": "Always visible",
+        "hoverToSee": "Hover to see",
+        "openTooltip": "Open tooltip",
+        "hoverTooltip": "Hover tooltip",
+
+        "clickMe": "Click me!",
+        "buttonWithTooltip": "Button with tooltip",
+        "primaryAction": "Primary action",
+        "action": "Action",
+        "deleteItem": "Delete item",
+        "delete": "Delete",
+
+        "primaryTop": "Primary top",
+        "successRight": "Success right",
+        "warningBottom": "Warning bottom",
+        "errorLeft": "Error left",
+
+        "information": "Information",
+        "settings": "Settings",
+        "deleteIcon": "Delete",
+        "help": "Help",
+
+        "longTooltipText": "This is a longer tooltip text that might wrap to multiple lines depending on the screen size",
+        "longText": "Long text",
+        "short": "Short",
+        "shortText": "Short text",
+
+        "clickToCopy": "Click to copy",
+        "copy": "Copy",
+        "toggleSwitch": "Toggle switch",
+        "selectOption": "Select option",
+        "option1": "Option 1",
+        "option2": "Option 2",
+
+        "responsiveTooltip": "Responsive Tooltip",
+        "mobileToDesktop": "Mobile to Desktop",
+        "adaptiveColorPosition": "Adaptive Color & Position",
+        "responsiveIcons": "Responsive Icons",
+        "complexResponsive": "Complex Responsive Layout",
+
+        "tooltipChangesPosition": "Tooltip changes position based on screen size",
+        "resizeToSee": "Resize to see changes",
+        "topMobileRightDesktop": "Top on mobile, Right on desktop",
+        "mobileDesktop": "Mobile → Desktop",
+        "bottomMobileLeftTablet": "Bottom on mobile, Left on tablet+",
+        "mobileTablet": "Mobile → Tablet",
+
+        "infoResponsive": "Info tooltip with responsive position",
+        "warningAdapts": "Warning tooltip adapts to screen",
+        "errorFullControl": "Error with full responsive control",
+
+        "settingsResponsive": "Settings - responsive position",
+        "helpAdapts": "Help - adapts to screen size",
+        "notificationsFullResponsive": "Notifications - full responsive",
+
+        "adaptsBasedOnLayout": "Adapts based on layout",
+        "smartPositioning": "Smart positioning",
+        "responsiveDesign": "Responsive design",
+        "gridItem1": "Grid Item 1",
+        "gridItem2": "Grid Item 2",
+        "gridItem3": "Grid Item 3",
+        "resizeWindowToSee": "Resize window to see tooltips adapt to different breakpoints"
+      }
+    },
+    "advanced-ui": {
+      "rating": {
+        "basicRating": "Basic Rating",
+        "coloredRating": "Colored Rating",
+        "halfRating": "Half Rating",
+        "spacingRating": "Spacing Variants",
+        "readonlyRating": "Read-Only Rating",
+        "disabledRating": "Disabled Rating",
+        "customIconRating": "Custom Icon Rating",
+        "ratingSizes": "Rating Sizes",
+        "clearableRating": "Clearable Rating",
+        "masksRating": "Masks",
+        "variants": "Variants",
+        "customMaxRating": "Custom Max",
+        "sizesRating": "Sizes",
+        "rtlSupport": "RTL Support"
       }
     }
   },
