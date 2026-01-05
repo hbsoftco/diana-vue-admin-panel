@@ -196,17 +196,6 @@ export const uiElementRoutes = {
       },
     },
     {
-      path: 'modals',
-      component: () => import('@/pages/ui-elements/modals.vue'),
-      meta: {
-        pageTitle: 'pages.modals.modals',
-        breadcrumb: [
-          { label: 'pages.modals.title', link: '/ui-elements' },
-          { label: 'pages.modals.modals' },
-        ],
-      },
-    },
-    {
       path: 'toasts',
       component: () => import('@/pages/ui-elements/toasts.vue'),
       meta: {

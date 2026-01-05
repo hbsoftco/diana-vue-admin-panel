@@ -310,6 +310,127 @@
           "header": "حذف حساب کاربری؟",
           "description": "آیا از حذف حساب کاربری خود مطمئن هستید؟ این عملیات قابل بازگشت نیست."
         }
+      },
+      "tooltip": {
+        "basicTooltip": "راهنمای ابتدایی",
+        "positionTooltips": "راهنماهای موقعیتی",
+        "coloredTooltips": "راهنماهای رنگی",
+        "statusTooltips": "راهنماهای وضعیت",
+        "openTooltips": "راهنماهای همیشه باز",
+        "tooltipWithButtons": "راهنما با دکمه",
+        "combinedTooltips": "ترکیب موقعیت‌ها و رنگ‌ها",
+        "tooltipOnIcons": "راهنما روی آیکون‌ها",
+        "multiLineTooltips": "راهنماهای چند خطی",
+        "interactiveElements": "عناصر تعاملی",
+
+        "hoverMe": "روی من هاور کنید",
+        "top": "بالا",
+        "right": "راست",
+        "bottom": "پایین",
+        "left": "چپ",
+        "primary": "اصلی",
+        "secondary": "ثانویه",
+        "accent": "تاکیدی",
+        "info": "اطلاعات",
+        "success": "موفقیت",
+        "warning": "هشدار",
+        "error": "خطا",
+        "neutral": "خنثی",
+
+        "tooltipOnTop": "راهنما در بالا",
+        "tooltipOnRight": "راهنما در راست",
+        "tooltipOnBottom": "راهنما در پایین",
+        "tooltipOnLeft": "راهنما در چپ",
+
+        "primaryTooltip": "راهنمای اصلی",
+        "secondaryTooltip": "راهنمای ثانویه",
+        "accentTooltip": "راهنمای تاکیدی",
+        "infoTooltip": "راهنمای اطلاعات",
+        "successTooltip": "راهنمای موفقیت",
+        "warningTooltip": "راهنمای هشدار",
+        "errorTooltip": "راهنمای خطا",
+        "neutralTooltip": "راهنمای خنثی",
+
+        "alwaysVisible": "همیشه قابل مشاهده",
+        "hoverToSee": "برای مشاهده هاور کنید",
+        "openTooltip": "راهنمای باز",
+        "hoverTooltip": "راهنمای هاور",
+
+        "clickMe": "کلیک کنید!",
+        "buttonWithTooltip": "دکمه با راهنما",
+        "primaryAction": "عملیات اصلی",
+        "action": "عملیات",
+        "deleteItem": "حذف مورد",
+        "delete": "حذف",
+
+        "primaryTop": "اصلی بالا",
+        "successRight": "موفقیت راست",
+        "warningBottom": "هشدار پایین",
+        "errorLeft": "خطا چپ",
+
+        "information": "اطلاعات",
+        "settings": "تنظیمات",
+        "deleteIcon": "حذف",
+        "help": "راهنما",
+
+        "longTooltipText": "این یک متن راهنمای طولانی‌تر است که بسته به اندازه صفحه ممکن است به چند خط تقسیم شود",
+        "longText": "متن بلند",
+        "short": "کوتاه",
+        "shortText": "متن کوتاه",
+
+        "clickToCopy": "برای کپی کلیک کنید",
+        "copy": "کپی",
+        "toggleSwitch": "سوئیچ تغییر وضعیت",
+        "selectOption": "انتخاب گزینه",
+        "option1": "گزینه ۱",
+        "option2": "گزینه ۲",
+
+        "responsiveTooltip": "راهنمای واکنش‌گرا",
+        "mobileToDesktop": "موبایل به دسکتاپ",
+        "adaptiveColorPosition": "رنگ و موقعیت تطبیقی",
+        "responsiveIcons": "آیکون‌های واکنش‌گرا",
+        "complexResponsive": "لایه پیچیده واکنش‌گرا",
+
+        "tooltipChangesPosition": "راهنما بر اساس اندازه صفحه موقعیت خود را تغییر می‌دهد",
+        "resizeToSee": "برای مشاهده تغییرات اندازه را تغییر دهید",
+        "topMobileRightDesktop": "بالا در موبایل، راست در دسکتاپ",
+        "mobileDesktop": "موبایل ← دسکتاپ",
+        "bottomMobileLeftTablet": "پایین در موبایل، چپ در تبلت+",
+        "mobileTablet": "موبایل ← تبلت",
+
+        "infoResponsive": "راهنمای اطلاعات با موقعیت واکنش‌گرا",
+        "warningAdapts": "راهنمای هشدار با صفحه سازگار می‌شود",
+        "errorFullControl": "خطا با کنترل کامل واکنش‌گرا",
+
+        "settingsResponsive": "تنظیمات - موقعیت واکنش‌گرا",
+        "helpAdapts": "راهنما - با اندازه صفحه سازگار می‌شود",
+        "notificationsFullResponsive": "اعلان‌ها - کاملا واکنش‌گرا",
+
+        "adaptsBasedOnLayout": "بر اساس لایه سازگار می‌شود",
+        "smartPositioning": "موقعیت‌یابی هوشمند",
+        "responsiveDesign": "طراحی واکنش‌گرا",
+        "gridItem1": "مورد شبکه ۱",
+        "gridItem2": "مورد شبکه ۲",
+        "gridItem3": "مورد شبکه ۳",
+        "resizeWindowToSee": "اندازه پنجره را تغییر دهید تا راهنماها با نقاط شکست مختلف سازگار شوند"
+      }
+    },
+    "advanced-ui": {
+      "rating": {
+        "basicRating": "رتبه‌بندی پایه",
+        "halfRating": "رتبه‌بندی نیمه‌امتیازی",
+        "readonlyRating": "رتبه‌بندی فقط خواندنی",
+        "disabledRating": "رتبه‌بندی غیرفعال",
+        "customIconRating": "رتبه‌بندی با آیکون سفارشی",
+        "coloredRating": "رتبه‌بندی رنگی",
+        "largeRating": "رتبه‌بندی بزرگ",
+        "smallRating": "رتبه‌بندی کوچک",
+        "spacingRating": "رتبه‌بندی با فاصله سفارشی",
+        "masksRating": "رتبه‌بندی با ماسک‌های مختلف",
+        "variants": "رتبه‌بندی با انواع مختلف",
+        "customMaxRating": "رتبه‌بندی با حداکثر سفارشی",
+        "sizesRating": "رتبه‌بندی با اندازه‌های مختلف",
+        "clearableRating": "رتبه‌بندی قابل پاکسازی"
       }
     }
   },
