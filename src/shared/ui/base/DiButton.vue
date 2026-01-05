@@ -73,7 +73,6 @@ type Props = {
    Defaults
 ======================= */
 const props = withDefaults(defineProps<Props>(), {
-  variant: 'neutral',
   size: 'md',
   tag: 'button',
   nativeType: 'button',
@@ -176,7 +175,7 @@ const socialClass = computed(() => (props.social ? SOCIAL_CLASSES[props.social] 
 const buttonClasses = computed(() => [
   'btn',
 
-  VARIANT_CLASSES[props.variant],
+  props.variant && VARIANT_CLASSES[props.variant],
   SIZE_CLASSES[props.size],
 
   props.active && 'btn-active',
