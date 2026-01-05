@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TooltipsDemo from './ui/TooltipsDemo.vue'
+import CarouselDemo from './ui/CarouselDemo.vue'
 </script>
 
 <template>
   <div>
-    <TooltipsDemo />
+    <CarouselDemo />
   </div>
 </template>

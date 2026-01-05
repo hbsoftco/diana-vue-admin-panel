@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TooltipsDemo from './ui/TooltipsDemo.vue'
+import AccordionDemo from './ui/AccordionDemo.vue'
 </script>
 
 <template>
   <div>
-    <TooltipsDemo />
+    <AccordionDemo />
   </div>
 </template>

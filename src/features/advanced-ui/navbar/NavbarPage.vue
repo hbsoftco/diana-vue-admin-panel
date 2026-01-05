@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TooltipsDemo from './ui/TooltipsDemo.vue'
+import NavbarDemo from './ui/NavbarDemo.vue'
 </script>
 
 <template>
   <div>
-    <TooltipsDemo />
+    <NavbarDemo />
   </div>
 </template>

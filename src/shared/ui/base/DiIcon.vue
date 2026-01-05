@@ -11,7 +11,7 @@ import DiBadge from '@/shared/ui/base/DiBadge.vue'
    Types
 ======================= */
 type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | string
-type IconColor = 'default' | 'primary' | 'success' | 'warning' | 'error' | 'muted' | string
+type IconColor = 'default' | 'primary' | 'info' | 'success' | 'warning' | 'error' | 'muted' | string
 
 type Props = {
   name: IconName
@@ -76,6 +76,7 @@ const COLOR_CLASSES: Record<string, string> = {
   success: 'text-success',
   warning: 'text-warning',
   error: 'text-error',
+  info: 'text-info',
 }
 
 /* =======================

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TooltipsDemo from './ui/TooltipsDemo.vue'
+import CollapseDemo from './ui/CollapseDemo.vue'
 </script>
 
 <template>
   <div>
-    <TooltipsDemo />
+    <CollapseDemo />
   </div>
 </template>
