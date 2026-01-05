@@ -33,7 +33,7 @@ const menuItems = ref<MenuItemType[]>([
   {
     id: 'ui-elements',
     label: 'UI Elements',
-    icon: 'tokenElement',
+    icon: 'componentDropdown',
     children: [
       { id: 'alerts', label: 'Alerts', route: '/ui-elements/alerts' },
       { id: 'badge', label: 'Badge', route: '/ui-elements/badge' },
@@ -56,10 +56,23 @@ const menuItems = ref<MenuItemType[]>([
       { id: 'pagination', label: 'Pagination', route: '/ui-elements/pagination' },
       { id: 'popovers', label: 'Popovers', route: '/ui-elements/popovers' },
       { id: 'progress', label: 'Progress', route: '/ui-elements/progress' },
-      { id: 'modals', label: 'Modals', route: '/ui-elements/modals' },
       { id: 'toasts', label: 'Toasts', route: '/ui-elements/toasts' },
       { id: 'tooltips', label: 'Tooltips', route: '/ui-elements/tooltips' },
       { id: 'typography', label: 'Typography', route: '/ui-elements/typography' },
+    ],
+  },
+  {
+    id: 'advanced-ui',
+    label: 'Advanced UI',
+    icon: 'party',
+    children: [
+      { id: 'accordion', label: 'Accordion', route: '/advanced-ui/accordion' },
+      { id: 'collapse', label: 'Collapse', route: '/advanced-ui/collapse' },
+      { id: 'carousel', label: 'Carousel', route: '/advanced-ui/carousel' },
+      { id: 'modals', label: 'Modals', route: '/advanced-ui/modals' },
+      { id: 'navbar', label: 'Navbar', route: '/advanced-ui/navbar' },
+      { id: 'skeleton', label: 'Skeleton', route: '/advanced-ui/skeleton' },
+      { id: 'rating', label: 'Rating', route: '/advanced-ui/rating' },
     ],
   },
   {
