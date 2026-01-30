@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 
 import { useDirection } from '@/shared/composables/use-direction'
 
@@ -7,6 +7,7 @@ import { useDirection } from '@/shared/composables/use-direction'
    Types
 ======================= */
 type RatingSize = 'xs' | 'sm' | 'md' | 'lg'
+
 type RatingVariant
   = | 'default'
     | 'warning'
@@ -21,7 +22,6 @@ type MaskType = 'star' | 'heart' | 'star-2' | 'circle' | 'square'
 type RatingSpacing = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 type Props = {
-  modelValue?: number
   max?: number
   size?: RatingSize
   variant?: RatingVariant
@@ -39,10 +39,9 @@ type Props = {
 }
 
 /* =======================
-   Defaults
+   Props
 ======================= */
 const props = withDefaults(defineProps<Props>(), {
-  modelValue: 0,
   max: 5,
   size: 'md',
   variant: 'warning',
@@ -54,30 +53,23 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 /* =======================
-   Emits
+   Emits (non v-model)
 ======================= */
 const emit = defineEmits<{
-  'update:modelValue': [value: number]
-  'change': [value: number]
-  'hover': [value: number | null]
+  change: [value: number]
+  hover: [value: number | null]
 }>()
+
+/* =======================
+   v-model
+======================= */
+const model = defineModel<number>({ default: 0 })
 
 /* =======================
    State
 ======================= */
 const { isRtl } = useDirection()
-const currentValue = ref(props.modelValue)
 const hoverValue = ref<number | null>(null)
-
-/* =======================
-   Sync modelValue
-======================= */
-watch(
-  () => props.modelValue,
-  (val) => {
-    currentValue.value = val
-  },
-)
 
 /* =======================
    Static class maps
@@ -143,10 +135,10 @@ const colorClass = computed(() => VARIANT_CLASSES[props.variant])
 
 const items = computed(() => {
   const result: number[] = []
+
   if (props.half) {
     for (let i = 1; i <= props.max; i++) {
-      result.push(i - 0.5)
-      result.push(i)
+      result.push(i - 0.5, i)
     }
   }
   else {
@@ -154,12 +146,11 @@ const items = computed(() => {
       result.push(i)
     }
   }
+
   return result
 })
 
-const displayValue = computed(() =>
-  hoverValue.value !== null ? hoverValue.value : currentValue.value,
-)
+const displayValue = computed(() => (hoverValue.value !== null ? hoverValue.value : model.value))
 
 /* =======================
    Methods
@@ -167,8 +158,7 @@ const displayValue = computed(() =>
 function handleClick(value: number) {
   if (props.disabled || props.readOnly)
     return
-  currentValue.value = value
-  emit('update:modelValue', value)
+  model.value = value
   emit('change', value)
 }
 
@@ -197,7 +187,7 @@ function getInputId(value: number) {
 
 <template>
   <div :class="ratingClasses">
-    <!-- Clear / 0 -->
+    <!-- reset -->
     <input
       v-if="!hidden"
       type="radio"
@@ -222,7 +212,7 @@ function getInputId(value: number) {
         item % 1 === 0 && props.half && 'mask-half-2',
         item % 1 === 0 && (isRtl ? spacingClasses.ml : spacingClasses.mr),
         item % 1 !== 0 && props.half && (isRtl ? spacingClasses.mr : spacingClasses.ml),
-        readOnly && 'pointer-events-none', // <--- این خط اضافه شد
+        readOnly && 'pointer-events-none',
       ]"
       :checked="isChecked(item)"
       :disabled="disabled"
