@@ -11,6 +11,9 @@ export const iconRegistry = {
   magnify: () => import('~icons/mdi/magnify'),
   phone: () => import('~icons/mdi/phone'),
   chevronRight: () => import('~icons/mdi/chevron-right'),
+  chevronDown: () => import('~icons/mdi/chevron-down'),
+  chevronUp: () => import('~icons/mdi/chevron-up'),
+  chevronLeft: () => import('~icons/mdi/chevron-left'),
   // Material Symbols
   logout: () => import('~icons/material-symbols/logout'),
   fullscreenExit: () => import('~icons/material-symbols/fullscreen-exit'),
@@ -32,6 +35,7 @@ export const iconRegistry = {
   user: () => import('~icons/heroicons/user'),
   chevronDoubleRight: () => import('~icons/heroicons/chevron-double-right-20-solid'),
   chevronRightHero: () => import('~icons/heroicons/chevron-right-20-solid'),
+  plus: () => import('~icons/heroicons/plus-20-solid'),
   home: () => import('~icons/heroicons/home'),
   slash: () => import('~icons/heroicons/slash'),
   xMark: () => import('~icons/heroicons/x-mark-20-solid'),
