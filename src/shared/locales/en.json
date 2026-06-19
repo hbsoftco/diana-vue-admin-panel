@@ -15,6 +15,10 @@
       "title": "Ui Elements",
       "icons": "Icons"
     },
+    "drawer": {
+      "title": "Advanced ui",
+      "drawer": "Drawer"
+    },
     "alerts": {
       "title": "Ui Elements",
       "alerts": "Alerts"
@@ -469,6 +473,24 @@
         "faq3Content": "Once your order ships, you will receive a tracking number via email.",
         "faq4Title": "Can I change my order after placing it?",
         "faq4Content": "Orders can be modified within 1 hour of placement by contacting support."
+      },
+      "drawers": {
+        "basic": "Basic Drawer",
+        "end": "Right Drawer",
+        "navbar": "Navbar with Drawer",
+        "responsive": "Responsive Drawer",
+        "iconOnly": "Collapsible Icon Drawer",
+        "sidebarTitle": "Navigation",
+        "item1": "Sidebar Item 1",
+        "item2": "Sidebar Item 2",
+        "navbarTitle": "Navbar Title",
+        "navItem1": "Menu Item 1",
+        "navItem2": "Menu Item 2",
+        "content": "Page Content",
+        "openDrawer": "Open Drawer",
+        "responsiveHint": "Always visible on large screens",
+        "homepage": "Home",
+        "settings": "Settings"
       }
     }
   },

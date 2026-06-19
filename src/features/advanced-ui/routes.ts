@@ -64,6 +64,17 @@ export const advancedUiRoutes = {
       },
     },
     {
+      path: 'drawer',
+      component: () => import('@/pages/advanced-ui/drawer.vue'),
+      meta: {
+        pageTitle: 'pages.drawer.drawer',
+        breadcrumb: [
+          { label: 'pages.drawer.title', link: '/advanced-ui' },
+          { label: 'pages.drawer.drawer' },
+        ],
+      },
+    },
+    {
       path: 'rating',
       component: () => import('@/pages/advanced-ui/rating.vue'),
       meta: {

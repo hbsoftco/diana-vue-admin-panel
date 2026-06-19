@@ -70,6 +70,7 @@ const menuItems = ref<MenuItemType[]>([
       { id: 'collapse', label: 'Collapse', route: '/advanced-ui/collapse' },
       { id: 'carousel', label: 'Carousel', route: '/advanced-ui/carousel' },
       { id: 'modals', label: 'Modals', route: '/advanced-ui/modals' },
+      { id: 'drawer', label: 'Drawer', route: '/advanced-ui/drawer' },
       { id: 'navbar', label: 'Navbar', route: '/advanced-ui/navbar' },
       { id: 'skeleton', label: 'Skeleton', route: '/advanced-ui/skeleton' },
       { id: 'rating', label: 'Rating', route: '/advanced-ui/rating' },
