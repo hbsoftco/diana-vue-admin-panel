@@ -4,97 +4,12 @@ import { useRoute } from 'vue-router'
 
 import type { MenuItem as MenuItemType } from '@/shared/types/models'
 
+import { menuItems } from '@/shared/config/menu'
 import { useSidebar } from '@/shared/utils/use-sidebar'
 
 import MenuItem from './MenuItem.vue'
 
 const { isSidebarCollapsed } = useSidebar()
-
-const menuItems = ref<MenuItemType[]>([
-  {
-    id: 'dashboards',
-    label: 'menu.dashboards',
-    icon: 'homeOutlineRounded',
-    children: [
-      { id: 'crm', label: 'CRM', route: '/dashboards/crm' },
-      { id: 'ecommerce', label: 'Ecommerce', route: '/dashboards/ecommerce' },
-      { id: 'analytics', label: 'Analytics', route: '/dashboards/analytics' },
-      { id: 'courses', label: 'Courses', route: '/dashboards/courses' },
-      { id: 'crypto', label: 'Crypto', route: '/dashboards/crypto' },
-      { id: 'hrm', label: 'HRM', route: '/dashboards/hrm' },
-      { id: 'jobs', label: 'Jobs', route: '/dashboards/jobs' },
-      { id: 'nft', label: 'NFT', route: '/dashboards/nft' },
-      { id: 'personal', label: 'Personal', route: '/dashboards/personal' },
-      { id: 'projects', label: 'Projects', route: '/dashboards/projects' },
-      { id: 'sales', label: 'Sales', route: '/dashboards/sales' },
-      { id: 'stocks', label: 'Stocks', route: '/dashboards/stocks' },
-    ],
-  },
-  {
-    id: 'ui-elements',
-    label: 'UI Elements',
-    icon: 'componentDropdown',
-    children: [
-      { id: 'alerts', label: 'Alerts', route: '/ui-elements/alerts' },
-      { id: 'badge', label: 'Badge', route: '/ui-elements/badge' },
-      { id: 'breadcrumb', label: 'Breadcrumb', route: '/ui-elements/breadcrumb' },
-      { id: 'buttons', label: 'Buttons', route: '/ui-elements/buttons' },
-      { id: 'icons', label: 'Icons', route: '/ui-elements/icons' },
-      { id: 'loadings', label: 'Loadings', route: '/ui-elements/loadings' },
-      { id: 'button-group', label: 'Button Group', route: '/ui-elements/button-group' },
-      { id: 'cards', label: 'Cards', route: '/ui-elements/cards' },
-      { id: 'dropdowns', label: 'Dropdowns', route: '/ui-elements/dropdowns' },
-      { id: 'images-figures', label: 'Images & Figures', route: '/ui-elements/images-figures' },
-      {
-        id: 'links-interactions',
-        label: 'Links & Interactions',
-        route: '/ui-elements/links-interactions',
-      },
-      { id: 'list-group', label: 'List Group', route: '/ui-elements/list-group' },
-      { id: 'navs-tabs', label: 'Navs & Tabs', route: '/ui-elements/navs-tabs' },
-      { id: 'object-fit', label: 'Object Fit', route: '/ui-elements/object-fit' },
-      { id: 'pagination', label: 'Pagination', route: '/ui-elements/pagination' },
-      { id: 'popovers', label: 'Popovers', route: '/ui-elements/popovers' },
-      { id: 'progress', label: 'Progress', route: '/ui-elements/progress' },
-      { id: 'toasts', label: 'Toasts', route: '/ui-elements/toasts' },
-      { id: 'tooltips', label: 'Tooltips', route: '/ui-elements/tooltips' },
-      { id: 'typography', label: 'Typography', route: '/ui-elements/typography' },
-    ],
-  },
-  {
-    id: 'advanced-ui',
-    label: 'Advanced UI',
-    icon: 'party',
-    children: [
-      { id: 'accordion', label: 'Accordion', route: '/advanced-ui/accordion' },
-      { id: 'collapse', label: 'Collapse', route: '/advanced-ui/collapse' },
-      { id: 'carousel', label: 'Carousel', route: '/advanced-ui/carousel' },
-      { id: 'modals', label: 'Modals', route: '/advanced-ui/modals' },
-      { id: 'drawer', label: 'Drawer', route: '/advanced-ui/drawer' },
-      { id: 'navbar', label: 'Navbar', route: '/advanced-ui/navbar' },
-      { id: 'skeleton', label: 'Skeleton', route: '/advanced-ui/skeleton' },
-      { id: 'rating', label: 'Rating', route: '/advanced-ui/rating' },
-    ],
-  },
-  {
-    id: 'projects',
-    label: 'Projects',
-    icon: 'tokenElement',
-    children: [
-      { id: 'all-projects', label: 'All Projects', route: '/projects' },
-      { id: 'active', label: 'Active', route: '/projects/active' },
-      {
-        id: 'archived',
-        label: 'Archived',
-        icon: 'tokenElement',
-        children: [
-          { id: 'archived-2023', label: '2023', route: '/projects/archived/2023' },
-          { id: 'archived-2024', label: '2024', route: '/projects/archived/2024' },
-        ],
-      },
-    ],
-  },
-])
 
 const route = useRoute()
 const expandedMenus = ref<Set<string>>(new Set())
@@ -129,7 +44,7 @@ function findParentMenuIds(
  * Initialize expanded menus based on current route
  */
 function initializeExpandedMenus() {
-  const parentIds = findParentMenuIds(menuItems.value, route.path)
+  const parentIds = findParentMenuIds(menuItems, route.path)
   expandedMenus.value = new Set(parentIds || [])
 }
 
