@@ -86,6 +86,31 @@
     "typography": {
       "title": "عناصر واجهة المستخدم",
       "typography": "الطباعة"
+    },
+    "accordion": {
+      "title": "Advanced UI",
+      "accordion": "Accordion"
+    }
+  },
+  "features": {
+    "advanced-ui": {
+      "accordions": {
+        "basic": "Basic Accordion",
+        "multiple": "Multiple Items",
+        "openItems": "Open items",
+        "none": "None",
+        "variants": "Variants, Sizes, and States",
+        "customContent": "Custom Title and Content",
+        "open": "Open",
+        "accountTitle": "Account settings",
+        "accountContent": "Manage your profile details, password, and account security.",
+        "shippingTitle": "Shipping and delivery",
+        "shippingContent": "Review delivery methods, addresses, and estimated arrival times.",
+        "returnsTitle": "Returns and refunds",
+        "returnsContent": "Learn about return windows, refund methods, and item eligibility.",
+        "disabledTitle": "Unavailable section",
+        "disabledContent": "This section cannot be opened."
+      }
     }
   }
 }
