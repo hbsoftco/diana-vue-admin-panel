@@ -98,6 +98,27 @@
   },
   "features": {
     "ui-elements": {
+      "toast": {
+        "basic": "Notification simple",
+        "variants": "Variantes sémantiques",
+        "persistent": "Notification persistante",
+        "actions": "Notification avec action",
+        "placement": "Positionnement",
+        "show": "Afficher la notification",
+        "showPersistent": "Afficher une notification persistante",
+        "showAction": "Afficher une notification avec action",
+        "showPositioned": "Afficher en haut au début",
+        "close": "Fermer la notification",
+        "undo": "Annuler",
+        "messages": {
+          "saved": "Vos paramètres ont été enregistrés.",
+          "variant": "Cette notification utilise une variante sémantique.",
+          "attention": "Attention requise",
+          "persistent": "Cette notification reste affichée jusqu’à sa fermeture.",
+          "action": "L’élément a été déplacé vers les archives.",
+          "position": "Cette notification est placée en haut au début."
+        }
+      },
       "pagination": {
         "basic": "Pagination simple",
         "compact": "Pagination compacte",

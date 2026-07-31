@@ -137,6 +137,27 @@
   },
   "features": {
     "ui-elements": {
+      "toast": {
+        "basic": "Basic toast",
+        "variants": "Semantic variants",
+        "persistent": "Persistent toast",
+        "actions": "Toast with action",
+        "placement": "Placement",
+        "show": "Show toast",
+        "showPersistent": "Show persistent toast",
+        "showAction": "Show toast with action",
+        "showPositioned": "Show top-start toast",
+        "close": "Close notification",
+        "undo": "Undo",
+        "messages": {
+          "saved": "Your settings have been saved.",
+          "variant": "This notification uses a semantic variant.",
+          "attention": "Attention required",
+          "persistent": "This notification remains until you close it.",
+          "action": "The item was moved to the archive.",
+          "position": "This toast is positioned at the top start."
+        }
+      },
       "pagination": {
         "basic": "Basic pagination",
         "compact": "Compact pagination",

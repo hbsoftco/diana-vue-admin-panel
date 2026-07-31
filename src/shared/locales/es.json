@@ -98,6 +98,27 @@
   },
   "features": {
     "ui-elements": {
+      "toast": {
+        "basic": "Notificación básica",
+        "variants": "Variantes semánticas",
+        "persistent": "Notificación persistente",
+        "actions": "Notificación con acción",
+        "placement": "Posición",
+        "show": "Mostrar notificación",
+        "showPersistent": "Mostrar notificación persistente",
+        "showAction": "Mostrar notificación con acción",
+        "showPositioned": "Mostrar arriba al inicio",
+        "close": "Cerrar notificación",
+        "undo": "Deshacer",
+        "messages": {
+          "saved": "Se han guardado tus ajustes.",
+          "variant": "Esta notificación usa una variante semántica.",
+          "attention": "Se requiere atención",
+          "persistent": "Esta notificación permanece hasta que la cierres.",
+          "action": "El elemento se movió al archivo.",
+          "position": "Esta notificación está situada arriba al inicio."
+        }
+      },
       "pagination": {
         "basic": "Paginación básica",
         "compact": "Paginación compacta",

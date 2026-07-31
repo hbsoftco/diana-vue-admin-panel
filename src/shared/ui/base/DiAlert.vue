@@ -7,10 +7,12 @@ import type { AlertVariant } from '@/shared/types/models'
    Types
 ======================= */
 type Layout = 'horizontal' | 'vertical'
+type LiveRole = 'alert' | 'status'
 
 type Props = {
   variant?: AlertVariant
   layout?: Layout
+  role?: LiveRole
 
   outline?: boolean
   dash?: boolean
@@ -31,6 +33,7 @@ type Props = {
 ======================= */
 const props = withDefaults(defineProps<Props>(), {
   layout: 'horizontal',
+  role: 'alert',
   outline: false,
   dash: false,
   soft: false,
@@ -107,7 +110,7 @@ function handleClose() {
 </script>
 
 <template>
-  <div v-if="isVisible" role="alert" :class="alertClasses">
+  <div v-if="isVisible" :role="role" :class="alertClasses">
     <!-- Default Icons based on variant -->
     <i-heroicons-information-circle
       v-if="shouldShowIcon && variant === 'info'"
