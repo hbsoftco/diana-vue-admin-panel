@@ -437,10 +437,6 @@ const runtimeDisabled = ref(true)
       />
     </PreviewCodeCard>
 
-    <div class="divider xl:col-span-2">
-      Ynex advanced equivalents
-    </div>
-
     <PreviewCodeCard
       title="Rounded and Square Styling"
       accent-color="#8b5cf6"
@@ -579,66 +575,5 @@ const runtimeDisabled = ref(true)
         </DiButton>
       </div>
     </PreviewCodeCard>
-
-    <section class="card border border-base-300 bg-base-100 shadow-sm xl:col-span-2">
-      <div class="card-body gap-4">
-        <h2 class="card-title text-base">
-          Reference coverage and future component boundary
-        </h2>
-        <p class="text-sm text-base-content/70">
-          Every single-value Ynex behavior is represented above. These examples require multiple
-          independently movable handles or a non-native value scale, so they belong in a future
-          <code class="font-mono text-primary">DiRangeSlider</code> rather than overloading the
-          native <code class="font-mono text-primary">DiRange</code> contract.
-        </p>
-        <div class="overflow-x-auto">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th>Ynex example</th>
-                <th>Why it is omitted from DiRange</th>
-                <th>Recommended API</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Default Styling (two handles)</td>
-                <td>
-                  The exact example selects an interval with two independently movable handles.
-                </td>
-                <td>DiRangeSlider with a tuple model</td>
-              </tr>
-              <tr>
-                <td>Fit Handles</td>
-                <td>Requires two handles constrained against each other.</td>
-                <td>DiRangeSlider with minimum distance</td>
-              </tr>
-              <tr>
-                <td>Merging Tooltips</td>
-                <td>Requires multiple handles and collision-aware tooltip merging.</td>
-                <td>DiRangeSlider with merged tooltips</td>
-              </tr>
-              <tr>
-                <td>Non Linear Slider</td>
-                <td>Native range inputs use a linear numeric scale.</td>
-                <td>DiRangeSlider with scale mapping</td>
-              </tr>
-              <tr>
-                <td>Sliding Handles Tooltips</td>
-                <td>
-                  The single-handle equivalent is shown above; the exact example has two handles.
-                </td>
-                <td>DiRangeSlider with handle tooltips</td>
-              </tr>
-              <tr>
-                <td>Colored Connect Elements</td>
-                <td>Multiple colored segments require multiple handles and connect regions.</td>
-                <td>DiRangeSlider with segment variants</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
   </div>
 </template>

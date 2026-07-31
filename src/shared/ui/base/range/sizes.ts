@@ -1,6 +1,6 @@
 import type { DiRangeSize, RangeSizeClasses } from './types'
 
-import { SLIDER_SIZE_CLASSES } from '../slider/sizes'
+import { SLIDER_SIZE_CLASSES } from '../range-slider/sizes'
 
 export const RANGE_SIZE_CLASSES: Record<DiRangeSize, RangeSizeClasses> = {
   sm: {
