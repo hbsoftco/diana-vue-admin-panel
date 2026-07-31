@@ -140,9 +140,10 @@ in route definitions rather than in the root component.
 
 ## Routing Architecture
 
-`src/app/router.ts` creates a browser-history router and combines three route groups:
+`src/app/router.ts` creates a browser-history router and combines four route groups:
 
 - `/dashboards`
+- `/forms`
 - `/ui-elements`
 - `/advanced-ui`
 
@@ -154,7 +155,7 @@ Each route group:
 - Defines a group-level default redirect.
 - Lazy-loads child page wrappers.
 
-The UI and advanced UI routes attach `pageTitle` and `breadcrumb` metadata. `DefaultLayout`
+The forms, UI, and advanced UI routes attach `pageTitle` and `breadcrumb` metadata. `DefaultLayout`
 consumes that metadata to update `document.title` and render translated breadcrumbs.
 
 Dashboard routes currently do not define title or breadcrumb metadata. They consequently use

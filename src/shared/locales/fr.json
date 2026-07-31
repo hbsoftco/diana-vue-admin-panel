@@ -8,9 +8,15 @@
   "menu": {
     "dashboards": "Tableaux de bord",
     "users": "Utilisateurs",
-    "settings": "Paramètres"
+    "settings": "Paramètres",
+    "forms": "Formulaires",
+    "select": "Sélection"
   },
   "pages": {
+    "select": {
+      "title": "Formulaires",
+      "select": "Sélection"
+    },
     "alerts": {
       "title": "Éléments UI",
       "alerts": "Alertes"

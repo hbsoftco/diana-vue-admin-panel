@@ -8,9 +8,15 @@
   "menu": {
     "dashboards": "Dashboards",
     "users": "Users",
-    "settings": "Settings"
+    "settings": "Settings",
+    "forms": "Forms",
+    "select": "Select"
   },
   "pages": {
+    "select": {
+      "title": "Forms",
+      "select": "Select"
+    },
     "icons": {
       "title": "Ui Elements",
       "icons": "Icons"

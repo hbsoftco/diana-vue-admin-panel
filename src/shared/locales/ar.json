@@ -8,9 +8,15 @@
   "menu": {
     "dashboards": "لوحات المعلومات",
     "users": "المستخدمون",
-    "settings": "الإعدادات"
+    "settings": "الإعدادات",
+    "forms": "النماذج",
+    "select": "الاختيار"
   },
   "pages": {
+    "select": {
+      "title": "النماذج",
+      "select": "الاختيار"
+    },
     "alerts": {
       "title": "عناصر واجهة المستخدم",
       "alerts": "التنبيهات"

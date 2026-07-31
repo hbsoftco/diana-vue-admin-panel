@@ -8,9 +8,15 @@
   "menu": {
     "dashboards": "Paneles",
     "users": "Usuarios",
-    "settings": "Configuración"
+    "settings": "Configuración",
+    "forms": "Formularios",
+    "select": "Selección"
   },
   "pages": {
+    "select": {
+      "title": "Formularios",
+      "select": "Selección"
+    },
     "alerts": {
       "title": "Elementos de UI",
       "alerts": "Alertas"

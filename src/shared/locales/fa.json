@@ -37,9 +37,15 @@
   "menu": {
     "dashboards": "داشبوردها",
     "users": "کاربران",
-    "settings": "تنظیمات"
+    "settings": "تنظیمات",
+    "forms": "فرم‌ها",
+    "select": "انتخاب‌گر"
   },
   "pages": {
+    "select": {
+      "title": "فرم‌ها",
+      "select": "انتخاب‌گر"
+    },
     "alerts": {
       "title": "المان‌های ظاهری",
       "alerts": "هشدارها"

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import { advancedUiRoutes } from '@/features/advanced-ui/routes'
 import { dashboardRoutes } from '@/features/dashboards/routes'
+import { formRoutes } from '@/features/forms/routes'
 import { uiElementRoutes } from '@/features/ui-elements/routes'
 
 const router = createRouter({
@@ -12,6 +13,7 @@ const router = createRouter({
       redirect: '/dashboards/crm',
     },
     dashboardRoutes,
+    formRoutes,
     uiElementRoutes,
     advancedUiRoutes,
   ],
