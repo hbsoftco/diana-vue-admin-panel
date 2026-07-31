@@ -135,14 +135,18 @@
         "page": "עמוד {page}"
       },
       "progress": {
-        "default": "התקדמות ברירת מחדל",
-        "indeterminate": "התקדמות לא מוגדרת",
-        "variants": "וריאנטים סמנטיים",
-        "sizes": "גדלים",
-        "customRange": "טווח מותאם אישית",
-        "interactive": "התקדמות אינטראקטיבית",
-        "increase": "הגדלת ההתקדמות",
-        "reset": "איפוס"
+        "basic": "התקדמות בסיסית",
+        "colors": "התקדמות בצבעים שונים",
+        "striped": "התקדמות מפוספסת",
+        "heights": "גובה התקדמות",
+        "labels": "התקדמות עם תוויות",
+        "vertical": "התקדמות אנכית",
+        "animatedStriped": "התקדמות מפוספסת מונפשת",
+        "determinate": "התקדמות מוגדרת",
+        "customAnimated": "התקדמות מונפשת מותאמת",
+        "named": "התקדמות מותאמת 1",
+        "markers": "התקדמות מותאמת 2",
+        "outlinedLabels": "התקדמות מותאמת 3"
       }
     },
     "advanced-ui": {

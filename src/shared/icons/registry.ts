@@ -27,6 +27,7 @@ export const iconRegistry = {
   dashboardOutlineRounded: () => import('~icons/material-symbols/dashboard-outline-rounded'),
   lightCheck: () => import('~icons/material-symbols/check'),
   copy: () => import('~icons/material-symbols/content-copy'),
+  inbox: () => import('~icons/material-symbols/inbox'),
   // Heroicons Icons
   heart: () => import('~icons/heroicons/heart'),
   star: () => import('~icons/heroicons/star'),

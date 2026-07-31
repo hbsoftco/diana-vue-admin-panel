@@ -135,14 +135,18 @@
         "page": "الصفحة {page}"
       },
       "progress": {
-        "default": "شريط التقدم الافتراضي",
-        "indeterminate": "تقدم غير محدد",
-        "variants": "الأنواع الدلالية",
-        "sizes": "الأحجام",
-        "customRange": "نطاق مخصص",
-        "interactive": "تقدم تفاعلي",
-        "increase": "زيادة التقدم",
-        "reset": "إعادة تعيين"
+        "basic": "التقدم الأساسي",
+        "colors": "تقدم بألوان مختلفة",
+        "striped": "التقدم المخطط",
+        "heights": "ارتفاع التقدم",
+        "labels": "تقدم مع تسميات",
+        "vertical": "التقدم العمودي",
+        "animatedStriped": "تقدم مخطط متحرك",
+        "determinate": "التقدم المحدد",
+        "customAnimated": "تقدم متحرك مخصص",
+        "named": "تقدم مخصص 1",
+        "markers": "تقدم مخصص 2",
+        "outlinedLabels": "تقدم مخصص 3"
       }
     },
     "advanced-ui": {

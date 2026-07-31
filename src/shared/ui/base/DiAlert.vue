@@ -1,26 +1,29 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 
+import type { IconName } from '@/shared/icons/registry'
 import type { AlertVariant } from '@/shared/types/models'
 
-/* =======================
-   Types
-======================= */
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiIcon from '@/shared/ui/base/DiIcon.vue'
+
 type Layout = 'horizontal' | 'vertical'
-type LiveRole = 'alert' | 'status'
+type AlertRole = 'alert' | 'status' | 'button'
 
 type Props = {
   variant?: AlertVariant
   layout?: Layout
-  role?: LiveRole
+  role?: AlertRole
 
   outline?: boolean
   dash?: boolean
   soft?: boolean
+  rounded?: boolean
 
   closable?: boolean
   modelValue?: boolean
   showIcon?: boolean
+  closeLabel?: string
 
   title?: string
   description?: string
@@ -28,46 +31,36 @@ type Props = {
   customClass?: string
 }
 
-/* =======================
-   Defaults
-======================= */
 const props = withDefaults(defineProps<Props>(), {
   layout: 'horizontal',
   role: 'alert',
   outline: false,
   dash: false,
   soft: false,
+  rounded: false,
   closable: false,
   modelValue: true,
-  icon: false,
+  showIcon: false,
+  closeLabel: 'Close alert',
 })
 
-/* =======================
-   Emits
-======================= */
 const emit = defineEmits<{
   'update:modelValue': [value: boolean]
   'close': []
 }>()
 
-/* =======================
-   Slots
-======================= */
 const slots = defineSlots<{
-  default?: () => any
-  icon?: () => any
-  actions?: () => any
+  default?: () => unknown
+  icon?: () => unknown
+  actions?: () => unknown
+  close?: (props: { close: () => void }) => unknown
 }>()
 
-/* =======================
-   State
-======================= */
-const isVisible = ref(props.modelValue)
-
-/* =======================
-   Static class maps
-======================= */
 const VARIANT_CLASSES: Record<AlertVariant, string> = {
+  neutral: '[--alert-color:var(--color-neutral)] [--alert-border-color:var(--color-neutral)]',
+  primary: '[--alert-color:var(--color-primary)] [--alert-border-color:var(--color-primary)]',
+  secondary: '[--alert-color:var(--color-secondary)] [--alert-border-color:var(--color-secondary)]',
+  accent: '[--alert-color:var(--color-accent)] [--alert-border-color:var(--color-accent)]',
   info: 'alert-info',
   success: 'alert-success',
   warning: 'alert-warning',
@@ -79,57 +72,67 @@ const LAYOUT_CLASSES: Record<Layout, string> = {
   vertical: 'alert-vertical',
 }
 
-/* =======================
-   Computed properties
-======================= */
+const SOLID_CONTENT_CLASSES: Partial<Record<AlertVariant, string>> = {
+  neutral: 'text-neutral-content',
+  primary: 'text-primary-content',
+  secondary: 'text-secondary-content',
+  accent: 'text-accent-content',
+}
+
+const SUBTLE_CONTENT_CLASSES: Partial<Record<AlertVariant, string>> = {
+  neutral: 'text-neutral',
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  accent: 'text-accent',
+}
+
+const DEFAULT_ICONS: Partial<Record<AlertVariant, IconName>> = {
+  info: 'informationCircle',
+  success: 'checkCircle',
+  warning: 'exclamationTriangle',
+  error: 'xCircle',
+}
+
+const usesSubtleStyle = computed(() => props.outline || props.dash || props.soft)
+
 const alertClasses = computed(() => [
   'alert',
 
   props.variant && VARIANT_CLASSES[props.variant],
+  props.variant
+  && (usesSubtleStyle.value
+    ? SUBTLE_CONTENT_CLASSES[props.variant]
+    : SOLID_CONTENT_CLASSES[props.variant]),
   LAYOUT_CLASSES[props.layout],
 
   props.outline && 'alert-outline',
   props.dash && 'alert-dash',
   props.soft && 'alert-soft',
+  props.rounded && 'rounded-full',
+  props.closable && 'relative pe-14',
 
   props.customClass,
 ])
 
-const shouldShowIcon = computed(() => {
-  return props.variant && props.showIcon && !slots.icon
+const defaultIcon = computed(() => {
+  if (!props.variant || !props.showIcon || slots.icon)
+    return
+
+  return DEFAULT_ICONS[props.variant]
 })
 
-/* =======================
-   Methods
-======================= */
 function handleClose() {
-  isVisible.value = false
   emit('update:modelValue', false)
   emit('close')
 }
 </script>
 
 <template>
-  <div v-if="isVisible" :role="role" :class="alertClasses">
-    <!-- Default Icons based on variant -->
-    <i-heroicons-information-circle
-      v-if="shouldShowIcon && variant === 'info'"
-      class="h-6 w-6 shrink-0"
-    />
-    <i-heroicons-check-circle
-      v-if="shouldShowIcon && variant === 'success'"
-      class="h-6 w-6 shrink-0"
-    />
-    <i-heroicons-exclamation-triangle
-      v-if="shouldShowIcon && variant === 'warning'"
-      class="h-6 w-6 shrink-0"
-    />
-    <i-heroicons-x-circle v-if="shouldShowIcon && variant === 'error'" class="h-6 w-6 shrink-0" />
+  <div v-if="modelValue" :role="role" :class="alertClasses">
+    <DiIcon v-if="defaultIcon" :name="defaultIcon" size="lg" class="shrink-0" />
 
-    <!-- Icon Slot (custom icon) -->
     <slot name="icon" />
 
-    <!-- Content -->
     <div v-if="title || description" class="flex-1">
       <h3 v-if="title" class="font-bold">
         {{ title }}
@@ -143,14 +146,25 @@ function handleClose() {
       <slot />
     </span>
 
-    <!-- Actions Slot -->
     <div v-if="slots.actions">
       <slot name="actions" />
     </div>
 
-    <!-- Close Button -->
-    <span v-if="closable" class="cursor-pointer" circle @click="handleClose">
-      <i-material-symbols-light-close class="text-xl" />
-    </span>
+    <div
+      v-if="closable"
+      class="absolute end-4 top-1/2 shrink-0 -translate-y-1/2"
+    >
+      <slot v-if="slots.close" name="close" :close="handleClose" />
+      <DiButton
+        v-else
+        variant="ghost"
+        size="sm"
+        circle
+        :aria-label="closeLabel"
+        @click="handleClose"
+      >
+        <DiIcon name="xMark" size="sm" />
+      </DiButton>
+    </div>
   </div>
 </template>

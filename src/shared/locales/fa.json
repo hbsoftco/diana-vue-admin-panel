@@ -183,14 +183,18 @@
         "page": "صفحه {page}"
       },
       "progress": {
-        "default": "نوار پیشرفت پیش‌فرض",
-        "indeterminate": "پیشرفت نامعین",
-        "variants": "انواع معنایی",
-        "sizes": "اندازه‌ها",
-        "customRange": "محدوده سفارشی",
-        "interactive": "پیشرفت تعاملی",
-        "increase": "افزایش پیشرفت",
-        "reset": "بازنشانی"
+        "basic": "پیشرفت پایه",
+        "colors": "پیشرفت با رنگ‌های مختلف",
+        "striped": "پیشرفت راه‌راه",
+        "heights": "ارتفاع پیشرفت",
+        "labels": "پیشرفت با برچسب",
+        "vertical": "پیشرفت عمودی",
+        "animatedStriped": "پیشرفت راه‌راه متحرک",
+        "determinate": "پیشرفت معین",
+        "customAnimated": "پیشرفت متحرک سفارشی",
+        "named": "پیشرفت سفارشی ۱",
+        "markers": "پیشرفت سفارشی ۲",
+        "outlinedLabels": "پیشرفت سفارشی ۳"
       },
       "buttons": {
         "defaultButtons": "دکمه‌های پیشفرض",
