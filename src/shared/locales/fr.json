@@ -10,11 +10,19 @@
     "users": "Utilisateurs",
     "settings": "Paramètres",
     "forms": "Formulaires",
+    "formElements": "Éléments de formulaire",
+    "inputs": "Champs de saisie",
     "select": "Sélection"
   },
   "pages": {
+    "inputs": {
+      "forms": "Formulaires",
+      "formElements": "Éléments de formulaire",
+      "inputs": "Champs de saisie"
+    },
     "select": {
       "title": "Formulaires",
+      "formElements": "Éléments de formulaire",
       "select": "Sélection"
     },
     "alerts": {

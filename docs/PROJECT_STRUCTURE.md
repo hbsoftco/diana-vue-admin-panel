@@ -290,9 +290,10 @@ Not every demo is implemented. Several render only a heading.
 
 ### `src/features/forms`
 
-Owns form-control showcase routes and demos. `select` is the first implemented Forms feature.
-Reusable form primitives remain under `src/shared/ui/base`; this feature group owns only their
-documentation and route-facing presentation.
+Owns form-control showcase routes and demos. Form controls are organized under the `form-elements`
+group, which currently documents Inputs and Select. Reusable form primitives remain under
+`src/shared/ui/base`; this feature group owns only their documentation and route-facing
+presentation.
 
 ### `src/features/advanced-ui`
 
@@ -387,6 +388,7 @@ Reusable design-system primitives:
 | `DiDrawer`     | Responsive drawer structure and overlay control                 |
 | `DiDropdown`   | Dropdown positioning, options, selection, slots, outside click  |
 | `DiIcon`       | Typed asynchronous icons, transforms, colors, badges            |
+| `DiInput`      | DaisyUI text inputs, labels, slots, sizes, loading, validation  |
 | `DiLoading`    | DaisyUI loading variants                                        |
 | `DiModal`      | Teleported modal, backdrop, keyboard closing, scroll prevention |
 | `DiRating`     | Interactive rating input with half-value and RTL support        |

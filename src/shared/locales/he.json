@@ -10,11 +10,19 @@
     "users": "משתמשים",
     "settings": "הגדרות",
     "forms": "טפסים",
+    "formElements": "רכיבי טופס",
+    "inputs": "שדות קלט",
     "select": "בחירה"
   },
   "pages": {
+    "inputs": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "inputs": "שדות קלט"
+    },
     "select": {
       "title": "טפסים",
+      "formElements": "רכיבי טופס",
       "select": "בחירה"
     },
     "alerts": {

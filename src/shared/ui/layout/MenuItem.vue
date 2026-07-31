@@ -129,12 +129,7 @@ const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleO
     <Transition name="collapse">
       <ul
         v-if="item.children && isExpanded() && shouldShowChildren"
-        class="mt-1 space-y-1 border-(--color-menu-border) overflow-hidden"
-        :class="[
-          level === 1
-            ? 'ltr:ml-4 rtl:mr-4 ltr:border-l-2 rtl:border-r-2 ltr:pl-2 rtl:pr-2'
-            : 'ml-4 border-l-2 pl-2',
-        ]"
+        class="mt-1 space-y-1 border-(--color-menu-border) overflow-hidden ltr:ml-4 rtl:mr-4 ltr:border-l-2 rtl:border-r-2 ltr:pl-2 rtl:pr-2"
       >
         <MenuItem
           v-for="child in item.children"

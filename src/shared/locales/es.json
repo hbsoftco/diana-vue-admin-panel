@@ -10,11 +10,19 @@
     "users": "Usuarios",
     "settings": "Configuración",
     "forms": "Formularios",
+    "formElements": "Elementos de formulario",
+    "inputs": "Campos de entrada",
     "select": "Selección"
   },
   "pages": {
+    "inputs": {
+      "forms": "Formularios",
+      "formElements": "Elementos de formulario",
+      "inputs": "Campos de entrada"
+    },
     "select": {
       "title": "Formularios",
+      "formElements": "Elementos de formulario",
       "select": "Selección"
     },
     "alerts": {
