@@ -102,6 +102,19 @@
   },
   "features": {
     "ui-elements": {
+      "buttonGroup": {
+        "basic": "Ejemplo básico",
+        "navigation": "Navegación",
+        "mixed": "Estilo mixto",
+        "outline": "Estilo de contorno",
+        "icons": "Grupos de botones con iconos",
+        "outlined": "Grupos de botones de contorno",
+        "sizing": "Tamaños",
+        "vertical": "Variación vertical",
+        "toolbar": "Barra de botones",
+        "social": "Botones de grupo social",
+        "nesting": "Anidamiento"
+      },
       "toast": {
         "basic": "Notificación básica",
         "variants": "Variantes semánticas",

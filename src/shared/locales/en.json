@@ -141,6 +141,19 @@
   },
   "features": {
     "ui-elements": {
+      "buttonGroup": {
+        "basic": "Basic Example",
+        "navigation": "Navigation",
+        "mixed": "Mixed Style",
+        "outline": "Outline Styled",
+        "icons": "Icon Button Groups",
+        "outlined": "Outlined Button Groups",
+        "sizing": "Sizing",
+        "vertical": "Vertical Variation",
+        "toolbar": "Button Toolbar",
+        "social": "Social Group Buttons",
+        "nesting": "Nesting"
+      },
       "toast": {
         "basic": "Basic toast",
         "variants": "Semantic variants",
