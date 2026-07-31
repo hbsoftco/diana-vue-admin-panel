@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Create Diana Component'
+  short_description: 'Build production-quality Diana UI components'
+  default_prompt: 'Use $create-di-component to create or complete a Diana design-system component with its required tests and showcase integration.'

@@ -42,6 +42,7 @@ export default antfu(
             'PROJECT_STRUCTURE.md',
             'CODE_CONVENTIONS.md',
             'DEVELOPMENT_GUIDE.md',
+            'PROJECT_BASELINE.md',
             'CONTRIBUTING.md',
 
             '0001-project-architecture.md',

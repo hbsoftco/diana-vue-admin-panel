@@ -123,6 +123,14 @@
     "typography": {
       "title": "المان‌های ظاهری",
       "typography": "تایپوگرافی"
+    },
+    "accordion": {
+      "title": "Advanced UI",
+      "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "رابط کاربری پیشرفته",
+      "carousel": "اسلایدشو"
     }
   },
   "base": {
@@ -138,6 +146,31 @@
   },
   "features": {
     "ui-elements": {
+      "pagination": {
+        "basic": "صفحه‌بندی پایه",
+        "compact": "صفحه‌بندی فشرده",
+        "sizes": "اندازه‌ها",
+        "styles": "انواع و سبک‌ها",
+        "vertical": "صفحه‌بندی عمودی",
+        "custom": "محتوای سفارشی صفحه",
+        "label": "صفحه‌بندی",
+        "first": "صفحه اول",
+        "previous": "صفحه قبل",
+        "next": "صفحه بعد",
+        "last": "صفحه آخر",
+        "current": "صفحه فعلی: {page}",
+        "page": "صفحه {page}"
+      },
+      "progress": {
+        "default": "نوار پیشرفت پیش‌فرض",
+        "indeterminate": "پیشرفت نامعین",
+        "variants": "انواع معنایی",
+        "sizes": "اندازه‌ها",
+        "customRange": "محدوده سفارشی",
+        "interactive": "پیشرفت تعاملی",
+        "increase": "افزایش پیشرفت",
+        "reset": "بازنشانی"
+      },
       "buttons": {
         "defaultButtons": "دکمه‌های پیشفرض",
         "softButtons": "دکمه‌های شفاف",
@@ -420,6 +453,35 @@
       }
     },
     "advanced-ui": {
+      "carousel": {
+        "basic": "اسلایدشوی پایه",
+        "controlled": "کنترل‌شده و چرخشی",
+        "indicatorsOnly": "فقط نشانگرها",
+        "label": "اسلایدشوی محتوا",
+        "previous": "اسلاید قبلی",
+        "next": "اسلاید بعدی",
+        "slide": "اسلاید",
+        "featured": "محتوای ویژه",
+        "story": "داستان",
+        "active": "اسلاید فعال"
+      },
+      "accordions": {
+        "basic": "Basic Accordion",
+        "multiple": "Multiple Items",
+        "openItems": "Open items",
+        "none": "None",
+        "variants": "Variants, Sizes, and States",
+        "customContent": "Custom Title and Content",
+        "open": "Open",
+        "accountTitle": "Account settings",
+        "accountContent": "Manage your profile details, password, and account security.",
+        "shippingTitle": "Shipping and delivery",
+        "shippingContent": "Review delivery methods, addresses, and estimated arrival times.",
+        "returnsTitle": "Returns and refunds",
+        "returnsContent": "Learn about return windows, refund methods, and item eligibility.",
+        "disabledTitle": "Unavailable section",
+        "disabledContent": "This section cannot be opened."
+      },
       "rating": {
         "basicRating": "رتبه‌بندی پایه",
         "halfRating": "رتبه‌بندی نیمه‌امتیازی",
