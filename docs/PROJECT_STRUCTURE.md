@@ -291,7 +291,7 @@ Not every demo is implemented. Several render only a heading.
 ### `src/features/forms`
 
 Owns form-control showcase routes and demos. Form controls are organized under the `form-elements`
-group, which currently documents Inputs and Select. Reusable form primitives remain under
+group, which currently documents Inputs, Range, and Select. Reusable form primitives remain under
 `src/shared/ui/base`; this feature group owns only their documentation and route-facing
 presentation.
 
@@ -377,24 +377,26 @@ These are presentation models. There are no business-domain models or DTOs.
 
 Reusable design-system primitives:
 
-| Component      | Responsibility                                                  |
-| -------------- | --------------------------------------------------------------- |
-| `DiAlert`      | Status alert content, layout, icon, dismiss behavior, actions   |
-| `DiBadge`      | DaisyUI badge variants and click behavior                       |
-| `DiBreadcrumb` | Breadcrumb rendering, separators, icons, links, RTL             |
-| `DiButton`     | Button/anchor/input variants, state, loading, badges, slots     |
-| `DiCard`       | Card structure, media, header, body, actions, accent options    |
-| `DiCollapse`   | DaisyUI collapse behavior and presentation                      |
-| `DiDrawer`     | Responsive drawer structure and overlay control                 |
-| `DiDropdown`   | Dropdown positioning, options, selection, slots, outside click  |
-| `DiIcon`       | Typed asynchronous icons, transforms, colors, badges            |
-| `DiInput`      | DaisyUI text inputs, labels, slots, sizes, loading, validation  |
-| `DiLoading`    | DaisyUI loading variants                                        |
-| `DiModal`      | Teleported modal, backdrop, keyboard closing, scroll prevention |
-| `DiRating`     | Interactive rating input with half-value and RTL support        |
-| `DiSkeleton`   | Skeleton shapes and sizing                                      |
-| `DiSwitch`     | Switch input, labels, sizes, variants                           |
-| `DiTooltip`    | DaisyUI tooltip positioning and event forwarding                |
+| Component       | Responsibility                                                  |
+| --------------- | --------------------------------------------------------------- |
+| `DiAlert`       | Status alert content, layout, icon, dismiss behavior, actions   |
+| `DiBadge`       | DaisyUI badge variants and click behavior                       |
+| `DiBreadcrumb`  | Breadcrumb rendering, separators, icons, links, RTL             |
+| `DiButton`      | Button/anchor/input variants, state, loading, badges, slots     |
+| `DiCard`        | Card structure, media, header, body, actions, accent options    |
+| `DiCollapse`    | DaisyUI collapse behavior and presentation                      |
+| `DiDrawer`      | Responsive drawer structure and overlay control                 |
+| `DiDropdown`    | Dropdown positioning, options, selection, slots, outside click  |
+| `DiIcon`        | Typed asynchronous icons, transforms, colors, badges            |
+| `DiInput`       | DaisyUI text inputs, labels, slots, sizes, loading, validation  |
+| `DiLoading`     | DaisyUI loading variants                                        |
+| `DiRange`       | DaisyUI range input, limits, ticks, values, states, validation  |
+| `DiRangeSlider` | Accessible two-handle slider, constraints, tooltips, and ticks  |
+| `DiModal`       | Teleported modal, backdrop, keyboard closing, scroll prevention |
+| `DiRating`      | Interactive rating input with half-value and RTL support        |
+| `DiSkeleton`    | Skeleton shapes and sizing                                      |
+| `DiSwitch`      | Switch input, labels, sizes, variants                           |
+| `DiTooltip`     | DaisyUI tooltip positioning and event forwarding                |
 
 ### `src/shared/ui/layout`
 

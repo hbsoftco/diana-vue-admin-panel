@@ -28,6 +28,7 @@ export const iconRegistry = {
   lightCheck: () => import('~icons/material-symbols/check'),
   copy: () => import('~icons/material-symbols/content-copy'),
   inbox: () => import('~icons/material-symbols/inbox'),
+  dragHandle: () => import('~icons/material-symbols/drag-indicator'),
   // Heroicons Icons
   heart: () => import('~icons/heroicons/heart'),
   star: () => import('~icons/heroicons/star'),
@@ -53,6 +54,7 @@ export const iconRegistry = {
   arrowDown: () => import('~icons/hugeicons/arrow-down-01'),
   // Mingcute Icons
   close: () => import('~icons/mingcute/close-line'),
+  pauseLine: () => import('~icons/mingcute/pause-line'),
   // Feather Icons
   search: () => import('~icons/feather/search'),
   // Oui Icons

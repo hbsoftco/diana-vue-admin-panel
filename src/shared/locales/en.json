@@ -12,9 +12,21 @@
     "forms": "Forms",
     "formElements": "Form Elements",
     "inputs": "Inputs",
+    "range": "Range",
+    "rangeSlider": "Range Slider",
     "select": "Select"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "rangeSlider": "Range Slider"
+    },
+    "range": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "range": "Range"
+    },
     "inputs": {
       "forms": "Forms",
       "formElements": "Form Elements",

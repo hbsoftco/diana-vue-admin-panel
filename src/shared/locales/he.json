@@ -12,9 +12,21 @@
     "forms": "טפסים",
     "formElements": "רכיבי טופס",
     "inputs": "שדות קלט",
+    "range": "טווח",
+    "rangeSlider": "מחוון טווח",
     "select": "בחירה"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "rangeSlider": "מחוון טווח"
+    },
+    "range": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "range": "טווח"
+    },
     "inputs": {
       "forms": "טפסים",
       "formElements": "רכיבי טופס",

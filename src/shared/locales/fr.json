@@ -12,9 +12,21 @@
     "forms": "Formulaires",
     "formElements": "Éléments de formulaire",
     "inputs": "Champs de saisie",
+    "range": "Plage",
+    "rangeSlider": "Curseur de plage",
     "select": "Sélection"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "Formulaires",
+      "formElements": "Éléments de formulaire",
+      "rangeSlider": "Curseur de plage"
+    },
+    "range": {
+      "forms": "Formulaires",
+      "formElements": "Éléments de formulaire",
+      "range": "Plage"
+    },
     "inputs": {
       "forms": "Formulaires",
       "formElements": "Éléments de formulaire",
