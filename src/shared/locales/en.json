@@ -10,11 +10,19 @@
     "users": "Users",
     "settings": "Settings",
     "forms": "Forms",
+    "formElements": "Form Elements",
+    "inputs": "Inputs",
     "select": "Select"
   },
   "pages": {
+    "inputs": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "inputs": "Inputs"
+    },
     "select": {
       "title": "Forms",
+      "formElements": "Form Elements",
       "select": "Select"
     },
     "icons": {

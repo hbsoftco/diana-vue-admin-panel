@@ -39,11 +39,19 @@
     "users": "کاربران",
     "settings": "تنظیمات",
     "forms": "فرم‌ها",
+    "formElements": "عناصر فرم",
+    "inputs": "ورودی‌ها",
     "select": "انتخاب‌گر"
   },
   "pages": {
+    "inputs": {
+      "forms": "فرم‌ها",
+      "formElements": "عناصر فرم",
+      "inputs": "ورودی‌ها"
+    },
     "select": {
       "title": "فرم‌ها",
+      "formElements": "عناصر فرم",
       "select": "انتخاب‌گر"
     },
     "alerts": {

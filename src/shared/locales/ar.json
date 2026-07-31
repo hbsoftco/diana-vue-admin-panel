@@ -10,11 +10,19 @@
     "users": "المستخدمون",
     "settings": "الإعدادات",
     "forms": "النماذج",
+    "formElements": "عناصر النموذج",
+    "inputs": "حقول الإدخال",
     "select": "الاختيار"
   },
   "pages": {
+    "inputs": {
+      "forms": "النماذج",
+      "formElements": "عناصر النموذج",
+      "inputs": "حقول الإدخال"
+    },
     "select": {
       "title": "النماذج",
+      "formElements": "عناصر النموذج",
       "select": "الاختيار"
     },
     "alerts": {

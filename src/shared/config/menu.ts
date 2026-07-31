@@ -56,7 +56,16 @@ export const menuItems: MenuItem[] = [
     id: 'forms',
     label: 'menu.forms',
     icon: 'inbox',
-    children: [{ id: 'select', label: 'menu.select', route: '/forms/select' }],
+    children: [
+      {
+        id: 'form-elements',
+        label: 'menu.formElements',
+        children: [
+          { id: 'inputs', label: 'menu.inputs', route: '/forms/form-elements/inputs' },
+          { id: 'select', label: 'menu.select', route: '/forms/form-elements/select' },
+        ],
+      },
+    ],
   },
   {
     id: 'advanced-ui',
