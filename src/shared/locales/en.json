@@ -174,14 +174,18 @@
         "page": "Page {page}"
       },
       "progress": {
-        "default": "Default progress",
-        "indeterminate": "Indeterminate progress",
-        "variants": "Semantic variants",
-        "sizes": "Sizes",
-        "customRange": "Custom range",
-        "interactive": "Interactive progress",
-        "increase": "Increase progress",
-        "reset": "Reset"
+        "basic": "Basic Progress",
+        "colors": "Different Colored Progress",
+        "striped": "Striped Progress",
+        "heights": "Progress Height",
+        "labels": "Progress With Labels",
+        "vertical": "Vertical Progressbar",
+        "animatedStriped": "Animated Striped Progress",
+        "determinate": "Determinate Progress",
+        "customAnimated": "Custom Animated Progress",
+        "named": "Custom Progress-1",
+        "markers": "Custom Progress-2",
+        "outlinedLabels": "Custom Progress-3"
       },
       "buttons": {
         "defaultButtons": "Default Buttons",

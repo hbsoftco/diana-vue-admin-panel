@@ -135,14 +135,18 @@
         "page": "Page {page}"
       },
       "progress": {
-        "default": "Progression par défaut",
-        "indeterminate": "Progression indéterminée",
-        "variants": "Variantes sémantiques",
-        "sizes": "Tailles",
-        "customRange": "Plage personnalisée",
-        "interactive": "Progression interactive",
-        "increase": "Augmenter la progression",
-        "reset": "Réinitialiser"
+        "basic": "Progression de base",
+        "colors": "Progression en différentes couleurs",
+        "striped": "Progression rayée",
+        "heights": "Hauteur de progression",
+        "labels": "Progression avec libellés",
+        "vertical": "Progression verticale",
+        "animatedStriped": "Progression rayée animée",
+        "determinate": "Progression déterminée",
+        "customAnimated": "Progression animée personnalisée",
+        "named": "Progression personnalisée 1",
+        "markers": "Progression personnalisée 2",
+        "outlinedLabels": "Progression personnalisée 3"
       }
     },
     "advanced-ui": {
