@@ -98,6 +98,21 @@
   },
   "features": {
     "ui-elements": {
+      "pagination": {
+        "basic": "Pagination simple",
+        "compact": "Pagination compacte",
+        "sizes": "Tailles",
+        "styles": "Variantes et styles",
+        "vertical": "Pagination verticale",
+        "custom": "Contenu de page personnalisé",
+        "label": "Pagination",
+        "first": "Première page",
+        "previous": "Page précédente",
+        "next": "Page suivante",
+        "last": "Dernière page",
+        "current": "Page actuelle : {page}",
+        "page": "Page {page}"
+      },
       "progress": {
         "default": "Progression par défaut",
         "indeterminate": "Progression indéterminée",

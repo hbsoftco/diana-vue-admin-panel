@@ -150,7 +150,9 @@ function focusEnabledTrigger(currentIndex: number, direction: 1 | -1) {
       ? 0
       : (currentPosition + direction + enabledIndexes.length) % enabledIndexes.length
 
-  triggerRefs.value[enabledIndexes[nextPosition]]?.focus()
+  const nextIndex = enabledIndexes[nextPosition]
+  if (nextIndex !== undefined)
+    triggerRefs.value[nextIndex]?.focus()
 }
 
 function handleTriggerKeydown(event: KeyboardEvent, index: number) {
@@ -170,7 +172,14 @@ function handleTriggerKeydown(event: KeyboardEvent, index: number) {
   }
   else if (event.key === 'End') {
     event.preventDefault()
-    const lastEnabled = props.items.findLastIndex(item => !isItemDisabled(item))
+    let lastEnabled = -1
+    for (let itemIndex = props.items.length - 1; itemIndex >= 0; itemIndex--) {
+      const item = props.items[itemIndex]
+      if (item !== undefined && !isItemDisabled(item)) {
+        lastEnabled = itemIndex
+        break
+      }
+    }
     if (lastEnabled >= 0)
       triggerRefs.value[lastEnabled]?.focus()
   }

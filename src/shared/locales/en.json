@@ -137,6 +137,21 @@
   },
   "features": {
     "ui-elements": {
+      "pagination": {
+        "basic": "Basic pagination",
+        "compact": "Compact pagination",
+        "sizes": "Sizes",
+        "styles": "Variants and styles",
+        "vertical": "Vertical pagination",
+        "custom": "Custom page content",
+        "label": "Pagination",
+        "first": "First page",
+        "previous": "Previous page",
+        "next": "Next page",
+        "last": "Last page",
+        "current": "Current page: {page}",
+        "page": "Page {page}"
+      },
       "progress": {
         "default": "Default progress",
         "indeterminate": "Indeterminate progress",

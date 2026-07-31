@@ -146,6 +146,21 @@
   },
   "features": {
     "ui-elements": {
+      "pagination": {
+        "basic": "صفحه‌بندی پایه",
+        "compact": "صفحه‌بندی فشرده",
+        "sizes": "اندازه‌ها",
+        "styles": "انواع و سبک‌ها",
+        "vertical": "صفحه‌بندی عمودی",
+        "custom": "محتوای سفارشی صفحه",
+        "label": "صفحه‌بندی",
+        "first": "صفحه اول",
+        "previous": "صفحه قبل",
+        "next": "صفحه بعد",
+        "last": "صفحه آخر",
+        "current": "صفحه فعلی: {page}",
+        "page": "صفحه {page}"
+      },
       "progress": {
         "default": "نوار پیشرفت پیش‌فرض",
         "indeterminate": "پیشرفت نامعین",
