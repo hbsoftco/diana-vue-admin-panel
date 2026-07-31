@@ -3,7 +3,7 @@ import type {
   DiSliderSize,
   DiSliderTick,
   DiSliderVariant,
-} from '../slider/types'
+} from '../range-slider/types'
 
 export type DiRangeSize = DiSliderSize
 export type DiRangeVariant = DiSliderVariant
