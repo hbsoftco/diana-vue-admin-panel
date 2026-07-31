@@ -325,6 +325,27 @@ Inspect at least:
 - relevant route configuration;
 - relevant sidebar section.
 
+### Analyze visual references
+
+When the request includes one or more reference images or videos, treat them as implementation
+requirements. Before designing or editing:
+
+1. inspect every supplied reference at sufficient detail;
+2. inventory its component variants, states, content structures, interactions, layout, grouping,
+   spacing, and ordering;
+3. compare each referenced example with the current base component's public API;
+4. classify each example as already supported, requiring reusable API work, or intentionally out
+   of scope with a documented reason;
+5. use the existing API for examples it can already express;
+6. extend the base component only where the reference cannot be reproduced through the current
+   semantic API, slots, and normal attribute fallthrough;
+7. keep every extension generic, typed, backward-compatible, and useful beyond the supplied
+   reference.
+
+Do not add screenshot-specific props, hardcoded content, or private styling hooks. The showcase
+must closely preserve the reference's layout, grouping, ordering, relative spacing, and examples
+while using Diana design-system tokens and accessibility conventions.
+
 ### Plan before editing
 
 Before editing, state a compact implementation plan containing:
@@ -339,6 +360,7 @@ Before editing, state a compact implementation plan containing:
 - required locale changes;
 - required route/sidebar changes;
 - whether custom CSS or icon registration is required.
+- the visual-reference capability comparison and which examples require API changes.
 
 ---
 
@@ -923,7 +945,11 @@ A normal demo should include applicable examples for:
 
 Do not create a huge Cartesian matrix of every boolean prop.
 
-Displayed code must match the rendered implementation.
+Displayed code must exactly match the rendered implementation. Every prop, directive, class,
+slot, wrapper, child component, event handler, and state variable used by the preview must appear
+in its displayed source. Never reuse a simplified or approximate snippet for a different preview.
+When a snippet depends on script state, imports, or handlers, show a complete SFC and use
+`language="vue"`.
 
 Use:
 

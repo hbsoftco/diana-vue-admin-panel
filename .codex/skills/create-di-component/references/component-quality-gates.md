@@ -129,6 +129,12 @@ When showcase integration is requested:
 - demo uses the real public API;
 - examples are focused and copyable;
 - code preview matches rendered markup;
+- every preview/source pair is exact, including wrappers, props, directives, slots, child
+  components, classes, handlers, and required script state;
+- supplied image and video references were converted into a capability comparison;
+- reference-supported examples use the existing API without unnecessary component changes;
+- reference gaps are served only by generic, reusable, backward-compatible API additions;
+- showcase layout, grouping, spacing, ordering, and examples closely follow supplied references;
 - meaningful variants and states are present;
 - interaction examples actually work;
 - no huge Cartesian matrix without design value;

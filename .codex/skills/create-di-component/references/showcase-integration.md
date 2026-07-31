@@ -64,6 +64,17 @@ Do not create a separate card for every pair of boolean props. Group related exa
 
 Store displayed snippets as constants in the demo script. Keep each snippet synchronized with the rendered markup. Use `language="html"` for template-only snippets and `language="vue"` for complete SFC examples.
 
+If visual references were supplied, reproduce their meaningful layout, card grouping, example
+ordering, spacing, and content structures as closely as the Diana design system permits. Treat
+reference examples as a capability matrix: demonstrate already-supported examples without base
+component changes, and introduce API only for gaps that require reusable behavior.
+
+Snippet parity is exact, not approximate. A card's source must contain the same wrappers, props,
+directives, slots, child components, classes, labels, and handlers as its rendered preview. Do not
+share one snippet between cards whose rendered markup differs. Interactive examples that rely on
+imports, refs, computed state, or handlers must show those dependencies in a complete Vue SFC.
+Review every preview and source side by side before validation.
+
 Prefer `DiIcon` for examples that explain Diana's public icon API. Direct Iconify tags are acceptable for incidental demo content.
 
 ## 4. Create the router wrapper
