@@ -83,6 +83,10 @@
       "title": "Ui Elements",
       "progress": "Progress"
     },
+    "switch": {
+      "title": "Ui Elements",
+      "switch": "Switch"
+    },
     "modals": {
       "title": "Ui Elements",
       "modals": "Modals"
@@ -190,6 +194,21 @@
         "named": "Custom Progress-1",
         "markers": "Custom Progress-2",
         "outlinedLabels": "Custom Progress-3"
+      },
+      "switch": {
+        "default": "Default switch",
+        "variants": "Semantic variants",
+        "sizes": "Sizes",
+        "states": "States",
+        "icons": "Icons inside",
+        "notifications": "Email notifications",
+        "disabledOff": "Disabled off",
+        "disabledOn": "Disabled on",
+        "readOnly": "Read-only",
+        "invalid": "Invalid setting",
+        "indeterminate": "Indeterminate",
+        "iconToggle": "Feature enabled",
+        "example": "Example switch"
       },
       "buttons": {
         "defaultButtons": "Default Buttons",

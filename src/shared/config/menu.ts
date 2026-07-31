@@ -46,6 +46,7 @@ export const menuItems: MenuItem[] = [
       { id: 'pagination', label: 'Pagination', route: '/ui-elements/pagination' },
       { id: 'popovers', label: 'Popovers', route: '/ui-elements/popovers' },
       { id: 'progress', label: 'Progress', route: '/ui-elements/progress' },
+      { id: 'switch', label: 'Switch', route: '/ui-elements/switch' },
       { id: 'toasts', label: 'Toasts', route: '/ui-elements/toasts' },
       { id: 'tooltips', label: 'Tooltips', route: '/ui-elements/tooltips' },
       { id: 'typography', label: 'Typography', route: '/ui-elements/typography' },

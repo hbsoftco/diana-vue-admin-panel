@@ -196,6 +196,17 @@ export const uiElementRoutes = {
       },
     },
     {
+      path: 'switch',
+      component: () => import('@/pages/ui-elements/switch.vue'),
+      meta: {
+        pageTitle: 'pages.switch.switch',
+        breadcrumb: [
+          { label: 'pages.switch.title', link: '/ui-elements' },
+          { label: 'pages.switch.switch' },
+        ],
+      },
+    },
+    {
       path: 'toasts',
       component: () => import('@/pages/ui-elements/toasts.vue'),
       meta: {

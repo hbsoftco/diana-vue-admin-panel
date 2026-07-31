@@ -108,6 +108,10 @@
       "title": "المان‌های ظاهری",
       "progress": "پیشرفت"
     },
+    "switch": {
+      "title": "المان‌های ظاهری",
+      "switch": "سوئیچ"
+    },
     "modals": {
       "title": "المان‌های ظاهری",
       "modals": "پنجره‌های مودال"
@@ -199,6 +203,21 @@
         "named": "پیشرفت سفارشی ۱",
         "markers": "پیشرفت سفارشی ۲",
         "outlinedLabels": "پیشرفت سفارشی ۳"
+      },
+      "switch": {
+        "default": "سوئیچ پیش‌فرض",
+        "variants": "انواع معنایی",
+        "sizes": "اندازه‌ها",
+        "states": "وضعیت‌ها",
+        "icons": "آیکن‌های داخلی",
+        "notifications": "اعلان‌های ایمیل",
+        "disabledOff": "خاموش و غیرفعال",
+        "disabledOn": "روشن و غیرفعال",
+        "readOnly": "فقط خواندنی",
+        "invalid": "تنظیم نامعتبر",
+        "indeterminate": "نامعین",
+        "iconToggle": "قابلیت فعال",
+        "example": "سوئیچ نمونه"
       },
       "buttons": {
         "defaultButtons": "دکمه‌های پیشفرض",

@@ -71,6 +71,10 @@
       "title": "Elementos de UI",
       "progress": "Progreso"
     },
+    "switch": {
+      "title": "Elementos de UI",
+      "switch": "Interruptor"
+    },
     "spinners": {
       "title": "Elementos de UI",
       "spinners": "Spinners"
@@ -151,6 +155,21 @@
         "named": "Progreso personalizado 1",
         "markers": "Progreso personalizado 2",
         "outlinedLabels": "Progreso personalizado 3"
+      },
+      "switch": {
+        "default": "Interruptor predeterminado",
+        "variants": "Variantes semánticas",
+        "sizes": "Tamaños",
+        "states": "Estados",
+        "icons": "Iconos interiores",
+        "notifications": "Notificaciones por correo",
+        "disabledOff": "Desactivado y apagado",
+        "disabledOn": "Desactivado y encendido",
+        "readOnly": "Solo lectura",
+        "invalid": "Configuración no válida",
+        "indeterminate": "Indeterminado",
+        "iconToggle": "Función activada",
+        "example": "Interruptor de ejemplo"
       }
     },
     "advanced-ui": {

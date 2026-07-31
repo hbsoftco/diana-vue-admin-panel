@@ -1,5 +1,4 @@
 import antfu from '@antfu/eslint-config'
-import pluginVitest from '@vitest/eslint-plugin'
 import pluginPlaywright from 'eslint-plugin-playwright'
 
 export default antfu(
@@ -8,7 +7,7 @@ export default antfu(
     vue: true,
     typescript: true,
 
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**', '.codex/**'],
   },
   {
     rules: {
@@ -53,20 +52,6 @@ export default antfu(
           ],
         },
       ],
-    },
-  },
-
-  // ========================================
-  // 🧪 Vitest Rules
-  // ========================================
-  {
-    name: 'vitest-rules',
-    files: ['src/**/__tests__/*', '**/*.test.ts', '**/*.spec.ts'],
-    plugins: {
-      vitest: pluginVitest,
-    },
-    rules: {
-      ...pluginVitest.configs.recommended.rules,
     },
   },
 

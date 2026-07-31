@@ -71,6 +71,10 @@
       "title": "عناصر واجهة المستخدم",
       "progress": "التقدم"
     },
+    "switch": {
+      "title": "عناصر واجهة المستخدم",
+      "switch": "مفتاح تبديل"
+    },
     "spinners": {
       "title": "عناصر واجهة المستخدم",
       "spinners": "الدوائر"
@@ -151,6 +155,21 @@
         "named": "تقدم مخصص 1",
         "markers": "تقدم مخصص 2",
         "outlinedLabels": "تقدم مخصص 3"
+      },
+      "switch": {
+        "default": "مفتاح التبديل الافتراضي",
+        "variants": "الأنواع الدلالية",
+        "sizes": "الأحجام",
+        "states": "الحالات",
+        "icons": "أيقونات بالداخل",
+        "notifications": "إشعارات البريد الإلكتروني",
+        "disabledOff": "متوقف ومعطل",
+        "disabledOn": "مفعّل ومعطل",
+        "readOnly": "للقراءة فقط",
+        "invalid": "إعداد غير صالح",
+        "indeterminate": "غير محدد",
+        "iconToggle": "الميزة مفعّلة",
+        "example": "مفتاح تبديل تجريبي"
       }
     },
     "advanced-ui": {
