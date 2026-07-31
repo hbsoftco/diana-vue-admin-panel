@@ -1,61 +1,53 @@
 <script setup lang="ts">
-import { computed, useId } from 'vue'
+import type { StyleValue } from 'vue'
+
+import { computed, onMounted, ref, useAttrs, useId, watch } from 'vue'
 
 import type { Size, Variant } from '@/shared/types/models'
 
-defineOptions({
-  inheritAttrs: false,
-})
-
-/* =======================
-   Props
-======================= */
-const props = withDefaults(defineProps<Props>(), {
-  variant: 'primary',
-  size: 'md',
-  disabled: false,
-  labelPosition: 'start',
-})
-
-/* =======================
-   Emits (non v-model)
-======================= */
-const emit = defineEmits<{
-  change: [value: boolean]
-}>()
-
-/* =======================
-   Slots
-======================= */
-const slots = defineSlots<{
-  default?: () => unknown
-}>()
-
-/* =======================
-   Types
-======================= */
 type LabelPosition = 'start' | 'end'
 
 type Props = {
   variant?: Variant
   size?: Size
   disabled?: boolean
+  readOnly?: boolean
+  invalid?: boolean
+  indeterminate?: boolean
   label?: string
   labelPosition?: LabelPosition
 }
 
-/* =======================
-   v-model
-======================= */
+defineOptions({
+  inheritAttrs: false,
+})
+
+const props = withDefaults(defineProps<Props>(), {
+  variant: 'primary',
+  size: 'md',
+  disabled: false,
+  readOnly: false,
+  invalid: false,
+  indeterminate: false,
+  labelPosition: 'start',
+})
+
+const emit = defineEmits<{
+  change: [value: boolean]
+}>()
+
+const slots = defineSlots<{
+  'default'?: () => unknown
+  'unchecked-icon'?: () => unknown
+  'checked-icon'?: () => unknown
+}>()
+
 const model = defineModel<boolean>({ default: false })
 
-/* =======================
-   Static class maps
-======================= */
 const SIZE_CLASSES: Record<Size, string> = {
   xs: 'toggle-xs',
   sm: 'toggle-sm',
-  md: '',
+  md: 'toggle-md',
   lg: 'toggle-lg',
   xl: 'toggle-xl',
 }
@@ -71,15 +63,20 @@ const VARIANT_CLASSES: Record<Variant, string> = {
   error: 'toggle-error',
 }
 
-/* =======================
-   State
-======================= */
-const inputId = useId()
+const attrs = useAttrs()
+const generatedId = useId()
+const input = ref<HTMLInputElement>()
 
-/* =======================
-   Computed
-======================= */
+const controlId = computed(() => (typeof attrs.id === 'string' ? attrs.id : generatedId))
 const hasLabel = computed(() => Boolean(props.label) || Boolean(slots.default))
+const hasIcons = computed(() => Boolean(slots['unchecked-icon']) && Boolean(slots['checked-icon']))
+const isUnavailable = computed(() => props.disabled || props.readOnly)
+
+const wrapperClasses = computed(() => [
+  'inline-flex items-center gap-2',
+  props.labelPosition === 'end' && 'flex-row-reverse',
+  isUnavailable.value ? 'cursor-not-allowed opacity-60' : 'cursor-pointer',
+])
 
 const toggleClasses = computed(() => [
   'toggle',
@@ -87,49 +84,90 @@ const toggleClasses = computed(() => [
   SIZE_CLASSES[props.size],
 ])
 
-/* =======================
-   Methods
-======================= */
-function onChange(event: Event) {
-  const next = (event.target as HTMLInputElement).checked
-  model.value = next
-  emit('change', next)
+const iconToggleClasses = computed(() => [toggleClasses.value, attrs.class])
+const iconToggleStyle = computed(() => attrs.style as StyleValue)
+const iconInputAttrs = computed(() => {
+  const { class: _class, style: _style, ...inputAttrs } = attrs
+  return inputAttrs
+})
+
+function syncIndeterminate() {
+  if (input.value)
+    input.value.indeterminate = props.indeterminate
 }
+
+function onClick(event: MouseEvent) {
+  if (props.readOnly)
+    event.preventDefault()
+}
+
+function onChange(event: Event) {
+  const target = event.target as HTMLInputElement
+
+  if (props.readOnly) {
+    target.checked = model.value
+    return
+  }
+
+  model.value = target.checked
+  emit('change', target.checked)
+}
+
+watch(() => props.indeterminate, syncIndeterminate)
+onMounted(syncIndeterminate)
 </script>
 
 <template>
-  <label
-    v-if="hasLabel"
-    :for="inputId"
-    class="label inline-flex cursor-pointer items-center gap-2"
-    :class="[
-      { 'flex-row-reverse': labelPosition === 'end' },
-      disabled && 'cursor-not-allowed opacity-60',
-    ]"
-  >
-    <span class="label-text select-none">
+  <span v-if="hasLabel || hasIcons" :class="wrapperClasses">
+    <label v-if="hasLabel" :for="controlId" class="label-text select-none cursor-inherit">
       <slot>{{ label }}</slot>
-    </span>
+    </label>
+
+    <label v-if="hasIcons" :class="iconToggleClasses" :style="iconToggleStyle">
+      <input
+        :id="controlId"
+        ref="input"
+        v-bind="iconInputAttrs"
+        type="checkbox"
+        :checked="model"
+        :disabled="disabled"
+        :aria-invalid="invalid || undefined"
+        :aria-readonly="readOnly || undefined"
+        @click="onClick"
+        @change="onChange"
+      >
+      <slot name="unchecked-icon" />
+      <slot name="checked-icon" />
+    </label>
 
     <input
-      :id="inputId"
+      v-else
+      :id="controlId"
+      ref="input"
+      v-bind="$attrs"
       type="checkbox"
       :class="toggleClasses"
       :checked="model"
       :disabled="disabled"
-      v-bind="$attrs"
+      :aria-invalid="invalid || undefined"
+      :aria-readonly="readOnly || undefined"
+      @click="onClick"
       @change="onChange"
     >
-  </label>
+  </span>
 
   <input
     v-else
-    :id="inputId"
+    :id="controlId"
+    ref="input"
+    v-bind="$attrs"
     type="checkbox"
     :class="toggleClasses"
     :checked="model"
     :disabled="disabled"
-    v-bind="$attrs"
+    :aria-invalid="invalid || undefined"
+    :aria-readonly="readOnly || undefined"
+    @click="onClick"
     @change="onChange"
   >
 </template>

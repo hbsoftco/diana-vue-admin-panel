@@ -83,6 +83,10 @@
       "title": "Ui Elements",
       "progress": "Progress"
     },
+    "switch": {
+      "title": "Ui Elements",
+      "switch": "Switch"
+    },
     "modals": {
       "title": "Ui Elements",
       "modals": "Modals"
@@ -159,12 +163,16 @@
         }
       },
       "pagination": {
-        "basic": "Basic pagination",
-        "compact": "Compact pagination",
-        "sizes": "Sizes",
-        "styles": "Variants and styles",
-        "vertical": "Vertical pagination",
-        "custom": "Custom page content",
+        "basic": "Basic Pagination",
+        "icons": "Pagination With Icons",
+        "sizing": "Pagination Sizing",
+        "aligned": "Center & Right Aligned Pagination",
+        "disabled": "Disabled State",
+        "styleOne": "Pagination Style-1",
+        "styleTwo": "Pagination Style-2",
+        "styleThree": "Pagination Style-3",
+        "styleFour": "Pagination Style-4",
+        "controls": "Control Buttons",
         "label": "Pagination",
         "first": "First page",
         "previous": "Previous page",
@@ -186,6 +194,21 @@
         "named": "Custom Progress-1",
         "markers": "Custom Progress-2",
         "outlinedLabels": "Custom Progress-3"
+      },
+      "switch": {
+        "default": "Default switch",
+        "variants": "Semantic variants",
+        "sizes": "Sizes",
+        "states": "States",
+        "icons": "Icons inside",
+        "notifications": "Email notifications",
+        "disabledOff": "Disabled off",
+        "disabledOn": "Disabled on",
+        "readOnly": "Read-only",
+        "invalid": "Invalid setting",
+        "indeterminate": "Indeterminate",
+        "iconToggle": "Feature enabled",
+        "example": "Example switch"
       },
       "buttons": {
         "defaultButtons": "Default Buttons",

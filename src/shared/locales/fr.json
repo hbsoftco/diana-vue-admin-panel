@@ -71,6 +71,10 @@
       "title": "Éléments UI",
       "progress": "Progression"
     },
+    "switch": {
+      "title": "Éléments UI",
+      "switch": "Interrupteur"
+    },
     "spinners": {
       "title": "Éléments UI",
       "spinners": "Spinners"
@@ -121,11 +125,15 @@
       },
       "pagination": {
         "basic": "Pagination simple",
-        "compact": "Pagination compacte",
-        "sizes": "Tailles",
-        "styles": "Variantes et styles",
-        "vertical": "Pagination verticale",
-        "custom": "Contenu de page personnalisé",
+        "icons": "Pagination avec icônes",
+        "sizing": "Tailles de pagination",
+        "aligned": "Pagination centrée et alignée à droite",
+        "disabled": "État désactivé",
+        "styleOne": "Style de pagination 1",
+        "styleTwo": "Style de pagination 2",
+        "styleThree": "Style de pagination 3",
+        "styleFour": "Style de pagination 4",
+        "controls": "Boutons de contrôle",
         "label": "Pagination",
         "first": "Première page",
         "previous": "Page précédente",
@@ -147,6 +155,21 @@
         "named": "Progression personnalisée 1",
         "markers": "Progression personnalisée 2",
         "outlinedLabels": "Progression personnalisée 3"
+      },
+      "switch": {
+        "default": "Interrupteur par défaut",
+        "variants": "Variantes sémantiques",
+        "sizes": "Tailles",
+        "states": "États",
+        "icons": "Icônes intégrées",
+        "notifications": "Notifications par e-mail",
+        "disabledOff": "Désactivé et éteint",
+        "disabledOn": "Désactivé et allumé",
+        "readOnly": "Lecture seule",
+        "invalid": "Paramètre non valide",
+        "indeterminate": "Indéterminé",
+        "iconToggle": "Fonctionnalité activée",
+        "example": "Exemple d’interrupteur"
       }
     },
     "advanced-ui": {

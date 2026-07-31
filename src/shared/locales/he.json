@@ -71,6 +71,10 @@
       "title": "אלמנטי ממשק",
       "progress": "התקדמות"
     },
+    "switch": {
+      "title": "אלמנטי ממשק",
+      "switch": "מתג"
+    },
     "spinners": {
       "title": "אלמנטי ממשק",
       "spinners": "ספינרים"
@@ -121,11 +125,15 @@
       },
       "pagination": {
         "basic": "עימוד בסיסי",
-        "compact": "עימוד מצומצם",
-        "sizes": "גדלים",
-        "styles": "וריאנטים וסגנונות",
-        "vertical": "עימוד אנכי",
-        "custom": "תוכן עמוד מותאם",
+        "icons": "עימוד עם סמלים",
+        "sizing": "גדלי עימוד",
+        "aligned": "עימוד ממורכז ומיושר לימין",
+        "disabled": "מצב מושבת",
+        "styleOne": "סגנון עימוד 1",
+        "styleTwo": "סגנון עימוד 2",
+        "styleThree": "סגנון עימוד 3",
+        "styleFour": "סגנון עימוד 4",
+        "controls": "כפתורי בקרה",
         "label": "עימוד",
         "first": "עמוד ראשון",
         "previous": "עמוד קודם",
@@ -147,6 +155,21 @@
         "named": "התקדמות מותאמת 1",
         "markers": "התקדמות מותאמת 2",
         "outlinedLabels": "התקדמות מותאמת 3"
+      },
+      "switch": {
+        "default": "מתג ברירת מחדל",
+        "variants": "וריאנטים סמנטיים",
+        "sizes": "גדלים",
+        "states": "מצבים",
+        "icons": "סמלים בפנים",
+        "notifications": "התראות דוא״ל",
+        "disabledOff": "כבוי ומושבת",
+        "disabledOn": "פעיל ומושבת",
+        "readOnly": "לקריאה בלבד",
+        "invalid": "הגדרה לא תקינה",
+        "indeterminate": "לא מוגדר",
+        "iconToggle": "התכונה פעילה",
+        "example": "מתג לדוגמה"
       }
     },
     "advanced-ui": {

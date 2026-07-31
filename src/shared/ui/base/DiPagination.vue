@@ -8,6 +8,8 @@ import DiButton from '@/shared/ui/base/DiButton.vue'
 
 type Orientation = 'horizontal' | 'vertical'
 type PaginationItem = number | 'ellipsis-start' | 'ellipsis-end'
+type PaginationLayout = 'joined' | 'spaced'
+type PaginationActiveStyle = 'filled' | 'circle' | 'underline'
 
 type Props = {
   totalPages: number
@@ -16,6 +18,8 @@ type Props = {
   size?: Size
   variant?: BtnVariant
   orientation?: Orientation
+  layout?: PaginationLayout
+  activeStyle?: PaginationActiveStyle
   disabled?: boolean
   outline?: boolean
   soft?: boolean
@@ -35,6 +39,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'md',
   variant: 'neutral',
   orientation: 'horizontal',
+  layout: 'joined',
+  activeStyle: 'filled',
   disabled: false,
   outline: false,
   soft: false,
@@ -53,7 +59,7 @@ const emit = defineEmits<{
 }>()
 
 defineSlots<{
-  page?: (props: { page: number, active: boolean }) => unknown
+  page?: (props: { page: number; active: boolean }) => unknown
   ellipsis?: () => unknown
   first?: () => unknown
   previous?: () => unknown
@@ -68,6 +74,12 @@ const { isRtl } = useDirection()
 const ORIENTATION_CLASSES: Record<Orientation, string> = {
   horizontal: 'join-horizontal',
   vertical: 'join-vertical',
+}
+
+const ACTIVE_STYLE_CLASSES: Record<PaginationActiveStyle, string> = {
+  filled: '',
+  circle: '',
+  underline: 'border-0 border-b-2 border-primary rounded-none text-primary',
 }
 
 const normalizedTotalPages = computed(() =>
@@ -86,7 +98,27 @@ const normalizedBoundaryCount = computed(() =>
   Number.isFinite(props.boundaryCount) ? Math.max(0, Math.floor(props.boundaryCount)) : 1,
 )
 
-const paginationClasses = computed(() => ['join', ORIENTATION_CLASSES[props.orientation]])
+const paginationClasses = computed(() => [
+  props.layout === 'joined' ? ['join', ORIENTATION_CLASSES[props.orientation]] : 'flex gap-1',
+  props.orientation === 'vertical' && props.layout === 'spaced' && 'flex-col',
+])
+
+const itemClass = computed(() => (props.layout === 'joined' ? 'join-item' : ''))
+const inactiveVariant = computed<BtnVariant>(() =>
+  props.layout === 'spaced' ? 'ghost' : props.variant,
+)
+
+function pageVariant(page: number): BtnVariant {
+  if (page !== currentPage.value) return inactiveVariant.value
+
+  return props.activeStyle === 'underline' ? 'ghost' : props.variant
+}
+
+function pageClass(page: number) {
+  if (page !== currentPage.value) return itemClass.value
+
+  return [itemClass.value, ACTIVE_STYLE_CLASSES[props.activeStyle]].filter(Boolean).join(' ')
+}
 
 const pageItems = computed<PaginationItem[]>(() => {
   const pages = new Set<number>()
@@ -112,8 +144,7 @@ const pageItems = computed<PaginationItem[]>(() => {
   sortedPages.forEach((page, index) => {
     const previousPage = sortedPages[index - 1]
 
-    if (previousPage !== undefined && page - previousPage === 2)
-      items.push(previousPage + 1)
+    if (previousPage !== undefined && page - previousPage === 2) items.push(previousPage + 1)
     else if (previousPage !== undefined && page - previousPage > 2)
       items.push(index === 1 ? 'ellipsis-start' : 'ellipsis-end')
 
@@ -131,13 +162,11 @@ const firstSymbol = computed(() => (isRtl.value ? '»' : '«'))
 const lastSymbol = computed(() => (isRtl.value ? '«' : '»'))
 
 function selectPage(page: number) {
-  if (props.disabled)
-    return
+  if (props.disabled) return
 
   const nextPage = Math.min(Math.max(page, 1), normalizedTotalPages.value)
 
-  if (nextPage === currentPage.value)
-    return
+  if (nextPage === currentPage.value) return
 
   model.value = nextPage
   emit('change', nextPage)
@@ -149,9 +178,9 @@ function selectPage(page: number) {
     <div :class="paginationClasses">
       <DiButton
         v-if="showFirstLast"
-        custom-class="join-item"
+        :custom-class="itemClass"
         :size="size"
-        :variant="variant"
+        :variant="inactiveVariant"
         :outline="outline"
         :soft="soft"
         :dash="dash"
@@ -166,9 +195,9 @@ function selectPage(page: number) {
 
       <DiButton
         v-if="showPreviousNext"
-        custom-class="join-item"
+        :custom-class="itemClass"
         :size="size"
-        :variant="variant"
+        :variant="inactiveVariant"
         :outline="outline"
         :soft="soft"
         :dash="dash"
@@ -184,13 +213,14 @@ function selectPage(page: number) {
       <template v-for="item in pageItems" :key="item">
         <DiButton
           v-if="typeof item === 'number'"
-          custom-class="join-item"
+          :custom-class="pageClass(item)"
           :size="size"
-          :variant="variant"
+          :variant="pageVariant(item)"
           :outline="outline"
           :soft="soft"
           :dash="dash"
-          :active="item === currentPage"
+          :active="item === currentPage && activeStyle !== 'underline'"
+          :circle="item === currentPage && activeStyle === 'circle'"
           :disabled="disabled"
           :aria-current="item === currentPage ? 'page' : undefined"
           :aria-label="String(item)"
@@ -203,9 +233,9 @@ function selectPage(page: number) {
 
         <DiButton
           v-else
-          custom-class="join-item"
+          :custom-class="itemClass"
           :size="size"
-          :variant="variant"
+          :variant="inactiveVariant"
           :outline="outline"
           :soft="soft"
           :dash="dash"
@@ -213,17 +243,15 @@ function selectPage(page: number) {
           aria-hidden="true"
           tabindex="-1"
         >
-          <slot name="ellipsis">
-            …
-          </slot>
+          <slot name="ellipsis"> … </slot>
         </DiButton>
       </template>
 
       <DiButton
         v-if="showPreviousNext"
-        custom-class="join-item"
+        :custom-class="itemClass"
         :size="size"
-        :variant="variant"
+        :variant="inactiveVariant"
         :outline="outline"
         :soft="soft"
         :dash="dash"
@@ -238,9 +266,9 @@ function selectPage(page: number) {
 
       <DiButton
         v-if="showFirstLast"
-        custom-class="join-item"
+        :custom-class="itemClass"
         :size="size"
-        :variant="variant"
+        :variant="inactiveVariant"
         :outline="outline"
         :soft="soft"
         :dash="dash"
