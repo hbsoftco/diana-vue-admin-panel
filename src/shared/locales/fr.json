@@ -90,10 +90,38 @@
     "accordion": {
       "title": "Advanced UI",
       "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "Interface avancée",
+      "carousel": "Carrousel"
     }
   },
   "features": {
+    "ui-elements": {
+      "progress": {
+        "default": "Progression par défaut",
+        "indeterminate": "Progression indéterminée",
+        "variants": "Variantes sémantiques",
+        "sizes": "Tailles",
+        "customRange": "Plage personnalisée",
+        "interactive": "Progression interactive",
+        "increase": "Augmenter la progression",
+        "reset": "Réinitialiser"
+      }
+    },
     "advanced-ui": {
+      "carousel": {
+        "basic": "Carrousel de base",
+        "controlled": "Contrôlé et en boucle",
+        "indicatorsOnly": "Indicateurs uniquement",
+        "label": "Carrousel de contenu",
+        "previous": "Diapositive précédente",
+        "next": "Diapositive suivante",
+        "slide": "Diapositive",
+        "featured": "Contenu à la une",
+        "story": "Article",
+        "active": "Diapositive active"
+      },
       "accordions": {
         "basic": "Basic Accordion",
         "multiple": "Multiple Items",

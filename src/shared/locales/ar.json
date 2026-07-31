@@ -90,10 +90,38 @@
     "accordion": {
       "title": "Advanced UI",
       "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "واجهة مستخدم متقدمة",
+      "carousel": "عرض الشرائح"
     }
   },
   "features": {
+    "ui-elements": {
+      "progress": {
+        "default": "شريط التقدم الافتراضي",
+        "indeterminate": "تقدم غير محدد",
+        "variants": "الأنواع الدلالية",
+        "sizes": "الأحجام",
+        "customRange": "نطاق مخصص",
+        "interactive": "تقدم تفاعلي",
+        "increase": "زيادة التقدم",
+        "reset": "إعادة تعيين"
+      }
+    },
     "advanced-ui": {
+      "carousel": {
+        "basic": "عرض شرائح أساسي",
+        "controlled": "متحكم به ومتكرر",
+        "indicatorsOnly": "المؤشرات فقط",
+        "label": "عرض شرائح المحتوى",
+        "previous": "الشريحة السابقة",
+        "next": "الشريحة التالية",
+        "slide": "شريحة",
+        "featured": "محتوى مميز",
+        "story": "قصة",
+        "active": "الشريحة النشطة"
+      },
       "accordions": {
         "basic": "Basic Accordion",
         "multiple": "Multiple Items",

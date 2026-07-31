@@ -127,6 +127,10 @@
     "accordion": {
       "title": "Advanced UI",
       "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "رابط کاربری پیشرفته",
+      "carousel": "اسلایدشو"
     }
   },
   "base": {
@@ -142,6 +146,16 @@
   },
   "features": {
     "ui-elements": {
+      "progress": {
+        "default": "نوار پیشرفت پیش‌فرض",
+        "indeterminate": "پیشرفت نامعین",
+        "variants": "انواع معنایی",
+        "sizes": "اندازه‌ها",
+        "customRange": "محدوده سفارشی",
+        "interactive": "پیشرفت تعاملی",
+        "increase": "افزایش پیشرفت",
+        "reset": "بازنشانی"
+      },
       "buttons": {
         "defaultButtons": "دکمه‌های پیشفرض",
         "softButtons": "دکمه‌های شفاف",
@@ -424,6 +438,18 @@
       }
     },
     "advanced-ui": {
+      "carousel": {
+        "basic": "اسلایدشوی پایه",
+        "controlled": "کنترل‌شده و چرخشی",
+        "indicatorsOnly": "فقط نشانگرها",
+        "label": "اسلایدشوی محتوا",
+        "previous": "اسلاید قبلی",
+        "next": "اسلاید بعدی",
+        "slide": "اسلاید",
+        "featured": "محتوای ویژه",
+        "story": "داستان",
+        "active": "اسلاید فعال"
+      },
       "accordions": {
         "basic": "Basic Accordion",
         "multiple": "Multiple Items",

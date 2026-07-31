@@ -47,6 +47,7 @@ Read these skill resources completely:
 1. `references/diana-conventions.md`
 2. `references/component-quality-gates.md`
 3. `references/showcase-integration.md`
+4. `references/design-system-rules.md`
 
 Then inspect the current repository.
 
@@ -512,7 +513,9 @@ When modifying an existing component:
 - do not change emitted payloads silently;
 - report migrations explicitly.
 
-Do not add every daisyUI option merely because it exists. Diana's API should remain intentional.
+Do not expose DaisyUI implementation details blindly.
+
+Diana's API should remain semantic and intentional while preserving complete relevant DaisyUI capabilities.
 
 ---
 

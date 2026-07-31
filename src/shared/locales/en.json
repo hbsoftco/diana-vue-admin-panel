@@ -137,6 +137,16 @@
   },
   "features": {
     "ui-elements": {
+      "progress": {
+        "default": "Default progress",
+        "indeterminate": "Indeterminate progress",
+        "variants": "Semantic variants",
+        "sizes": "Sizes",
+        "customRange": "Custom range",
+        "interactive": "Interactive progress",
+        "increase": "Increase progress",
+        "reset": "Reset"
+      },
       "buttons": {
         "defaultButtons": "Default Buttons",
         "softButtons": "Soft Buttons",
@@ -419,6 +429,18 @@
       }
     },
     "advanced-ui": {
+      "carousel": {
+        "basic": "Basic carousel",
+        "controlled": "Controlled and looping",
+        "indicatorsOnly": "Indicators only",
+        "label": "Content carousel",
+        "previous": "Previous slide",
+        "next": "Next slide",
+        "slide": "Slide",
+        "featured": "Featured content",
+        "story": "Story",
+        "active": "Active slide"
+      },
       "accordions": {
         "basic": "Basic Accordion",
         "multiple": "Multiple Items",

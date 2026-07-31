@@ -90,10 +90,38 @@
     "accordion": {
       "title": "Advanced UI",
       "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "ממשק משתמש מתקדם",
+      "carousel": "קרוסלה"
     }
   },
   "features": {
+    "ui-elements": {
+      "progress": {
+        "default": "התקדמות ברירת מחדל",
+        "indeterminate": "התקדמות לא מוגדרת",
+        "variants": "וריאנטים סמנטיים",
+        "sizes": "גדלים",
+        "customRange": "טווח מותאם אישית",
+        "interactive": "התקדמות אינטראקטיבית",
+        "increase": "הגדלת ההתקדמות",
+        "reset": "איפוס"
+      }
+    },
     "advanced-ui": {
+      "carousel": {
+        "basic": "קרוסלה בסיסית",
+        "controlled": "מבוקרת ומחזורית",
+        "indicatorsOnly": "מחוונים בלבד",
+        "label": "קרוסלת תוכן",
+        "previous": "שקופית קודמת",
+        "next": "שקופית הבאה",
+        "slide": "שקופית",
+        "featured": "תוכן מומלץ",
+        "story": "סיפור",
+        "active": "שקופית פעילה"
+      },
       "accordions": {
         "basic": "Basic Accordion",
         "multiple": "Multiple Items",

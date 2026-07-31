@@ -3,7 +3,5 @@ import CarouselDemo from './ui/CarouselDemo.vue'
 </script>
 
 <template>
-  <div>
-    <CarouselDemo />
-  </div>
+  <CarouselDemo />
 </template>
