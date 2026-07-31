@@ -13,9 +13,15 @@
     "formElements": "عناصر النموذج",
     "inputs": "حقول الإدخال",
     "range": "النطاق",
+    "rangeSlider": "شريط تمرير النطاق",
     "select": "الاختيار"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "النماذج",
+      "formElements": "عناصر النموذج",
+      "rangeSlider": "شريط تمرير النطاق"
+    },
     "range": {
       "forms": "النماذج",
       "formElements": "عناصر النموذج",

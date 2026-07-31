@@ -1,25 +1,27 @@
 import type { DiRangeSize, RangeSizeClasses } from './types'
 
+import { SLIDER_SIZE_CLASSES } from '../slider/sizes'
+
 export const RANGE_SIZE_CLASSES: Record<DiRangeSize, RangeSizeClasses> = {
   sm: {
     control: 'range-sm',
-    label: 'mb-1 text-xs',
-    value: 'badge-xs text-[10px]',
-    message: 'mt-1 text-[11px]',
-    ticks: 'mt-0.5 text-[10px]',
+    label: SLIDER_SIZE_CLASSES.sm.label,
+    value: SLIDER_SIZE_CLASSES.sm.value,
+    message: SLIDER_SIZE_CLASSES.sm.message,
+    ticks: SLIDER_SIZE_CLASSES.sm.ticks,
   },
   md: {
     control: 'range-md',
-    label: 'mb-1.5 text-sm',
-    value: 'badge-sm text-xs',
-    message: 'mt-1.5 text-xs',
-    ticks: 'mt-1 text-[11px]',
+    label: SLIDER_SIZE_CLASSES.md.label,
+    value: SLIDER_SIZE_CLASSES.md.value,
+    message: SLIDER_SIZE_CLASSES.md.message,
+    ticks: SLIDER_SIZE_CLASSES.md.ticks,
   },
   lg: {
     control: 'range-lg',
-    label: 'mb-2 text-base',
-    value: 'badge-sm text-sm',
-    message: 'mt-2 text-sm',
-    ticks: 'mt-1.5 text-xs',
+    label: SLIDER_SIZE_CLASSES.lg.label,
+    value: SLIDER_SIZE_CLASSES.lg.value,
+    message: SLIDER_SIZE_CLASSES.lg.message,
+    ticks: SLIDER_SIZE_CLASSES.lg.ticks,
   },
 }

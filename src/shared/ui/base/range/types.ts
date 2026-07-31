@@ -1,14 +1,15 @@
-import type { Size, Variant } from '@/shared/types/models'
+import type {
+  DiSliderOrientation,
+  DiSliderSize,
+  DiSliderTick,
+  DiSliderVariant,
+} from '../slider/types'
 
-export type DiRangeSize = Extract<Size, 'sm' | 'md' | 'lg'>
-export type DiRangeVariant = Exclude<Variant, 'neutral'>
+export type DiRangeSize = DiSliderSize
+export type DiRangeVariant = DiSliderVariant
 export type DiRangeThumbShape = 'rounded' | 'square'
-export type DiRangeOrientation = 'horizontal' | 'vertical'
-
-export type DiRangeTick = {
-  value: number
-  label?: string
-}
+export type DiRangeOrientation = DiSliderOrientation
+export type DiRangeTick = DiSliderTick
 
 export type RangeSizeClasses = {
   control: string

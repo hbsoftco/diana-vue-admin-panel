@@ -42,5 +42,17 @@ export const formRoutes = {
         ],
       },
     },
+    {
+      path: 'form-elements/range-slider',
+      component: () => import('@/pages/forms/form-elements/range-slider.vue'),
+      meta: {
+        pageTitle: 'pages.rangeSlider.rangeSlider',
+        breadcrumb: [
+          { label: 'pages.rangeSlider.forms', link: '/forms' },
+          { label: 'pages.rangeSlider.formElements' },
+          { label: 'pages.rangeSlider.rangeSlider' },
+        ],
+      },
+    },
   ],
 }

@@ -11,6 +11,7 @@ import type {
   DiRangeVariant,
 } from './types'
 
+import { sliderValueToPercent } from '../range-slider/math'
 import { RANGE_SIZE_CLASSES } from './sizes'
 import { RANGE_VARIANT_CLASSES } from './variants'
 
@@ -142,12 +143,7 @@ const messageClasses = computed(() => [
 ])
 
 const displayValue = computed(() => props.formatValue?.(model.value) ?? String(model.value))
-const valuePosition = computed(() => {
-  if (props.max <= props.min)
-    return 0
-
-  return Math.min(100, Math.max(0, ((model.value - props.min) / (props.max - props.min)) * 100))
-})
+const valuePosition = computed(() => sliderValueToPercent(model.value, props.min, props.max))
 const tooltipStyle = computed(() =>
   props.orientation === 'vertical'
     ? { bottom: `${valuePosition.value}%`, insetInlineStart: '100%' }

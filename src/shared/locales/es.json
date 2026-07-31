@@ -13,9 +13,15 @@
     "formElements": "Elementos de formulario",
     "inputs": "Campos de entrada",
     "range": "Rango",
+    "rangeSlider": "Control de rango",
     "select": "Selección"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "Formularios",
+      "formElements": "Elementos de formulario",
+      "rangeSlider": "Control de rango"
+    },
     "range": {
       "forms": "Formularios",
       "formElements": "Elementos de formulario",

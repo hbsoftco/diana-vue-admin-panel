@@ -42,9 +42,15 @@
     "formElements": "عناصر فرم",
     "inputs": "ورودی‌ها",
     "range": "بازه",
+    "rangeSlider": "اسلایدر بازه",
     "select": "انتخاب‌گر"
   },
   "pages": {
+    "rangeSlider": {
+      "forms": "فرم‌ها",
+      "formElements": "عناصر فرم",
+      "rangeSlider": "اسلایدر بازه"
+    },
     "range": {
       "forms": "فرم‌ها",
       "formElements": "عناصر فرم",
