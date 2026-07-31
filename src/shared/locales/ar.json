@@ -128,6 +128,22 @@
   },
   "features": {
     "ui-elements": {
+      "popover": {
+        "basic": "نافذة منبثقة أساسية",
+        "titleSupport": "نافذة منبثقة بعنوان",
+        "headerSlot": "فتحة الرأس",
+        "footerActions": "إجراءات التذييل",
+        "arrowPlacements": "أمثلة مواضع السهم",
+        "placements": "المواضع",
+        "alignment": "المحاذاة",
+        "widths": "عرض المشغل",
+        "richContent": "محتوى غني",
+        "controlled": "حالة متحكم بها",
+        "outside": "سلوك النقر خارجًا",
+        "nested": "نوافذ منبثقة متداخلة",
+        "open": "فتح النافذة المنبثقة",
+        "compactContent": "سطح مدمج متصل بالمشغل."
+      },
       "buttonGroup": {
         "basic": "مثال أساسي",
         "navigation": "التنقل",

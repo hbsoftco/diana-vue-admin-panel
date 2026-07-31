@@ -176,6 +176,22 @@
   },
   "features": {
     "ui-elements": {
+      "popover": {
+        "basic": "پاپ‌آور پایه",
+        "titleSupport": "پاپ‌آور با عنوان",
+        "headerSlot": "اسلات سربرگ",
+        "footerActions": "عملیات پاورقی",
+        "arrowPlacements": "نمونه‌های جایگاه پیکان",
+        "placements": "جایگاه‌ها",
+        "alignment": "تراز",
+        "widths": "عرض محرک",
+        "richContent": "محتوای غنی",
+        "controlled": "حالت کنترل‌شده",
+        "outside": "رفتار کلیک بیرون",
+        "nested": "پاپ‌آورهای تودرتو",
+        "open": "باز کردن پاپ‌آور",
+        "compactContent": "سطحی فشرده که به محرک خود متصل است."
+      },
       "buttonGroup": {
         "basic": "نمونه پایه",
         "navigation": "ناوبری",
