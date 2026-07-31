@@ -8,12 +8,12 @@ import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 type Layout = 'horizontal' | 'vertical'
-type LiveRole = 'alert' | 'status'
+type AlertRole = 'alert' | 'status' | 'button'
 
 type Props = {
   variant?: AlertVariant
   layout?: Layout
-  role?: LiveRole
+  role?: AlertRole
 
   outline?: boolean
   dash?: boolean
