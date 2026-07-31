@@ -128,6 +128,22 @@
   },
   "features": {
     "ui-elements": {
+      "popover": {
+        "basic": "Popover simple",
+        "titleSupport": "Popover avec titre",
+        "headerSlot": "Emplacement d’en-tête",
+        "footerActions": "Actions de pied de page",
+        "arrowPlacements": "Exemples de position de la flèche",
+        "placements": "Positions",
+        "alignment": "Alignement",
+        "widths": "Largeur du déclencheur",
+        "richContent": "Contenu enrichi",
+        "controlled": "État contrôlé",
+        "outside": "Clic à l’extérieur",
+        "nested": "Popovers imbriqués",
+        "open": "Ouvrir le popover",
+        "compactContent": "Une surface compacte reliée à son déclencheur."
+      },
       "buttonGroup": {
         "basic": "Exemple de base",
         "navigation": "Navigation",

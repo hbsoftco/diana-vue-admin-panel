@@ -128,6 +128,22 @@
   },
   "features": {
     "ui-elements": {
+      "popover": {
+        "basic": "חלונית קופצת בסיסית",
+        "titleSupport": "חלונית עם כותרת",
+        "headerSlot": "חריץ כותרת",
+        "footerActions": "פעולות תחתונות",
+        "arrowPlacements": "דוגמאות למיקום החץ",
+        "placements": "מיקומים",
+        "alignment": "יישור",
+        "widths": "רוחב המפעיל",
+        "richContent": "תוכן עשיר",
+        "controlled": "מצב נשלט",
+        "outside": "התנהגות לחיצה בחוץ",
+        "nested": "חלוניות קופצות מקוננות",
+        "open": "פתיחת חלונית",
+        "compactContent": "משטח קומפקטי המחובר למפעיל שלו."
+      },
       "buttonGroup": {
         "basic": "דוגמה בסיסית",
         "navigation": "ניווט",

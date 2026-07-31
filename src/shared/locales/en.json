@@ -167,6 +167,22 @@
   },
   "features": {
     "ui-elements": {
+      "popover": {
+        "basic": "Basic Popover",
+        "titleSupport": "Popover With Title",
+        "headerSlot": "Header Slot",
+        "footerActions": "Footer Actions",
+        "arrowPlacements": "Arrow Placement Examples",
+        "placements": "Placements",
+        "alignment": "Alignment",
+        "widths": "Trigger Width",
+        "richContent": "Rich Content",
+        "controlled": "Controlled State",
+        "outside": "Click Outside Behavior",
+        "nested": "Nested Popovers",
+        "open": "Open popover",
+        "compactContent": "A compact surface connected to its trigger."
+      },
       "buttonGroup": {
         "basic": "Basic Example",
         "navigation": "Navigation",
