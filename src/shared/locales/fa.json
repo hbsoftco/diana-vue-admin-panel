@@ -41,9 +41,15 @@
     "forms": "فرم‌ها",
     "formElements": "عناصر فرم",
     "inputs": "ورودی‌ها",
+    "range": "بازه",
     "select": "انتخاب‌گر"
   },
   "pages": {
+    "range": {
+      "forms": "فرم‌ها",
+      "formElements": "عناصر فرم",
+      "range": "بازه"
+    },
     "inputs": {
       "forms": "فرم‌ها",
       "formElements": "عناصر فرم",

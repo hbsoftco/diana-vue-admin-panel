@@ -12,9 +12,15 @@
     "forms": "Forms",
     "formElements": "Form Elements",
     "inputs": "Inputs",
+    "range": "Range",
     "select": "Select"
   },
   "pages": {
+    "range": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "range": "Range"
+    },
     "inputs": {
       "forms": "Forms",
       "formElements": "Form Elements",

@@ -12,9 +12,15 @@
     "forms": "Formulaires",
     "formElements": "Éléments de formulaire",
     "inputs": "Champs de saisie",
+    "range": "Plage",
     "select": "Sélection"
   },
   "pages": {
+    "range": {
+      "forms": "Formulaires",
+      "formElements": "Éléments de formulaire",
+      "range": "Plage"
+    },
     "inputs": {
       "forms": "Formulaires",
       "formElements": "Éléments de formulaire",

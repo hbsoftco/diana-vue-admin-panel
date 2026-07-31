@@ -12,9 +12,15 @@
     "forms": "Formularios",
     "formElements": "Elementos de formulario",
     "inputs": "Campos de entrada",
+    "range": "Rango",
     "select": "Selección"
   },
   "pages": {
+    "range": {
+      "forms": "Formularios",
+      "formElements": "Elementos de formulario",
+      "range": "Rango"
+    },
     "inputs": {
       "forms": "Formularios",
       "formElements": "Elementos de formulario",

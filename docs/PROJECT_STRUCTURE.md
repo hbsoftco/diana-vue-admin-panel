@@ -291,7 +291,7 @@ Not every demo is implemented. Several render only a heading.
 ### `src/features/forms`
 
 Owns form-control showcase routes and demos. Form controls are organized under the `form-elements`
-group, which currently documents Inputs and Select. Reusable form primitives remain under
+group, which currently documents Inputs, Range, and Select. Reusable form primitives remain under
 `src/shared/ui/base`; this feature group owns only their documentation and route-facing
 presentation.
 
@@ -390,6 +390,7 @@ Reusable design-system primitives:
 | `DiIcon`       | Typed asynchronous icons, transforms, colors, badges            |
 | `DiInput`      | DaisyUI text inputs, labels, slots, sizes, loading, validation  |
 | `DiLoading`    | DaisyUI loading variants                                        |
+| `DiRange`      | DaisyUI range input, limits, ticks, values, states, validation  |
 | `DiModal`      | Teleported modal, backdrop, keyboard closing, scroll prevention |
 | `DiRating`     | Interactive rating input with half-value and RTL support        |
 | `DiSkeleton`   | Skeleton shapes and sizing                                      |

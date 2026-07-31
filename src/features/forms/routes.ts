@@ -30,5 +30,17 @@ export const formRoutes = {
         ],
       },
     },
+    {
+      path: 'form-elements/range',
+      component: () => import('@/pages/forms/form-elements/range.vue'),
+      meta: {
+        pageTitle: 'pages.range.range',
+        breadcrumb: [
+          { label: 'pages.range.forms', link: '/forms' },
+          { label: 'pages.range.formElements' },
+          { label: 'pages.range.range' },
+        ],
+      },
+    },
   ],
 }

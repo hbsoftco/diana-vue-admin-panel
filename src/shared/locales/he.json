@@ -12,9 +12,15 @@
     "forms": "טפסים",
     "formElements": "רכיבי טופס",
     "inputs": "שדות קלט",
+    "range": "טווח",
     "select": "בחירה"
   },
   "pages": {
+    "range": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "range": "טווח"
+    },
     "inputs": {
       "forms": "טפסים",
       "formElements": "רכיבי טופס",

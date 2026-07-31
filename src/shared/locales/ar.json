@@ -12,9 +12,15 @@
     "forms": "النماذج",
     "formElements": "عناصر النموذج",
     "inputs": "حقول الإدخال",
+    "range": "النطاق",
     "select": "الاختيار"
   },
   "pages": {
+    "range": {
+      "forms": "النماذج",
+      "formElements": "عناصر النموذج",
+      "range": "النطاق"
+    },
     "inputs": {
       "forms": "النماذج",
       "formElements": "عناصر النموذج",
