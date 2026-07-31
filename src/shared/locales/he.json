@@ -8,9 +8,15 @@
   "menu": {
     "dashboards": "לוחות בקרה",
     "users": "משתמשים",
-    "settings": "הגדרות"
+    "settings": "הגדרות",
+    "forms": "טפסים",
+    "select": "בחירה"
   },
   "pages": {
+    "select": {
+      "title": "טפסים",
+      "select": "בחירה"
+    },
     "alerts": {
       "title": "אלמנטי ממשק",
       "alerts": "התראות"
@@ -102,6 +108,19 @@
   },
   "features": {
     "ui-elements": {
+      "buttonGroup": {
+        "basic": "דוגמה בסיסית",
+        "navigation": "ניווט",
+        "mixed": "סגנון משולב",
+        "outline": "סגנון מתאר",
+        "icons": "קבוצות כפתורי סמלים",
+        "outlined": "קבוצות כפתורי מתאר",
+        "sizing": "גדלים",
+        "vertical": "וריאציה אנכית",
+        "toolbar": "סרגל כפתורים",
+        "social": "כפתורי קבוצה חברתית",
+        "nesting": "קינון"
+      },
       "toast": {
         "basic": "הודעה בסיסית",
         "variants": "וריאנטים סמנטיים",

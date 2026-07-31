@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouterLink, useRoute } from 'vue-router'
 
 import type { MenuItem } from '@/shared/types/models'
@@ -23,6 +24,7 @@ const emit = defineEmits<{
 }>()
 
 const route = useRoute()
+const { t } = useI18n()
 
 /**
  * Recursively check if a menu item or any of its children has the active route
@@ -55,6 +57,9 @@ const classes = getLevelClasses()
 // Tooltip content for collapsed state
 const tooltipContent = computed(() =>
   props.item.label.startsWith('menu.') ? props.item.label : props.item.label,
+)
+const displayLabel = computed(() =>
+  props.item.label.startsWith('menu.') ? t(props.item.label) : props.item.label,
 )
 
 // Show children only when not collapsed or when it's a nested item
@@ -89,7 +94,7 @@ const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleO
           size="lg"
           :color="hasActiveRoute() ? 'white' : 'default'"
         />
-        <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ $t(item.label) }}</span>
+        <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ displayLabel }}</span>
       </div>
 
       <DiIcon
@@ -114,10 +119,10 @@ const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleO
         },
       ]"
       :active-class="level === 1 ? 'text-menu-prime' : 'text-white'"
-      :title="isCollapsed && level === 1 ? item.label : ''"
+      :title="isCollapsed && level === 1 ? displayLabel : ''"
     >
       <DiIcon :name="getIconName()" size="5px" :color="isActive() ? 'white' : 'default'" />
-      <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ item.label }}</span>
+      <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ displayLabel }}</span>
     </RouterLink>
 
     <!-- Recursive children -->

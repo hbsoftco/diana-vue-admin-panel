@@ -37,9 +37,15 @@
   "menu": {
     "dashboards": "داشبوردها",
     "users": "کاربران",
-    "settings": "تنظیمات"
+    "settings": "تنظیمات",
+    "forms": "فرم‌ها",
+    "select": "انتخاب‌گر"
   },
   "pages": {
+    "select": {
+      "title": "فرم‌ها",
+      "select": "انتخاب‌گر"
+    },
     "alerts": {
       "title": "المان‌های ظاهری",
       "alerts": "هشدارها"
@@ -150,6 +156,19 @@
   },
   "features": {
     "ui-elements": {
+      "buttonGroup": {
+        "basic": "نمونه پایه",
+        "navigation": "ناوبری",
+        "mixed": "سبک ترکیبی",
+        "outline": "سبک خطی",
+        "icons": "گروه دکمه‌های آیکونی",
+        "outlined": "گروه دکمه‌های خطی",
+        "sizing": "اندازه‌ها",
+        "vertical": "حالت عمودی",
+        "toolbar": "نوار ابزار دکمه",
+        "social": "گروه دکمه‌های اجتماعی",
+        "nesting": "تودرتو"
+      },
       "toast": {
         "basic": "اعلان پایه",
         "variants": "انواع معنایی",

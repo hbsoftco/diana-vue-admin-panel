@@ -43,11 +43,13 @@ diana-vue-admin-panel/
 |   |-- features/
 |   |   |-- advanced-ui/
 |   |   |-- dashboards/
+|   |   |-- forms/
 |   |   `-- ui-elements/
 |   |-- layouts/
 |   |-- pages/
 |   |   |-- advanced-ui/
 |   |   |-- dashboards/
+|   |   |-- forms/
 |   |   `-- ui-elements/
 |   |-- plugins/
 |   `-- shared/
@@ -212,6 +214,7 @@ Empty and unused. It does not currently provide a public, authentication, or bla
 
 - `advanced-ui`
 - `dashboards`
+- `forms`
 - `ui-elements`
 
 Each current page file:
@@ -284,6 +287,12 @@ Each feature generally has:
 ```
 
 Not every demo is implemented. Several render only a heading.
+
+### `src/features/forms`
+
+Owns form-control showcase routes and demos. `select` is the first implemented Forms feature.
+Reusable form primitives remain under `src/shared/ui/base`; this feature group owns only their
+documentation and route-facing presentation.
 
 ### `src/features/advanced-ui`
 
