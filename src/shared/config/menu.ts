@@ -55,7 +55,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'forms',
     label: 'menu.forms',
-    icon: 'inbox',
+    icon: 'form48regular',
     children: [
       {
         id: 'form-elements',
@@ -87,6 +87,12 @@ export const menuItems: MenuItem[] = [
       { id: 'skeleton', label: 'Skeleton', route: '/advanced-ui/skeleton' },
       { id: 'rating', label: 'Rating', route: '/advanced-ui/rating' },
     ],
+  },
+  {
+    id: 'utility',
+    label: 'menu.utility',
+    icon: 'medalLine',
+    children: [{ id: 'avatar', label: 'menu.avatar', route: '/utility/avatar' }],
   },
   {
     id: 'projects',
