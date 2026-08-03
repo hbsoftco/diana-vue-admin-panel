@@ -14,9 +14,15 @@
     "inputs": "Champs de saisie",
     "range": "Plage",
     "rangeSlider": "Curseur de plage",
-    "select": "Sélection"
+    "select": "Sélection",
+    "utility": "Utilitaires",
+    "avatar": "Avatar"
   },
   "pages": {
+    "avatar": {
+      "title": "Utilitaires",
+      "avatar": "Avatar"
+    },
     "rangeSlider": {
       "forms": "Formulaires",
       "formElements": "Éléments de formulaire",
@@ -127,6 +133,25 @@
     }
   },
   "features": {
+    "utility": {
+      "avatar": {
+        "basic": "Avatar simple",
+        "image": "Avatar avec image",
+        "initials": "Initiales de remplacement",
+        "icon": "Avatar avec icône",
+        "sizes": "Tailles",
+        "shapes": "Formes",
+        "variants": "Variantes sémantiques",
+        "status": "Indicateurs de statut",
+        "groups": "Groupes d’avatars",
+        "broken": "Gestion des images cassées",
+        "online": "Avatar avec indicateur en ligne",
+        "offline": "Avatar avec indicateur hors ligne",
+        "badges": "Avatars avec badges numériques",
+        "stacked": "Avatars empilés",
+        "roundedStacked": "Avatars arrondis empilés"
+      }
+    },
     "ui-elements": {
       "popover": {
         "basic": "Popover simple",

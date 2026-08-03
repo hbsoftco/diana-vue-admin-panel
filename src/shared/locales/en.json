@@ -14,9 +14,15 @@
     "inputs": "Inputs",
     "range": "Range",
     "rangeSlider": "Range Slider",
-    "select": "Select"
+    "select": "Select",
+    "utility": "Utility",
+    "avatar": "Avatar"
   },
   "pages": {
+    "avatar": {
+      "title": "Utility",
+      "avatar": "Avatar"
+    },
     "rangeSlider": {
       "forms": "Forms",
       "formElements": "Form Elements",
@@ -166,6 +172,25 @@
     }
   },
   "features": {
+    "utility": {
+      "avatar": {
+        "basic": "Avatars",
+        "image": "Image Avatar",
+        "initials": "Fallback Initials",
+        "icon": "Avatar With Icons",
+        "sizes": "Sizes",
+        "shapes": "Shapes",
+        "variants": "Semantic Variants",
+        "status": "Status Indicators",
+        "groups": "Avatar Groups",
+        "broken": "Broken Image Handling",
+        "online": "Avatar With Online Status Indicators",
+        "offline": "Avatar With Offline Status Indicators",
+        "badges": "Avatars With Number Badges",
+        "stacked": "Stacked Avatars",
+        "roundedStacked": "Rounded Stacked Avatars"
+      }
+    },
     "ui-elements": {
       "popover": {
         "basic": "Basic Popover",

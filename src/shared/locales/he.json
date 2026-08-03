@@ -14,9 +14,15 @@
     "inputs": "שדות קלט",
     "range": "טווח",
     "rangeSlider": "מחוון טווח",
-    "select": "בחירה"
+    "select": "בחירה",
+    "utility": "כלים",
+    "avatar": "אווטאר"
   },
   "pages": {
+    "avatar": {
+      "title": "כלים",
+      "avatar": "אווטאר"
+    },
     "rangeSlider": {
       "forms": "טפסים",
       "formElements": "רכיבי טופס",
@@ -127,6 +133,25 @@
     }
   },
   "features": {
+    "utility": {
+      "avatar": {
+        "basic": "אווטאר בסיסי",
+        "image": "אווטאר תמונה",
+        "initials": "ראשי תיבות חלופיים",
+        "icon": "אווטאר סמל",
+        "sizes": "גדלים",
+        "shapes": "צורות",
+        "variants": "וריאנטים סמנטיים",
+        "status": "מחווני מצב",
+        "groups": "קבוצות אווטארים",
+        "broken": "טיפול בתמונה שבורה",
+        "online": "אווטאר עם מחוון מחובר",
+        "offline": "אווטאר עם מחוון לא מחובר",
+        "badges": "אווטארים עם תגים מספריים",
+        "stacked": "אווטארים מוערמים",
+        "roundedStacked": "אווטארים עגולים מוערמים"
+      }
+    },
     "ui-elements": {
       "popover": {
         "basic": "חלונית קופצת בסיסית",

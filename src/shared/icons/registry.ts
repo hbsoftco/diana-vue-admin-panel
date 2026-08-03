@@ -75,6 +75,8 @@ export const iconRegistry = {
   // tdesign Icons
   componentDropdown: () => import('~icons/tdesign/component-dropdown'),
   // Add new icons here
+  medalLine: () => import('~icons/ri/medal-line'),
+  form48regular: () => import('~icons/fluent/form-48-regular'),
 } as const
 
 export type IconName = keyof typeof iconRegistry

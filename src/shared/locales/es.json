@@ -14,9 +14,15 @@
     "inputs": "Campos de entrada",
     "range": "Rango",
     "rangeSlider": "Control de rango",
-    "select": "Selección"
+    "select": "Selección",
+    "utility": "Utilidades",
+    "avatar": "Avatar"
   },
   "pages": {
+    "avatar": {
+      "title": "Utilidades",
+      "avatar": "Avatar"
+    },
     "rangeSlider": {
       "forms": "Formularios",
       "formElements": "Elementos de formulario",
@@ -127,6 +133,25 @@
     }
   },
   "features": {
+    "utility": {
+      "avatar": {
+        "basic": "Avatar básico",
+        "image": "Avatar con imagen",
+        "initials": "Iniciales alternativas",
+        "icon": "Avatar con icono",
+        "sizes": "Tamaños",
+        "shapes": "Formas",
+        "variants": "Variantes semánticas",
+        "status": "Indicadores de estado",
+        "groups": "Grupos de avatares",
+        "broken": "Gestión de imágenes rotas",
+        "online": "Avatar con indicador en línea",
+        "offline": "Avatar con indicador sin conexión",
+        "badges": "Avatares con insignias numéricas",
+        "stacked": "Avatares apilados",
+        "roundedStacked": "Avatares redondeados apilados"
+      }
+    },
     "ui-elements": {
       "popover": {
         "basic": "Popover básico",
