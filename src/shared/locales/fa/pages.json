@@ -1,128 +1,163 @@
 {
   "pages": {
-    "avatar": {
-      "title": "ابزارها",
-      "avatar": "آواتار"
+    "dashboard": {
+      "title": "داشبوردها",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "تجارت الکترونیک"
+      },
+      "analytics": {
+        "title": "تحلیل‌ها"
+      },
+      "courses": {
+        "title": "دوره‌ها"
+      },
+      "crypto": {
+        "title": "رمزارز"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "مشاغل"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "شخصی"
+      },
+      "projects": {
+        "title": "پروژه‌ها"
+      },
+      "sales": {
+        "title": "فروش"
+      },
+      "stocks": {
+        "title": "سهام"
+      }
     },
-    "colors": {
-      "title": "ابزارها",
-      "colors": "رنگ‌ها"
+    "uiElements": {
+      "title": "المان‌های ظاهری",
+      "alerts": {
+        "title": "هشدارها"
+      },
+      "badge": {
+        "title": "نشان"
+      },
+      "breadcrumb": {
+        "title": "مسیر ناوبری"
+      },
+      "buttons": {
+        "title": "دکمه‌ها"
+      },
+      "icons": {
+        "title": "Icons"
+      },
+      "loadings": {
+        "title": "لودینگ"
+      },
+      "buttonGroup": {
+        "title": "گروه دکمه"
+      },
+      "cards": {
+        "title": "کاردها"
+      },
+      "dropdowns": {
+        "title": "منوهای کشویی"
+      },
+      "imagesFigures": {
+        "title": "تصاویر و اشکال"
+      },
+      "linksInteractions": {
+        "title": "لینک‌ها و تعاملات"
+      },
+      "listGroup": {
+        "title": "گروه لیست"
+      },
+      "navsTabs": {
+        "title": "ناوبری و تب‌ها"
+      },
+      "objectFit": {
+        "title": "تناسب شیء"
+      },
+      "pagination": {
+        "title": "صفحه‌بندی"
+      },
+      "popovers": {
+        "title": "پاپ‌آورها"
+      },
+      "progress": {
+        "title": "پیشرفت"
+      },
+      "switch": {
+        "title": "سوئیچ"
+      },
+      "toasts": {
+        "title": "اعلان‌ها"
+      },
+      "tooltips": {
+        "title": "راهنماها"
+      },
+      "typography": {
+        "title": "تایپوگرافی"
+      }
     },
-    "rangeSlider": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "rangeSlider": "اسلایدر بازه"
-    },
-    "range": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "range": "بازه"
-    },
-    "inputs": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "inputs": "ورودی‌ها"
-    },
-    "select": {
+    "forms": {
       "title": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "select": "انتخاب‌گر"
+      "formElements": {
+        "title": "عناصر فرم"
+      },
+      "inputs": {
+        "title": "ورودی‌ها"
+      },
+      "range": {
+        "title": "بازه"
+      },
+      "rangeSlider": {
+        "title": "اسلایدر بازه"
+      },
+      "select": {
+        "title": "انتخاب‌گر"
+      }
     },
-    "alerts": {
-      "title": "المان‌های ظاهری",
-      "alerts": "هشدارها"
-    },
-    "drawer": {
-      "title": "المان‌های پیشرفته",
-      "drawer": "دراور"
-    },
-    "badge": {
-      "title": "المان‌های ظاهری",
-      "badge": "نشان"
-    },
-    "breadcrumb": {
-      "title": "المان‌های ظاهری",
-      "breadcrumb": "مسیر ناوبری"
-    },
-    "buttons": {
-      "title": "المان‌های ظاهری",
-      "buttons": "دکمه‌ها"
-    },
-    "loadings": {
-      "title": "المان‌های ظاهری",
-      "loadings": "لودینگ"
-    },
-    "buttonGroup": {
-      "title": "المان‌های ظاهری",
-      "buttonGroup": "گروه دکمه"
-    },
-    "card": {
-      "title": "المان‌های ظاهری",
-      "cards": "کاردها"
-    },
-    "dropdowns": {
-      "title": "المان‌های ظاهری",
-      "dropdowns": "منوهای کشویی"
-    },
-    "imagesFigures": {
-      "title": "المان‌های ظاهری",
-      "imagesFigures": "تصاویر و اشکال"
-    },
-    "linksInteractions": {
-      "title": "المان‌های ظاهری",
-      "linksInteractions": "لینک‌ها و تعاملات"
-    },
-    "listGroup": {
-      "title": "المان‌های ظاهری",
-      "listGroup": "گروه لیست"
-    },
-    "navsTabs": {
-      "title": "المان‌های ظاهری",
-      "navsTabs": "ناوبری و تب‌ها"
-    },
-    "objectFit": {
-      "title": "المان‌های ظاهری",
-      "objectFit": "تناسب شیء"
-    },
-    "pagination": {
-      "title": "المان‌های ظاهری",
-      "pagination": "صفحه‌بندی"
-    },
-    "popovers": {
-      "title": "المان‌های ظاهری",
-      "popovers": "پاپ‌آورها"
-    },
-    "progress": {
-      "title": "المان‌های ظاهری",
-      "progress": "پیشرفت"
-    },
-    "switch": {
-      "title": "المان‌های ظاهری",
-      "switch": "سوئیچ"
-    },
-    "modals": {
-      "title": "المان‌های ظاهری",
-      "modals": "پنجره‌های مودال"
-    },
-    "toasts": {
-      "title": "المان‌های ظاهری",
-      "toasts": "اعلان‌ها"
-    },
-    "tooltips": {
-      "title": "المان‌های ظاهری",
-      "tooltips": "راهنماها"
-    },
-    "typography": {
-      "title": "المان‌های ظاهری",
-      "typography": "تایپوگرافی"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
+    "advancedUi": {
       "title": "رابط کاربری پیشرفته",
-      "carousel": "اسلایدشو"
+      "modals": {
+        "title": "پنجره‌های مودال"
+      },
+      "accordion": {
+        "title": "Accordion"
+      },
+      "carousel": {
+        "title": "اسلایدشو"
+      },
+      "collapse": {
+        "title": "جمع‌شونده"
+      },
+      "navbar": {
+        "title": "نوار ناوبری"
+      },
+      "drawer": {
+        "title": "دراور"
+      },
+      "rating": {
+        "title": "امتیازدهی"
+      },
+      "skeleton": {
+        "title": "اسکلت بارگذاری"
+      }
+    },
+    "utility": {
+      "title": "ابزارها",
+      "avatar": {
+        "title": "آواتار"
+      },
+      "colors": {
+        "title": "رنگ‌ها"
+      }
     }
   }
 }

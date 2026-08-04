@@ -12,10 +12,10 @@ export const advancedUiRoutes = {
       path: 'modals',
       component: () => import('@/pages/advanced-ui/modals.vue'),
       meta: {
-        pageTitle: 'pages.modals.modals',
+        pageTitle: 'pages.advancedUi.modals.title',
         breadcrumb: [
-          { label: 'pages.modals.title', link: '/advanced-ui' },
-          { label: 'pages.modals.modals' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.modals.title' },
         ],
       },
     },
@@ -23,10 +23,10 @@ export const advancedUiRoutes = {
       path: 'accordion',
       component: () => import('@/pages/advanced-ui/accordion.vue'),
       meta: {
-        pageTitle: 'pages.accordion.accordion',
+        pageTitle: 'pages.advancedUi.accordion.title',
         breadcrumb: [
-          { label: 'pages.accordion.title', link: '/advanced-ui' },
-          { label: 'pages.accordion.accordion' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.accordion.title' },
         ],
       },
     },
@@ -34,10 +34,10 @@ export const advancedUiRoutes = {
       path: 'carousel',
       component: () => import('@/pages/advanced-ui/carousel.vue'),
       meta: {
-        pageTitle: 'pages.carousel.carousel',
+        pageTitle: 'pages.advancedUi.carousel.title',
         breadcrumb: [
-          { label: 'pages.carousel.title', link: '/advanced-ui' },
-          { label: 'pages.carousel.carousel' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.carousel.title' },
         ],
       },
     },
@@ -45,10 +45,10 @@ export const advancedUiRoutes = {
       path: 'collapse',
       component: () => import('@/pages/advanced-ui/collapse.vue'),
       meta: {
-        pageTitle: 'pages.collapse.collapse',
+        pageTitle: 'pages.advancedUi.collapse.title',
         breadcrumb: [
-          { label: 'pages.collapse.title', link: '/advanced-ui' },
-          { label: 'pages.collapse.collapse' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.collapse.title' },
         ],
       },
     },
@@ -56,10 +56,10 @@ export const advancedUiRoutes = {
       path: 'navbar',
       component: () => import('@/pages/advanced-ui/navbar.vue'),
       meta: {
-        pageTitle: 'pages.navbar.navbar',
+        pageTitle: 'pages.advancedUi.navbar.title',
         breadcrumb: [
-          { label: 'pages.navbar.title', link: '/advanced-ui' },
-          { label: 'pages.navbar.navbar' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.navbar.title' },
         ],
       },
     },
@@ -67,10 +67,10 @@ export const advancedUiRoutes = {
       path: 'drawer',
       component: () => import('@/pages/advanced-ui/drawer.vue'),
       meta: {
-        pageTitle: 'pages.drawer.drawer',
+        pageTitle: 'pages.advancedUi.drawer.title',
         breadcrumb: [
-          { label: 'pages.drawer.title', link: '/advanced-ui' },
-          { label: 'pages.drawer.drawer' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.drawer.title' },
         ],
       },
     },
@@ -78,10 +78,10 @@ export const advancedUiRoutes = {
       path: 'rating',
       component: () => import('@/pages/advanced-ui/rating.vue'),
       meta: {
-        pageTitle: 'pages.rating.rating',
+        pageTitle: 'pages.advancedUi.rating.title',
         breadcrumb: [
-          { label: 'pages.rating.title', link: '/advanced-ui' },
-          { label: 'pages.rating.rating' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.rating.title' },
         ],
       },
     },
@@ -89,10 +89,10 @@ export const advancedUiRoutes = {
       path: 'skeleton',
       component: () => import('@/pages/advanced-ui/skeleton.vue'),
       meta: {
-        pageTitle: 'pages.skeleton.skeleton',
+        pageTitle: 'pages.advancedUi.skeleton.title',
         breadcrumb: [
-          { label: 'pages.skeleton.title', link: '/advanced-ui' },
-          { label: 'pages.skeleton.skeleton' },
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.skeleton.title' },
         ],
       },
     },

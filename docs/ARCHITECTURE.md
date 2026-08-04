@@ -155,11 +155,9 @@ Each route group:
 - Defines a group-level default redirect.
 - Lazy-loads child page wrappers.
 
-The forms, UI, and advanced UI routes attach `pageTitle` and `breadcrumb` metadata. `DefaultLayout`
-consumes that metadata to update `document.title` and render translated breadcrumbs.
-
-Dashboard routes currently do not define title or breadcrumb metadata. They consequently use
-the layout's fallback title key, `menu.dashboards`, and render no breadcrumbs.
+Every rendered child route attaches `pageTitle` and `breadcrumb` metadata under a consistent
+`pages.<group>.<page>.title` hierarchy. `DefaultLayout` consumes that metadata to update
+`document.title` and render translated breadcrumbs.
 
 There is no:
 
@@ -169,7 +167,7 @@ There is no:
 - Authorization guard.
 - Route-level data loader.
 - Error route.
-- `/projects` route group, even though the sidebar contains project links.
+- `/projects` route group.
 
 ## Layout Architecture
 

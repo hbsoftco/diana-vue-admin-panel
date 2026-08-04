@@ -15,7 +15,7 @@ const route = useRoute()
 const { t } = useI18n()
 
 watchEffect(() => {
-  const pageTitle = (route.meta.pageTitle as string) || 'menu.dashboards'
+  const pageTitle = (route.meta.pageTitle as string) || 'pages.dashboard.title'
   document.title = t(pageTitle)
 })
 
@@ -41,7 +41,7 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
         <div class="px-4 min-h-[calc(100vh-9.9rem)]">
           <div v-if="route?.meta" class="flex items-center justify-between my-4">
             <h1 class="font-semibold text-base-content text-lg">
-              {{ $t((route?.meta?.pageTitle as string) || 'menu.dashboards') }}
+              {{ $t((route?.meta?.pageTitle as string) || 'pages.dashboard.title') }}
             </h1>
 
             <DiBreadcrumb

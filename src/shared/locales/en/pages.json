@@ -1,148 +1,163 @@
 {
   "pages": {
-    "avatar": {
-      "title": "Utility",
-      "avatar": "Avatar"
+    "dashboard": {
+      "title": "Dashboards",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "Ecommerce"
+      },
+      "analytics": {
+        "title": "Analytics"
+      },
+      "courses": {
+        "title": "Courses"
+      },
+      "crypto": {
+        "title": "Crypto"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "Jobs"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "Personal"
+      },
+      "projects": {
+        "title": "Projects"
+      },
+      "sales": {
+        "title": "Sales"
+      },
+      "stocks": {
+        "title": "Stocks"
+      }
     },
-    "colors": {
-      "title": "Utility",
-      "colors": "Colors"
+    "uiElements": {
+      "title": "UI Elements",
+      "alerts": {
+        "title": "Alerts"
+      },
+      "badge": {
+        "title": "Badge"
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb"
+      },
+      "buttons": {
+        "title": "Buttons"
+      },
+      "icons": {
+        "title": "Icons"
+      },
+      "loadings": {
+        "title": "Loadings"
+      },
+      "buttonGroup": {
+        "title": "Button Group"
+      },
+      "cards": {
+        "title": "Cards"
+      },
+      "dropdowns": {
+        "title": "Dropdowns"
+      },
+      "imagesFigures": {
+        "title": "Images & Figures"
+      },
+      "linksInteractions": {
+        "title": "Links & Interactions"
+      },
+      "listGroup": {
+        "title": "List Group"
+      },
+      "navsTabs": {
+        "title": "Navs & Tabs"
+      },
+      "objectFit": {
+        "title": "Object Fit"
+      },
+      "pagination": {
+        "title": "Pagination"
+      },
+      "popovers": {
+        "title": "Popovers"
+      },
+      "progress": {
+        "title": "Progress"
+      },
+      "switch": {
+        "title": "Switch"
+      },
+      "toasts": {
+        "title": "Toasts"
+      },
+      "tooltips": {
+        "title": "Tooltips"
+      },
+      "typography": {
+        "title": "Typography"
+      }
     },
-    "rangeSlider": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "rangeSlider": "Range Slider"
-    },
-    "range": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "range": "Range"
-    },
-    "inputs": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "inputs": "Inputs"
-    },
-    "select": {
+    "forms": {
       "title": "Forms",
-      "formElements": "Form Elements",
-      "select": "Select"
+      "formElements": {
+        "title": "Form Elements"
+      },
+      "inputs": {
+        "title": "Inputs"
+      },
+      "range": {
+        "title": "Range"
+      },
+      "rangeSlider": {
+        "title": "Range Slider"
+      },
+      "select": {
+        "title": "Select"
+      }
     },
-    "icons": {
-      "title": "Ui Elements",
-      "icons": "Icons"
-    },
-    "drawer": {
-      "title": "Advanced ui",
-      "drawer": "Drawer"
-    },
-    "alerts": {
-      "title": "Ui Elements",
-      "alerts": "Alerts"
-    },
-    "badge": {
-      "title": "Ui Elements",
-      "badge": "Badge"
-    },
-    "breadcrumb": {
-      "title": "Ui Elements",
-      "breadcrumb": "Breadcrumb"
-    },
-    "buttons": {
-      "title": "Ui Elements",
-      "buttons": "Buttons"
-    },
-    "loadings": {
-      "title": "Ui Elements",
-      "loadings": "Loadings"
-    },
-    "buttonGroup": {
-      "title": "Ui Elements",
-      "buttonGroup": "Button Group"
-    },
-    "card": {
-      "title": "Ui Elements",
-      "cards": "Cards"
-    },
-    "dropdowns": {
-      "title": "Ui Elements",
-      "dropdowns": "Dropdowns"
-    },
-    "imagesFigures": {
-      "title": "Ui Elements",
-      "imagesFigures": "Images & Figures"
-    },
-    "linksInteractions": {
-      "title": "Ui Elements",
-      "linksInteractions": "Links & Interactions"
-    },
-    "listGroup": {
-      "title": "Ui Elements",
-      "listGroup": "List Group"
-    },
-    "navsTabs": {
-      "title": "Ui Elements",
-      "navsTabs": "Navs & Tabs"
-    },
-    "objectFit": {
-      "title": "Ui Elements",
-      "objectFit": "Object Fit"
-    },
-    "pagination": {
-      "title": "Ui Elements",
-      "pagination": "Pagination"
-    },
-    "popovers": {
-      "title": "Ui Elements",
-      "popovers": "Popovers"
-    },
-    "progress": {
-      "title": "Ui Elements",
-      "progress": "Progress"
-    },
-    "switch": {
-      "title": "Ui Elements",
-      "switch": "Switch"
-    },
-    "modals": {
-      "title": "Ui Elements",
-      "modals": "Modals"
-    },
-    "toasts": {
-      "title": "Ui Elements",
-      "toasts": "Toasts"
-    },
-    "tooltips": {
-      "title": "Ui Elements",
-      "tooltips": "Tooltips"
-    },
-    "typography": {
-      "title": "Ui Elements",
-      "typography": "Typography"
-    },
-    "accordion": {
+    "advancedUi": {
       "title": "Advanced UI",
-      "accordion": "Accordion"
+      "modals": {
+        "title": "Modals"
+      },
+      "accordion": {
+        "title": "Accordion"
+      },
+      "carousel": {
+        "title": "Carousel"
+      },
+      "collapse": {
+        "title": "Collapse"
+      },
+      "navbar": {
+        "title": "Navbar"
+      },
+      "drawer": {
+        "title": "Drawer"
+      },
+      "rating": {
+        "title": "Rating"
+      },
+      "skeleton": {
+        "title": "Skeleton"
+      }
     },
-    "carousel": {
-      "title": "Advanced UI",
-      "carousel": "Carousel"
-    },
-    "collapse": {
-      "title": "Advanced UI",
-      "collapse": "Collapse"
-    },
-    "navbar": {
-      "title": "Advanced UI",
-      "navbar": "Navbar"
-    },
-    "skeleton": {
-      "title": "Advanced UI",
-      "skeleton": "Skeleton"
-    },
-    "rating": {
-      "title": "Advanced UI",
-      "rating": "Rating"
+    "utility": {
+      "title": "Utility",
+      "avatar": {
+        "title": "Avatar"
+      },
+      "colors": {
+        "title": "Colors"
+      }
     }
   }
 }

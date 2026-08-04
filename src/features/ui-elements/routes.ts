@@ -12,10 +12,10 @@ export const uiElementRoutes = {
       path: 'alerts',
       component: () => import('@/pages/ui-elements/alerts.vue'),
       meta: {
-        pageTitle: 'pages.alerts.alerts',
+        pageTitle: 'pages.uiElements.alerts.title',
         breadcrumb: [
-          { label: 'pages.alerts.title', link: '/ui-elements' },
-          { label: 'pages.alerts.alerts' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.alerts.title' },
         ],
       },
     },
@@ -23,10 +23,10 @@ export const uiElementRoutes = {
       path: 'badge',
       component: () => import('@/pages/ui-elements/badge.vue'),
       meta: {
-        pageTitle: 'pages.badge.badge',
+        pageTitle: 'pages.uiElements.badge.title',
         breadcrumb: [
-          { label: 'pages.badge.title', link: '/ui-elements' },
-          { label: 'pages.badge.badge' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.badge.title' },
         ],
       },
     },
@@ -34,10 +34,10 @@ export const uiElementRoutes = {
       path: 'breadcrumb',
       component: () => import('@/pages/ui-elements/breadcrumb.vue'),
       meta: {
-        pageTitle: 'pages.breadcrumb.breadcrumb',
+        pageTitle: 'pages.uiElements.breadcrumb.title',
         breadcrumb: [
-          { label: 'pages.breadcrumb.title', link: '/ui-elements' },
-          { label: 'pages.breadcrumb.breadcrumb' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.breadcrumb.title' },
         ],
       },
     },
@@ -45,21 +45,10 @@ export const uiElementRoutes = {
       path: 'buttons',
       component: () => import('@/pages/ui-elements/buttons.vue'),
       meta: {
-        pageTitle: 'pages.buttons.buttons',
+        pageTitle: 'pages.uiElements.buttons.title',
         breadcrumb: [
-          { label: '', link: '/ui-elements' },
-          { label: 'pages.buttons.buttons' },
-        ],
-      },
-    },
-    {
-      path: 'loadings',
-      component: () => import('@/pages/ui-elements/loadings.vue'),
-      meta: {
-        pageTitle: 'pages.loadings.loadings',
-        breadcrumb: [
-          { label: 'pages.loadings.title', link: '/ui-elements' },
-          { label: 'pages.loadings.loadings' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.buttons.title' },
         ],
       },
     },
@@ -67,10 +56,21 @@ export const uiElementRoutes = {
       path: 'icons',
       component: () => import('@/pages/ui-elements/icons.vue'),
       meta: {
-        pageTitle: 'pages.icons.icons',
+        pageTitle: 'pages.uiElements.icons.title',
         breadcrumb: [
-          { label: 'pages.icons.title', link: '/ui-elements' },
-          { label: 'pages.icons.icons' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.icons.title' },
+        ],
+      },
+    },
+    {
+      path: 'loadings',
+      component: () => import('@/pages/ui-elements/loadings.vue'),
+      meta: {
+        pageTitle: 'pages.uiElements.loadings.title',
+        breadcrumb: [
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.loadings.title' },
         ],
       },
     },
@@ -78,10 +78,10 @@ export const uiElementRoutes = {
       path: 'button-group',
       component: () => import('@/pages/ui-elements/button-group.vue'),
       meta: {
-        pageTitle: 'pages.buttonGroup.buttonGroup',
+        pageTitle: 'pages.uiElements.buttonGroup.title',
         breadcrumb: [
-          { label: 'pages.buttonGroup.title', link: '/ui-elements' },
-          { label: 'pages.buttonGroup.buttonGroup' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.buttonGroup.title' },
         ],
       },
     },
@@ -89,10 +89,10 @@ export const uiElementRoutes = {
       path: 'cards',
       component: () => import('@/pages/ui-elements/cards.vue'),
       meta: {
-        pageTitle: 'pages.card.cards',
+        pageTitle: 'pages.uiElements.cards.title',
         breadcrumb: [
-          { label: 'pages.card.title', link: '/ui-elements' },
-          { label: 'pages.card.cards' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.cards.title' },
         ],
       },
     },
@@ -100,10 +100,10 @@ export const uiElementRoutes = {
       path: 'dropdowns',
       component: () => import('@/pages/ui-elements/dropdowns.vue'),
       meta: {
-        pageTitle: 'pages.dropdowns.dropdowns',
+        pageTitle: 'pages.uiElements.dropdowns.title',
         breadcrumb: [
-          { label: 'pages.dropdowns.title', link: '/ui-elements' },
-          { label: 'pages.dropdowns.dropdowns' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.dropdowns.title' },
         ],
       },
     },
@@ -111,10 +111,10 @@ export const uiElementRoutes = {
       path: 'images-figures',
       component: () => import('@/pages/ui-elements/images-figures.vue'),
       meta: {
-        pageTitle: 'pages.imagesFigures.imagesFigures',
+        pageTitle: 'pages.uiElements.imagesFigures.title',
         breadcrumb: [
-          { label: 'pages.imagesFigures.title', link: '/ui-elements' },
-          { label: 'pages.imagesFigures.imagesFigures' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.imagesFigures.title' },
         ],
       },
     },
@@ -122,10 +122,10 @@ export const uiElementRoutes = {
       path: 'links-interactions',
       component: () => import('@/pages/ui-elements/links-interactions.vue'),
       meta: {
-        pageTitle: 'pages.linksInteractions.linksInteractions',
+        pageTitle: 'pages.uiElements.linksInteractions.title',
         breadcrumb: [
-          { label: 'pages.linksInteractions.title', link: '/ui-elements' },
-          { label: 'pages.linksInteractions.linksInteractions' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.linksInteractions.title' },
         ],
       },
     },
@@ -133,10 +133,10 @@ export const uiElementRoutes = {
       path: 'list-group',
       component: () => import('@/pages/ui-elements/list-group.vue'),
       meta: {
-        pageTitle: 'pages.listGroup.listGroup',
+        pageTitle: 'pages.uiElements.listGroup.title',
         breadcrumb: [
-          { label: 'pages.listGroup.title', link: '/ui-elements' },
-          { label: 'pages.listGroup.listGroup' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.listGroup.title' },
         ],
       },
     },
@@ -144,10 +144,10 @@ export const uiElementRoutes = {
       path: 'navs-tabs',
       component: () => import('@/pages/ui-elements/navs-tabs.vue'),
       meta: {
-        pageTitle: 'pages.navsTabs.navsTabs',
+        pageTitle: 'pages.uiElements.navsTabs.title',
         breadcrumb: [
-          { label: 'pages.navsTabs.title', link: '/ui-elements' },
-          { label: 'pages.navsTabs.navsTabs' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.navsTabs.title' },
         ],
       },
     },
@@ -155,10 +155,10 @@ export const uiElementRoutes = {
       path: 'object-fit',
       component: () => import('@/pages/ui-elements/object-fit.vue'),
       meta: {
-        pageTitle: 'pages.objectFit.objectFit',
+        pageTitle: 'pages.uiElements.objectFit.title',
         breadcrumb: [
-          { label: 'pages.objectFit.title', link: '/ui-elements' },
-          { label: 'pages.objectFit.objectFit' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.objectFit.title' },
         ],
       },
     },
@@ -166,10 +166,10 @@ export const uiElementRoutes = {
       path: 'pagination',
       component: () => import('@/pages/ui-elements/pagination.vue'),
       meta: {
-        pageTitle: 'pages.pagination.pagination',
+        pageTitle: 'pages.uiElements.pagination.title',
         breadcrumb: [
-          { label: 'pages.pagination.title', link: '/ui-elements' },
-          { label: 'pages.pagination.pagination' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.pagination.title' },
         ],
       },
     },
@@ -177,10 +177,10 @@ export const uiElementRoutes = {
       path: 'popovers',
       component: () => import('@/pages/ui-elements/popovers.vue'),
       meta: {
-        pageTitle: 'pages.popovers.popovers',
+        pageTitle: 'pages.uiElements.popovers.title',
         breadcrumb: [
-          { label: 'pages.popovers.title', link: '/ui-elements' },
-          { label: 'pages.popovers.popovers' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.popovers.title' },
         ],
       },
     },
@@ -188,10 +188,10 @@ export const uiElementRoutes = {
       path: 'progress',
       component: () => import('@/pages/ui-elements/progress.vue'),
       meta: {
-        pageTitle: 'pages.progress.progress',
+        pageTitle: 'pages.uiElements.progress.title',
         breadcrumb: [
-          { label: 'pages.progress.title', link: '/ui-elements' },
-          { label: 'pages.progress.progress' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.progress.title' },
         ],
       },
     },
@@ -199,10 +199,10 @@ export const uiElementRoutes = {
       path: 'switch',
       component: () => import('@/pages/ui-elements/switch.vue'),
       meta: {
-        pageTitle: 'pages.switch.switch',
+        pageTitle: 'pages.uiElements.switch.title',
         breadcrumb: [
-          { label: 'pages.switch.title', link: '/ui-elements' },
-          { label: 'pages.switch.switch' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.switch.title' },
         ],
       },
     },
@@ -210,10 +210,10 @@ export const uiElementRoutes = {
       path: 'toasts',
       component: () => import('@/pages/ui-elements/toasts.vue'),
       meta: {
-        pageTitle: 'pages.toasts.toasts',
+        pageTitle: 'pages.uiElements.toasts.title',
         breadcrumb: [
-          { label: 'pages.toasts.title', link: '/ui-elements' },
-          { label: 'pages.toasts.toasts' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.toasts.title' },
         ],
       },
     },
@@ -221,10 +221,10 @@ export const uiElementRoutes = {
       path: 'tooltips',
       component: () => import('@/pages/ui-elements/tooltips.vue'),
       meta: {
-        pageTitle: 'pages.tooltips.tooltips',
+        pageTitle: 'pages.uiElements.tooltips.title',
         breadcrumb: [
-          { label: 'pages.tooltips.title', link: '/ui-elements' },
-          { label: 'pages.tooltips.tooltips' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.tooltips.title' },
         ],
       },
     },
@@ -232,10 +232,10 @@ export const uiElementRoutes = {
       path: 'typography',
       component: () => import('@/pages/ui-elements/typography.vue'),
       meta: {
-        pageTitle: 'pages.typography.typography',
+        pageTitle: 'pages.uiElements.typography.title',
         breadcrumb: [
-          { label: 'pages.typography.title', link: '/ui-elements' },
-          { label: 'pages.typography.typography' },
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.typography.title' },
         ],
       },
     },

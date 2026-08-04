@@ -1,120 +1,163 @@
 {
   "pages": {
-    "avatar": {
-      "title": "الأدوات",
-      "avatar": "الصورة الرمزية"
+    "dashboard": {
+      "title": "لوحات المعلومات",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "التجارة الإلكترونية"
+      },
+      "analytics": {
+        "title": "التحليلات"
+      },
+      "courses": {
+        "title": "الدورات"
+      },
+      "crypto": {
+        "title": "العملات الرقمية"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "الوظائف"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "شخصي"
+      },
+      "projects": {
+        "title": "المشاريع"
+      },
+      "sales": {
+        "title": "المبيعات"
+      },
+      "stocks": {
+        "title": "الأسهم"
+      }
     },
-    "colors": {
-      "title": "الأدوات",
-      "colors": "الألوان"
+    "uiElements": {
+      "title": "عناصر واجهة المستخدم",
+      "alerts": {
+        "title": "التنبيهات"
+      },
+      "badge": {
+        "title": "الشارة"
+      },
+      "breadcrumb": {
+        "title": "مسار التنقل"
+      },
+      "buttons": {
+        "title": "الأزرار"
+      },
+      "icons": {
+        "title": "الأيقونات"
+      },
+      "loadings": {
+        "title": "مؤشرات التحميل"
+      },
+      "buttonGroup": {
+        "title": "مجموعة الأزرار"
+      },
+      "cards": {
+        "title": "البطاقات"
+      },
+      "dropdowns": {
+        "title": "القوائم المنسدلة"
+      },
+      "imagesFigures": {
+        "title": "الصور والأشكال"
+      },
+      "linksInteractions": {
+        "title": "الروابط والتفاعلات"
+      },
+      "listGroup": {
+        "title": "مجموعة القائمة"
+      },
+      "navsTabs": {
+        "title": "التنقل والتبويبات"
+      },
+      "objectFit": {
+        "title": "ملاءمة الكائن"
+      },
+      "pagination": {
+        "title": "ترقيم الصفحات"
+      },
+      "popovers": {
+        "title": "النوافذ المنبثقة"
+      },
+      "progress": {
+        "title": "التقدم"
+      },
+      "switch": {
+        "title": "مفتاح تبديل"
+      },
+      "toasts": {
+        "title": "الإشعارات"
+      },
+      "tooltips": {
+        "title": "تلميحات"
+      },
+      "typography": {
+        "title": "الطباعة"
+      }
     },
-    "rangeSlider": {
-      "forms": "النماذج",
-      "formElements": "عناصر النموذج",
-      "rangeSlider": "شريط تمرير النطاق"
-    },
-    "range": {
-      "forms": "النماذج",
-      "formElements": "عناصر النموذج",
-      "range": "النطاق"
-    },
-    "inputs": {
-      "forms": "النماذج",
-      "formElements": "عناصر النموذج",
-      "inputs": "حقول الإدخال"
-    },
-    "select": {
+    "forms": {
       "title": "النماذج",
-      "formElements": "عناصر النموذج",
-      "select": "الاختيار"
+      "formElements": {
+        "title": "عناصر النموذج"
+      },
+      "inputs": {
+        "title": "حقول الإدخال"
+      },
+      "range": {
+        "title": "النطاق"
+      },
+      "rangeSlider": {
+        "title": "شريط تمرير النطاق"
+      },
+      "select": {
+        "title": "الاختيار"
+      }
     },
-    "alerts": {
-      "title": "عناصر واجهة المستخدم",
-      "alerts": "التنبيهات"
-    },
-    "badge": {
-      "title": "عناصر واجهة المستخدم",
-      "badge": "الشارة"
-    },
-    "breadcrumb": {
-      "title": "عناصر واجهة المستخدم",
-      "breadcrumb": "مسار التنقل"
-    },
-    "buttons": {
-      "title": "عناصر واجهة المستخدم",
-      "buttons": "الأزرار"
-    },
-    "buttonGroup": {
-      "title": "عناصر واجهة المستخدم",
-      "buttonGroup": "مجموعة الأزرار"
-    },
-    "card": {
-      "title": "عناصر واجهة المستخدم",
-      "cards": "البطاقات"
-    },
-    "dropdowns": {
-      "title": "عناصر واجهة المستخدم",
-      "dropdowns": "القوائم المنسدلة"
-    },
-    "imagesFigures": {
-      "title": "عناصر واجهة المستخدم",
-      "imagesFigures": "الصور والأشكال"
-    },
-    "linksInteractions": {
-      "title": "عناصر واجهة المستخدم",
-      "linksInteractions": "الروابط والتفاعلات"
-    },
-    "listGroup": {
-      "title": "عناصر واجهة المستخدم",
-      "listGroup": "مجموعة القائمة"
-    },
-    "navsTabs": {
-      "title": "عناصر واجهة المستخدم",
-      "navsTabs": "التنقل والتبويبات"
-    },
-    "objectFit": {
-      "title": "عناصر واجهة المستخدم",
-      "objectFit": "ملاءمة الكائن"
-    },
-    "pagination": {
-      "title": "عناصر واجهة المستخدم",
-      "pagination": "ترقيم الصفحات"
-    },
-    "popovers": {
-      "title": "عناصر واجهة المستخدم",
-      "popovers": "النوافذ المنبثقة"
-    },
-    "progress": {
-      "title": "عناصر واجهة المستخدم",
-      "progress": "التقدم"
-    },
-    "switch": {
-      "title": "عناصر واجهة المستخدم",
-      "switch": "مفتاح تبديل"
-    },
-    "spinners": {
-      "title": "عناصر واجهة المستخدم",
-      "spinners": "الدوائر"
-    },
-    "toasts": {
-      "title": "عناصر واجهة المستخدم",
-      "toasts": "الإشعارات"
-    },
-    "tooltips": {
-      "title": "عناصر واجهة المستخدم",
-      "tooltips": "تلميحات"
-    },
-    "typography": {
-      "title": "عناصر واجهة المستخدم",
-      "typography": "الطباعة"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
+    "advancedUi": {
       "title": "واجهة مستخدم متقدمة",
-      "carousel": "عرض الشرائح"
+      "modals": {
+        "title": "النوافذ المشروطة"
+      },
+      "accordion": {
+        "title": "الأكورديون"
+      },
+      "carousel": {
+        "title": "عرض الشرائح"
+      },
+      "collapse": {
+        "title": "الطي"
+      },
+      "navbar": {
+        "title": "شريط التنقل"
+      },
+      "drawer": {
+        "title": "الدرج"
+      },
+      "rating": {
+        "title": "التقييم"
+      },
+      "skeleton": {
+        "title": "الهيكل العظمي"
+      }
+    },
+    "utility": {
+      "title": "الأدوات",
+      "avatar": {
+        "title": "الصورة الرمزية"
+      },
+      "colors": {
+        "title": "الألوان"
+      }
     }
   }
 }

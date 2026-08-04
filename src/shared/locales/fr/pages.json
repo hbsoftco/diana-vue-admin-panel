@@ -1,120 +1,163 @@
 {
   "pages": {
-    "avatar": {
-      "title": "Utilitaires",
-      "avatar": "Avatar"
+    "dashboard": {
+      "title": "Tableaux de bord",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "E-commerce"
+      },
+      "analytics": {
+        "title": "Analyses"
+      },
+      "courses": {
+        "title": "Cours"
+      },
+      "crypto": {
+        "title": "Crypto"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "Emplois"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "Personnel"
+      },
+      "projects": {
+        "title": "Projets"
+      },
+      "sales": {
+        "title": "Ventes"
+      },
+      "stocks": {
+        "title": "Actions"
+      }
     },
-    "colors": {
-      "title": "Utilitaires",
-      "colors": "Couleurs"
+    "uiElements": {
+      "title": "Éléments UI",
+      "alerts": {
+        "title": "Alertes"
+      },
+      "badge": {
+        "title": "Badge"
+      },
+      "breadcrumb": {
+        "title": "Fil d’Ariane"
+      },
+      "buttons": {
+        "title": "Boutons"
+      },
+      "icons": {
+        "title": "Icônes"
+      },
+      "loadings": {
+        "title": "Chargements"
+      },
+      "buttonGroup": {
+        "title": "Groupe de boutons"
+      },
+      "cards": {
+        "title": "Cartes"
+      },
+      "dropdowns": {
+        "title": "Menus déroulants"
+      },
+      "imagesFigures": {
+        "title": "Images et figures"
+      },
+      "linksInteractions": {
+        "title": "Liens et interactions"
+      },
+      "listGroup": {
+        "title": "Groupe de liste"
+      },
+      "navsTabs": {
+        "title": "Navigation et onglets"
+      },
+      "objectFit": {
+        "title": "Ajustement d’objet"
+      },
+      "pagination": {
+        "title": "Pagination"
+      },
+      "popovers": {
+        "title": "Infobulles contextuelles"
+      },
+      "progress": {
+        "title": "Progression"
+      },
+      "switch": {
+        "title": "Interrupteur"
+      },
+      "toasts": {
+        "title": "Notifications"
+      },
+      "tooltips": {
+        "title": "Info-bulles"
+      },
+      "typography": {
+        "title": "Typographie"
+      }
     },
-    "rangeSlider": {
-      "forms": "Formulaires",
-      "formElements": "Éléments de formulaire",
-      "rangeSlider": "Curseur de plage"
-    },
-    "range": {
-      "forms": "Formulaires",
-      "formElements": "Éléments de formulaire",
-      "range": "Plage"
-    },
-    "inputs": {
-      "forms": "Formulaires",
-      "formElements": "Éléments de formulaire",
-      "inputs": "Champs de saisie"
-    },
-    "select": {
+    "forms": {
       "title": "Formulaires",
-      "formElements": "Éléments de formulaire",
-      "select": "Sélection"
+      "formElements": {
+        "title": "Éléments de formulaire"
+      },
+      "inputs": {
+        "title": "Champs de saisie"
+      },
+      "range": {
+        "title": "Plage"
+      },
+      "rangeSlider": {
+        "title": "Curseur de plage"
+      },
+      "select": {
+        "title": "Sélection"
+      }
     },
-    "alerts": {
-      "title": "Éléments UI",
-      "alerts": "Alertes"
-    },
-    "badge": {
-      "title": "Éléments UI",
-      "badge": "Badge"
-    },
-    "breadcrumb": {
-      "title": "Éléments UI",
-      "breadcrumb": "Fil d'Ariane"
-    },
-    "buttons": {
-      "title": "Éléments UI",
-      "buttons": "Boutons"
-    },
-    "buttonGroup": {
-      "title": "Éléments UI",
-      "buttonGroup": "Groupe de boutons"
-    },
-    "card": {
-      "title": "Éléments UI",
-      "cards": "Cartes"
-    },
-    "dropdowns": {
-      "title": "Éléments UI",
-      "dropdowns": "Menus déroulants"
-    },
-    "imagesFigures": {
-      "title": "Éléments UI",
-      "imagesFigures": "Images et figures"
-    },
-    "linksInteractions": {
-      "title": "Éléments UI",
-      "linksInteractions": "Liens et interactions"
-    },
-    "listGroup": {
-      "title": "Éléments UI",
-      "listGroup": "Groupe de liste"
-    },
-    "navsTabs": {
-      "title": "Éléments UI",
-      "navsTabs": "Navigation et onglets"
-    },
-    "objectFit": {
-      "title": "Éléments UI",
-      "objectFit": "Ajustement d'objet"
-    },
-    "pagination": {
-      "title": "Éléments UI",
-      "pagination": "Pagination"
-    },
-    "popovers": {
-      "title": "Éléments UI",
-      "popovers": "Popovers"
-    },
-    "progress": {
-      "title": "Éléments UI",
-      "progress": "Progression"
-    },
-    "switch": {
-      "title": "Éléments UI",
-      "switch": "Interrupteur"
-    },
-    "spinners": {
-      "title": "Éléments UI",
-      "spinners": "Spinners"
-    },
-    "toasts": {
-      "title": "Éléments UI",
-      "toasts": "Toasts"
-    },
-    "tooltips": {
-      "title": "Éléments UI",
-      "tooltips": "Info-bulles"
-    },
-    "typography": {
-      "title": "Éléments UI",
-      "typography": "Typographie"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
+    "advancedUi": {
       "title": "Interface avancée",
-      "carousel": "Carrousel"
+      "modals": {
+        "title": "Fenêtres modales"
+      },
+      "accordion": {
+        "title": "Accordéon"
+      },
+      "carousel": {
+        "title": "Carrousel"
+      },
+      "collapse": {
+        "title": "Réduction"
+      },
+      "navbar": {
+        "title": "Barre de navigation"
+      },
+      "drawer": {
+        "title": "Tiroir"
+      },
+      "rating": {
+        "title": "Évaluation"
+      },
+      "skeleton": {
+        "title": "Squelette"
+      }
+    },
+    "utility": {
+      "title": "Utilitaires",
+      "avatar": {
+        "title": "Avatar"
+      },
+      "colors": {
+        "title": "Couleurs"
+      }
     }
   }
 }

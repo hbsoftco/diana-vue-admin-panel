@@ -331,12 +331,12 @@ DaisyUI theme name to the root HTML element.
 Defines the sidebar hierarchy. Menu entries contain:
 
 - Stable ID.
-- Label or translation key.
+- A `menu.*` translation key.
 - Optional registered icon.
 - Optional route.
 - Optional recursive children.
 
-Some configured project menu routes do not exist in the router.
+Only destinations registered by the router are included in the menu.
 
 ### `src/shared/icons`
 
