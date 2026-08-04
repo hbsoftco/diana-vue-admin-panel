@@ -16,12 +16,17 @@
     "rangeSlider": "Control de rango",
     "select": "Selección",
     "utility": "Utilidades",
-    "avatar": "Avatar"
+    "avatar": "Avatar",
+    "colors": "Colores"
   },
   "pages": {
     "avatar": {
       "title": "Utilidades",
       "avatar": "Avatar"
+    },
+    "colors": {
+      "title": "Utilidades",
+      "colors": "Colores"
     },
     "rangeSlider": {
       "forms": "Formularios",
@@ -150,6 +155,32 @@
         "badges": "Avatares con insignias numéricas",
         "stacked": "Avatares apilados",
         "roundedStacked": "Avatares redondeados apilados"
+      },
+      "colors": {
+        "semanticColors": "Colores semánticos",
+        "semanticDescription": "Los roles semánticos comunican jerarquía, énfasis y estado de la interfaz en los componentes de Diana.",
+        "surfaces": "Fondos y superficies",
+        "surfacesDescription": "Las superficies base y los colores de la estructura se adaptan automáticamente al tema de Diana activo.",
+        "textColors": "Colores de texto",
+        "textDescription": "Las utilidades de texto aportan énfasis semántico y las etiquetas mantienen cada ejemplo comprensible sin depender solo del color.",
+        "borderColors": "Colores de borde",
+        "borderDescription": "Los tokens de borde definen separadores, contornos de componentes y límites de la estructura.",
+        "contentColors": "Colores de contenido",
+        "contentDescription": "Cada fondo semántico se combina con su color de contenido previsto para mantener la legibilidad.",
+        "opacity": "Ejemplos de opacidad",
+        "opacityDescription": "Los modificadores de opacidad de Tailwind derivan variaciones transparentes de un token semántico existente.",
+        "componentUsage": "Uso en componentes",
+        "componentDescription": "Los componentes de Diana consumen los mismos tokens semánticos y de superficie mostrados arriba.",
+        "cssVariable": "Variable CSS",
+        "utility": "Clase de utilidad",
+        "contentToken": "Token de contenido",
+        "actionsAndStatus": "Acciones y estados",
+        "feedbackAndInput": "Comentarios y entrada",
+        "infoMessage": "Los tokens semánticos mantienen coherentes los mensajes informativos.",
+        "successMessage": "Los colores de superficie y contenido responden al tema activo.",
+        "inputLabel": "Entrada adaptada al tema",
+        "inputPlaceholder": "Enfoca para ver el color principal",
+        "inputHelp": "Los anillos de enfoque usan una variación transparente del color semántico."
       }
     },
     "ui-elements": {

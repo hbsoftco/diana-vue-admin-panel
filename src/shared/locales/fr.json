@@ -16,12 +16,17 @@
     "rangeSlider": "Curseur de plage",
     "select": "Sélection",
     "utility": "Utilitaires",
-    "avatar": "Avatar"
+    "avatar": "Avatar",
+    "colors": "Couleurs"
   },
   "pages": {
     "avatar": {
       "title": "Utilitaires",
       "avatar": "Avatar"
+    },
+    "colors": {
+      "title": "Utilitaires",
+      "colors": "Couleurs"
     },
     "rangeSlider": {
       "forms": "Formulaires",
@@ -150,6 +155,32 @@
         "badges": "Avatars avec badges numériques",
         "stacked": "Avatars empilés",
         "roundedStacked": "Avatars arrondis empilés"
+      },
+      "colors": {
+        "semanticColors": "Couleurs sémantiques",
+        "semanticDescription": "Les rôles sémantiques expriment la hiérarchie, l’accentuation et l’état de l’interface dans les composants Diana.",
+        "surfaces": "Arrière-plans et surfaces",
+        "surfacesDescription": "Les surfaces de base et les couleurs de l’interface s’adaptent automatiquement au thème Diana actif.",
+        "textColors": "Couleurs de texte",
+        "textDescription": "Les utilitaires de texte apportent une emphase sémantique et les libellés rendent chaque exemple compréhensible sans la couleur seule.",
+        "borderColors": "Couleurs de bordure",
+        "borderDescription": "Les jetons de bordure définissent les séparateurs, les contours des composants et les limites de l’interface.",
+        "contentColors": "Couleurs de contenu",
+        "contentDescription": "Chaque arrière-plan sémantique est associé à sa couleur de contenu pour préserver la lisibilité.",
+        "opacity": "Exemples d’opacité",
+        "opacityDescription": "Les modificateurs d’opacité Tailwind dérivent des variations transparentes d’un jeton sémantique existant.",
+        "componentUsage": "Utilisation dans les composants",
+        "componentDescription": "Les composants Diana utilisent les mêmes jetons sémantiques et de surface présentés ci-dessus.",
+        "cssVariable": "Variable CSS",
+        "utility": "Classe utilitaire",
+        "contentToken": "Jeton de contenu",
+        "actionsAndStatus": "Actions et états",
+        "feedbackAndInput": "Retour et saisie",
+        "infoMessage": "Les jetons sémantiques assurent la cohérence des messages d’information.",
+        "successMessage": "Les couleurs de surface et de contenu répondent au thème actif.",
+        "inputLabel": "Saisie adaptée au thème",
+        "inputPlaceholder": "Activez le champ pour voir la couleur principale",
+        "inputHelp": "Les anneaux de focus utilisent une variation transparente de la couleur sémantique."
       }
     },
     "ui-elements": {

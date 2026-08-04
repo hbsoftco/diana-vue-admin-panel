@@ -92,7 +92,10 @@ export const menuItems: MenuItem[] = [
     id: 'utility',
     label: 'menu.utility',
     icon: 'medalLine',
-    children: [{ id: 'avatar', label: 'menu.avatar', route: '/utility/avatar' }],
+    children: [
+      { id: 'avatar', label: 'menu.avatar', route: '/utility/avatar' },
+      { id: 'colors', label: 'menu.colors', route: '/utility/colors' },
+    ],
   },
   {
     id: 'projects',
