@@ -346,6 +346,10 @@ Defines all icons available through `DiIcon`. Registry keys form the `IconName` 
 
 ### `src/shared/locales`
 
+Contains one directory per supported locale. Each locale is assembled from six ownership modules:
+`common.json`, `menu.json`, `layout.json`, `components.json`, `pages.json`, and `features.json`.
+See [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md) for ownership and migration rules.
+
 JSON dictionaries for:
 
 - `ar`

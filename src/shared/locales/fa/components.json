@@ -1,0 +1,14 @@
+{
+  "components": {},
+  "base": {
+    "button": {}
+  },
+  "patterns": {
+    "previewCodeCard": {
+      "showPreview": "پیشنمایش",
+      "showCode": "نمایش کد",
+      "copy": "کپی",
+      "copied": "کپی شد!"
+    }
+  }
+}

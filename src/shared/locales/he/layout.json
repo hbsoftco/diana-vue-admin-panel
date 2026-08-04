@@ -1,0 +1,9 @@
+{
+  "layout": {},
+  "theme": {
+    "light": "בהיר",
+    "dark": "כהה"
+  },
+  "author": "hbsoft",
+  "greeting": "שלום"
+}

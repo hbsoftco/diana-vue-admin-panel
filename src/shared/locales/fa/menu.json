@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "dashboards": "داشبوردها",
+    "users": "کاربران",
+    "settings": "تنظیمات",
+    "forms": "فرم‌ها",
+    "formElements": "عناصر فرم",
+    "inputs": "ورودی‌ها",
+    "range": "بازه",
+    "rangeSlider": "اسلایدر بازه",
+    "select": "انتخاب‌گر",
+    "utility": "ابزارها",
+    "avatar": "آواتار",
+    "colors": "رنگ‌ها"
+  }
+}

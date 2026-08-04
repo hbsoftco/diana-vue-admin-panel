@@ -352,6 +352,11 @@ There is no automatic filesystem routing.
 
 ## Localization
 
+Locale messages are split by ownership under `src/shared/locales/<locale>`. New keys must use one
+of the `common`, `menu`, `layout`, `components`, `pages`, or `features` namespaces and camelCase
+segments. See [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md) for the complete ownership rules and
+the compatibility-key migration policy.
+
 Use translation keys for user-facing application-shell and catalogue text where the existing
 feature is localized.
 

@@ -1,0 +1,9 @@
+{
+  "layout": {},
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "author": "hbsoft",
+  "greeting": "Hola"
+}

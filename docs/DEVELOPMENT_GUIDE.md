@@ -341,7 +341,7 @@ installed Iconify data.
 Locale dictionaries are under:
 
 ```text
-src/shared/locales
+src/shared/locales/<locale>/{common,menu,layout,components,pages,features}.json
 ```
 
 Available locale codes:

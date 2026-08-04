@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "dashboards": "Dashboards",
+    "users": "Users",
+    "settings": "Settings",
+    "forms": "Forms",
+    "formElements": "Form Elements",
+    "inputs": "Inputs",
+    "range": "Range",
+    "rangeSlider": "Range Slider",
+    "select": "Select",
+    "utility": "Utility",
+    "avatar": "Avatar",
+    "colors": "Colors"
+  }
+}

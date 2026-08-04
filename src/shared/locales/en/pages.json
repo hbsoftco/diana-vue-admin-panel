@@ -1,0 +1,148 @@
+{
+  "pages": {
+    "avatar": {
+      "title": "Utility",
+      "avatar": "Avatar"
+    },
+    "colors": {
+      "title": "Utility",
+      "colors": "Colors"
+    },
+    "rangeSlider": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "rangeSlider": "Range Slider"
+    },
+    "range": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "range": "Range"
+    },
+    "inputs": {
+      "forms": "Forms",
+      "formElements": "Form Elements",
+      "inputs": "Inputs"
+    },
+    "select": {
+      "title": "Forms",
+      "formElements": "Form Elements",
+      "select": "Select"
+    },
+    "icons": {
+      "title": "Ui Elements",
+      "icons": "Icons"
+    },
+    "drawer": {
+      "title": "Advanced ui",
+      "drawer": "Drawer"
+    },
+    "alerts": {
+      "title": "Ui Elements",
+      "alerts": "Alerts"
+    },
+    "badge": {
+      "title": "Ui Elements",
+      "badge": "Badge"
+    },
+    "breadcrumb": {
+      "title": "Ui Elements",
+      "breadcrumb": "Breadcrumb"
+    },
+    "buttons": {
+      "title": "Ui Elements",
+      "buttons": "Buttons"
+    },
+    "loadings": {
+      "title": "Ui Elements",
+      "loadings": "Loadings"
+    },
+    "buttonGroup": {
+      "title": "Ui Elements",
+      "buttonGroup": "Button Group"
+    },
+    "card": {
+      "title": "Ui Elements",
+      "cards": "Cards"
+    },
+    "dropdowns": {
+      "title": "Ui Elements",
+      "dropdowns": "Dropdowns"
+    },
+    "imagesFigures": {
+      "title": "Ui Elements",
+      "imagesFigures": "Images & Figures"
+    },
+    "linksInteractions": {
+      "title": "Ui Elements",
+      "linksInteractions": "Links & Interactions"
+    },
+    "listGroup": {
+      "title": "Ui Elements",
+      "listGroup": "List Group"
+    },
+    "navsTabs": {
+      "title": "Ui Elements",
+      "navsTabs": "Navs & Tabs"
+    },
+    "objectFit": {
+      "title": "Ui Elements",
+      "objectFit": "Object Fit"
+    },
+    "pagination": {
+      "title": "Ui Elements",
+      "pagination": "Pagination"
+    },
+    "popovers": {
+      "title": "Ui Elements",
+      "popovers": "Popovers"
+    },
+    "progress": {
+      "title": "Ui Elements",
+      "progress": "Progress"
+    },
+    "switch": {
+      "title": "Ui Elements",
+      "switch": "Switch"
+    },
+    "modals": {
+      "title": "Ui Elements",
+      "modals": "Modals"
+    },
+    "toasts": {
+      "title": "Ui Elements",
+      "toasts": "Toasts"
+    },
+    "tooltips": {
+      "title": "Ui Elements",
+      "tooltips": "Tooltips"
+    },
+    "typography": {
+      "title": "Ui Elements",
+      "typography": "Typography"
+    },
+    "accordion": {
+      "title": "Advanced UI",
+      "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "Advanced UI",
+      "carousel": "Carousel"
+    },
+    "collapse": {
+      "title": "Advanced UI",
+      "collapse": "Collapse"
+    },
+    "navbar": {
+      "title": "Advanced UI",
+      "navbar": "Navbar"
+    },
+    "skeleton": {
+      "title": "Advanced UI",
+      "skeleton": "Skeleton"
+    },
+    "rating": {
+      "title": "Advanced UI",
+      "rating": "Rating"
+    }
+  }
+}

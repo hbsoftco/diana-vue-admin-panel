@@ -275,7 +275,9 @@ server-state caching.
 
 ## Localization and Direction
 
-`src/app/i18n.ts` configures Vue I18n in Composition API mode:
+`src/app/i18n.ts` configures Vue I18n in Composition API mode. Each locale is assembled from
+ownership-based `common`, `menu`, `layout`, `components`, `pages`, and `features` modules as
+defined in [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md):
 
 - `legacy: false`
 - Default locale: `en`

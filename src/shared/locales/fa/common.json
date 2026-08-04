@@ -1,0 +1,14 @@
+{
+  "common": {},
+  "variants": {
+    "primary": "اصلی",
+    "secondary": "ثانویه",
+    "info": "اطلاعاتی",
+    "accent": "تاکیدی",
+    "success": "موفق",
+    "warning": "هشدار",
+    "error": "خطا",
+    "neutral": "خنثی",
+    "link": "لینکی"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "pages": {
+    "avatar": {
+      "title": "כלים",
+      "avatar": "אווטאר"
+    },
+    "colors": {
+      "title": "כלים",
+      "colors": "צבעים"
+    },
+    "rangeSlider": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "rangeSlider": "מחוון טווח"
+    },
+    "range": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "range": "טווח"
+    },
+    "inputs": {
+      "forms": "טפסים",
+      "formElements": "רכיבי טופס",
+      "inputs": "שדות קלט"
+    },
+    "select": {
+      "title": "טפסים",
+      "formElements": "רכיבי טופס",
+      "select": "בחירה"
+    },
+    "alerts": {
+      "title": "אלמנטי ממשק",
+      "alerts": "התראות"
+    },
+    "badge": {
+      "title": "אלמנטי ממשק",
+      "badge": "תג"
+    },
+    "breadcrumb": {
+      "title": "אלמנטי ממשק",
+      "breadcrumb": "נתיב ניווט"
+    },
+    "buttons": {
+      "title": "אלמנטי ממשק",
+      "buttons": "כפתורים"
+    },
+    "buttonGroup": {
+      "title": "אלמנטי ממשק",
+      "buttonGroup": "קבוצת כפתורים"
+    },
+    "card": {
+      "title": "אלמנטי ממשק",
+      "cards": "כרטיסים"
+    },
+    "dropdowns": {
+      "title": "אלמנטי ממשק",
+      "dropdowns": "תפריטים נפתחים"
+    },
+    "imagesFigures": {
+      "title": "אלמנטי ממשק",
+      "imagesFigures": "תמונות וצורות"
+    },
+    "linksInteractions": {
+      "title": "אלמנטי ממשק",
+      "linksInteractions": "קישורים ואינטראקציות"
+    },
+    "listGroup": {
+      "title": "אלמנטי ממשק",
+      "listGroup": "קבוצת רשימה"
+    },
+    "navsTabs": {
+      "title": "אלמנטי ממשק",
+      "navsTabs": "ניווט ולשוניות"
+    },
+    "objectFit": {
+      "title": "אלמנטי ממשק",
+      "objectFit": "התאמת אובייקט"
+    },
+    "pagination": {
+      "title": "אלמנטי ממשק",
+      "pagination": "עמודים"
+    },
+    "popovers": {
+      "title": "אלמנטי ממשק",
+      "popovers": "חלונות קופצים"
+    },
+    "progress": {
+      "title": "אלמנטי ממשק",
+      "progress": "התקדמות"
+    },
+    "switch": {
+      "title": "אלמנטי ממשק",
+      "switch": "מתג"
+    },
+    "spinners": {
+      "title": "אלמנטי ממשק",
+      "spinners": "ספינרים"
+    },
+    "toasts": {
+      "title": "אלמנטי ממשק",
+      "toasts": "הודעות"
+    },
+    "tooltips": {
+      "title": "אלמנטי ממשק",
+      "tooltips": "הסברים"
+    },
+    "typography": {
+      "title": "אלמנטי ממשק",
+      "typography": "טיפוגרפיה"
+    },
+    "accordion": {
+      "title": "Advanced UI",
+      "accordion": "Accordion"
+    },
+    "carousel": {
+      "title": "ממשק משתמש מתקדם",
+      "carousel": "קרוסלה"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "dashboards": "Tableaux de bord",
+    "users": "Utilisateurs",
+    "settings": "Paramètres",
+    "forms": "Formulaires",
+    "formElements": "Éléments de formulaire",
+    "inputs": "Champs de saisie",
+    "range": "Plage",
+    "rangeSlider": "Curseur de plage",
+    "select": "Sélection",
+    "utility": "Utilitaires",
+    "avatar": "Avatar",
+    "colors": "Couleurs"
+  }
+}

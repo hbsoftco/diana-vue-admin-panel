@@ -1,181 +1,4 @@
 {
-  "author": "hbsoft",
-  "greeting": "Hello",
-  "theme": {
-    "light": "Light",
-    "dark": "Dark"
-  },
-  "menu": {
-    "dashboards": "Dashboards",
-    "users": "Users",
-    "settings": "Settings",
-    "forms": "Forms",
-    "formElements": "Form Elements",
-    "inputs": "Inputs",
-    "range": "Range",
-    "rangeSlider": "Range Slider",
-    "select": "Select",
-    "utility": "Utility",
-    "avatar": "Avatar",
-    "colors": "Colors"
-  },
-  "pages": {
-    "avatar": {
-      "title": "Utility",
-      "avatar": "Avatar"
-    },
-    "colors": {
-      "title": "Utility",
-      "colors": "Colors"
-    },
-    "rangeSlider": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "rangeSlider": "Range Slider"
-    },
-    "range": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "range": "Range"
-    },
-    "inputs": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "inputs": "Inputs"
-    },
-    "select": {
-      "title": "Forms",
-      "formElements": "Form Elements",
-      "select": "Select"
-    },
-    "icons": {
-      "title": "Ui Elements",
-      "icons": "Icons"
-    },
-    "drawer": {
-      "title": "Advanced ui",
-      "drawer": "Drawer"
-    },
-    "alerts": {
-      "title": "Ui Elements",
-      "alerts": "Alerts"
-    },
-    "badge": {
-      "title": "Ui Elements",
-      "badge": "Badge"
-    },
-    "breadcrumb": {
-      "title": "Ui Elements",
-      "breadcrumb": "Breadcrumb"
-    },
-    "buttons": {
-      "title": "Ui Elements",
-      "buttons": "Buttons"
-    },
-    "loadings": {
-      "title": "Ui Elements",
-      "loadings": "Loadings"
-    },
-    "buttonGroup": {
-      "title": "Ui Elements",
-      "buttonGroup": "Button Group"
-    },
-    "card": {
-      "title": "Ui Elements",
-      "cards": "Cards"
-    },
-    "dropdowns": {
-      "title": "Ui Elements",
-      "dropdowns": "Dropdowns"
-    },
-    "imagesFigures": {
-      "title": "Ui Elements",
-      "imagesFigures": "Images & Figures"
-    },
-    "linksInteractions": {
-      "title": "Ui Elements",
-      "linksInteractions": "Links & Interactions"
-    },
-    "listGroup": {
-      "title": "Ui Elements",
-      "listGroup": "List Group"
-    },
-    "navsTabs": {
-      "title": "Ui Elements",
-      "navsTabs": "Navs & Tabs"
-    },
-    "objectFit": {
-      "title": "Ui Elements",
-      "objectFit": "Object Fit"
-    },
-    "pagination": {
-      "title": "Ui Elements",
-      "pagination": "Pagination"
-    },
-    "popovers": {
-      "title": "Ui Elements",
-      "popovers": "Popovers"
-    },
-    "progress": {
-      "title": "Ui Elements",
-      "progress": "Progress"
-    },
-    "switch": {
-      "title": "Ui Elements",
-      "switch": "Switch"
-    },
-    "modals": {
-      "title": "Ui Elements",
-      "modals": "Modals"
-    },
-    "toasts": {
-      "title": "Ui Elements",
-      "toasts": "Toasts"
-    },
-    "tooltips": {
-      "title": "Ui Elements",
-      "tooltips": "Tooltips"
-    },
-    "typography": {
-      "title": "Ui Elements",
-      "typography": "Typography"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
-      "title": "Advanced UI",
-      "carousel": "Carousel"
-    },
-    "collapse": {
-      "title": "Advanced UI",
-      "collapse": "Collapse"
-    },
-    "navbar": {
-      "title": "Advanced UI",
-      "navbar": "Navbar"
-    },
-    "skeleton": {
-      "title": "Advanced UI",
-      "skeleton": "Skeleton"
-    },
-    "rating": {
-      "title": "Advanced UI",
-      "rating": "Rating"
-    }
-  },
-  "base": {
-    "button": {}
-  },
-  "patterns": {
-    "previewCodeCard": {
-      "showPreview": "Show Preview",
-      "showCode": "Show Code",
-      "copy": "Copy",
-      "copied": "Copied!"
-    }
-  },
   "features": {
     "utility": {
       "avatar": {
@@ -449,13 +272,11 @@
           "confirm": "Confirm",
           "delete": "Delete"
         },
-
         "basic": {
           "title": "Basic Modal",
           "header": "Modal Title",
           "description": "This is a basic modal with default settings."
         },
-
         "position": {
           "title": "Position Variants",
           "top": "Top",
@@ -463,7 +284,6 @@
           "topDesc": "This modal appears at the top of the screen.",
           "bottomDesc": "This modal appears at the bottom of the screen."
         },
-
         "size": {
           "title": "Size Variants",
           "sm": "This is a small modal.",
@@ -473,14 +293,12 @@
           "full": "Full Screen",
           "fullDesc": "This modal takes up the entire screen."
         },
-
         "blur": {
           "title": "Backdrop Blur",
           "xs": "Extra small backdrop blur.",
           "sm": "Small backdrop blur.",
           "md": "Medium backdrop blur."
         },
-
         "behavior": {
           "title": "Behavior Options",
           "noBackdrop": "No Backdrop Close",
@@ -490,7 +308,6 @@
           "noEscDesc": "Pressing the ESC key will not close this modal.",
           "noCloseButtonDesc": "This modal does not have a close button."
         },
-
         "confirmation": {
           "title": "Confirmation Dialog",
           "open": "Delete Account",
@@ -509,7 +326,6 @@
         "tooltipOnIcons": "Tooltip on Icons",
         "multiLineTooltips": "Multi-line Tooltips",
         "interactiveElements": "Interactive Elements",
-
         "hoverMe": "Hover me",
         "top": "Top",
         "right": "Right",
@@ -523,12 +339,10 @@
         "warning": "Warning",
         "error": "Error",
         "neutral": "Neutral",
-
         "tooltipOnTop": "Tooltip on top",
         "tooltipOnRight": "Tooltip on right",
         "tooltipOnBottom": "Tooltip on bottom",
         "tooltipOnLeft": "Tooltip on left",
-
         "primaryTooltip": "Primary tooltip",
         "secondaryTooltip": "Secondary tooltip",
         "accentTooltip": "Accent tooltip",
@@ -537,62 +351,51 @@
         "warningTooltip": "Warning tooltip",
         "errorTooltip": "Error tooltip",
         "neutralTooltip": "Neutral tooltip",
-
         "alwaysVisible": "Always visible",
         "hoverToSee": "Hover to see",
         "openTooltip": "Open tooltip",
         "hoverTooltip": "Hover tooltip",
-
         "clickMe": "Click me!",
         "buttonWithTooltip": "Button with tooltip",
         "primaryAction": "Primary action",
         "action": "Action",
         "deleteItem": "Delete item",
         "delete": "Delete",
-
         "primaryTop": "Primary top",
         "successRight": "Success right",
         "warningBottom": "Warning bottom",
         "errorLeft": "Error left",
-
         "information": "Information",
         "settings": "Settings",
         "deleteIcon": "Delete",
         "help": "Help",
-
         "longTooltipText": "This is a longer tooltip text that might wrap to multiple lines depending on the screen size",
         "longText": "Long text",
         "short": "Short",
         "shortText": "Short text",
-
         "clickToCopy": "Click to copy",
         "copy": "Copy",
         "toggleSwitch": "Toggle switch",
         "selectOption": "Select option",
         "option1": "Option 1",
         "option2": "Option 2",
-
         "responsiveTooltip": "Responsive Tooltip",
         "mobileToDesktop": "Mobile to Desktop",
         "adaptiveColorPosition": "Adaptive Color & Position",
         "responsiveIcons": "Responsive Icons",
         "complexResponsive": "Complex Responsive Layout",
-
         "tooltipChangesPosition": "Tooltip changes position based on screen size",
         "resizeToSee": "Resize to see changes",
         "topMobileRightDesktop": "Top on mobile, Right on desktop",
         "mobileDesktop": "Mobile → Desktop",
         "bottomMobileLeftTablet": "Bottom on mobile, Left on tablet+",
         "mobileTablet": "Mobile → Tablet",
-
         "infoResponsive": "Info tooltip with responsive position",
         "warningAdapts": "Warning tooltip adapts to screen",
         "errorFullControl": "Error with full responsive control",
-
         "settingsResponsive": "Settings - responsive position",
         "helpAdapts": "Help - adapts to screen size",
         "notificationsFullResponsive": "Notifications - full responsive",
-
         "adaptsBasedOnLayout": "Adapts based on layout",
         "smartPositioning": "Smart positioning",
         "responsiveDesign": "Responsive design",
@@ -706,16 +509,5 @@
         "settings": "Settings"
       }
     }
-  },
-  "variants": {
-    "primary": "Primary",
-    "secondary": "Secondary",
-    "info": "Info",
-    "accent": "Accent",
-    "success": "Success",
-    "warning": "Warning",
-    "error": "Error",
-    "neutral": "Neutral",
-    "link": "Link"
   }
 }

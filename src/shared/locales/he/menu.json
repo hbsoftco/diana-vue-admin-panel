@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "dashboards": "לוחות בקרה",
+    "users": "משתמשים",
+    "settings": "הגדרות",
+    "forms": "טפסים",
+    "formElements": "רכיבי טופס",
+    "inputs": "שדות קלט",
+    "range": "טווח",
+    "rangeSlider": "מחוון טווח",
+    "select": "בחירה",
+    "utility": "כלים",
+    "avatar": "אווטאר",
+    "colors": "צבעים"
+  }
+}

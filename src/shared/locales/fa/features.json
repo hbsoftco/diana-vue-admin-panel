@@ -1,190 +1,4 @@
 {
-  "author": "حسین",
-  "greeting": "سلام",
-  "theme": {
-    "light": "روشن",
-    "dark": "تاریک"
-  },
-  "sidebar": {
-    "dashboards": {
-      "title": "داشبوردها"
-    },
-    "ui-elements": {
-      "title": "المان‌های ظاهری",
-      "icons": "آیکن‌ها",
-      "alerts": "هشدارها",
-      "badge": "نشان",
-      "breadcrumb": "مسیر ناوبری",
-      "buttons": "دکمه‌ها",
-      "loadings": "لودینگ",
-      "buttonGroup": "گروه دکمه",
-      "card": "کاردها",
-      "dropdowns": "منوهای کشویی",
-      "imagesFigures": "تصاویر و اشکال",
-      "linksInteractions": "لینک‌ها و تعاملات",
-      "listGroup": "گروه لیست",
-      "navsTabs": "ناوبری و تب‌ها",
-      "objectFit": "تناسب شیء",
-      "pagination": "صفحه‌بندی",
-      "popovers": "پاپ‌آورها",
-      "progress": "پیشرفت",
-      "spinners": "چرخ‌اندن‌ها",
-      "toasts": "اعلان‌ها",
-      "tooltips": "راهنماها",
-      "typography": "تایپوگرافی"
-    }
-  },
-  "menu": {
-    "dashboards": "داشبوردها",
-    "users": "کاربران",
-    "settings": "تنظیمات",
-    "forms": "فرم‌ها",
-    "formElements": "عناصر فرم",
-    "inputs": "ورودی‌ها",
-    "range": "بازه",
-    "rangeSlider": "اسلایدر بازه",
-    "select": "انتخاب‌گر",
-    "utility": "ابزارها",
-    "avatar": "آواتار",
-    "colors": "رنگ‌ها"
-  },
-  "pages": {
-    "avatar": {
-      "title": "ابزارها",
-      "avatar": "آواتار"
-    },
-    "colors": {
-      "title": "ابزارها",
-      "colors": "رنگ‌ها"
-    },
-    "rangeSlider": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "rangeSlider": "اسلایدر بازه"
-    },
-    "range": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "range": "بازه"
-    },
-    "inputs": {
-      "forms": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "inputs": "ورودی‌ها"
-    },
-    "select": {
-      "title": "فرم‌ها",
-      "formElements": "عناصر فرم",
-      "select": "انتخاب‌گر"
-    },
-    "alerts": {
-      "title": "المان‌های ظاهری",
-      "alerts": "هشدارها"
-    },
-    "drawer": {
-      "title": "المان‌های پیشرفته",
-      "drawer": "دراور"
-    },
-    "badge": {
-      "title": "المان‌های ظاهری",
-      "badge": "نشان"
-    },
-    "breadcrumb": {
-      "title": "المان‌های ظاهری",
-      "breadcrumb": "مسیر ناوبری"
-    },
-    "buttons": {
-      "title": "المان‌های ظاهری",
-      "buttons": "دکمه‌ها"
-    },
-    "loadings": {
-      "title": "المان‌های ظاهری",
-      "loadings": "لودینگ"
-    },
-    "buttonGroup": {
-      "title": "المان‌های ظاهری",
-      "buttonGroup": "گروه دکمه"
-    },
-    "card": {
-      "title": "المان‌های ظاهری",
-      "cards": "کاردها"
-    },
-    "dropdowns": {
-      "title": "المان‌های ظاهری",
-      "dropdowns": "منوهای کشویی"
-    },
-    "imagesFigures": {
-      "title": "المان‌های ظاهری",
-      "imagesFigures": "تصاویر و اشکال"
-    },
-    "linksInteractions": {
-      "title": "المان‌های ظاهری",
-      "linksInteractions": "لینک‌ها و تعاملات"
-    },
-    "listGroup": {
-      "title": "المان‌های ظاهری",
-      "listGroup": "گروه لیست"
-    },
-    "navsTabs": {
-      "title": "المان‌های ظاهری",
-      "navsTabs": "ناوبری و تب‌ها"
-    },
-    "objectFit": {
-      "title": "المان‌های ظاهری",
-      "objectFit": "تناسب شیء"
-    },
-    "pagination": {
-      "title": "المان‌های ظاهری",
-      "pagination": "صفحه‌بندی"
-    },
-    "popovers": {
-      "title": "المان‌های ظاهری",
-      "popovers": "پاپ‌آورها"
-    },
-    "progress": {
-      "title": "المان‌های ظاهری",
-      "progress": "پیشرفت"
-    },
-    "switch": {
-      "title": "المان‌های ظاهری",
-      "switch": "سوئیچ"
-    },
-    "modals": {
-      "title": "المان‌های ظاهری",
-      "modals": "پنجره‌های مودال"
-    },
-    "toasts": {
-      "title": "المان‌های ظاهری",
-      "toasts": "اعلان‌ها"
-    },
-    "tooltips": {
-      "title": "المان‌های ظاهری",
-      "tooltips": "راهنماها"
-    },
-    "typography": {
-      "title": "المان‌های ظاهری",
-      "typography": "تایپوگرافی"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
-      "title": "رابط کاربری پیشرفته",
-      "carousel": "اسلایدشو"
-    }
-  },
-  "base": {
-    "button": {}
-  },
-  "patterns": {
-    "previewCodeCard": {
-      "showPreview": "پیشنمایش",
-      "showCode": "نمایش کد",
-      "copy": "کپی",
-      "copied": "کپی شد!"
-    }
-  },
   "features": {
     "utility": {
       "avatar": {
@@ -458,13 +272,11 @@
           "confirm": "تأیید",
           "delete": "حذف"
         },
-
         "basic": {
           "title": "مودال ساده",
           "header": "عنوان مودال",
           "description": "این یک مودال ساده با تنظیمات پیش‌فرض است."
         },
-
         "position": {
           "title": "موقعیت مودال",
           "top": "بالا",
@@ -472,7 +284,6 @@
           "topDesc": "این مودال در بالای صفحه نمایش داده می‌شود.",
           "bottomDesc": "این مودال در پایین صفحه نمایش داده می‌شود."
         },
-
         "size": {
           "title": "اندازه‌های مودال",
           "sm": "این یک مودال کوچک است.",
@@ -482,14 +293,12 @@
           "full": "تمام صفحه",
           "fullDesc": "این مودال کل صفحه را پوشش می‌دهد."
         },
-
         "blur": {
           "title": "محو شدن پس‌زمینه",
           "xs": "محو شدن بسیار کم پس‌زمینه.",
           "sm": "محو شدن کم پس‌زمینه.",
           "md": "محو شدن متوسط پس‌زمینه."
         },
-
         "behavior": {
           "title": "رفتار مودال",
           "noBackdrop": "عدم بستن با کلیک بیرون",
@@ -499,7 +308,6 @@
           "noEscDesc": "با فشردن کلید ESC، مودال بسته نمی‌شود.",
           "noCloseButtonDesc": "این مودال دکمه بستن ندارد."
         },
-
         "confirmation": {
           "title": "دیالوگ تأیید",
           "open": "حذف حساب کاربری",
@@ -518,7 +326,6 @@
         "tooltipOnIcons": "راهنما روی آیکون‌ها",
         "multiLineTooltips": "راهنماهای چند خطی",
         "interactiveElements": "عناصر تعاملی",
-
         "hoverMe": "روی من هاور کنید",
         "top": "بالا",
         "right": "راست",
@@ -532,12 +339,10 @@
         "warning": "هشدار",
         "error": "خطا",
         "neutral": "خنثی",
-
         "tooltipOnTop": "راهنما در بالا",
         "tooltipOnRight": "راهنما در راست",
         "tooltipOnBottom": "راهنما در پایین",
         "tooltipOnLeft": "راهنما در چپ",
-
         "primaryTooltip": "راهنمای اصلی",
         "secondaryTooltip": "راهنمای ثانویه",
         "accentTooltip": "راهنمای تاکیدی",
@@ -546,62 +351,51 @@
         "warningTooltip": "راهنمای هشدار",
         "errorTooltip": "راهنمای خطا",
         "neutralTooltip": "راهنمای خنثی",
-
         "alwaysVisible": "همیشه قابل مشاهده",
         "hoverToSee": "برای مشاهده هاور کنید",
         "openTooltip": "راهنمای باز",
         "hoverTooltip": "راهنمای هاور",
-
         "clickMe": "کلیک کنید!",
         "buttonWithTooltip": "دکمه با راهنما",
         "primaryAction": "عملیات اصلی",
         "action": "عملیات",
         "deleteItem": "حذف مورد",
         "delete": "حذف",
-
         "primaryTop": "اصلی بالا",
         "successRight": "موفقیت راست",
         "warningBottom": "هشدار پایین",
         "errorLeft": "خطا چپ",
-
         "information": "اطلاعات",
         "settings": "تنظیمات",
         "deleteIcon": "حذف",
         "help": "راهنما",
-
         "longTooltipText": "این یک متن راهنمای طولانی‌تر است که بسته به اندازه صفحه ممکن است به چند خط تقسیم شود",
         "longText": "متن بلند",
         "short": "کوتاه",
         "shortText": "متن کوتاه",
-
         "clickToCopy": "برای کپی کلیک کنید",
         "copy": "کپی",
         "toggleSwitch": "سوئیچ تغییر وضعیت",
         "selectOption": "انتخاب گزینه",
         "option1": "گزینه ۱",
         "option2": "گزینه ۲",
-
         "responsiveTooltip": "راهنمای واکنش‌گرا",
         "mobileToDesktop": "موبایل به دسکتاپ",
         "adaptiveColorPosition": "رنگ و موقعیت تطبیقی",
         "responsiveIcons": "آیکون‌های واکنش‌گرا",
         "complexResponsive": "لایه پیچیده واکنش‌گرا",
-
         "tooltipChangesPosition": "راهنما بر اساس اندازه صفحه موقعیت خود را تغییر می‌دهد",
         "resizeToSee": "برای مشاهده تغییرات اندازه را تغییر دهید",
         "topMobileRightDesktop": "بالا در موبایل، راست در دسکتاپ",
         "mobileDesktop": "موبایل ← دسکتاپ",
         "bottomMobileLeftTablet": "پایین در موبایل، چپ در تبلت+",
         "mobileTablet": "موبایل ← تبلت",
-
         "infoResponsive": "راهنمای اطلاعات با موقعیت واکنش‌گرا",
         "warningAdapts": "راهنمای هشدار با صفحه سازگار می‌شود",
         "errorFullControl": "خطا با کنترل کامل واکنش‌گرا",
-
         "settingsResponsive": "تنظیمات - موقعیت واکنش‌گرا",
         "helpAdapts": "راهنما - با اندازه صفحه سازگار می‌شود",
         "notificationsFullResponsive": "اعلان‌ها - کاملا واکنش‌گرا",
-
         "adaptsBasedOnLayout": "بر اساس لایه سازگار می‌شود",
         "smartPositioning": "موقعیت‌یابی هوشمند",
         "responsiveDesign": "طراحی واکنش‌گرا",
@@ -706,16 +500,5 @@
         "settings": "تنظیمات"
       }
     }
-  },
-  "variants": {
-    "primary": "اصلی",
-    "secondary": "ثانویه",
-    "info": "اطلاعاتی",
-    "accent": "تاکیدی",
-    "success": "موفق",
-    "warning": "هشدار",
-    "error": "خطا",
-    "neutral": "خنثی",
-    "link": "لینکی"
   }
 }

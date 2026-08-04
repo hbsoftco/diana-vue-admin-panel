@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "dashboards": "Paneles",
+    "users": "Usuarios",
+    "settings": "Configuración",
+    "forms": "Formularios",
+    "formElements": "Elementos de formulario",
+    "inputs": "Campos de entrada",
+    "range": "Rango",
+    "rangeSlider": "Control de rango",
+    "select": "Selección",
+    "utility": "Utilidades",
+    "avatar": "Avatar",
+    "colors": "Colores"
+  }
+}
