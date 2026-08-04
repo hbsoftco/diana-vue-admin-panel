@@ -50,9 +50,6 @@ temporarily in their owner modules:
 | Existing key                                                 | Owner module    | Phase 1 target example                             |
 | ------------------------------------------------------------ | --------------- | -------------------------------------------------- |
 | `variants.primary`                                           | `common.json`   | `common.variants.primary`                          |
-| `theme.*`                                                    | `layout.json`   | `layout.theme.*`                                   |
-| `sidebar.*`                                                  | `layout.json`   | `layout.sidebar.*`                                 |
-| root `author` and `greeting`                                 | `layout.json`   | An owner-specific `layout.*` or `features.*` key   |
 | hyphenated feature segments such as `features.advanced-ui.*` | `features.json` | camelCase segments such as `features.advancedUi.*` |
 
 Migrate one bounded area at a time. Add the canonical key in every locale in scope, change all
@@ -62,6 +59,9 @@ fallback.
 
 Shared component defaults and the preview-code pattern now use the canonical `components.*`
 namespace. Generic close and copy actions use `common.actions.*`.
+
+The permanent application shell now uses the canonical `layout.*` namespace. Legacy root
+`author`, `greeting`, `theme.*`, and `sidebar.*` messages have been removed.
 
 ## Adding translations
 

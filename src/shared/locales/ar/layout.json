@@ -1,9 +1,61 @@
 {
-  "layout": {},
-  "theme": {
-    "light": "فاتح",
-    "dark": "داكن"
-  },
-  "author": "حسین",
-  "greeting": "مرحبا"
+  "layout": {
+    "footer": {
+      "copyright": "حقوق النشر © {year} {brand}. صُمم بكل {heart} بواسطة {author}. مفتوح المصدر بموجب ترخيص {license}."
+    },
+    "sidebar": {
+      "label": "الشريط الجانبي للتطبيق",
+      "logoAlt": "شعار Diana",
+      "navigation": "التنقل الرئيسي",
+      "expand": "توسيع الشريط الجانبي",
+      "collapse": "طي الشريط الجانبي"
+    },
+    "notifications": {
+      "label": "الإشعارات",
+      "title": "الإشعارات",
+      "viewAll": "عرض جميع الإشعارات",
+      "items": {
+        "newMessage": {
+          "title": "رسالة جديدة",
+          "description": "لديك رسالة جديدة من {sender}"
+        },
+        "taskCompleted": {
+          "title": "اكتملت المهمة",
+          "description": "اكتمل {project}"
+        },
+        "meetingReminder": {
+          "title": "تذكير بالاجتماع",
+          "description": "اجتماع الفريق بعد {count} دقيقة"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "منذ دقيقة واحدة",
+      "minutesAgo": "منذ {count} دقائق",
+      "hourAgo": "منذ ساعة واحدة",
+      "hoursAgo": "منذ {count} ساعات"
+    },
+    "userMenu": {
+      "label": "قائمة المستخدم",
+      "avatarAlt": "الصورة الرمزية لـ {name}",
+      "dashboard": "لوحة المعلومات",
+      "profile": "الملف الشخصي",
+      "messages": "الرسائل",
+      "settings": "الإعدادات",
+      "help": "المساعدة",
+      "logout": "تسجيل الخروج",
+      "lastLogin": "آخر تسجيل دخول: {time}"
+    },
+    "theme": {
+      "switchToLight": "التبديل إلى السمة الفاتحة",
+      "switchToDark": "التبديل إلى السمة الداكنة"
+    },
+    "fullscreen": {
+      "enter": "الدخول إلى ملء الشاشة",
+      "exit": "الخروج من ملء الشاشة"
+    },
+    "language": {
+      "select": "اختيار اللغة"
+    }
+  }
 }

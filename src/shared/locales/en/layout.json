@@ -1,9 +1,61 @@
 {
-  "layout": {},
-  "theme": {
-    "light": "Light",
-    "dark": "Dark"
-  },
-  "author": "hbsoft",
-  "greeting": "Hello"
+  "layout": {
+    "footer": {
+      "copyright": "Copyright © {year} {brand}. Designed with {heart} by {author}. Open Source under the {license} License."
+    },
+    "sidebar": {
+      "label": "Application sidebar",
+      "logoAlt": "Diana logo",
+      "navigation": "Primary navigation",
+      "expand": "Expand sidebar",
+      "collapse": "Collapse sidebar"
+    },
+    "notifications": {
+      "label": "Notifications",
+      "title": "Notifications",
+      "viewAll": "View all notifications",
+      "items": {
+        "newMessage": {
+          "title": "New message",
+          "description": "You have a new message from {sender}"
+        },
+        "taskCompleted": {
+          "title": "Task completed",
+          "description": "{project} has been completed"
+        },
+        "meetingReminder": {
+          "title": "Meeting reminder",
+          "description": "Team meeting in {count} minutes"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "{count} minute ago",
+      "minutesAgo": "{count} minutes ago",
+      "hourAgo": "{count} hour ago",
+      "hoursAgo": "{count} hours ago"
+    },
+    "userMenu": {
+      "label": "User menu",
+      "avatarAlt": "Avatar for {name}",
+      "dashboard": "Dashboard",
+      "profile": "Profile",
+      "messages": "Messages",
+      "settings": "Settings",
+      "help": "Help",
+      "logout": "Logout",
+      "lastLogin": "Last login: {time}"
+    },
+    "theme": {
+      "switchToLight": "Switch to light theme",
+      "switchToDark": "Switch to dark theme"
+    },
+    "fullscreen": {
+      "enter": "Enter fullscreen",
+      "exit": "Exit fullscreen"
+    },
+    "language": {
+      "select": "Select language"
+    }
+  }
 }

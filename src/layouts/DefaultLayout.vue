@@ -57,25 +57,41 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
 
         <footer class="footer py-3 text-center mt-8 bg-content-background border-t border-content">
           <div class="flex justify-center items-center w-full">
-            <span class="flex gap-1 text-di-sm">
-              Copyright © <span id="year">2026</span>
-              <DiButton variant="link" size="xs" custom-class="px-0.5 relative -top-0.5 text-di-sm">
-                Diana
-              </DiButton>
-              . Designed with
-              <DiIcon name="heartBold" color="error" custom-class="relative top-0.5" /> by
-              <DiButton
-                custom-class="px-0.5 text-di-sm relative -top-0.5 text-primary"
-                tag="a"
-                href="https://hosseinbajan.ir/"
-                target="_blank"
-                variant="link"
-                size="xs"
-              >
-                Diana's father
-              </DiButton>
-              . Open Source under the MIT License
-            </span>
+            <i18n-t
+              keypath="layout.footer.copyright"
+              tag="span"
+              class="flex flex-wrap items-center justify-center gap-1 text-di-sm"
+              :values="{ year: 2026 }"
+            >
+              <template #brand>
+                <DiButton
+                  variant="link"
+                  size="xs"
+                  custom-class="px-0.5 relative -top-0.5 text-di-sm"
+                >
+                  Diana
+                </DiButton>
+              </template>
+              <template #heart>
+                <DiIcon name="heartBold" color="error" custom-class="relative top-0.5" />
+              </template>
+              <template #author>
+                <DiButton
+                  custom-class="px-0.5 text-di-sm relative -top-0.5 text-primary"
+                  tag="a"
+                  href="https://hosseinbajan.ir/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="link"
+                  size="xs"
+                >
+                  Diana's father
+                </DiButton>
+              </template>
+              <template #license>
+                MIT
+              </template>
+            </i18n-t>
           </div>
         </footer>
       </main>

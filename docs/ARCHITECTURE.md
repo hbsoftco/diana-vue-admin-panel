@@ -178,7 +178,7 @@ There is no:
 - A route-derived heading
 - `DiBreadcrumb`
 - A child `RouterView`
-- A static footer
+- A localized footer
 
 The layout watches the active route and active locale through `watchEffect`. The translated
 page title is assigned to `document.title`.

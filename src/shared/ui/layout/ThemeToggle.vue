@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { useLocalStorage, usePreferredDark } from '@vueuse/core'
-import { watch } from 'vue'
+import { computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 const preferredDark = usePreferredDark()
 const isDark = useLocalStorage('theme', preferredDark.value)
+const { t } = useI18n()
+const toggleLabel = computed(() =>
+  isDark.value ? t('layout.theme.switchToLight') : t('layout.theme.switchToDark'),
+)
 
 watch(
   isDark,
@@ -26,7 +31,8 @@ function toggleTheme() {
     size="sm"
     variant="ghost"
     circle
-    :aria-label="isDark ? 'Switch to light theme' : 'Switch to dark theme'"
+    :aria-label="toggleLabel"
+    :title="toggleLabel"
     @click="toggleTheme"
   >
     <DiIcon :name="!isDark ? 'moon' : 'sun'" size="sm" />

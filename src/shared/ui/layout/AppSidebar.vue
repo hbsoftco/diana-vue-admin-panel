@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
 import type { MenuItem as MenuItemType } from '@/shared/types/models'
@@ -12,6 +13,7 @@ import MenuItem from './MenuItem.vue'
 const { isSidebarCollapsed } = useSidebar()
 
 const route = useRoute()
+const { t } = useI18n()
 const expandedMenus = ref<Set<string>>(new Set())
 
 /**
@@ -69,6 +71,7 @@ watch(
   <aside
     class="bg-(--color-menu-bg) border-r rtl:border-l border-(--color-menu-border) flex flex-col transition-all duration-300 ease-in-out"
     :class="[isSidebarCollapsed ? 'w-20' : 'w-64']"
+    :aria-label="t('layout.sidebar.label')"
   >
     <!-- Logo -->
     <div class="h-16 flex items-center px-4 border-b border-(--color-menu-border)">
@@ -76,20 +79,23 @@ watch(
         <img
           v-if="!isSidebarCollapsed"
           src="@/assets/images/logo.png"
-          alt="Diana Logo"
+          :alt="t('layout.sidebar.logoAlt')"
           class="h-8 w-auto transition-all duration-300 ltr:ml-6 rtl:mr-6"
         >
         <img
           v-else
           src="@/assets/images/logo-mini.png"
-          alt="Diana Logo"
+          :alt="t('layout.sidebar.logoAlt')"
           class="h-8 w-auto transition-all duration-300"
         >
       </RouterLink>
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 overflow-y-auto py-4 sidebar-scrollbar ltr:font-montserrat rtl:font-dana">
+    <nav
+      class="flex-1 overflow-y-auto py-4 sidebar-scrollbar ltr:font-montserrat rtl:font-dana"
+      :aria-label="t('layout.sidebar.navigation')"
+    >
       <ul class="space-y-1 px-2">
         <MenuItem
           v-for="item in menuItems"

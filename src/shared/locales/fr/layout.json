@@ -1,9 +1,61 @@
 {
-  "layout": {},
-  "theme": {
-    "light": "Clair",
-    "dark": "Sombre"
-  },
-  "author": "hbsoft",
-  "greeting": "Bonjour"
+  "layout": {
+    "footer": {
+      "copyright": "Copyright © {year} {brand}. Conçu avec {heart} par {author}. Open source sous licence {license}."
+    },
+    "sidebar": {
+      "label": "Barre latérale de l’application",
+      "logoAlt": "Logo Diana",
+      "navigation": "Navigation principale",
+      "expand": "Développer la barre latérale",
+      "collapse": "Réduire la barre latérale"
+    },
+    "notifications": {
+      "label": "Notifications",
+      "title": "Notifications",
+      "viewAll": "Voir toutes les notifications",
+      "items": {
+        "newMessage": {
+          "title": "Nouveau message",
+          "description": "Vous avez un nouveau message de {sender}"
+        },
+        "taskCompleted": {
+          "title": "Tâche terminée",
+          "description": "{project} est terminé"
+        },
+        "meetingReminder": {
+          "title": "Rappel de réunion",
+          "description": "Réunion d’équipe dans {count} minutes"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "Il y a {count} minute",
+      "minutesAgo": "Il y a {count} minutes",
+      "hourAgo": "Il y a {count} heure",
+      "hoursAgo": "Il y a {count} heures"
+    },
+    "userMenu": {
+      "label": "Menu utilisateur",
+      "avatarAlt": "Avatar de {name}",
+      "dashboard": "Tableau de bord",
+      "profile": "Profil",
+      "messages": "Messages",
+      "settings": "Paramètres",
+      "help": "Aide",
+      "logout": "Déconnexion",
+      "lastLogin": "Dernière connexion : {time}"
+    },
+    "theme": {
+      "switchToLight": "Passer au thème clair",
+      "switchToDark": "Passer au thème sombre"
+    },
+    "fullscreen": {
+      "enter": "Passer en plein écran",
+      "exit": "Quitter le plein écran"
+    },
+    "language": {
+      "select": "Choisir la langue"
+    }
+  }
 }
