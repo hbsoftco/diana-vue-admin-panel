@@ -1,3 +1,8 @@
 {
-  "common": {}
+  "common": {
+    "actions": {
+      "close": "Cerrar",
+      "copy": "Copiar"
+    }
+  }
 }

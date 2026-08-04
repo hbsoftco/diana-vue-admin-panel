@@ -1,6 +1,7 @@
 <script setup lang="ts" generic="T extends SelectValue = SelectValue">
 import { onClickOutside } from '@vueuse/core'
 import { computed, provide, ref, useId, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type {
   DiSelectSize,
@@ -45,11 +46,7 @@ const props = withDefaults(defineProps<Props>(), {
   loading: false,
   invalid: false,
   required: false,
-  placeholder: 'Select an option',
-  emptyText: 'No options found',
-  loadingText: 'Loading options',
   size: 'md',
-  ariaLabel: 'Select an option',
   variant: 'primary',
 })
 
@@ -70,6 +67,7 @@ defineSlots<{
 }>()
 
 const model = defineModel<SelectModelValue<T>>({ default: null })
+const { t } = useI18n()
 
 const rootElement = ref<HTMLElement | null>(null)
 const isOpen = ref(false)
@@ -87,9 +85,10 @@ const disabled = computed(() => props.disabled)
 const loading = computed(() => props.loading)
 const invalid = computed(() => props.invalid)
 const maxSelections = computed(() => props.maxSelections)
-const placeholder = computed(() => props.placeholder)
-const emptyText = computed(() => props.emptyText)
-const loadingText = computed(() => props.loadingText)
+const placeholder = computed(() => props.placeholder ?? t('components.select.placeholder'))
+const emptyText = computed(() => props.emptyText ?? t('components.select.empty'))
+const loadingText = computed(() => props.loadingText ?? t('components.select.loading'))
+const ariaLabel = computed(() => props.ariaLabel ?? t('components.select.placeholder'))
 const size = computed(() => props.size)
 const sizeClasses = computed(() => SELECT_SIZE_CLASSES[size.value])
 const variant = computed<DiSelectVariant>(() => props.variant)

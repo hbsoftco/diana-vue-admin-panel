@@ -1,5 +1,10 @@
 {
-  "common": {},
+  "common": {
+    "actions": {
+      "close": "بستن",
+      "copy": "کپی"
+    }
+  },
   "variants": {
     "primary": "اصلی",
     "secondary": "ثانویه",

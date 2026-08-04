@@ -2,6 +2,7 @@
 import type { StyleValue } from 'vue'
 
 import { computed, onBeforeUnmount, ref, useAttrs, useId } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { IconName } from '@/shared/icons/registry'
 
@@ -80,6 +81,7 @@ const emit = defineEmits<{
 
 const model = defineModel<DiRangeSliderValue>({ default: () => [25, 75] })
 const attrs = useAttrs()
+const { t } = useI18n()
 const generatedId = useId().split(':').join('')
 const trackElement = ref<HTMLElement>()
 const dragState = ref<DragState>(null)
@@ -440,7 +442,12 @@ onBeforeUnmount(() => {
             ]"
             :style="handleStyle(handle)"
             :disabled="disabled"
-            :aria-label="`${label || 'Range'} ${handle === 0 ? 'minimum' : 'maximum'}`"
+            :aria-label="
+              t(
+                handle === 0 ? 'components.rangeSlider.minimum' : 'components.rangeSlider.maximum',
+                { label: label || t('components.rangeSlider.label') },
+              )
+            "
             :aria-valuemin="handleMinimum(handle)"
             :aria-valuemax="handleMaximum(handle)"
             :aria-valuenow="values[handle]"
@@ -489,7 +496,11 @@ onBeforeUnmount(() => {
           :disabled="disabled"
           :tabindex="ticksClickable ? 0 : -1"
           :aria-label="
-            ticksClickable ? `Move nearest handle to ${tick.label ?? tick.value}` : undefined
+            ticksClickable
+              ? t('components.rangeSlider.moveNearestHandle', {
+                value: tick.label ?? tick.value,
+              })
+              : undefined
           "
           @click="selectTick(tick)"
         >

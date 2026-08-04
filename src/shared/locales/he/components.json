@@ -1,3 +1,71 @@
 {
-  "components": {}
+  "components": {
+    "alert": {
+      "close": "סגירת התראה"
+    },
+    "avatar": {
+      "label": "אווטאר",
+      "groupLabel": "קבוצת אווטארים",
+      "more": "עוד {count} אווטארים",
+      "status": {
+        "online": "מחובר",
+        "offline": "לא מחובר",
+        "busy": "עסוק",
+        "away": "לא נמצא"
+      }
+    },
+    "breadcrumb": {
+      "label": "נתיב ניווט",
+      "home": "בית"
+    },
+    "buttonGroup": {
+      "label": "קבוצת כפתורים"
+    },
+    "carousel": {
+      "label": "קרוסלה",
+      "previousSlide": "השקופית הקודמת",
+      "nextSlide": "השקופית הבאה",
+      "slidePosition": "שקופית {current} מתוך {total}",
+      "roleDescription": "קרוסלה",
+      "slideRoleDescription": "שקופית"
+    },
+    "drawer": {
+      "toggle": "פתיחת או סגירת מגירה",
+      "closeOverlay": "סגירת שכבת המגירה"
+    },
+    "pagination": {
+      "label": "עימוד",
+      "firstPage": "עמוד ראשון",
+      "previousPage": "עמוד קודם",
+      "nextPage": "עמוד הבא",
+      "lastPage": "עמוד אחרון"
+    },
+    "rating": {
+      "value": "דירוג {value} מתוך {max}"
+    },
+    "range": {
+      "setValue": "הגדרת הערך ל-{value}"
+    },
+    "rangeSlider": {
+      "label": "טווח",
+      "minimum": "המינימום של {label}",
+      "maximum": "המקסימום של {label}",
+      "moveNearestHandle": "העברת הידית הקרובה ל-{value}"
+    },
+    "select": {
+      "placeholder": "בחרו אפשרות",
+      "empty": "לא נמצאו אפשרויות",
+      "loading": "האפשרויות נטענות",
+      "clearSelection": "ניקוי הבחירה",
+      "removeOption": "הסרת {option}"
+    },
+    "toast": {
+      "close": "סגירת התראה"
+    },
+    "previewCodeCard": {
+      "showPreview": "הצגת תצוגה מקדימה",
+      "showCode": "הצגת קוד",
+      "copied": "הועתק!"
+    }
+  }
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { AlertVariant } from '@/shared/types/models'
 
@@ -42,7 +43,6 @@ const props = withDefaults(defineProps<Props>(), {
   duration: 0,
   pauseOnHover: true,
   closable: false,
-  closeLabel: 'Close notification',
   showIcon: false,
   clickable: false,
   closeOnClick: false,
@@ -56,13 +56,14 @@ const emit = defineEmits<{
   activate: [event: MouseEvent | KeyboardEvent]
   close: [reason: CloseReason]
 }>()
-
 const slots = defineSlots<{
   default?: () => unknown
   title?: () => unknown
   icon?: () => unknown
   actions?: (props: { close: () => void }) => unknown
 }>()
+const { t } = useI18n()
+const resolvedCloseLabel = computed(() => props.closeLabel ?? t('components.toast.close'))
 
 const model = defineModel<boolean>({ default: true })
 
@@ -111,10 +112,17 @@ const teleportReady = computed(() => !usesManagedHost.value || Boolean(managedHo
 const hasContentHeader = computed(() => props.title !== undefined || Boolean(slots.title))
 const hasActions = computed(() => props.closable || Boolean(slots.actions))
 const resolvedOutline = computed(
-  () => props.appearance === 'outline' || props.appearance === 'text' || (!props.appearance && props.outline),
+  () =>
+    props.appearance === 'outline'
+    || props.appearance === 'text'
+    || (!props.appearance && props.outline),
 )
-const resolvedSoft = computed(() => props.appearance === 'soft' || (!props.appearance && props.soft))
-const resolvedDash = computed(() => props.appearance === 'dash' || (!props.appearance && props.dash))
+const resolvedSoft = computed(
+  () => props.appearance === 'soft' || (!props.appearance && props.soft),
+)
+const resolvedDash = computed(
+  () => props.appearance === 'dash' || (!props.appearance && props.dash),
+)
 const alertClasses = computed(() => [
   'pointer-events-auto w-full max-w-sm shadow-lg',
   props.appearance === 'text' && 'border-transparent bg-base-100',
@@ -282,7 +290,7 @@ onBeforeUnmount(() => {
                 size="sm"
                 variant="ghost"
                 circle
-                :aria-label="closeLabel"
+                :aria-label="resolvedCloseLabel"
                 @click.stop="closeManually"
               >
                 <DiIcon name="xMark" size="sm" />

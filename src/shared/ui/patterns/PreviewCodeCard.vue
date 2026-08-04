@@ -42,7 +42,9 @@ const highlightedCode = ref('')
 /* =======================
    Computed
 ======================= */
-const buttonLabel = computed(() => props.codeButtonLabel || t('patterns.previewCodeCard.showCode'))
+const buttonLabel = computed(
+  () => props.codeButtonLabel || t('components.previewCodeCard.showCode'),
+)
 
 /* =======================
    Methods
@@ -97,7 +99,7 @@ watch(isDark, async () => {
           soft
           @click="toggleCode"
         >
-          {{ showCode ? $t('patterns.previewCodeCard.showPreview') : buttonLabel }}
+          {{ showCode ? $t('components.previewCodeCard.showPreview') : buttonLabel }}
 
           <template #icon-right>
             <DiIcon :name="!showCode ? 'code' : 'codeClose'" size="sm" />
@@ -114,7 +116,7 @@ watch(isDark, async () => {
     <!-- Code -->
     <div v-else class="relative code-preview rtl:text-left">
       <DiButton size="xs" variant="ghost" class="absolute top-2 right-2 z-10" @click="copyCode">
-        {{ copied ? $t('patterns.previewCodeCard.copied') : $t('patterns.previewCodeCard.copy') }}
+        {{ copied ? $t('components.previewCodeCard.copied') : $t('common.actions.copy') }}
 
         <template #icon-right>
           <DiIcon :name="!copied ? 'copy' : 'lightCheck'" size="xs" />

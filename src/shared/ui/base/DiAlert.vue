@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { IconName } from '@/shared/icons/registry'
 import type { AlertVariant } from '@/shared/types/models'
@@ -41,20 +42,20 @@ const props = withDefaults(defineProps<Props>(), {
   closable: false,
   modelValue: true,
   showIcon: false,
-  closeLabel: 'Close alert',
 })
 
 const emit = defineEmits<{
   'update:modelValue': [value: boolean]
   'close': []
 }>()
-
 const slots = defineSlots<{
   default?: () => unknown
   icon?: () => unknown
   actions?: () => unknown
   close?: (props: { close: () => void }) => unknown
 }>()
+const { t } = useI18n()
+const resolvedCloseLabel = computed(() => props.closeLabel ?? t('components.alert.close'))
 
 const VARIANT_CLASSES: Record<AlertVariant, string> = {
   neutral: '[--alert-color:var(--color-neutral)] [--alert-border-color:var(--color-neutral)]',
@@ -150,17 +151,14 @@ function handleClose() {
       <slot name="actions" />
     </div>
 
-    <div
-      v-if="closable"
-      class="absolute end-4 top-1/2 shrink-0 -translate-y-1/2"
-    >
+    <div v-if="closable" class="absolute end-4 top-1/2 shrink-0 -translate-y-1/2">
       <slot v-if="slots.close" name="close" :close="handleClose" />
       <DiButton
         v-else
         variant="ghost"
         size="sm"
         circle
-        :aria-label="closeLabel"
+        :aria-label="resolvedCloseLabel"
         @click="handleClose"
       >
         <DiIcon name="xMark" size="sm" />

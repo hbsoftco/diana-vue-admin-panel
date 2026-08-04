@@ -1,5 +1,6 @@
 <script setup lang="ts" generic="T extends SelectValue = SelectValue">
 import { computed, nextTick, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { SelectOption, SelectValue } from './types'
 
@@ -12,9 +13,7 @@ type Props = {
   ariaLabel?: string
 }
 
-withDefaults(defineProps<Props>(), {
-  ariaLabel: 'Select an option',
-})
+const props = defineProps<Props>()
 
 defineSlots<{
   selected?: (props: { option: SelectOption<T>, clear: () => void }) => unknown
@@ -22,7 +21,10 @@ defineSlots<{
 }>()
 
 const select = useDiSelect<T>()
+const { t } = useI18n()
 const inputElement = ref<HTMLInputElement | null>(null)
+const resolvedAriaLabel = computed(() => props.ariaLabel ?? t('components.select.placeholder'))
+const clearSelectionLabel = computed(() => t('components.select.clearSelection'))
 
 const showPlaceholder = computed(
   () => !select.selectedOptions.value.length && (!select.searchable.value || !select.isOpen.value),
@@ -151,7 +153,7 @@ function handleKeydown(event: KeyboardEvent) {
       autocomplete="off"
       class="min-w-16 flex-1 border-0 bg-transparent p-0 text-inherit outline-none placeholder:text-base-content/45"
       :placeholder="showPlaceholder ? select.placeholder.value : ''"
-      :aria-label="ariaLabel"
+      :aria-label="resolvedAriaLabel"
       :aria-controls="select.dropdownId"
       :aria-expanded="select.isOpen.value"
       :aria-activedescendant="select.activeDescendant.value"
@@ -165,7 +167,7 @@ function handleKeydown(event: KeyboardEvent) {
       class="min-w-0 flex-1 outline-none"
       role="combobox"
       tabindex="0"
-      :aria-label="ariaLabel"
+      :aria-label="resolvedAriaLabel"
       :aria-controls="select.dropdownId"
       :aria-expanded="select.isOpen.value"
       :aria-activedescendant="select.activeDescendant.value"
@@ -183,7 +185,7 @@ function handleKeydown(event: KeyboardEvent) {
       variant="ghost"
       :size="select.sizeClasses.value.actionSize"
       square
-      aria-label="Clear selection"
+      :aria-label="clearSelectionLabel"
       :custom-class="`${select.sizeClasses.value.action} text-base-content/45`"
       @click.stop="select.clear"
     >

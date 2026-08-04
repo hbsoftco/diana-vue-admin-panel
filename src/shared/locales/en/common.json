@@ -1,5 +1,10 @@
 {
-  "common": {},
+  "common": {
+    "actions": {
+      "close": "Close",
+      "copy": "Copy"
+    }
+  },
   "variants": {
     "primary": "Primary",
     "secondary": "Secondary",

@@ -47,20 +47,21 @@ would add another API without currently eliminating meaningful duplication.
 Phase 0 preserves every existing key and runtime lookup. The following namespaces remain available
 temporarily in their owner modules:
 
-| Existing key                                                 | Owner module      | Phase 1 target example                             |
-| ------------------------------------------------------------ | ----------------- | -------------------------------------------------- |
-| `variants.primary`                                           | `common.json`     | `common.variants.primary`                          |
-| `base.button.*`                                              | `components.json` | `components.button.*`                              |
-| `patterns.previewCodeCard.*`                                 | `components.json` | `components.previewCodeCard.*`                     |
-| `theme.*`                                                    | `layout.json`     | `layout.theme.*`                                   |
-| `sidebar.*`                                                  | `layout.json`     | `layout.sidebar.*`                                 |
-| root `author` and `greeting`                                 | `layout.json`     | An owner-specific `layout.*` or `features.*` key   |
-| hyphenated feature segments such as `features.advanced-ui.*` | `features.json`   | camelCase segments such as `features.advancedUi.*` |
+| Existing key                                                 | Owner module    | Phase 1 target example                             |
+| ------------------------------------------------------------ | --------------- | -------------------------------------------------- |
+| `variants.primary`                                           | `common.json`   | `common.variants.primary`                          |
+| `theme.*`                                                    | `layout.json`   | `layout.theme.*`                                   |
+| `sidebar.*`                                                  | `layout.json`   | `layout.sidebar.*`                                 |
+| root `author` and `greeting`                                 | `layout.json`   | An owner-specific `layout.*` or `features.*` key   |
+| hyphenated feature segments such as `features.advanced-ui.*` | `features.json` | camelCase segments such as `features.advancedUi.*` |
 
 Migrate one bounded area at a time. Add the canonical key in every locale in scope, change all
 known consumers, verify fallback behavior, and remove a compatibility key only after repository
 search confirms that it has no consumers. Uneven locale coverage remains supported by the English
 fallback.
+
+Shared component defaults and the preview-code pattern now use the canonical `components.*`
+namespace. Generic close and copy actions use `common.actions.*`.
 
 ## Adding translations
 

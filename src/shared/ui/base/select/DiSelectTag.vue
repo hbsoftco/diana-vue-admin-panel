@@ -1,4 +1,6 @@
 <script setup lang="ts" generic="T extends SelectValue = SelectValue">
+import { useI18n } from 'vue-i18n'
+
 import type { SelectOption, SelectValue } from './types'
 
 import DiButton from '../DiButton.vue'
@@ -23,6 +25,7 @@ defineSlots<{
 }>()
 
 const select = useDiSelect<T>()
+const { t } = useI18n()
 
 function remove() {
   if (!props.disabled) {
@@ -44,7 +47,7 @@ function remove() {
       variant="ghost"
       :size="select.sizeClasses.value.actionSize"
       square
-      :aria-label="`Remove ${option.label}`"
+      :aria-label="t('components.select.removeOption', { option: option.label })"
       :custom-class="`${select.sizeClasses.value.action} text-current hover:bg-current/10`"
       @click.stop="remove"
     >

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { IconName } from '@/shared/icons/registry'
 
@@ -54,6 +55,7 @@ defineSlots<{
 }>()
 
 const imageFailed = ref(false)
+const { t } = useI18n()
 
 const SHAPE_CLASSES: Record<AvatarShape, string> = {
   circle: 'rounded-full',
@@ -95,7 +97,7 @@ const showInitials = computed(
   () => !showImage.value && props.fallback && Boolean(derivedInitials.value),
 )
 const showConfiguredIcon = computed(() => !showImage.value && !showInitials.value && props.icon)
-const accessibleLabel = computed(() => props.alt || props.name || 'Avatar')
+const accessibleLabel = computed(() => props.alt || props.name || t('components.avatar.label'))
 const contentClasses = computed(() => [
   'inline-flex items-center justify-center overflow-hidden font-semibold select-none',
   sizeClasses.value.container,
@@ -176,7 +178,7 @@ watch(
       v-if="status"
       :class="statusClasses"
       role="status"
-      :aria-label="status"
+      :aria-label="t(`components.avatar.status.${status}`)"
       data-avatar-status
     />
 

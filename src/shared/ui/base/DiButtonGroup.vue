@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useDirection } from '@/shared/composables/use-direction'
 
@@ -19,7 +20,6 @@ const props = withDefaults(defineProps<Props>(), {
   attached: true,
   rounded: false,
   role: 'group',
-  ariaLabel: 'Button group',
 })
 
 defineSlots<{
@@ -27,7 +27,9 @@ defineSlots<{
 }>()
 
 const { isRtl } = useDirection()
+const { t } = useI18n()
 const group = ref<HTMLElement>()
+const resolvedAriaLabel = computed(() => props.ariaLabel ?? t('components.buttonGroup.label'))
 
 const groupClasses = computed(() => [
   'di-button-group inline-flex',
@@ -100,7 +102,7 @@ function onKeydown(event: KeyboardEvent) {
     ref="group"
     :class="groupClasses"
     :role="role"
-    :aria-label="ariaLabel"
+    :aria-label="resolvedAriaLabel"
     :aria-orientation="role === 'toolbar' ? orientation : undefined"
     @keydown="onKeydown"
   >

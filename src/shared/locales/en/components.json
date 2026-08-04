@@ -1,13 +1,70 @@
 {
-  "components": {},
-  "base": {
-    "button": {}
-  },
-  "patterns": {
+  "components": {
+    "alert": {
+      "close": "Close alert"
+    },
+    "avatar": {
+      "label": "Avatar",
+      "groupLabel": "Avatar group",
+      "more": "{count} more avatars",
+      "status": {
+        "online": "Online",
+        "offline": "Offline",
+        "busy": "Busy",
+        "away": "Away"
+      }
+    },
+    "breadcrumb": {
+      "label": "Breadcrumb",
+      "home": "Home"
+    },
+    "buttonGroup": {
+      "label": "Button group"
+    },
+    "carousel": {
+      "label": "Carousel",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "slidePosition": "Slide {current} of {total}",
+      "roleDescription": "carousel",
+      "slideRoleDescription": "slide"
+    },
+    "drawer": {
+      "toggle": "Toggle drawer",
+      "closeOverlay": "Close drawer overlay"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "firstPage": "First page",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "lastPage": "Last page"
+    },
+    "rating": {
+      "value": "Rating {value} out of {max}"
+    },
+    "range": {
+      "setValue": "Set value to {value}"
+    },
+    "rangeSlider": {
+      "label": "Range",
+      "minimum": "{label} minimum",
+      "maximum": "{label} maximum",
+      "moveNearestHandle": "Move nearest handle to {value}"
+    },
+    "select": {
+      "placeholder": "Select an option",
+      "empty": "No options found",
+      "loading": "Loading options",
+      "clearSelection": "Clear selection",
+      "removeOption": "Remove {option}"
+    },
+    "toast": {
+      "close": "Close notification"
+    },
     "previewCodeCard": {
       "showPreview": "Show Preview",
       "showCode": "Show Code",
-      "copy": "Copy",
       "copied": "Copied!"
     }
   }

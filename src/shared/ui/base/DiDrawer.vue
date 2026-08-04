@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 /* =======================
    Types
@@ -19,6 +20,7 @@ type Props = {
   overlay?: boolean
 
   label?: string
+  closeOverlayLabel?: string
 
   sideClass?: string
   contentClass?: string
@@ -39,6 +41,12 @@ const props = withDefaults(defineProps<Props>(), {
 const emit = defineEmits<{
   (e: 'update:modelValue', value: boolean): void
 }>()
+
+const { t } = useI18n()
+const resolvedLabel = computed(() => props.label ?? t('components.drawer.toggle'))
+const resolvedCloseOverlayLabel = computed(
+  () => props.closeOverlayLabel ?? t('components.drawer.closeOverlay'),
+)
 
 /* =======================
    State control
@@ -74,12 +82,7 @@ function closeDrawer() {
 <template>
   <div :class="drawerClasses">
     <!-- TOGGLE -->
-    <input
-      v-model="isOpen"
-      type="checkbox"
-      class="drawer-toggle"
-      :aria-label="label || 'Toggle drawer'"
-    >
+    <input v-model="isOpen" type="checkbox" class="drawer-toggle" :aria-label="resolvedLabel">
 
     <!-- CONTENT -->
     <div class="drawer-content" :class="contentClass">
@@ -93,7 +96,7 @@ function closeDrawer() {
       <label
         v-if="overlay"
         class="drawer-overlay"
-        aria-label="Close drawer overlay"
+        :aria-label="resolvedCloseOverlayLabel"
         @click="closeDrawer"
       />
       <slot name="side" />

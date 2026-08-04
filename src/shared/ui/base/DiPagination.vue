@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { BtnVariant, Size } from '@/shared/types/models'
 
@@ -47,11 +48,6 @@ const props = withDefaults(defineProps<Props>(), {
   dash: false,
   showPreviousNext: true,
   showFirstLast: false,
-  ariaLabel: 'Pagination',
-  firstLabel: 'First page',
-  previousLabel: 'Previous page',
-  nextLabel: 'Next page',
-  lastLabel: 'Last page',
 })
 
 const emit = defineEmits<{
@@ -59,7 +55,7 @@ const emit = defineEmits<{
 }>()
 
 defineSlots<{
-  page?: (props: { page: number; active: boolean }) => unknown
+  page?: (props: { page: number, active: boolean }) => unknown
   ellipsis?: () => unknown
   first?: () => unknown
   previous?: () => unknown
@@ -70,6 +66,15 @@ defineSlots<{
 const model = defineModel<number>({ default: 1 })
 
 const { isRtl } = useDirection()
+const { t } = useI18n()
+
+const resolvedAriaLabel = computed(() => props.ariaLabel ?? t('components.pagination.label'))
+const resolvedFirstLabel = computed(() => props.firstLabel ?? t('components.pagination.firstPage'))
+const resolvedPreviousLabel = computed(
+  () => props.previousLabel ?? t('components.pagination.previousPage'),
+)
+const resolvedNextLabel = computed(() => props.nextLabel ?? t('components.pagination.nextPage'))
+const resolvedLastLabel = computed(() => props.lastLabel ?? t('components.pagination.lastPage'))
 
 const ORIENTATION_CLASSES: Record<Orientation, string> = {
   horizontal: 'join-horizontal',
@@ -109,13 +114,15 @@ const inactiveVariant = computed<BtnVariant>(() =>
 )
 
 function pageVariant(page: number): BtnVariant {
-  if (page !== currentPage.value) return inactiveVariant.value
+  if (page !== currentPage.value)
+    return inactiveVariant.value
 
   return props.activeStyle === 'underline' ? 'ghost' : props.variant
 }
 
 function pageClass(page: number) {
-  if (page !== currentPage.value) return itemClass.value
+  if (page !== currentPage.value)
+    return itemClass.value
 
   return [itemClass.value, ACTIVE_STYLE_CLASSES[props.activeStyle]].filter(Boolean).join(' ')
 }
@@ -144,7 +151,8 @@ const pageItems = computed<PaginationItem[]>(() => {
   sortedPages.forEach((page, index) => {
     const previousPage = sortedPages[index - 1]
 
-    if (previousPage !== undefined && page - previousPage === 2) items.push(previousPage + 1)
+    if (previousPage !== undefined && page - previousPage === 2)
+      items.push(previousPage + 1)
     else if (previousPage !== undefined && page - previousPage > 2)
       items.push(index === 1 ? 'ellipsis-start' : 'ellipsis-end')
 
@@ -162,11 +170,13 @@ const firstSymbol = computed(() => (isRtl.value ? '»' : '«'))
 const lastSymbol = computed(() => (isRtl.value ? '«' : '»'))
 
 function selectPage(page: number) {
-  if (props.disabled) return
+  if (props.disabled)
+    return
 
   const nextPage = Math.min(Math.max(page, 1), normalizedTotalPages.value)
 
-  if (nextPage === currentPage.value) return
+  if (nextPage === currentPage.value)
+    return
 
   model.value = nextPage
   emit('change', nextPage)
@@ -174,7 +184,7 @@ function selectPage(page: number) {
 </script>
 
 <template>
-  <nav :aria-label="ariaLabel">
+  <nav :aria-label="resolvedAriaLabel">
     <div :class="paginationClasses">
       <DiButton
         v-if="showFirstLast"
@@ -185,7 +195,7 @@ function selectPage(page: number) {
         :soft="soft"
         :dash="dash"
         :disabled="disabled || isFirstPage"
-        :aria-label="firstLabel"
+        :aria-label="resolvedFirstLabel"
         @click="selectPage(1)"
       >
         <slot name="first">
@@ -202,7 +212,7 @@ function selectPage(page: number) {
         :soft="soft"
         :dash="dash"
         :disabled="disabled || isFirstPage"
-        :aria-label="previousLabel"
+        :aria-label="resolvedPreviousLabel"
         @click="selectPage(currentPage - 1)"
       >
         <slot name="previous">
@@ -243,7 +253,9 @@ function selectPage(page: number) {
           aria-hidden="true"
           tabindex="-1"
         >
-          <slot name="ellipsis"> … </slot>
+          <slot name="ellipsis">
+            …
+          </slot>
         </DiButton>
       </template>
 
@@ -256,7 +268,7 @@ function selectPage(page: number) {
         :soft="soft"
         :dash="dash"
         :disabled="disabled || isLastPage"
-        :aria-label="nextLabel"
+        :aria-label="resolvedNextLabel"
         @click="selectPage(currentPage + 1)"
       >
         <slot name="next">
@@ -273,7 +285,7 @@ function selectPage(page: number) {
         :soft="soft"
         :dash="dash"
         :disabled="disabled || isLastPage"
-        :aria-label="lastLabel"
+        :aria-label="resolvedLastLabel"
         @click="selectPage(normalizedTotalPages)"
       >
         <slot name="last">

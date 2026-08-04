@@ -1,13 +1,70 @@
 {
-  "components": {},
-  "base": {
-    "button": {}
-  },
-  "patterns": {
+  "components": {
+    "alert": {
+      "close": "بستن هشدار"
+    },
+    "avatar": {
+      "label": "آواتار",
+      "groupLabel": "گروه آواتارها",
+      "more": "{count} آواتار دیگر",
+      "status": {
+        "online": "آنلاین",
+        "offline": "آفلاین",
+        "busy": "مشغول",
+        "away": "غایب"
+      }
+    },
+    "breadcrumb": {
+      "label": "مسیر ناوبری",
+      "home": "خانه"
+    },
+    "buttonGroup": {
+      "label": "گروه دکمه"
+    },
+    "carousel": {
+      "label": "اسلایدشو",
+      "previousSlide": "اسلاید قبلی",
+      "nextSlide": "اسلاید بعدی",
+      "slidePosition": "اسلاید {current} از {total}",
+      "roleDescription": "اسلایدشو",
+      "slideRoleDescription": "اسلاید"
+    },
+    "drawer": {
+      "toggle": "باز و بسته کردن دراور",
+      "closeOverlay": "بستن پوشش دراور"
+    },
+    "pagination": {
+      "label": "صفحه‌بندی",
+      "firstPage": "صفحه اول",
+      "previousPage": "صفحه قبلی",
+      "nextPage": "صفحه بعدی",
+      "lastPage": "صفحه آخر"
+    },
+    "rating": {
+      "value": "امتیاز {value} از {max}"
+    },
+    "range": {
+      "setValue": "تنظیم مقدار روی {value}"
+    },
+    "rangeSlider": {
+      "label": "بازه",
+      "minimum": "حداقل {label}",
+      "maximum": "حداکثر {label}",
+      "moveNearestHandle": "انتقال نزدیک‌ترین دستگیره به {value}"
+    },
+    "select": {
+      "placeholder": "یک گزینه انتخاب کنید",
+      "empty": "گزینه‌ای یافت نشد",
+      "loading": "در حال بارگذاری گزینه‌ها",
+      "clearSelection": "پاک کردن انتخاب",
+      "removeOption": "حذف {option}"
+    },
+    "toast": {
+      "close": "بستن اعلان"
+    },
     "previewCodeCard": {
-      "showPreview": "پیشنمایش",
+      "showPreview": "پیش‌نمایش",
       "showCode": "نمایش کد",
-      "copy": "کپی",
       "copied": "کپی شد!"
     }
   }
