@@ -16,12 +16,17 @@
     "rangeSlider": "מחוון טווח",
     "select": "בחירה",
     "utility": "כלים",
-    "avatar": "אווטאר"
+    "avatar": "אווטאר",
+    "colors": "צבעים"
   },
   "pages": {
     "avatar": {
       "title": "כלים",
       "avatar": "אווטאר"
+    },
+    "colors": {
+      "title": "כלים",
+      "colors": "צבעים"
     },
     "rangeSlider": {
       "forms": "טפסים",
@@ -150,6 +155,32 @@
         "badges": "אווטארים עם תגים מספריים",
         "stacked": "אווטארים מוערמים",
         "roundedStacked": "אווטארים עגולים מוערמים"
+      },
+      "colors": {
+        "semanticColors": "צבעים סמנטיים",
+        "semanticDescription": "תפקידים סמנטיים מבטאים היררכיה, הדגשה ומצב ממשק ברכיבי דיאנה.",
+        "surfaces": "רקעים ומשטחים",
+        "surfacesDescription": "משטחי הבסיס וצבעי מעטפת היישום מסתגלים אוטומטית לערכת הנושא הפעילה.",
+        "textColors": "צבעי טקסט",
+        "textDescription": "כלי טקסט מספקים הדגשה סמנטית ותוויות שומרות על הבנת הדוגמאות ללא תלות בצבע בלבד.",
+        "borderColors": "צבעי גבול",
+        "borderDescription": "אסימוני גבול מגדירים מפרידים, קווי מתאר של רכיבים וגבולות מעטפת היישום.",
+        "contentColors": "צבעי תוכן",
+        "contentDescription": "כל רקע סמנטי מותאם לצבע התוכן המיועד לקריאות הטקסט.",
+        "opacity": "דוגמאות אטימות",
+        "opacityDescription": "משני האטימות של Tailwind יוצרים וריאציות שקופות מאסימון סמנטי קיים.",
+        "componentUsage": "שימוש ברכיבים",
+        "componentDescription": "רכיבי דיאנה משתמשים באותם אסימונים סמנטיים ומשטחיים המוצגים לעיל.",
+        "cssVariable": "משתנה CSS",
+        "utility": "מחלקת עזר",
+        "contentToken": "אסימון תוכן",
+        "actionsAndStatus": "פעולות ומצב",
+        "feedbackAndInput": "משוב וקלט",
+        "infoMessage": "אסימונים סמנטיים שומרים על עקביות במשוב מידע.",
+        "successMessage": "צבעי המשטח והתוכן מגיבים לערכת הנושא הפעילה.",
+        "inputLabel": "קלט מותאם לערכת נושא",
+        "inputPlaceholder": "מקדו כדי לצפות בצבע הראשי",
+        "inputHelp": "טבעות מיקוד משתמשות בווריאציה שקופה של הצבע הסמנטי."
       }
     },
     "ui-elements": {

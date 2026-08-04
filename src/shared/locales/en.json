@@ -16,12 +16,17 @@
     "rangeSlider": "Range Slider",
     "select": "Select",
     "utility": "Utility",
-    "avatar": "Avatar"
+    "avatar": "Avatar",
+    "colors": "Colors"
   },
   "pages": {
     "avatar": {
       "title": "Utility",
       "avatar": "Avatar"
+    },
+    "colors": {
+      "title": "Utility",
+      "colors": "Colors"
     },
     "rangeSlider": {
       "forms": "Forms",
@@ -189,6 +194,32 @@
         "badges": "Avatars With Number Badges",
         "stacked": "Stacked Avatars",
         "roundedStacked": "Rounded Stacked Avatars"
+      },
+      "colors": {
+        "semanticColors": "Semantic Colors",
+        "semanticDescription": "Semantic roles communicate hierarchy, emphasis, and interface state across Diana components.",
+        "surfaces": "Background & Surfaces",
+        "surfacesDescription": "Base surfaces and application shell colors adapt automatically to the active Diana theme.",
+        "textColors": "Text Colors",
+        "textDescription": "Text utilities provide semantic emphasis while labels keep every example understandable without color alone.",
+        "borderColors": "Border Colors",
+        "borderDescription": "Border tokens define separators, component outlines, and application shell boundaries.",
+        "contentColors": "Content Colors",
+        "contentDescription": "Each semantic background is paired with its intended content color for readable foreground content.",
+        "opacity": "Opacity Examples",
+        "opacityDescription": "Tailwind opacity modifiers derive transparent variations from an existing semantic token.",
+        "componentUsage": "Component Usage",
+        "componentDescription": "Diana components consume the same semantic and surface tokens shown above.",
+        "cssVariable": "CSS variable",
+        "utility": "Utility",
+        "contentToken": "Content token",
+        "actionsAndStatus": "Actions and status",
+        "feedbackAndInput": "Feedback and input",
+        "infoMessage": "Semantic tokens keep informational feedback consistent.",
+        "successMessage": "Surface and content colors respond to the active theme.",
+        "inputLabel": "Theme-aware input",
+        "inputPlaceholder": "Focus to preview the primary color",
+        "inputHelp": "Focus rings use a transparent variation of the semantic color."
       }
     },
     "ui-elements": {

@@ -34,7 +34,7 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
   <div class="flex h-screen bg-(--color-bg-background)">
     <AppSidebar />
 
-    <div class="flex-1 flex flex-col">
+    <div class="min-w-0 flex-1 flex flex-col">
       <AppHeader />
 
       <main class="flex-1 overflow-y-auto">

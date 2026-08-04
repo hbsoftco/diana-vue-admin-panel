@@ -19,5 +19,16 @@ export const utilityRoutes = {
         ],
       },
     },
+    {
+      path: 'colors',
+      component: () => import('@/pages/utility/colors.vue'),
+      meta: {
+        pageTitle: 'pages.colors.colors',
+        breadcrumb: [
+          { label: 'pages.colors.title', link: '/utility' },
+          { label: 'pages.colors.colors' },
+        ],
+      },
+    },
   ],
 }
