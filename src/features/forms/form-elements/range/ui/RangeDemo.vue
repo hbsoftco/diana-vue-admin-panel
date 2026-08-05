@@ -355,13 +355,13 @@ const runtimeDisabled = ref(true)
       class="xl:col-span-2"
     >
       <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <DiRange :model-value="40" variant="primary" :label="$t('variants.primary')" />
-        <DiRange :model-value="40" variant="secondary" :label="$t('variants.secondary')" />
-        <DiRange :model-value="40" variant="accent" :label="$t('variants.accent')" />
-        <DiRange :model-value="40" variant="info" :label="$t('variants.info')" />
-        <DiRange :model-value="40" variant="success" :label="$t('variants.success')" />
-        <DiRange :model-value="40" variant="warning" :label="$t('variants.warning')" />
-        <DiRange :model-value="40" variant="error" :label="$t('variants.error')" />
+        <DiRange :model-value="40" variant="primary" :label="$t('common.variants.primary')" />
+        <DiRange :model-value="40" variant="secondary" :label="$t('common.variants.secondary')" />
+        <DiRange :model-value="40" variant="accent" :label="$t('common.variants.accent')" />
+        <DiRange :model-value="40" variant="info" :label="$t('common.variants.info')" />
+        <DiRange :model-value="40" variant="success" :label="$t('common.variants.success')" />
+        <DiRange :model-value="40" variant="warning" :label="$t('common.variants.warning')" />
+        <DiRange :model-value="40" variant="error" :label="$t('common.variants.error')" />
       </div>
     </PreviewCodeCard>
 

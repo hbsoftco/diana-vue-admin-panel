@@ -280,9 +280,7 @@ const variantsCode = `<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               @click="showPassword = !showPassword"
             >
               {{
-                showPassword
-                  ? $t('features.forms.inputs.actions.hide')
-                  : $t('features.forms.inputs.actions.show')
+                showPassword ? $t('common.actions.hide') : $t('features.forms.inputs.actions.show')
               }}
             </DiButton>
           </template>
@@ -325,37 +323,37 @@ const variantsCode = `<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <DiInput
           variant="primary"
-          :label="$t('variants.primary')"
+          :label="$t('common.variants.primary')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="secondary"
-          :label="$t('variants.secondary')"
+          :label="$t('common.variants.secondary')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="accent"
-          :label="$t('variants.accent')"
+          :label="$t('common.variants.accent')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="info"
-          :label="$t('variants.info')"
+          :label="$t('common.variants.info')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="success"
-          :label="$t('variants.success')"
+          :label="$t('common.variants.success')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="warning"
-          :label="$t('variants.warning')"
+          :label="$t('common.variants.warning')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
         <DiInput
           variant="error"
-          :label="$t('variants.error')"
+          :label="$t('common.variants.error')"
           :placeholder="$t('features.forms.inputs.placeholders.focus')"
         />
       </div>

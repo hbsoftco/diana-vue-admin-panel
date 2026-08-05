@@ -409,28 +409,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral">
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link">
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -444,28 +444,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" rounded>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" rounded>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" rounded>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" rounded>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" rounded>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" rounded>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" rounded>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" rounded>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -479,28 +479,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" soft>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" soft>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" soft>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" soft>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" soft>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" soft>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" soft>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" soft>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -514,28 +514,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" rounded soft>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" rounded soft>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" rounded soft>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" rounded soft>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" rounded soft>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" rounded soft>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" rounded soft>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" rounded soft>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -549,28 +549,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" outline>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" outline>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" outline>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" outline>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" outline>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" outline>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" outline>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" outline>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -584,28 +584,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" rounded outline>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" rounded outline>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" rounded outline>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" rounded outline>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" rounded outline>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" rounded outline>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" rounded outline>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" rounded outline>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -619,28 +619,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" gradient>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" gradient>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" gradient>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" gradient>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" gradient>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" gradient>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" gradient>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" gradient>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -654,28 +654,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" rounded gradient>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" rounded gradient>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" rounded gradient>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" rounded gradient>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" rounded gradient>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" rounded gradient>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" rounded gradient>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" rounded gradient>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -689,28 +689,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" dash>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" dash>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" dash>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" dash>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" dash>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" dash>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" dash>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" dash>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -724,28 +724,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" rounded dash>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" rounded dash>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" rounded dash>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" rounded dash>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" rounded dash>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" rounded dash>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" rounded dash>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" rounded dash>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -759,20 +759,20 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton native-type="submit" variant="primary">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton
           tag="input"
           native-type="button"
           variant="secondary"
-          :value="$t('variants.secondary')"
+          :value="$t('common.variants.secondary')"
         />
         <DiButton tag="input" native-type="submit" variant="info" value="Submit" />
         <DiButton tag="input" native-type="radio" variant="success" aria-label="Radio" />
         <DiButton tag="input" native-type="checkbox" variant="warning" aria-label="Checkbox" />
         <DiButton tag="input" native-type="reset" variant="error" value="Reset" />
         <DiButton tag="a" href="https://hosseinbajan.ir" role="button">
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -786,28 +786,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" disabled>
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" disabled>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" disabled>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" disabled>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" disabled>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" disabled>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" disabled>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" disabled>
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -821,28 +821,28 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap gap-2">
         <DiButton variant="primary" loading :loading-disabled="false">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton variant="secondary" loading loading-variant="bars">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="info" loading loading-variant="ball">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton variant="success" loading loading-variant="dots" :loading-disabled="false">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton variant="warning" loading loading-variant="ring">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton variant="error" loading loading-variant="spinner">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton variant="neutral" loading>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiButton>
         <DiButton variant="link" loading loading-variant="infinity">
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -856,10 +856,10 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiButton variant="primary" wide>
-          {{ $t('variants.primary') }} Wide
+          {{ $t('common.variants.primary') }} Wide
         </DiButton>
         <DiButton variant="secondary" wide>
-          {{ $t('variants.secondary') }} Wide
+          {{ $t('common.variants.secondary') }} Wide
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -942,7 +942,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiButton variant="primary" block>
-          {{ $t('variants.primary') }} Block
+          {{ $t('common.variants.primary') }} Block
         </DiButton>
       </div>
     </PreviewCodeCard>

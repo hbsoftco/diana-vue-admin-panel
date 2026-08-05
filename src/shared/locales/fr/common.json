@@ -4,17 +4,17 @@
       "close": "Fermer",
       "copy": "Copier",
       "hide": "Masquer"
+    },
+    "variants": {
+      "primary": "Principal",
+      "secondary": "Secondaire",
+      "info": "Information",
+      "accent": "Accent",
+      "success": "Succès",
+      "warning": "Avertissement",
+      "error": "Erreur",
+      "neutral": "Neutre",
+      "link": "Lien"
     }
-  },
-  "variants": {
-    "primary": "Principal",
-    "secondary": "Secondaire",
-    "info": "Information",
-    "accent": "Accent",
-    "success": "Succès",
-    "warning": "Avertissement",
-    "error": "Erreur",
-    "neutral": "Neutre",
-    "link": "Lien"
   }
 }

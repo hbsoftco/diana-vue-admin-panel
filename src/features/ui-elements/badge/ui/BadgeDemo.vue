@@ -328,28 +328,28 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="neutral" size="sm">
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="info" size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -363,28 +363,28 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="neutral" pill size="sm">
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="info" pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -398,25 +398,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" soft size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" soft size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" soft size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" soft size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" soft size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" soft size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" soft size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -430,25 +430,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" pill soft size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" pill soft size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" pill soft size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" pill soft size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill soft size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" pill soft size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" pill soft size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -462,25 +462,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" outline size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" outline size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" outline size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" outline size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" outline size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" outline size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" outline size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -494,25 +494,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" outline pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" outline pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" outline pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" outline pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" outline pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" outline pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" outline pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -526,25 +526,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" dash size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" dash size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" dash size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" dash size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" dash size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -558,25 +558,25 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" dash pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" dash pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" dash pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" dash pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" dash pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -641,7 +641,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="info"
           badge-size="sm"
         >
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton
           variant="warning"
@@ -652,7 +652,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-size="sm"
           rounded
         >
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton
           variant="neutral"
@@ -675,7 +675,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="success"
           badge-size="sm"
         >
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton
           variant="error"
@@ -685,7 +685,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="neutral"
           badge-size="xl"
         >
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton
           outline
@@ -696,10 +696,10 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="secondary"
           badge-pill
         >
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="link">
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -717,67 +717,67 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           <template #icon-left>
             <i-heroicons-information-circle class="text-sm" />
           </template>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning">
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="secondary" pill outline>
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash>
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="error">
           <template #icon-left>
             <i-heroicons-x-circle class="text-sm" />
           </template>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
         <DiBadge variant="neutral" pill>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="error" dash pill>
           <template #icon-left>
             <i-heroicons-x-circle class="text-sm" />
           </template>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
         <DiBadge variant="success" soft>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash pill>
           <template #icon-right>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="info" outline pill>
           <template #icon-right>
             <i-heroicons-information-circle class="text-sm" />
           </template>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>

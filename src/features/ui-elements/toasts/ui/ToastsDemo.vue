@@ -364,13 +364,13 @@ const persistentVisible = ref(false)
           {{ $t('features.uiElements.toast.colors.dark') }}
         </DiButton>
         <DiButton size="sm" variant="info" @click="infoVisible = true">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiButton>
         <DiButton size="sm" variant="success" @click="successVisible = true">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton size="sm" variant="warning" @click="warningVisible = true">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton size="sm" variant="error" @click="errorVisible = true">
           {{ $t('features.uiElements.toast.colors.danger') }}
@@ -386,7 +386,7 @@ const persistentVisible = ref(false)
     >
       <div class="flex flex-wrap gap-2">
         <DiButton size="xs" variant="primary" @click="showPosition('end', 'bottom')">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiButton>
         <DiButton size="xs" outline @click="showPosition('start', 'top')">
           {{ $t('features.uiElements.toast.positions.topStart') }}

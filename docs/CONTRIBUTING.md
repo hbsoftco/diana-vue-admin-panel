@@ -256,12 +256,12 @@ When adding a localized feature:
    [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md).
 2. Add a stable nested translation key under that module's namespace.
 3. Add English content.
-4. Add equivalent keys to the locales in scope.
+4. Add the same key to every supported locale.
 5. Verify interpolation and plural behavior if used.
 6. Verify Persian, Hebrew, or Arabic direction where applicable.
 
-The existing locale dictionaries are uneven. Do not delete fallback behavior, and do not assume
-all missing keys are accidental within the scope of a small contribution.
+Keep English fallback behavior, but do not rely on fallback to satisfy structural locale parity.
+Run `pnpm i18n:check` after changing translations or their call sites.
 
 ## Testing Requirements
 

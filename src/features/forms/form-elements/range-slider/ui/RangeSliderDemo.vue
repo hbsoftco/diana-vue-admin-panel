@@ -246,17 +246,37 @@ const thumbIconsCode = `<div class="space-y-8">
       class="xl:col-span-2"
     >
       <div class="grid gap-7 md:grid-cols-2">
-        <DiRangeSlider :model-value="[20, 70]" variant="primary" :label="$t('variants.primary')" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="primary"
+          :label="$t('common.variants.primary')"
+        />
         <DiRangeSlider
           :model-value="[20, 70]"
           variant="secondary"
-          :label="$t('variants.secondary')"
+          :label="$t('common.variants.secondary')"
         />
-        <DiRangeSlider :model-value="[20, 70]" variant="accent" :label="$t('variants.accent')" />
-        <DiRangeSlider :model-value="[20, 70]" variant="info" :label="$t('variants.info')" />
-        <DiRangeSlider :model-value="[20, 70]" variant="success" :label="$t('variants.success')" />
-        <DiRangeSlider :model-value="[20, 70]" variant="warning" :label="$t('variants.warning')" />
-        <DiRangeSlider :model-value="[20, 70]" variant="error" :label="$t('variants.error')" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="accent"
+          :label="$t('common.variants.accent')"
+        />
+        <DiRangeSlider :model-value="[20, 70]" variant="info" :label="$t('common.variants.info')" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="success"
+          :label="$t('common.variants.success')"
+        />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="warning"
+          :label="$t('common.variants.warning')"
+        />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="error"
+          :label="$t('common.variants.error')"
+        />
       </div>
     </PreviewCodeCard>
 

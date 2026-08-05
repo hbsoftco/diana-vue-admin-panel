@@ -18,15 +18,9 @@
         "extraLarge": "Très grand avatar",
         "doubleExtraLarge": "Avatar double extra-large",
         "basic": "Avatar simple",
-        "image": "Avatar avec image",
         "initials": "Initiales de remplacement",
         "icon": "Avatar avec icône",
         "sizes": "Tailles",
-        "shapes": "Formes",
-        "variants": "Variantes sémantiques",
-        "status": "Indicateurs de statut",
-        "groups": "Groupes d’avatars",
-        "broken": "Gestion des images cassées",
         "online": "Avatar avec indicateur en ligne",
         "offline": "Avatar avec indicateur hors ligne",
         "badges": "Avatars avec badges numériques",
@@ -92,7 +86,6 @@
         "headerSlot": "Emplacement d’en-tête",
         "footerActions": "Actions de pied de page",
         "arrowPlacements": "Exemples de position de la flèche",
-        "placements": "Positions",
         "alignment": "Alignement",
         "widths": "Largeur du déclencheur",
         "richContent": "Contenu enrichi",
@@ -116,16 +109,9 @@
         "nesting": "Imbrication"
       },
       "toast": {
-        "basic": "Notification simple",
-        "variants": "Variantes sémantiques",
-        "persistent": "Notification persistante",
-        "placement": "Positionnement",
         "show": "Afficher la notification",
         "showPersistent": "Afficher une notification persistante",
         "showAction": "Afficher une notification avec action",
-        "showPositioned": "Afficher en haut au début",
-        "close": "Fermer la notification",
-        "undo": "Annuler",
         "sections": {
           "live": "Exemple interactif",
           "basic": "Exemple simple",
@@ -146,7 +132,10 @@
           "showOutlined": "Ouvrir le contour",
           "view": "Voir"
         },
-        "colors": { "dark": "Sombre", "danger": "Danger" },
+        "colors": {
+          "dark": "Sombre",
+          "danger": "Danger"
+        },
         "positions": {
           "topStart": "Haut début",
           "topLeft": "Haut gauche",
@@ -161,10 +150,7 @@
         },
         "messages": {
           "saved": "Vos paramètres ont été enregistrés.",
-          "variant": "Cette notification utilise une variante sémantique.",
-          "attention": "Attention requise",
           "persistent": "Cette notification reste affichée jusqu’à sa fermeture.",
-          "action": "L’élément a été déplacé vers les archives.",
           "position": "Aperçu du placement",
           "warning": "Attention ! Ceci est une notification d’avertissement.",
           "error": "Bonjour ! Ceci est une notification d’erreur.",
@@ -194,12 +180,8 @@
         "styleFour": "Style de pagination 4",
         "controls": "Boutons de contrôle",
         "label": "Pagination",
-        "first": "Première page",
         "previous": "Page précédente",
-        "next": "Page suivante",
-        "last": "Dernière page",
-        "current": "Page actuelle : {page}",
-        "page": "Page {page}"
+        "next": "Page suivante"
       },
       "progress": {
         "basic": "Progression de base",
@@ -229,6 +211,162 @@
         "indeterminate": "Indéterminé",
         "iconToggle": "Fonctionnalité activée",
         "example": "Exemple d’interrupteur"
+      },
+      "buttons": {
+        "defaultButtons": "Default Buttons",
+        "softButtons": "Soft Buttons",
+        "softRoundedButtons": "Soft Rounded Buttons",
+        "outlineButtons": "Outline Buttons",
+        "outlineRoundedButtons": "Outline Rounded Buttons",
+        "gradientButtons": "Gradient Buttons",
+        "gradientRoundedButtons": "Gradient Rounded Buttons",
+        "dashButtons": "Dash Buttons",
+        "dashRoundedButtons": "Dash Rounded Buttons",
+        "roundedButtons": "Rounded Buttons",
+        "htmlTags": "Html Tags",
+        "disabledButtons": "Disabled Buttons",
+        "loadingButtons": "Loading Buttons",
+        "iconButtons": "Icon Buttons",
+        "iconCircleButtons": "Icon Circle Buttons",
+        "iconOutlineCircleButtons": "Icon Outline Circle Buttons",
+        "wideButtons": "Wide Buttons",
+        "blockButtons": "Block Buttons",
+        "buttonSizes": "Button Sizes",
+        "buttonWithIcon": "Button with Icon",
+        "socialButtons": "Social Login Buttons",
+        "socialIconButtons": "Social Icon Buttons"
+      },
+      "loading": {
+        "spinnerLoading": "Spinner Loading",
+        "dotsLoading": "Dots Loading",
+        "ringLoading": "Ring Loading",
+        "ballLoading": "Ball Loading",
+        "barsLoading": "Bars Loading",
+        "infinityLoading": "Infinity Loading",
+        "coloredSpinner": "Colored Spinner",
+        "coloredDots": "Colored Dots",
+        "coloredRing": "Colored Ring",
+        "coloredBall": "Colored Ball",
+        "coloredBars": "Colored Bars",
+        "coloredInfinity": "Colored Infinity",
+        "allVariants": "All Variants"
+      },
+      "badge": {
+        "label": "Badge",
+        "defaultBadge": "Default Badge",
+        "badgeSizes": "Badge Sizes",
+        "coloredBadges": "Colored Badges",
+        "softBadges": "Soft Badges",
+        "outlineBadges": "Outline Badges",
+        "dashBadges": "Dash Badges",
+        "ghostBadge": "Ghost Badge",
+        "emptyBadges": "Empty Badges",
+        "badgeWithIcons": "Badge with Icons",
+        "badgeInText": "Badge in Text"
+      },
+      "alert": {
+        "defaultAlert": "Default Alert",
+        "coloredAlerts": "Colored Alerts",
+        "outlineAlerts": "Outline Style Alerts",
+        "closableAlerts": "Closable Alerts",
+        "alertWithTitle": "Alert with Title",
+        "alertWithActions": "Alert with Actions",
+        "alertWithCustomIcon": "Alert with Custom Icon",
+        "alertWithTitleAndActions": "Alert with Title and Actions",
+        "messages": {
+          "invalidEmail": "Warning: Invalid email address!"
+        },
+        "actions": {}
+      },
+      "icons": {
+        "calendar": "Calendar",
+        "iconSizes": "Icon Sizes",
+        "iconColors": "Icon Colors",
+        "spinAndPulse": "Spin & Pulse",
+        "rotateAndFlip": "Rotate & Flip",
+        "iconsWithBadges": "Icons with Badges",
+        "customIcons": "Custom Icons"
+      },
+      "breadcrumb": {
+        "defaultBreadcrumb": "Default Breadcrumb",
+        "breadcrumbWithIcons": "Breadcrumb with Icons",
+        "singleItem": "Single Item Breadcrumb",
+        "breadcrumbWithHome": "Breadcrumb with Home",
+        "breadcrumbVariants": "Breadcrumb Variants",
+        "customSeparators": "Custom Separators Breadcrumb",
+        "complexBreadcrumb": "Complex Breadcrumb",
+        "longBreadcrumb": "Long Breadcrumb",
+        "home": "Home",
+        "products": "Products",
+        "electronics": "Electronics",
+        "settings": "Settings",
+        "profile": "Profile",
+        "dashboard": "Dashboard",
+        "reports": "Reports",
+        "monthly": "Monthly",
+        "projects": "Projects",
+        "webDevelopment": "Web Development",
+        "adminDashboard": "Admin Dashboard",
+        "currentPage": "Current Page",
+        "computers": "Computers",
+        "laptops": "Laptops",
+        "gamingLaptops": "Gaming Laptops"
+      },
+      "tooltip": {
+        "basicTooltip": "Basic Tooltip",
+        "positionTooltips": "Position Tooltips",
+        "coloredTooltips": "Colored Tooltips",
+        "statusTooltips": "Status Tooltips",
+        "openTooltips": "Always Open Tooltips",
+        "tooltipWithButtons": "Tooltip with Buttons",
+        "combinedTooltips": "Combined Positions & Colors",
+        "tooltipOnIcons": "Tooltip on Icons",
+        "multiLineTooltips": "Multi-line Tooltips",
+        "interactiveElements": "Interactive Elements",
+        "hoverMe": "Hover me",
+        "top": "Top",
+        "right": "Right",
+        "bottom": "Bottom",
+        "left": "Left",
+        "tooltipOnTop": "Tooltip on top",
+        "tooltipOnRight": "Tooltip on right",
+        "tooltipOnBottom": "Tooltip on bottom",
+        "tooltipOnLeft": "Tooltip on left",
+        "primaryTooltip": "Primary tooltip",
+        "secondaryTooltip": "Secondary tooltip",
+        "accentTooltip": "Accent tooltip",
+        "infoTooltip": "Info tooltip",
+        "successTooltip": "Success tooltip",
+        "warningTooltip": "Warning tooltip",
+        "errorTooltip": "Error tooltip",
+        "neutralTooltip": "Neutral tooltip",
+        "alwaysVisible": "Always visible",
+        "hoverToSee": "Hover to see",
+        "openTooltip": "Open tooltip",
+        "hoverTooltip": "Hover tooltip",
+        "clickMe": "Click me!",
+        "buttonWithTooltip": "Button with tooltip",
+        "primaryAction": "Primary action",
+        "action": "Action",
+        "deleteItem": "Delete item",
+        "delete": "Delete",
+        "primaryTop": "Primary top",
+        "successRight": "Success right",
+        "warningBottom": "Warning bottom",
+        "errorLeft": "Error left",
+        "information": "Information",
+        "settings": "Settings",
+        "deleteIcon": "Delete",
+        "help": "Help",
+        "longTooltipText": "This is a longer tooltip text that might wrap to multiple lines depending on the screen size",
+        "longText": "Long text",
+        "short": "Short",
+        "shortText": "Short text",
+        "clickToCopy": "Click to copy",
+        "toggleSwitch": "Toggle switch",
+        "selectOption": "Select option",
+        "option1": "Option 1",
+        "option2": "Option 2"
       }
     },
     "forms": {
@@ -275,18 +413,24 @@
           "emailPrivacy": "Nous ne partagerons jamais votre e-mail.",
           "password": "Utilisez au moins huit caractères."
         },
-        "values": { "disabled": "Valeur désactivée", "readonly": "Valeur en lecture seule" },
+        "values": {
+          "disabled": "Valeur désactivée",
+          "readonly": "Valeur en lecture seule"
+        },
         "actions": {
           "hidePassword": "Masquer le mot de passe",
           "showPassword": "Afficher le mot de passe",
-          "hide": "Masquer",
           "show": "Afficher"
         },
         "validation": {
           "email": "Saisissez une adresse e-mail valide.",
           "usernameAvailable": "Ce nom d’utilisateur est disponible."
         },
-        "sizes": { "small": "Petit", "medium": "Moyen", "large": "Grand" }
+        "sizes": {
+          "small": "Petit",
+          "medium": "Moyen",
+          "large": "Grand"
+        }
       },
       "select": {
         "sections": {
@@ -322,7 +466,10 @@
           "researcher": "Chercheur",
           "supportLead": "Responsable du support"
         },
-        "actions": { "enable": "Activer", "disable": "Désactiver" }
+        "actions": {
+          "enable": "Activer",
+          "disable": "Désactiver"
+        }
       },
       "range": {
         "sections": {
@@ -380,7 +527,11 @@
           "recommended": "Cet objectif se situe dans la plage recommandée.",
           "outsideRecommended": "Hors de la plage recommandée de 20–80."
         },
-        "colors": { "red": "Rouge", "green": "Vert", "blue": "Bleu" },
+        "colors": {
+          "red": "Rouge",
+          "green": "Vert",
+          "blue": "Bleu"
+        },
         "actions": {
           "lock": "Verrouiller les contrôles",
           "unlock": "Déverrouiller les contrôles",
@@ -441,12 +592,21 @@
           "narrower": "Choisissez un créneau de livraison plus étroit.",
           "recommended": "Cet intervalle respecte la recommandation."
         },
-        "actions": { "enable": "Activer le curseur", "disable": "Désactiver le curseur" },
-        "sizes": { "small": "Petit", "medium": "Moyen", "large": "Grand" }
+        "actions": {
+          "enable": "Activer le curseur",
+          "disable": "Désactiver le curseur"
+        },
+        "sizes": {
+          "small": "Petit",
+          "medium": "Moyen",
+          "large": "Grand"
+        }
       }
     },
     "advancedUi": {
-      "navbar": { "comingSoon": "La démo du composant de barre de navigation arrive bientôt..." },
+      "navbar": {
+        "comingSoon": "La démo du composant de barre de navigation arrive bientôt..."
+      },
       "modals": {
         "actions": {
           "open": "Ouvrir la fenêtre",
@@ -539,6 +699,65 @@
         "returnsContent": "Learn about return windows, refund methods, and item eligibility.",
         "disabledTitle": "Unavailable section",
         "disabledContent": "This section cannot be opened."
+      },
+      "rating": {
+        "basicRating": "Basic Rating",
+        "halfRating": "Half Rating",
+        "spacingRating": "Spacing Variants",
+        "readonlyRating": "Read-Only Rating",
+        "disabledRating": "Disabled Rating",
+        "masksRating": "Masks",
+        "variants": "Variants",
+        "customMaxRating": "Custom Max",
+        "sizesRating": "Sizes"
+      },
+      "collapses": {
+        "collapseColors": "Collapse Colors",
+        "focusType": "Collapse with Focus",
+        "checkboxType": "Collapse with Checkbox",
+        "detailsType": "Collapse with Details & Summary",
+        "iconTypes": "Icon Types",
+        "iconStart": "Icon at Start",
+        "noBorder": "Without Border & Background",
+        "forceState": "Force Open / Close",
+        "customTitle": "Custom Title Slot",
+        "faqExample": "FAQ Example",
+        "sampleTitle": "How do I create an account?",
+        "sampleContent": "Click the Sign Up button in the top right corner and follow the registration process.",
+        "noIcon": "No icon (default)",
+        "arrowIcon": "With arrow icon",
+        "plusIcon": "With plus/minus icon",
+        "noBorderAndBg": "Without border and background",
+        "noBorderOnly": "Without border only",
+        "forceOpen": "I have state open",
+        "forceClose": "I have state close",
+        "customTitleSlot": "Custom Title Slot",
+        "faq1Title": "What is your return policy?",
+        "faq1Content": "You can return any item within 30 days of purchase for a full refund.",
+        "faq2Title": "Do you offer customer support?",
+        "faq2Content": "Yes, we offer 24/7 customer support via chat, email and phone.",
+        "faq3Title": "How do I track my order?",
+        "faq3Content": "Once your order ships, you will receive a tracking number via email.",
+        "faq4Title": "Can I change my order after placing it?",
+        "faq4Content": "Orders can be modified within 1 hour of placement by contacting support."
+      },
+      "drawers": {
+        "basic": "Basic Drawer",
+        "end": "Right Drawer",
+        "navbar": "Navbar with Drawer",
+        "responsive": "Responsive Drawer",
+        "iconOnly": "Collapsible Icon Drawer",
+        "sidebarTitle": "Navigation",
+        "item1": "Sidebar Item 1",
+        "item2": "Sidebar Item 2",
+        "navbarTitle": "Navbar Title",
+        "navItem1": "Menu Item 1",
+        "navItem2": "Menu Item 2",
+        "content": "Page Content",
+        "openDrawer": "Open Drawer",
+        "responsiveHint": "Always visible on large screens",
+        "homepage": "Home",
+        "settings": "Settings"
       }
     }
   }

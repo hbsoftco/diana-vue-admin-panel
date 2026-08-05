@@ -291,9 +291,9 @@ defined in [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md):
 `useDirection` returns a computed `isRtl` value. Persian, Hebrew, and Arabic are classified as
 RTL.
 
-Locale coverage is not equal. English and Persian contain hundreds of scalar messages, while
-Arabic, Hebrew, French, and Spanish contain substantially fewer. Missing keys therefore fall
-back to English.
+All six locales have identical key structure. English remains the runtime fallback and the source
+of truth for parity validation. `pnpm i18n:check`, which also runs during production builds,
+validates module ownership, locale parity, legacy namespace removal, and static key references.
 
 ## Theme System
 

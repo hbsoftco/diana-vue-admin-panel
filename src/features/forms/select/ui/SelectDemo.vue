@@ -200,7 +200,7 @@ const disabledCode = `<div class="space-y-3">
       <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <div v-for="example in variantExamples" :key="example.variant" class="space-y-1.5">
           <span class="block text-sm font-medium capitalize">{{
-            $t(`variants.${example.variant}`)
+            $t(`common.variants.${example.variant}`)
           }}</span>
           <DiSelect v-model="example.value" :options="states" :variant="example.variant" multiple />
         </div>

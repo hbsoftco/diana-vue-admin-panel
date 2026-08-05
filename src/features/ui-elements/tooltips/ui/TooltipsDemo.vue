@@ -212,22 +212,22 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
       <div class="flex gap-4 flex-wrap justify-center p-4">
         <DiTooltip :text="$t('features.uiElements.tooltip.primaryTooltip')" variant="primary">
           <DiButton size="sm" variant="primary">
-            {{ $t('features.uiElements.tooltip.primary') }}
+            {{ $t('common.variants.primary') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.secondaryTooltip')" variant="secondary">
           <DiButton size="sm" variant="secondary">
-            {{ $t('features.uiElements.tooltip.secondary') }}
+            {{ $t('common.variants.secondary') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.accentTooltip')" variant="accent">
           <DiButton size="sm" variant="accent">
-            {{ $t('features.uiElements.tooltip.accent') }}
+            {{ $t('common.variants.accent') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.infoTooltip')" variant="info">
           <DiButton size="sm" variant="info">
-            {{ $t('features.uiElements.tooltip.info') }}
+            {{ $t('common.variants.info') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -243,22 +243,22 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
       <div class="flex gap-4 flex-wrap justify-center p-4">
         <DiTooltip :text="$t('features.uiElements.tooltip.successTooltip')" variant="success">
           <DiButton size="sm" variant="success">
-            {{ $t('features.uiElements.tooltip.success') }}
+            {{ $t('common.variants.success') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.warningTooltip')" variant="warning">
           <DiButton size="sm" variant="warning">
-            {{ $t('features.uiElements.tooltip.warning') }}
+            {{ $t('common.variants.warning') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.errorTooltip')" variant="error">
           <DiButton size="sm" variant="error">
-            {{ $t('features.uiElements.tooltip.error') }}
+            {{ $t('common.variants.error') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip :text="$t('features.uiElements.tooltip.neutralTooltip')" variant="neutral">
           <DiButton size="sm">
-            {{ $t('features.uiElements.tooltip.neutral') }}
+            {{ $t('common.variants.neutral') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -457,7 +457,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           variant="info"
         >
           <DiButton size="sm" outline>
-            {{ $t('features.uiElements.tooltip.copy') }}
+            {{ $t('common.actions.copy') }}
           </DiButton>
         </DiTooltip>
 

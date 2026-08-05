@@ -18,15 +18,9 @@
         "extraLarge": "آواتار بسیار بزرگ",
         "doubleExtraLarge": "آواتار دوبرابر بزرگ",
         "basic": "آواتار پایه",
-        "image": "آواتار تصویری",
         "initials": "حروف اختصاری جایگزین",
         "icon": "آواتار آیکونی",
         "sizes": "اندازه‌ها",
-        "shapes": "شکل‌ها",
-        "variants": "گونه‌های معنایی",
-        "status": "نشانگرهای وضعیت",
-        "groups": "گروه آواتارها",
-        "broken": "مدیریت تصویر خراب",
         "online": "آواتار با نشانگر وضعیت آنلاین",
         "offline": "آواتار با نشانگر وضعیت آفلاین",
         "badges": "آواتار با نشان عددی",
@@ -92,7 +86,6 @@
         "headerSlot": "اسلات سربرگ",
         "footerActions": "عملیات پاورقی",
         "arrowPlacements": "نمونه‌های جایگاه پیکان",
-        "placements": "جایگاه‌ها",
         "alignment": "تراز",
         "widths": "عرض محرک",
         "richContent": "محتوای غنی",
@@ -116,16 +109,9 @@
         "nesting": "تودرتو"
       },
       "toast": {
-        "basic": "اعلان پایه",
-        "variants": "انواع معنایی",
-        "persistent": "اعلان ماندگار",
-        "placement": "موقعیت",
         "show": "نمایش اعلان",
         "showPersistent": "نمایش اعلان ماندگار",
         "showAction": "نمایش اعلان همراه با اقدام",
-        "showPositioned": "نمایش اعلان بالا-ابتدا",
-        "close": "بستن اعلان",
-        "undo": "واگرد",
         "sections": {
           "live": "نمونه زنده",
           "basic": "نمونه پایه",
@@ -146,7 +132,10 @@
           "showOutlined": "باز کردن خطی",
           "view": "مشاهده"
         },
-        "colors": { "dark": "تیره", "danger": "خطر" },
+        "colors": {
+          "dark": "تیره",
+          "danger": "خطر"
+        },
         "positions": {
           "topStart": "بالا ابتدا",
           "topLeft": "بالا چپ",
@@ -161,10 +150,7 @@
         },
         "messages": {
           "saved": "تنظیمات شما ذخیره شد.",
-          "variant": "این اعلان از یک نوع معنایی استفاده می‌کند.",
-          "attention": "نیازمند توجه",
           "persistent": "این اعلان تا زمانی که آن را ببندید باقی می‌ماند.",
-          "action": "مورد به بایگانی منتقل شد.",
           "position": "پیش‌نمایش جایگاه",
           "warning": "توجه! این یک اعلان هشدار است.",
           "error": "سلام دنیا! این یک اعلان خطا است.",
@@ -194,12 +180,8 @@
         "styleFour": "سبک صفحه‌بندی ۴",
         "controls": "دکمه‌های کنترل",
         "label": "صفحه‌بندی",
-        "first": "صفحه اول",
         "previous": "صفحه قبل",
-        "next": "صفحه بعد",
-        "last": "صفحه آخر",
-        "current": "صفحه فعلی: {page}",
-        "page": "صفحه {page}"
+        "next": "صفحه بعد"
       },
       "progress": {
         "basic": "پیشرفت پایه",
@@ -274,11 +256,9 @@
         "defaultBadge": "نشان پیشفرض",
         "badgeSizes": "اندازه‌های نشان",
         "coloredBadges": "نشان‌های رنگی",
-        "largeColoredBadges": "نشان‌های رنگی بزرگ",
         "softBadges": "نشان‌های شفاف",
         "outlineBadges": "نشان‌های خطی",
         "dashBadges": "نشان‌های خط‌چین",
-        "mixedStyleBadges": "نشان‌های ترکیبی",
         "ghostBadge": "نشان شبح",
         "emptyBadges": "نشان‌های خالی",
         "badgeWithIcons": "نشان با آیکون",
@@ -287,37 +267,16 @@
       "alert": {
         "defaultAlert": "هشدار پیشفرض",
         "coloredAlerts": "هشدارهای رنگی",
-        "softAlerts": "هشدارهای شفاف",
         "outlineAlerts": "هشدارهای خطی",
-        "dashAlerts": "هشدارهای خط‌چین",
         "closableAlerts": "هشدارهای قابل بستن",
         "alertWithTitle": "هشدار با عنوان",
         "alertWithActions": "هشدار با اکشن‌ها",
         "alertWithCustomIcon": "هشدار با آیکون سفارشی",
-        "verticalAlert": "هشدار عمودی",
         "alertWithTitleAndActions": "هشدار با عنوان و اکشن‌ها",
         "messages": {
-          "newUpdate": "نسخه جدید نرم‌افزار در دسترس است.",
-          "purchaseConfirmed": "خرید شما تایید شد!",
-          "invalidEmail": "هشدار: آدرس ایمیل نامعتبر است!",
-          "taskFailed": "خطا! وظیفه با موفقیت شکست خورد.",
-          "unreadMessages": "12 پیام خوانده نشده. برای مشاهده کلیک کنید.",
-          "clickToClose": "روی دکمه X کلیک کنید تا این هشدار بسته شود.",
-          "successClosable": "موفق! می‌توانید این هشدار را ببندید.",
-          "warningClosable": "هشدار! این هشدار قابل بستن است.",
-          "errorClosable": "خطا! برای بستن این هشدار کلیک کنید.",
-          "newMessageTitle": "پیام جدید!",
-          "newMessageDesc": "شما 1 پیام خوانده نشده دارید",
-          "cookiesMessage": "ما بدون دلیل از کوکی استفاده می‌کنیم.",
-          "congratulations": "تبریک! شما یک جایزه برنده شده‌اید!",
-          "verticalLayout": "این یک هشدار با چیدمان عمودی است، مناسب برای صفحات موبایل."
+          "invalidEmail": "هشدار: آدرس ایمیل نامعتبر است!"
         },
-        "actions": {
-          "deny": "رد کردن",
-          "accept": "قبول",
-          "see": "مشاهده",
-          "action": "اکشن"
-        }
+        "actions": {}
       },
       "icons": {
         "calendar": "تقویم",
@@ -353,56 +312,6 @@
         "laptops": "لپ‌تاپ‌ها",
         "gamingLaptops": "لپ‌تاپ‌های گیمینگ"
       },
-      "modal": {
-        "actions": {
-          "open": "باز کردن مودال",
-          "cancel": "انصراف",
-          "confirm": "تأیید",
-          "delete": "حذف"
-        },
-        "basic": {
-          "title": "مودال ساده",
-          "header": "عنوان مودال",
-          "description": "این یک مودال ساده با تنظیمات پیش‌فرض است."
-        },
-        "position": {
-          "title": "موقعیت مودال",
-          "top": "بالا",
-          "bottom": "پایین",
-          "topDesc": "این مودال در بالای صفحه نمایش داده می‌شود.",
-          "bottomDesc": "این مودال در پایین صفحه نمایش داده می‌شود."
-        },
-        "size": {
-          "title": "اندازه‌های مودال",
-          "sm": "این یک مودال کوچک است.",
-          "md": "این یک مودال متوسط است.",
-          "lg": "این یک مودال بزرگ است.",
-          "xl": "این یک مودال خیلی بزرگ است.",
-          "full": "تمام صفحه",
-          "fullDesc": "این مودال کل صفحه را پوشش می‌دهد."
-        },
-        "blur": {
-          "title": "محو شدن پس‌زمینه",
-          "xs": "محو شدن بسیار کم پس‌زمینه.",
-          "sm": "محو شدن کم پس‌زمینه.",
-          "md": "محو شدن متوسط پس‌زمینه."
-        },
-        "behavior": {
-          "title": "رفتار مودال",
-          "noBackdrop": "عدم بستن با کلیک بیرون",
-          "noEsc": "عدم بستن با ESC",
-          "noCloseButton": "بدون دکمه بستن",
-          "noBackdropDesc": "با کلیک روی پس‌زمینه، مودال بسته نمی‌شود.",
-          "noEscDesc": "با فشردن کلید ESC، مودال بسته نمی‌شود.",
-          "noCloseButtonDesc": "این مودال دکمه بستن ندارد."
-        },
-        "confirmation": {
-          "title": "دیالوگ تأیید",
-          "open": "حذف حساب کاربری",
-          "header": "حذف حساب کاربری؟",
-          "description": "آیا از حذف حساب کاربری خود مطمئن هستید؟ این عملیات قابل بازگشت نیست."
-        }
-      },
       "tooltip": {
         "basicTooltip": "راهنمای ابتدایی",
         "positionTooltips": "راهنماهای موقعیتی",
@@ -419,14 +328,6 @@
         "right": "راست",
         "bottom": "پایین",
         "left": "چپ",
-        "primary": "اصلی",
-        "secondary": "ثانویه",
-        "accent": "تاکیدی",
-        "info": "اطلاعات",
-        "success": "موفقیت",
-        "warning": "هشدار",
-        "error": "خطا",
-        "neutral": "خنثی",
         "tooltipOnTop": "راهنما در بالا",
         "tooltipOnRight": "راهنما در راست",
         "tooltipOnBottom": "راهنما در پایین",
@@ -462,35 +363,10 @@
         "short": "کوتاه",
         "shortText": "متن کوتاه",
         "clickToCopy": "برای کپی کلیک کنید",
-        "copy": "کپی",
         "toggleSwitch": "سوئیچ تغییر وضعیت",
         "selectOption": "انتخاب گزینه",
         "option1": "گزینه ۱",
-        "option2": "گزینه ۲",
-        "responsiveTooltip": "راهنمای واکنش‌گرا",
-        "mobileToDesktop": "موبایل به دسکتاپ",
-        "adaptiveColorPosition": "رنگ و موقعیت تطبیقی",
-        "responsiveIcons": "آیکون‌های واکنش‌گرا",
-        "complexResponsive": "لایه پیچیده واکنش‌گرا",
-        "tooltipChangesPosition": "راهنما بر اساس اندازه صفحه موقعیت خود را تغییر می‌دهد",
-        "resizeToSee": "برای مشاهده تغییرات اندازه را تغییر دهید",
-        "topMobileRightDesktop": "بالا در موبایل، راست در دسکتاپ",
-        "mobileDesktop": "موبایل ← دسکتاپ",
-        "bottomMobileLeftTablet": "پایین در موبایل، چپ در تبلت+",
-        "mobileTablet": "موبایل ← تبلت",
-        "infoResponsive": "راهنمای اطلاعات با موقعیت واکنش‌گرا",
-        "warningAdapts": "راهنمای هشدار با صفحه سازگار می‌شود",
-        "errorFullControl": "خطا با کنترل کامل واکنش‌گرا",
-        "settingsResponsive": "تنظیمات - موقعیت واکنش‌گرا",
-        "helpAdapts": "راهنما - با اندازه صفحه سازگار می‌شود",
-        "notificationsFullResponsive": "اعلان‌ها - کاملا واکنش‌گرا",
-        "adaptsBasedOnLayout": "بر اساس لایه سازگار می‌شود",
-        "smartPositioning": "موقعیت‌یابی هوشمند",
-        "responsiveDesign": "طراحی واکنش‌گرا",
-        "gridItem1": "مورد شبکه ۱",
-        "gridItem2": "مورد شبکه ۲",
-        "gridItem3": "مورد شبکه ۳",
-        "resizeWindowToSee": "اندازه پنجره را تغییر دهید تا راهنماها با نقاط شکست مختلف سازگار شوند"
+        "option2": "گزینه ۲"
       }
     },
     "forms": {
@@ -537,18 +413,24 @@
           "emailPrivacy": "ایمیل شما را هرگز به اشتراک نمی‌گذاریم.",
           "password": "حداقل از هشت نویسه استفاده کنید."
         },
-        "values": { "disabled": "مقدار غیرفعال", "readonly": "مقدار فقط‌خواندنی" },
+        "values": {
+          "disabled": "مقدار غیرفعال",
+          "readonly": "مقدار فقط‌خواندنی"
+        },
         "actions": {
           "hidePassword": "پنهان کردن رمز عبور",
           "showPassword": "نمایش رمز عبور",
-          "hide": "پنهان",
           "show": "نمایش"
         },
         "validation": {
           "email": "یک نشانی ایمیل معتبر وارد کنید.",
           "usernameAvailable": "این نام کاربری در دسترس است."
         },
-        "sizes": { "small": "کوچک", "medium": "متوسط", "large": "بزرگ" }
+        "sizes": {
+          "small": "کوچک",
+          "medium": "متوسط",
+          "large": "بزرگ"
+        }
       },
       "select": {
         "sections": {
@@ -567,7 +449,10 @@
           "singleSizes": "اندازه‌های انتخاب تکی",
           "multipleSizes": "اندازه‌های انتخاب چندگانه"
         },
-        "labels": { "singleSize": "انتخاب {size}", "multipleSize": "انتخاب {size} با برچسب" },
+        "labels": {
+          "singleSize": "انتخاب {size}",
+          "multipleSize": "انتخاب {size} با برچسب"
+        },
         "placeholders": {
           "state": "یک ایالت انتخاب کنید",
           "people": "افراد را انتخاب کنید",
@@ -581,7 +466,10 @@
           "researcher": "پژوهشگر",
           "supportLead": "سرپرست پشتیبانی"
         },
-        "actions": { "enable": "فعال کردن", "disable": "غیرفعال کردن" }
+        "actions": {
+          "enable": "فعال کردن",
+          "disable": "غیرفعال کردن"
+        }
       },
       "range": {
         "sections": {
@@ -639,14 +527,24 @@
           "recommended": "این هدف در محدوده پیشنهادی است.",
           "outsideRecommended": "بیرون از محدوده پیشنهادی ۲۰–۸۰."
         },
-        "colors": { "red": "قرمز", "green": "سبز", "blue": "آبی" },
+        "colors": {
+          "red": "قرمز",
+          "green": "سبز",
+          "blue": "آبی"
+        },
         "actions": {
           "lock": "قفل کردن کنترل‌ها",
           "unlock": "باز کردن کنترل‌ها",
           "enable": "فعال کردن محدوده",
           "disable": "غیرفعال کردن محدوده"
         },
-        "values": { "low": "کم", "medium": "متوسط", "high": "زیاد", "on": "روشن", "off": "خاموش" }
+        "values": {
+          "low": "کم",
+          "medium": "متوسط",
+          "high": "زیاد",
+          "on": "روشن",
+          "off": "خاموش"
+        }
       },
       "rangeSlider": {
         "sections": {
@@ -694,12 +592,21 @@
           "narrower": "بازه تحویل محدودتری انتخاب کنید.",
           "recommended": "این بازه با پیشنهاد مطابقت دارد."
         },
-        "actions": { "enable": "فعال کردن لغزنده", "disable": "غیرفعال کردن لغزنده" },
-        "sizes": { "small": "کوچک", "medium": "متوسط", "large": "بزرگ" }
+        "actions": {
+          "enable": "فعال کردن لغزنده",
+          "disable": "غیرفعال کردن لغزنده"
+        },
+        "sizes": {
+          "small": "کوچک",
+          "medium": "متوسط",
+          "large": "بزرگ"
+        }
       }
     },
     "advancedUi": {
-      "navbar": { "comingSoon": "نمایش مؤلفه نوار ناوبری به‌زودی آماده می‌شود..." },
+      "navbar": {
+        "comingSoon": "نمایش مؤلفه نوار ناوبری به‌زودی آماده می‌شود..."
+      },
       "modals": {
         "actions": {
           "open": "باز کردن مودال",
@@ -794,22 +701,15 @@
         "disabledContent": "This section cannot be opened."
       },
       "rating": {
-        "ratingSizes": "اندازه‌های امتیازدهی",
-        "rtlSupport": "پشتیبانی راست‌به‌چپ",
         "basicRating": "رتبه‌بندی پایه",
         "halfRating": "رتبه‌بندی نیمه‌امتیازی",
         "readonlyRating": "رتبه‌بندی فقط خواندنی",
         "disabledRating": "رتبه‌بندی غیرفعال",
-        "customIconRating": "رتبه‌بندی با آیکون سفارشی",
-        "coloredRating": "رتبه‌بندی رنگی",
-        "largeRating": "رتبه‌بندی بزرگ",
-        "smallRating": "رتبه‌بندی کوچک",
         "spacingRating": "رتبه‌بندی با فاصله سفارشی",
         "masksRating": "رتبه‌بندی با ماسک‌های مختلف",
         "variants": "رتبه‌بندی با انواع مختلف",
         "customMaxRating": "رتبه‌بندی با حداکثر سفارشی",
-        "sizesRating": "رتبه‌بندی با اندازه‌های مختلف",
-        "clearableRating": "رتبه‌بندی قابل پاکسازی"
+        "sizesRating": "رتبه‌بندی با اندازه‌های مختلف"
       },
       "collapses": {
         "collapseColors": "رنگ‌های کلپس",

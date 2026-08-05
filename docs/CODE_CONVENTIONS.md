@@ -354,8 +354,7 @@ There is no automatic filesystem routing.
 
 Locale messages are split by ownership under `src/shared/locales/<locale>`. New keys must use one
 of the `common`, `menu`, `layout`, `components`, `pages`, or `features` namespaces and camelCase
-segments. See [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md) for the complete ownership rules and
-the compatibility-key migration policy.
+segments. See [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md) for the complete ownership rules.
 
 Use translation keys for user-facing application-shell and catalogue text where the existing
 feature is localized.
@@ -363,14 +362,14 @@ feature is localized.
 Rules:
 
 - English is the source fallback.
-- Add keys to every locale that is expected to support the feature.
-- Do not assume non-English locale files are complete.
+- Keep the key structure identical across all six supported locales.
+- Run `pnpm i18n:check` after changing locale files or translation call sites.
 - Use `$t` in templates or `useI18n` in scripts.
 - Route metadata stores keys, not translated values.
 - Set language direction through the existing language flow, not on individual page roots.
 
-Some current menu labels and placeholder pages use literal English. That is existing
-incompleteness, not the preferred model for new localized functionality.
+Technical identifiers, source examples, API values, component names, CSS tokens, URLs, and fixture
+identifiers remain literal by design.
 
 ## RTL Support
 

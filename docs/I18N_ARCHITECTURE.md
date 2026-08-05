@@ -42,31 +42,22 @@ earlier file.
 A namespace helper is intentionally not introduced. Existing `t()` calls are short, and a wrapper
 would add another API without currently eliminating meaningful duplication.
 
-## Compatibility namespaces and migration
+## Canonical namespaces
 
-Phase 0 preserves every existing key and runtime lookup. The following namespaces remain available
-temporarily in their owner modules:
+The migration compatibility namespaces have been removed. Use only the canonical ownership roots
+and camelCase segments documented above. In particular, use `common.variants.*` and
+`features.advancedUi.*`; root `variants.*` and hyphenated feature segments are invalid.
 
-| Existing key                                                 | Owner module    | Phase 1 target example                             |
-| ------------------------------------------------------------ | --------------- | -------------------------------------------------- |
-| `variants.primary`                                           | `common.json`   | `common.variants.primary`                          |
-| hyphenated feature segments such as `features.advanced-ui.*` | `features.json` | camelCase segments such as `features.advancedUi.*` |
-
-Migrate one bounded area at a time. Add the canonical key in every locale in scope, change all
-known consumers, verify fallback behavior, and remove a compatibility key only after repository
-search confirms that it has no consumers. Uneven locale coverage remains supported by the English
-fallback.
-
-Shared component defaults and the preview-code pattern now use the canonical `components.*`
-namespace. Generic close and copy actions use `common.actions.*`.
-
-The permanent application shell now uses the canonical `layout.*` namespace. Legacy root
-`author`, `greeting`, `theme.*`, and `sidebar.*` messages have been removed.
+The repository validator rejects legacy namespace references, unknown static translation keys,
+locale structure differences, and keys stored in the wrong locale module.
 
 ## Adding translations
 
 1. Select the module from the ownership table.
 2. Search that module and the English locale for an existing key with the same meaning.
-3. Add the English key and equivalent keys for every locale required by the change.
+3. Add the English key and the same key structure to every supported locale.
 4. Use a stable translation key at the call site; keep identifiers in data structures.
 5. Verify English, one non-English locale, and an RTL locale when rendered layout is affected.
+
+Run `pnpm i18n:check` before finishing. Use `pnpm i18n:unused` as a conservative review aid;
+confirm every reported key against dynamic lookups before removing it.
