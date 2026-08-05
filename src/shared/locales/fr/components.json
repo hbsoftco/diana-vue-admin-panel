@@ -66,6 +66,9 @@
       "showPreview": "Afficher l’aperçu",
       "showCode": "Afficher le code",
       "copied": "Copié !"
+    },
+    "dropdown": {
+      "menu": "Menu"
     }
   }
 }

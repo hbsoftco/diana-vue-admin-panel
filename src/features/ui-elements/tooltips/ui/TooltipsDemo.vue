@@ -331,7 +331,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           variant="primary"
         >
           <DiButton size="sm" variant="primary" class="w-full">
-            P-Top
+            {{ $t('features.uiElements.tooltip.live.pTop') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip
@@ -340,7 +340,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           variant="success"
         >
           <DiButton size="sm" variant="success" class="w-full">
-            S-Right
+            {{ $t('features.uiElements.tooltip.live.sRight') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip
@@ -349,7 +349,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           variant="warning"
         >
           <DiButton size="sm" variant="warning" class="w-full">
-            W-Bottom
+            {{ $t('features.uiElements.tooltip.live.wBottom') }}
           </DiButton>
         </DiTooltip>
         <DiTooltip
@@ -358,7 +358,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           variant="error"
         >
           <DiButton size="sm" variant="error" class="w-full">
-            E-Left
+            {{ $t('features.uiElements.tooltip.live.eLeft') }}
           </DiButton>
         </DiTooltip>
       </div>

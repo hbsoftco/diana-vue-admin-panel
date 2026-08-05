@@ -85,7 +85,7 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
                   variant="link"
                   size="xs"
                 >
-                  Diana's father
+                  {{ $t('layout.footer.author') }}
                 </DiButton>
               </template>
               <template #license>

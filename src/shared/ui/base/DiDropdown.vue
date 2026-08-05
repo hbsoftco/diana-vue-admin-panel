@@ -1,49 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from 'vue'
-
-/* ----------------------------------
- * Types
- * ---------------------------------- */
-type KeyGetter<T> = keyof T | ((option: T) => any)
-
-export type DropdownOption<T = any> = T & {
-  divider?: boolean
-  disabled?: boolean
-}
-
-export type DropdownProps<T = any> = {
-  options?: DropdownOption<T>[]
-
-  labelKey?: KeyGetter<T>
-  valueKey?: KeyGetter<T>
-
-  position?: 'top' | 'bottom' | 'left' | 'right'
-  align?: 'start' | 'center' | 'end'
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
-  hover?: boolean
-  closeOnClick?: boolean
-
-  width?: string
-  bgColor?: string
-  rounded?: boolean | string
-  shadow?: boolean | string
-  border?: boolean | string
-  zIndex?: number
-
-  header?: string
-  footer?: string
-  showHeaderDivider?: boolean
-  showFooterDivider?: boolean
-
-  triggerClass?: string
-  buttonClass?: string
-  contentClass?: string
-  headerClass?: string
-  footerClass?: string
-  dividerClass?: string
-  class?: string
-}
+import { useI18n } from 'vue-i18n'
 
 /* ----------------------------------
  * Props
@@ -89,6 +46,52 @@ const slots = defineSlots<{
   footer?: any
   divider?: any
 }>()
+
+const { t } = useI18n()
+
+/* ----------------------------------
+ * Types
+ * ---------------------------------- */
+type KeyGetter<T> = keyof T | ((option: T) => any)
+
+export type DropdownOption<T = any> = T & {
+  divider?: boolean
+  disabled?: boolean
+}
+
+export type DropdownProps<T = any> = {
+  options?: DropdownOption<T>[]
+
+  labelKey?: KeyGetter<T>
+  valueKey?: KeyGetter<T>
+
+  position?: 'top' | 'bottom' | 'left' | 'right'
+  align?: 'start' | 'center' | 'end'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
+  hover?: boolean
+  closeOnClick?: boolean
+
+  width?: string
+  bgColor?: string
+  rounded?: boolean | string
+  shadow?: boolean | string
+  border?: boolean | string
+  zIndex?: number
+
+  header?: string
+  footer?: string
+  showHeaderDivider?: boolean
+  showFooterDivider?: boolean
+
+  triggerClass?: string
+  buttonClass?: string
+  contentClass?: string
+  headerClass?: string
+  footerClass?: string
+  dividerClass?: string
+  class?: string
+}
 
 /* ----------------------------------
  * Static class maps
@@ -285,7 +288,7 @@ function handleMouseLeave() {
     >
       <slot name="trigger">
         <button :class="buttonClass">
-          Menu
+          {{ t('components.dropdown.menu') }}
         </button>
       </slot>
     </div>

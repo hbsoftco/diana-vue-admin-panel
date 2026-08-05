@@ -1,7 +1,8 @@
 {
   "layout": {
     "footer": {
-      "copyright": "Copyright © {year} {brand}. Conçu avec {heart} par {author}. Open source sous licence {license}."
+      "copyright": "Copyright © {year} {brand}. Conçu avec {heart} par {author}. Open source sous licence {license}.",
+      "author": "Le père de Diana"
     },
     "sidebar": {
       "label": "Barre latérale de l’application",

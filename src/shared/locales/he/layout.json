@@ -1,7 +1,8 @@
 {
   "layout": {
     "footer": {
-      "copyright": "זכויות יוצרים © {year} {brand}. עוצב עם {heart} על ידי {author}. קוד פתוח ברישיון {license}."
+      "copyright": "זכויות יוצרים © {year} {brand}. עוצב עם {heart} על ידי {author}. קוד פתוח ברישיון {license}.",
+      "author": "אבא של דיאנה"
     },
     "sidebar": {
       "label": "סרגל הצד של היישום",

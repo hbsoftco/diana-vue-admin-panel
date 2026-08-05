@@ -136,11 +136,35 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
       language="html"
     >
       <div class="space-y-3">
-        <DiProgress class="w-full" variant="primary" aria-label="Loading" />
-        <DiProgress class="w-full" :value="25" variant="primary" aria-label="25% complete" />
-        <DiProgress class="w-full" :value="50" variant="primary" aria-label="50% complete" />
-        <DiProgress class="w-full" :value="75" variant="primary" aria-label="75% complete" />
-        <DiProgress class="w-full" :value="100" variant="primary" aria-label="Complete" />
+        <DiProgress
+          class="w-full"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.loading')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="25"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.value25PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="50"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="75"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.value75PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="100"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.complete')"
+        />
       </div>
     </PreviewCodeCard>
 
@@ -150,11 +174,36 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
       language="html"
     >
       <div class="space-y-3">
-        <DiProgress class="w-full" :value="20" variant="info" aria-label="20% complete" />
-        <DiProgress class="w-full" :value="40" variant="warning" aria-label="40% complete" />
-        <DiProgress class="w-full" :value="60" variant="secondary" aria-label="60% complete" />
-        <DiProgress class="w-full" :value="80" variant="success" aria-label="80% complete" />
-        <DiProgress class="w-full" :value="100" variant="error" aria-label="Complete" />
+        <DiProgress
+          class="w-full"
+          :value="20"
+          variant="info"
+          :aria-label="$t('features.uiElements.progress.live.value20PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="40"
+          variant="warning"
+          :aria-label="$t('features.uiElements.progress.live.value40PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="60"
+          variant="secondary"
+          :aria-label="$t('features.uiElements.progress.live.value60PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="80"
+          variant="success"
+          :aria-label="$t('features.uiElements.progress.live.value80PercentComplete')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="100"
+          variant="error"
+          :aria-label="$t('features.uiElements.progress.live.complete')"
+        />
       </div>
     </PreviewCodeCard>
 
@@ -169,35 +218,35 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           :value="10"
           variant="primary"
           pattern="striped"
-          aria-label="10% complete"
+          :aria-label="$t('features.uiElements.progress.live.value10PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="25"
           variant="info"
           pattern="striped"
-          aria-label="25% complete"
+          :aria-label="$t('features.uiElements.progress.live.value25PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="50"
           variant="success"
           pattern="striped"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="75"
           variant="secondary"
           pattern="striped"
-          aria-label="75% complete"
+          :aria-label="$t('features.uiElements.progress.live.value75PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="100"
           variant="warning"
           pattern="striped"
-          aria-label="Complete"
+          :aria-label="$t('features.uiElements.progress.live.complete')"
         />
       </div>
     </PreviewCodeCard>
@@ -213,17 +262,35 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           :value="10"
           size="xs"
           variant="primary"
-          aria-label="Extra small"
+          :aria-label="$t('features.uiElements.progress.live.extraSmall')"
         />
-        <DiProgress class="w-full" :value="25" size="sm" variant="primary" aria-label="Small" />
-        <DiProgress class="w-full" :value="50" size="md" variant="primary" aria-label="Medium" />
-        <DiProgress class="w-full" :value="75" size="lg" variant="primary" aria-label="Large" />
+        <DiProgress
+          class="w-full"
+          :value="25"
+          size="sm"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.small')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="50"
+          size="md"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.medium')"
+        />
+        <DiProgress
+          class="w-full"
+          :value="75"
+          size="lg"
+          variant="primary"
+          :aria-label="$t('features.uiElements.progress.live.large')"
+        />
         <DiProgress
           class="w-full"
           :value="100"
           size="xl"
           variant="primary"
-          aria-label="Extra large"
+          :aria-label="$t('features.uiElements.progress.live.extraLarge')"
         />
       </div>
     </PreviewCodeCard>
@@ -239,35 +306,35 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           :value="10"
           variant="primary"
           show-value
-          aria-label="10% complete"
+          :aria-label="$t('features.uiElements.progress.live.value10PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="20"
           variant="info"
           show-value
-          aria-label="20% complete"
+          :aria-label="$t('features.uiElements.progress.live.value20PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="40"
           variant="success"
           show-value
-          aria-label="40% complete"
+          :aria-label="$t('features.uiElements.progress.live.value40PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="60"
           variant="secondary"
           show-value
-          aria-label="60% complete"
+          :aria-label="$t('features.uiElements.progress.live.value60PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="80"
           variant="warning"
           show-value
-          aria-label="80% complete"
+          :aria-label="$t('features.uiElements.progress.live.value80PercentComplete')"
         />
       </div>
     </PreviewCodeCard>
@@ -283,14 +350,14 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           size="xs"
           orientation="vertical"
           variant="primary"
-          aria-label="20% complete"
+          :aria-label="$t('features.uiElements.progress.live.value20PercentComplete')"
         />
         <DiProgress
           :value="40"
           size="lg"
           orientation="vertical"
           variant="primary"
-          aria-label="40% complete"
+          :aria-label="$t('features.uiElements.progress.live.value40PercentComplete')"
         />
         <DiProgress
           :value="25"
@@ -298,7 +365,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           orientation="vertical"
           variant="primary"
           show-value
-          aria-label="25% complete"
+          :aria-label="$t('features.uiElements.progress.live.value25PercentComplete')"
         />
         <DiProgress
           :value="65"
@@ -306,7 +373,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           orientation="vertical"
           variant="primary"
           pattern="striped"
-          aria-label="65% complete"
+          :aria-label="$t('features.uiElements.progress.live.value65PercentComplete')"
         />
         <DiProgress
           :value="80"
@@ -314,7 +381,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           orientation="vertical"
           variant="primary"
           pattern="striped"
-          aria-label="80% complete"
+          :aria-label="$t('features.uiElements.progress.live.value80PercentComplete')"
         />
       </div>
     </PreviewCodeCard>
@@ -331,7 +398,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="primary"
           pattern="striped"
           animated
-          aria-label="10% complete"
+          :aria-label="$t('features.uiElements.progress.live.value10PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -339,7 +406,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="info"
           pattern="striped"
           animated
-          aria-label="25% complete"
+          :aria-label="$t('features.uiElements.progress.live.value25PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -347,7 +414,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="success"
           pattern="striped"
           animated
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -355,7 +422,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="secondary"
           pattern="striped"
           animated
-          aria-label="75% complete"
+          :aria-label="$t('features.uiElements.progress.live.value75PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -363,7 +430,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="warning"
           pattern="striped"
           animated
-          aria-label="Complete"
+          :aria-label="$t('features.uiElements.progress.live.complete')"
         />
       </div>
     </PreviewCodeCard>
@@ -379,22 +446,28 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           :value="50"
           size="xs"
           variant="primary"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
-        <DiProgress class="w-full" :value="50" size="xs" variant="info" aria-label="50% complete" />
+        <DiProgress
+          class="w-full"
+          :value="50"
+          size="xs"
+          variant="info"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
+        />
         <DiProgress
           class="w-full"
           :value="50"
           size="xs"
           variant="success"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="50"
           size="xs"
           variant="warning"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
       </div>
     </PreviewCodeCard>
@@ -411,7 +484,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="primary"
           pattern="dotted"
           animated
-          aria-label="55% complete"
+          :aria-label="$t('features.uiElements.progress.live.value55PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -419,7 +492,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="info"
           pattern="dotted"
           animated
-          aria-label="55% complete"
+          :aria-label="$t('features.uiElements.progress.live.value55PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -427,7 +500,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="success"
           pattern="dotted"
           animated
-          aria-label="55% complete"
+          :aria-label="$t('features.uiElements.progress.live.value55PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -435,7 +508,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="secondary"
           pattern="dotted"
           animated
-          aria-label="55% complete"
+          :aria-label="$t('features.uiElements.progress.live.value55PercentComplete')"
         />
         <DiProgress
           class="w-full"
@@ -443,7 +516,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           variant="warning"
           pattern="dotted"
           animated
-          aria-label="55% complete"
+          :aria-label="$t('features.uiElements.progress.live.value55PercentComplete')"
         />
       </div>
     </PreviewCodeCard>
@@ -456,14 +529,14 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
       <div class="space-y-8">
         <div class="flex items-center gap-3">
           <DiBadge class="min-w-20" variant="primary" size="sm">
-            Mobile
+            {{ $t('features.uiElements.progress.live.mobile') }}
           </DiBadge>
           <DiProgress
             class="w-full"
             :value="50"
             variant="primary"
             label-position="end"
-            aria-label="Mobile 50%"
+            :aria-label="$t('features.uiElements.progress.live.mobile50Percent')"
           >
             <template #value-label="{ percentage }">
               <DiBadge class="-translate-y-5" variant="primary" size="sm">
@@ -474,14 +547,14 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
         </div>
         <div class="flex items-center gap-3">
           <DiBadge class="min-w-20" variant="info" size="sm">
-            Watches
+            {{ $t('features.uiElements.progress.live.watches') }}
           </DiBadge>
           <DiProgress
             class="w-full"
             :value="60"
             variant="info"
             label-position="end"
-            aria-label="Watches 60%"
+            :aria-label="$t('features.uiElements.progress.live.watches60Percent')"
           >
             <template #value-label="{ percentage }">
               <DiBadge class="-translate-y-5" variant="info" size="sm">
@@ -492,14 +565,14 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
         </div>
         <div class="flex items-center gap-3">
           <DiBadge class="min-w-20" variant="success" size="sm">
-            Shirts
+            {{ $t('features.uiElements.progress.live.shirts') }}
           </DiBadge>
           <DiProgress
             class="w-full"
             :value="70"
             variant="success"
             label-position="end"
-            aria-label="Shirts 70%"
+            :aria-label="$t('features.uiElements.progress.live.shirts70Percent')"
           >
             <template #value-label="{ percentage }">
               <DiBadge class="-translate-y-5" variant="success" size="sm">
@@ -522,35 +595,35 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           :value="50"
           :markers="[25]"
           variant="primary"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="60"
           :markers="[25, 50]"
           variant="info"
-          aria-label="60% complete"
+          :aria-label="$t('features.uiElements.progress.live.value60PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="70"
           :markers="[25, 50]"
           variant="success"
-          aria-label="70% complete"
+          :aria-label="$t('features.uiElements.progress.live.value70PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="80"
           :markers="[25, 50, 75]"
           variant="secondary"
-          aria-label="80% complete"
+          :aria-label="$t('features.uiElements.progress.live.value80PercentComplete')"
         />
         <DiProgress
           class="w-full"
           :value="90"
           :markers="[25, 50, 75]"
           variant="warning"
-          aria-label="90% complete"
+          :aria-label="$t('features.uiElements.progress.live.value90PercentComplete')"
         />
       </div>
     </PreviewCodeCard>
@@ -567,7 +640,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           size="xs"
           variant="primary"
           label-position="end"
-          aria-label="50% complete"
+          :aria-label="$t('features.uiElements.progress.live.value50PercentComplete')"
         >
           <template #value-label="{ percentage }">
             <span class="rounded-full border border-primary bg-base-100 px-2 py-0.5 text-primary">{{ Math.round(percentage) }}%</span>
@@ -579,7 +652,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           size="xs"
           variant="info"
           label-position="end"
-          aria-label="60% complete"
+          :aria-label="$t('features.uiElements.progress.live.value60PercentComplete')"
         >
           <template #value-label="{ percentage }">
             <span class="rounded-full border border-info bg-base-100 px-2 py-0.5 text-info">{{ Math.round(percentage) }}%</span>
@@ -591,7 +664,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           size="xs"
           variant="success"
           label-position="end"
-          aria-label="70% complete"
+          :aria-label="$t('features.uiElements.progress.live.value70PercentComplete')"
         >
           <template #value-label="{ percentage }">
             <span class="rounded-full border border-success bg-base-100 px-2 py-0.5 text-success">{{ Math.round(percentage) }}%</span>

@@ -31,7 +31,12 @@ const transformExamples = `<div class="flex flex-wrap gap-4 items-center">
 // Badge examples
 const badgeExamples = `<div class="flex flex-wrap gap-4 items-center">
   <DiIcon name="bell" size="lg" :badge="3" />
-  <DiIcon name="sun" size="lg" badge="Hot" badge-variant="secondary" />
+  <DiIcon
+    name="sun"
+    size="lg"
+    :badge="$t('features.uiElements.icons.hot')"
+    badge-variant="secondary"
+  />
   <DiIcon name="star" size="lg" badge="!" badge-variant="warning" badge-pill />
 </div>`
 
@@ -109,7 +114,13 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
     >
       <div class="flex flex-wrap gap-4 items-center">
         <DiIcon name="bell" size="lg" :badge="3" />
-        <DiIcon name="sun" size="lg" badge="Hot" badge-variant="secondary" class="mx-6" />
+        <DiIcon
+          name="sun"
+          size="lg"
+          :badge="$t('features.uiElements.icons.hot')"
+          badge-variant="secondary"
+          class="mx-6"
+        />
         <DiIcon name="star" size="lg" badge="!" badge-variant="warning" badge-pill />
       </div>
     </PreviewCodeCard>
