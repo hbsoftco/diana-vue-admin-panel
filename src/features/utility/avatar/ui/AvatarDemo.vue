@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 import type { AvatarSize, AvatarVariant, DiAvatarGroupItem } from '@/shared/ui/base/avatar'
 
 import { DiAvatar, DiAvatarGroup } from '@/shared/ui/base/avatar'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
+
+const { t } = useI18n()
 
 const avatarSizes: AvatarSize[] = ['xs', 'sm', 'md', 'lg', 'xl', '2xl']
 const avatarUrls = [
@@ -23,24 +28,33 @@ const badgeVariants: AvatarVariant[] = [
   'error',
 ]
 const badgeValues = [2, 5, 1, 7, 3, 9]
-const initials: Array<{
-  label: string
-  name: string
-  size: AvatarSize
-  variant: AvatarVariant
-}> = [
-  { label: 'XS', name: 'Extra small avatar', size: 'xs', variant: 'primary' },
-  { label: 'SM', name: 'Small avatar', size: 'sm', variant: 'secondary' },
-  { label: 'MD', name: 'Medium avatar', size: 'md', variant: 'warning' },
-  { label: 'LG', name: 'Large avatar', size: 'lg', variant: 'error' },
-  { label: 'XL', name: 'Extra large avatar', size: 'xl', variant: 'success' },
-  { label: 'XXL', name: 'Double extra large avatar', size: '2xl', variant: 'info' },
-]
-const groupAvatars: DiAvatarGroupItem[] = avatarUrls.map((src, index) => ({
-  id: index,
-  src,
-  alt: `Team member ${index + 1}`,
-}))
+const initials = computed<
+  Array<{
+    label: string
+    name: string
+    size: AvatarSize
+    variant: AvatarVariant
+  }>
+>(() => [
+  { label: 'XS', name: t('features.utility.avatar.extraSmall'), size: 'xs', variant: 'primary' },
+  { label: 'SM', name: t('features.utility.avatar.small'), size: 'sm', variant: 'secondary' },
+  { label: 'MD', name: t('features.utility.avatar.medium'), size: 'md', variant: 'warning' },
+  { label: 'LG', name: t('features.utility.avatar.large'), size: 'lg', variant: 'error' },
+  { label: 'XL', name: t('features.utility.avatar.extraLarge'), size: 'xl', variant: 'success' },
+  {
+    label: 'XXL',
+    name: t('features.utility.avatar.doubleExtraLarge'),
+    size: '2xl',
+    variant: 'info',
+  },
+])
+const groupAvatars = computed<DiAvatarGroupItem[]>(() =>
+  avatarUrls.map((src, index) => ({
+    id: index,
+    src,
+    alt: t('features.utility.avatar.teamMember', { number: index + 1 }),
+  })),
+)
 
 const avatarsCode = `<div class="flex items-center gap-3">
   <DiAvatar src="https://i.pravatar.cc/160?img=1" alt="Square avatar" shape="square" />
@@ -138,9 +152,20 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
       language="html"
     >
       <div class="flex items-center justify-center gap-3 py-4">
-        <DiAvatar src="https://i.pravatar.cc/160?img=1" alt="Square avatar" shape="square" />
-        <DiAvatar src="https://i.pravatar.cc/160?img=5" alt="Rounded avatar" shape="rounded" />
-        <DiAvatar src="https://i.pravatar.cc/160?img=9" alt="Circular avatar" />
+        <DiAvatar
+          src="https://i.pravatar.cc/160?img=1"
+          :alt="$t('features.utility.avatar.square')"
+          shape="square"
+        />
+        <DiAvatar
+          src="https://i.pravatar.cc/160?img=5"
+          :alt="$t('features.utility.avatar.rounded')"
+          shape="rounded"
+        />
+        <DiAvatar
+          src="https://i.pravatar.cc/160?img=9"
+          :alt="$t('features.utility.avatar.circular')"
+        />
       </div>
     </PreviewCodeCard>
 
@@ -155,7 +180,7 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
           v-for="(size, index) in avatarSizes"
           :key="size"
           :src="avatarUrls[index]"
-          :alt="`${size} avatar`"
+          :alt="$t('features.utility.avatar.sizeAlt', { size })"
           :size="size"
           shape="rounded"
         />
@@ -173,7 +198,7 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
           v-for="(size, index) in avatarSizes"
           :key="size"
           :src="avatarUrls[index]"
-          :alt="`Profile action avatar ${index + 1}`"
+          :alt="$t('features.utility.avatar.profileAction', { number: index + 1 })"
           :size="size"
           :badge-variant="badgeVariants[index]"
         >
@@ -195,7 +220,7 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
           v-for="(size, index) in avatarSizes"
           :key="size"
           :src="avatarUrls[index]"
-          :alt="`Online user ${index + 1}`"
+          :alt="$t('features.utility.avatar.onlineUser', { number: index + 1 })"
           :size="size"
           status="online"
         />
@@ -213,7 +238,7 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
           v-for="(size, index) in avatarSizes"
           :key="size"
           :src="avatarUrls[index]"
-          :alt="`Offline user ${index + 1}`"
+          :alt="$t('features.utility.avatar.offlineUser', { number: index + 1 })"
           :size="size"
           status="offline"
         />
@@ -231,7 +256,7 @@ const roundedStackedCode = `<DiAvatarGroup :avatars="groupAvatars" :max="5" shap
           v-for="(size, index) in avatarSizes"
           :key="size"
           :src="avatarUrls[index]"
-          :alt="`Unread messages avatar ${index + 1}`"
+          :alt="$t('features.utility.avatar.unreadMessages', { number: index + 1 })"
           :size="size"
           :badge-variant="badgeVariants[index]"
         >

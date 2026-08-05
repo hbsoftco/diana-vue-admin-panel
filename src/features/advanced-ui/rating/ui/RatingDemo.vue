@@ -70,7 +70,7 @@ const customMaxRating = `<DiRating :max="10" />`
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 items-start">
     <!-- Basic -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.basicRating')"
+      :title="$t('features.advancedUi.rating.basicRating')"
       accent-color="#f59e0b"
       :code="basicRating"
       language="html"
@@ -80,7 +80,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Sizes -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.sizesRating')"
+      :title="$t('features.advancedUi.rating.sizesRating')"
       accent-color="#f59e0b"
       :code="sizesRating"
       language="html"
@@ -95,7 +95,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Variants -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.variants')"
+      :title="$t('features.advancedUi.rating.variants')"
       accent-color="#f59e0b"
       :code="variantsRating"
       language="html"
@@ -113,7 +113,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Masks -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.masksRating')"
+      :title="$t('features.advancedUi.rating.masksRating')"
       accent-color="#f59e0b"
       :code="masksRating"
       language="html"
@@ -129,7 +129,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Half -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.halfRating')"
+      :title="$t('features.advancedUi.rating.halfRating')"
       accent-color="#f59e0b"
       :code="halfRating"
       language="html"
@@ -146,7 +146,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Spacing -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.spacingRating')"
+      :title="$t('features.advancedUi.rating.spacingRating')"
       accent-color="#f59e0b"
       :code="spacingRating"
       language="html"
@@ -162,7 +162,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Readonly -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.readonlyRating')"
+      :title="$t('features.advancedUi.rating.readonlyRating')"
       accent-color="#f59e0b"
       :code="readonlyRating"
       language="html"
@@ -172,7 +172,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Disabled -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.disabledRating')"
+      :title="$t('features.advancedUi.rating.disabledRating')"
       accent-color="#f59e0b"
       :code="disabledRating"
       language="html"
@@ -182,7 +182,7 @@ const customMaxRating = `<DiRating :max="10" />`
 
     <!-- Custom max -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.rating.customMaxRating')"
+      :title="$t('features.advancedUi.rating.customMaxRating')"
       accent-color="#f59e0b"
       :code="customMaxRating"
       language="html"

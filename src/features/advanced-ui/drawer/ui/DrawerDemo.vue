@@ -159,25 +159,25 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Basic -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.drawers.basic')"
+      :title="$t('features.advancedUi.drawers.basic')"
       accent-color="#a855f7"
       :code="basicExample"
       language="html"
     >
       <DiButton variant="primary" @click="basicOpen = true">
-        {{ $t('features.advanced-ui.drawers.openDrawer') }}
+        {{ $t('features.advancedUi.drawers.openDrawer') }}
       </DiButton>
       <DiDrawer v-model="basicOpen">
         <template #side>
           <ul class="menu bg-base-200 min-h-full w-64 p-4">
             <li class="menu-title">
-              {{ $t('features.advanced-ui.drawers.openDrawer') }}
+              {{ $t('features.advancedUi.drawers.openDrawer') }}
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item1') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item1') }}</a>
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item2') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item2') }}</a>
             </li>
           </ul>
         </template>
@@ -186,25 +186,25 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
 
     <!-- End (right) -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.drawers.end')"
+      :title="$t('features.advancedUi.drawers.end')"
       accent-color="#a855f7"
       :code="endExample"
       language="html"
     >
       <DiButton variant="primary" @click="endOpen = true">
-        {{ $t('features.advanced-ui.drawers.openDrawer') }}
+        {{ $t('features.advancedUi.drawers.openDrawer') }}
       </DiButton>
       <DiDrawer v-model="endOpen" position="end">
         <template #side>
           <ul class="menu bg-base-200 min-h-full w-64 p-4">
             <li class="menu-title">
-              {{ $t('features.advanced-ui.drawers.sidebarTitle') }}
+              {{ $t('features.advancedUi.drawers.sidebarTitle') }}
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item1') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item1') }}</a>
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item2') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item2') }}</a>
             </li>
           </ul>
         </template>
@@ -213,7 +213,7 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
 
     <!-- Navbar + Sidebar (mobile drawer / desktop navbar) -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.drawers.navbar')"
+      :title="$t('features.advancedUi.drawers.navbar')"
       accent-color="#a855f7"
       :code="navbarExample"
       language="html"
@@ -243,30 +243,30 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
               </DiButton>
             </div>
             <div class="mx-2 flex-1 px-2">
-              {{ $t('features.advanced-ui.drawers.navbarTitle') }}
+              {{ $t('features.advancedUi.drawers.navbarTitle') }}
             </div>
             <div class="hidden flex-none lg:block">
               <ul class="menu menu-horizontal">
                 <li>
-                  <a>{{ $t('features.advanced-ui.drawers.navItem1') }}</a>
+                  <a>{{ $t('features.advancedUi.drawers.navItem1') }}</a>
                 </li>
                 <li>
-                  <a>{{ $t('features.advanced-ui.drawers.navItem2') }}</a>
+                  <a>{{ $t('features.advancedUi.drawers.navItem2') }}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="p-4">
-            {{ $t('features.advanced-ui.drawers.content') }}
+            {{ $t('features.advancedUi.drawers.content') }}
           </div>
         </template>
         <template #side>
           <ul class="menu bg-base-200 min-h-full w-64 p-4">
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item1') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item1') }}</a>
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item2') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item2') }}</a>
             </li>
           </ul>
         </template>
@@ -275,7 +275,7 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
 
     <!-- Responsive (lg:drawer-open) -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.drawers.responsive')"
+      :title="$t('features.advancedUi.drawers.responsive')"
       accent-color="#a855f7"
       :code="responsiveExample"
       language="html"
@@ -289,24 +289,24 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
         <template #content>
           <div class="flex h-full flex-col items-center justify-center gap-2">
             <p class="text-base-content/60 text-sm">
-              {{ $t('features.advanced-ui.drawers.responsiveHint') }}
+              {{ $t('features.advancedUi.drawers.responsiveHint') }}
             </p>
             <DiButton
               variant="primary"
               class="drawer-button lg:hidden"
               @click="responsiveOpen = true"
             >
-              {{ $t('features.advanced-ui.drawers.openDrawer') }}
+              {{ $t('features.advancedUi.drawers.openDrawer') }}
             </DiButton>
           </div>
         </template>
         <template #side>
           <ul class="menu bg-base-200 min-h-full w-64 p-4">
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item1') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item1') }}</a>
             </li>
             <li>
-              <a>{{ $t('features.advanced-ui.drawers.item2') }}</a>
+              <a>{{ $t('features.advancedUi.drawers.item2') }}</a>
             </li>
           </ul>
         </template>
@@ -315,7 +315,7 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
 
     <!-- Icon-only collapsible (is-drawer-open / is-drawer-close) -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.drawers.iconOnly')"
+      :title="$t('features.advancedUi.drawers.iconOnly')"
       accent-color="#a855f7"
       :code="iconOnlyExample"
       language="html"
@@ -333,11 +333,11 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
               <DiIcon name="menu" size="md" />
             </DiButton>
             <div class="px-4">
-              {{ $t('features.advanced-ui.drawers.navbarTitle') }}
+              {{ $t('features.advancedUi.drawers.navbarTitle') }}
             </div>
           </nav>
           <div class="p-4">
-            {{ $t('features.advanced-ui.drawers.content') }}
+            {{ $t('features.advancedUi.drawers.content') }}
           </div>
         </template>
         <template #side>
@@ -354,7 +354,7 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
                 >
                   <DiIcon name="home" size="md" />
                   <span class="is-drawer-close:hidden">{{
-                    $t('features.advanced-ui.drawers.homepage')
+                    $t('features.advancedUi.drawers.homepage')
                   }}</span>
                 </DiButton>
               </li>
@@ -367,7 +367,7 @@ const endExample = `<DiButton variant="primary" @click="isOpen = true">
                 >
                   <DiIcon name="settingsOutlineRounded" size="md" />
                   <span class="is-drawer-close:hidden">{{
-                    $t('features.advanced-ui.drawers.settings')
+                    $t('features.advancedUi.drawers.settings')
                   }}</span>
                 </DiButton>
               </li>

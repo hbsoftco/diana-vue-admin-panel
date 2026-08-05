@@ -2,6 +2,21 @@
   "features": {
     "utility": {
       "avatar": {
+        "square": "Avatar carré",
+        "rounded": "Avatar arrondi",
+        "circular": "Avatar circulaire",
+        "sizeAlt": "Avatar {size}",
+        "profileAction": "Avatar d’action de profil {number}",
+        "onlineUser": "Utilisateur en ligne {number}",
+        "offlineUser": "Utilisateur hors ligne {number}",
+        "unreadMessages": "Avatar de messages non lus {number}",
+        "teamMember": "Membre de l’équipe {number}",
+        "extraSmall": "Très petit avatar",
+        "small": "Petit avatar",
+        "medium": "Avatar moyen",
+        "large": "Grand avatar",
+        "extraLarge": "Très grand avatar",
+        "doubleExtraLarge": "Avatar double extra-large",
         "basic": "Avatar simple",
         "image": "Avatar avec image",
         "initials": "Initiales de remplacement",
@@ -104,7 +119,6 @@
         "basic": "Notification simple",
         "variants": "Variantes sémantiques",
         "persistent": "Notification persistante",
-        "actions": "Notification avec action",
         "placement": "Positionnement",
         "show": "Afficher la notification",
         "showPersistent": "Afficher une notification persistante",
@@ -431,7 +445,72 @@
         "sizes": { "small": "Petit", "medium": "Moyen", "large": "Grand" }
       }
     },
-    "advanced-ui": {
+    "advancedUi": {
+      "navbar": { "comingSoon": "La démo du composant de barre de navigation arrive bientôt..." },
+      "modals": {
+        "actions": {
+          "open": "Ouvrir la fenêtre",
+          "cancel": "Annuler",
+          "confirm": "Confirmer",
+          "delete": "Supprimer"
+        },
+        "basic": {
+          "title": "Fenêtre simple",
+          "header": "Titre de la fenêtre",
+          "description": "Une fenêtre simple avec les paramètres par défaut."
+        },
+        "position": {
+          "title": "Variantes de position",
+          "topDesc": "Cette fenêtre apparaît en haut de l’écran.",
+          "bottomDesc": "Cette fenêtre apparaît en bas de l’écran."
+        },
+        "size": {
+          "title": "Variantes de taille",
+          "sm": "Petite fenêtre.",
+          "lg": "Grande fenêtre.",
+          "xl": "Très grande fenêtre.",
+          "full": "Plein écran",
+          "fullDesc": "Cette fenêtre occupe tout l’écran."
+        },
+        "blur": {
+          "title": "Flou d’arrière-plan",
+          "xs": "Flou très léger.",
+          "sm": "Flou léger.",
+          "md": "Flou moyen."
+        },
+        "behavior": {
+          "title": "Options de comportement",
+          "noBackdrop": "Pas de fermeture par l’arrière-plan",
+          "noEsc": "Pas de fermeture avec Échap",
+          "noCloseButton": "Sans bouton de fermeture",
+          "noBackdropDesc": "Cliquer sur l’arrière-plan ne ferme pas cette fenêtre.",
+          "noEscDesc": "Appuyer sur Échap ne ferme pas cette fenêtre.",
+          "noCloseButtonDesc": "Cette fenêtre n’a pas de bouton de fermeture."
+        },
+        "confirmation": {
+          "title": "Dialogue de confirmation",
+          "open": "Supprimer le compte",
+          "header": "Supprimer le compte ?",
+          "description": "Voulez-vous vraiment supprimer votre compte ? Cette action est irréversible."
+        },
+        "responsive": "Fenêtre adaptative",
+        "responsiveContent": "Comportement adaptatif sur mobile",
+        "noTransition": "Sans transition",
+        "noTransitionContent": "Ouverture et fermeture instantanées sans animation",
+        "borderedWithSlots": "Fenêtre bordée avec emplacements",
+        "slottedContent": "Le contenu principal de la fenêtre se place ici. Vous pouvez ajouter tout composant."
+      },
+      "skeletons": {
+        "skeletonSizes": "Tailles des squelettes",
+        "skeletonShapes": "Formes des squelettes",
+        "skeletonColors": "Couleurs des squelettes",
+        "avatarCard": "Carte d’avatar",
+        "imageCard": "Carte d’image",
+        "skeletonText": "Texte squelette",
+        "customSkeletons": "Squelettes personnalisés",
+        "thinking": "L’IA réfléchit davantage...",
+        "loadingContent": "Chargement de votre contenu..."
+      },
       "carousel": {
         "basic": "Carrousel de base",
         "controlled": "Contrôlé et en boucle",

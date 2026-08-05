@@ -2,6 +2,21 @@
   "features": {
     "utility": {
       "avatar": {
+        "square": "صورة رمزية مربعة",
+        "rounded": "صورة رمزية مستديرة الحواف",
+        "circular": "صورة رمزية دائرية",
+        "sizeAlt": "صورة رمزية {size}",
+        "profileAction": "صورة إجراء الملف الشخصي {number}",
+        "onlineUser": "مستخدم متصل {number}",
+        "offlineUser": "مستخدم غير متصل {number}",
+        "unreadMessages": "صورة الرسائل غير المقروءة {number}",
+        "teamMember": "عضو الفريق {number}",
+        "extraSmall": "صورة رمزية صغيرة جداً",
+        "small": "صورة رمزية صغيرة",
+        "medium": "صورة رمزية متوسطة",
+        "large": "صورة رمزية كبيرة",
+        "extraLarge": "صورة رمزية كبيرة جداً",
+        "doubleExtraLarge": "صورة رمزية كبيرة للغاية",
         "basic": "صورة رمزية أساسية",
         "image": "صورة رمزية مصورة",
         "initials": "الأحرف الأولى البديلة",
@@ -104,7 +119,6 @@
         "basic": "إشعار أساسي",
         "variants": "الأنواع الدلالية",
         "persistent": "إشعار دائم",
-        "actions": "إشعار مع إجراء",
         "placement": "الموضع",
         "show": "عرض الإشعار",
         "showPersistent": "عرض إشعار دائم",
@@ -428,7 +442,72 @@
         "sizes": { "small": "صغير", "medium": "متوسط", "large": "كبير" }
       }
     },
-    "advanced-ui": {
+    "advancedUi": {
+      "navbar": { "comingSoon": "عرض مكوّن شريط التنقل قادم قريباً..." },
+      "modals": {
+        "actions": {
+          "open": "فتح النافذة",
+          "cancel": "إلغاء",
+          "confirm": "تأكيد",
+          "delete": "حذف"
+        },
+        "basic": {
+          "title": "نافذة أساسية",
+          "header": "عنوان النافذة",
+          "description": "نافذة أساسية بالإعدادات الافتراضية."
+        },
+        "position": {
+          "title": "أنواع الموضع",
+          "topDesc": "تظهر هذه النافذة أعلى الشاشة.",
+          "bottomDesc": "تظهر هذه النافذة أسفل الشاشة."
+        },
+        "size": {
+          "title": "أنواع الحجم",
+          "sm": "هذه نافذة صغيرة.",
+          "lg": "هذه نافذة كبيرة.",
+          "xl": "هذه نافذة كبيرة جداً.",
+          "full": "ملء الشاشة",
+          "fullDesc": "تشغل هذه النافذة الشاشة بالكامل."
+        },
+        "blur": {
+          "title": "تمويه الخلفية",
+          "xs": "تمويه ضئيل جداً.",
+          "sm": "تمويه ضئيل.",
+          "md": "تمويه متوسط."
+        },
+        "behavior": {
+          "title": "خيارات السلوك",
+          "noBackdrop": "عدم الإغلاق من الخلفية",
+          "noEsc": "عدم الإغلاق بزر ESC",
+          "noCloseButton": "بدون زر إغلاق",
+          "noBackdropDesc": "لن يؤدي النقر على الخلفية إلى إغلاق النافذة.",
+          "noEscDesc": "لن يؤدي ضغط ESC إلى إغلاق النافذة.",
+          "noCloseButtonDesc": "لا تحتوي هذه النافذة على زر إغلاق."
+        },
+        "confirmation": {
+          "title": "مربع حوار التأكيد",
+          "open": "حذف الحساب",
+          "header": "حذف الحساب؟",
+          "description": "هل تريد بالتأكيد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء."
+        },
+        "responsive": "نافذة متجاوبة",
+        "responsiveContent": "سلوك متجاوب على الهاتف",
+        "noTransition": "بدون انتقال",
+        "noTransitionContent": "فتح وإغلاق فوريان دون حركة",
+        "borderedWithSlots": "نافذة بحدود وفتحات",
+        "slottedContent": "يوضع محتوى النافذة الرئيسي هنا. يمكنك إضافة أي مكوّن."
+      },
+      "skeletons": {
+        "skeletonSizes": "أحجام الهيكل",
+        "skeletonShapes": "أشكال الهيكل",
+        "skeletonColors": "ألوان الهيكل",
+        "avatarCard": "بطاقة الصورة الرمزية",
+        "imageCard": "بطاقة الصورة",
+        "skeletonText": "نص الهيكل",
+        "customSkeletons": "هياكل مخصصة",
+        "thinking": "الذكاء الاصطناعي يفكر أكثر...",
+        "loadingContent": "جارٍ تحميل المحتوى..."
+      },
       "carousel": {
         "basic": "عرض شرائح أساسي",
         "controlled": "متحكم به ومتكرر",

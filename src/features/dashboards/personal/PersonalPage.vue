@@ -1,3 +1,3 @@
 <template>
-  <div>Personal Dashboard</div>
+  <div>{{ $t('pages.dashboard.personal.title') }}</div>
 </template>

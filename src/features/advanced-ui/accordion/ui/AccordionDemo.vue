@@ -16,18 +16,18 @@ const multipleOpen = ref(['account', 'shipping'])
 const items = computed<AccordionItem[]>(() => [
   {
     id: 'account',
-    title: t('features.advanced-ui.accordions.accountTitle'),
-    content: t('features.advanced-ui.accordions.accountContent'),
+    title: t('features.advancedUi.accordions.accountTitle'),
+    content: t('features.advancedUi.accordions.accountContent'),
   },
   {
     id: 'shipping',
-    title: t('features.advanced-ui.accordions.shippingTitle'),
-    content: t('features.advanced-ui.accordions.shippingContent'),
+    title: t('features.advancedUi.accordions.shippingTitle'),
+    content: t('features.advancedUi.accordions.shippingContent'),
   },
   {
     id: 'returns',
-    title: t('features.advanced-ui.accordions.returnsTitle'),
-    content: t('features.advanced-ui.accordions.returnsContent'),
+    title: t('features.advancedUi.accordions.returnsTitle'),
+    content: t('features.advancedUi.accordions.returnsContent'),
   },
 ])
 
@@ -35,8 +35,8 @@ const stateItems = computed<AccordionItem[]>(() => [
   ...items.value,
   {
     id: 'unavailable',
-    title: t('features.advanced-ui.accordions.disabledTitle'),
-    content: t('features.advanced-ui.accordions.disabledContent'),
+    title: t('features.advancedUi.accordions.disabledTitle'),
+    content: t('features.advancedUi.accordions.disabledContent'),
     disabled: true,
   },
 ])
@@ -87,32 +87,32 @@ const slotsCode = `<template>
 
 <template>
   <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-    <PreviewCodeCard :title="$t('features.advanced-ui.accordions.basic')" :code="basicCode">
+    <PreviewCodeCard :title="$t('features.advancedUi.accordions.basic')" :code="basicCode">
       <DiAccordion v-model="singleOpen" :items="items" />
     </PreviewCodeCard>
 
-    <PreviewCodeCard :title="$t('features.advanced-ui.accordions.multiple')" :code="multipleCode">
+    <PreviewCodeCard :title="$t('features.advancedUi.accordions.multiple')" :code="multipleCode">
       <DiAccordion v-model="multipleOpen" :items="items" multiple />
       <p class="mt-3 text-xs text-base-content/60">
-        {{ $t('features.advanced-ui.accordions.openItems') }}:
-        {{ multipleOpen.join(', ') || $t('features.advanced-ui.accordions.none') }}
+        {{ $t('features.advancedUi.accordions.openItems') }}:
+        {{ multipleOpen.join(', ') || $t('features.advancedUi.accordions.none') }}
       </p>
     </PreviewCodeCard>
 
-    <PreviewCodeCard :title="$t('features.advanced-ui.accordions.variants')" :code="variantsCode">
+    <PreviewCodeCard :title="$t('features.advancedUi.accordions.variants')" :code="variantsCode">
       <div class="space-y-5">
         <DiAccordion :items="items" variant="bordered" icon="plus" size="sm" />
         <DiAccordion :items="stateItems" icon="none" size="lg" />
       </div>
     </PreviewCodeCard>
 
-    <PreviewCodeCard :title="$t('features.advanced-ui.accordions.customContent')" :code="slotsCode">
+    <PreviewCodeCard :title="$t('features.advancedUi.accordions.customContent')" :code="slotsCode">
       <DiAccordion :items="items">
         <template #title="{ item, open }">
           <span class="flex items-center gap-2">
             {{ item.title }}
             <DiBadge v-if="open" size="xs" variant="success">
-              {{ $t('features.advanced-ui.accordions.open') }}
+              {{ $t('features.advancedUi.accordions.open') }}
             </DiBadge>
           </span>
         </template>

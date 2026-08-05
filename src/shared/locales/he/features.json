@@ -2,6 +2,21 @@
   "features": {
     "utility": {
       "avatar": {
+        "square": "אווטאר מרובע",
+        "rounded": "אווטאר מעוגל",
+        "circular": "אווטאר עגול",
+        "sizeAlt": "אווטאר {size}",
+        "profileAction": "אווטאר פעולת פרופיל {number}",
+        "onlineUser": "משתמש מחובר {number}",
+        "offlineUser": "משתמש לא מחובר {number}",
+        "unreadMessages": "אווטאר הודעות שלא נקראו {number}",
+        "teamMember": "חבר צוות {number}",
+        "extraSmall": "אווטאר קטן במיוחד",
+        "small": "אווטאר קטן",
+        "medium": "אווטאר בינוני",
+        "large": "אווטאר גדול",
+        "extraLarge": "אווטאר גדול במיוחד",
+        "doubleExtraLarge": "אווטאר גדול כפול",
         "basic": "אווטאר בסיסי",
         "image": "אווטאר תמונה",
         "initials": "ראשי תיבות חלופיים",
@@ -104,7 +119,6 @@
         "basic": "הודעה בסיסית",
         "variants": "וריאנטים סמנטיים",
         "persistent": "הודעה קבועה",
-        "actions": "הודעה עם פעולה",
         "placement": "מיקום",
         "show": "הצגת הודעה",
         "showPersistent": "הצגת הודעה קבועה",
@@ -419,7 +433,67 @@
         "sizes": { "small": "קטן", "medium": "בינוני", "large": "גדול" }
       }
     },
-    "advanced-ui": {
+    "advancedUi": {
+      "navbar": { "comingSoon": "הדגמת רכיב סרגל הניווט תגיע בקרוב..." },
+      "modals": {
+        "actions": { "open": "פתח חלון", "cancel": "ביטול", "confirm": "אישור", "delete": "מחיקה" },
+        "basic": {
+          "title": "חלון בסיסי",
+          "header": "כותרת החלון",
+          "description": "חלון בסיסי עם הגדרות ברירת המחדל."
+        },
+        "position": {
+          "title": "וריאציות מיקום",
+          "topDesc": "חלון זה מופיע בראש המסך.",
+          "bottomDesc": "חלון זה מופיע בתחתית המסך."
+        },
+        "size": {
+          "title": "וריאציות גודל",
+          "sm": "זהו חלון קטן.",
+          "lg": "זהו חלון גדול.",
+          "xl": "זהו חלון גדול במיוחד.",
+          "full": "מסך מלא",
+          "fullDesc": "חלון זה תופס את כל המסך."
+        },
+        "blur": {
+          "title": "טשטוש רקע",
+          "xs": "טשטוש רקע מזערי.",
+          "sm": "טשטוש רקע קטן.",
+          "md": "טשטוש רקע בינוני."
+        },
+        "behavior": {
+          "title": "אפשרויות התנהגות",
+          "noBackdrop": "ללא סגירה מהרקע",
+          "noEsc": "ללא סגירה עם ESC",
+          "noCloseButton": "ללא כפתור סגירה",
+          "noBackdropDesc": "לחיצה על הרקע לא תסגור את החלון.",
+          "noEscDesc": "לחיצה על ESC לא תסגור את החלון.",
+          "noCloseButtonDesc": "לחלון זה אין כפתור סגירה."
+        },
+        "confirmation": {
+          "title": "דו־שיח אישור",
+          "open": "מחיקת חשבון",
+          "header": "למחוק את החשבון?",
+          "description": "האם למחוק את החשבון? לא ניתן לבטל פעולה זו."
+        },
+        "responsive": "חלון מגיב",
+        "responsiveContent": "התנהגות מגיבה בנייד",
+        "noTransition": "ללא מעבר",
+        "noTransitionContent": "פתיחה וסגירה מיידיות ללא הנפשה",
+        "borderedWithSlots": "חלון עם גבול וחריצים",
+        "slottedContent": "תוכן החלון הראשי מופיע כאן. ניתן להוסיף כל רכיב."
+      },
+      "skeletons": {
+        "skeletonSizes": "גדלי שלד",
+        "skeletonShapes": "צורות שלד",
+        "skeletonColors": "צבעי שלד",
+        "avatarCard": "כרטיס אווטאר",
+        "imageCard": "כרטיס תמונה",
+        "skeletonText": "טקסט שלד",
+        "customSkeletons": "שלדים מותאמים",
+        "thinking": "הבינה המלאכותית חושבת יותר...",
+        "loadingContent": "התוכן שלך נטען כעת..."
+      },
       "carousel": {
         "basic": "קרוסלה בסיסית",
         "controlled": "מבוקרת ומחזורית",

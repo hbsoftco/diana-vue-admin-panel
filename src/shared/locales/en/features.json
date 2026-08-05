@@ -2,6 +2,21 @@
   "features": {
     "utility": {
       "avatar": {
+        "square": "Square avatar",
+        "rounded": "Rounded avatar",
+        "circular": "Circular avatar",
+        "sizeAlt": "{size} avatar",
+        "profileAction": "Profile action avatar {number}",
+        "onlineUser": "Online user {number}",
+        "offlineUser": "Offline user {number}",
+        "unreadMessages": "Unread messages avatar {number}",
+        "teamMember": "Team member {number}",
+        "extraSmall": "Extra small avatar",
+        "small": "Small avatar",
+        "medium": "Medium avatar",
+        "large": "Large avatar",
+        "extraLarge": "Extra large avatar",
+        "doubleExtraLarge": "Double extra large avatar",
         "basic": "Avatars",
         "image": "Image Avatar",
         "initials": "Fallback Initials",
@@ -104,7 +119,6 @@
         "basic": "Basic toast",
         "variants": "Semantic variants",
         "persistent": "Persistent toast",
-        "actions": "Toast with action",
         "placement": "Placement",
         "show": "Show toast",
         "showPersistent": "Show persistent toast",
@@ -684,7 +698,61 @@
         "sizes": { "small": "Small", "medium": "Medium", "large": "Large" }
       }
     },
-    "advanced-ui": {
+    "advancedUi": {
+      "navbar": { "comingSoon": "Navbar component demo is coming soon..." },
+      "modals": {
+        "actions": {
+          "open": "Open modal",
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "delete": "Delete"
+        },
+        "basic": {
+          "title": "Basic Modal",
+          "header": "Modal Title",
+          "description": "This is a basic modal with default settings."
+        },
+        "position": {
+          "title": "Position Variants",
+          "topDesc": "This modal appears at the top of the screen.",
+          "bottomDesc": "This modal appears at the bottom of the screen."
+        },
+        "size": {
+          "title": "Size Variants",
+          "sm": "This is a small modal.",
+          "lg": "This is a large modal.",
+          "xl": "This is an extra large modal.",
+          "full": "Full Screen",
+          "fullDesc": "This modal takes up the entire screen."
+        },
+        "blur": {
+          "title": "Backdrop Blur",
+          "xs": "Extra small backdrop blur.",
+          "sm": "Small backdrop blur.",
+          "md": "Medium backdrop blur."
+        },
+        "behavior": {
+          "title": "Behavior Options",
+          "noBackdrop": "No Backdrop Close",
+          "noEsc": "No ESC Close",
+          "noCloseButton": "No Close Button",
+          "noBackdropDesc": "Clicking the backdrop will not close this modal.",
+          "noEscDesc": "Pressing the ESC key will not close this modal.",
+          "noCloseButtonDesc": "This modal does not have a close button."
+        },
+        "confirmation": {
+          "title": "Confirmation Dialog",
+          "open": "Delete Account",
+          "header": "Delete Account?",
+          "description": "Are you sure you want to delete your account? This action cannot be undone."
+        },
+        "responsive": "Responsive modal",
+        "responsiveContent": "Responsive behavior on mobile",
+        "noTransition": "Without transition",
+        "noTransitionContent": "Instant open and close without animation",
+        "borderedWithSlots": "Bordered modal with slots",
+        "slottedContent": "Main modal content goes here. You can place any components."
+      },
       "carousel": {
         "basic": "Basic carousel",
         "controlled": "Controlled and looping",
@@ -731,6 +799,8 @@
         "rtlSupport": "RTL Support"
       },
       "skeletons": {
+        "thinking": "AI is thinking harder...",
+        "loadingContent": "Loading your content right now...",
         "skeletonSizes": "Skeleton Sizes",
         "skeletonShapes": "Skeleton Shapes",
         "skeletonColors": "Skeleton Colors",
