@@ -1,7 +1,8 @@
 {
   "layout": {
     "footer": {
-      "copyright": "حقوق النشر © {year} {brand}. صُمم بكل {heart} بواسطة {author}. مفتوح المصدر بموجب ترخيص {license}."
+      "copyright": "حقوق النشر © {year} {brand}. صُمم بكل {heart} بواسطة {author}. مفتوح المصدر بموجب ترخيص {license}.",
+      "author": "والد ديانا"
     },
     "sidebar": {
       "label": "الشريط الجانبي للتطبيق",

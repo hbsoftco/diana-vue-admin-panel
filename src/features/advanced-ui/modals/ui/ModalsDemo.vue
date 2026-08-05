@@ -142,16 +142,16 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
     >
       <div class="flex gap-4 flex-wrap">
         <DiButton @click="modalTop = true">
-          Top
+          {{ $t('features.advancedUi.modals.live.top') }}
         </DiButton>
         <DiButton @click="modalBottom = true">
-          Bottom
+          {{ $t('features.advancedUi.modals.live.bottom') }}
         </DiButton>
         <DiButton @click="modalEnd = true">
-          End
+          {{ $t('features.advancedUi.modals.live.end') }}
         </DiButton>
         <DiButton @click="modalStart = true">
-          Start
+          {{ $t('features.advancedUi.modals.live.start') }}
         </DiButton>
       </div>
 
@@ -410,21 +410,21 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
     </PreviewCodeCard>
 
     <button class="btn" onclick="my_modal_1.showModal()">
-      open modal
+      {{ $t('features.advancedUi.modals.live.openModal') }}
     </button>
     <dialog id="my_modal_1" class="modal modal-top">
       <div class="modal-box">
         <h3 class="text-lg font-bold">
-          Hello!
+          {{ $t('features.advancedUi.modals.live.hello') }}
         </h3>
         <p class="py-4">
-          Press ESC key or click the button below to close
+          {{ $t('features.advancedUi.modals.live.pressEscKeyOrClickTheButtonBelowToClose') }}
         </p>
         <div class="modal-action">
           <form method="dialog">
             <!-- if there is a button in form, it will close the modal -->
             <button class="btn">
-              Close
+              {{ $t('features.advancedUi.modals.live.close') }}
             </button>
           </form>
         </div>
@@ -433,20 +433,23 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
   </div>
 
   <button class="btn" onclick="my_modal_3.showModal()">
-    open modal
+    {{ $t('features.advancedUi.modals.live.openModal') }}
   </button>
   <dialog id="my_modal_3" class="modal">
     <div class="modal-box">
       <form method="dialog">
-        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+        <button
+          class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          :aria-label="$t('common.actions.close')"
+        >
           ✕
         </button>
       </form>
       <h3 class="text-lg font-bold">
-        Hello!
+        {{ $t('features.advancedUi.modals.live.hello') }}
       </h3>
       <p class="py-4">
-        Press ESC key or click on ✕ button to close
+        {{ $t('features.advancedUi.modals.live.pressEscKeyOrClickOnButtonToClose') }}
       </p>
     </div>
   </dialog>

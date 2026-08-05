@@ -130,14 +130,14 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="basicCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Media controls">
-        <DiButton variant="info" aria-label="Previous">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.mediaControls')">
+        <DiButton variant="info" :aria-label="$t('features.uiElements.buttonGroup.live.previous')">
           |◀
         </DiButton>
-        <DiButton variant="info" aria-label="Pause">
+        <DiButton variant="info" :aria-label="$t('features.uiElements.buttonGroup.live.pause')">
           Ⅱ
         </DiButton>
-        <DiButton variant="info" aria-label="Next">
+        <DiButton variant="info" :aria-label="$t('features.uiElements.buttonGroup.live.next')">
           ▶|
         </DiButton>
       </DiButtonGroup>
@@ -149,15 +149,15 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="navigationCode"
       language="html"
     >
-      <DiButtonGroup rounded aria-label="Navigation">
+      <DiButtonGroup rounded :aria-label="$t('features.uiElements.buttonGroup.live.navigation')">
         <DiButton variant="primary" active>
-          Active Link
+          {{ $t('features.uiElements.buttonGroup.live.activeLink') }}
         </DiButton>
         <DiButton variant="primary" soft>
-          Link
+          {{ $t('features.uiElements.buttonGroup.live.link') }}
         </DiButton>
         <DiButton variant="primary" soft>
-          Link
+          {{ $t('features.uiElements.buttonGroup.live.link') }}
         </DiButton>
       </DiButtonGroup>
     </PreviewCodeCard>
@@ -168,15 +168,15 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="mixedCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Alignment">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.alignment')">
         <DiButton variant="error">
-          Left
+          {{ $t('features.uiElements.buttonGroup.live.left') }}
         </DiButton>
         <DiButton variant="warning">
-          Middle
+          {{ $t('features.uiElements.buttonGroup.live.middle') }}
         </DiButton>
         <DiButton variant="success">
-          Right
+          {{ $t('features.uiElements.buttonGroup.live.right') }}
         </DiButton>
       </DiButtonGroup>
     </PreviewCodeCard>
@@ -187,15 +187,15 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="outlineCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Alignment options">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.alignmentOptions')">
         <DiButton variant="primary" outline>
-          Left
+          {{ $t('features.uiElements.buttonGroup.live.left') }}
         </DiButton>
         <DiButton variant="primary" outline>
-          Middle
+          {{ $t('features.uiElements.buttonGroup.live.middle') }}
         </DiButton>
         <DiButton variant="primary" outline>
-          Right
+          {{ $t('features.uiElements.buttonGroup.live.right') }}
         </DiButton>
       </DiButtonGroup>
     </PreviewCodeCard>
@@ -206,18 +206,28 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="iconCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Alarm controls">
-        <DiButton variant="primary" outline square aria-label="Set alarm">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.alarmControls')">
+        <DiButton
+          variant="primary"
+          outline
+          square
+          :aria-label="$t('features.uiElements.buttonGroup.live.setAlarm')"
+        >
           ⏱
         </DiButton>
-        <DiButton variant="primary" outline square disabled aria-label="Mute alarm">
+        <DiButton
+          variant="primary"
+          outline
+          square
+          disabled
+          :aria-label="$t('features.uiElements.buttonGroup.live.muteAlarm')"
+        >
           ⊘
         </DiButton>
         <DiButton variant="primary" outline>
           <template #icon-left>
             ⏰
-          </template>
-          Add alarm
+          </template>{{ $t('features.uiElements.buttonGroup.live.addAlarm') }}
         </DiButton>
       </DiButtonGroup>
     </PreviewCodeCard>
@@ -228,15 +238,15 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="outlinedCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Outlined choices">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.outlinedChoices')">
         <DiButton variant="primary" outline>
-          One
+          {{ $t('features.uiElements.buttonGroup.live.one') }}
         </DiButton>
         <DiButton variant="primary" outline>
-          Two
+          {{ $t('features.uiElements.buttonGroup.live.two') }}
         </DiButton>
         <DiButton variant="primary" outline>
-          Three
+          {{ $t('features.uiElements.buttonGroup.live.three') }}
         </DiButton>
       </DiButtonGroup>
     </PreviewCodeCard>
@@ -248,31 +258,31 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       language="html"
     >
       <div class="flex flex-wrap items-center gap-2">
-        <DiButtonGroup aria-label="Small alignment">
+        <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.smallAlignment')">
           <DiButton size="xs" variant="success" outline>
-            Left
+            {{ $t('features.uiElements.buttonGroup.live.left') }}
           </DiButton><DiButton size="xs" variant="success" outline>
-            Middle
+            {{ $t('features.uiElements.buttonGroup.live.middle') }}
           </DiButton><DiButton size="xs" variant="success" outline>
-            Right
+            {{ $t('features.uiElements.buttonGroup.live.right') }}
           </DiButton>
         </DiButtonGroup>
-        <DiButtonGroup aria-label="Medium alignment">
+        <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.mediumAlignment')">
           <DiButton size="sm" variant="success" outline>
-            Left
+            {{ $t('features.uiElements.buttonGroup.live.left') }}
           </DiButton><DiButton size="sm" variant="success" outline>
-            Middle
+            {{ $t('features.uiElements.buttonGroup.live.middle') }}
           </DiButton><DiButton size="sm" variant="success" outline>
-            Right
+            {{ $t('features.uiElements.buttonGroup.live.right') }}
           </DiButton>
         </DiButtonGroup>
-        <DiButtonGroup aria-label="Large alignment">
+        <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.largeAlignment')">
           <DiButton size="md" variant="success" outline>
-            Left
+            {{ $t('features.uiElements.buttonGroup.live.left') }}
           </DiButton><DiButton size="md" variant="success" outline>
-            Middle
+            {{ $t('features.uiElements.buttonGroup.live.middle') }}
           </DiButton><DiButton size="md" variant="success" outline>
-            Right
+            {{ $t('features.uiElements.buttonGroup.live.right') }}
           </DiButton>
         </DiButtonGroup>
       </div>
@@ -285,23 +295,33 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       language="html"
     >
       <div class="flex flex-wrap items-start justify-around gap-8">
-        <DiButtonGroup orientation="vertical" aria-label="Primary actions">
+        <DiButtonGroup
+          orientation="vertical"
+          :aria-label="$t('features.uiElements.buttonGroup.live.primaryActions')"
+        >
           <DiButton v-for="index in 5" :key="index" variant="primary">
-            Button
+            {{ $t('features.uiElements.buttonGroup.live.button') }}
           </DiButton>
         </DiButtonGroup>
-        <DiButtonGroup orientation="vertical" rounded aria-label="Info actions">
+        <DiButtonGroup
+          orientation="vertical"
+          rounded
+          :aria-label="$t('features.uiElements.buttonGroup.live.infoActions')"
+        >
           <DiButton v-for="index in 4" :key="index" variant="info">
-            Button
+            {{ $t('features.uiElements.buttonGroup.live.button') }}
           </DiButton>
         </DiButtonGroup>
-        <DiButtonGroup orientation="vertical" aria-label="Outlined choices">
+        <DiButtonGroup
+          orientation="vertical"
+          :aria-label="$t('features.uiElements.buttonGroup.live.outlinedChoices')"
+        >
           <DiButton variant="primary" outline>
-            One
+            {{ $t('features.uiElements.buttonGroup.live.one') }}
           </DiButton><DiButton variant="primary" outline>
-            Two
+            {{ $t('features.uiElements.buttonGroup.live.two') }}
           </DiButton><DiButton variant="primary" outline>
-            Three
+            {{ $t('features.uiElements.buttonGroup.live.three') }}
           </DiButton>
         </DiButtonGroup>
       </div>
@@ -315,7 +335,10 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
     >
       <div class="space-y-3">
         <div class="flex flex-wrap gap-2">
-          <DiButtonGroup role="toolbar" aria-label="Primary pages">
+          <DiButtonGroup
+            role="toolbar"
+            :aria-label="$t('features.uiElements.buttonGroup.live.primaryPages')"
+          >
             <DiButton
               v-for="page in 4"
               :key="page"
@@ -326,7 +349,10 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
               {{ page }}
             </DiButton>
           </DiButtonGroup>
-          <DiButtonGroup role="toolbar" aria-label="Secondary pages">
+          <DiButtonGroup
+            role="toolbar"
+            :aria-label="$t('features.uiElements.buttonGroup.live.secondaryPages')"
+          >
             <DiButton
               v-for="page in [5, 6, 7]"
               :key="page"
@@ -341,7 +367,10 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
             8
           </DiButton>
         </div>
-        <DiButtonGroup role="toolbar" aria-label="Outlined pages">
+        <DiButtonGroup
+          role="toolbar"
+          :aria-label="$t('features.uiElements.buttonGroup.live.outlinedPages')"
+        >
           <DiButton
             v-for="page in 4"
             :key="page"
@@ -362,7 +391,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="socialCode"
       language="html"
     >
-      <DiButtonGroup aria-label="Social networks">
+      <DiButtonGroup :aria-label="$t('features.uiElements.buttonGroup.live.socialNetworks')">
         <DiButton social="facebook" square aria-label="Facebook">
           f
         </DiButton><DiButton social="x" square aria-label="X">
@@ -383,13 +412,14 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
       :code="nestingCode"
       language="html"
     >
-      <DiButtonGroup rounded aria-label="Nested actions">
+      <DiButtonGroup rounded :aria-label="$t('features.uiElements.buttonGroup.live.nestedActions')">
         <DiButton variant="primary">
           1
         </DiButton><DiButton variant="primary">
           2
         </DiButton><DiButton variant="primary">
-          Dropdown<template #icon-right>
+          {{ $t('features.uiElements.buttonGroup.live.dropdown')
+          }}<template #icon-right>
             <DiIcon name="chevronDown" size="xs" />
           </template>
         </DiButton>

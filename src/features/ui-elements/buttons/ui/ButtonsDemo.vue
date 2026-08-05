@@ -768,8 +768,18 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
           :value="$t('common.variants.secondary')"
         />
         <DiButton tag="input" native-type="submit" variant="info" value="Submit" />
-        <DiButton tag="input" native-type="radio" variant="success" aria-label="Radio" />
-        <DiButton tag="input" native-type="checkbox" variant="warning" aria-label="Checkbox" />
+        <DiButton
+          tag="input"
+          native-type="radio"
+          variant="success"
+          :aria-label="$t('features.uiElements.buttons.live.radio')"
+        />
+        <DiButton
+          tag="input"
+          native-type="checkbox"
+          variant="warning"
+          :aria-label="$t('features.uiElements.buttons.live.checkbox')"
+        />
         <DiButton tag="input" native-type="reset" variant="error" value="Reset" />
         <DiButton tag="a" href="https://hosseinbajan.ir" role="button">
           {{ $t('common.variants.link') }}
@@ -856,10 +866,10 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiButton variant="primary" wide>
-          {{ $t('common.variants.primary') }} Wide
+          {{ $t('common.variants.primary') }}{{ $t('features.uiElements.buttons.live.wide') }}
         </DiButton>
         <DiButton variant="secondary" wide>
-          {{ $t('common.variants.secondary') }} Wide
+          {{ $t('common.variants.secondary') }}{{ $t('features.uiElements.buttons.live.wide') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -942,7 +952,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiButton variant="primary" block>
-          {{ $t('common.variants.primary') }} Block
+          {{ $t('common.variants.primary') }}{{ $t('features.uiElements.buttons.live.block') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -956,19 +966,19 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
     >
       <div class="flex flex-wrap items-center gap-2">
         <DiButton variant="primary" size="xs">
-          Extra Small
+          {{ $t('features.uiElements.buttons.live.extraSmall') }}
         </DiButton>
         <DiButton variant="primary" size="sm">
-          Small
+          {{ $t('features.uiElements.buttons.live.small') }}
         </DiButton>
         <DiButton variant="primary" size="md">
-          Medium
+          {{ $t('features.uiElements.buttons.live.medium') }}
         </DiButton>
         <DiButton variant="primary" size="lg">
-          Large
+          {{ $t('features.uiElements.buttons.live.large') }}
         </DiButton>
         <DiButton variant="primary" size="xl">
-          Extra Large
+          {{ $t('features.uiElements.buttons.live.extraLarge') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -984,29 +994,25 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
         <DiButton variant="primary">
           <template #icon-left>
             <i-mdi:home class="text-lg" />
-          </template>
-          Home
+          </template>{{ $t('features.uiElements.buttons.live.home') }}
         </DiButton>
 
         <DiButton variant="secondary">
           <template #icon-right>
             <i-mdi:cog class="text-lg" />
-          </template>
-          Settings
+          </template>{{ $t('features.uiElements.buttons.live.settings') }}
         </DiButton>
 
         <DiButton variant="success">
           <template #icon-left>
             <i-mdi:check class="text-lg" />
-          </template>
-          Success
+          </template>{{ $t('features.uiElements.buttons.live.success') }}
         </DiButton>
 
         <DiButton variant="warning">
           <template #icon-right>
             <i-mdi:alert class="text-lg" />
-          </template>
-          Warning
+          </template>{{ $t('features.uiElements.buttons.live.warning') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
@@ -1022,99 +1028,85 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
         <DiButton social="google" wide>
           <template #icon-left>
             <i-logos:google-icon class="text-base" />
-          </template>
-          Continue with Google
+          </template>{{ $t('features.uiElements.buttons.live.continueWithGoogle') }}
         </DiButton>
 
         <DiButton social="github" wide>
           <template #icon-left>
             <i-mdi:github class="text-lg" />
-          </template>
-          Continue with GitHub
+          </template>{{ $t('features.uiElements.buttons.live.continueWithGithub') }}
         </DiButton>
 
         <DiButton social="facebook" wide>
           <template #icon-left>
             <i-logos:facebook class="text-lg" />
-          </template>
-          Continue with Facebook
+          </template>{{ $t('features.uiElements.buttons.live.continueWithFacebook') }}
         </DiButton>
 
         <DiButton social="apple" wide>
           <template #icon-left>
             <i-ic:baseline-apple class="text-lg" />
-          </template>
-          Continue with Apple
+          </template>{{ $t('features.uiElements.buttons.live.continueWithApple') }}
         </DiButton>
 
         <DiButton social="x" wide>
           <template #icon-left>
             <i-fa7-brands:x-twitter class="text-lg" />
-          </template>
-          Continue with X
+          </template>{{ $t('features.uiElements.buttons.live.continueWithX') }}
         </DiButton>
 
         <DiButton social="linkedin" wide>
           <template #icon-left>
             <i-mdi:linkedin class="text-lg" />
-          </template>
-          Continue with LinkedIn
+          </template>{{ $t('features.uiElements.buttons.live.continueWithLinkedin') }}
         </DiButton>
 
         <DiButton social="slack" wide>
           <template #icon-left>
             <i-logos:slack-icon class="text-sm" />
-          </template>
-          Continue with Slack
+          </template>{{ $t('features.uiElements.buttons.live.continueWithSlack') }}
         </DiButton>
 
         <DiButton social="microsoft" wide>
           <template #icon-left>
             <i-logos:microsoft-icon class="text-sm" />
-          </template>
-          Continue with Microsoft
+          </template>{{ $t('features.uiElements.buttons.live.continueWithMicrosoft') }}
         </DiButton>
 
         <DiButton social="line" wide>
           <template #icon-left>
             <i-fontisto:line class="text-base" />
-          </template>
-          Continue with LINE
+          </template>{{ $t('features.uiElements.buttons.live.continueWithLine') }}
         </DiButton>
 
         <DiButton social="wechat" wide>
           <template #icon-left>
             <i-ic:round-wechat class="text-lg" />
-          </template>
-          Continue with WeChat
+          </template>{{ $t('features.uiElements.buttons.live.continueWithWechat') }}
         </DiButton>
 
         <DiButton social="kakao" wide>
           <template #icon-left>
             <i-simple-icons:kakaotalk class="text-lg" />
-          </template>
-          Continue with Kakao
+          </template>{{ $t('features.uiElements.buttons.live.continueWithKakao') }}
         </DiButton>
 
         <DiButton social="amazon" wide loading loading-variant="infinity">
           <template #icon-left>
             <i-ri:amazon-fill class="text-lg" />
-          </template>
-          Continue with Amazon
+          </template>{{ $t('features.uiElements.buttons.live.continueWithAmazon') }}
         </DiButton>
 
         <DiButton social="vk" wide>
           <template #icon-left>
             <i-basil:vk-solid class="text-lg" />
-          </template>
-          Continue with VK
+          </template>{{ $t('features.uiElements.buttons.live.continueWithVk') }}
         </DiButton>
 
         <DiButton social="metamask" wide>
           <template #icon-left>
             <i-logos:metamask-icon class="text-sm" />
-          </template>
-          Continue with MetaMask
+          </template>{{ $t('features.uiElements.buttons.live.continueWithMetamask') }}
         </DiButton>
       </div>
     </PreviewCodeCard>

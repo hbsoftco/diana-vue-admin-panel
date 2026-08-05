@@ -1,7 +1,8 @@
 {
   "layout": {
     "footer": {
-      "copyright": "حق نشر © {year} {brand}. طراحی‌شده با {heart} توسط {author}. متن‌باز تحت مجوز {license}."
+      "copyright": "حق نشر © {year} {brand}. طراحی‌شده با {heart} توسط {author}. متن‌باز تحت مجوز {license}.",
+      "author": "پدر دیانا"
     },
     "sidebar": {
       "label": "نوار کناری برنامه",

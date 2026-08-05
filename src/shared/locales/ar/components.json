@@ -66,6 +66,9 @@
       "showPreview": "عرض المعاينة",
       "showCode": "عرض الكود",
       "copied": "تم النسخ!"
+    },
+    "dropdown": {
+      "menu": "القائمة"
     }
   }
 }

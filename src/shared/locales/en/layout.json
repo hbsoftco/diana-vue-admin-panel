@@ -1,7 +1,8 @@
 {
   "layout": {
     "footer": {
-      "copyright": "Copyright © {year} {brand}. Designed with {heart} by {author}. Open Source under the {license} License."
+      "copyright": "Copyright © {year} {brand}. Designed with {heart} by {author}. Open Source under the {license} License.",
+      "author": "Diana's father"
     },
     "sidebar": {
       "label": "Application sidebar",

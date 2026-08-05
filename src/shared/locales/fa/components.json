@@ -66,6 +66,9 @@
       "showPreview": "پیش‌نمایش",
       "showCode": "نمایش کد",
       "copied": "کپی شد!"
+    },
+    "dropdown": {
+      "menu": "منو"
     }
   }
 }

@@ -287,19 +287,19 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge size="xs">
-          XSmall
+          {{ $t('features.uiElements.badge.live.xsmall') }}
         </DiBadge>
         <DiBadge size="sm">
-          Small
+          {{ $t('features.uiElements.badge.live.small') }}
         </DiBadge>
         <DiBadge size="md">
-          Medium
+          {{ $t('features.uiElements.badge.live.medium') }}
         </DiBadge>
         <DiBadge size="lg">
-          Large
+          {{ $t('features.uiElements.badge.live.large') }}
         </DiBadge>
         <DiBadge size="xl">
-          XLarge
+          {{ $t('features.uiElements.badge.live.xlarge') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -590,7 +590,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="ghost">
-          Ghost
+          {{ $t('features.uiElements.badge.live.ghost') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
@@ -623,7 +623,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="warning"
           badge-size="sm"
         >
-          Messages
+          {{ $t('features.uiElements.badge.live.messages') }}
         </DiButton>
         <DiButton
           variant="info"
@@ -632,7 +632,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="error"
           badge-size="sm"
         >
-          Badge Buttons
+          {{ $t('features.uiElements.badge.live.badgeButtons') }}
         </DiButton>
         <DiButton
           variant="warning"
@@ -664,7 +664,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-pill
           badge-dash
         >
-          Notifications
+          {{ $t('features.uiElements.badge.live.notifications') }}
         </DiButton>
         <DiButton
           variant="success"
@@ -792,33 +792,39 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
     >
       <div class="flex flex-col gap-3">
         <h1 class="text-xl font-semibold">
-          Heading 1 <DiBadge size="xl">
-            Badge
+          {{ $t('features.uiElements.badge.live.heading1')
+          }}<DiBadge size="xl">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </h1>
         <h2 class="text-lg font-semibold">
-          Heading 2 <DiBadge size="lg">
-            Badge
+          {{ $t('features.uiElements.badge.live.heading2')
+          }}<DiBadge size="lg">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </h2>
         <h3 class="text-base font-semibold">
-          Heading 3 <DiBadge size="md">
-            Badge
+          {{ $t('features.uiElements.badge.live.heading3')
+          }}<DiBadge size="md">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </h3>
         <h4 class="text-sm font-semibold">
-          Heading 4 <DiBadge size="sm">
-            Badge
+          {{ $t('features.uiElements.badge.live.heading4')
+          }}<DiBadge size="sm">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </h4>
         <h5 class="text-xs font-semibold">
-          Heading 5 <DiBadge size="xs">
-            Badge
+          {{ $t('features.uiElements.badge.live.heading5')
+          }}<DiBadge size="xs">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </h5>
         <p class="text-xs">
-          Paragraph <DiBadge size="xs">
-            Badge
+          {{ $t('features.uiElements.badge.live.paragraph')
+          }}<DiBadge size="xs">
+            {{ $t('features.uiElements.badge.live.badge') }}
           </DiBadge>
         </p>
       </div>

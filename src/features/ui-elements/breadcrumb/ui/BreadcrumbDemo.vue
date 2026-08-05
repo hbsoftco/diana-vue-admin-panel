@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import type { BreadcrumbItem } from '@/shared/ui/base/DiBreadcrumb.vue'
@@ -87,13 +88,13 @@ const longBreadcrumb = `<DiBreadcrumb :items="[
 ]" />`
 
 // Sample data
-const basicItems: BreadcrumbItem[] = [
+const basicItems = computed<BreadcrumbItem[]>(() => [
   { label: t('features.uiElements.breadcrumb.home'), to: '/' },
   { label: t('features.uiElements.breadcrumb.products'), to: '/products' },
   { label: t('features.uiElements.breadcrumb.electronics') },
-]
+])
 
-const itemsWithIcons: BreadcrumbItem[] = [
+const itemsWithIcons = computed<BreadcrumbItem[]>(() => [
   { label: t('features.uiElements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
   {
     label: t('features.uiElements.breadcrumb.settings'),
@@ -101,15 +102,15 @@ const itemsWithIcons: BreadcrumbItem[] = [
     icon: 'settingsOutlineRounded',
   },
   { label: t('features.uiElements.breadcrumb.profile'), icon: 'userOutlineRounded' },
-]
+])
 
-const dashboardItems: BreadcrumbItem[] = [
+const dashboardItems = computed<BreadcrumbItem[]>(() => [
   { label: t('features.uiElements.breadcrumb.dashboard'), to: '/dashboard' },
   { label: t('features.uiElements.breadcrumb.reports'), to: '/reports' },
   { label: t('features.uiElements.breadcrumb.monthly') },
-]
+])
 
-const projectItems: BreadcrumbItem[] = [
+const projectItems = computed<BreadcrumbItem[]>(() => [
   {
     label: t('features.uiElements.breadcrumb.projects'),
     to: '/projects',
@@ -117,13 +118,13 @@ const projectItems: BreadcrumbItem[] = [
   },
   { label: t('features.uiElements.breadcrumb.webDevelopment'), to: '/projects/web' },
   { label: t('features.uiElements.breadcrumb.adminDashboard'), icon: 'dashboardOutlineRounded' },
-]
+])
 
-const singleItemData: BreadcrumbItem[] = [
+const singleItemData = computed<BreadcrumbItem[]>(() => [
   { label: t('features.uiElements.breadcrumb.currentPage') },
-]
+])
 
-const longItems: BreadcrumbItem[] = [
+const longItems = computed<BreadcrumbItem[]>(() => [
   { label: t('features.uiElements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
   { label: t('features.uiElements.breadcrumb.products'), to: '/products' },
   { label: t('features.uiElements.breadcrumb.electronics'), to: '/products/electronics' },
@@ -133,7 +134,7 @@ const longItems: BreadcrumbItem[] = [
     to: '/products/electronics/computers/laptops',
   },
   { label: t('features.uiElements.breadcrumb.gamingLaptops') },
-]
+])
 </script>
 
 <template>

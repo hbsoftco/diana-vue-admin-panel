@@ -41,15 +41,32 @@ const stateItems = computed<AccordionItem[]>(() => [
   },
 ])
 
+const openItemLabels = computed(() =>
+  items.value
+    .filter(item => multipleOpen.value.includes(item.id))
+    .map(item => item.title)
+    .join(', '),
+)
+
 const basicCode = `<script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import DiAccordion from '@/shared/ui/base/DiAccordion.vue'
 
+const { t } = useI18n()
 const openItems = ref(['account'])
-const items = [
-  { id: 'account', title: 'Account settings', content: 'Manage your profile and security.' },
-  { id: 'shipping', title: 'Shipping', content: 'Review delivery methods and addresses.' },
-]
+const items = computed(() => [
+  {
+    id: 'account',
+    title: t('features.advancedUi.accordions.accountTitle'),
+    content: t('features.advancedUi.accordions.accountContent'),
+  },
+  {
+    id: 'shipping',
+    title: t('features.advancedUi.accordions.shippingTitle'),
+    content: t('features.advancedUi.accordions.shippingContent'),
+  },
+])
 <\/script>
 
 <template>
@@ -74,7 +91,9 @@ const slotsCode = `<template>
     <template #title="{ item, open }">
       <span class="flex items-center gap-2">
         {{ item.title }}
-        <DiBadge v-if="open" size="xs" variant="success">Open</DiBadge>
+        <DiBadge v-if="open" size="xs" variant="success">
+          {{ $t('features.advancedUi.accordions.open') }}
+        </DiBadge>
       </span>
     </template>
 
@@ -95,7 +114,7 @@ const slotsCode = `<template>
       <DiAccordion v-model="multipleOpen" :items="items" multiple />
       <p class="mt-3 text-xs text-base-content/60">
         {{ $t('features.advancedUi.accordions.openItems') }}:
-        {{ multipleOpen.join(', ') || $t('features.advancedUi.accordions.none') }}
+        {{ openItemLabels || $t('features.advancedUi.accordions.none') }}
       </p>
     </PreviewCodeCard>
 

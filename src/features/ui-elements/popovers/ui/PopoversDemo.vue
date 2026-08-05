@@ -134,13 +134,14 @@ const nestedCode = `<DiPopover>
       language="html"
     >
       <div class="flex justify-center p-8">
-        <DiPopover title="Popover Title" placement="right">
+        <DiPopover :title="$t('features.uiElements.popover.live.popoverTitle')" placement="right">
           <template #trigger>
             <DiButton outline variant="primary">
-              Popover Right
+              {{ $t('features.uiElements.popover.live.popoverRight') }}
             </DiButton>
-          </template>
-          And here's some amazing content. It's very engaging. Right?
+          </template>{{
+            $t('features.uiElements.popover.live.andHeresSomeAmazingContentItsVeryEngagingRight')
+          }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -155,13 +156,16 @@ const nestedCode = `<DiPopover>
         <DiPopover placement="bottom">
           <template #trigger>
             <DiButton outline variant="secondary">
-              Custom header
+              {{ $t('features.uiElements.popover.live.customHeader') }}
             </DiButton>
           </template>
           <template #header>
-            <span class="text-secondary">Custom Header Slot</span>
-          </template>
-          Header slots replace the title prop when both are provided.
+            <span class="text-secondary">{{
+              $t('features.uiElements.popover.live.customHeaderSlot')
+            }}</span>
+          </template>{{
+            $t('features.uiElements.popover.live.headerSlotsReplaceTheTitlePropWhenBothAreProvided')
+          }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -173,20 +177,22 @@ const nestedCode = `<DiPopover>
       language="html"
     >
       <div class="flex justify-center p-8">
-        <DiPopover title="Confirm update" placement="bottom-end">
+        <DiPopover
+          :title="$t('features.uiElements.popover.live.confirmUpdate')"
+          placement="bottom-end"
+        >
           <template #trigger>
             <DiButton outline>
-              Footer actions
+              {{ $t('features.uiElements.popover.live.footerActions') }}
             </DiButton>
-          </template>
-          Save these changes to your profile?
-          <template #footer="{ close }">
+          </template>{{ $t('features.uiElements.popover.live.saveTheseChangesToYourProfile')
+          }}<template #footer="{ close }">
             <div class="flex justify-end gap-2">
               <DiButton size="sm" variant="ghost" @click="close">
-                Cancel
+                {{ $t('features.uiElements.popover.live.cancel') }}
               </DiButton>
               <DiButton size="sm" variant="primary" @click="close">
-                Save
+                {{ $t('features.uiElements.popover.live.save') }}
               </DiButton>
             </div>
           </template>
@@ -201,37 +207,33 @@ const nestedCode = `<DiPopover>
       language="html"
     >
       <div class="flex flex-wrap justify-center gap-3 py-12">
-        <DiPopover title="Popover Top" placement="top">
+        <DiPopover :title="$t('features.uiElements.popover.live.popoverTop')" placement="top">
           <template #trigger>
             <DiButton size="sm" outline>
-              Top
+              {{ $t('features.uiElements.popover.live.top') }}
             </DiButton>
-          </template>
-          Arrow points down
+          </template>{{ $t('features.uiElements.popover.live.arrowPointsDown') }}
         </DiPopover>
-        <DiPopover title="Popover Bottom" placement="bottom">
+        <DiPopover :title="$t('features.uiElements.popover.live.popoverBottom')" placement="bottom">
           <template #trigger>
             <DiButton size="sm" outline>
-              Bottom
+              {{ $t('features.uiElements.popover.live.bottom') }}
             </DiButton>
-          </template>
-          Arrow points up
+          </template>{{ $t('features.uiElements.popover.live.arrowPointsUp') }}
         </DiPopover>
-        <DiPopover title="Popover Left" placement="left">
+        <DiPopover :title="$t('features.uiElements.popover.live.popoverLeft')" placement="left">
           <template #trigger>
             <DiButton size="sm" outline>
-              Left
+              {{ $t('features.uiElements.popover.live.left') }}
             </DiButton>
-          </template>
-          Arrow points right
+          </template>{{ $t('features.uiElements.popover.live.arrowPointsRight') }}
         </DiPopover>
-        <DiPopover title="Popover Right" placement="right">
+        <DiPopover :title="$t('features.uiElements.popover.live.popoverRight')" placement="right">
           <template #trigger>
             <DiButton size="sm" outline>
-              Right
+              {{ $t('features.uiElements.popover.live.right') }}
             </DiButton>
-          </template>
-          Arrow points left
+          </template>{{ $t('features.uiElements.popover.live.arrowPointsLeft') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -246,26 +248,23 @@ const nestedCode = `<DiPopover>
         <DiPopover placement="bottom-start">
           <template #trigger>
             <DiButton size="sm">
-              Start
+              {{ $t('features.uiElements.popover.live.start') }}
             </DiButton>
-          </template>
-          Start aligned
+          </template>{{ $t('features.uiElements.popover.live.startAligned') }}
         </DiPopover>
         <DiPopover placement="bottom">
           <template #trigger>
             <DiButton size="sm">
-              Center
+              {{ $t('features.uiElements.popover.live.center') }}
             </DiButton>
-          </template>
-          Center aligned
+          </template>{{ $t('features.uiElements.popover.live.centerAligned') }}
         </DiPopover>
         <DiPopover placement="bottom-end">
           <template #trigger>
             <DiButton size="sm">
-              End
+              {{ $t('features.uiElements.popover.live.end') }}
             </DiButton>
-          </template>
-          End aligned
+          </template>{{ $t('features.uiElements.popover.live.endAligned') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -280,26 +279,23 @@ const nestedCode = `<DiPopover>
         <DiPopover width="auto">
           <template #trigger>
             <DiButton block>
-              Auto
+              {{ $t('features.uiElements.popover.live.auto') }}
             </DiButton>
-          </template>
-          Natural width
+          </template>{{ $t('features.uiElements.popover.live.naturalWidth') }}
         </DiPopover>
         <DiPopover width="trigger">
           <template #trigger>
             <DiButton block>
-              Trigger
+              {{ $t('features.uiElements.popover.live.trigger') }}
             </DiButton>
-          </template>
-          Matches the trigger
+          </template>{{ $t('features.uiElements.popover.live.matchesTheTrigger') }}
         </DiPopover>
         <DiPopover width="full">
           <template #trigger>
             <DiButton block>
-              Full
+              {{ $t('features.uiElements.popover.live.full') }}
             </DiButton>
-          </template>
-          Uses the viewport width
+          </template>{{ $t('features.uiElements.popover.live.usesTheViewportWidth') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -314,19 +310,19 @@ const nestedCode = `<DiPopover>
         <DiPopover size="lg" width="trigger">
           <template #trigger>
             <DiButton variant="secondary">
-              Account details
+              {{ $t('features.uiElements.popover.live.accountDetails') }}
             </DiButton>
           </template>
           <template #header>
-            Profile status
+            {{ $t('features.uiElements.popover.live.profileStatus') }}
           </template>
           <div class="flex items-start gap-3">
             <DiIcon name="informationCircle" color="info" size="lg" />
-            <p>Your profile is ready for review.</p>
+            <p>{{ $t('features.uiElements.popover.live.yourProfileIsReadyForReview') }}</p>
           </div>
           <template #footer="{ close }">
             <DiButton size="sm" variant="primary" @click="close">
-              Got it
+              {{ $t('features.uiElements.popover.live.gotIt') }}
             </DiButton>
           </template>
         </DiPopover>
@@ -341,15 +337,14 @@ const nestedCode = `<DiPopover>
     >
       <div class="flex flex-wrap items-center justify-center gap-3 p-6">
         <DiButton @click="controlledOpen = !controlledOpen">
-          Toggle externally
+          {{ $t('features.uiElements.popover.live.toggleExternally') }}
         </DiButton>
         <DiPopover v-model:open="controlledOpen">
           <template #trigger>
             <DiButton variant="ghost">
-              Popover trigger
+              {{ $t('features.uiElements.popover.live.popoverTrigger') }}
             </DiButton>
-          </template>
-          Controlled content
+          </template>{{ $t('features.uiElements.popover.live.controlledContent') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -363,9 +358,12 @@ const nestedCode = `<DiPopover>
       <div class="flex justify-center p-6">
         <DiPopover :close-on-click-outside="false">
           <template #trigger>
-            <DiButton>Keep open outside</DiButton>
-          </template>
-          Use the trigger again or press Escape to close.
+            <DiButton>
+              {{
+                $t('features.uiElements.popover.live.keepOpenOutside')
+              }}
+            </DiButton>
+          </template>{{ $t('features.uiElements.popover.live.useTheTriggerAgainOrPressEscapeToClose') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
@@ -379,17 +377,16 @@ const nestedCode = `<DiPopover>
       <div class="flex justify-center p-6">
         <DiPopover>
           <template #trigger>
-            <DiButton>Open parent</DiButton>
+            <DiButton>{{ $t('features.uiElements.popover.live.openParent') }}</DiButton>
           </template>
           <div class="space-y-3">
-            <p>Parent popover</p>
+            <p>{{ $t('features.uiElements.popover.live.parentPopover') }}</p>
             <DiPopover placement="right-start">
               <template #trigger>
                 <DiButton size="sm" variant="secondary">
-                  Open child
+                  {{ $t('features.uiElements.popover.live.openChild') }}
                 </DiButton>
-              </template>
-              Child popover
+              </template>{{ $t('features.uiElements.popover.live.childPopover') }}
             </DiPopover>
           </div>
         </DiPopover>

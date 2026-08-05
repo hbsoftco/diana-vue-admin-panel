@@ -66,6 +66,9 @@
       "showPreview": "Mostrar vista previa",
       "showCode": "Mostrar código",
       "copied": "¡Copiado!"
+    },
+    "dropdown": {
+      "menu": "Menú"
     }
   }
 }

@@ -66,6 +66,9 @@
       "showPreview": "הצגת תצוגה מקדימה",
       "showCode": "הצגת קוד",
       "copied": "הועתק!"
+    },
+    "dropdown": {
+      "menu": "תפריט"
     }
   }
 }
