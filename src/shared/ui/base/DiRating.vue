@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useDirection } from '@/shared/composables/use-direction'
 
@@ -69,6 +70,7 @@ const model = defineModel<number>({ default: 0 })
    State
 ======================= */
 const { isRtl } = useDirection()
+const { t } = useI18n()
 const hoverValue = ref<number | null>(null)
 
 /* =======================
@@ -216,7 +218,7 @@ function getInputId(value: number) {
       ]"
       :checked="isChecked(item)"
       :disabled="disabled"
-      :aria-label="`Rating ${item} out of ${max}`"
+      :aria-label="t('components.rating.value', { value: item, max })"
       @click="handleClick(item)"
       @mouseenter="handleMouseEnter(item)"
       @mouseleave="handleMouseLeave"

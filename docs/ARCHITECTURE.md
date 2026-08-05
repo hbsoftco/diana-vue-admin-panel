@@ -155,11 +155,9 @@ Each route group:
 - Defines a group-level default redirect.
 - Lazy-loads child page wrappers.
 
-The forms, UI, and advanced UI routes attach `pageTitle` and `breadcrumb` metadata. `DefaultLayout`
-consumes that metadata to update `document.title` and render translated breadcrumbs.
-
-Dashboard routes currently do not define title or breadcrumb metadata. They consequently use
-the layout's fallback title key, `menu.dashboards`, and render no breadcrumbs.
+Every rendered child route attaches `pageTitle` and `breadcrumb` metadata under a consistent
+`pages.<group>.<page>.title` hierarchy. `DefaultLayout` consumes that metadata to update
+`document.title` and render translated breadcrumbs.
 
 There is no:
 
@@ -169,7 +167,7 @@ There is no:
 - Authorization guard.
 - Route-level data loader.
 - Error route.
-- `/projects` route group, even though the sidebar contains project links.
+- `/projects` route group.
 
 ## Layout Architecture
 
@@ -180,7 +178,7 @@ There is no:
 - A route-derived heading
 - `DiBreadcrumb`
 - A child `RouterView`
-- A static footer
+- A localized footer
 
 The layout watches the active route and active locale through `watchEffect`. The translated
 page title is assigned to `document.title`.
@@ -275,7 +273,9 @@ server-state caching.
 
 ## Localization and Direction
 
-`src/app/i18n.ts` configures Vue I18n in Composition API mode:
+`src/app/i18n.ts` configures Vue I18n in Composition API mode. Each locale is assembled from
+ownership-based `common`, `menu`, `layout`, `components`, `pages`, and `features` modules as
+defined in [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md):
 
 - `legacy: false`
 - Default locale: `en`
@@ -291,9 +291,9 @@ server-state caching.
 `useDirection` returns a computed `isRtl` value. Persian, Hebrew, and Arabic are classified as
 RTL.
 
-Locale coverage is not equal. English and Persian contain hundreds of scalar messages, while
-Arabic, Hebrew, French, and Spanish contain substantially fewer. Missing keys therefore fall
-back to English.
+All six locales have identical key structure. English remains the runtime fallback and the source
+of truth for parity validation. `pnpm i18n:check`, which also runs during production builds,
+validates module ownership, locale parity, legacy namespace removal, and static key references.
 
 ## Theme System
 

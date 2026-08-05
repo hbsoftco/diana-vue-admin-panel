@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4">
     <p class="text-gray-400">
-      component demo is coming soon...
+      {{ $t('features.advancedUi.navbar.comingSoon') }}
     </p>
   </div>
 </template>

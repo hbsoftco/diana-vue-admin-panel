@@ -12,10 +12,10 @@ export const utilityRoutes = {
       path: 'avatar',
       component: () => import('@/pages/utility/avatar.vue'),
       meta: {
-        pageTitle: 'pages.avatar.avatar',
+        pageTitle: 'pages.utility.avatar.title',
         breadcrumb: [
-          { label: 'pages.avatar.title', link: '/utility' },
-          { label: 'pages.avatar.avatar' },
+          { label: 'pages.utility.title', link: '/utility' },
+          { label: 'pages.utility.avatar.title' },
         ],
       },
     },
@@ -23,10 +23,10 @@ export const utilityRoutes = {
       path: 'colors',
       component: () => import('@/pages/utility/colors.vue'),
       meta: {
-        pageTitle: 'pages.colors.colors',
+        pageTitle: 'pages.utility.colors.title',
         breadcrumb: [
-          { label: 'pages.colors.title', link: '/utility' },
-          { label: 'pages.colors.colors' },
+          { label: 'pages.utility.title', link: '/utility' },
+          { label: 'pages.utility.colors.title' },
         ],
       },
     },

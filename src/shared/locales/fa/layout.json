@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "footer": {
+      "copyright": "حق نشر © {year} {brand}. طراحی‌شده با {heart} توسط {author}. متن‌باز تحت مجوز {license}."
+    },
+    "sidebar": {
+      "label": "نوار کناری برنامه",
+      "logoAlt": "لوگوی Diana",
+      "navigation": "ناوبری اصلی",
+      "expand": "باز کردن نوار کناری",
+      "collapse": "جمع کردن نوار کناری"
+    },
+    "notifications": {
+      "label": "اعلان‌ها",
+      "title": "اعلان‌ها",
+      "viewAll": "مشاهده همه اعلان‌ها",
+      "items": {
+        "newMessage": {
+          "title": "پیام جدید",
+          "description": "یک پیام جدید از {sender} دارید"
+        },
+        "taskCompleted": {
+          "title": "کار تکمیل شد",
+          "description": "{project} تکمیل شده است"
+        },
+        "meetingReminder": {
+          "title": "یادآوری جلسه",
+          "description": "جلسه تیم تا {count} دقیقه دیگر"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "{count} دقیقه پیش",
+      "minutesAgo": "{count} دقیقه پیش",
+      "hourAgo": "{count} ساعت پیش",
+      "hoursAgo": "{count} ساعت پیش"
+    },
+    "userMenu": {
+      "label": "منوی کاربر",
+      "avatarAlt": "آواتار {name}",
+      "dashboard": "داشبورد",
+      "profile": "پروفایل",
+      "messages": "پیام‌ها",
+      "settings": "تنظیمات",
+      "help": "راهنما",
+      "logout": "خروج",
+      "lastLogin": "آخرین ورود: {time}"
+    },
+    "theme": {
+      "switchToLight": "تغییر به پوسته روشن",
+      "switchToDark": "تغییر به پوسته تاریک"
+    },
+    "fullscreen": {
+      "enter": "ورود به تمام‌صفحه",
+      "exit": "خروج از تمام‌صفحه"
+    },
+    "language": {
+      "select": "انتخاب زبان"
+    }
+  }
+}

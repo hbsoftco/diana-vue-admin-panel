@@ -1,3 +1,3 @@
 <template>
-  <div>NFT Dashboard</div>
+  <div>{{ $t('pages.dashboard.nft.title') }}</div>
 </template>

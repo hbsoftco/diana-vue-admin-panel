@@ -1,0 +1,20 @@
+{
+  "common": {
+    "actions": {
+      "close": "סגירה",
+      "copy": "העתקה",
+      "hide": "הסתר"
+    },
+    "variants": {
+      "primary": "ראשי",
+      "secondary": "משני",
+      "info": "מידע",
+      "accent": "הדגשה",
+      "success": "הצלחה",
+      "warning": "אזהרה",
+      "error": "שגיאה",
+      "neutral": "ניטרלי",
+      "link": "קישור"
+    }
+  }
+}

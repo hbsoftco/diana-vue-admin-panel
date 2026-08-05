@@ -15,7 +15,7 @@ const showLiveAlert = ref(false)
 const basicAlert = `<DiAlert variant="warning" soft>
   <span>
     <strong>Heads up!</strong>
-    {{ $t('features.ui-elements.alert.messages.invalidEmail') }}
+    {{ $t('features.uiElements.alert.messages.invalidEmail') }}
   </span>
 </DiAlert>`
 
@@ -380,7 +380,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
 <template>
   <div class="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.defaultAlert')"
+      :title="$t('features.uiElements.alert.defaultAlert')"
       accent-color="#14b8a6"
       :code="basicAlert"
       language="html"
@@ -388,28 +388,17 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
       <DiAlert variant="warning" soft>
         <span>
           <strong>Heads up!</strong>
-          {{ $t('features.ui-elements.alert.messages.invalidEmail') }}
+          {{ $t('features.uiElements.alert.messages.invalidEmail') }}
         </span>
       </DiAlert>
     </PreviewCodeCard>
 
-    <PreviewCodeCard
-      title="Live example"
-      accent-color="#14b8a6"
-      :code="liveAlert"
-      language="vue"
-    >
+    <PreviewCodeCard title="Live example" accent-color="#14b8a6" :code="liveAlert" language="vue">
       <div class="flex flex-col items-start gap-3">
         <DiButton variant="primary" @click="showLiveAlert = true">
           Show live alert
         </DiButton>
-        <DiAlert
-          v-model="showLiveAlert"
-          variant="success"
-          role="status"
-          closable
-          class="w-full"
-        >
+        <DiAlert v-model="showLiveAlert" variant="success" role="status" closable class="w-full">
           Your changes have been saved.
         </DiAlert>
       </div>
@@ -474,7 +463,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.coloredAlerts')"
+      :title="$t('features.uiElements.alert.coloredAlerts')"
       accent-color="#14b8a6"
       :code="coloredAlerts"
       language="html"
@@ -508,7 +497,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.outlineAlerts')"
+      :title="$t('features.uiElements.alert.outlineAlerts')"
       accent-color="#14b8a6"
       :code="outlineAlerts"
       language="html"
@@ -667,7 +656,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.closableAlerts')"
+      :title="$t('features.uiElements.alert.closableAlerts')"
       accent-color="#14b8a6"
       :code="customCloseAlerts"
       language="vue"
@@ -733,7 +722,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.alertWithCustomIcon')"
+      :title="$t('features.uiElements.alert.alertWithCustomIcon')"
       accent-color="#14b8a6"
       :code="iconAlerts"
       language="html"
@@ -841,7 +830,11 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
         </DiAlert>
         <DiAlert variant="info" soft>
           <template #icon>
-            <img src="@/assets/images/logo-mini.png" alt="" class="size-8 rounded-lg object-cover">
+            <img
+              src="@/assets/images/logo-mini.png"
+              alt=""
+              class="size-8 rounded-lg object-cover"
+            >
           </template>
           An alert with a medium image
         </DiAlert>
@@ -856,7 +849,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
 
     <PreviewCodeCard
       id="alert-actions"
-      :title="$t('features.ui-elements.alert.alertWithActions')"
+      :title="$t('features.uiElements.alert.alertWithActions')"
       accent-color="#14b8a6"
       :code="actionAlerts"
       language="html"
@@ -933,7 +926,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.alert.alertWithTitleAndActions')"
+      :title="$t('features.uiElements.alert.alertWithTitleAndActions')"
       accent-color="#14b8a6"
       :code="richAlerts"
       language="html"

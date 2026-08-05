@@ -1,13 +1,13 @@
 import { enableAutoUnmount, mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it } from 'vitest'
-import { createI18n } from 'vue-i18n'
 
 import DiButtonGroup from '../DiButtonGroup.vue'
+import { testI18n } from './setup'
 
 enableAutoUnmount(afterEach)
 
 function mountGroup(props: Record<string, unknown> = {}, locale: 'en' | 'ar' = 'en') {
-  const i18n = createI18n({ legacy: false, locale, messages: { en: {}, ar: {} } })
+  testI18n.global.locale.value = locale
 
   return mount(DiButtonGroup, {
     props,
@@ -18,7 +18,6 @@ function mountGroup(props: Record<string, unknown> = {}, locale: 'en' | 'ar' = '
         <button class="btn">Three</button>
       `,
     },
-    global: { plugins: [i18n] },
     attachTo: document.body,
   })
 }

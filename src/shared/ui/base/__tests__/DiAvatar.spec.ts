@@ -137,7 +137,9 @@ describe('diAvatar', () => {
     const indicator = wrapper.get('[data-avatar-status]')
 
     expect(indicator.classes()).toContain(statusClass)
-    expect(indicator.attributes('aria-label')).toBe(status)
+    expect(indicator.attributes('aria-label')).toBe(
+      status.charAt(0).toUpperCase() + status.slice(1),
+    )
   })
 
   it('supports decorative icon-only avatars', () => {

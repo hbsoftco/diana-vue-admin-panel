@@ -55,12 +55,7 @@ function getLevelClasses() {
 const classes = getLevelClasses()
 
 // Tooltip content for collapsed state
-const tooltipContent = computed(() =>
-  props.item.label.startsWith('menu.') ? props.item.label : props.item.label,
-)
-const displayLabel = computed(() =>
-  props.item.label.startsWith('menu.') ? t(props.item.label) : props.item.label,
-)
+const displayLabel = computed(() => t(props.item.label))
 
 // Show children only when not collapsed or when it's a nested item
 const shouldShowChildren = computed(() => !props.isCollapsed || props.level > 1)
@@ -82,7 +77,7 @@ const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleO
           'justify-center': isCollapsed && level === 1,
         },
       ]"
-      :title="isCollapsed && level === 1 ? $t(tooltipContent) : ''"
+      :title="isCollapsed && level === 1 ? displayLabel : ''"
       @click="emit('toggle', item.id)"
     >
       <div

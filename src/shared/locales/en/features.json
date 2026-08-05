@@ -1,194 +1,26 @@
 {
-  "author": "hbsoft",
-  "greeting": "Hello",
-  "theme": {
-    "light": "Light",
-    "dark": "Dark"
-  },
-  "menu": {
-    "dashboards": "Dashboards",
-    "users": "Users",
-    "settings": "Settings",
-    "forms": "Forms",
-    "formElements": "Form Elements",
-    "inputs": "Inputs",
-    "range": "Range",
-    "rangeSlider": "Range Slider",
-    "select": "Select",
-    "utility": "Utility",
-    "avatar": "Avatar",
-    "colors": "Colors"
-  },
-  "pages": {
-    "avatar": {
-      "title": "Utility",
-      "avatar": "Avatar"
-    },
-    "colors": {
-      "title": "Utility",
-      "colors": "Colors"
-    },
-    "rangeSlider": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "rangeSlider": "Range Slider"
-    },
-    "range": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "range": "Range"
-    },
-    "inputs": {
-      "forms": "Forms",
-      "formElements": "Form Elements",
-      "inputs": "Inputs"
-    },
-    "select": {
-      "title": "Forms",
-      "formElements": "Form Elements",
-      "select": "Select"
-    },
-    "icons": {
-      "title": "Ui Elements",
-      "icons": "Icons"
-    },
-    "drawer": {
-      "title": "Advanced ui",
-      "drawer": "Drawer"
-    },
-    "alerts": {
-      "title": "Ui Elements",
-      "alerts": "Alerts"
-    },
-    "badge": {
-      "title": "Ui Elements",
-      "badge": "Badge"
-    },
-    "breadcrumb": {
-      "title": "Ui Elements",
-      "breadcrumb": "Breadcrumb"
-    },
-    "buttons": {
-      "title": "Ui Elements",
-      "buttons": "Buttons"
-    },
-    "loadings": {
-      "title": "Ui Elements",
-      "loadings": "Loadings"
-    },
-    "buttonGroup": {
-      "title": "Ui Elements",
-      "buttonGroup": "Button Group"
-    },
-    "card": {
-      "title": "Ui Elements",
-      "cards": "Cards"
-    },
-    "dropdowns": {
-      "title": "Ui Elements",
-      "dropdowns": "Dropdowns"
-    },
-    "imagesFigures": {
-      "title": "Ui Elements",
-      "imagesFigures": "Images & Figures"
-    },
-    "linksInteractions": {
-      "title": "Ui Elements",
-      "linksInteractions": "Links & Interactions"
-    },
-    "listGroup": {
-      "title": "Ui Elements",
-      "listGroup": "List Group"
-    },
-    "navsTabs": {
-      "title": "Ui Elements",
-      "navsTabs": "Navs & Tabs"
-    },
-    "objectFit": {
-      "title": "Ui Elements",
-      "objectFit": "Object Fit"
-    },
-    "pagination": {
-      "title": "Ui Elements",
-      "pagination": "Pagination"
-    },
-    "popovers": {
-      "title": "Ui Elements",
-      "popovers": "Popovers"
-    },
-    "progress": {
-      "title": "Ui Elements",
-      "progress": "Progress"
-    },
-    "switch": {
-      "title": "Ui Elements",
-      "switch": "Switch"
-    },
-    "modals": {
-      "title": "Ui Elements",
-      "modals": "Modals"
-    },
-    "toasts": {
-      "title": "Ui Elements",
-      "toasts": "Toasts"
-    },
-    "tooltips": {
-      "title": "Ui Elements",
-      "tooltips": "Tooltips"
-    },
-    "typography": {
-      "title": "Ui Elements",
-      "typography": "Typography"
-    },
-    "accordion": {
-      "title": "Advanced UI",
-      "accordion": "Accordion"
-    },
-    "carousel": {
-      "title": "Advanced UI",
-      "carousel": "Carousel"
-    },
-    "collapse": {
-      "title": "Advanced UI",
-      "collapse": "Collapse"
-    },
-    "navbar": {
-      "title": "Advanced UI",
-      "navbar": "Navbar"
-    },
-    "skeleton": {
-      "title": "Advanced UI",
-      "skeleton": "Skeleton"
-    },
-    "rating": {
-      "title": "Advanced UI",
-      "rating": "Rating"
-    }
-  },
-  "base": {
-    "button": {}
-  },
-  "patterns": {
-    "previewCodeCard": {
-      "showPreview": "Show Preview",
-      "showCode": "Show Code",
-      "copy": "Copy",
-      "copied": "Copied!"
-    }
-  },
   "features": {
     "utility": {
       "avatar": {
+        "square": "Square avatar",
+        "rounded": "Rounded avatar",
+        "circular": "Circular avatar",
+        "sizeAlt": "{size} avatar",
+        "profileAction": "Profile action avatar {number}",
+        "onlineUser": "Online user {number}",
+        "offlineUser": "Offline user {number}",
+        "unreadMessages": "Unread messages avatar {number}",
+        "teamMember": "Team member {number}",
+        "extraSmall": "Extra small avatar",
+        "small": "Small avatar",
+        "medium": "Medium avatar",
+        "large": "Large avatar",
+        "extraLarge": "Extra large avatar",
+        "doubleExtraLarge": "Double extra large avatar",
         "basic": "Avatars",
-        "image": "Image Avatar",
         "initials": "Fallback Initials",
         "icon": "Avatar With Icons",
         "sizes": "Sizes",
-        "shapes": "Shapes",
-        "variants": "Semantic Variants",
-        "status": "Status Indicators",
-        "groups": "Avatar Groups",
-        "broken": "Broken Image Handling",
         "online": "Avatar With Online Status Indicators",
         "offline": "Avatar With Offline Status Indicators",
         "badges": "Avatars With Number Badges",
@@ -222,14 +54,38 @@
         "inputHelp": "Focus rings use a transparent variation of the semantic color."
       }
     },
-    "ui-elements": {
+    "uiElements": {
+      "comingSoon": "{name} component demo coming soon...",
+      "cards": {
+        "shoesAlt": "Shoes",
+        "title": "Card Title",
+        "description": "A card component has a figure, a body, a title, and actions.",
+        "lastUpdated": "Last updated 3 minutes ago",
+        "header": "Header",
+        "sampleDescription": "This sample card demonstrates supporting content and actions.",
+        "readMore": "Read more",
+        "defaultButtons": "Default Buttons",
+        "showCode": "Show code",
+        "example": "Example"
+      },
+      "dropdowns": {
+        "dashboard": "Dashboard",
+        "profile": "Profile",
+        "messages": "Messages",
+        "settings": "Settings",
+        "help": "Help",
+        "logout": "Log out",
+        "userMenu": "User menu",
+        "openMenu": "Open user menu",
+        "userAvatar": "User avatar",
+        "lastLogin": "Last login: 2 hours ago"
+      },
       "popover": {
         "basic": "Basic Popover",
         "titleSupport": "Popover With Title",
         "headerSlot": "Header Slot",
         "footerActions": "Footer Actions",
         "arrowPlacements": "Arrow Placement Examples",
-        "placements": "Placements",
         "alignment": "Alignment",
         "widths": "Trigger Width",
         "richContent": "Rich Content",
@@ -253,24 +109,63 @@
         "nesting": "Nesting"
       },
       "toast": {
-        "basic": "Basic toast",
-        "variants": "Semantic variants",
-        "persistent": "Persistent toast",
-        "actions": "Toast with action",
-        "placement": "Placement",
         "show": "Show toast",
         "showPersistent": "Show persistent toast",
         "showAction": "Show toast with action",
-        "showPositioned": "Show top-start toast",
-        "close": "Close notification",
-        "undo": "Undo",
+        "sections": {
+          "live": "Live example",
+          "basic": "Basic example",
+          "action": "Custom action snackbar",
+          "colors": "Color schemes",
+          "fragment": "Render-fragment snackbar",
+          "clickable": "Clickable snackbar",
+          "variants": "Snackbar variants",
+          "solid": "Solid background snackbar",
+          "position": "Snackbar position",
+          "persistent": "Open and hide snackbar"
+        },
+        "actions": {
+          "showFragment": "Show render-fragment snackbar",
+          "showClickable": "Open clickable snackbar",
+          "showText": "Open text",
+          "showFilled": "Open filled",
+          "showOutlined": "Open outlined",
+          "view": "View"
+        },
+        "colors": {
+          "dark": "Dark",
+          "danger": "Danger"
+        },
+        "positions": {
+          "topStart": "Top start",
+          "topLeft": "Top left",
+          "topCenter": "Top center",
+          "topRight": "Top right",
+          "topEnd": "Top end",
+          "bottomStart": "Bottom start",
+          "bottomLeft": "Bottom left",
+          "bottomCenter": "Bottom center",
+          "bottomRight": "Bottom right",
+          "bottomEnd": "Bottom end"
+        },
         "messages": {
           "saved": "Your settings have been saved.",
-          "variant": "This notification uses a semantic variant.",
-          "attention": "Attention required",
           "persistent": "This notification remains until you close it.",
-          "action": "The item was moved to the archive.",
-          "position": "This toast is positioned at the top start."
+          "position": "Placement preview",
+          "warning": "Heads up! This is the warning toast message.",
+          "error": "Hello, world! This is the error toast message.",
+          "info": "Hello, world! This is the info toast message.",
+          "basic": "Hello, world! This is a toast message.",
+          "inbox": "I got a message for you",
+          "clickable": "Click this notification to dismiss it.",
+          "text": "Normal text snackbar",
+          "filled": "Info filled snackbar",
+          "outlined": "Success outlined snackbar",
+          "neutral": "Normal filled snackbar",
+          "reactorStarted": "The reactor was started successfully",
+          "reactorOptimal": "The reactor is running at optimum temperature",
+          "reactorWarning": "The reactor temperature exceeds the optimal range",
+          "reactorDanger": "Reactor meltdown is imminent"
         }
       },
       "pagination": {
@@ -285,12 +180,8 @@
         "styleFour": "Pagination Style-4",
         "controls": "Control Buttons",
         "label": "Pagination",
-        "first": "First page",
         "previous": "Previous page",
-        "next": "Next page",
-        "last": "Last page",
-        "current": "Current page: {page}",
-        "page": "Page {page}"
+        "next": "Next page"
       },
       "progress": {
         "basic": "Basic Progress",
@@ -361,14 +252,13 @@
         "allVariants": "All Variants"
       },
       "badge": {
+        "label": "Badge",
         "defaultBadge": "Default Badge",
         "badgeSizes": "Badge Sizes",
         "coloredBadges": "Colored Badges",
-        "largeColoredBadges": "Large Colored Badges",
         "softBadges": "Soft Badges",
         "outlineBadges": "Outline Badges",
         "dashBadges": "Dash Badges",
-        "mixedStyleBadges": "Mixed Style Badges",
         "ghostBadge": "Ghost Badge",
         "emptyBadges": "Empty Badges",
         "badgeWithIcons": "Badge with Icons",
@@ -377,39 +267,19 @@
       "alert": {
         "defaultAlert": "Default Alert",
         "coloredAlerts": "Colored Alerts",
-        "softAlerts": "Soft Style Alerts",
         "outlineAlerts": "Outline Style Alerts",
-        "dashAlerts": "Dash Style Alerts",
         "closableAlerts": "Closable Alerts",
         "alertWithTitle": "Alert with Title",
         "alertWithActions": "Alert with Actions",
         "alertWithCustomIcon": "Alert with Custom Icon",
-        "verticalAlert": "Vertical Layout Alert",
         "alertWithTitleAndActions": "Alert with Title and Actions",
         "messages": {
-          "newUpdate": "New software update available.",
-          "purchaseConfirmed": "Your purchase has been confirmed!",
-          "invalidEmail": "Warning: Invalid email address!",
-          "taskFailed": "Error! Task failed successfully.",
-          "unreadMessages": "12 unread messages. Tap to see.",
-          "clickToClose": "Click the X button to close this alert.",
-          "successClosable": "Success! You can close this alert.",
-          "warningClosable": "Warning! This alert is closable.",
-          "errorClosable": "Error! Click to dismiss this alert.",
-          "newMessageTitle": "New message!",
-          "newMessageDesc": "You have 1 unread message",
-          "cookiesMessage": "We use cookies for no reason.",
-          "congratulations": "Congratulations! You've won a prize!",
-          "verticalLayout": "This is a vertical layout alert, good for mobile screens."
+          "invalidEmail": "Warning: Invalid email address!"
         },
-        "actions": {
-          "deny": "Deny",
-          "accept": "Accept",
-          "see": "See",
-          "action": "Action"
-        }
+        "actions": {}
       },
       "icons": {
+        "calendar": "Calendar",
         "iconSizes": "Icon Sizes",
         "iconColors": "Icon Colors",
         "spinAndPulse": "Spin & Pulse",
@@ -442,62 +312,6 @@
         "laptops": "Laptops",
         "gamingLaptops": "Gaming Laptops"
       },
-      "modal": {
-        "actions": {
-          "open": "Open Modal",
-          "cancel": "Cancel",
-          "confirm": "Confirm",
-          "delete": "Delete"
-        },
-
-        "basic": {
-          "title": "Basic Modal",
-          "header": "Modal Title",
-          "description": "This is a basic modal with default settings."
-        },
-
-        "position": {
-          "title": "Position Variants",
-          "top": "Top",
-          "bottom": "Bottom",
-          "topDesc": "This modal appears at the top of the screen.",
-          "bottomDesc": "This modal appears at the bottom of the screen."
-        },
-
-        "size": {
-          "title": "Size Variants",
-          "sm": "This is a small modal.",
-          "md": "This is a medium modal.",
-          "lg": "This is a large modal.",
-          "xl": "This is an extra large modal.",
-          "full": "Full Screen",
-          "fullDesc": "This modal takes up the entire screen."
-        },
-
-        "blur": {
-          "title": "Backdrop Blur",
-          "xs": "Extra small backdrop blur.",
-          "sm": "Small backdrop blur.",
-          "md": "Medium backdrop blur."
-        },
-
-        "behavior": {
-          "title": "Behavior Options",
-          "noBackdrop": "No Backdrop Close",
-          "noEsc": "No ESC Close",
-          "noCloseButton": "No Close Button",
-          "noBackdropDesc": "Clicking the backdrop will not close this modal.",
-          "noEscDesc": "Pressing the ESC key will not close this modal.",
-          "noCloseButtonDesc": "This modal does not have a close button."
-        },
-
-        "confirmation": {
-          "title": "Confirmation Dialog",
-          "open": "Delete Account",
-          "header": "Delete Account?",
-          "description": "Are you sure you want to delete your account? This action cannot be undone."
-        }
-      },
       "tooltip": {
         "basicTooltip": "Basic Tooltip",
         "positionTooltips": "Position Tooltips",
@@ -509,26 +323,15 @@
         "tooltipOnIcons": "Tooltip on Icons",
         "multiLineTooltips": "Multi-line Tooltips",
         "interactiveElements": "Interactive Elements",
-
         "hoverMe": "Hover me",
         "top": "Top",
         "right": "Right",
         "bottom": "Bottom",
         "left": "Left",
-        "primary": "Primary",
-        "secondary": "Secondary",
-        "accent": "Accent",
-        "info": "Info",
-        "success": "Success",
-        "warning": "Warning",
-        "error": "Error",
-        "neutral": "Neutral",
-
         "tooltipOnTop": "Tooltip on top",
         "tooltipOnRight": "Tooltip on right",
         "tooltipOnBottom": "Tooltip on bottom",
         "tooltipOnLeft": "Tooltip on left",
-
         "primaryTooltip": "Primary tooltip",
         "secondaryTooltip": "Secondary tooltip",
         "accentTooltip": "Accent tooltip",
@@ -537,72 +340,326 @@
         "warningTooltip": "Warning tooltip",
         "errorTooltip": "Error tooltip",
         "neutralTooltip": "Neutral tooltip",
-
         "alwaysVisible": "Always visible",
         "hoverToSee": "Hover to see",
         "openTooltip": "Open tooltip",
         "hoverTooltip": "Hover tooltip",
-
         "clickMe": "Click me!",
         "buttonWithTooltip": "Button with tooltip",
         "primaryAction": "Primary action",
         "action": "Action",
         "deleteItem": "Delete item",
         "delete": "Delete",
-
         "primaryTop": "Primary top",
         "successRight": "Success right",
         "warningBottom": "Warning bottom",
         "errorLeft": "Error left",
-
         "information": "Information",
         "settings": "Settings",
         "deleteIcon": "Delete",
         "help": "Help",
-
         "longTooltipText": "This is a longer tooltip text that might wrap to multiple lines depending on the screen size",
         "longText": "Long text",
         "short": "Short",
         "shortText": "Short text",
-
         "clickToCopy": "Click to copy",
-        "copy": "Copy",
         "toggleSwitch": "Toggle switch",
         "selectOption": "Select option",
         "option1": "Option 1",
-        "option2": "Option 2",
-
-        "responsiveTooltip": "Responsive Tooltip",
-        "mobileToDesktop": "Mobile to Desktop",
-        "adaptiveColorPosition": "Adaptive Color & Position",
-        "responsiveIcons": "Responsive Icons",
-        "complexResponsive": "Complex Responsive Layout",
-
-        "tooltipChangesPosition": "Tooltip changes position based on screen size",
-        "resizeToSee": "Resize to see changes",
-        "topMobileRightDesktop": "Top on mobile, Right on desktop",
-        "mobileDesktop": "Mobile → Desktop",
-        "bottomMobileLeftTablet": "Bottom on mobile, Left on tablet+",
-        "mobileTablet": "Mobile → Tablet",
-
-        "infoResponsive": "Info tooltip with responsive position",
-        "warningAdapts": "Warning tooltip adapts to screen",
-        "errorFullControl": "Error with full responsive control",
-
-        "settingsResponsive": "Settings - responsive position",
-        "helpAdapts": "Help - adapts to screen size",
-        "notificationsFullResponsive": "Notifications - full responsive",
-
-        "adaptsBasedOnLayout": "Adapts based on layout",
-        "smartPositioning": "Smart positioning",
-        "responsiveDesign": "Responsive design",
-        "gridItem1": "Grid Item 1",
-        "gridItem2": "Grid Item 2",
-        "gridItem3": "Grid Item 3",
-        "resizeWindowToSee": "Resize window to see tooltips adapt to different breakpoints"
+        "option2": "Option 2"
       }
     },
-    "advanced-ui": {
+    "forms": {
+      "inputs": {
+        "sections": {
+          "basic": "Basic Inputs",
+          "types": "Input Types",
+          "sizes": "Sizes",
+          "states": "Disabled and Readonly",
+          "slots": "Prefix/Suffix Slots",
+          "validation": "Validation States",
+          "variants": "Semantic Variants"
+        },
+        "labels": {
+          "fullName": "Full name",
+          "email": "Email address",
+          "emailShort": "Email",
+          "text": "Text",
+          "password": "Password",
+          "number": "Number",
+          "search": "Search",
+          "telephone": "Telephone",
+          "small": "Small input",
+          "medium": "Medium input",
+          "large": "Large input",
+          "disabled": "Disabled input",
+          "readonly": "Readonly input",
+          "loading": "Loading input",
+          "emailError": "Email with error",
+          "usernameSuccess": "Username with success",
+          "passwordGuidance": "Password guidance"
+        },
+        "placeholders": {
+          "name": "Enter your name",
+          "text": "Text input",
+          "password": "Password",
+          "search": "Search",
+          "loading": "Fetching account details",
+          "projects": "Search projects",
+          "enterPassword": "Enter password",
+          "focus": "Focus to preview"
+        },
+        "helpers": {
+          "emailPrivacy": "We'll never share your email.",
+          "password": "Use at least eight characters."
+        },
+        "values": {
+          "disabled": "Disabled value",
+          "readonly": "Readonly value"
+        },
+        "actions": {
+          "hidePassword": "Hide password",
+          "showPassword": "Show password",
+          "show": "Show"
+        },
+        "validation": {
+          "email": "Enter a valid email address.",
+          "usernameAvailable": "This username is available."
+        },
+        "sizes": {
+          "small": "Small",
+          "medium": "Medium",
+          "large": "Large"
+        }
+      },
+      "select": {
+        "sections": {
+          "basic": "Basic Select",
+          "multiple": "Multiple Select",
+          "variants": "Semantic Variants",
+          "sizes": "Sizes",
+          "singlePlaceholder": "Single Select With Placeholder",
+          "multiplePlaceholder": "Multiple Select With Placeholder",
+          "customOption": "Custom Option Rendering",
+          "customSelected": "Custom Selected Rendering",
+          "limit": "Maximum Selection Limit",
+          "runtime": "Runtime Disable / Enable"
+        },
+        "headings": {
+          "singleSizes": "Single select sizes",
+          "multipleSizes": "Multiple select sizes"
+        },
+        "labels": {
+          "singleSize": "{size} select",
+          "multipleSize": "{size} select with tags"
+        },
+        "placeholders": {
+          "state": "Select a state",
+          "people": "Choose people",
+          "customer": "Choose customer",
+          "client": "Choose client"
+        },
+        "roles": {
+          "designer": "Designer",
+          "developer": "Developer",
+          "productManager": "Product manager",
+          "researcher": "Researcher",
+          "supportLead": "Support lead"
+        },
+        "actions": {
+          "enable": "Enable",
+          "disable": "Disable"
+        }
+      },
+      "range": {
+        "sections": {
+          "basic": "Basic Range",
+          "sizes": "Sizes",
+          "variants": "Semantic Variants",
+          "limits": "Min / Max Examples",
+          "steps": "Step Examples",
+          "disabled": "Disabled",
+          "labels": "With Labels",
+          "helper": "With Helper Text",
+          "validation": "Validation States",
+          "value": "Value Display",
+          "styling": "Rounded and Square Styling",
+          "tooltip": "Sliding Handle Tooltip",
+          "colors": "Color Picker Sliders",
+          "linked": "Linked and Lockable Sliders",
+          "toggle": "Slider Toggle",
+          "pips": "Clickable Pips",
+          "softLimits": "Soft Limits",
+          "runtime": "Runtime Disabled State"
+        },
+        "labels": {
+          "small": "Small range",
+          "medium": "Medium range",
+          "large": "Large range",
+          "temperature": "Temperature (-50 to 50)",
+          "budget": "Budget (100 to 1000)",
+          "halfSteps": "Half steps",
+          "quarterSteps": "Quarter steps",
+          "disabled": "Disabled range",
+          "readonly": "Readonly range",
+          "volume": "Volume",
+          "brightness": "Brightness",
+          "profileCompleteness": "Profile completeness",
+          "riskThreshold": "Risk threshold",
+          "qualityTarget": "Quality target",
+          "completion": "Completion",
+          "roundedThumb": "Rounded thumb",
+          "squareThumb": "Square thumb",
+          "linkedA": "Linked control A",
+          "linkedB": "Linked control B",
+          "toggle": "Slider toggle",
+          "clickMarker": "Click a marker to move",
+          "softLimits": "Soft limits",
+          "runtime": "Runtime disabled state"
+        },
+        "helpers": {
+          "completionTarget": "Move the slider to choose the completion target.",
+          "valueUpdates": "The displayed value updates as you move the slider.",
+          "softLimits": "Recommended: 20–80. The full 0–100 range remains available."
+        },
+        "validation": {
+          "maximum": "Choose a value of 80 or lower.",
+          "recommended": "This target is within the recommended range.",
+          "outsideRecommended": "Outside the recommended range of 20–80."
+        },
+        "colors": {
+          "red": "Red",
+          "green": "Green",
+          "blue": "Blue"
+        },
+        "actions": {
+          "lock": "Lock controls",
+          "unlock": "Unlock controls",
+          "enable": "Enable range",
+          "disable": "Disable range"
+        },
+        "values": {
+          "low": "Low",
+          "medium": "Medium",
+          "high": "High",
+          "on": "On",
+          "off": "Off"
+        }
+      },
+      "rangeSlider": {
+        "sections": {
+          "basic": "Basic",
+          "sizes": "Sizes",
+          "variants": "Semantic Variants",
+          "connected": "Connected Track",
+          "tooltips": "Tooltips",
+          "formatted": "Formatted Values",
+          "vertical": "Vertical",
+          "minimumDistance": "Minimum Distance",
+          "maximumDistance": "Maximum Distance",
+          "softLimits": "Soft Limits",
+          "ticks": "Clickable Ticks",
+          "disabled": "Disabled",
+          "validation": "Validation",
+          "runtime": "Runtime State Changes",
+          "thumbs": "Thumb Handles"
+        },
+        "labels": {
+          "price": "Price range",
+          "connected": "Drag either handle, the track, or the connected selection",
+          "perHandleTooltips": "Per-handle tooltips",
+          "mergeTooltips": "Merge nearby tooltips",
+          "budget": "Budget",
+          "vertical": "Vertical interval",
+          "secondaryVertical": "Secondary vertical interval",
+          "minimumDistance": "At least 20 units apart",
+          "maximumDistance": "At most 30 units apart",
+          "recommended": "Recommended interval",
+          "clickMarker": "Click a marker to move the nearest handle",
+          "disabled": "Disabled selection",
+          "delivery": "Delivery window",
+          "confidence": "Confidence interval",
+          "runtime": "Runtime-controlled selection",
+          "defaultHandles": "Default square handles",
+          "indicatorHandles": "Drag indicator handles"
+        },
+        "helpers": {
+          "minimumDistance": "The handles cannot move closer than 20 units.",
+          "maximumDistance": "The handles remain within 30 units of each other.",
+          "softLimits": "Values settle inside 20–80 when an interaction ends."
+        },
+        "validation": {
+          "narrower": "Choose a narrower delivery window.",
+          "recommended": "This interval meets the recommendation."
+        },
+        "actions": {
+          "enable": "Enable slider",
+          "disable": "Disable slider"
+        },
+        "sizes": {
+          "small": "Small",
+          "medium": "Medium",
+          "large": "Large"
+        }
+      }
+    },
+    "advancedUi": {
+      "navbar": {
+        "comingSoon": "Navbar component demo is coming soon..."
+      },
+      "modals": {
+        "actions": {
+          "open": "Open modal",
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "delete": "Delete"
+        },
+        "basic": {
+          "title": "Basic Modal",
+          "header": "Modal Title",
+          "description": "This is a basic modal with default settings."
+        },
+        "position": {
+          "title": "Position Variants",
+          "topDesc": "This modal appears at the top of the screen.",
+          "bottomDesc": "This modal appears at the bottom of the screen."
+        },
+        "size": {
+          "title": "Size Variants",
+          "sm": "This is a small modal.",
+          "lg": "This is a large modal.",
+          "xl": "This is an extra large modal.",
+          "full": "Full Screen",
+          "fullDesc": "This modal takes up the entire screen."
+        },
+        "blur": {
+          "title": "Backdrop Blur",
+          "xs": "Extra small backdrop blur.",
+          "sm": "Small backdrop blur.",
+          "md": "Medium backdrop blur."
+        },
+        "behavior": {
+          "title": "Behavior Options",
+          "noBackdrop": "No Backdrop Close",
+          "noEsc": "No ESC Close",
+          "noCloseButton": "No Close Button",
+          "noBackdropDesc": "Clicking the backdrop will not close this modal.",
+          "noEscDesc": "Pressing the ESC key will not close this modal.",
+          "noCloseButtonDesc": "This modal does not have a close button."
+        },
+        "confirmation": {
+          "title": "Confirmation Dialog",
+          "open": "Delete Account",
+          "header": "Delete Account?",
+          "description": "Are you sure you want to delete your account? This action cannot be undone."
+        },
+        "responsive": "Responsive modal",
+        "responsiveContent": "Responsive behavior on mobile",
+        "noTransition": "Without transition",
+        "noTransitionContent": "Instant open and close without animation",
+        "borderedWithSlots": "Bordered modal with slots",
+        "slottedContent": "Main modal content goes here. You can place any components."
+      },
       "carousel": {
         "basic": "Basic carousel",
         "controlled": "Controlled and looping",
@@ -634,21 +691,18 @@
       },
       "rating": {
         "basicRating": "Basic Rating",
-        "coloredRating": "Colored Rating",
         "halfRating": "Half Rating",
         "spacingRating": "Spacing Variants",
         "readonlyRating": "Read-Only Rating",
         "disabledRating": "Disabled Rating",
-        "customIconRating": "Custom Icon Rating",
-        "ratingSizes": "Rating Sizes",
-        "clearableRating": "Clearable Rating",
         "masksRating": "Masks",
         "variants": "Variants",
         "customMaxRating": "Custom Max",
-        "sizesRating": "Sizes",
-        "rtlSupport": "RTL Support"
+        "sizesRating": "Sizes"
       },
       "skeletons": {
+        "thinking": "AI is thinking harder...",
+        "loadingContent": "Loading your content right now...",
         "skeletonSizes": "Skeleton Sizes",
         "skeletonShapes": "Skeleton Shapes",
         "skeletonColors": "Skeleton Colors",
@@ -706,16 +760,5 @@
         "settings": "Settings"
       }
     }
-  },
-  "variants": {
-    "primary": "Primary",
-    "secondary": "Secondary",
-    "info": "Info",
-    "accent": "Accent",
-    "success": "Success",
-    "warning": "Warning",
-    "error": "Error",
-    "neutral": "Neutral",
-    "link": "Link"
   }
 }

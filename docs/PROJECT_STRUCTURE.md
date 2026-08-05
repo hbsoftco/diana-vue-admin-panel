@@ -331,12 +331,12 @@ DaisyUI theme name to the root HTML element.
 Defines the sidebar hierarchy. Menu entries contain:
 
 - Stable ID.
-- Label or translation key.
+- A `menu.*` translation key.
 - Optional registered icon.
 - Optional route.
 - Optional recursive children.
 
-Some configured project menu routes do not exist in the router.
+Only destinations registered by the router are included in the menu.
 
 ### `src/shared/icons`
 
@@ -345,6 +345,10 @@ Some configured project menu routes do not exist in the router.
 Defines all icons available through `DiIcon`. Registry keys form the `IconName` type.
 
 ### `src/shared/locales`
+
+Contains one directory per supported locale. Each locale is assembled from six ownership modules:
+`common.json`, `menu.json`, `layout.json`, `components.json`, `pages.json`, and `features.json`.
+See [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md) for ownership and migration rules.
 
 JSON dictionaries for:
 

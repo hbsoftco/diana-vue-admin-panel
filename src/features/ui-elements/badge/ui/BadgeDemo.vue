@@ -4,7 +4,7 @@ import DiButton from '@/shared/ui/base/DiButton.vue'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 const defaultBadges = `<div class="flex flex-wrap gap-2 items-center">
-  <DiBadge>Badge</DiBadge>
+  <DiBadge>{{ $t('features.uiElements.badge.label') }}</DiBadge>
 </div>`
 
 const badgeSizes = `<div class="flex flex-wrap gap-2 items-center">
@@ -280,7 +280,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Badge Sizes -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeSizes')"
+      :title="$t('features.uiElements.badge.badgeSizes')"
       accent-color="#14b8a6"
       :code="badgeSizes"
       language="html"
@@ -306,7 +306,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Empty Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.emptyBadges')"
+      :title="$t('features.uiElements.badge.emptyBadges')"
       accent-color="#14b8a6"
       :code="emptyBadges"
       language="html"
@@ -321,269 +321,269 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Normal Colored Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.coloredBadges')"
+      :title="$t('features.uiElements.badge.coloredBadges')"
       accent-color="#14b8a6"
       :code="coloredBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="neutral" size="sm">
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="info" size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Pill Colored Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.coloredBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.coloredBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="coloredPillBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="neutral" pill size="sm">
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="info" pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Normal Soft Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.softBadges')"
+      :title="$t('features.uiElements.badge.softBadges')"
       accent-color="#14b8a6"
       :code="softBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" soft size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" soft size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" soft size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" soft size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" soft size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" soft size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" soft size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Pill Soft Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.softBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.softBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="softPillBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" pill soft size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" pill soft size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" pill soft size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" pill soft size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill soft size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" pill soft size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" pill soft size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Normal Outline Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.outlineBadges')"
+      :title="$t('features.uiElements.badge.outlineBadges')"
       accent-color="#14b8a6"
       :code="outlineBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" outline size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" outline size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" outline size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" outline size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" outline size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" outline size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" outline size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Pill Outline Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.outlineBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.outlineBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="outlinePillBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" outline pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" outline pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" outline pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" outline pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" outline pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" outline pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" outline pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Normal Dash Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.dashBadges')"
+      :title="$t('features.uiElements.badge.dashBadges')"
       accent-color="#14b8a6"
       :code="dashBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" dash size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" dash size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" dash size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" dash size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" dash size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Pill Dash Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.dashBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.dashBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="dashPillBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
         <DiBadge variant="primary" dash pill size="sm">
-          {{ $t('variants.primary') }}
+          {{ $t('common.variants.primary') }}
         </DiBadge>
         <DiBadge variant="secondary" dash pill size="sm">
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash pill size="sm">
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="info" dash pill size="sm">
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" dash pill size="sm">
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash pill size="sm">
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="error" dash pill size="sm">
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Ghost Badge -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.ghostBadge')"
+      :title="$t('features.uiElements.badge.ghostBadge')"
       accent-color="#14b8a6"
       :code="ghostBadge"
       language="html"
@@ -597,19 +597,19 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Default Badge -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.defaultBadge')"
+      :title="$t('features.uiElements.badge.defaultBadge')"
       accent-color="#14b8a6"
       :code="defaultBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
-        <DiBadge>Badge</DiBadge>
+        <DiBadge>{{ $t('features.uiElements.badge.label') }}</DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Default Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.defaultButtons')"
+      :title="$t('features.uiElements.buttons.defaultButtons')"
       accent-color="#14b8a6"
       :code="defaultButtons"
       language="html"
@@ -641,7 +641,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="info"
           badge-size="sm"
         >
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton
           variant="warning"
@@ -652,7 +652,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-size="sm"
           rounded
         >
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiButton>
         <DiButton
           variant="neutral"
@@ -675,7 +675,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="success"
           badge-size="sm"
         >
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiButton>
         <DiButton
           variant="error"
@@ -685,7 +685,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="neutral"
           badge-size="xl"
         >
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiButton>
         <DiButton
           outline
@@ -696,17 +696,17 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           badge-variant="secondary"
           badge-pill
         >
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiButton>
         <DiButton variant="link">
-          {{ $t('variants.link') }}
+          {{ $t('common.variants.link') }}
         </DiButton>
       </div>
     </PreviewCodeCard>
 
     <!-- Badge with Icons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeWithIcons')"
+      :title="$t('features.uiElements.badge.badgeWithIcons')"
       accent-color="#14b8a6"
       :code="badgeWithIcons"
       language="html"
@@ -717,74 +717,74 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
           <template #icon-left>
             <i-heroicons-information-circle class="text-sm" />
           </template>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
         <DiBadge variant="success" pill>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning">
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="secondary" pill outline>
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.secondary') }}
+          {{ $t('common.variants.secondary') }}
         </DiBadge>
         <DiBadge variant="accent" dash>
           <template #icon-left>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.accent') }}
+          {{ $t('common.variants.accent') }}
         </DiBadge>
         <DiBadge variant="error">
           <template #icon-left>
             <i-heroicons-x-circle class="text-sm" />
           </template>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
         <DiBadge variant="neutral" pill>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.neutral') }}
+          {{ $t('common.variants.neutral') }}
         </DiBadge>
         <DiBadge variant="error" dash pill>
           <template #icon-left>
             <i-heroicons-x-circle class="text-sm" />
           </template>
-          {{ $t('variants.error') }}
+          {{ $t('common.variants.error') }}
         </DiBadge>
         <DiBadge variant="success" soft>
           <template #icon-left>
             <i-heroicons-check-circle class="text-sm" />
           </template>
-          {{ $t('variants.success') }}
+          {{ $t('common.variants.success') }}
         </DiBadge>
         <DiBadge variant="warning" dash pill>
           <template #icon-right>
             <i-heroicons-exclamation-triangle class="text-sm" />
           </template>
-          {{ $t('variants.warning') }}
+          {{ $t('common.variants.warning') }}
         </DiBadge>
         <DiBadge variant="info" outline pill>
           <template #icon-right>
             <i-heroicons-information-circle class="text-sm" />
           </template>
-          {{ $t('variants.info') }}
+          {{ $t('common.variants.info') }}
         </DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Badge in Text -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeInText')"
+      :title="$t('features.uiElements.badge.badgeInText')"
       accent-color="#14b8a6"
       :code="badgeInText"
       language="html"

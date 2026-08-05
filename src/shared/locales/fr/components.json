@@ -1,0 +1,71 @@
+{
+  "components": {
+    "alert": {
+      "close": "Fermer l’alerte"
+    },
+    "avatar": {
+      "label": "Avatar",
+      "groupLabel": "Groupe d’avatars",
+      "more": "{count} avatars supplémentaires",
+      "status": {
+        "online": "En ligne",
+        "offline": "Hors ligne",
+        "busy": "Occupé",
+        "away": "Absent"
+      }
+    },
+    "breadcrumb": {
+      "label": "Fil d’Ariane",
+      "home": "Accueil"
+    },
+    "buttonGroup": {
+      "label": "Groupe de boutons"
+    },
+    "carousel": {
+      "label": "Carrousel",
+      "previousSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante",
+      "slidePosition": "Diapositive {current} sur {total}",
+      "roleDescription": "carrousel",
+      "slideRoleDescription": "diapositive"
+    },
+    "drawer": {
+      "toggle": "Ouvrir ou fermer le tiroir",
+      "closeOverlay": "Fermer le fond du tiroir"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "firstPage": "Première page",
+      "previousPage": "Page précédente",
+      "nextPage": "Page suivante",
+      "lastPage": "Dernière page"
+    },
+    "rating": {
+      "value": "Note {value} sur {max}"
+    },
+    "range": {
+      "setValue": "Définir la valeur sur {value}"
+    },
+    "rangeSlider": {
+      "label": "Plage",
+      "minimum": "Minimum de {label}",
+      "maximum": "Maximum de {label}",
+      "moveNearestHandle": "Déplacer la poignée la plus proche vers {value}"
+    },
+    "select": {
+      "placeholder": "Sélectionnez une option",
+      "empty": "Aucune option trouvée",
+      "loading": "Chargement des options",
+      "clearSelection": "Effacer la sélection",
+      "removeOption": "Supprimer {option}"
+    },
+    "toast": {
+      "close": "Fermer la notification"
+    },
+    "previewCodeCard": {
+      "showPreview": "Afficher l’aperçu",
+      "showCode": "Afficher le code",
+      "copied": "Copié !"
+    }
+  }
+}

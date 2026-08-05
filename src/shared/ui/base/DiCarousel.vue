@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useDirection } from '@/shared/composables/use-direction'
 
@@ -20,10 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   showControls: true,
   showIndicators: true,
-  label: 'Carousel',
-  previousLabel: 'Previous slide',
-  nextLabel: 'Next slide',
-  slideLabel: 'Slide',
 })
 
 const emit = defineEmits<{
@@ -37,6 +34,15 @@ defineSlots<{
 
 const model = defineModel<number>({ default: 0 })
 const { isRtl } = useDirection()
+const { t } = useI18n()
+
+const resolvedLabel = computed(() => props.label ?? t('components.carousel.label'))
+const resolvedPreviousLabel = computed(
+  () => props.previousLabel ?? t('components.carousel.previousSlide'),
+)
+const resolvedNextLabel = computed(() => props.nextLabel ?? t('components.carousel.nextSlide'))
+const roleDescription = computed(() => t('components.carousel.roleDescription'))
+const slideRoleDescription = computed(() => t('components.carousel.slideRoleDescription'))
 
 const totalSlides = computed(() => Math.max(0, Math.floor(props.slideCount)))
 const activeIndex = computed(() => {
@@ -57,7 +63,13 @@ const canGoNext = computed(
 )
 
 function getSlideAriaLabel(index: number) {
-  return `${props.slideLabel} ${index + 1} / ${totalSlides.value}`
+  if (props.slideLabel)
+    return `${props.slideLabel} ${index + 1} / ${totalSlides.value}`
+
+  return t('components.carousel.slidePosition', {
+    current: index + 1,
+    total: totalSlides.value,
+  })
 }
 
 function goTo(index: number) {
@@ -107,8 +119,8 @@ function handleKeydown(event: KeyboardEvent) {
   <section
     class="w-full"
     role="region"
-    aria-roledescription="carousel"
-    :aria-label="label"
+    :aria-roledescription="roleDescription"
+    :aria-label="resolvedLabel"
     :aria-disabled="disabled || undefined"
     tabindex="0"
     @keydown="handleKeydown"
@@ -120,7 +132,7 @@ function handleKeydown(event: KeyboardEvent) {
         :key="index"
         class="carousel-item w-full"
         role="group"
-        aria-roledescription="slide"
+        :aria-roledescription="slideRoleDescription"
         :aria-label="getSlideAriaLabel(index - 1)"
         :aria-hidden="index - 1 !== activeIndex"
       >
@@ -142,7 +154,7 @@ function handleKeydown(event: KeyboardEvent) {
         v-if="showControls"
         type="button"
         class="btn btn-circle btn-sm"
-        :aria-label="previousLabel"
+        :aria-label="resolvedPreviousLabel"
         :disabled="!canGoPrevious"
         @click="goPrevious"
       >
@@ -169,7 +181,7 @@ function handleKeydown(event: KeyboardEvent) {
         v-if="showControls"
         type="button"
         class="btn btn-circle btn-sm"
-        :aria-label="nextLabel"
+        :aria-label="resolvedNextLabel"
         :disabled="!canGoNext"
         @click="goNext"
       >

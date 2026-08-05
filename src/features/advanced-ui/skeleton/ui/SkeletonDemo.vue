@@ -71,7 +71,7 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Size Examples -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.skeletonSizes')"
+      :title="$t('features.advancedUi.skeletons.skeletonSizes')"
       accent-color="#14b8a6"
       :code="sizeExamples"
       language="html"
@@ -83,7 +83,7 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Shape Examples -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.skeletonShapes')"
+      :title="$t('features.advancedUi.skeletons.skeletonShapes')"
       accent-color="#14b8a6"
       :code="shapeExamples"
       language="html"
@@ -97,7 +97,7 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Color Examples -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.skeletonColors')"
+      :title="$t('features.advancedUi.skeletons.skeletonColors')"
       accent-color="#14b8a6"
       :code="colorExamples"
       language="html"
@@ -110,7 +110,7 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Avatar Card -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.avatarCard')"
+      :title="$t('features.advancedUi.skeletons.avatarCard')"
       accent-color="#14b8a6"
       :code="avatarCardExamples"
       language="html"
@@ -129,7 +129,7 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Image Card -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.imageCard')"
+      :title="$t('features.advancedUi.skeletons.imageCard')"
       accent-color="#14b8a6"
       :code="imageCardExamples"
       language="html"
@@ -144,24 +144,24 @@ const customExamples = `<div class="flex flex-wrap gap-4 items-center">
 
     <!-- Text Variant -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.skeletonText')"
+      :title="$t('features.advancedUi.skeletons.skeletonText')"
       accent-color="#14b8a6"
       :code="textExamples"
       language="html"
     >
       <div class="flex flex-col gap-2">
         <DiSkeleton text>
-          AI is thinking harder...
+          {{ $t('features.advancedUi.skeletons.thinking') }}
         </DiSkeleton>
         <DiSkeleton text>
-          Loading your content right now...
+          {{ $t('features.advancedUi.skeletons.loadingContent') }}
         </DiSkeleton>
       </div>
     </PreviewCodeCard>
 
     <!-- Custom Sizes -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.skeletons.customSkeletons')"
+      :title="$t('features.advancedUi.skeletons.customSkeletons')"
       accent-color="#14b8a6"
       :code="customExamples"
       language="html"

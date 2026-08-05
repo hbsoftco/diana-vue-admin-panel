@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4">
     <p class="text-gray-400">
-      Navs & Tabs component demo coming soon...
+      {{ $t('features.uiElements.comingSoon', { name: 'Navs & Tabs' }) }}
     </p>
   </div>
 </template>

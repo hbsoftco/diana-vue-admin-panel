@@ -49,6 +49,8 @@ type Props = {
   variant?: BreadcrumbVariant
   showHome?: boolean
   homeIcon?: IconName
+  ariaLabel?: string
+  homeLabel?: string
   customClass?: string
 }
 
@@ -90,14 +92,20 @@ const VARIANT_COLORS = {
    Computed
 ======================= */
 const breadcrumbItems = computed(() => {
-  if (props.showHome && props.items.length > 0 && props.items[0]?.label !== 'Home') {
-    return [
-      { label: t('features.ui-elements.breadcrumb.home'), icon: props.homeIcon, to: '/' },
-      ...props.items,
-    ]
+  const homeLabel = props.homeLabel ?? t('components.breadcrumb.home')
+
+  if (
+    props.showHome
+    && props.items.length > 0
+    && props.items[0]?.label !== homeLabel
+    && props.items[0]?.label !== 'Home'
+  ) {
+    return [{ label: homeLabel, icon: props.homeIcon, to: '/' }, ...props.items]
   }
   return props.items
 })
+
+const resolvedAriaLabel = computed(() => props.ariaLabel ?? t('components.breadcrumb.label'))
 
 const isIconSeparator = computed(() => {
   return props.separator && props.separator.length > 0 && !props.separator.includes('/')
@@ -117,7 +125,7 @@ function isLastItem(index: number) {
 </script>
 
 <template>
-  <nav aria-label="Breadcrumb" :class="[customClass]">
+  <nav :aria-label="resolvedAriaLabel" :class="[customClass]">
     <ol class="flex items-center space-x-2">
       <template v-for="(item, index) in breadcrumbItems" :key="index">
         <!-- Breadcrumb Item -->

@@ -13,41 +13,41 @@ const buttonCode = `<DiButton>Example</DiButton>`
       <template #figure>
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+          :alt="$t('features.uiElements.cards.shoesAlt')"
         >
       </template>
       <template #title>
-        Card Title
+        {{ $t('features.uiElements.cards.title') }}
       </template>
       <p>
-        A card component has a figure, a body part, and inside body there are title and actions
-        parts
+        {{ $t('features.uiElements.cards.description') }}
       </p>
 
       <template #footer>
-        <span class="text-di-sm">Last updated 3 mins age</span>
+        <span class="text-di-sm">{{ $t('features.uiElements.cards.lastUpdated') }}</span>
       </template>
     </DiCard>
 
     <DiCard figure-bottom>
       <template #header>
         <div class="">
-          <span class="text-sm font-semibold text-base-content">Header</span>
+          <span class="text-sm font-semibold text-base-content">{{
+            $t('features.uiElements.cards.header')
+          }}</span>
         </div>
       </template>
 
       <template #figure>
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+          :alt="$t('features.uiElements.cards.shoesAlt')"
         >
       </template>
       <template #title>
-        Card Title
+        {{ $t('features.uiElements.cards.title') }}
       </template>
       <p>
-        A card component has a figure, a body part, and inside body there are title and actions
-        parts
+        {{ $t('features.uiElements.cards.description') }}
       </p>
     </DiCard>
 
@@ -55,18 +55,16 @@ const buttonCode = `<DiButton>Example</DiButton>`
       <template #figure>
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+          :alt="$t('features.uiElements.cards.shoesAlt')"
         >
       </template>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley.
+        {{ $t('features.uiElements.cards.sampleDescription') }}
       </p>
 
       <div>
         <DiButton variant="primary">
-          Read More ...
+          {{ $t('features.uiElements.cards.readMore') }}
         </DiButton>
       </div>
     </DiCard>
@@ -74,17 +72,18 @@ const buttonCode = `<DiButton>Example</DiButton>`
     <div>
       <DiCard class="mb-4">
         <p>
-          A card component has a figure, a body part, and inside body there are title and actions
-          parts
+          {{ $t('features.uiElements.cards.description') }}
         </p>
       </DiCard>
 
       <DiCard accent-color="#14b8a6">
         <template #header>
           <div class="flex items-center justify-between w-full">
-            <span class="text-sm font-semibold text-base-content">Default Buttons</span>
+            <span class="text-sm font-semibold text-base-content">{{
+              $t('features.uiElements.cards.defaultButtons')
+            }}</span>
             <DiButton variant="primary" size="sm" :soft="true">
-              Show Code
+              {{ $t('features.uiElements.cards.showCode') }}
 
               <template #icon-right>
                 <i-material-symbols-light-code class="text-sm" />
@@ -94,21 +93,24 @@ const buttonCode = `<DiButton>Example</DiButton>`
         </template>
 
         <template #title>
-          Card Title
+          {{ $t('features.uiElements.cards.title') }}
         </template>
         <p>
-          A card component has a figure, a body part, and inside body there are title and actions
-          parts
+          {{ $t('features.uiElements.cards.description') }}
         </p>
 
         <template #footer>
-          <span class="text-di-sm">Last updated 3 mins age</span>
+          <span class="text-di-sm">{{ $t('features.uiElements.cards.lastUpdated') }}</span>
         </template>
       </DiCard>
     </div>
 
-    <PreviewCodeCard title="Default Buttons" accent-color="#14b8a6" :code="buttonCode">
-      <DiButton>Example</DiButton>
+    <PreviewCodeCard
+      :title="$t('features.uiElements.cards.defaultButtons')"
+      accent-color="#14b8a6"
+      :code="buttonCode"
+    >
+      <DiButton>{{ $t('features.uiElements.cards.example') }}</DiButton>
     </PreviewCodeCard>
   </div>
 </template>

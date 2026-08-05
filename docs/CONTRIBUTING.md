@@ -223,7 +223,7 @@ A navigable feature usually requires coordinated changes in:
 - `src/pages/<group>/<route>.vue`
 - `src/features/<group>/<feature>`
 - `src/shared/config/menu.ts`
-- `src/shared/locales/*.json`
+- `src/shared/locales/<locale>/*.json`
 
 Use lazy imports for child route components.
 
@@ -252,14 +252,16 @@ English is the fallback locale, not a substitute for intentionally supported tra
 
 When adding a localized feature:
 
-1. Add a stable nested translation key.
-2. Add English content.
-3. Add equivalent keys to the locales in scope.
-4. Verify interpolation and plural behavior if used.
-5. Verify Persian, Hebrew, or Arabic direction where applicable.
+1. Choose the ownership module described in
+   [`I18N_ARCHITECTURE.md`](I18N_ARCHITECTURE.md).
+2. Add a stable nested translation key under that module's namespace.
+3. Add English content.
+4. Add the same key to every supported locale.
+5. Verify interpolation and plural behavior if used.
+6. Verify Persian, Hebrew, or Arabic direction where applicable.
 
-The existing locale dictionaries are uneven. Do not delete fallback behavior, and do not assume
-all missing keys are accidental within the scope of a small contribution.
+Keep English fallback behavior, but do not rely on fallback to satisfy structural locale parity.
+Run `pnpm i18n:check` after changing translations or their call sites.
 
 ## Testing Requirements
 

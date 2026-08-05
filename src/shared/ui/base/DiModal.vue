@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, watch, watchEffect } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { IconName } from '@/shared/icons/registry'
 
@@ -31,6 +32,7 @@ type Props = {
   contentPadding?: string
   actionsPadding?: string
   titleSize?: string
+  closeLabel?: string
 }
 
 type Emits = {
@@ -64,6 +66,8 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<Emits>()
+const { t } = useI18n()
+const resolvedCloseLabel = computed(() => props.closeLabel ?? t('common.actions.close'))
 
 /* =======================
    Static class maps
@@ -181,7 +185,7 @@ watch(
         <DiButton
           v-if="props.showCloseButton"
           size="sm"
-          aria-label="Close"
+          :aria-label="resolvedCloseLabel"
           circle
           variant="ghost"
           class="absolute ltr:right-4 rtl:left-4 top-4 z-10"

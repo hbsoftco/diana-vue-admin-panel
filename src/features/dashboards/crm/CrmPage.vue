@@ -1,3 +1,3 @@
 <template>
-  <div>CRM</div>
+  <div>{{ $t('pages.dashboard.crm.title') }}</div>
 </template>

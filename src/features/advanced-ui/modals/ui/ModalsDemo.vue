@@ -27,33 +27,33 @@ const modalConfirmation = ref(false)
 
 // Code snippets for PreviewCodeCard
 const basicCode = `<DiModal v-model="modalBasic">
-  <p class="text-center py-12 text-lg">{{ $t('features.ui-elements.modal.basic.description') }}</p>
+  <p class="text-center py-12 text-lg">{{ $t('features.advancedUi.modals.basic.description') }}</p>
 </DiModal>
 
-<DiButton @click="modalBasic = true">{{ $t('features.ui-elements.modal.actions.open') }}</DiButton>`
+<DiButton @click="modalBasic = true">{{ $t('features.advancedUi.modals.actions.open') }}</DiButton>`
 
 const positionCode = `<DiModal v-model="modalTop" position="top">
-  <p class="text-center py-12">{{ $t('features.ui-elements.modal.position.topDesc') }}</p>
+  <p class="text-center py-12">{{ $t('features.advancedUi.modals.position.topDesc') }}</p>
 </DiModal>
 
 <DiModal v-model="modalBottom" position="bottom">
-  <p class="text-center py-12">{{ $t('features.ui-elements.modal.position.bottomDesc') }}</p>
+  <p class="text-center py-12">{{ $t('features.advancedUi.modals.position.bottomDesc') }}</p>
 </DiModal>`
 
 const sizeCode = `<DiModal v-model="modalSm" size="sm">
-  <p class="text-center py-8">{{ $t('features.ui-elements.modal.size.sm') }}</p>
+  <p class="text-center py-8">{{ $t('features.advancedUi.modals.size.sm') }}</p>
 </DiModal>
 
 <DiModal v-model="modalLg" size="lg">
-  <p class="text-center py-12">{{ $t('features.ui-elements.modal.size.lg') }}</p>
+  <p class="text-center py-12">{{ $t('features.advancedUi.modals.size.lg') }}</p>
 </DiModal>
 
 <DiModal v-model="modalXl" size="xl">
-  <p class="text-center py-16">{{ $t('features.ui-elements.modal.size.xl') }}</p>
+  <p class="text-center py-16">{{ $t('features.advancedUi.modals.size.xl') }}</p>
 </DiModal>
 
 <DiModal v-model="modalFull" size="full">
-  <p class="text-center py-32 text-2xl">{{ $t('features.ui-elements.modal.size.fullDesc') }}</p>
+  <p class="text-center py-32 text-2xl">{{ $t('features.advancedUi.modals.size.fullDesc') }}</p>
 </DiModal>`
 
 const responsiveCode = `<DiModal v-model="modalResponsive" size="xl" responsive>
@@ -61,27 +61,27 @@ const responsiveCode = `<DiModal v-model="modalResponsive" size="xl" responsive>
 </DiModal>`
 
 const closeBehaviorCode = `<DiModal v-model="modalNoCloseBackdrop" :close-on-backdrop="false">
-  <p class="py-8 text-center">{{ $t('features.ui-elements.modal.behavior.noBackdropDesc') }}</p>
+  <p class="py-8 text-center">{{ $t('features.advancedUi.modals.behavior.noBackdropDesc') }}</p>
 </DiModal>
 
 <DiModal v-model="modalNoEsc" :close-on-esc="false">
-  <p class="py-8 text-center">{{ $t('features.ui-elements.modal.behavior.noEscDesc') }}</p>
+  <p class="py-8 text-center">{{ $t('features.advancedUi.modals.behavior.noEscDesc') }}</p>
 </DiModal>
 
 <DiModal v-model="modalNoCloseButton" :show-close-button="false">
-  <p class="py-12 text-center text-lg">{{ $t('features.ui-elements.modal.behavior.noCloseButtonDesc') }}</p>
+  <p class="py-12 text-center text-lg">{{ $t('features.advancedUi.modals.behavior.noCloseButtonDesc') }}</p>
 </DiModal>`
 
 const blurCode = `<DiModal v-model="modalBlurXs" backdrop-blur="xs">
-  <p class="py-12 text-center">{{ $t('features.ui-elements.modal.blur.xs') }}</p>
+  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.xs') }}</p>
 </DiModal>
 
 <DiModal v-model="modalBlurSm" backdrop-blur="sm">
-  <p class="py-12 text-center">{{ $t('features.ui-elements.modal.blur.sm') }}</p>
+  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.sm') }}</p>
 </DiModal>
 
 <DiModal v-model="modalBlurMd" backdrop-blur="md">
-  <p class="py-12 text-center">{{ $t('features.ui-elements.modal.blur.md') }}</p>
+  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.md') }}</p>
 </DiModal>`
 
 const transitionCode = `<DiModal v-model="modalNoTransition" :transition="false">
@@ -90,25 +90,25 @@ const transitionCode = `<DiModal v-model="modalNoTransition" :transition="false"
 
 const borderedCode = `<DiModal v-model="modalBordered" bordered>
   <template #header>
-    <h3 class="font-bold text-xl">{{ $t('features.ui-elements.modal.basic.header') }}</h3>
+    <h3 class="font-bold text-xl">{{ $t('features.advancedUi.modals.basic.header') }}</h3>
   </template>
   <div class="py-6">
     <p>Main modal content goes here. You can place any components.</p>
   </div>
   <template #actions>
-    <DiButton variant="ghost">{{ $t('features.ui-elements.modal.actions.cancel') }}</DiButton>
-    <DiButton>{{ $t('features.ui-elements.modal.actions.confirm') }}</DiButton>
+    <DiButton variant="ghost">{{ $t('features.advancedUi.modals.actions.cancel') }}</DiButton>
+    <DiButton>{{ $t('features.advancedUi.modals.actions.confirm') }}</DiButton>
   </template>
 </DiModal>`
 
 const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
   <template #header>
-    <h3 class="font-bold text-xl">{{ $t('features.ui-elements.modal.confirmation.header') }}</h3>
+    <h3 class="font-bold text-xl">{{ $t('features.advancedUi.modals.confirmation.header') }}</h3>
   </template>
-  <p class="py-6">{{ $t('features.ui-elements.modal.confirmation.description') }}</p>
+  <p class="py-6">{{ $t('features.advancedUi.modals.confirmation.description') }}</p>
   <template #actions>
-    <DiButton variant="ghost">{{ $t('features.ui-elements.modal.actions.cancel') }}</DiButton>
-    <DiButton variant="error">{{ $t('features.ui-elements.modal.actions.delete') }}</DiButton>
+    <DiButton variant="ghost">{{ $t('features.advancedUi.modals.actions.cancel') }}</DiButton>
+    <DiButton variant="error">{{ $t('features.advancedUi.modals.actions.delete') }}</DiButton>
   </template>
 </DiModal>`
 </script>
@@ -117,25 +117,25 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Basic Modal -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.basic.title')"
+      :title="$t('features.advancedUi.modals.basic.title')"
       accent-color="#8b5cf6"
       :code="basicCode"
       language="html"
     >
       <DiButton @click="modalBasic = true">
-        {{ $t('features.ui-elements.modal.actions.open') }}
+        {{ $t('features.advancedUi.modals.actions.open') }}
       </DiButton>
 
       <DiModal v-model="modalBasic">
         <p class="text-center py-12 text-lg">
-          {{ $t('features.ui-elements.modal.basic.description') }}
+          {{ $t('features.advancedUi.modals.basic.description') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Position Variants -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.position.title')"
+      :title="$t('features.advancedUi.modals.position.title')"
       accent-color="#8b5cf6"
       :code="positionCode"
       language="html"
@@ -157,32 +157,32 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
 
       <DiModal v-model="modalTop" position="top">
         <p class="text-center py-12">
-          {{ $t('features.ui-elements.modal.position.topDesc') }}
+          {{ $t('features.advancedUi.modals.position.topDesc') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalBottom" position="bottom">
         <p class="text-center py-12">
-          {{ $t('features.ui-elements.modal.position.bottomDesc') }}
+          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalEnd" position="end">
         <p class="text-center py-12">
-          {{ $t('features.ui-elements.modal.position.bottomDesc') }}
+          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalStart" position="start">
         <p class="text-center py-12">
-          {{ $t('features.ui-elements.modal.position.bottomDesc') }}
+          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Size Variants -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.size.title')"
+      :title="$t('features.advancedUi.modals.size.title')"
       accent-color="#8b5cf6"
       :code="sizeCode"
       language="html"
@@ -202,94 +202,94 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
           xl
         </DiButton>
         <DiButton @click="modalFull = true">
-          {{ $t('features.ui-elements.modal.size.full') }}
+          {{ $t('features.advancedUi.modals.size.full') }}
         </DiButton>
       </div>
 
       <DiModal v-model="modalSm" size="sm">
         <p class="text-center py-8">
-          {{ $t('features.ui-elements.modal.size.sm') }}
+          {{ $t('features.advancedUi.modals.size.sm') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalLg" size="lg">
         <p class="text-center py-12">
-          {{ $t('features.ui-elements.modal.size.lg') }}
+          {{ $t('features.advancedUi.modals.size.lg') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalXl" size="xl">
         <p class="text-center py-16">
-          {{ $t('features.ui-elements.modal.size.xl') }}
+          {{ $t('features.advancedUi.modals.size.xl') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalFull" size="full">
         <p class="text-center py-32 text-2xl">
-          {{ $t('features.ui-elements.modal.size.fullDesc') }}
+          {{ $t('features.advancedUi.modals.size.fullDesc') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Responsive -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.responsive')"
+      :title="$t('features.advancedUi.modals.responsive')"
       accent-color="#8b5cf6"
       :code="responsiveCode"
       language="html"
     >
       <DiButton @click="modalResponsive = true">
-        {{ $t('features.ui-elements.modal.actions.open') }}
+        {{ $t('features.advancedUi.modals.actions.open') }}
       </DiButton>
 
       <DiModal v-model="modalResponsive" size="xl" responsive>
         <p class="text-center py-16 text-lg">
-          Responsive behavior on mobile
+          {{ $t('features.advancedUi.modals.responsiveContent') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Behavior Options -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.behavior.title')"
+      :title="$t('features.advancedUi.modals.behavior.title')"
       accent-color="#8b5cf6"
       :code="closeBehaviorCode"
       language="html"
     >
       <div class="flex gap-4 flex-wrap">
         <DiButton @click="modalNoCloseBackdrop = true">
-          {{ $t('features.ui-elements.modal.behavior.noBackdrop') }}
+          {{ $t('features.advancedUi.modals.behavior.noBackdrop') }}
         </DiButton>
         <DiButton @click="modalNoEsc = true">
-          {{ $t('features.ui-elements.modal.behavior.noEsc') }}
+          {{ $t('features.advancedUi.modals.behavior.noEsc') }}
         </DiButton>
         <DiButton @click="modalNoCloseButton = true">
-          {{ $t('features.ui-elements.modal.behavior.noCloseButton') }}
+          {{ $t('features.advancedUi.modals.behavior.noCloseButton') }}
         </DiButton>
       </div>
 
       <DiModal v-model="modalNoCloseBackdrop" :close-on-backdrop="false">
         <p class="py-8 text-center">
-          {{ $t('features.ui-elements.modal.behavior.noBackdropDesc') }}
+          {{ $t('features.advancedUi.modals.behavior.noBackdropDesc') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalNoEsc" :close-on-esc="false">
         <p class="py-8 text-center">
-          {{ $t('features.ui-elements.modal.behavior.noEscDesc') }}
+          {{ $t('features.advancedUi.modals.behavior.noEscDesc') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalNoCloseButton" :show-close-button="false">
         <p class="py-12 text-center text-lg">
-          {{ $t('features.ui-elements.modal.behavior.noCloseButtonDesc') }}
+          {{ $t('features.advancedUi.modals.behavior.noCloseButtonDesc') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Backdrop Blur -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.blur.title')"
+      :title="$t('features.advancedUi.modals.blur.title')"
       accent-color="#8b5cf6"
       :code="blurCode"
       language="html"
@@ -308,102 +308,102 @@ const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
 
       <DiModal v-model="modalBlurXs" backdrop-blur="xs" :transition="false" position="middle">
         <p class="py-12 text-center">
-          {{ $t('features.ui-elements.modal.blur.xs') }}
+          {{ $t('features.advancedUi.modals.blur.xs') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalBlurSm" backdrop-blur="sm" :transition="false">
         <p class="py-12 text-center">
-          {{ $t('features.ui-elements.modal.blur.sm') }}
+          {{ $t('features.advancedUi.modals.blur.sm') }}
         </p>
       </DiModal>
 
       <DiModal v-model="modalBlurMd" backdrop-blur="md" :transition="false">
         <p class="py-12 text-center">
-          {{ $t('features.ui-elements.modal.blur.md') }}
+          {{ $t('features.advancedUi.modals.blur.md') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- No Transition -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.noTransition')"
+      :title="$t('features.advancedUi.modals.noTransition')"
       accent-color="#8b5cf6"
       :code="transitionCode"
       language="html"
     >
       <DiButton @click="modalNoTransition = true">
-        {{ $t('features.ui-elements.modal.actions.open') }}
+        {{ $t('features.advancedUi.modals.actions.open') }}
       </DiButton>
 
       <DiModal v-model="modalNoTransition" :transition="false">
         <p class="py-12 text-center text-lg">
-          Instant open/close without animation
+          {{ $t('features.advancedUi.modals.noTransitionContent') }}
         </p>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Bordered with Header & Actions -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.borderedWithSlots')"
+      :title="$t('features.advancedUi.modals.borderedWithSlots')"
       accent-color="#8b5cf6"
       :code="borderedCode"
       language="html"
       class="lg:col-span-2"
     >
       <DiButton @click="modalBordered = true">
-        {{ $t('features.ui-elements.modal.actions.open') }}
+        {{ $t('features.advancedUi.modals.actions.open') }}
       </DiButton>
 
       <DiModal v-model="modalBordered" bordered>
         <template #header>
           <h3 class="font-bold text-xl">
-            {{ $t('features.ui-elements.modal.basic.header') }}
+            {{ $t('features.advancedUi.modals.basic.header') }}
           </h3>
         </template>
 
         <div class="py-6">
-          <p>Main modal content goes here. You can place any components.</p>
+          <p>{{ $t('features.advancedUi.modals.slottedContent') }}</p>
         </div>
 
         <template #actions>
           <DiButton variant="ghost">
-            {{ $t('features.ui-elements.modal.actions.cancel') }}
+            {{ $t('features.advancedUi.modals.actions.cancel') }}
           </DiButton>
-          <DiButton>{{ $t('features.ui-elements.modal.actions.confirm') }}</DiButton>
+          <DiButton>{{ $t('features.advancedUi.modals.actions.confirm') }}</DiButton>
         </template>
       </DiModal>
     </PreviewCodeCard>
 
     <!-- Confirmation Dialog Example -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.modal.confirmation.title')"
+      :title="$t('features.advancedUi.modals.confirmation.title')"
       accent-color="#8b5cf6"
       :code="confirmationCode"
       language="html"
       class="lg:col-span-2"
     >
       <DiButton variant="error" @click="modalConfirmation = true">
-        {{ $t('features.ui-elements.modal.confirmation.open') }}
+        {{ $t('features.advancedUi.modals.confirmation.open') }}
       </DiButton>
 
       <DiModal v-model="modalConfirmation" bordered>
         <template #header>
           <h3 class="font-bold text-xl">
-            {{ $t('features.ui-elements.modal.confirmation.header') }}
+            {{ $t('features.advancedUi.modals.confirmation.header') }}
           </h3>
         </template>
 
         <p class="py-6">
-          {{ $t('features.ui-elements.modal.confirmation.description') }}
+          {{ $t('features.advancedUi.modals.confirmation.description') }}
         </p>
 
         <template #actions>
           <DiButton variant="ghost">
-            {{ $t('features.ui-elements.modal.actions.cancel') }}
+            {{ $t('features.advancedUi.modals.actions.cancel') }}
           </DiButton>
           <DiButton variant="error">
-            {{ $t('features.ui-elements.modal.actions.delete') }}
+            {{ $t('features.advancedUi.modals.actions.delete') }}
           </DiButton>
         </template>
       </DiModal>

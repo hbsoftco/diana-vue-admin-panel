@@ -1,0 +1,163 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "Dashboards",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "Ecommerce"
+      },
+      "analytics": {
+        "title": "Analytics"
+      },
+      "courses": {
+        "title": "Courses"
+      },
+      "crypto": {
+        "title": "Crypto"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "Jobs"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "Personal"
+      },
+      "projects": {
+        "title": "Projects"
+      },
+      "sales": {
+        "title": "Sales"
+      },
+      "stocks": {
+        "title": "Stocks"
+      }
+    },
+    "uiElements": {
+      "title": "UI Elements",
+      "alerts": {
+        "title": "Alerts"
+      },
+      "badge": {
+        "title": "Badge"
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb"
+      },
+      "buttons": {
+        "title": "Buttons"
+      },
+      "icons": {
+        "title": "Icons"
+      },
+      "loadings": {
+        "title": "Loadings"
+      },
+      "buttonGroup": {
+        "title": "Button Group"
+      },
+      "cards": {
+        "title": "Cards"
+      },
+      "dropdowns": {
+        "title": "Dropdowns"
+      },
+      "imagesFigures": {
+        "title": "Images & Figures"
+      },
+      "linksInteractions": {
+        "title": "Links & Interactions"
+      },
+      "listGroup": {
+        "title": "List Group"
+      },
+      "navsTabs": {
+        "title": "Navs & Tabs"
+      },
+      "objectFit": {
+        "title": "Object Fit"
+      },
+      "pagination": {
+        "title": "Pagination"
+      },
+      "popovers": {
+        "title": "Popovers"
+      },
+      "progress": {
+        "title": "Progress"
+      },
+      "switch": {
+        "title": "Switch"
+      },
+      "toasts": {
+        "title": "Toasts"
+      },
+      "tooltips": {
+        "title": "Tooltips"
+      },
+      "typography": {
+        "title": "Typography"
+      }
+    },
+    "forms": {
+      "title": "Forms",
+      "formElements": {
+        "title": "Form Elements"
+      },
+      "inputs": {
+        "title": "Inputs"
+      },
+      "range": {
+        "title": "Range"
+      },
+      "rangeSlider": {
+        "title": "Range Slider"
+      },
+      "select": {
+        "title": "Select"
+      }
+    },
+    "advancedUi": {
+      "title": "Advanced UI",
+      "modals": {
+        "title": "Modals"
+      },
+      "accordion": {
+        "title": "Accordion"
+      },
+      "carousel": {
+        "title": "Carousel"
+      },
+      "collapse": {
+        "title": "Collapse"
+      },
+      "navbar": {
+        "title": "Navbar"
+      },
+      "drawer": {
+        "title": "Drawer"
+      },
+      "rating": {
+        "title": "Rating"
+      },
+      "skeleton": {
+        "title": "Skeleton"
+      }
+    },
+    "utility": {
+      "title": "Utility",
+      "avatar": {
+        "title": "Avatar"
+      },
+      "colors": {
+        "title": "Colors"
+      }
+    }
+  }
+}

@@ -97,92 +97,92 @@ const faqExample = `<div class="flex flex-col gap-2">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Focus Type -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.focusType')"
+      :title="$t('features.advancedUi.collapses.focusType')"
       accent-color="#14b8a6"
       :code="focusExample"
       language="html"
     >
       <DiCollapse
-        :title="$t('features.advanced-ui.collapses.sampleTitle')"
+        :title="$t('features.advancedUi.collapses.sampleTitle')"
         type="focus"
         icon="arrow"
       >
-        {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        {{ $t('features.advancedUi.collapses.sampleContent') }}
       </DiCollapse>
     </PreviewCodeCard>
 
     <!-- Checkbox Type -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.checkboxType')"
+      :title="$t('features.advancedUi.collapses.checkboxType')"
       accent-color="#14b8a6"
       :code="checkboxExample"
       language="html"
     >
       <DiCollapse
-        :title="$t('features.advanced-ui.collapses.sampleTitle')"
+        :title="$t('features.advancedUi.collapses.sampleTitle')"
         type="checkbox"
         icon="arrow"
       >
-        {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        {{ $t('features.advancedUi.collapses.sampleContent') }}
       </DiCollapse>
     </PreviewCodeCard>
 
     <!-- Details Type -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.detailsType')"
+      :title="$t('features.advancedUi.collapses.detailsType')"
       accent-color="#14b8a6"
       :code="detailsExample"
       language="html"
     >
       <DiCollapse
-        :title="$t('features.advanced-ui.collapses.sampleTitle')"
+        :title="$t('features.advancedUi.collapses.sampleTitle')"
         type="details"
         icon="arrow"
       >
-        {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        {{ $t('features.advancedUi.collapses.sampleContent') }}
       </DiCollapse>
     </PreviewCodeCard>
 
     <!-- Icon Start -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.iconStart')"
+      :title="$t('features.advancedUi.collapses.iconStart')"
       accent-color="#14b8a6"
       :code="iconStartExample"
       language="html"
     >
       <DiCollapse
-        :title="$t('features.advanced-ui.collapses.sampleTitle')"
+        :title="$t('features.advancedUi.collapses.sampleTitle')"
         icon="arrow"
         :icon-start="true"
       >
-        {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        {{ $t('features.advancedUi.collapses.sampleContent') }}
       </DiCollapse>
     </PreviewCodeCard>
 
     <!-- Icons -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.iconTypes')"
+      :title="$t('features.advancedUi.collapses.iconTypes')"
       accent-color="#14b8a6"
       :code="iconsExample"
       language="html"
       class="lg:col-span-2"
     >
       <div class="flex flex-col gap-2">
-        <DiCollapse :title="$t('features.advanced-ui.collapses.noIcon')" icon="none">
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        <DiCollapse :title="$t('features.advancedUi.collapses.noIcon')" icon="none">
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
-        <DiCollapse :title="$t('features.advanced-ui.collapses.arrowIcon')" icon="arrow">
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        <DiCollapse :title="$t('features.advancedUi.collapses.arrowIcon')" icon="arrow">
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
-        <DiCollapse :title="$t('features.advanced-ui.collapses.plusIcon')" icon="plus">
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        <DiCollapse :title="$t('features.advancedUi.collapses.plusIcon')" icon="plus">
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
       </div>
     </PreviewCodeCard>
 
     <!-- Colors -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.collapseColors')"
+      :title="$t('features.advancedUi.collapses.collapseColors')"
       accent-color="#14b8a6"
       :code="colorsExample"
       language="html"
@@ -190,14 +190,14 @@ const faqExample = `<div class="flex flex-col gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiCollapse v-for="c in colors" :key="c" :title="c" icon="arrow" :color="c">
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
       </div>
     </PreviewCodeCard>
 
     <!-- No Border / No Bg -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.noBorder')"
+      :title="$t('features.advancedUi.collapses.noBorder')"
       accent-color="#14b8a6"
       :code="noBorderExample"
       language="html"
@@ -205,26 +205,26 @@ const faqExample = `<div class="flex flex-col gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.noBorderAndBg')"
+          :title="$t('features.advancedUi.collapses.noBorderAndBg')"
           icon="arrow"
           :bordered="false"
           :bg="false"
         >
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.noBorderOnly')"
+          :title="$t('features.advancedUi.collapses.noBorderOnly')"
           icon="arrow"
           :bordered="false"
         >
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
       </div>
     </PreviewCodeCard>
 
     <!-- Force State -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.forceState')"
+      :title="$t('features.advancedUi.collapses.forceState')"
       accent-color="#14b8a6"
       :code="stateExample"
       language="html"
@@ -232,25 +232,25 @@ const faqExample = `<div class="flex flex-col gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.forceOpen')"
+          :title="$t('features.advancedUi.collapses.forceOpen')"
           icon="arrow"
           state="open"
         >
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.forceClose')"
+          :title="$t('features.advancedUi.collapses.forceClose')"
           icon="arrow"
           state="close"
         >
-          {{ $t('features.advanced-ui.collapses.sampleContent') }}
+          {{ $t('features.advancedUi.collapses.sampleContent') }}
         </DiCollapse>
       </div>
     </PreviewCodeCard>
 
     <!-- Custom Title Slot -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.customTitle')"
+      :title="$t('features.advancedUi.collapses.customTitle')"
       accent-color="#14b8a6"
       :code="customTitleExample"
       language="html"
@@ -258,16 +258,16 @@ const faqExample = `<div class="flex flex-col gap-2">
       <DiCollapse icon="plus">
         <template #title>
           <span class="text-primary font-bold">{{
-            $t('features.advanced-ui.collapses.customTitleSlot')
+            $t('features.advancedUi.collapses.customTitleSlot')
           }}</span>
         </template>
-        {{ $t('features.advanced-ui.collapses.sampleContent') }}
+        {{ $t('features.advancedUi.collapses.sampleContent') }}
       </DiCollapse>
     </PreviewCodeCard>
 
     <!-- FAQ Example -->
     <PreviewCodeCard
-      :title="$t('features.advanced-ui.collapses.faqExample')"
+      :title="$t('features.advancedUi.collapses.faqExample')"
       accent-color="#14b8a6"
       :code="faqExample"
       language="html"
@@ -275,32 +275,32 @@ const faqExample = `<div class="flex flex-col gap-2">
     >
       <div class="flex flex-col gap-2">
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.faq1Title')"
+          :title="$t('features.advancedUi.collapses.faq1Title')"
           icon="arrow"
           type="checkbox"
         >
-          {{ $t('features.advanced-ui.collapses.faq1Content') }}
+          {{ $t('features.advancedUi.collapses.faq1Content') }}
         </DiCollapse>
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.faq2Title')"
+          :title="$t('features.advancedUi.collapses.faq2Title')"
           icon="arrow"
           type="checkbox"
         >
-          {{ $t('features.advanced-ui.collapses.faq2Content') }}
+          {{ $t('features.advancedUi.collapses.faq2Content') }}
         </DiCollapse>
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.faq3Title')"
+          :title="$t('features.advancedUi.collapses.faq3Title')"
           icon="arrow"
           type="checkbox"
         >
-          {{ $t('features.advanced-ui.collapses.faq3Content') }}
+          {{ $t('features.advancedUi.collapses.faq3Content') }}
         </DiCollapse>
         <DiCollapse
-          :title="$t('features.advanced-ui.collapses.faq4Title')"
+          :title="$t('features.advancedUi.collapses.faq4Title')"
           icon="arrow"
           type="checkbox"
         >
-          {{ $t('features.advanced-ui.collapses.faq4Content') }}
+          {{ $t('features.advancedUi.collapses.faq4Content') }}
         </DiCollapse>
       </div>
     </PreviewCodeCard>

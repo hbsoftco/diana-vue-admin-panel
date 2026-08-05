@@ -1,0 +1,20 @@
+{
+  "common": {
+    "actions": {
+      "close": "بستن",
+      "copy": "کپی",
+      "hide": "پنهان کردن"
+    },
+    "variants": {
+      "primary": "اصلی",
+      "secondary": "ثانویه",
+      "info": "اطلاعاتی",
+      "accent": "تاکیدی",
+      "success": "موفق",
+      "warning": "هشدار",
+      "error": "خطا",
+      "neutral": "خنثی",
+      "link": "لینکی"
+    }
+  }
+}

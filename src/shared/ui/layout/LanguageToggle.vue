@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core'
-import { watch } from 'vue'
+import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const languages = [
   { code: 'en', label: 'English', dir: 'ltr', flag: '🇺🇸' },
@@ -18,6 +18,7 @@ const languages = [
 ]
 
 const currentLang = useLocalStorage<string>('language', 'en')
+const languageToggleLabel = computed(() => t('layout.language.select'))
 
 watch(
   currentLang,
@@ -47,7 +48,13 @@ watch(
   >
     <!-- Trigger -->
     <template #trigger>
-      <DiButton size="sm" variant="ghost" circle>
+      <DiButton
+        size="sm"
+        variant="ghost"
+        circle
+        :aria-label="languageToggleLabel"
+        :title="languageToggleLabel"
+      >
         <span class="text-lg">
           {{ languages.find((l) => l.code === currentLang)?.flag }}
         </span>

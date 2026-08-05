@@ -1,0 +1,163 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "داشبوردها",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "تجارت الکترونیک"
+      },
+      "analytics": {
+        "title": "تحلیل‌ها"
+      },
+      "courses": {
+        "title": "دوره‌ها"
+      },
+      "crypto": {
+        "title": "رمزارز"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "مشاغل"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "شخصی"
+      },
+      "projects": {
+        "title": "پروژه‌ها"
+      },
+      "sales": {
+        "title": "فروش"
+      },
+      "stocks": {
+        "title": "سهام"
+      }
+    },
+    "uiElements": {
+      "title": "المان‌های ظاهری",
+      "alerts": {
+        "title": "هشدارها"
+      },
+      "badge": {
+        "title": "نشان"
+      },
+      "breadcrumb": {
+        "title": "مسیر ناوبری"
+      },
+      "buttons": {
+        "title": "دکمه‌ها"
+      },
+      "icons": {
+        "title": "Icons"
+      },
+      "loadings": {
+        "title": "لودینگ"
+      },
+      "buttonGroup": {
+        "title": "گروه دکمه"
+      },
+      "cards": {
+        "title": "کاردها"
+      },
+      "dropdowns": {
+        "title": "منوهای کشویی"
+      },
+      "imagesFigures": {
+        "title": "تصاویر و اشکال"
+      },
+      "linksInteractions": {
+        "title": "لینک‌ها و تعاملات"
+      },
+      "listGroup": {
+        "title": "گروه لیست"
+      },
+      "navsTabs": {
+        "title": "ناوبری و تب‌ها"
+      },
+      "objectFit": {
+        "title": "تناسب شیء"
+      },
+      "pagination": {
+        "title": "صفحه‌بندی"
+      },
+      "popovers": {
+        "title": "پاپ‌آورها"
+      },
+      "progress": {
+        "title": "پیشرفت"
+      },
+      "switch": {
+        "title": "سوئیچ"
+      },
+      "toasts": {
+        "title": "اعلان‌ها"
+      },
+      "tooltips": {
+        "title": "راهنماها"
+      },
+      "typography": {
+        "title": "تایپوگرافی"
+      }
+    },
+    "forms": {
+      "title": "فرم‌ها",
+      "formElements": {
+        "title": "عناصر فرم"
+      },
+      "inputs": {
+        "title": "ورودی‌ها"
+      },
+      "range": {
+        "title": "بازه"
+      },
+      "rangeSlider": {
+        "title": "اسلایدر بازه"
+      },
+      "select": {
+        "title": "انتخاب‌گر"
+      }
+    },
+    "advancedUi": {
+      "title": "رابط کاربری پیشرفته",
+      "modals": {
+        "title": "پنجره‌های مودال"
+      },
+      "accordion": {
+        "title": "Accordion"
+      },
+      "carousel": {
+        "title": "اسلایدشو"
+      },
+      "collapse": {
+        "title": "جمع‌شونده"
+      },
+      "navbar": {
+        "title": "نوار ناوبری"
+      },
+      "drawer": {
+        "title": "دراور"
+      },
+      "rating": {
+        "title": "امتیازدهی"
+      },
+      "skeleton": {
+        "title": "اسکلت بارگذاری"
+      }
+    },
+    "utility": {
+      "title": "ابزارها",
+      "avatar": {
+        "title": "آواتار"
+      },
+      "colors": {
+        "title": "رنگ‌ها"
+      }
+    }
+  }
+}

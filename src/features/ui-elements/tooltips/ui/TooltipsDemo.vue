@@ -159,44 +159,44 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Basic Tooltip -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.basicTooltip')"
+      :title="$t('features.uiElements.tooltip.basicTooltip')"
       accent-color="#14b8a6"
       :code="basicTooltip"
       language="html"
     >
       <div class="flex justify-center p-4">
         <DiTooltip text="Hello world">
-          <DiButton>{{ $t('features.ui-elements.tooltip.hoverMe') }}</DiButton>
+          <DiButton>{{ $t('features.uiElements.tooltip.hoverMe') }}</DiButton>
         </DiTooltip>
       </div>
     </PreviewCodeCard>
 
     <!-- Position Variants -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.positionTooltips')"
+      :title="$t('features.uiElements.tooltip.positionTooltips')"
       accent-color="#14b8a6"
       :code="positionTooltips"
       language="html"
     >
       <div class="flex gap-4 flex-wrap justify-center p-4">
-        <DiTooltip :text="$t('features.ui-elements.tooltip.tooltipOnTop')" position="top">
+        <DiTooltip :text="$t('features.uiElements.tooltip.tooltipOnTop')" position="top">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.top') }}
+            {{ $t('features.uiElements.tooltip.top') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.tooltipOnRight')" position="right">
+        <DiTooltip :text="$t('features.uiElements.tooltip.tooltipOnRight')" position="right">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.right') }}
+            {{ $t('features.uiElements.tooltip.right') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.tooltipOnBottom')" position="bottom">
+        <DiTooltip :text="$t('features.uiElements.tooltip.tooltipOnBottom')" position="bottom">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.bottom') }}
+            {{ $t('features.uiElements.tooltip.bottom') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.tooltipOnLeft')" position="left">
+        <DiTooltip :text="$t('features.uiElements.tooltip.tooltipOnLeft')" position="left">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.left') }}
+            {{ $t('features.uiElements.tooltip.left') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -204,30 +204,30 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Colored Tooltips (Primary Set) -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.coloredTooltips')"
+      :title="$t('features.uiElements.tooltip.coloredTooltips')"
       accent-color="#14b8a6"
       :code="coloredTooltips"
       language="html"
     >
       <div class="flex gap-4 flex-wrap justify-center p-4">
-        <DiTooltip :text="$t('features.ui-elements.tooltip.primaryTooltip')" variant="primary">
+        <DiTooltip :text="$t('features.uiElements.tooltip.primaryTooltip')" variant="primary">
           <DiButton size="sm" variant="primary">
-            {{ $t('features.ui-elements.tooltip.primary') }}
+            {{ $t('common.variants.primary') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.secondaryTooltip')" variant="secondary">
+        <DiTooltip :text="$t('features.uiElements.tooltip.secondaryTooltip')" variant="secondary">
           <DiButton size="sm" variant="secondary">
-            {{ $t('features.ui-elements.tooltip.secondary') }}
+            {{ $t('common.variants.secondary') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.accentTooltip')" variant="accent">
+        <DiTooltip :text="$t('features.uiElements.tooltip.accentTooltip')" variant="accent">
           <DiButton size="sm" variant="accent">
-            {{ $t('features.ui-elements.tooltip.accent') }}
+            {{ $t('common.variants.accent') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.infoTooltip')" variant="info">
+        <DiTooltip :text="$t('features.uiElements.tooltip.infoTooltip')" variant="info">
           <DiButton size="sm" variant="info">
-            {{ $t('features.ui-elements.tooltip.info') }}
+            {{ $t('common.variants.info') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -235,30 +235,30 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- More Colors (Status Set) -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.statusTooltips')"
+      :title="$t('features.uiElements.tooltip.statusTooltips')"
       accent-color="#14b8a6"
       :code="moreColors"
       language="html"
     >
       <div class="flex gap-4 flex-wrap justify-center p-4">
-        <DiTooltip :text="$t('features.ui-elements.tooltip.successTooltip')" variant="success">
+        <DiTooltip :text="$t('features.uiElements.tooltip.successTooltip')" variant="success">
           <DiButton size="sm" variant="success">
-            {{ $t('features.ui-elements.tooltip.success') }}
+            {{ $t('common.variants.success') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.warningTooltip')" variant="warning">
+        <DiTooltip :text="$t('features.uiElements.tooltip.warningTooltip')" variant="warning">
           <DiButton size="sm" variant="warning">
-            {{ $t('features.ui-elements.tooltip.warning') }}
+            {{ $t('common.variants.warning') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.errorTooltip')" variant="error">
+        <DiTooltip :text="$t('features.uiElements.tooltip.errorTooltip')" variant="error">
           <DiButton size="sm" variant="error">
-            {{ $t('features.ui-elements.tooltip.error') }}
+            {{ $t('common.variants.error') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.neutralTooltip')" variant="neutral">
+        <DiTooltip :text="$t('features.uiElements.tooltip.neutralTooltip')" variant="neutral">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.neutral') }}
+            {{ $t('common.variants.neutral') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -266,20 +266,20 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Always Open Tooltip -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.openTooltips')"
+      :title="$t('features.uiElements.tooltip.openTooltips')"
       accent-color="#14b8a6"
       :code="openTooltip"
       language="html"
     >
       <div class="flex gap-8 flex-wrap justify-center p-4">
-        <DiTooltip :text="$t('features.ui-elements.tooltip.alwaysVisible')" :open="true">
+        <DiTooltip :text="$t('features.uiElements.tooltip.alwaysVisible')" :open="true">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.openTooltip') }}
+            {{ $t('features.uiElements.tooltip.openTooltip') }}
           </DiButton>
         </DiTooltip>
-        <DiTooltip :text="$t('features.ui-elements.tooltip.hoverToSee')" :open="false">
+        <DiTooltip :text="$t('features.uiElements.tooltip.hoverToSee')" :open="false">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.hoverTooltip') }}
+            {{ $t('features.uiElements.tooltip.hoverTooltip') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -287,31 +287,31 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Tooltip with Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.tooltipWithButtons')"
+      :title="$t('features.uiElements.tooltip.tooltipWithButtons')"
       accent-color="#14b8a6"
       :code="tooltipWithButton"
       language="html"
     >
       <div class="flex gap-4 flex-wrap justify-center p-4">
-        <DiTooltip :text="$t('features.ui-elements.tooltip.clickMe')" tag="button">
+        <DiTooltip :text="$t('features.uiElements.tooltip.clickMe')" tag="button">
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.buttonWithTooltip') }}
+            {{ $t('features.uiElements.tooltip.buttonWithTooltip') }}
           </DiButton>
         </DiTooltip>
 
-        <DiTooltip :text="$t('features.ui-elements.tooltip.primaryAction')" position="top">
+        <DiTooltip :text="$t('features.uiElements.tooltip.primaryAction')" position="top">
           <DiButton variant="primary" size="sm">
-            {{ $t('features.ui-elements.tooltip.action') }}
+            {{ $t('features.uiElements.tooltip.action') }}
           </DiButton>
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.deleteItem')"
+          :text="$t('features.uiElements.tooltip.deleteItem')"
           position="bottom"
           variant="error"
         >
           <DiButton variant="error" size="sm">
-            {{ $t('features.ui-elements.tooltip.delete') }}
+            {{ $t('features.uiElements.tooltip.delete') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -319,14 +319,14 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Combined Positions and Colors -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.combinedTooltips')"
+      :title="$t('features.uiElements.tooltip.combinedTooltips')"
       accent-color="#14b8a6"
       :code="combinedPositionsColors"
       language="html"
     >
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.primaryTop')"
+          :text="$t('features.uiElements.tooltip.primaryTop')"
           position="top"
           variant="primary"
         >
@@ -335,7 +335,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           </DiButton>
         </DiTooltip>
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.successRight')"
+          :text="$t('features.uiElements.tooltip.successRight')"
           position="right"
           variant="success"
         >
@@ -344,7 +344,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           </DiButton>
         </DiTooltip>
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.warningBottom')"
+          :text="$t('features.uiElements.tooltip.warningBottom')"
           position="bottom"
           variant="warning"
         >
@@ -353,7 +353,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
           </DiButton>
         </DiTooltip>
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.errorLeft')"
+          :text="$t('features.uiElements.tooltip.errorLeft')"
           position="left"
           variant="error"
         >
@@ -366,14 +366,14 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Tooltip on Icons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.tooltipOnIcons')"
+      :title="$t('features.uiElements.tooltip.tooltipOnIcons')"
       accent-color="#14b8a6"
       :code="tooltipOnIcons"
       language="html"
     >
       <div class="flex gap-6 flex-wrap justify-center items-center p-4">
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.information')"
+          :text="$t('features.uiElements.tooltip.information')"
           position="top"
           variant="info"
         >
@@ -386,7 +386,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.settings')"
+          :text="$t('features.uiElements.tooltip.settings')"
           position="right"
           variant="neutral"
         >
@@ -394,18 +394,14 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.deleteIcon')"
+          :text="$t('features.uiElements.tooltip.deleteIcon')"
           position="bottom"
           variant="error"
         >
           <DiIcon name="trash" color="error" size="1.5rem" custom-class="cursor-pointer" />
         </DiTooltip>
 
-        <DiTooltip
-          :text="$t('features.ui-elements.tooltip.help')"
-          position="left"
-          variant="primary"
-        >
+        <DiTooltip :text="$t('features.uiElements.tooltip.help')" position="left" variant="primary">
           <DiIcon
             name="questionMarkCircle"
             color="primary"
@@ -418,29 +414,29 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Multi-line Tooltip -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.multiLineTooltips')"
+      :title="$t('features.uiElements.tooltip.multiLineTooltips')"
       accent-color="#14b8a6"
       :code="multiLineTooltip"
       language="html"
     >
       <div class="flex gap-4 flex-wrap justify-center p-4">
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.longTooltipText')"
+          :text="$t('features.uiElements.tooltip.longTooltipText')"
           position="top"
           variant="info"
         >
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.longText') }}
+            {{ $t('features.uiElements.tooltip.longText') }}
           </DiButton>
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.short')"
+          :text="$t('features.uiElements.tooltip.short')"
           position="bottom"
           variant="success"
         >
           <DiButton size="sm">
-            {{ $t('features.ui-elements.tooltip.shortText') }}
+            {{ $t('features.uiElements.tooltip.shortText') }}
           </DiButton>
         </DiTooltip>
       </div>
@@ -448,7 +444,7 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
 
     <!-- Interactive Elements with Tooltips -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.tooltip.interactiveElements')"
+      :title="$t('features.uiElements.tooltip.interactiveElements')"
       accent-color="#14b8a6"
       :code="interactiveElements"
       language="html"
@@ -456,17 +452,17 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
     >
       <div class="flex gap-6 flex-wrap justify-center items-center p-4">
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.clickToCopy')"
+          :text="$t('features.uiElements.tooltip.clickToCopy')"
           position="top"
           variant="info"
         >
           <DiButton size="sm" outline>
-            {{ $t('features.ui-elements.tooltip.copy') }}
+            {{ $t('common.actions.copy') }}
           </DiButton>
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.toggleSwitch')"
+          :text="$t('features.uiElements.tooltip.toggleSwitch')"
           position="right"
           variant="neutral"
         >
@@ -474,13 +470,13 @@ const interactiveElements = `<div class="flex gap-4 flex-wrap justify-center ite
         </DiTooltip>
 
         <DiTooltip
-          :text="$t('features.ui-elements.tooltip.selectOption')"
+          :text="$t('features.uiElements.tooltip.selectOption')"
           position="bottom"
           variant="accent"
         >
           <select class="select select-bordered select-sm">
-            <option>{{ $t('features.ui-elements.tooltip.option1') }}</option>
-            <option>{{ $t('features.ui-elements.tooltip.option2') }}</option>
+            <option>{{ $t('features.uiElements.tooltip.option1') }}</option>
+            <option>{{ $t('features.uiElements.tooltip.option2') }}</option>
           </select>
         </DiTooltip>
       </div>

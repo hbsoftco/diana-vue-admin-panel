@@ -341,7 +341,7 @@ installed Iconify data.
 Locale dictionaries are under:
 
 ```text
-src/shared/locales
+src/shared/locales/<locale>/{common,menu,layout,components,pages,features}.json
 ```
 
 Available locale codes:
@@ -353,8 +353,8 @@ Available locale codes:
 - `fr`
 - `es`
 
-English is the fallback. Add English text at minimum and add equivalent keys to every locale
-required by the feature.
+English is the source of truth and runtime fallback. Every supported locale must contain the same
+key structure, so add each new key to all six locale files in the owning module.
 
 Use:
 
@@ -370,8 +370,9 @@ in scripts, or:
 
 in templates.
 
-Do not assume all dictionaries contain the same key structure. Arabic, Hebrew, French, and
-Spanish are currently much less complete than English and Persian.
+Run `pnpm i18n:check` to validate locale parity, ownership, legacy namespaces, and statically
+referenced keys. Run `pnpm i18n:unused` to list conservative unused-key candidates, then verify
+dynamic lookups before deleting anything. The production build also runs the parity validator.
 
 ## Working with Themes
 

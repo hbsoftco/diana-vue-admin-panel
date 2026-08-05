@@ -1,0 +1,71 @@
+{
+  "components": {
+    "alert": {
+      "close": "إغلاق التنبيه"
+    },
+    "avatar": {
+      "label": "الصورة الرمزية",
+      "groupLabel": "مجموعة الصور الرمزية",
+      "more": "{count} صور رمزية أخرى",
+      "status": {
+        "online": "متصل",
+        "offline": "غير متصل",
+        "busy": "مشغول",
+        "away": "غائب"
+      }
+    },
+    "breadcrumb": {
+      "label": "مسار التنقل",
+      "home": "الرئيسية"
+    },
+    "buttonGroup": {
+      "label": "مجموعة الأزرار"
+    },
+    "carousel": {
+      "label": "عرض الشرائح",
+      "previousSlide": "الشريحة السابقة",
+      "nextSlide": "الشريحة التالية",
+      "slidePosition": "الشريحة {current} من {total}",
+      "roleDescription": "عرض شرائح",
+      "slideRoleDescription": "شريحة"
+    },
+    "drawer": {
+      "toggle": "تبديل الدرج",
+      "closeOverlay": "إغلاق طبقة الدرج"
+    },
+    "pagination": {
+      "label": "ترقيم الصفحات",
+      "firstPage": "الصفحة الأولى",
+      "previousPage": "الصفحة السابقة",
+      "nextPage": "الصفحة التالية",
+      "lastPage": "الصفحة الأخيرة"
+    },
+    "rating": {
+      "value": "التقييم {value} من {max}"
+    },
+    "range": {
+      "setValue": "تعيين القيمة إلى {value}"
+    },
+    "rangeSlider": {
+      "label": "النطاق",
+      "minimum": "الحد الأدنى لـ {label}",
+      "maximum": "الحد الأقصى لـ {label}",
+      "moveNearestHandle": "نقل أقرب مقبض إلى {value}"
+    },
+    "select": {
+      "placeholder": "اختر خيارًا",
+      "empty": "لم يتم العثور على خيارات",
+      "loading": "جارٍ تحميل الخيارات",
+      "clearSelection": "مسح التحديد",
+      "removeOption": "إزالة {option}"
+    },
+    "toast": {
+      "close": "إغلاق الإشعار"
+    },
+    "previewCodeCard": {
+      "showPreview": "عرض المعاينة",
+      "showCode": "عرض الكود",
+      "copied": "تم النسخ!"
+    }
+  }
+}

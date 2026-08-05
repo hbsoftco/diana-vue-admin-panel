@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import { DiRange } from '@/shared/ui/base/range'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
+
+const { t } = useI18n()
 
 const basicValue = ref(45)
 const displayValue = ref(68)
@@ -20,7 +23,7 @@ const softLimitValue = ref(50)
 const runtimeDisabled = ref(true)
 const softLimitMessage = computed(() =>
   softLimitValue.value < 20 || softLimitValue.value > 80
-    ? 'Outside the recommended range of 20–80.'
+    ? t('features.forms.range.validation.outsideRecommended')
     : undefined,
 )
 
@@ -42,13 +45,13 @@ function enforceSoftLimits() {
   softLimitValue.value = Math.min(80, Math.max(20, softLimitValue.value))
 }
 
-const namedTicks = [
-  { value: 0, label: 'Low' },
+const namedTicks = computed(() => [
+  { value: 0, label: t('features.forms.range.values.low') },
   { value: 25, label: '25' },
-  { value: 50, label: 'Medium' },
+  { value: 50, label: t('features.forms.range.values.medium') },
   { value: 75, label: '75' },
-  { value: 100, label: 'High' },
-]
+  { value: 100, label: t('features.forms.range.values.high') },
+])
 
 const basicCode = `<script setup lang="ts">
 import { ref } from 'vue'
@@ -322,90 +325,142 @@ const runtimeDisabled = ref(true)
 
 <template>
   <div class="grid gap-6 xl:grid-cols-2">
-    <PreviewCodeCard title="Basic Range" accent-color="#8b5cf6" :code="basicCode" language="vue">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.basic')"
+      accent-color="#8b5cf6"
+      :code="basicCode"
+      language="vue"
+    >
       <DiRange v-model="basicValue" />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Sizes" accent-color="#14b8a6" :code="sizesCode" language="html">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.sizes')"
+      accent-color="#14b8a6"
+      :code="sizesCode"
+      language="html"
+    >
       <div class="space-y-5">
-        <DiRange :model-value="30" size="sm" label="Small range" />
-        <DiRange :model-value="50" size="md" label="Medium range" />
-        <DiRange :model-value="70" size="lg" label="Large range" />
+        <DiRange :model-value="30" size="sm" :label="$t('features.forms.range.labels.small')" />
+        <DiRange :model-value="50" size="md" :label="$t('features.forms.range.labels.medium')" />
+        <DiRange :model-value="70" size="lg" :label="$t('features.forms.range.labels.large')" />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Semantic Variants"
+      :title="$t('features.forms.range.sections.variants')"
       accent-color="#06b6d4"
       :code="variantsCode"
       language="html"
       class="xl:col-span-2"
     >
       <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <DiRange :model-value="40" variant="primary" label="Primary" />
-        <DiRange :model-value="40" variant="secondary" label="Secondary" />
-        <DiRange :model-value="40" variant="accent" label="Accent" />
-        <DiRange :model-value="40" variant="info" label="Info" />
-        <DiRange :model-value="40" variant="success" label="Success" />
-        <DiRange :model-value="40" variant="warning" label="Warning" />
-        <DiRange :model-value="40" variant="error" label="Error" />
+        <DiRange :model-value="40" variant="primary" :label="$t('common.variants.primary')" />
+        <DiRange :model-value="40" variant="secondary" :label="$t('common.variants.secondary')" />
+        <DiRange :model-value="40" variant="accent" :label="$t('common.variants.accent')" />
+        <DiRange :model-value="40" variant="info" :label="$t('common.variants.info')" />
+        <DiRange :model-value="40" variant="success" :label="$t('common.variants.success')" />
+        <DiRange :model-value="40" variant="warning" :label="$t('common.variants.warning')" />
+        <DiRange :model-value="40" variant="error" :label="$t('common.variants.error')" />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Min / Max Examples"
+      :title="$t('features.forms.range.sections.limits')"
       accent-color="#8b5cf6"
       :code="limitsCode"
       language="html"
     >
       <div class="space-y-5">
-        <DiRange :model-value="0" :min="-50" :max="50" label="Temperature (-50 to 50)" show-value />
+        <DiRange
+          :model-value="0"
+          :min="-50"
+          :max="50"
+          :label="$t('features.forms.range.labels.temperature')"
+          show-value
+        />
         <DiRange
           :model-value="500"
           :min="100"
           :max="1000"
-          label="Budget (100 to 1000)"
+          :label="$t('features.forms.range.labels.budget')"
           show-value
         />
       </div>
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Step Examples" accent-color="#f59e0b" :code="stepsCode" language="html">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.steps')"
+      accent-color="#f59e0b"
+      :code="stepsCode"
+      language="html"
+    >
       <div class="space-y-6">
-        <DiRange :model-value="2.5" :min="0" :max="5" :step="0.5" label="Half steps" show-value />
-        <DiRange :model-value="50" :step="25" label="Quarter steps" show-ticks />
-      </div>
-    </PreviewCodeCard>
-
-    <PreviewCodeCard title="Disabled" accent-color="#64748b" :code="disabledCode" language="html">
-      <div class="space-y-5">
-        <DiRange :model-value="35" label="Disabled range" disabled />
-        <DiRange :model-value="65" label="Readonly range" readonly show-value />
-      </div>
-    </PreviewCodeCard>
-
-    <PreviewCodeCard title="With Labels" accent-color="#8b5cf6" :code="labelsCode" language="html">
-      <div class="space-y-5">
-        <DiRange :model-value="25" label="Volume" />
-        <DiRange :model-value="75" label="Brightness" show-value />
+        <DiRange
+          :model-value="2.5"
+          :min="0"
+          :max="5"
+          :step="0.5"
+          :label="$t('features.forms.range.labels.halfSteps')"
+          show-value
+        />
+        <DiRange
+          :model-value="50"
+          :step="25"
+          :label="$t('features.forms.range.labels.quarterSteps')"
+          show-ticks
+        />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="With Helper Text"
+      :title="$t('features.forms.range.sections.disabled')"
+      accent-color="#64748b"
+      :code="disabledCode"
+      language="html"
+    >
+      <div class="space-y-5">
+        <DiRange :model-value="35" :label="$t('features.forms.range.labels.disabled')" disabled />
+        <DiRange
+          :model-value="65"
+          :label="$t('features.forms.range.labels.readonly')"
+          readonly
+          show-value
+        />
+      </div>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.labels')"
+      accent-color="#8b5cf6"
+      :code="labelsCode"
+      language="html"
+    >
+      <div class="space-y-5">
+        <DiRange :model-value="25" :label="$t('features.forms.range.labels.volume')" />
+        <DiRange
+          :model-value="75"
+          :label="$t('features.forms.range.labels.brightness')"
+          show-value
+        />
+      </div>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.helper')"
       accent-color="#06b6d4"
       :code="helperCode"
       language="html"
     >
       <DiRange
         :model-value="60"
-        label="Profile completeness"
-        helper-text="Move the slider to choose the completion target."
+        :label="$t('features.forms.range.labels.profileCompleteness')"
+        :helper-text="$t('features.forms.range.helpers.completionTarget')"
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Validation States"
+      :title="$t('features.forms.range.sections.validation')"
       accent-color="#ef4444"
       :code="validationCode"
       language="html"
@@ -414,52 +469,69 @@ const runtimeDisabled = ref(true)
         <DiRange
           :model-value="90"
           variant="primary"
-          label="Risk threshold"
-          error="Choose a value of 80 or lower."
+          :label="$t('features.forms.range.labels.riskThreshold')"
+          :error="$t('features.forms.range.validation.maximum')"
           show-value
         />
         <DiRange
           :model-value="70"
           variant="secondary"
-          label="Quality target"
-          success="This target is within the recommended range."
+          :label="$t('features.forms.range.labels.qualityTarget')"
+          :success="$t('features.forms.range.validation.recommended')"
           show-value
         />
       </div>
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Value Display" accent-color="#22c55e" :code="valueCode" language="vue">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.value')"
+      accent-color="#22c55e"
+      :code="valueCode"
+      language="vue"
+    >
       <DiRange
         v-model="displayValue"
-        label="Completion"
-        helper-text="The displayed value updates as you move the slider."
+        :label="$t('features.forms.range.labels.completion')"
+        :helper-text="$t('features.forms.range.helpers.valueUpdates')"
         show-value
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Rounded and Square Styling"
+      :title="$t('features.forms.range.sections.styling')"
       accent-color="#8b5cf6"
       :code="stylingCode"
       language="html"
     >
       <div class="space-y-6">
-        <DiRange :model-value="35" label="Rounded thumb" thumb-shape="rounded" />
-        <DiRange :model-value="65" label="Square thumb" thumb-shape="square" />
+        <DiRange
+          :model-value="35"
+          :label="$t('features.forms.range.labels.roundedThumb')"
+          thumb-shape="rounded"
+        />
+        <DiRange
+          :model-value="65"
+          :label="$t('features.forms.range.labels.squareThumb')"
+          thumb-shape="square"
+        />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Sliding Handle Tooltip"
+      :title="$t('features.forms.range.sections.tooltip')"
       accent-color="#06b6d4"
       :code="tooltipCode"
       language="vue"
     >
-      <DiRange v-model="tooltipValue" label="Brightness" show-tooltip />
+      <DiRange
+        v-model="tooltipValue"
+        :label="$t('features.forms.range.labels.brightness')"
+        show-tooltip
+      />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Color Picker Sliders"
+      :title="$t('features.forms.range.sections.colors')"
       accent-color="#ef4444"
       :code="colorMixerCode"
       language="vue"
@@ -469,21 +541,21 @@ const runtimeDisabled = ref(true)
           <DiRange
             v-model="redValue"
             :max="255"
-            aria-label="Red"
+            :aria-label="$t('features.forms.range.colors.red')"
             orientation="vertical"
             variant="error"
           />
           <DiRange
             v-model="greenValue"
             :max="255"
-            aria-label="Green"
+            :aria-label="$t('features.forms.range.colors.green')"
             orientation="vertical"
             variant="success"
           />
           <DiRange
             v-model="blueValue"
             :max="255"
-            aria-label="Blue"
+            :aria-label="$t('features.forms.range.colors.blue')"
             orientation="vertical"
             variant="info"
           />
@@ -496,7 +568,7 @@ const runtimeDisabled = ref(true)
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Linked and Lockable Sliders"
+      :title="$t('features.forms.range.sections.linked')"
       accent-color="#14b8a6"
       :code="linkedCode"
       language="vue"
@@ -505,40 +577,57 @@ const runtimeDisabled = ref(true)
         <DiRange
           :model-value="linkedValueA"
           :min="50"
-          label="Linked control A"
+          :label="$t('features.forms.range.labels.linkedA')"
           show-value
           @update:model-value="updateLinkedValueA"
         />
         <DiRange
           :model-value="linkedValueB"
           :min="50"
-          label="Linked control B"
+          :label="$t('features.forms.range.labels.linkedB')"
           show-value
           @update:model-value="updateLinkedValueB"
         />
         <DiButton size="sm" @click="linkedLocked = !linkedLocked">
-          {{ linkedLocked ? 'Unlock controls' : 'Lock controls' }}
+          {{
+            linkedLocked
+              ? $t('features.forms.range.actions.unlock')
+              : $t('features.forms.range.actions.lock')
+          }}
         </DiButton>
       </div>
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Slider Toggle" accent-color="#8b5cf6" :code="toggleCode" language="vue">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.toggle')"
+      accent-color="#8b5cf6"
+      :code="toggleCode"
+      language="vue"
+    >
       <DiRange
         v-model="toggleValue"
         :min="0"
         :max="1"
         orientation="vertical"
-        label="Slider toggle"
-        :format-value="(value) => (value ? 'On' : 'Off')"
+        :label="$t('features.forms.range.labels.toggle')"
+        :format-value="
+          (value) =>
+            value ? $t('features.forms.range.values.on') : $t('features.forms.range.values.off')
+        "
         show-value
         show-ticks
       />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Clickable Pips" accent-color="#f59e0b" :code="pipsCode" language="vue">
+    <PreviewCodeCard
+      :title="$t('features.forms.range.sections.pips')"
+      accent-color="#f59e0b"
+      :code="pipsCode"
+      language="vue"
+    >
       <DiRange
         v-model="pipValue"
-        label="Click a marker to move"
+        :label="$t('features.forms.range.labels.clickMarker')"
         :ticks="namedTicks"
         ticks-clickable
         show-value
@@ -546,15 +635,15 @@ const runtimeDisabled = ref(true)
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Soft Limits"
+      :title="$t('features.forms.range.sections.softLimits')"
       accent-color="#f59e0b"
       :code="softLimitsCode"
       language="vue"
     >
       <DiRange
         v-model="softLimitValue"
-        label="Soft limits"
-        helper-text="Recommended: 20–80. The full 0–100 range remains available."
+        :label="$t('features.forms.range.labels.softLimits')"
+        :helper-text="$t('features.forms.range.helpers.softLimits')"
         :error="softLimitMessage"
         :ticks="[{ value: 20 }, { value: 80 }]"
         show-value
@@ -563,15 +652,23 @@ const runtimeDisabled = ref(true)
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Runtime Disabled State"
+      :title="$t('features.forms.range.sections.runtime')"
       accent-color="#64748b"
       :code="disabledToggleCode"
       language="vue"
     >
       <div class="space-y-4">
-        <DiRange :model-value="55" label="Runtime disabled state" :disabled="runtimeDisabled" />
+        <DiRange
+          :model-value="55"
+          :label="$t('features.forms.range.labels.runtime')"
+          :disabled="runtimeDisabled"
+        />
         <DiButton size="sm" @click="runtimeDisabled = !runtimeDisabled">
-          {{ runtimeDisabled ? 'Enable range' : 'Disable range' }}
+          {{
+            runtimeDisabled
+              ? $t('features.forms.range.actions.enable')
+              : $t('features.forms.range.actions.disable')
+          }}
         </DiButton>
       </div>
     </PreviewCodeCard>

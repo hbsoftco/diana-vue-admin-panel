@@ -1,19 +1,18 @@
 import { mount } from '@vue/test-utils'
-import { createI18n } from 'vue-i18n'
 import { describe, expect, it } from 'vitest'
 
 import DiPagination from '../DiPagination.vue'
+import { testI18n } from './setup'
 
 function mountPagination(props: Record<string, unknown> = {}, locale: 'en' | 'ar' = 'en') {
-  const i18n = createI18n({ legacy: false, locale, messages: { en: {}, ar: {} } })
+  testI18n.global.locale.value = locale
 
   return mount(DiPagination, {
     props: { totalPages: 10, ...props },
-    global: { plugins: [i18n] },
   })
 }
 
-describe('DiPagination', () => {
+describe('diPagination', () => {
   it('preserves the joined layout and updates the model', async () => {
     const wrapper = mountPagination({ totalPages: 3 })
 
@@ -50,7 +49,7 @@ describe('DiPagination', () => {
     await wrapper.findAll('button')[2]?.trigger('click')
     expect(wrapper.emitted('change')).toBeUndefined()
     expect(
-      wrapper.findAll('button').every((button) => button.attributes('disabled') !== undefined),
+      wrapper.findAll('button').every(button => button.attributes('disabled') !== undefined),
     ).toBe(true)
   })
 

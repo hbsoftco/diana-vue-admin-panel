@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "footer": {
+      "copyright": "זכויות יוצרים © {year} {brand}. עוצב עם {heart} על ידי {author}. קוד פתוח ברישיון {license}."
+    },
+    "sidebar": {
+      "label": "סרגל הצד של היישום",
+      "logoAlt": "הלוגו של Diana",
+      "navigation": "ניווט ראשי",
+      "expand": "הרחבת סרגל הצד",
+      "collapse": "כיווץ סרגל הצד"
+    },
+    "notifications": {
+      "label": "התראות",
+      "title": "התראות",
+      "viewAll": "הצגת כל ההתראות",
+      "items": {
+        "newMessage": {
+          "title": "הודעה חדשה",
+          "description": "יש לך הודעה חדשה מאת {sender}"
+        },
+        "taskCompleted": {
+          "title": "המשימה הושלמה",
+          "description": "{project} הושלם"
+        },
+        "meetingReminder": {
+          "title": "תזכורת לפגישה",
+          "description": "פגישת צוות בעוד {count} דקות"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "לפני דקה",
+      "minutesAgo": "לפני {count} דקות",
+      "hourAgo": "לפני שעה",
+      "hoursAgo": "לפני {count} שעות"
+    },
+    "userMenu": {
+      "label": "תפריט משתמש",
+      "avatarAlt": "האווטאר של {name}",
+      "dashboard": "לוח בקרה",
+      "profile": "פרופיל",
+      "messages": "הודעות",
+      "settings": "הגדרות",
+      "help": "עזרה",
+      "logout": "יציאה",
+      "lastLogin": "כניסה אחרונה: {time}"
+    },
+    "theme": {
+      "switchToLight": "מעבר לערכת נושא בהירה",
+      "switchToDark": "מעבר לערכת נושא כהה"
+    },
+    "fullscreen": {
+      "enter": "כניסה למסך מלא",
+      "exit": "יציאה ממסך מלא"
+    },
+    "language": {
+      "select": "בחירת שפה"
+    }
+  }
+}

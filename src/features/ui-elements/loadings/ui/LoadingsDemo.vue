@@ -124,7 +124,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Spinner Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.spinnerLoading')"
+      :title="$t('features.uiElements.loading.spinnerLoading')"
       accent-color="#14b8a6"
       :code="spinnerLoading"
       language="html"
@@ -140,7 +140,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Dots Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.dotsLoading')"
+      :title="$t('features.uiElements.loading.dotsLoading')"
       accent-color="#14b8a6"
       :code="dotsLoading"
       language="html"
@@ -156,7 +156,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Ring Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.ringLoading')"
+      :title="$t('features.uiElements.loading.ringLoading')"
       accent-color="#14b8a6"
       :code="ringLoading"
       language="html"
@@ -172,7 +172,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Ball Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.ballLoading')"
+      :title="$t('features.uiElements.loading.ballLoading')"
       accent-color="#14b8a6"
       :code="ballLoading"
       language="html"
@@ -188,7 +188,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Bars Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.barsLoading')"
+      :title="$t('features.uiElements.loading.barsLoading')"
       accent-color="#14b8a6"
       :code="barsLoading"
       language="html"
@@ -204,7 +204,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Infinity Loading -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.infinityLoading')"
+      :title="$t('features.uiElements.loading.infinityLoading')"
       accent-color="#14b8a6"
       :code="infinityLoading"
       language="html"
@@ -220,7 +220,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Spinner -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredSpinner')"
+      :title="$t('features.uiElements.loading.coloredSpinner')"
       accent-color="#14b8a6"
       :code="coloredSpinner"
       language="html"
@@ -238,7 +238,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Dots -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredDots')"
+      :title="$t('features.uiElements.loading.coloredDots')"
       accent-color="#14b8a6"
       :code="coloredDots"
       language="html"
@@ -256,7 +256,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Ring -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredRing')"
+      :title="$t('features.uiElements.loading.coloredRing')"
       accent-color="#14b8a6"
       :code="coloredRing"
       language="html"
@@ -274,7 +274,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Ball -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredBall')"
+      :title="$t('features.uiElements.loading.coloredBall')"
       accent-color="#14b8a6"
       :code="coloredBall"
       language="html"
@@ -292,7 +292,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Bars -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredBars')"
+      :title="$t('features.uiElements.loading.coloredBars')"
       accent-color="#14b8a6"
       :code="coloredBars"
       language="html"
@@ -310,7 +310,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- Colored Infinity -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.coloredInfinity')"
+      :title="$t('features.uiElements.loading.coloredInfinity')"
       accent-color="#14b8a6"
       :code="coloredInfinity"
       language="html"
@@ -328,7 +328,7 @@ const allVariants = `<div class="flex flex-wrap gap-6 items-center">
 
     <!-- All Variants Combined -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.loading.allVariants')"
+      :title="$t('features.uiElements.loading.allVariants')"
       accent-color="#14b8a6"
       :code="allVariants"
       language="html"

@@ -1,3 +1,3 @@
 <template>
-  <div>HRM Dashboard</div>
+  <div>{{ $t('pages.dashboard.hrm.title') }}</div>
 </template>

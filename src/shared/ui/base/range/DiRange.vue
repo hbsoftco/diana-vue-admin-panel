@@ -2,6 +2,7 @@
 import type { StyleValue } from 'vue'
 
 import { computed, useAttrs, useId } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type {
   DiRangeOrientation,
@@ -58,6 +59,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const model = defineModel<number>({ default: 0 })
 const attrs = useAttrs()
+const { t } = useI18n()
 const generatedId = useId().split(':').join('')
 
 const RANGE_KEYS = new Set([
@@ -252,7 +254,11 @@ function onKeydown(event: KeyboardEvent) {
         "
         :disabled="disabled"
         :tabindex="ticksClickable && !readonly ? 0 : -1"
-        :aria-label="ticksClickable ? `Set value to ${tick.label ?? tick.value}` : undefined"
+        :aria-label="
+          ticksClickable
+            ? t('components.range.setValue', { value: tick.label ?? tick.value })
+            : undefined
+        "
         @click="selectTick(tick.value)"
       >
         <span class="h-1.5 w-px bg-base-content/30" />

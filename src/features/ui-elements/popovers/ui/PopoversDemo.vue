@@ -110,7 +110,7 @@ const nestedCode = `<DiPopover>
 <template>
   <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.basic')"
+      :title="$t('features.uiElements.popover.basic')"
       accent-color="#14b8a6"
       :code="basicCode"
       language="html"
@@ -119,16 +119,16 @@ const nestedCode = `<DiPopover>
         <DiPopover>
           <template #trigger>
             <DiButton variant="primary">
-              {{ $t('features.ui-elements.popover.open') }}
+              {{ $t('features.uiElements.popover.open') }}
             </DiButton>
           </template>
-          {{ $t('features.ui-elements.popover.compactContent') }}
+          {{ $t('features.uiElements.popover.compactContent') }}
         </DiPopover>
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.titleSupport')"
+      :title="$t('features.uiElements.popover.titleSupport')"
       accent-color="#14b8a6"
       :code="titleCode"
       language="html"
@@ -146,7 +146,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.headerSlot')"
+      :title="$t('features.uiElements.popover.headerSlot')"
       accent-color="#14b8a6"
       :code="headerSlotCode"
       language="html"
@@ -167,7 +167,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.footerActions')"
+      :title="$t('features.uiElements.popover.footerActions')"
       accent-color="#14b8a6"
       :code="footerActionsCode"
       language="html"
@@ -195,7 +195,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.arrowPlacements')"
+      :title="$t('features.uiElements.popover.arrowPlacements')"
       accent-color="#14b8a6"
       :code="placementsCode"
       language="html"
@@ -237,7 +237,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.alignment')"
+      :title="$t('features.uiElements.popover.alignment')"
       accent-color="#14b8a6"
       :code="alignmentCode"
       language="html"
@@ -271,7 +271,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.widths')"
+      :title="$t('features.uiElements.popover.widths')"
       accent-color="#14b8a6"
       :code="widthCode"
       language="html"
@@ -305,7 +305,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.richContent')"
+      :title="$t('features.uiElements.popover.richContent')"
       accent-color="#14b8a6"
       :code="richContentCode"
       language="html"
@@ -334,7 +334,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.controlled')"
+      :title="$t('features.uiElements.popover.controlled')"
       accent-color="#14b8a6"
       :code="controlledCode"
       language="vue"
@@ -355,7 +355,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.outside')"
+      :title="$t('features.uiElements.popover.outside')"
       accent-color="#14b8a6"
       :code="outsideCode"
       language="html"
@@ -371,7 +371,7 @@ const nestedCode = `<DiPopover>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.popover.nested')"
+      :title="$t('features.uiElements.popover.nested')"
       accent-color="#14b8a6"
       :code="nestedCode"
       language="html"

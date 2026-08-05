@@ -1,0 +1,163 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "לוחות בקרה",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "מסחר אלקטרוני"
+      },
+      "analytics": {
+        "title": "ניתוח נתונים"
+      },
+      "courses": {
+        "title": "קורסים"
+      },
+      "crypto": {
+        "title": "מטבעות דיגיטליים"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "משרות"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "אישי"
+      },
+      "projects": {
+        "title": "פרויקטים"
+      },
+      "sales": {
+        "title": "מכירות"
+      },
+      "stocks": {
+        "title": "מניות"
+      }
+    },
+    "uiElements": {
+      "title": "רכיבי ממשק",
+      "alerts": {
+        "title": "התראות"
+      },
+      "badge": {
+        "title": "תג"
+      },
+      "breadcrumb": {
+        "title": "נתיב ניווט"
+      },
+      "buttons": {
+        "title": "כפתורים"
+      },
+      "icons": {
+        "title": "סמלים"
+      },
+      "loadings": {
+        "title": "מחווני טעינה"
+      },
+      "buttonGroup": {
+        "title": "קבוצת כפתורים"
+      },
+      "cards": {
+        "title": "כרטיסים"
+      },
+      "dropdowns": {
+        "title": "תפריטים נפתחים"
+      },
+      "imagesFigures": {
+        "title": "תמונות וצורות"
+      },
+      "linksInteractions": {
+        "title": "קישורים ואינטראקציות"
+      },
+      "listGroup": {
+        "title": "קבוצת רשימה"
+      },
+      "navsTabs": {
+        "title": "ניווט ולשוניות"
+      },
+      "objectFit": {
+        "title": "התאמת אובייקט"
+      },
+      "pagination": {
+        "title": "עמודים"
+      },
+      "popovers": {
+        "title": "חלונות קופצים"
+      },
+      "progress": {
+        "title": "התקדמות"
+      },
+      "switch": {
+        "title": "מתג"
+      },
+      "toasts": {
+        "title": "הודעות"
+      },
+      "tooltips": {
+        "title": "הסברים"
+      },
+      "typography": {
+        "title": "טיפוגרפיה"
+      }
+    },
+    "forms": {
+      "title": "טפסים",
+      "formElements": {
+        "title": "רכיבי טופס"
+      },
+      "inputs": {
+        "title": "שדות קלט"
+      },
+      "range": {
+        "title": "טווח"
+      },
+      "rangeSlider": {
+        "title": "מחוון טווח"
+      },
+      "select": {
+        "title": "בחירה"
+      }
+    },
+    "advancedUi": {
+      "title": "ממשק משתמש מתקדם",
+      "modals": {
+        "title": "חלונות מודאליים"
+      },
+      "accordion": {
+        "title": "אקורדיון"
+      },
+      "carousel": {
+        "title": "קרוסלה"
+      },
+      "collapse": {
+        "title": "כיווץ"
+      },
+      "navbar": {
+        "title": "סרגל ניווט"
+      },
+      "drawer": {
+        "title": "מגירה"
+      },
+      "rating": {
+        "title": "דירוג"
+      },
+      "skeleton": {
+        "title": "שלד טעינה"
+      }
+    },
+    "utility": {
+      "title": "כלים",
+      "avatar": {
+        "title": "אווטאר"
+      },
+      "colors": {
+        "title": "צבעים"
+      }
+    }
+  }
+}
