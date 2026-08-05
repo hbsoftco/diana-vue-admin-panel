@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { DiSelectSize, DiSelectVariant, SelectOption } from '@/shared/ui/base/select'
 
@@ -9,6 +10,8 @@ import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 type PersonMeta = { initials: string, role: string, color: string }
 
+const { t } = useI18n()
+
 const states: SelectOption[] = [
   { label: 'Texas', value: 'texas' },
   { label: 'Georgia', value: 'georgia' },
@@ -17,33 +20,53 @@ const states: SelectOption[] = [
   { label: 'Virginia', value: 'virginia', disabled: true },
 ]
 
-const people: SelectOption[] = [
+const people = computed<SelectOption[]>(() => [
   {
     label: 'Andrew',
     value: 'andrew',
-    meta: { initials: 'AN', role: 'Designer', color: 'bg-primary' } satisfies PersonMeta,
+    meta: {
+      initials: 'AN',
+      role: t('features.forms.select.roles.designer'),
+      color: 'bg-primary',
+    } satisfies PersonMeta,
   },
   {
     label: 'Maya',
     value: 'maya',
-    meta: { initials: 'MY', role: 'Developer', color: 'bg-info' } satisfies PersonMeta,
+    meta: {
+      initials: 'MY',
+      role: t('features.forms.select.roles.developer'),
+      color: 'bg-info',
+    } satisfies PersonMeta,
   },
   {
     label: 'Brodus Axel',
     value: 'brodus',
-    meta: { initials: 'BA', role: 'Product manager', color: 'bg-success' } satisfies PersonMeta,
+    meta: {
+      initials: 'BA',
+      role: t('features.forms.select.roles.productManager'),
+      color: 'bg-success',
+    } satisfies PersonMeta,
   },
   {
     label: 'Goldhens',
     value: 'goldhens',
-    meta: { initials: 'GO', role: 'Researcher', color: 'bg-warning' } satisfies PersonMeta,
+    meta: {
+      initials: 'GO',
+      role: t('features.forms.select.roles.researcher'),
+      color: 'bg-warning',
+    } satisfies PersonMeta,
   },
   {
     label: 'Angelina',
     value: 'angelina',
-    meta: { initials: 'AG', role: 'Support lead', color: 'bg-secondary' } satisfies PersonMeta,
+    meta: {
+      initials: 'AG',
+      role: t('features.forms.select.roles.supportLead'),
+      color: 'bg-secondary',
+    } satisfies PersonMeta,
   },
-]
+])
 
 const basicValue = ref<string | number | null>('texas')
 const multipleValue = ref<(string | number)[]>(['texas'])
@@ -154,61 +177,80 @@ const disabledCode = `<div class="space-y-3">
 
 <template>
   <div class="grid gap-6 xl:grid-cols-3">
-    <PreviewCodeCard title="Basic Select" accent-color="#8b5cf6" :code="basicCode">
+    <PreviewCodeCard
+      :title="$t('features.forms.select.sections.basic')"
+      accent-color="#8b5cf6"
+      :code="basicCode"
+    >
       <DiSelect v-model="basicValue" :options="states" />
     </PreviewCodeCard>
-    <PreviewCodeCard title="Multiple Select" accent-color="#8b5cf6" :code="multipleCode">
+    <PreviewCodeCard
+      :title="$t('features.forms.select.sections.multiple')"
+      accent-color="#8b5cf6"
+      :code="multipleCode"
+    >
       <DiSelect v-model="multipleValue" :options="states" multiple />
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Semantic Variants"
+      :title="$t('features.forms.select.sections.variants')"
       accent-color="#8b5cf6"
       :code="variantsCode"
       class="xl:col-span-3"
     >
       <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <div v-for="example in variantExamples" :key="example.variant" class="space-y-1.5">
-          <span class="block text-sm font-medium capitalize">{{ example.variant }}</span>
+          <span class="block text-sm font-medium capitalize">{{
+            $t(`variants.${example.variant}`)
+          }}</span>
           <DiSelect v-model="example.value" :options="states" :variant="example.variant" multiple />
         </div>
       </div>
     </PreviewCodeCard>
-    <PreviewCodeCard title="Sizes" accent-color="#14b8a6" :code="sizesCode" class="xl:col-span-3">
+    <PreviewCodeCard
+      :title="$t('features.forms.select.sections.sizes')"
+      accent-color="#14b8a6"
+      :code="sizesCode"
+      class="xl:col-span-3"
+    >
       <div class="grid gap-6 lg:grid-cols-2">
         <div class="space-y-3">
           <h3 class="font-semibold">
-            Single select sizes
+            {{ $t('features.forms.select.headings.singleSizes') }}
           </h3>
           <div v-for="example in singleSizeExamples" :key="example.size" class="space-y-1.5">
-            <span class="block text-sm font-medium capitalize">{{ example.size }} select</span>
+            <span class="block text-sm font-medium capitalize">{{
+              $t('features.forms.select.labels.singleSize', { size: example.size })
+            }}</span>
             <DiSelect v-model="example.value" :options="states" :size="example.size" />
           </div>
         </div>
         <div class="space-y-3">
           <h3 class="font-semibold">
-            Multiple select sizes
+            {{ $t('features.forms.select.headings.multipleSizes') }}
           </h3>
           <div v-for="example in multipleSizeExamples" :key="example.size" class="space-y-1.5">
-            <span class="block text-sm font-medium capitalize">{{ example.size }} select with tags</span>
+            <span class="block text-sm font-medium capitalize">{{
+              $t('features.forms.select.labels.multipleSize', { size: example.size })
+            }}</span>
             <DiSelect v-model="example.value" :options="states" :size="example.size" multiple />
           </div>
         </div>
       </div>
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Single Select With Placeholder"
+      :title="$t('features.forms.select.sections.singlePlaceholder')"
       accent-color="#8b5cf6"
       :code="singlePlaceholderCode"
     >
       <DiSelect
         v-model="placeholderValue"
         :options="states"
-        placeholder="Select a state"
+        :placeholder="$t('features.forms.select.placeholders.state')"
         clearable
       />
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Multiple Select With Placeholder"
+      :title="$t('features.forms.select.sections.multiplePlaceholder')"
       accent-color="#06b6d4"
       :code="multiplePlaceholderCode"
     >
@@ -216,15 +258,19 @@ const disabledCode = `<div class="space-y-3">
         v-model="multiplePlaceholderValue"
         :options="people"
         multiple
-        placeholder="Choose people"
+        :placeholder="$t('features.forms.select.placeholders.people')"
       />
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Custom Option Rendering"
+      :title="$t('features.forms.select.sections.customOption')"
       accent-color="#06b6d4"
       :code="customOptionCode"
     >
-      <DiSelect v-model="customOptionValue" :options="people" placeholder="Choose customer">
+      <DiSelect
+        v-model="customOptionValue"
+        :options="people"
+        :placeholder="$t('features.forms.select.placeholders.customer')"
+      >
         <template #option="{ option }">
           <div class="flex items-center gap-2">
             <span
@@ -239,11 +285,15 @@ const disabledCode = `<div class="space-y-3">
       </DiSelect>
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Custom Selected Rendering"
+      :title="$t('features.forms.select.sections.customSelected')"
       accent-color="#06b6d4"
       :code="customSelectedCode"
     >
-      <DiSelect v-model="customSelectedValue" :options="people" placeholder="Choose client">
+      <DiSelect
+        v-model="customSelectedValue"
+        :options="people"
+        :placeholder="$t('features.forms.select.placeholders.client')"
+      >
         <template #selected="{ option }">
           <span class="flex min-w-0 flex-1 items-center gap-2">
             <span
@@ -256,7 +306,7 @@ const disabledCode = `<div class="space-y-3">
       </DiSelect>
     </PreviewCodeCard>
     <PreviewCodeCard
-      title="Maximum Selection Limit"
+      :title="$t('features.forms.select.sections.limit')"
       accent-color="#f59e0b"
       :code="limitCode"
       class="xl:col-span-2"
@@ -266,10 +316,14 @@ const disabledCode = `<div class="space-y-3">
         :options="people"
         multiple
         :max-selections="3"
-        placeholder="Choose people"
+        :placeholder="$t('features.forms.select.placeholders.people')"
       />
     </PreviewCodeCard>
-    <PreviewCodeCard title="Runtime Disable / Enable" accent-color="#ef4444" :code="disabledCode">
+    <PreviewCodeCard
+      :title="$t('features.forms.select.sections.runtime')"
+      accent-color="#ef4444"
+      :code="disabledCode"
+    >
       <div class="space-y-3">
         <DiSelect v-model="disabledValue" :options="states" :disabled="controlsDisabled" />
         <DiSelect
@@ -280,10 +334,10 @@ const disabledCode = `<div class="space-y-3">
         />
         <div class="flex gap-2">
           <DiButton variant="primary" soft size="sm" @click="controlsDisabled = false">
-            Enable
+            {{ $t('features.forms.select.actions.enable') }}
           </DiButton>
           <DiButton variant="primary" size="sm" @click="controlsDisabled = true">
-            Disable
+            {{ $t('features.forms.select.actions.disable') }}
           </DiButton>
         </div>
       </div>

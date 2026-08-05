@@ -204,54 +204,89 @@ const thumbIconsCode = `<div class="space-y-8">
 
 <template>
   <div class="grid gap-6 xl:grid-cols-2">
-    <PreviewCodeCard title="Basic" accent-color="#8b5cf6" :code="basicCode" language="vue">
-      <DiRangeSlider v-model="basicValue" label="Price range" />
+    <PreviewCodeCard
+      :title="$t('features.forms.rangeSlider.sections.basic')"
+      accent-color="#8b5cf6"
+      :code="basicCode"
+      language="vue"
+    >
+      <DiRangeSlider v-model="basicValue" :label="$t('features.forms.rangeSlider.labels.price')" />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Sizes" accent-color="#14b8a6" :code="sizesCode" language="html">
+    <PreviewCodeCard
+      :title="$t('features.forms.rangeSlider.sections.sizes')"
+      accent-color="#14b8a6"
+      :code="sizesCode"
+      language="html"
+    >
       <div class="space-y-7">
-        <DiRangeSlider :model-value="[20, 70]" size="sm" label="Small" />
-        <DiRangeSlider :model-value="[20, 70]" size="md" label="Medium" />
-        <DiRangeSlider :model-value="[20, 70]" size="lg" label="Large" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          size="sm"
+          :label="$t('features.forms.rangeSlider.sizes.small')"
+        />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          size="md"
+          :label="$t('features.forms.rangeSlider.sizes.medium')"
+        />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          size="lg"
+          :label="$t('features.forms.rangeSlider.sizes.large')"
+        />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Semantic Variants"
+      :title="$t('features.forms.rangeSlider.sections.variants')"
       accent-color="#06b6d4"
       :code="variantsCode"
       language="html"
       class="xl:col-span-2"
     >
       <div class="grid gap-7 md:grid-cols-2">
-        <DiRangeSlider :model-value="[20, 70]" variant="primary" label="Primary" />
-        <DiRangeSlider :model-value="[20, 70]" variant="secondary" label="Secondary" />
-        <DiRangeSlider :model-value="[20, 70]" variant="accent" label="Accent" />
-        <DiRangeSlider :model-value="[20, 70]" variant="info" label="Info" />
-        <DiRangeSlider :model-value="[20, 70]" variant="success" label="Success" />
-        <DiRangeSlider :model-value="[20, 70]" variant="warning" label="Warning" />
-        <DiRangeSlider :model-value="[20, 70]" variant="error" label="Error" />
+        <DiRangeSlider :model-value="[20, 70]" variant="primary" :label="$t('variants.primary')" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          variant="secondary"
+          :label="$t('variants.secondary')"
+        />
+        <DiRangeSlider :model-value="[20, 70]" variant="accent" :label="$t('variants.accent')" />
+        <DiRangeSlider :model-value="[20, 70]" variant="info" :label="$t('variants.info')" />
+        <DiRangeSlider :model-value="[20, 70]" variant="success" :label="$t('variants.success')" />
+        <DiRangeSlider :model-value="[20, 70]" variant="warning" :label="$t('variants.warning')" />
+        <DiRangeSlider :model-value="[20, 70]" variant="error" :label="$t('variants.error')" />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Connected Track"
+      :title="$t('features.forms.rangeSlider.sections.connected')"
       accent-color="#8b5cf6"
       :code="connectedCode"
       language="vue"
     >
       <DiRangeSlider
         v-model="connectedValue"
-        label="Drag either handle, the track, or the connected selection"
+        :label="$t('features.forms.rangeSlider.labels.connected')"
       />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Tooltips" accent-color="#06b6d4" :code="tooltipsCode" language="html">
+    <PreviewCodeCard
+      :title="$t('features.forms.rangeSlider.sections.tooltips')"
+      accent-color="#06b6d4"
+      :code="tooltipsCode"
+      language="html"
+    >
       <div class="space-y-8">
-        <DiRangeSlider v-model="tooltipValue" label="Per-handle tooltips" show-tooltips />
+        <DiRangeSlider
+          v-model="tooltipValue"
+          :label="$t('features.forms.rangeSlider.labels.perHandleTooltips')"
+          show-tooltips
+        />
         <DiRangeSlider
           :model-value="[45, 55]"
-          label="Merge nearby tooltips"
+          :label="$t('features.forms.rangeSlider.labels.mergeTooltips')"
           show-tooltips
           merge-tooltips
         />
@@ -259,7 +294,7 @@ const thumbIconsCode = `<div class="space-y-8">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Formatted Values"
+      :title="$t('features.forms.rangeSlider.sections.formatted')"
       accent-color="#22c55e"
       :code="formattedCode"
       language="html"
@@ -269,31 +304,36 @@ const thumbIconsCode = `<div class="space-y-8">
         :min="0"
         :max="10000"
         :step="100"
-        label="Budget"
+        :label="$t('features.forms.rangeSlider.labels.budget')"
         :format-value="(value) => `$${value.toLocaleString()}`"
         show-tooltips
       />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Vertical" accent-color="#8b5cf6" :code="verticalCode" language="html">
+    <PreviewCodeCard
+      :title="$t('features.forms.rangeSlider.sections.vertical')"
+      accent-color="#8b5cf6"
+      :code="verticalCode"
+      language="html"
+    >
       <div class="flex justify-center gap-16">
         <DiRangeSlider
           v-model="verticalValue"
           orientation="vertical"
-          label="Vertical interval"
+          :label="$t('features.forms.rangeSlider.labels.vertical')"
           show-tooltips
         />
         <DiRangeSlider
           :model-value="[30, 80]"
           orientation="vertical"
           variant="secondary"
-          aria-label="Secondary vertical interval"
+          :aria-label="$t('features.forms.rangeSlider.labels.secondaryVertical')"
         />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Minimum Distance"
+      :title="$t('features.forms.rangeSlider.sections.minimumDistance')"
       accent-color="#f59e0b"
       :code="minimumDistanceCode"
       language="html"
@@ -301,14 +341,14 @@ const thumbIconsCode = `<div class="space-y-8">
       <DiRangeSlider
         v-model="minimumDistanceValue"
         :min-distance="20"
-        label="At least 20 units apart"
-        helper-text="The handles cannot move closer than 20 units."
+        :label="$t('features.forms.rangeSlider.labels.minimumDistance')"
+        :helper-text="$t('features.forms.rangeSlider.helpers.minimumDistance')"
         show-tooltips
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Maximum Distance"
+      :title="$t('features.forms.rangeSlider.sections.maximumDistance')"
       accent-color="#ef4444"
       :code="maximumDistanceCode"
       language="html"
@@ -316,14 +356,14 @@ const thumbIconsCode = `<div class="space-y-8">
       <DiRangeSlider
         v-model="maximumDistanceValue"
         :max-distance="30"
-        label="At most 30 units apart"
-        helper-text="The handles remain within 30 units of each other."
+        :label="$t('features.forms.rangeSlider.labels.maximumDistance')"
+        :helper-text="$t('features.forms.rangeSlider.helpers.maximumDistance')"
         show-tooltips
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Soft Limits"
+      :title="$t('features.forms.rangeSlider.sections.softLimits')"
       accent-color="#f59e0b"
       :code="softLimitsCode"
       language="html"
@@ -333,14 +373,14 @@ const thumbIconsCode = `<div class="space-y-8">
         :soft-min="20"
         :soft-max="80"
         :ticks="[{ value: 20 }, { value: 80 }]"
-        label="Recommended interval"
-        helper-text="Values settle inside 20–80 when an interaction ends."
+        :label="$t('features.forms.rangeSlider.labels.recommended')"
+        :helper-text="$t('features.forms.rangeSlider.helpers.softLimits')"
         show-tooltips
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Clickable Ticks"
+      :title="$t('features.forms.rangeSlider.sections.ticks')"
       accent-color="#14b8a6"
       :code="ticksCode"
       language="html"
@@ -349,17 +389,27 @@ const thumbIconsCode = `<div class="space-y-8">
         v-model="tickValue"
         :ticks="ticks"
         ticks-clickable
-        label="Click a marker to move the nearest handle"
+        :label="$t('features.forms.rangeSlider.labels.clickMarker')"
         show-tooltips
       />
     </PreviewCodeCard>
 
-    <PreviewCodeCard title="Disabled" accent-color="#64748b" :code="disabledCode" language="html">
-      <DiRangeSlider :model-value="[30, 70]" label="Disabled selection" disabled show-tooltips />
+    <PreviewCodeCard
+      :title="$t('features.forms.rangeSlider.sections.disabled')"
+      accent-color="#64748b"
+      :code="disabledCode"
+      language="html"
+    >
+      <DiRangeSlider
+        :model-value="[30, 70]"
+        :label="$t('features.forms.rangeSlider.labels.disabled')"
+        disabled
+        show-tooltips
+      />
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Validation"
+      :title="$t('features.forms.rangeSlider.sections.validation')"
       accent-color="#ef4444"
       :code="validationCode"
       language="html"
@@ -368,20 +418,20 @@ const thumbIconsCode = `<div class="space-y-8">
         <DiRangeSlider
           :model-value="[10, 90]"
           variant="primary"
-          label="Delivery window"
-          error="Choose a narrower delivery window."
+          :label="$t('features.forms.rangeSlider.labels.delivery')"
+          :error="$t('features.forms.rangeSlider.validation.narrower')"
         />
         <DiRangeSlider
           :model-value="[30, 60]"
           variant="secondary"
-          label="Confidence interval"
-          success="This interval meets the recommendation."
+          :label="$t('features.forms.rangeSlider.labels.confidence')"
+          :success="$t('features.forms.rangeSlider.validation.recommended')"
         />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Runtime State Changes"
+      :title="$t('features.forms.rangeSlider.sections.runtime')"
       accent-color="#8b5cf6"
       :code="runtimeCode"
       language="vue"
@@ -389,34 +439,56 @@ const thumbIconsCode = `<div class="space-y-8">
       <div class="space-y-4">
         <DiRangeSlider
           v-model="runtimeValue"
-          label="Runtime-controlled selection"
+          :label="$t('features.forms.rangeSlider.labels.runtime')"
           :disabled="runtimeDisabled"
           show-tooltips
         />
         <DiButton size="sm" @click="runtimeDisabled = !runtimeDisabled">
-          {{ runtimeDisabled ? 'Enable slider' : 'Disable slider' }}
+          {{
+            runtimeDisabled
+              ? $t('features.forms.rangeSlider.actions.enable')
+              : $t('features.forms.rangeSlider.actions.disable')
+          }}
         </DiButton>
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      title="Thumb Handles"
+      :title="$t('features.forms.rangeSlider.sections.thumbs')"
       accent-color="#8b5cf6"
       :code="thumbIconsCode"
       language="html"
       class="xl:col-span-2"
     >
       <div class="space-y-8">
-        <DiRangeSlider :model-value="[20, 70]" label="Default square handles" />
+        <DiRangeSlider
+          :model-value="[20, 70]"
+          :label="$t('features.forms.rangeSlider.labels.defaultHandles')"
+        />
         <DiRangeSlider
           :model-value="[25, 75]"
-          label="Drag indicator handles"
+          :label="$t('features.forms.rangeSlider.labels.indicatorHandles')"
           thumb-icon="pauseLine"
         />
         <div class="grid gap-7 md:grid-cols-3">
-          <DiRangeSlider :model-value="[20, 70]" size="sm" label="Small" thumb-icon="pauseLine" />
-          <DiRangeSlider :model-value="[20, 70]" size="md" label="Medium" thumb-icon="pauseLine" />
-          <DiRangeSlider :model-value="[20, 70]" size="lg" label="Large" thumb-icon="pauseLine" />
+          <DiRangeSlider
+            :model-value="[20, 70]"
+            size="sm"
+            :label="$t('features.forms.rangeSlider.sizes.small')"
+            thumb-icon="pauseLine"
+          />
+          <DiRangeSlider
+            :model-value="[20, 70]"
+            size="md"
+            :label="$t('features.forms.rangeSlider.sizes.medium')"
+            thumb-icon="pauseLine"
+          />
+          <DiRangeSlider
+            :model-value="[20, 70]"
+            size="lg"
+            :label="$t('features.forms.rangeSlider.sizes.large')"
+            thumb-icon="pauseLine"
+          />
         </div>
       </div>
     </PreviewCodeCard>

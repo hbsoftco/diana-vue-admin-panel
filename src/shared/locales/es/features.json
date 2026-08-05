@@ -45,7 +45,32 @@
         "inputHelp": "Los anillos de enfoque usan una variación transparente del color semántico."
       }
     },
-    "ui-elements": {
+    "uiElements": {
+      "comingSoon": "La demostración del componente {name} estará disponible pronto...",
+      "cards": {
+        "shoesAlt": "Zapatos",
+        "title": "Título de la tarjeta",
+        "description": "Una tarjeta incluye una figura, cuerpo, título y acciones.",
+        "lastUpdated": "Actualizado hace 3 minutos",
+        "header": "Encabezado",
+        "sampleDescription": "Esta tarjeta de ejemplo muestra contenido complementario y acciones.",
+        "readMore": "Leer más",
+        "defaultButtons": "Botones predeterminados",
+        "showCode": "Mostrar código",
+        "example": "Ejemplo"
+      },
+      "dropdowns": {
+        "dashboard": "Panel",
+        "profile": "Perfil",
+        "messages": "Mensajes",
+        "settings": "Ajustes",
+        "help": "Ayuda",
+        "logout": "Cerrar sesión",
+        "userMenu": "Menú de usuario",
+        "openMenu": "Abrir menú de usuario",
+        "userAvatar": "Avatar del usuario",
+        "lastLogin": "Último acceso: hace 2 horas"
+      },
       "popover": {
         "basic": "Popover básico",
         "titleSupport": "Popover con título",
@@ -87,13 +112,60 @@
         "showPositioned": "Mostrar arriba al inicio",
         "close": "Cerrar notificación",
         "undo": "Deshacer",
+        "sections": {
+          "live": "Ejemplo interactivo",
+          "basic": "Ejemplo básico",
+          "action": "Notificación con acción personalizada",
+          "colors": "Esquemas de color",
+          "fragment": "Notificación con fragmento",
+          "clickable": "Notificación clicable",
+          "variants": "Variantes de notificación",
+          "solid": "Notificación con fondo sólido",
+          "position": "Posición de la notificación",
+          "persistent": "Abrir y ocultar notificación"
+        },
+        "actions": {
+          "showFragment": "Mostrar notificación personalizada",
+          "showClickable": "Abrir notificación clicable",
+          "showText": "Abrir texto",
+          "showFilled": "Abrir relleno",
+          "showOutlined": "Abrir contorno",
+          "view": "Ver"
+        },
+        "colors": { "dark": "Oscuro", "danger": "Peligro" },
+        "positions": {
+          "topStart": "Arriba inicio",
+          "topLeft": "Arriba izquierda",
+          "topCenter": "Arriba centro",
+          "topRight": "Arriba derecha",
+          "topEnd": "Arriba final",
+          "bottomStart": "Abajo inicio",
+          "bottomLeft": "Abajo izquierda",
+          "bottomCenter": "Abajo centro",
+          "bottomRight": "Abajo derecha",
+          "bottomEnd": "Abajo final"
+        },
         "messages": {
           "saved": "Se han guardado tus ajustes.",
           "variant": "Esta notificación usa una variante semántica.",
           "attention": "Se requiere atención",
           "persistent": "Esta notificación permanece hasta que la cierres.",
           "action": "El elemento se movió al archivo.",
-          "position": "Esta notificación está situada arriba al inicio."
+          "position": "Vista previa de posición",
+          "warning": "¡Atención! Este es un mensaje de advertencia.",
+          "error": "¡Hola! Este es un mensaje de error.",
+          "info": "¡Hola! Este es un mensaje informativo.",
+          "basic": "¡Hola! Este es un mensaje de notificación.",
+          "inbox": "Tengo un mensaje para ti",
+          "clickable": "Haz clic en esta notificación para cerrarla.",
+          "text": "Notificación de texto normal",
+          "filled": "Notificación informativa rellena",
+          "outlined": "Notificación de éxito con contorno",
+          "neutral": "Notificación rellena normal",
+          "reactorStarted": "El reactor se inició correctamente",
+          "reactorOptimal": "El reactor funciona a temperatura óptima",
+          "reactorWarning": "La temperatura del reactor supera el rango óptimo",
+          "reactorDanger": "La fusión del reactor es inminente"
         }
       },
       "pagination": {
@@ -143,6 +215,220 @@
         "indeterminate": "Indeterminado",
         "iconToggle": "Función activada",
         "example": "Interruptor de ejemplo"
+      }
+    },
+    "forms": {
+      "inputs": {
+        "sections": {
+          "basic": "Entradas básicas",
+          "types": "Tipos de entrada",
+          "sizes": "Tamaños",
+          "states": "Deshabilitado y solo lectura",
+          "slots": "Ranuras de prefijo/sufijo",
+          "validation": "Estados de validación",
+          "variants": "Variantes semánticas"
+        },
+        "labels": {
+          "fullName": "Nombre completo",
+          "email": "Correo electrónico",
+          "emailShort": "Correo",
+          "text": "Texto",
+          "password": "Contraseña",
+          "number": "Número",
+          "search": "Buscar",
+          "telephone": "Teléfono",
+          "small": "Entrada pequeña",
+          "medium": "Entrada mediana",
+          "large": "Entrada grande",
+          "disabled": "Entrada deshabilitada",
+          "readonly": "Entrada de solo lectura",
+          "loading": "Entrada cargando",
+          "emailError": "Correo con error",
+          "usernameSuccess": "Usuario válido",
+          "passwordGuidance": "Guía de contraseña"
+        },
+        "placeholders": {
+          "name": "Introduce tu nombre",
+          "text": "Entrada de texto",
+          "password": "Contraseña",
+          "search": "Buscar",
+          "loading": "Obteniendo detalles de la cuenta",
+          "projects": "Buscar proyectos",
+          "enterPassword": "Introduce la contraseña",
+          "focus": "Enfoca para previsualizar"
+        },
+        "helpers": {
+          "emailPrivacy": "Nunca compartiremos tu correo.",
+          "password": "Usa al menos ocho caracteres."
+        },
+        "values": { "disabled": "Valor deshabilitado", "readonly": "Valor de solo lectura" },
+        "actions": {
+          "hidePassword": "Ocultar contraseña",
+          "showPassword": "Mostrar contraseña",
+          "hide": "Ocultar",
+          "show": "Mostrar"
+        },
+        "validation": {
+          "email": "Introduce un correo electrónico válido.",
+          "usernameAvailable": "Este nombre de usuario está disponible."
+        },
+        "sizes": { "small": "Pequeña", "medium": "Mediana", "large": "Grande" }
+      },
+      "select": {
+        "sections": {
+          "basic": "Selección básica",
+          "multiple": "Selección múltiple",
+          "variants": "Variantes semánticas",
+          "sizes": "Tamaños",
+          "singlePlaceholder": "Selección simple con marcador",
+          "multiplePlaceholder": "Selección múltiple con marcador",
+          "customOption": "Renderizado personalizado de opciones",
+          "customSelected": "Renderizado personalizado de selección",
+          "limit": "Límite máximo de selección",
+          "runtime": "Activación / desactivación dinámica"
+        },
+        "headings": {
+          "singleSizes": "Tamaños de selección simple",
+          "multipleSizes": "Tamaños de selección múltiple"
+        },
+        "labels": {
+          "singleSize": "Selección {size}",
+          "multipleSize": "Selección {size} con etiquetas"
+        },
+        "placeholders": {
+          "state": "Selecciona un estado",
+          "people": "Elige personas",
+          "customer": "Elige un cliente",
+          "client": "Elige un cliente"
+        },
+        "roles": {
+          "designer": "Diseñador",
+          "developer": "Desarrollador",
+          "productManager": "Gerente de producto",
+          "researcher": "Investigador",
+          "supportLead": "Responsable de soporte"
+        },
+        "actions": { "enable": "Habilitar", "disable": "Deshabilitar" }
+      },
+      "range": {
+        "sections": {
+          "basic": "Rango básico",
+          "sizes": "Tamaños",
+          "variants": "Variantes semánticas",
+          "limits": "Ejemplos mín. / máx.",
+          "steps": "Ejemplos de pasos",
+          "disabled": "Deshabilitado",
+          "labels": "Con etiquetas",
+          "helper": "Con texto de ayuda",
+          "validation": "Estados de validación",
+          "value": "Visualización del valor",
+          "styling": "Estilo redondeado y cuadrado",
+          "tooltip": "Información del control deslizante",
+          "colors": "Controles de selección de color",
+          "linked": "Controles vinculados y bloqueables",
+          "toggle": "Interruptor deslizante",
+          "pips": "Marcas clicables",
+          "softLimits": "Límites flexibles",
+          "runtime": "Estado deshabilitado dinámico"
+        },
+        "labels": {
+          "small": "Rango pequeño",
+          "medium": "Rango mediano",
+          "large": "Rango grande",
+          "temperature": "Temperatura (-50 a 50)",
+          "budget": "Presupuesto (100 a 1000)",
+          "halfSteps": "Medios pasos",
+          "quarterSteps": "Pasos de cuarto",
+          "disabled": "Rango deshabilitado",
+          "readonly": "Rango de solo lectura",
+          "volume": "Volumen",
+          "brightness": "Brillo",
+          "profileCompleteness": "Completitud del perfil",
+          "riskThreshold": "Umbral de riesgo",
+          "qualityTarget": "Objetivo de calidad",
+          "completion": "Progreso",
+          "roundedThumb": "Control redondeado",
+          "squareThumb": "Control cuadrado",
+          "linkedA": "Control vinculado A",
+          "linkedB": "Control vinculado B",
+          "toggle": "Interruptor deslizante",
+          "clickMarker": "Haz clic en una marca para mover",
+          "softLimits": "Límites flexibles",
+          "runtime": "Estado deshabilitado dinámico"
+        },
+        "helpers": {
+          "completionTarget": "Mueve el control para elegir el objetivo de progreso.",
+          "valueUpdates": "El valor mostrado se actualiza al mover el control.",
+          "softLimits": "Recomendado: 20–80. El rango completo 0–100 sigue disponible."
+        },
+        "validation": {
+          "maximum": "Elige un valor de 80 o inferior.",
+          "recommended": "Este objetivo está dentro del rango recomendado.",
+          "outsideRecommended": "Fuera del rango recomendado de 20–80."
+        },
+        "colors": { "red": "Rojo", "green": "Verde", "blue": "Azul" },
+        "actions": {
+          "lock": "Bloquear controles",
+          "unlock": "Desbloquear controles",
+          "enable": "Habilitar rango",
+          "disable": "Deshabilitar rango"
+        },
+        "values": {
+          "low": "Bajo",
+          "medium": "Medio",
+          "high": "Alto",
+          "on": "Activado",
+          "off": "Desactivado"
+        }
+      },
+      "rangeSlider": {
+        "sections": {
+          "basic": "Básico",
+          "sizes": "Tamaños",
+          "variants": "Variantes semánticas",
+          "connected": "Pista conectada",
+          "tooltips": "Información emergente",
+          "formatted": "Valores formateados",
+          "vertical": "Vertical",
+          "minimumDistance": "Distancia mínima",
+          "maximumDistance": "Distancia máxima",
+          "softLimits": "Límites flexibles",
+          "ticks": "Marcas clicables",
+          "disabled": "Deshabilitado",
+          "validation": "Validación",
+          "runtime": "Cambios de estado dinámicos",
+          "thumbs": "Controles"
+        },
+        "labels": {
+          "price": "Rango de precios",
+          "connected": "Arrastra cualquier control, la pista o la selección conectada",
+          "perHandleTooltips": "Información por control",
+          "mergeTooltips": "Combinar información cercana",
+          "budget": "Presupuesto",
+          "vertical": "Intervalo vertical",
+          "secondaryVertical": "Intervalo vertical secundario",
+          "minimumDistance": "Al menos 20 unidades de separación",
+          "maximumDistance": "Como máximo 30 unidades de separación",
+          "recommended": "Intervalo recomendado",
+          "clickMarker": "Haz clic en una marca para mover el control más cercano",
+          "disabled": "Selección deshabilitada",
+          "delivery": "Ventana de entrega",
+          "confidence": "Intervalo de confianza",
+          "runtime": "Selección controlada dinámicamente",
+          "defaultHandles": "Controles cuadrados predeterminados",
+          "indicatorHandles": "Controles con indicador"
+        },
+        "helpers": {
+          "minimumDistance": "Los controles no pueden acercarse a menos de 20 unidades.",
+          "maximumDistance": "Los controles permanecen a menos de 30 unidades entre sí.",
+          "softLimits": "Los valores se ajustan entre 20 y 80 cuando termina la interacción."
+        },
+        "validation": {
+          "narrower": "Elige una ventana de entrega más estrecha.",
+          "recommended": "Este intervalo cumple la recomendación."
+        },
+        "actions": { "enable": "Habilitar control", "disable": "Deshabilitar control" },
+        "sizes": { "small": "Pequeño", "medium": "Mediano", "large": "Grande" }
       }
     },
     "advanced-ui": {

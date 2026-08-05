@@ -2,7 +2,8 @@
   "common": {
     "actions": {
       "close": "بستن",
-      "copy": "کپی"
+      "copy": "کپی",
+      "hide": "پنهان کردن"
     }
   },
   "variants": {

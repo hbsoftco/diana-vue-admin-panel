@@ -2,7 +2,8 @@
   "common": {
     "actions": {
       "close": "Close",
-      "copy": "Copy"
+      "copy": "Copy",
+      "hide": "Hide"
     }
   },
   "variants": {

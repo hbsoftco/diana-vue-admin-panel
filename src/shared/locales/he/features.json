@@ -45,7 +45,32 @@
         "inputHelp": "טבעות מיקוד משתמשות בווריאציה שקופה של הצבע הסמנטי."
       }
     },
-    "ui-elements": {
+    "uiElements": {
+      "comingSoon": "הדגמת הרכיב {name} תגיע בקרוב...",
+      "cards": {
+        "shoesAlt": "נעליים",
+        "title": "כותרת הכרטיס",
+        "description": "כרטיס כולל איור, גוף, כותרת ופעולות.",
+        "lastUpdated": "עודכן לאחרונה לפני 3 דקות",
+        "header": "כותרת עליונה",
+        "sampleDescription": "כרטיס לדוגמה זה מציג תוכן תומך ופעולות.",
+        "readMore": "קרא עוד",
+        "defaultButtons": "כפתורי ברירת מחדל",
+        "showCode": "הצג קוד",
+        "example": "דוגמה"
+      },
+      "dropdowns": {
+        "dashboard": "לוח בקרה",
+        "profile": "פרופיל",
+        "messages": "הודעות",
+        "settings": "הגדרות",
+        "help": "עזרה",
+        "logout": "יציאה",
+        "userMenu": "תפריט משתמש",
+        "openMenu": "פתח תפריט משתמש",
+        "userAvatar": "תמונת משתמש",
+        "lastLogin": "כניסה אחרונה: לפני שעתיים"
+      },
       "popover": {
         "basic": "חלונית קופצת בסיסית",
         "titleSupport": "חלונית עם כותרת",
@@ -87,13 +112,60 @@
         "showPositioned": "הצגת הודעה בראש ההתחלה",
         "close": "סגירת ההודעה",
         "undo": "ביטול",
+        "sections": {
+          "live": "דוגמה חיה",
+          "basic": "דוגמה בסיסית",
+          "action": "התראה עם פעולה מותאמת",
+          "colors": "ערכות צבעים",
+          "fragment": "התראה עם מקטע מותאם",
+          "clickable": "התראה לחיצה",
+          "variants": "וריאציות התראה",
+          "solid": "התראה עם רקע מלא",
+          "position": "מיקום ההתראה",
+          "persistent": "פתיחה והסתרה של התראה"
+        },
+        "actions": {
+          "showFragment": "הצג התראה מותאמת",
+          "showClickable": "פתח התראה לחיצה",
+          "showText": "פתח טקסט",
+          "showFilled": "פתח מלא",
+          "showOutlined": "פתח מתאר",
+          "view": "הצג"
+        },
+        "colors": { "dark": "כהה", "danger": "סכנה" },
+        "positions": {
+          "topStart": "למעלה התחלה",
+          "topLeft": "למעלה שמאל",
+          "topCenter": "למעלה מרכז",
+          "topRight": "למעלה ימין",
+          "topEnd": "למעלה סוף",
+          "bottomStart": "למטה התחלה",
+          "bottomLeft": "למטה שמאל",
+          "bottomCenter": "למטה מרכז",
+          "bottomRight": "למטה ימין",
+          "bottomEnd": "למטה סוף"
+        },
         "messages": {
           "saved": "ההגדרות שלך נשמרו.",
           "variant": "הודעה זו משתמשת בווריאנט סמנטי.",
           "attention": "נדרשת תשומת לב",
           "persistent": "הודעה זו נשארת עד שתסגור אותה.",
           "action": "הפריט הועבר לארכיון.",
-          "position": "הודעה זו ממוקמת בראש ההתחלה."
+          "position": "תצוגה מקדימה של המיקום",
+          "warning": "שים לב! זוהי הודעת אזהרה.",
+          "error": "שלום! זוהי הודעת שגיאה.",
+          "info": "שלום! זוהי הודעת מידע.",
+          "basic": "שלום! זוהי הודעת התראה.",
+          "inbox": "יש לי הודעה עבורך",
+          "clickable": "לחץ על ההתראה כדי לסגור אותה.",
+          "text": "התראת טקסט רגילה",
+          "filled": "התראת מידע מלאה",
+          "outlined": "התראת הצלחה עם מתאר",
+          "neutral": "התראה מלאה רגילה",
+          "reactorStarted": "הכור הופעל בהצלחה",
+          "reactorOptimal": "הכור פועל בטמפרטורה מיטבית",
+          "reactorWarning": "טמפרטורת הכור חורגת מהטווח המיטבי",
+          "reactorDanger": "התכת הכור קרובה"
         }
       },
       "pagination": {
@@ -143,6 +215,208 @@
         "indeterminate": "לא מוגדר",
         "iconToggle": "התכונה פעילה",
         "example": "מתג לדוגמה"
+      }
+    },
+    "forms": {
+      "inputs": {
+        "sections": {
+          "basic": "שדות קלט בסיסיים",
+          "types": "סוגי קלט",
+          "sizes": "גדלים",
+          "states": "מושבת ולקריאה בלבד",
+          "slots": "חריצי קידומת וסיומת",
+          "validation": "מצבי אימות",
+          "variants": "וריאנטים סמנטיים"
+        },
+        "labels": {
+          "fullName": "שם מלא",
+          "email": "כתובת דוא״ל",
+          "emailShort": "דוא״ל",
+          "text": "טקסט",
+          "password": "סיסמה",
+          "number": "מספר",
+          "search": "חיפוש",
+          "telephone": "טלפון",
+          "small": "שדה קטן",
+          "medium": "שדה בינוני",
+          "large": "שדה גדול",
+          "disabled": "שדה מושבת",
+          "readonly": "שדה לקריאה בלבד",
+          "loading": "שדה בטעינה",
+          "emailError": "דוא״ל עם שגיאה",
+          "usernameSuccess": "שם משתמש תקין",
+          "passwordGuidance": "הנחיות לסיסמה"
+        },
+        "placeholders": {
+          "name": "הזן את שמך",
+          "text": "קלט טקסט",
+          "password": "סיסמה",
+          "search": "חיפוש",
+          "loading": "טוען את פרטי החשבון",
+          "projects": "חיפוש פרויקטים",
+          "enterPassword": "הזן סיסמה",
+          "focus": "התמקד לתצוגה מקדימה"
+        },
+        "helpers": {
+          "emailPrivacy": "לעולם לא נשתף את כתובת הדוא״ל שלך.",
+          "password": "השתמש בשמונה תווים לפחות."
+        },
+        "values": { "disabled": "ערך מושבת", "readonly": "ערך לקריאה בלבד" },
+        "actions": {
+          "hidePassword": "הסתר סיסמה",
+          "showPassword": "הצג סיסמה",
+          "hide": "הסתר",
+          "show": "הצג"
+        },
+        "validation": {
+          "email": "הזן כתובת דוא״ל תקינה.",
+          "usernameAvailable": "שם המשתמש הזה זמין."
+        },
+        "sizes": { "small": "קטן", "medium": "בינוני", "large": "גדול" }
+      },
+      "select": {
+        "sections": {
+          "basic": "בחירה בסיסית",
+          "multiple": "בחירה מרובה",
+          "variants": "וריאנטים סמנטיים",
+          "sizes": "גדלים",
+          "singlePlaceholder": "בחירה יחידה עם מציין מקום",
+          "multiplePlaceholder": "בחירה מרובה עם מציין מקום",
+          "customOption": "עיבוד אפשרות מותאם",
+          "customSelected": "עיבוד בחירה מותאם",
+          "limit": "מגבלת בחירה מרבית",
+          "runtime": "הפעלה והשבתה בזמן ריצה"
+        },
+        "headings": { "singleSizes": "גדלי בחירה יחידה", "multipleSizes": "גדלי בחירה מרובה" },
+        "labels": { "singleSize": "בחירה {size}", "multipleSize": "בחירה {size} עם תגיות" },
+        "placeholders": {
+          "state": "בחר מדינה",
+          "people": "בחר אנשים",
+          "customer": "בחר לקוח",
+          "client": "בחר לקוח"
+        },
+        "roles": {
+          "designer": "מעצב",
+          "developer": "מפתח",
+          "productManager": "מנהל מוצר",
+          "researcher": "חוקר",
+          "supportLead": "מוביל תמיכה"
+        },
+        "actions": { "enable": "הפעל", "disable": "השבת" }
+      },
+      "range": {
+        "sections": {
+          "basic": "טווח בסיסי",
+          "sizes": "גדלים",
+          "variants": "וריאנטים סמנטיים",
+          "limits": "דוגמאות מינימום ומקסימום",
+          "steps": "דוגמאות צעדים",
+          "disabled": "מושבת",
+          "labels": "עם תוויות",
+          "helper": "עם טקסט עזרה",
+          "validation": "מצבי אימות",
+          "value": "תצוגת ערך",
+          "styling": "סגנון מעוגל ומרובע",
+          "tooltip": "תיאור כלי לידית",
+          "colors": "מחווני בחירת צבע",
+          "linked": "מחוונים מקושרים וננעלים",
+          "toggle": "מתג מחוון",
+          "pips": "סמנים לחיצים",
+          "softLimits": "גבולות רכים",
+          "runtime": "מצב מושבת בזמן ריצה"
+        },
+        "labels": {
+          "small": "טווח קטן",
+          "medium": "טווח בינוני",
+          "large": "טווח גדול",
+          "temperature": "טמפרטורה (-50 עד 50)",
+          "budget": "תקציב (100 עד 1000)",
+          "halfSteps": "חצאי צעדים",
+          "quarterSteps": "רבעי צעדים",
+          "disabled": "טווח מושבת",
+          "readonly": "טווח לקריאה בלבד",
+          "volume": "עוצמת קול",
+          "brightness": "בהירות",
+          "profileCompleteness": "שלמות הפרופיל",
+          "riskThreshold": "סף סיכון",
+          "qualityTarget": "יעד איכות",
+          "completion": "השלמה",
+          "roundedThumb": "ידית מעוגלת",
+          "squareThumb": "ידית מרובעת",
+          "linkedA": "פקד מקושר A",
+          "linkedB": "פקד מקושר B",
+          "toggle": "מתג מחוון",
+          "clickMarker": "לחץ על סמן כדי להזיז",
+          "softLimits": "גבולות רכים",
+          "runtime": "מצב מושבת בזמן ריצה"
+        },
+        "helpers": {
+          "completionTarget": "הזז את המחוון כדי לבחור את יעד ההשלמה.",
+          "valueUpdates": "הערך המוצג מתעדכן בעת הזזת המחוון.",
+          "softLimits": "מומלץ: 20–80. הטווח המלא 0–100 נשאר זמין."
+        },
+        "validation": {
+          "maximum": "בחר ערך של 80 ומטה.",
+          "recommended": "יעד זה נמצא בטווח המומלץ.",
+          "outsideRecommended": "מחוץ לטווח המומלץ של 20–80."
+        },
+        "colors": { "red": "אדום", "green": "ירוק", "blue": "כחול" },
+        "actions": {
+          "lock": "נעל פקדים",
+          "unlock": "בטל נעילת פקדים",
+          "enable": "הפעל טווח",
+          "disable": "השבת טווח"
+        },
+        "values": { "low": "נמוך", "medium": "בינוני", "high": "גבוה", "on": "פעיל", "off": "כבוי" }
+      },
+      "rangeSlider": {
+        "sections": {
+          "basic": "בסיסי",
+          "sizes": "גדלים",
+          "variants": "וריאנטים סמנטיים",
+          "connected": "מסילה מחוברת",
+          "tooltips": "תיאורי כלי",
+          "formatted": "ערכים מעוצבים",
+          "vertical": "אנכי",
+          "minimumDistance": "מרחק מזערי",
+          "maximumDistance": "מרחק מרבי",
+          "softLimits": "גבולות רכים",
+          "ticks": "סימונים לחיצים",
+          "disabled": "מושבת",
+          "validation": "אימות",
+          "runtime": "שינויי מצב בזמן ריצה",
+          "thumbs": "ידיות"
+        },
+        "labels": {
+          "price": "טווח מחירים",
+          "connected": "גרור ידית, מסילה או את הבחירה המחוברת",
+          "perHandleTooltips": "תיאור כלי לכל ידית",
+          "mergeTooltips": "מזג תיאורי כלי סמוכים",
+          "budget": "תקציב",
+          "vertical": "מרווח אנכי",
+          "secondaryVertical": "מרווח אנכי משני",
+          "minimumDistance": "לפחות 20 יחידות מרחק",
+          "maximumDistance": "לכל היותר 30 יחידות מרחק",
+          "recommended": "מרווח מומלץ",
+          "clickMarker": "לחץ על סמן כדי להזיז את הידית הקרובה",
+          "disabled": "בחירה מושבתת",
+          "delivery": "חלון משלוח",
+          "confidence": "רווח סמך",
+          "runtime": "בחירה נשלטת בזמן ריצה",
+          "defaultHandles": "ידיות מרובעות כברירת מחדל",
+          "indicatorHandles": "ידיות עם מחוון גרירה"
+        },
+        "helpers": {
+          "minimumDistance": "הידיות אינן יכולות להתקרב לפחות מ-20 יחידות.",
+          "maximumDistance": "הידיות נשארות במרחק של עד 30 יחידות זו מזו.",
+          "softLimits": "הערכים מתייצבים בטווח 20–80 בסיום האינטראקציה."
+        },
+        "validation": {
+          "narrower": "בחר חלון משלוח צר יותר.",
+          "recommended": "מרווח זה עומד בהמלצה."
+        },
+        "actions": { "enable": "הפעל מחוון", "disable": "השבת מחוון" },
+        "sizes": { "small": "קטן", "medium": "בינוני", "large": "גדול" }
       }
     },
     "advanced-ui": {

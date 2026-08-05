@@ -1,27 +1,38 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 
 const selected = ref(null)
+const { t } = useI18n()
 
-const menuOptions = [
-  { label: 'Dashboard', value: 'dashboard', icon: 'i-mdi-view-dashboard' },
-  { label: 'Profile', value: 'profile', icon: 'i-mdi-account' },
-  { label: 'Messages', value: 'messages', icon: 'i-mdi-message', badge: '3' },
+const menuOptions = computed(() => [
+  {
+    label: t('features.uiElements.dropdowns.dashboard'),
+    value: 'dashboard',
+    icon: 'i-mdi-view-dashboard',
+  },
+  { label: t('features.uiElements.dropdowns.profile'), value: 'profile', icon: 'i-mdi-account' },
+  {
+    label: t('features.uiElements.dropdowns.messages'),
+    value: 'messages',
+    icon: 'i-mdi-message',
+    badge: '3',
+  },
   { divider: true },
-  { label: 'Settings', value: 'settings', icon: 'i-mdi-cog' },
-  { label: 'Help', value: 'help', icon: 'i-mdi-help-circle' },
+  { label: t('features.uiElements.dropdowns.settings'), value: 'settings', icon: 'i-mdi-cog' },
+  { label: t('features.uiElements.dropdowns.help'), value: 'help', icon: 'i-mdi-help-circle' },
   { divider: true },
-  { label: 'Logout', value: 'logout', icon: 'i-mdi-logout' },
-]
+  { label: t('features.uiElements.dropdowns.logout'), value: 'logout', icon: 'i-mdi-logout' },
+])
 </script>
 
 <template>
   <DiDropdown
     v-model="selected"
     :options="menuOptions"
-    header="User Menu"
+    :header="$t('features.uiElements.dropdowns.userMenu')"
     footer="Version 1.0.0"
     :show-header-divider="true"
     :show-footer-divider="true"
@@ -30,7 +41,10 @@ const menuOptions = [
     align="start"
   >
     <template #trigger>
-      <button class="btn btn-ghost btn-circle">
+      <button
+        class="btn btn-ghost btn-circle"
+        :aria-label="$t('features.uiElements.dropdowns.openMenu')"
+      >
         <i-mdi-dots-vertical class="text-xl" />
       </button>
     </template>
@@ -39,7 +53,10 @@ const menuOptions = [
       <div class="flex items-center gap-3 px-4 py-3">
         <div class="avatar">
           <div class="w-10 rounded-full">
-            <img src="@assets/images/user.png" alt="User">
+            <img
+              src="@assets/images/user.png"
+              :alt="$t('features.uiElements.dropdowns.userAvatar')"
+            >
           </div>
         </div>
         <div>
@@ -53,10 +70,10 @@ const menuOptions = [
       </div>
     </template>
 
-    <template #option="{ option, select, selected }">
+    <template #option="{ option, select, selected: isSelected }">
       <button
         class="flex items-center gap-3 w-full"
-        :class="{ 'bg-base-200': selected }"
+        :class="{ 'bg-base-200': isSelected }"
         @click="select"
       >
         <component :is="option.icon" class="text-lg" />
@@ -69,7 +86,7 @@ const menuOptions = [
 
     <template #footer>
       <div class="px-4 py-2 text-xs text-center opacity-60">
-        Last login: 2 hours ago
+        {{ $t('features.uiElements.dropdowns.lastLogin') }}
       </div>
     </template>
   </DiDropdown>

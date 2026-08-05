@@ -131,7 +131,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
 <template>
   <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.basic')"
+      :title="$t('features.uiElements.progress.basic')"
       :code="basicCode"
       language="html"
     >
@@ -145,7 +145,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.colors')"
+      :title="$t('features.uiElements.progress.colors')"
       :code="colorsCode"
       language="html"
     >
@@ -159,7 +159,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.striped')"
+      :title="$t('features.uiElements.progress.striped')"
       :code="stripedCode"
       language="html"
     >
@@ -203,7 +203,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.heights')"
+      :title="$t('features.uiElements.progress.heights')"
       :code="heightsCode"
       language="html"
     >
@@ -229,7 +229,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.labels')"
+      :title="$t('features.uiElements.progress.labels')"
       :code="labelsCode"
       language="html"
     >
@@ -273,7 +273,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.vertical')"
+      :title="$t('features.uiElements.progress.vertical')"
       :code="verticalCode"
       language="html"
     >
@@ -320,7 +320,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.animatedStriped')"
+      :title="$t('features.uiElements.progress.animatedStriped')"
       :code="animatedCode"
       language="html"
     >
@@ -369,7 +369,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.determinate')"
+      :title="$t('features.uiElements.progress.determinate')"
       :code="determinateCode"
       language="html"
     >
@@ -400,7 +400,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.customAnimated')"
+      :title="$t('features.uiElements.progress.customAnimated')"
       :code="dottedCode"
       language="html"
     >
@@ -449,13 +449,15 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.named')"
+      :title="$t('features.uiElements.progress.named')"
       :code="namedCode"
       language="html"
     >
       <div class="space-y-8">
         <div class="flex items-center gap-3">
-          <DiBadge class="min-w-20" variant="primary" size="sm">Mobile</DiBadge>
+          <DiBadge class="min-w-20" variant="primary" size="sm">
+            Mobile
+          </DiBadge>
           <DiProgress
             class="w-full"
             :value="50"
@@ -463,15 +465,17 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
             label-position="end"
             aria-label="Mobile 50%"
           >
-            <template #value-label="{ percentage }"
-              ><DiBadge class="-translate-y-5" variant="primary" size="sm"
-                >{{ Math.round(percentage) }}%</DiBadge
-              ></template
-            >
+            <template #value-label="{ percentage }">
+              <DiBadge class="-translate-y-5" variant="primary" size="sm">
+                {{ Math.round(percentage) }}%
+              </DiBadge>
+            </template>
           </DiProgress>
         </div>
         <div class="flex items-center gap-3">
-          <DiBadge class="min-w-20" variant="info" size="sm">Watches</DiBadge>
+          <DiBadge class="min-w-20" variant="info" size="sm">
+            Watches
+          </DiBadge>
           <DiProgress
             class="w-full"
             :value="60"
@@ -479,15 +483,17 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
             label-position="end"
             aria-label="Watches 60%"
           >
-            <template #value-label="{ percentage }"
-              ><DiBadge class="-translate-y-5" variant="info" size="sm"
-                >{{ Math.round(percentage) }}%</DiBadge
-              ></template
-            >
+            <template #value-label="{ percentage }">
+              <DiBadge class="-translate-y-5" variant="info" size="sm">
+                {{ Math.round(percentage) }}%
+              </DiBadge>
+            </template>
           </DiProgress>
         </div>
         <div class="flex items-center gap-3">
-          <DiBadge class="min-w-20" variant="success" size="sm">Shirts</DiBadge>
+          <DiBadge class="min-w-20" variant="success" size="sm">
+            Shirts
+          </DiBadge>
           <DiProgress
             class="w-full"
             :value="70"
@@ -495,18 +501,18 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
             label-position="end"
             aria-label="Shirts 70%"
           >
-            <template #value-label="{ percentage }"
-              ><DiBadge class="-translate-y-5" variant="success" size="sm"
-                >{{ Math.round(percentage) }}%</DiBadge
-              ></template
-            >
+            <template #value-label="{ percentage }">
+              <DiBadge class="-translate-y-5" variant="success" size="sm">
+                {{ Math.round(percentage) }}%
+              </DiBadge>
+            </template>
           </DiProgress>
         </div>
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.markers')"
+      :title="$t('features.uiElements.progress.markers')"
       :code="markersCode"
       language="html"
     >
@@ -550,7 +556,7 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
     </PreviewCodeCard>
 
     <PreviewCodeCard
-      :title="$t('features.ui-elements.progress.outlinedLabels')"
+      :title="$t('features.uiElements.progress.outlinedLabels')"
       :code="outlinedLabelsCode"
       language="html"
     >
@@ -563,11 +569,9 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           label-position="end"
           aria-label="50% complete"
         >
-          <template #value-label="{ percentage }"
-            ><span class="rounded-full border border-primary bg-base-100 px-2 py-0.5 text-primary"
-              >{{ Math.round(percentage) }}%</span
-            ></template
-          >
+          <template #value-label="{ percentage }">
+            <span class="rounded-full border border-primary bg-base-100 px-2 py-0.5 text-primary">{{ Math.round(percentage) }}%</span>
+          </template>
         </DiProgress>
         <DiProgress
           class="w-full"
@@ -577,11 +581,9 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           label-position="end"
           aria-label="60% complete"
         >
-          <template #value-label="{ percentage }"
-            ><span class="rounded-full border border-info bg-base-100 px-2 py-0.5 text-info"
-              >{{ Math.round(percentage) }}%</span
-            ></template
-          >
+          <template #value-label="{ percentage }">
+            <span class="rounded-full border border-info bg-base-100 px-2 py-0.5 text-info">{{ Math.round(percentage) }}%</span>
+          </template>
         </DiProgress>
         <DiProgress
           class="w-full"
@@ -591,11 +593,9 @@ const outlinedLabelsCode = `<div class="space-y-10 py-2">
           label-position="end"
           aria-label="70% complete"
         >
-          <template #value-label="{ percentage }"
-            ><span class="rounded-full border border-success bg-base-100 px-2 py-0.5 text-success"
-              >{{ Math.round(percentage) }}%</span
-            ></template
-          >
+          <template #value-label="{ percentage }">
+            <span class="rounded-full border border-success bg-base-100 px-2 py-0.5 text-success">{{ Math.round(percentage) }}%</span>
+          </template>
         </DiProgress>
       </div>
     </PreviewCodeCard>

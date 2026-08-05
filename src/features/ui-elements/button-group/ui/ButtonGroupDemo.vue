@@ -126,7 +126,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
   <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-12">
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.buttonGroup.basic')"
+      :title="$t('features.uiElements.buttonGroup.basic')"
       :code="basicCode"
       language="html"
     >
@@ -145,7 +145,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.buttonGroup.navigation')"
+      :title="$t('features.uiElements.buttonGroup.navigation')"
       :code="navigationCode"
       language="html"
     >
@@ -164,7 +164,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.buttonGroup.mixed')"
+      :title="$t('features.uiElements.buttonGroup.mixed')"
       :code="mixedCode"
       language="html"
     >
@@ -183,7 +183,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.buttonGroup.outline')"
+      :title="$t('features.uiElements.buttonGroup.outline')"
       :code="outlineCode"
       language="html"
     >
@@ -202,7 +202,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.icons')"
+      :title="$t('features.uiElements.buttonGroup.icons')"
       :code="iconCode"
       language="html"
     >
@@ -224,7 +224,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.outlined')"
+      :title="$t('features.uiElements.buttonGroup.outlined')"
       :code="outlinedCode"
       language="html"
     >
@@ -243,7 +243,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.sizing')"
+      :title="$t('features.uiElements.buttonGroup.sizing')"
       :code="sizingCode"
       language="html"
     >
@@ -280,7 +280,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-6 lg:row-span-2"
-      :title="$t('features.ui-elements.buttonGroup.vertical')"
+      :title="$t('features.uiElements.buttonGroup.vertical')"
       :code="verticalCode"
       language="html"
     >
@@ -309,7 +309,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.toolbar')"
+      :title="$t('features.uiElements.buttonGroup.toolbar')"
       :code="toolbarCode"
       language="vue"
     >
@@ -358,7 +358,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:order-2 lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.social')"
+      :title="$t('features.uiElements.buttonGroup.social')"
       :code="socialCode"
       language="html"
     >
@@ -379,7 +379,7 @@ const nestingCode = `<DiButtonGroup rounded aria-label="Nested actions">
 
     <PreviewCodeCard
       class="lg:order-1 lg:col-span-6"
-      :title="$t('features.ui-elements.buttonGroup.nesting')"
+      :title="$t('features.uiElements.buttonGroup.nesting')"
       :code="nestingCode"
       language="html"
     >

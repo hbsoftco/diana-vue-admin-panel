@@ -40,8 +40,8 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
   <DiIcon name="bell" size="2rem" />
   <DiIcon name="heart" color="orange" size="xl" />
   <DiIcon name="camera" color="#14b8a6" size="25px" />
-  <DiIcon name="calendarDays" color="warning" size="lg" title="Calendar" />
-  <DiIcon name="sun" color="warning" spin size="3rem" title="Calendar" />
+  <DiIcon name="calendarDays" color="warning" size="lg" :title="$t('features.uiElements.icons.calendar')" />
+  <DiIcon name="sun" color="warning" spin size="3rem" :title="$t('features.uiElements.icons.calendar')" />
   <DiIcon name="bell" size="2rem" :rotate="180" />
 </div>`
 </script>
@@ -50,7 +50,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Size Examples -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.iconSizes')"
+      :title="$t('features.uiElements.icons.iconSizes')"
       accent-color="#14b8a6"
       :code="sizeExamples"
       language="html"
@@ -62,7 +62,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
 
     <!-- Color Examples -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.iconColors')"
+      :title="$t('features.uiElements.icons.iconColors')"
       accent-color="#14b8a6"
       :code="colorExamples"
       language="html"
@@ -74,7 +74,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
 
     <!-- Spin & Pulse -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.spinAndPulse')"
+      :title="$t('features.uiElements.icons.spinAndPulse')"
       accent-color="#14b8a6"
       :code="animateExamples"
       language="html"
@@ -87,7 +87,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
 
     <!-- Rotate & Flip -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.rotateAndFlip')"
+      :title="$t('features.uiElements.icons.rotateAndFlip')"
       accent-color="#14b8a6"
       :code="transformExamples"
       language="html"
@@ -101,7 +101,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
 
     <!-- Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.iconsWithBadges')"
+      :title="$t('features.uiElements.icons.iconsWithBadges')"
       accent-color="#14b8a6"
       :code="badgeExamples"
       language="html"
@@ -116,7 +116,7 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
 
     <!-- Custom Icons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.icons.customIcons')"
+      :title="$t('features.uiElements.icons.customIcons')"
       accent-color="#14b8a6"
       :code="customExamples"
       language="html"
@@ -126,8 +126,19 @@ const customExamples = `<div class="flex flex-wrap gap-2 items-center">
         <DiIcon name="bell" size="2rem" />
         <DiIcon name="heart" color="orange" size="xl" />
         <DiIcon name="camera" color="#14b8a6" size="25px" />
-        <DiIcon name="calendarDays" color="warning" size="lg" title="Calendar" />
-        <DiIcon name="sun" color="warning" spin size="3rem" title="Calendar" />
+        <DiIcon
+          name="calendarDays"
+          color="warning"
+          size="lg"
+          :title="$t('features.uiElements.icons.calendar')"
+        />
+        <DiIcon
+          name="sun"
+          color="warning"
+          spin
+          size="3rem"
+          :title="$t('features.uiElements.icons.calendar')"
+        />
         <DiIcon name="bell" size="2rem" :rotate="180" />
       </div>
     </PreviewCodeCard>

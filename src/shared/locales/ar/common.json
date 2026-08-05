@@ -2,7 +2,19 @@
   "common": {
     "actions": {
       "close": "إغلاق",
-      "copy": "نسخ"
+      "copy": "نسخ",
+      "hide": "إخفاء"
     }
+  },
+  "variants": {
+    "primary": "أساسي",
+    "secondary": "ثانوي",
+    "info": "معلومات",
+    "accent": "مميز",
+    "success": "نجاح",
+    "warning": "تحذير",
+    "error": "خطأ",
+    "neutral": "محايد",
+    "link": "رابط"
   }
 }

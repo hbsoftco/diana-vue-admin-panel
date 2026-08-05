@@ -88,51 +88,51 @@ const longBreadcrumb = `<DiBreadcrumb :items="[
 
 // Sample data
 const basicItems: BreadcrumbItem[] = [
-  { label: t('features.ui-elements.breadcrumb.home'), to: '/' },
-  { label: t('features.ui-elements.breadcrumb.products'), to: '/products' },
-  { label: t('features.ui-elements.breadcrumb.electronics') },
+  { label: t('features.uiElements.breadcrumb.home'), to: '/' },
+  { label: t('features.uiElements.breadcrumb.products'), to: '/products' },
+  { label: t('features.uiElements.breadcrumb.electronics') },
 ]
 
 const itemsWithIcons: BreadcrumbItem[] = [
-  { label: t('features.ui-elements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
+  { label: t('features.uiElements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
   {
-    label: t('features.ui-elements.breadcrumb.settings'),
+    label: t('features.uiElements.breadcrumb.settings'),
     to: '/settings',
     icon: 'settingsOutlineRounded',
   },
-  { label: t('features.ui-elements.breadcrumb.profile'), icon: 'userOutlineRounded' },
+  { label: t('features.uiElements.breadcrumb.profile'), icon: 'userOutlineRounded' },
 ]
 
 const dashboardItems: BreadcrumbItem[] = [
-  { label: t('features.ui-elements.breadcrumb.dashboard'), to: '/dashboard' },
-  { label: t('features.ui-elements.breadcrumb.reports'), to: '/reports' },
-  { label: t('features.ui-elements.breadcrumb.monthly') },
+  { label: t('features.uiElements.breadcrumb.dashboard'), to: '/dashboard' },
+  { label: t('features.uiElements.breadcrumb.reports'), to: '/reports' },
+  { label: t('features.uiElements.breadcrumb.monthly') },
 ]
 
 const projectItems: BreadcrumbItem[] = [
   {
-    label: t('features.ui-elements.breadcrumb.projects'),
+    label: t('features.uiElements.breadcrumb.projects'),
     to: '/projects',
     icon: 'folderOutlineRounded',
   },
-  { label: t('features.ui-elements.breadcrumb.webDevelopment'), to: '/projects/web' },
-  { label: t('features.ui-elements.breadcrumb.adminDashboard'), icon: 'dashboardOutlineRounded' },
+  { label: t('features.uiElements.breadcrumb.webDevelopment'), to: '/projects/web' },
+  { label: t('features.uiElements.breadcrumb.adminDashboard'), icon: 'dashboardOutlineRounded' },
 ]
 
 const singleItemData: BreadcrumbItem[] = [
-  { label: t('features.ui-elements.breadcrumb.currentPage') },
+  { label: t('features.uiElements.breadcrumb.currentPage') },
 ]
 
 const longItems: BreadcrumbItem[] = [
-  { label: t('features.ui-elements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
-  { label: t('features.ui-elements.breadcrumb.products'), to: '/products' },
-  { label: t('features.ui-elements.breadcrumb.electronics'), to: '/products/electronics' },
-  { label: t('features.ui-elements.breadcrumb.computers'), to: '/products/electronics/computers' },
+  { label: t('features.uiElements.breadcrumb.home'), to: '/', icon: 'homeOutlineRounded' },
+  { label: t('features.uiElements.breadcrumb.products'), to: '/products' },
+  { label: t('features.uiElements.breadcrumb.electronics'), to: '/products/electronics' },
+  { label: t('features.uiElements.breadcrumb.computers'), to: '/products/electronics/computers' },
   {
-    label: t('features.ui-elements.breadcrumb.laptops'),
+    label: t('features.uiElements.breadcrumb.laptops'),
     to: '/products/electronics/computers/laptops',
   },
-  { label: t('features.ui-elements.breadcrumb.gamingLaptops') },
+  { label: t('features.uiElements.breadcrumb.gamingLaptops') },
 ]
 </script>
 
@@ -140,7 +140,7 @@ const longItems: BreadcrumbItem[] = [
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Default Breadcrumb -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.defaultBreadcrumb')"
+      :title="$t('features.uiElements.breadcrumb.defaultBreadcrumb')"
       accent-color="#14b8a6"
       :code="defaultBreadcrumb"
       language="html"
@@ -150,7 +150,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Single Item -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.singleItem')"
+      :title="$t('features.uiElements.breadcrumb.singleItem')"
       accent-color="#14b8a6"
       :code="singleItem"
       language="html"
@@ -160,7 +160,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Breadcrumb with Icons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.breadcrumbWithIcons')"
+      :title="$t('features.uiElements.breadcrumb.breadcrumbWithIcons')"
       accent-color="#14b8a6"
       :code="breadcrumbWithIcons"
       language="html"
@@ -170,7 +170,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Breadcrumb with Home Icon -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.breadcrumbWithHome')"
+      :title="$t('features.uiElements.breadcrumb.breadcrumbWithHome')"
       accent-color="#14b8a6"
       :code="breadcrumbWithHome"
       language="html"
@@ -180,7 +180,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Custom Separators -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.customSeparators')"
+      :title="$t('features.uiElements.breadcrumb.customSeparators')"
       accent-color="#14b8a6"
       :code="customSeparator"
       language="html"
@@ -197,7 +197,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Breadcrumb Variants -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.breadcrumbVariants')"
+      :title="$t('features.uiElements.breadcrumb.breadcrumbVariants')"
       accent-color="#14b8a6"
       :code="breadcrumbVariants"
       language="html"
@@ -216,7 +216,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Complex Example -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.complexBreadcrumb')"
+      :title="$t('features.uiElements.breadcrumb.complexBreadcrumb')"
       accent-color="#14b8a6"
       :code="complexBreadcrumb"
       language="html"
@@ -227,7 +227,7 @@ const longItems: BreadcrumbItem[] = [
 
     <!-- Long Breadcrumb -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.breadcrumb.longBreadcrumb')"
+      :title="$t('features.uiElements.breadcrumb.longBreadcrumb')"
       accent-color="#14b8a6"
       :code="longBreadcrumb"
       language="html"

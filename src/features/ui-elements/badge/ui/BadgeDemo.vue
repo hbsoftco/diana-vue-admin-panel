@@ -4,7 +4,7 @@ import DiButton from '@/shared/ui/base/DiButton.vue'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 const defaultBadges = `<div class="flex flex-wrap gap-2 items-center">
-  <DiBadge>Badge</DiBadge>
+  <DiBadge>{{ $t('features.uiElements.badge.label') }}</DiBadge>
 </div>`
 
 const badgeSizes = `<div class="flex flex-wrap gap-2 items-center">
@@ -280,7 +280,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Badge Sizes -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeSizes')"
+      :title="$t('features.uiElements.badge.badgeSizes')"
       accent-color="#14b8a6"
       :code="badgeSizes"
       language="html"
@@ -306,7 +306,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Empty Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.emptyBadges')"
+      :title="$t('features.uiElements.badge.emptyBadges')"
       accent-color="#14b8a6"
       :code="emptyBadges"
       language="html"
@@ -321,7 +321,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Normal Colored Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.coloredBadges')"
+      :title="$t('features.uiElements.badge.coloredBadges')"
       accent-color="#14b8a6"
       :code="coloredBadges"
       language="html"
@@ -356,7 +356,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Pill Colored Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.coloredBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.coloredBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="coloredPillBadges"
       language="html"
@@ -391,7 +391,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Normal Soft Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.softBadges')"
+      :title="$t('features.uiElements.badge.softBadges')"
       accent-color="#14b8a6"
       :code="softBadges"
       language="html"
@@ -423,7 +423,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Pill Soft Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.softBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.softBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="softPillBadges"
       language="html"
@@ -455,7 +455,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Normal Outline Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.outlineBadges')"
+      :title="$t('features.uiElements.badge.outlineBadges')"
       accent-color="#14b8a6"
       :code="outlineBadges"
       language="html"
@@ -487,7 +487,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Pill Outline Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.outlineBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.outlineBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="outlinePillBadges"
       language="html"
@@ -519,7 +519,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Normal Dash Badges -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.dashBadges')"
+      :title="$t('features.uiElements.badge.dashBadges')"
       accent-color="#14b8a6"
       :code="dashBadges"
       language="html"
@@ -551,7 +551,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Pill Dash Badges -->
     <PreviewCodeCard
-      :title="`${$t('features.ui-elements.badge.dashBadges')} (Pill)`"
+      :title="`${$t('features.uiElements.badge.dashBadges')} (Pill)`"
       accent-color="#14b8a6"
       :code="dashPillBadges"
       language="html"
@@ -583,7 +583,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Ghost Badge -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.ghostBadge')"
+      :title="$t('features.uiElements.badge.ghostBadge')"
       accent-color="#14b8a6"
       :code="ghostBadge"
       language="html"
@@ -597,19 +597,19 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Default Badge -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.defaultBadge')"
+      :title="$t('features.uiElements.badge.defaultBadge')"
       accent-color="#14b8a6"
       :code="defaultBadges"
       language="html"
     >
       <div class="flex flex-wrap gap-2 items-center">
-        <DiBadge>Badge</DiBadge>
+        <DiBadge>{{ $t('features.uiElements.badge.label') }}</DiBadge>
       </div>
     </PreviewCodeCard>
 
     <!-- Default Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.defaultButtons')"
+      :title="$t('features.uiElements.buttons.defaultButtons')"
       accent-color="#14b8a6"
       :code="defaultButtons"
       language="html"
@@ -706,7 +706,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Badge with Icons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeWithIcons')"
+      :title="$t('features.uiElements.badge.badgeWithIcons')"
       accent-color="#14b8a6"
       :code="badgeWithIcons"
       language="html"
@@ -784,7 +784,7 @@ const defaultButtons = `<div class="flex flex-wrap gap-2">
 
     <!-- Badge in Text -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.badge.badgeInText')"
+      :title="$t('features.uiElements.badge.badgeInText')"
       accent-color="#14b8a6"
       :code="badgeInText"
       language="html"

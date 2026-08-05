@@ -402,7 +402,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
     <!-- Default Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.defaultButtons')"
+      :title="$t('features.uiElements.buttons.defaultButtons')"
       accent-color="#14b8a6"
       :code="defaultButtons"
       language="html"
@@ -437,7 +437,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Default Rounded Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.roundedButtons')"
+      :title="$t('features.uiElements.buttons.roundedButtons')"
       accent-color="#14b8a6"
       :code="roundedButtons"
       language="html"
@@ -472,7 +472,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Soft Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.softButtons')"
+      :title="$t('features.uiElements.buttons.softButtons')"
       accent-color="#14b8a6"
       :code="softButtons"
       language="html"
@@ -507,7 +507,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Soft Rounded Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.softRoundedButtons')"
+      :title="$t('features.uiElements.buttons.softRoundedButtons')"
       accent-color="#14b8a6"
       :code="softRoundedButtons"
       language="html"
@@ -542,7 +542,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Outline Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.outlineButtons')"
+      :title="$t('features.uiElements.buttons.outlineButtons')"
       accent-color="#14b8a6"
       :code="outlineButtons"
       language="html"
@@ -577,7 +577,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Outline Rounded Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.outlineRoundedButtons')"
+      :title="$t('features.uiElements.buttons.outlineRoundedButtons')"
       accent-color="#14b8a6"
       :code="outlineRoundedButtons"
       language="html"
@@ -612,7 +612,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Gradient Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.gradientButtons')"
+      :title="$t('features.uiElements.buttons.gradientButtons')"
       accent-color="#14b8a6"
       :code="gradientButtons"
       language="html"
@@ -647,7 +647,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Gradient Rounded Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.gradientRoundedButtons')"
+      :title="$t('features.uiElements.buttons.gradientRoundedButtons')"
       accent-color="#14b8a6"
       :code="gradientRoundedButtons"
       language="html"
@@ -682,7 +682,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Dash Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.dashButtons')"
+      :title="$t('features.uiElements.buttons.dashButtons')"
       accent-color="#14b8a6"
       :code="dashButtons"
       language="html"
@@ -717,7 +717,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Dash Rounded Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.dashRoundedButtons')"
+      :title="$t('features.uiElements.buttons.dashRoundedButtons')"
       accent-color="#14b8a6"
       :code="dashRoundedButtons"
       language="html"
@@ -752,7 +752,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- HTML tags -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.htmlTags')"
+      :title="$t('features.uiElements.buttons.htmlTags')"
       accent-color="#14b8a6"
       :code="htmlTags"
       language="html"
@@ -779,7 +779,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Disabled Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.disabledButtons')"
+      :title="$t('features.uiElements.buttons.disabledButtons')"
       accent-color="#14b8a6"
       :code="disabledButtons"
       language="html"
@@ -814,7 +814,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Loading Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.loadingButtons')"
+      :title="$t('features.uiElements.buttons.loadingButtons')"
       accent-color="#14b8a6"
       :code="loadingButtons"
       language="html"
@@ -849,7 +849,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Wide Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.wideButtons')"
+      :title="$t('features.uiElements.buttons.wideButtons')"
       accent-color="#14b8a6"
       :code="wideButtons"
       language="html"
@@ -866,7 +866,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Icon Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.iconButtons')"
+      :title="$t('features.uiElements.buttons.iconButtons')"
       accent-color="#14b8a6"
       :code="iconButtons"
       language="html"
@@ -889,7 +889,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Icon Circle Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.iconCircleButtons')"
+      :title="$t('features.uiElements.buttons.iconCircleButtons')"
       accent-color="#14b8a6"
       :code="iconCircleButtons"
       language="html"
@@ -912,7 +912,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Icon Outline Circle Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.iconOutlineCircleButtons')"
+      :title="$t('features.uiElements.buttons.iconOutlineCircleButtons')"
       accent-color="#14b8a6"
       :code="iconOutlineCircleButtons"
       language="html"
@@ -935,7 +935,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Block Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.blockButtons')"
+      :title="$t('features.uiElements.buttons.blockButtons')"
       accent-color="#14b8a6"
       :code="blockButtons"
       language="html"
@@ -949,7 +949,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Button Sizes -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.buttonSizes')"
+      :title="$t('features.uiElements.buttons.buttonSizes')"
       accent-color="#14b8a6"
       :code="buttonSizes"
       language="html"
@@ -975,7 +975,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Button with Icon -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.buttonWithIcon')"
+      :title="$t('features.uiElements.buttons.buttonWithIcon')"
       accent-color="#14b8a6"
       :code="buttonWithIcon"
       language="html"
@@ -1013,7 +1013,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Social Login Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.socialButtons')"
+      :title="$t('features.uiElements.buttons.socialButtons')"
       accent-color="#14b8a6"
       :code="socialButtons"
       language="html"
@@ -1121,7 +1121,7 @@ const socialIconButtons = `<div class="flex flex-wrap items-center gap-2">
 
     <!-- Social Buttons -->
     <PreviewCodeCard
-      :title="$t('features.ui-elements.buttons.socialIconButtons')"
+      :title="$t('features.uiElements.buttons.socialIconButtons')"
       accent-color="#14b8a6"
       :code="socialIconButtons"
       language="html"

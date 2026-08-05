@@ -45,7 +45,32 @@
         "inputHelp": "تستخدم حلقات التركيز تنويعاً شفافاً من اللون الدلالي."
       }
     },
-    "ui-elements": {
+    "uiElements": {
+      "comingSoon": "عرض مكوّن {name} قادم قريباً...",
+      "cards": {
+        "shoesAlt": "أحذية",
+        "title": "عنوان البطاقة",
+        "description": "تتضمن البطاقة صورة ومحتوى وعنواناً وإجراءات.",
+        "lastUpdated": "آخر تحديث قبل 3 دقائق",
+        "header": "رأس البطاقة",
+        "sampleDescription": "تعرض هذه البطاقة النموذجية محتوى وإجراءات إضافية.",
+        "readMore": "اقرأ المزيد",
+        "defaultButtons": "الأزرار الافتراضية",
+        "showCode": "إظهار الشفرة",
+        "example": "مثال"
+      },
+      "dropdowns": {
+        "dashboard": "لوحة المعلومات",
+        "profile": "الملف الشخصي",
+        "messages": "الرسائل",
+        "settings": "الإعدادات",
+        "help": "المساعدة",
+        "logout": "تسجيل الخروج",
+        "userMenu": "قائمة المستخدم",
+        "openMenu": "فتح قائمة المستخدم",
+        "userAvatar": "صورة المستخدم",
+        "lastLogin": "آخر تسجيل دخول: قبل ساعتين"
+      },
       "popover": {
         "basic": "نافذة منبثقة أساسية",
         "titleSupport": "نافذة منبثقة بعنوان",
@@ -87,13 +112,60 @@
         "showPositioned": "عرض إشعار أعلى البداية",
         "close": "إغلاق الإشعار",
         "undo": "تراجع",
+        "sections": {
+          "live": "مثال مباشر",
+          "basic": "مثال أساسي",
+          "action": "إشعار بإجراء مخصص",
+          "colors": "أنظمة الألوان",
+          "fragment": "إشعار بمحتوى مخصص",
+          "clickable": "إشعار قابل للنقر",
+          "variants": "أنماط الإشعار",
+          "solid": "إشعار بخلفية مصمتة",
+          "position": "موضع الإشعار",
+          "persistent": "فتح الإشعار وإخفاؤه"
+        },
+        "actions": {
+          "showFragment": "إظهار الإشعار المخصص",
+          "showClickable": "فتح الإشعار القابل للنقر",
+          "showText": "فتح النص",
+          "showFilled": "فتح المصمت",
+          "showOutlined": "فتح المحدد",
+          "view": "عرض"
+        },
+        "colors": { "dark": "داكن", "danger": "خطر" },
+        "positions": {
+          "topStart": "أعلى البداية",
+          "topLeft": "أعلى اليسار",
+          "topCenter": "أعلى الوسط",
+          "topRight": "أعلى اليمين",
+          "topEnd": "أعلى النهاية",
+          "bottomStart": "أسفل البداية",
+          "bottomLeft": "أسفل اليسار",
+          "bottomCenter": "أسفل الوسط",
+          "bottomRight": "أسفل اليمين",
+          "bottomEnd": "أسفل النهاية"
+        },
         "messages": {
           "saved": "تم حفظ إعداداتك.",
           "variant": "يستخدم هذا الإشعار نوعًا دلاليًا.",
           "attention": "يتطلب الانتباه",
           "persistent": "يبقى هذا الإشعار حتى تقوم بإغلاقه.",
           "action": "تم نقل العنصر إلى الأرشيف.",
-          "position": "تم وضع هذا الإشعار في أعلى البداية."
+          "position": "معاينة الموضع",
+          "warning": "تنبيه! هذه رسالة تحذير.",
+          "error": "مرحباً! هذه رسالة خطأ.",
+          "info": "مرحباً! هذه رسالة معلومات.",
+          "basic": "مرحباً! هذه رسالة إشعار.",
+          "inbox": "لدي رسالة لك",
+          "clickable": "انقر على هذا الإشعار لإغلاقه.",
+          "text": "إشعار نصي عادي",
+          "filled": "إشعار معلومات مصمت",
+          "outlined": "إشعار نجاح محدد",
+          "neutral": "إشعار مصمت عادي",
+          "reactorStarted": "تم تشغيل المفاعل بنجاح",
+          "reactorOptimal": "يعمل المفاعل بدرجة الحرارة المثلى",
+          "reactorWarning": "تتجاوز حرارة المفاعل النطاق الأمثل",
+          "reactorDanger": "انصهار المفاعل وشيك"
         }
       },
       "pagination": {
@@ -143,6 +215,217 @@
         "indeterminate": "غير محدد",
         "iconToggle": "الميزة مفعّلة",
         "example": "مفتاح تبديل تجريبي"
+      }
+    },
+    "forms": {
+      "inputs": {
+        "sections": {
+          "basic": "حقول الإدخال الأساسية",
+          "types": "أنواع الإدخال",
+          "sizes": "الأحجام",
+          "states": "معطّل وللقراءة فقط",
+          "slots": "فتحات البادئة واللاحقة",
+          "validation": "حالات التحقق",
+          "variants": "الأنماط الدلالية"
+        },
+        "labels": {
+          "fullName": "الاسم الكامل",
+          "email": "عنوان البريد الإلكتروني",
+          "emailShort": "البريد الإلكتروني",
+          "text": "نص",
+          "password": "كلمة المرور",
+          "number": "رقم",
+          "search": "بحث",
+          "telephone": "هاتف",
+          "small": "حقل صغير",
+          "medium": "حقل متوسط",
+          "large": "حقل كبير",
+          "disabled": "حقل معطّل",
+          "readonly": "حقل للقراءة فقط",
+          "loading": "حقل قيد التحميل",
+          "emailError": "بريد إلكتروني به خطأ",
+          "usernameSuccess": "اسم مستخدم صالح",
+          "passwordGuidance": "إرشادات كلمة المرور"
+        },
+        "placeholders": {
+          "name": "أدخل اسمك",
+          "text": "إدخال نصي",
+          "password": "كلمة المرور",
+          "search": "بحث",
+          "loading": "جارٍ جلب تفاصيل الحساب",
+          "projects": "البحث في المشاريع",
+          "enterPassword": "أدخل كلمة المرور",
+          "focus": "ركّز للمعاينة"
+        },
+        "helpers": {
+          "emailPrivacy": "لن نشارك بريدك الإلكتروني أبداً.",
+          "password": "استخدم ثمانية أحرف على الأقل."
+        },
+        "values": { "disabled": "قيمة معطّلة", "readonly": "قيمة للقراءة فقط" },
+        "actions": {
+          "hidePassword": "إخفاء كلمة المرور",
+          "showPassword": "إظهار كلمة المرور",
+          "hide": "إخفاء",
+          "show": "إظهار"
+        },
+        "validation": {
+          "email": "أدخل عنوان بريد إلكتروني صالحاً.",
+          "usernameAvailable": "اسم المستخدم هذا متاح."
+        },
+        "sizes": { "small": "صغير", "medium": "متوسط", "large": "كبير" }
+      },
+      "select": {
+        "sections": {
+          "basic": "اختيار أساسي",
+          "multiple": "اختيار متعدد",
+          "variants": "الأنماط الدلالية",
+          "sizes": "الأحجام",
+          "singlePlaceholder": "اختيار مفرد مع نص إرشادي",
+          "multiplePlaceholder": "اختيار متعدد مع نص إرشادي",
+          "customOption": "عرض مخصص للخيارات",
+          "customSelected": "عرض مخصص للاختيار",
+          "limit": "الحد الأقصى للاختيار",
+          "runtime": "التفعيل والتعطيل أثناء التشغيل"
+        },
+        "headings": {
+          "singleSizes": "أحجام الاختيار المفرد",
+          "multipleSizes": "أحجام الاختيار المتعدد"
+        },
+        "labels": { "singleSize": "اختيار {size}", "multipleSize": "اختيار {size} مع وسوم" },
+        "placeholders": {
+          "state": "اختر ولاية",
+          "people": "اختر أشخاصاً",
+          "customer": "اختر عميلاً",
+          "client": "اختر عميلاً"
+        },
+        "roles": {
+          "designer": "مصمم",
+          "developer": "مطوّر",
+          "productManager": "مدير منتج",
+          "researcher": "باحث",
+          "supportLead": "مسؤول الدعم"
+        },
+        "actions": { "enable": "تفعيل", "disable": "تعطيل" }
+      },
+      "range": {
+        "sections": {
+          "basic": "نطاق أساسي",
+          "sizes": "الأحجام",
+          "variants": "الأنماط الدلالية",
+          "limits": "أمثلة الحد الأدنى والأقصى",
+          "steps": "أمثلة الخطوات",
+          "disabled": "معطّل",
+          "labels": "مع تسميات",
+          "helper": "مع نص مساعد",
+          "validation": "حالات التحقق",
+          "value": "عرض القيمة",
+          "styling": "نمط دائري ومربع",
+          "tooltip": "تلميح مقبض التمرير",
+          "colors": "منزلقات اختيار اللون",
+          "linked": "منزلقات مترابطة قابلة للقفل",
+          "toggle": "مفتاح منزلق",
+          "pips": "علامات قابلة للنقر",
+          "softLimits": "حدود مرنة",
+          "runtime": "حالة تعطيل أثناء التشغيل"
+        },
+        "labels": {
+          "small": "نطاق صغير",
+          "medium": "نطاق متوسط",
+          "large": "نطاق كبير",
+          "temperature": "درجة الحرارة (-50 إلى 50)",
+          "budget": "الميزانية (100 إلى 1000)",
+          "halfSteps": "أنصاف الخطوات",
+          "quarterSteps": "أرباع الخطوات",
+          "disabled": "نطاق معطّل",
+          "readonly": "نطاق للقراءة فقط",
+          "volume": "الصوت",
+          "brightness": "السطوع",
+          "profileCompleteness": "اكتمال الملف الشخصي",
+          "riskThreshold": "حد المخاطر",
+          "qualityTarget": "هدف الجودة",
+          "completion": "الاكتمال",
+          "roundedThumb": "مقبض دائري",
+          "squareThumb": "مقبض مربع",
+          "linkedA": "عنصر تحكم مرتبط A",
+          "linkedB": "عنصر تحكم مرتبط B",
+          "toggle": "مفتاح منزلق",
+          "clickMarker": "انقر على علامة للتحريك",
+          "softLimits": "حدود مرنة",
+          "runtime": "حالة تعطيل أثناء التشغيل"
+        },
+        "helpers": {
+          "completionTarget": "حرّك المنزلق لاختيار هدف الاكتمال.",
+          "valueUpdates": "تتحدث القيمة المعروضة عند تحريك المنزلق.",
+          "softLimits": "الموصى به: 20–80. يظل النطاق الكامل 0–100 متاحاً."
+        },
+        "validation": {
+          "maximum": "اختر قيمة 80 أو أقل.",
+          "recommended": "هذا الهدف ضمن النطاق الموصى به.",
+          "outsideRecommended": "خارج النطاق الموصى به 20–80."
+        },
+        "colors": { "red": "أحمر", "green": "أخضر", "blue": "أزرق" },
+        "actions": {
+          "lock": "قفل عناصر التحكم",
+          "unlock": "إلغاء قفل عناصر التحكم",
+          "enable": "تفعيل النطاق",
+          "disable": "تعطيل النطاق"
+        },
+        "values": {
+          "low": "منخفض",
+          "medium": "متوسط",
+          "high": "مرتفع",
+          "on": "تشغيل",
+          "off": "إيقاف"
+        }
+      },
+      "rangeSlider": {
+        "sections": {
+          "basic": "أساسي",
+          "sizes": "الأحجام",
+          "variants": "الأنماط الدلالية",
+          "connected": "مسار متصل",
+          "tooltips": "تلميحات",
+          "formatted": "قيم منسّقة",
+          "vertical": "عمودي",
+          "minimumDistance": "المسافة الدنيا",
+          "maximumDistance": "المسافة القصوى",
+          "softLimits": "حدود مرنة",
+          "ticks": "علامات قابلة للنقر",
+          "disabled": "معطّل",
+          "validation": "التحقق",
+          "runtime": "تغييرات الحالة أثناء التشغيل",
+          "thumbs": "المقابض"
+        },
+        "labels": {
+          "price": "نطاق السعر",
+          "connected": "اسحب أي مقبض أو المسار أو التحديد المتصل",
+          "perHandleTooltips": "تلميح لكل مقبض",
+          "mergeTooltips": "دمج التلميحات المتقاربة",
+          "budget": "الميزانية",
+          "vertical": "فاصل عمودي",
+          "secondaryVertical": "فاصل عمودي ثانوي",
+          "minimumDistance": "مسافة 20 وحدة على الأقل",
+          "maximumDistance": "مسافة 30 وحدة على الأكثر",
+          "recommended": "الفاصل الموصى به",
+          "clickMarker": "انقر على علامة لتحريك أقرب مقبض",
+          "disabled": "تحديد معطّل",
+          "delivery": "نافذة التسليم",
+          "confidence": "فاصل الثقة",
+          "runtime": "تحديد متحكم به أثناء التشغيل",
+          "defaultHandles": "مقابض مربعة افتراضية",
+          "indicatorHandles": "مقابض بمؤشر سحب"
+        },
+        "helpers": {
+          "minimumDistance": "لا يمكن أن تقترب المقابض لأقل من 20 وحدة.",
+          "maximumDistance": "تبقى المقابض ضمن 30 وحدة من بعضها.",
+          "softLimits": "تستقر القيم بين 20 و80 عند انتهاء التفاعل."
+        },
+        "validation": {
+          "narrower": "اختر نافذة تسليم أضيق.",
+          "recommended": "هذا الفاصل يطابق التوصية."
+        },
+        "actions": { "enable": "تفعيل المنزلق", "disable": "تعطيل المنزلق" },
+        "sizes": { "small": "صغير", "medium": "متوسط", "large": "كبير" }
       }
     },
     "advanced-ui": {

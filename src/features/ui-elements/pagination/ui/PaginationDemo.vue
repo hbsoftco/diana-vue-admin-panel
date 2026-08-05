@@ -7,17 +7,17 @@ const basicCode = `<DiPagination
   :total-pages="2"
   layout="spaced"
   variant="primary"
-  aria-label="Basic pagination"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
-  <template #previous>Prev</template>
-  <template #next>Next</template>
+  <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+  <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
 </DiPagination>`
 
 const iconsCode = `<DiPagination
   :total-pages="3"
   layout="spaced"
   variant="primary"
-  aria-label="Pagination with icons"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
   <template #previous>
     <DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180" />
@@ -28,22 +28,22 @@ const iconsCode = `<DiPagination
 </DiPagination>`
 
 const sizingCode = `<div class="flex flex-wrap items-center justify-between gap-5">
-  <DiPagination :total-pages="3" size="xs" layout="spaced" variant="primary" aria-label="Extra small pagination" />
-  <DiPagination :total-pages="3" size="sm" layout="spaced" variant="primary" aria-label="Small pagination" />
-  <DiPagination :total-pages="3" size="md" layout="spaced" variant="primary" aria-label="Medium pagination" />
+  <DiPagination :total-pages="3" size="xs" layout="spaced" variant="primary" :aria-label="$t('features.uiElements.pagination.label')" />
+  <DiPagination :total-pages="3" size="sm" layout="spaced" variant="primary" :aria-label="$t('features.uiElements.pagination.label')" />
+  <DiPagination :total-pages="3" size="md" layout="spaced" variant="primary" :aria-label="$t('features.uiElements.pagination.label')" />
 </div>`
 
 const alignedCode = `<div class="space-y-5">
   <div class="flex justify-center">
-    <DiPagination :total-pages="2" layout="spaced" variant="primary" aria-label="Centered pagination">
-      <template #previous>Prev</template>
-      <template #next>Next</template>
+    <DiPagination :total-pages="2" layout="spaced" variant="primary" :aria-label="$t('features.uiElements.pagination.label')">
+      <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+      <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
     </DiPagination>
   </div>
   <div class="flex justify-end">
-    <DiPagination :total-pages="2" layout="spaced" variant="primary" aria-label="Right aligned pagination">
-      <template #previous>Prev</template>
-      <template #next>Next</template>
+    <DiPagination :total-pages="2" layout="spaced" variant="primary" :aria-label="$t('features.uiElements.pagination.label')">
+      <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+      <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
     </DiPagination>
   </div>
 </div>`
@@ -53,7 +53,7 @@ const disabledCode = `<DiPagination
   layout="spaced"
   variant="primary"
   disabled
-  aria-label="Disabled pagination"
+  :aria-label="$t('features.uiElements.pagination.label')"
 />`
 
 const styleOneCode = `<DiPagination
@@ -61,7 +61,7 @@ const styleOneCode = `<DiPagination
   :sibling-count="4"
   layout="spaced"
   variant="primary"
-  aria-label="Compact pagination with icons"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
   <template #previous>
     <DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180" />
@@ -77,10 +77,10 @@ const styleTwoCode = `<DiPagination
   layout="spaced"
   active-style="underline"
   variant="primary"
-  aria-label="Underlined pagination"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
-  <template #previous>Prev</template>
-  <template #next>Next</template>
+  <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+  <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
 </DiPagination>`
 
 const styleThreeCode = `<DiPagination
@@ -89,10 +89,10 @@ const styleThreeCode = `<DiPagination
   layout="spaced"
   active-style="circle"
   variant="primary"
-  aria-label="Rounded pagination"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
-  <template #previous>Prev</template>
-  <template #next>Next</template>
+  <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+  <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
 </DiPagination>`
 
 const styleFourCode = `<DiPagination
@@ -100,10 +100,10 @@ const styleFourCode = `<DiPagination
   :sibling-count="4"
   layout="spaced"
   variant="primary"
-  aria-label="Filled pagination"
+  :aria-label="$t('features.uiElements.pagination.label')"
 >
-  <template #previous>Prev</template>
-  <template #next>Next</template>
+  <template #previous>{{ $t('features.uiElements.pagination.previous') }}</template>
+  <template #next>{{ $t('features.uiElements.pagination.next') }}</template>
 </DiPagination>`
 
 const controlsCode = `<div class="space-y-3">
@@ -114,7 +114,7 @@ const controlsCode = `<div class="space-y-3">
     :show-previous-next="false"
     layout="spaced"
     variant="primary"
-    aria-label="Page controls"
+    :aria-label="$t('features.uiElements.pagination.label')"
   />
   <DiPagination
     :total-pages="11"
@@ -123,7 +123,7 @@ const controlsCode = `<div class="space-y-3">
     layout="spaced"
     show-first-last
     variant="primary"
-    aria-label="Full page controls"
+    :aria-label="$t('features.uiElements.pagination.label')"
   >
     <template #first>
       <DiIcon name="chevronDoubleRight" size="xs" class="rotate-180 rtl:rotate-0" />
@@ -145,7 +145,7 @@ const controlsCode = `<div class="space-y-3">
   <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-12">
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.pagination.basic')"
+      :title="$t('features.uiElements.pagination.basic')"
       :code="basicCode"
       language="html"
     >
@@ -153,16 +153,20 @@ const controlsCode = `<div class="space-y-3">
         :total-pages="2"
         layout="spaced"
         variant="primary"
-        aria-label="Basic pagination"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
-        <template #previous>Prev</template>
-        <template #next>Next</template>
+        <template #previous>
+          {{ $t('features.uiElements.pagination.previous') }}
+        </template>
+        <template #next>
+          {{ $t('features.uiElements.pagination.next') }}
+        </template>
       </DiPagination>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-3"
-      :title="$t('features.ui-elements.pagination.icons')"
+      :title="$t('features.uiElements.pagination.icons')"
       :code="iconsCode"
       language="html"
     >
@@ -170,7 +174,7 @@ const controlsCode = `<div class="space-y-3">
         :total-pages="3"
         layout="spaced"
         variant="primary"
-        aria-label="Pagination with icons"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
         <template #previous>
           <DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180" />
@@ -183,7 +187,7 @@ const controlsCode = `<div class="space-y-3">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.sizing')"
+      :title="$t('features.uiElements.pagination.sizing')"
       :code="sizingCode"
       language="html"
     >
@@ -193,28 +197,28 @@ const controlsCode = `<div class="space-y-3">
           size="xs"
           layout="spaced"
           variant="primary"
-          aria-label="Extra small pagination"
+          :aria-label="$t('features.uiElements.pagination.label')"
         />
         <DiPagination
           :total-pages="3"
           size="sm"
           layout="spaced"
           variant="primary"
-          aria-label="Small pagination"
+          :aria-label="$t('features.uiElements.pagination.label')"
         />
         <DiPagination
           :total-pages="3"
           size="md"
           layout="spaced"
           variant="primary"
-          aria-label="Medium pagination"
+          :aria-label="$t('features.uiElements.pagination.label')"
         />
       </div>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.aligned')"
+      :title="$t('features.uiElements.pagination.aligned')"
       :code="alignedCode"
       language="html"
     >
@@ -224,10 +228,14 @@ const controlsCode = `<div class="space-y-3">
             :total-pages="2"
             layout="spaced"
             variant="primary"
-            aria-label="Centered pagination"
+            :aria-label="$t('features.uiElements.pagination.label')"
           >
-            <template #previous>Prev</template>
-            <template #next>Next</template>
+            <template #previous>
+              {{ $t('features.uiElements.pagination.previous') }}
+            </template>
+            <template #next>
+              {{ $t('features.uiElements.pagination.next') }}
+            </template>
           </DiPagination>
         </div>
         <div class="flex justify-end">
@@ -235,10 +243,14 @@ const controlsCode = `<div class="space-y-3">
             :total-pages="2"
             layout="spaced"
             variant="primary"
-            aria-label="Right aligned pagination"
+            :aria-label="$t('features.uiElements.pagination.label')"
           >
-            <template #previous>Prev</template>
-            <template #next>Next</template>
+            <template #previous>
+              {{ $t('features.uiElements.pagination.previous') }}
+            </template>
+            <template #next>
+              {{ $t('features.uiElements.pagination.next') }}
+            </template>
           </DiPagination>
         </div>
       </div>
@@ -246,7 +258,7 @@ const controlsCode = `<div class="space-y-3">
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.disabled')"
+      :title="$t('features.uiElements.pagination.disabled')"
       :code="disabledCode"
       language="html"
     >
@@ -255,13 +267,13 @@ const controlsCode = `<div class="space-y-3">
         layout="spaced"
         variant="primary"
         disabled
-        aria-label="Disabled pagination"
+        :aria-label="$t('features.uiElements.pagination.label')"
       />
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.styleOne')"
+      :title="$t('features.uiElements.pagination.styleOne')"
       :code="styleOneCode"
       language="html"
     >
@@ -270,18 +282,20 @@ const controlsCode = `<div class="space-y-3">
         :sibling-count="4"
         layout="spaced"
         variant="primary"
-        aria-label="Compact pagination with icons"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
-        <template #previous
-          ><DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180"
-        /></template>
-        <template #next><DiIcon name="chevronRight" size="xs" class="rtl:rotate-180" /></template>
+        <template #previous>
+          <DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180" />
+        </template>
+        <template #next>
+          <DiIcon name="chevronRight" size="xs" class="rtl:rotate-180" />
+        </template>
       </DiPagination>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.styleTwo')"
+      :title="$t('features.uiElements.pagination.styleTwo')"
       :code="styleTwoCode"
       language="html"
     >
@@ -291,15 +305,19 @@ const controlsCode = `<div class="space-y-3">
         layout="spaced"
         active-style="underline"
         variant="primary"
-        aria-label="Underlined pagination"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
-        <template #previous>Prev</template><template #next>Next</template>
+        <template #previous>
+          {{ $t('features.uiElements.pagination.previous') }}
+        </template><template #next>
+          {{ $t('features.uiElements.pagination.next') }}
+        </template>
       </DiPagination>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.styleThree')"
+      :title="$t('features.uiElements.pagination.styleThree')"
       :code="styleThreeCode"
       language="html"
     >
@@ -309,15 +327,19 @@ const controlsCode = `<div class="space-y-3">
         layout="spaced"
         active-style="circle"
         variant="primary"
-        aria-label="Rounded pagination"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
-        <template #previous>Prev</template><template #next>Next</template>
+        <template #previous>
+          {{ $t('features.uiElements.pagination.previous') }}
+        </template><template #next>
+          {{ $t('features.uiElements.pagination.next') }}
+        </template>
       </DiPagination>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.styleFour')"
+      :title="$t('features.uiElements.pagination.styleFour')"
       :code="styleFourCode"
       language="html"
     >
@@ -326,15 +348,19 @@ const controlsCode = `<div class="space-y-3">
         :sibling-count="4"
         layout="spaced"
         variant="primary"
-        aria-label="Filled pagination"
+        :aria-label="$t('features.uiElements.pagination.label')"
       >
-        <template #previous>Prev</template><template #next>Next</template>
+        <template #previous>
+          {{ $t('features.uiElements.pagination.previous') }}
+        </template><template #next>
+          {{ $t('features.uiElements.pagination.next') }}
+        </template>
       </DiPagination>
     </PreviewCodeCard>
 
     <PreviewCodeCard
       class="lg:col-span-6"
-      :title="$t('features.ui-elements.pagination.controls')"
+      :title="$t('features.uiElements.pagination.controls')"
       :code="controlsCode"
       language="html"
     >
@@ -346,7 +372,7 @@ const controlsCode = `<div class="space-y-3">
           :show-previous-next="false"
           layout="spaced"
           variant="primary"
-          aria-label="Page controls"
+          :aria-label="$t('features.uiElements.pagination.label')"
         />
         <DiPagination
           :total-pages="11"
@@ -355,18 +381,20 @@ const controlsCode = `<div class="space-y-3">
           layout="spaced"
           show-first-last
           variant="primary"
-          aria-label="Full page controls"
+          :aria-label="$t('features.uiElements.pagination.label')"
         >
-          <template #first
-            ><DiIcon name="chevronDoubleRight" size="xs" class="rotate-180 rtl:rotate-0"
-          /></template>
-          <template #previous
-            ><DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180"
-          /></template>
-          <template #next><DiIcon name="chevronRight" size="xs" class="rtl:rotate-180" /></template>
-          <template #last
-            ><DiIcon name="chevronDoubleRight" size="xs" class="rtl:rotate-180"
-          /></template>
+          <template #first>
+            <DiIcon name="chevronDoubleRight" size="xs" class="rotate-180 rtl:rotate-0" />
+          </template>
+          <template #previous>
+            <DiIcon name="chevronLeft" size="xs" class="rtl:rotate-180" />
+          </template>
+          <template #next>
+            <DiIcon name="chevronRight" size="xs" class="rtl:rotate-180" />
+          </template>
+          <template #last>
+            <DiIcon name="chevronDoubleRight" size="xs" class="rtl:rotate-180" />
+          </template>
         </DiPagination>
       </div>
     </PreviewCodeCard>

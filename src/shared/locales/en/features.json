@@ -45,7 +45,32 @@
         "inputHelp": "Focus rings use a transparent variation of the semantic color."
       }
     },
-    "ui-elements": {
+    "uiElements": {
+      "comingSoon": "{name} component demo coming soon...",
+      "cards": {
+        "shoesAlt": "Shoes",
+        "title": "Card Title",
+        "description": "A card component has a figure, a body, a title, and actions.",
+        "lastUpdated": "Last updated 3 minutes ago",
+        "header": "Header",
+        "sampleDescription": "This sample card demonstrates supporting content and actions.",
+        "readMore": "Read more",
+        "defaultButtons": "Default Buttons",
+        "showCode": "Show code",
+        "example": "Example"
+      },
+      "dropdowns": {
+        "dashboard": "Dashboard",
+        "profile": "Profile",
+        "messages": "Messages",
+        "settings": "Settings",
+        "help": "Help",
+        "logout": "Log out",
+        "userMenu": "User menu",
+        "openMenu": "Open user menu",
+        "userAvatar": "User avatar",
+        "lastLogin": "Last login: 2 hours ago"
+      },
       "popover": {
         "basic": "Basic Popover",
         "titleSupport": "Popover With Title",
@@ -87,13 +112,60 @@
         "showPositioned": "Show top-start toast",
         "close": "Close notification",
         "undo": "Undo",
+        "sections": {
+          "live": "Live example",
+          "basic": "Basic example",
+          "action": "Custom action snackbar",
+          "colors": "Color schemes",
+          "fragment": "Render-fragment snackbar",
+          "clickable": "Clickable snackbar",
+          "variants": "Snackbar variants",
+          "solid": "Solid background snackbar",
+          "position": "Snackbar position",
+          "persistent": "Open and hide snackbar"
+        },
+        "actions": {
+          "showFragment": "Show render-fragment snackbar",
+          "showClickable": "Open clickable snackbar",
+          "showText": "Open text",
+          "showFilled": "Open filled",
+          "showOutlined": "Open outlined",
+          "view": "View"
+        },
+        "colors": { "dark": "Dark", "danger": "Danger" },
+        "positions": {
+          "topStart": "Top start",
+          "topLeft": "Top left",
+          "topCenter": "Top center",
+          "topRight": "Top right",
+          "topEnd": "Top end",
+          "bottomStart": "Bottom start",
+          "bottomLeft": "Bottom left",
+          "bottomCenter": "Bottom center",
+          "bottomRight": "Bottom right",
+          "bottomEnd": "Bottom end"
+        },
         "messages": {
           "saved": "Your settings have been saved.",
           "variant": "This notification uses a semantic variant.",
           "attention": "Attention required",
           "persistent": "This notification remains until you close it.",
           "action": "The item was moved to the archive.",
-          "position": "This toast is positioned at the top start."
+          "position": "Placement preview",
+          "warning": "Heads up! This is the warning toast message.",
+          "error": "Hello, world! This is the error toast message.",
+          "info": "Hello, world! This is the info toast message.",
+          "basic": "Hello, world! This is a toast message.",
+          "inbox": "I got a message for you",
+          "clickable": "Click this notification to dismiss it.",
+          "text": "Normal text snackbar",
+          "filled": "Info filled snackbar",
+          "outlined": "Success outlined snackbar",
+          "neutral": "Normal filled snackbar",
+          "reactorStarted": "The reactor was started successfully",
+          "reactorOptimal": "The reactor is running at optimum temperature",
+          "reactorWarning": "The reactor temperature exceeds the optimal range",
+          "reactorDanger": "Reactor meltdown is imminent"
         }
       },
       "pagination": {
@@ -184,6 +256,7 @@
         "allVariants": "All Variants"
       },
       "badge": {
+        "label": "Badge",
         "defaultBadge": "Default Badge",
         "badgeSizes": "Badge Sizes",
         "coloredBadges": "Colored Badges",
@@ -233,6 +306,7 @@
         }
       },
       "icons": {
+        "calendar": "Calendar",
         "iconSizes": "Icon Sizes",
         "iconColors": "Icon Colors",
         "spinAndPulse": "Spin & Pulse",
@@ -403,6 +477,211 @@
         "gridItem2": "Grid Item 2",
         "gridItem3": "Grid Item 3",
         "resizeWindowToSee": "Resize window to see tooltips adapt to different breakpoints"
+      }
+    },
+    "forms": {
+      "inputs": {
+        "sections": {
+          "basic": "Basic Inputs",
+          "types": "Input Types",
+          "sizes": "Sizes",
+          "states": "Disabled and Readonly",
+          "slots": "Prefix/Suffix Slots",
+          "validation": "Validation States",
+          "variants": "Semantic Variants"
+        },
+        "labels": {
+          "fullName": "Full name",
+          "email": "Email address",
+          "emailShort": "Email",
+          "text": "Text",
+          "password": "Password",
+          "number": "Number",
+          "search": "Search",
+          "telephone": "Telephone",
+          "small": "Small input",
+          "medium": "Medium input",
+          "large": "Large input",
+          "disabled": "Disabled input",
+          "readonly": "Readonly input",
+          "loading": "Loading input",
+          "emailError": "Email with error",
+          "usernameSuccess": "Username with success",
+          "passwordGuidance": "Password guidance"
+        },
+        "placeholders": {
+          "name": "Enter your name",
+          "text": "Text input",
+          "password": "Password",
+          "search": "Search",
+          "loading": "Fetching account details",
+          "projects": "Search projects",
+          "enterPassword": "Enter password",
+          "focus": "Focus to preview"
+        },
+        "helpers": {
+          "emailPrivacy": "We'll never share your email.",
+          "password": "Use at least eight characters."
+        },
+        "values": { "disabled": "Disabled value", "readonly": "Readonly value" },
+        "actions": {
+          "hidePassword": "Hide password",
+          "showPassword": "Show password",
+          "hide": "Hide",
+          "show": "Show"
+        },
+        "validation": {
+          "email": "Enter a valid email address.",
+          "usernameAvailable": "This username is available."
+        },
+        "sizes": { "small": "Small", "medium": "Medium", "large": "Large" }
+      },
+      "select": {
+        "sections": {
+          "basic": "Basic Select",
+          "multiple": "Multiple Select",
+          "variants": "Semantic Variants",
+          "sizes": "Sizes",
+          "singlePlaceholder": "Single Select With Placeholder",
+          "multiplePlaceholder": "Multiple Select With Placeholder",
+          "customOption": "Custom Option Rendering",
+          "customSelected": "Custom Selected Rendering",
+          "limit": "Maximum Selection Limit",
+          "runtime": "Runtime Disable / Enable"
+        },
+        "headings": {
+          "singleSizes": "Single select sizes",
+          "multipleSizes": "Multiple select sizes"
+        },
+        "labels": { "singleSize": "{size} select", "multipleSize": "{size} select with tags" },
+        "placeholders": {
+          "state": "Select a state",
+          "people": "Choose people",
+          "customer": "Choose customer",
+          "client": "Choose client"
+        },
+        "roles": {
+          "designer": "Designer",
+          "developer": "Developer",
+          "productManager": "Product manager",
+          "researcher": "Researcher",
+          "supportLead": "Support lead"
+        },
+        "actions": { "enable": "Enable", "disable": "Disable" }
+      },
+      "range": {
+        "sections": {
+          "basic": "Basic Range",
+          "sizes": "Sizes",
+          "variants": "Semantic Variants",
+          "limits": "Min / Max Examples",
+          "steps": "Step Examples",
+          "disabled": "Disabled",
+          "labels": "With Labels",
+          "helper": "With Helper Text",
+          "validation": "Validation States",
+          "value": "Value Display",
+          "styling": "Rounded and Square Styling",
+          "tooltip": "Sliding Handle Tooltip",
+          "colors": "Color Picker Sliders",
+          "linked": "Linked and Lockable Sliders",
+          "toggle": "Slider Toggle",
+          "pips": "Clickable Pips",
+          "softLimits": "Soft Limits",
+          "runtime": "Runtime Disabled State"
+        },
+        "labels": {
+          "small": "Small range",
+          "medium": "Medium range",
+          "large": "Large range",
+          "temperature": "Temperature (-50 to 50)",
+          "budget": "Budget (100 to 1000)",
+          "halfSteps": "Half steps",
+          "quarterSteps": "Quarter steps",
+          "disabled": "Disabled range",
+          "readonly": "Readonly range",
+          "volume": "Volume",
+          "brightness": "Brightness",
+          "profileCompleteness": "Profile completeness",
+          "riskThreshold": "Risk threshold",
+          "qualityTarget": "Quality target",
+          "completion": "Completion",
+          "roundedThumb": "Rounded thumb",
+          "squareThumb": "Square thumb",
+          "linkedA": "Linked control A",
+          "linkedB": "Linked control B",
+          "toggle": "Slider toggle",
+          "clickMarker": "Click a marker to move",
+          "softLimits": "Soft limits",
+          "runtime": "Runtime disabled state"
+        },
+        "helpers": {
+          "completionTarget": "Move the slider to choose the completion target.",
+          "valueUpdates": "The displayed value updates as you move the slider.",
+          "softLimits": "Recommended: 20–80. The full 0–100 range remains available."
+        },
+        "validation": {
+          "maximum": "Choose a value of 80 or lower.",
+          "recommended": "This target is within the recommended range.",
+          "outsideRecommended": "Outside the recommended range of 20–80."
+        },
+        "colors": { "red": "Red", "green": "Green", "blue": "Blue" },
+        "actions": {
+          "lock": "Lock controls",
+          "unlock": "Unlock controls",
+          "enable": "Enable range",
+          "disable": "Disable range"
+        },
+        "values": { "low": "Low", "medium": "Medium", "high": "High", "on": "On", "off": "Off" }
+      },
+      "rangeSlider": {
+        "sections": {
+          "basic": "Basic",
+          "sizes": "Sizes",
+          "variants": "Semantic Variants",
+          "connected": "Connected Track",
+          "tooltips": "Tooltips",
+          "formatted": "Formatted Values",
+          "vertical": "Vertical",
+          "minimumDistance": "Minimum Distance",
+          "maximumDistance": "Maximum Distance",
+          "softLimits": "Soft Limits",
+          "ticks": "Clickable Ticks",
+          "disabled": "Disabled",
+          "validation": "Validation",
+          "runtime": "Runtime State Changes",
+          "thumbs": "Thumb Handles"
+        },
+        "labels": {
+          "price": "Price range",
+          "connected": "Drag either handle, the track, or the connected selection",
+          "perHandleTooltips": "Per-handle tooltips",
+          "mergeTooltips": "Merge nearby tooltips",
+          "budget": "Budget",
+          "vertical": "Vertical interval",
+          "secondaryVertical": "Secondary vertical interval",
+          "minimumDistance": "At least 20 units apart",
+          "maximumDistance": "At most 30 units apart",
+          "recommended": "Recommended interval",
+          "clickMarker": "Click a marker to move the nearest handle",
+          "disabled": "Disabled selection",
+          "delivery": "Delivery window",
+          "confidence": "Confidence interval",
+          "runtime": "Runtime-controlled selection",
+          "defaultHandles": "Default square handles",
+          "indicatorHandles": "Drag indicator handles"
+        },
+        "helpers": {
+          "minimumDistance": "The handles cannot move closer than 20 units.",
+          "maximumDistance": "The handles remain within 30 units of each other.",
+          "softLimits": "Values settle inside 20–80 when an interaction ends."
+        },
+        "validation": {
+          "narrower": "Choose a narrower delivery window.",
+          "recommended": "This interval meets the recommendation."
+        },
+        "actions": { "enable": "Enable slider", "disable": "Disable slider" },
+        "sizes": { "small": "Small", "medium": "Medium", "large": "Large" }
       }
     },
     "advanced-ui": {
