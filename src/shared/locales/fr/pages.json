@@ -150,6 +150,12 @@
         "title": "Squelette"
       }
     },
+    "error": {
+      "title": "Erreur",
+      "401": { "title": "Erreur 401" },
+      "404": { "title": "Erreur 404" },
+      "500": { "title": "Erreur 500" }
+    },
     "utility": {
       "title": "Utilitaires",
       "avatar": {

@@ -89,6 +89,16 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
+    id: 'error',
+    label: 'menu.error',
+    icon: 'exclamationTriangle',
+    children: [
+      { id: 'error-401', label: 'menu.error401', route: '/error/401' },
+      { id: 'error-404', label: 'menu.error404', route: '/error/404' },
+      { id: 'error-500', label: 'menu.error500', route: '/error/500' },
+    ],
+  },
+  {
     id: 'utility',
     label: 'menu.utility',
     icon: 'medalLine',

@@ -1,5 +1,24 @@
 {
   "features": {
+    "error": {
+      "statusLabel": "Error {code}",
+      "backToHome": "Volver al inicio",
+      "401": {
+        "heading": "No tienes autorización",
+        "description": "No tienes permiso para acceder a esta página. Inicia sesión con una cuenta autorizada o vuelve al inicio.",
+        "illustrationAlt": "Ilustración de un error de acceso no autorizado"
+      },
+      "404": {
+        "heading": "No se encontró la página",
+        "description": "Es posible que la página que buscas se haya movido, eliminado o que nunca haya existido.",
+        "illustrationAlt": "Ilustración de un error de página no encontrada"
+      },
+      "500": {
+        "heading": "Algo salió mal",
+        "description": "El servidor encontró un problema inesperado. Inténtalo más tarde o vuelve al inicio.",
+        "illustrationAlt": "Ilustración de un error interno del servidor"
+      }
+    },
     "utility": {
       "avatar": {
         "square": "Avatar cuadrado",

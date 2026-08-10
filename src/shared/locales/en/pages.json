@@ -150,6 +150,12 @@
         "title": "Skeleton"
       }
     },
+    "error": {
+      "title": "Error",
+      "401": { "title": "401 Error" },
+      "404": { "title": "404 Error" },
+      "500": { "title": "500 Error" }
+    },
     "utility": {
       "title": "Utility",
       "avatar": {
