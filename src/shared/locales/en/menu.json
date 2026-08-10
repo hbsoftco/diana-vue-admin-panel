@@ -50,6 +50,10 @@
     "navbar": "Navbar",
     "skeleton": "Skeleton",
     "rating": "Rating",
+    "error": "Error",
+    "error401": "401 Error",
+    "error404": "404 Error",
+    "error500": "500 Error",
     "utility": "Utility",
     "avatar": "Avatar",
     "colors": "Colors"

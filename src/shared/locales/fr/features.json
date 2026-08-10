@@ -1,5 +1,24 @@
 {
   "features": {
+    "error": {
+      "statusLabel": "Erreur {code}",
+      "backToHome": "Retour à l’accueil",
+      "401": {
+        "heading": "Vous n’êtes pas autorisé",
+        "description": "Vous n’avez pas l’autorisation d’accéder à cette page. Connectez-vous avec un compte autorisé ou revenez à l’accueil.",
+        "illustrationAlt": "Illustration d’une erreur d’accès non autorisé"
+      },
+      "404": {
+        "heading": "La page est introuvable",
+        "description": "La page recherchée a peut-être été déplacée, supprimée ou n’a jamais existé.",
+        "illustrationAlt": "Illustration d’une erreur de page introuvable"
+      },
+      "500": {
+        "heading": "Une erreur s’est produite",
+        "description": "Le serveur a rencontré un problème inattendu. Réessayez plus tard ou revenez à l’accueil.",
+        "illustrationAlt": "Illustration d’une erreur interne du serveur"
+      }
+    },
     "utility": {
       "avatar": {
         "square": "Avatar carré",

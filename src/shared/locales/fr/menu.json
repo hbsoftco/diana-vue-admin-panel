@@ -50,6 +50,10 @@
     "navbar": "Barre de navigation",
     "skeleton": "Squelette",
     "rating": "Évaluation",
+    "error": "Erreur",
+    "error401": "Erreur 401",
+    "error404": "Erreur 404",
+    "error500": "Erreur 500",
     "utility": "Utilitaires",
     "avatar": "Avatar",
     "colors": "Couleurs"

@@ -1,5 +1,24 @@
 {
   "features": {
+    "error": {
+      "statusLabel": "Error {code}",
+      "backToHome": "Back to Home",
+      "401": {
+        "heading": "You are not authorized",
+        "description": "You do not have permission to access this page. Please sign in with an authorized account or return home.",
+        "illustrationAlt": "Illustration of an unauthorized access error"
+      },
+      "404": {
+        "heading": "The page could not be found",
+        "description": "The page you are looking for may have been moved, removed, or never existed.",
+        "illustrationAlt": "Illustration of a page not found error"
+      },
+      "500": {
+        "heading": "Something went wrong",
+        "description": "The server encountered an unexpected problem. Please try again later or return home.",
+        "illustrationAlt": "Illustration of an internal server error"
+      }
+    },
     "utility": {
       "avatar": {
         "square": "Square avatar",
