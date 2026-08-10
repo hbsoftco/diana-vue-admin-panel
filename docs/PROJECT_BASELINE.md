@@ -373,7 +373,7 @@ The following reusable components exist under `src/shared/ui/base`:
 | `DiCollapse`   | Focus, checkbox, and details-based collapse presentation                          |
 | `DiDrawer`     | Start/end drawer, overlay, responsive open breakpoint, slots                      |
 | `DiDropdown`   | Positioning, alignment, option selection, custom slots, outside-click closing     |
-| `DiIcon`       | Typed async icons, sizes, colors, transforms, animation, badges                   |
+| `DiIcon`       | Typed synchronous core and lazy icons, transforms, animation, badges              |
 | `DiLoading`    | Spinner, dots, ring, ball, bars, and infinity loading styles                      |
 | `DiModal`      | Teleported modal, positions, sizes, backdrop, Escape closing, body scroll control |
 | `DiRating`     | Full and half values, variants, masks, hover, read-only/disabled, RTL spacing     |

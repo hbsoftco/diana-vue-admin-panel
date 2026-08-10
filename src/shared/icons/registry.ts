@@ -1,62 +1,102 @@
-export const iconRegistry = {
-  // Tabler Icons
-  moon: () => import('~icons/tabler/moon'),
-  sun: () => import('~icons/tabler/sun'),
-  // Iconoir Icons
-  bell: () => import('~icons/iconoir/bell-notification'),
+import PartyIcon from '~icons/bx/party'
+import SearchIcon from '~icons/feather/search'
+import FormIcon from '~icons/fluent/form-48-regular'
+import CheckCircleIcon from '~icons/heroicons/check-circle'
+import ChevronDoubleRightIcon from '~icons/heroicons/chevron-double-right-20-solid'
+import ExclamationTriangleIcon from '~icons/heroicons/exclamation-triangle'
+import HeartIcon from '~icons/heroicons/heart'
+import InformationCircleIcon from '~icons/heroicons/information-circle'
+import PlusIcon from '~icons/heroicons/plus-20-solid'
+import StarIcon from '~icons/heroicons/star'
+import UserIcon from '~icons/heroicons/user'
+import XCircleIcon from '~icons/heroicons/x-circle'
+import XMarkIcon from '~icons/heroicons/x-mark-20-solid'
+import ArrowDownIcon from '~icons/hugeicons/arrow-down-01'
+import MenuIcon from '~icons/hugeicons/menu-02'
+import BellIcon from '~icons/iconoir/bell-notification'
+import CheckIcon from '~icons/material-symbols/check'
+import CircleIcon from '~icons/material-symbols/circle'
+import CircleOutlineIcon from '~icons/material-symbols/circle-outline'
+import FullscreenIcon from '~icons/material-symbols/fullscreen'
+import FullscreenExitIcon from '~icons/material-symbols/fullscreen-exit'
+import HomeOutlineRoundedIcon from '~icons/material-symbols/home-outline-rounded'
+import LogoutIcon from '~icons/material-symbols/logout'
+import UserOutlineRoundedIcon from '~icons/material-symbols/person-outline-rounded'
+import ChevronDownIcon from '~icons/mdi/chevron-down'
+import ChevronRightIcon from '~icons/mdi/chevron-right'
+import CloseIcon from '~icons/mingcute/close-line'
+import MedalLineIcon from '~icons/ri/medal-line'
+import HeartBoldIcon from '~icons/solar/heart-bold'
+import MoonIcon from '~icons/tabler/moon'
+import SunIcon from '~icons/tabler/sun'
+import ComponentDropdownIcon from '~icons/tdesign/component-dropdown'
+
+// Core icons render synchronously because the application shell, navigation, or reusable
+// components use them during common interactions.
+export const coreIconRegistry = {
+  moon: MoonIcon,
+  sun: SunIcon,
+  bell: BellIcon,
+  chevronRight: ChevronRightIcon,
+  chevronDown: ChevronDownIcon,
+  logout: LogoutIcon,
+  fullscreenExit: FullscreenExitIcon,
+  fullscreen: FullscreenIcon,
+  circle: CircleIcon,
+  circleOutline: CircleOutlineIcon,
+  homeOutlineRounded: HomeOutlineRoundedIcon,
+  userOutlineRounded: UserOutlineRoundedIcon,
+  lightCheck: CheckIcon,
+  heart: HeartIcon,
+  star: StarIcon,
+  user: UserIcon,
+  chevronDoubleRight: ChevronDoubleRightIcon,
+  plus: PlusIcon,
+  xMark: XMarkIcon,
+  informationCircle: InformationCircleIcon,
+  checkCircle: CheckCircleIcon,
+  exclamationTriangle: ExclamationTriangleIcon,
+  xCircle: XCircleIcon,
+  menu: MenuIcon,
+  arrowDown: ArrowDownIcon,
+  close: CloseIcon,
+  search: SearchIcon,
+  heartBold: HeartBoldIcon,
+  party: PartyIcon,
+  componentDropdown: ComponentDropdownIcon,
+  medalLine: MedalLineIcon,
+  form48regular: FormIcon,
+} as const
+
+// Lazy icons are limited to feature-specific screens, showcases, and playground examples.
+export const lazyIconRegistry = {
   // Mdi Icons
   cog: () => import('~icons/mdi/cog'),
   image: () => import('~icons/mdi/image'),
   video: () => import('~icons/mdi/video'),
   magnify: () => import('~icons/mdi/magnify'),
   phone: () => import('~icons/mdi/phone'),
-  chevronRight: () => import('~icons/mdi/chevron-right'),
-  chevronDown: () => import('~icons/mdi/chevron-down'),
   chevronUp: () => import('~icons/mdi/chevron-up'),
   chevronLeft: () => import('~icons/mdi/chevron-left'),
   // Material Symbols
-  logout: () => import('~icons/material-symbols/logout'),
-  fullscreenExit: () => import('~icons/material-symbols/fullscreen-exit'),
-  fullscreen: () => import('~icons/material-symbols/fullscreen'),
-  circle: () => import('~icons/material-symbols/circle'),
-  circleOutline: () => import('~icons/material-symbols/circle-outline'),
-  homeOutlineRounded: () => import('~icons/material-symbols/home-outline-rounded'),
   settingsOutlineRounded: () => import('~icons/material-symbols/settings-outline-rounded'),
-  userOutlineRounded: () => import('~icons/material-symbols/person-outline-rounded'),
   folderOutlineRounded: () => import('~icons/material-symbols/folder-outline-rounded'),
   dashboardOutlineRounded: () => import('~icons/material-symbols/dashboard-outline-rounded'),
-  lightCheck: () => import('~icons/material-symbols/check'),
   copy: () => import('~icons/material-symbols/content-copy'),
   inbox: () => import('~icons/material-symbols/inbox'),
   dragHandle: () => import('~icons/material-symbols/drag-indicator'),
   // Heroicons Icons
-  heart: () => import('~icons/heroicons/heart'),
-  star: () => import('~icons/heroicons/star'),
   camera: () => import('~icons/heroicons/camera'),
   calendarDays: () => import('~icons/heroicons/calendar-days-16-solid'),
-  user: () => import('~icons/heroicons/user'),
-  chevronDoubleRight: () => import('~icons/heroicons/chevron-double-right-20-solid'),
   chevronRightHero: () => import('~icons/heroicons/chevron-right-20-solid'),
-  plus: () => import('~icons/heroicons/plus-20-solid'),
   home: () => import('~icons/heroicons/home'),
   slash: () => import('~icons/heroicons/slash'),
-  xMark: () => import('~icons/heroicons/x-mark-20-solid'),
-  informationCircle: () => import('~icons/heroicons/information-circle'),
-  checkCircle: () => import('~icons/heroicons/check-circle'),
   questionMarkCircle: () => import('~icons/heroicons/question-mark-circle'),
-  exclamationTriangle: () => import('~icons/heroicons/exclamation-triangle'),
-  xCircle: () => import('~icons/heroicons/x-circle'),
   cogHero: () => import('~icons/heroicons/cog-20-solid'),
   paperClip: () => import('~icons/heroicons/paper-clip'),
   trash: () => import('~icons/heroicons/trash'),
-  // Hugeicons Icons
-  menu: () => import('~icons/hugeicons/menu-02'),
-  arrowDown: () => import('~icons/hugeicons/arrow-down-01'),
   // Mingcute Icons
-  close: () => import('~icons/mingcute/close-line'),
   pauseLine: () => import('~icons/mingcute/pause-line'),
-  // Feather Icons
-  search: () => import('~icons/feather/search'),
   // Oui Icons
   tokenElement: () => import('~icons/oui/token-element'),
   // Prime Icons
@@ -69,14 +109,13 @@ export const iconRegistry = {
   tilde: () => import('~icons/ph/tilde'),
   // Solar Icons
   arrowRightOutline: () => import('~icons/solar/arrow-right-outline'),
-  heartBold: () => import('~icons/solar/heart-bold'),
-  // bx Icons
-  party: () => import('~icons/bx/party'),
-  // tdesign Icons
-  componentDropdown: () => import('~icons/tdesign/component-dropdown'),
-  // Add new icons here
-  medalLine: () => import('~icons/ri/medal-line'),
-  form48regular: () => import('~icons/fluent/form-48-regular'),
+} as const
+
+export const iconRegistry = {
+  ...coreIconRegistry,
+  ...lazyIconRegistry,
 } as const
 
 export type IconName = keyof typeof iconRegistry
+export type CoreIconName = keyof typeof coreIconRegistry
+export type LazyIconName = keyof typeof lazyIconRegistry

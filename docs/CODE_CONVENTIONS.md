@@ -410,10 +410,13 @@ logic, but new consumers should not create further duplicate storage watchers.
 
 To use a new shared icon:
 
-1. Add an asynchronous import to `src/shared/icons/registry.ts`.
-2. Choose a stable camelCase registry name.
-3. Render it through `DiIcon`.
-4. Use semantic size and color props where possible.
+1. Determine its actual usage scope.
+2. Add shell, navigation, and reusable-component default icons to `coreIconRegistry` with a
+   static import.
+3. Add feature-specific and showcase icons to `lazyIconRegistry` with an asynchronous import.
+4. Choose a stable camelCase registry name that is unique across both groups.
+5. Render it through `DiIcon`.
+6. Use semantic size and color props where possible.
 
 `IconName` is generated from registry keys. Do not bypass that type with arbitrary strings.
 
