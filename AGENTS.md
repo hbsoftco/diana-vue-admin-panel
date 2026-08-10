@@ -140,7 +140,7 @@ architecture and recorded decisions.
 | `src/shared/ui/patterns` | Reusable composed presentation patterns                                        |
 | `src/shared/composables` | Cross-feature Composition API behavior                                         |
 | `src/shared/config`      | Static shared configuration, currently the menu                                |
-| `src/shared/icons`       | Typed asynchronous icon registry                                               |
+| `src/shared/icons`       | Typed hybrid icon registry for synchronous core and lazy feature icons         |
 | `src/shared/locales`     | Locale message dictionaries                                                    |
 | `src/shared/types`       | Shared UI types and generated declarations                                     |
 | `src/shared/utils`       | Utilities; currently contains sidebar state despite composable behavior        |

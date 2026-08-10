@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type { Component } from 'vue'
+
 import { computed, defineAsyncComponent } from 'vue'
 
-import type { IconName } from '@/shared/icons/registry'
+import type { IconName, LazyIconName } from '@/shared/icons/registry'
 import type { BadgeVariant, Size } from '@/shared/types/models'
 
-import { iconRegistry } from '@/shared/icons/registry'
+import { coreIconRegistry, lazyIconRegistry } from '@/shared/icons/registry'
 import DiBadge from '@/shared/ui/base/DiBadge.vue'
 
 /* =======================
@@ -53,10 +55,17 @@ const props = withDefaults(defineProps<Props>(), {
   badgePill: false,
 })
 
-/* =======================
-   Dynamic Icon Component
-======================= */
-const IconComponent = computed(() => defineAsyncComponent(iconRegistry[props.name]))
+const lazyIconComponents = Object.fromEntries(
+  Object.entries(lazyIconRegistry).map(([name, loader]) => [name, defineAsyncComponent(loader)]),
+) as Record<LazyIconName, Component>
+
+const isLazyIcon = computed(() => props.name in lazyIconRegistry)
+const IconComponent = computed(() => {
+  if (isLazyIcon.value)
+    return lazyIconComponents[props.name as LazyIconName]
+
+  return coreIconRegistry[props.name as keyof typeof coreIconRegistry]
+})
 
 /* =======================
    Static class maps
@@ -143,8 +152,17 @@ const fallbackCustomStyle = computed(() => {
 
 <template>
   <div class="relative inline-block" :title="props.title">
-    <!-- Suspense for async icon loading -->
-    <Suspense>
+    <component
+      :is="IconComponent"
+      v-if="!isLazyIcon"
+      :class="classes"
+      :style="style"
+      aria-hidden="true"
+    >
+      <slot />
+    </component>
+
+    <Suspense v-else>
       <!-- Loaded icon -->
       <template #default>
         <component :is="IconComponent" :class="classes" :style="style" aria-hidden="true">

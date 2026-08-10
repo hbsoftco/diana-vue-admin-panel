@@ -391,7 +391,7 @@ Reusable design-system primitives:
 | `DiCollapse`    | DaisyUI collapse behavior and presentation                      |
 | `DiDrawer`      | Responsive drawer structure and overlay control                 |
 | `DiDropdown`    | Dropdown positioning, options, selection, slots, outside click  |
-| `DiIcon`        | Typed asynchronous icons, transforms, colors, badges            |
+| `DiIcon`        | Typed hybrid icons, transforms, colors, badges                  |
 | `DiInput`       | DaisyUI text inputs, labels, slots, sizes, loading, validation  |
 | `DiLoading`     | DaisyUI loading variants                                        |
 | `DiRange`       | DaisyUI range input, limits, ticks, values, states, validation  |
