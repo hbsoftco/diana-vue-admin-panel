@@ -75,6 +75,17 @@ export const uiElementRoutes = {
       },
     },
     {
+      path: 'logo-loading',
+      component: () => import('@/pages/ui-elements/logo-loading.vue'),
+      meta: {
+        pageTitle: 'pages.uiElements.logoLoading.title',
+        breadcrumb: [
+          { label: 'pages.uiElements.title', link: '/ui-elements' },
+          { label: 'pages.uiElements.logoLoading.title' },
+        ],
+      },
+    },
+    {
       path: 'button-group',
       component: () => import('@/pages/ui-elements/button-group.vue'),
       meta: {

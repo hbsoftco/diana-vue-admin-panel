@@ -285,6 +285,12 @@
         "previous": "עמוד קודם",
         "next": "עמוד הבא"
       },
+      "logoLoading": {
+        "default": "ברירת מחדל",
+        "customText": "טקסט מותאם אישית",
+        "differentSize": "גודל לוגו שונה",
+        "withoutIndicator": "ללא מחוון"
+      },
       "progress": {
         "basic": "התקדמות בסיסית",
         "colors": "התקדמות בצבעים שונים",

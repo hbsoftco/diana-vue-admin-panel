@@ -285,6 +285,12 @@
         "previous": "Página anterior",
         "next": "Página siguiente"
       },
+      "logoLoading": {
+        "default": "Predeterminado",
+        "customText": "Texto personalizado",
+        "differentSize": "Tamaño de logotipo diferente",
+        "withoutIndicator": "Sin indicador"
+      },
       "progress": {
         "basic": "Progreso básico",
         "colors": "Progreso de diferentes colores",

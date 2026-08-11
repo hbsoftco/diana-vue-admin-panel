@@ -31,6 +31,7 @@ export const menuItems: MenuItem[] = [
       { id: 'buttons', label: 'menu.buttons', route: '/ui-elements/buttons' },
       { id: 'icons', label: 'menu.icons', route: '/ui-elements/icons' },
       { id: 'loadings', label: 'menu.loadings', route: '/ui-elements/loadings' },
+      { id: 'logo-loading', label: 'menu.logoLoading', route: '/ui-elements/logo-loading' },
       { id: 'button-group', label: 'menu.buttonGroup', route: '/ui-elements/button-group' },
       { id: 'cards', label: 'menu.cards', route: '/ui-elements/cards' },
       { id: 'dropdowns', label: 'menu.dropdowns', route: '/ui-elements/dropdowns' },

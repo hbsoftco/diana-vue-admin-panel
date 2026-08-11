@@ -33,6 +33,9 @@
       "toggle": "Toggle drawer",
       "closeOverlay": "Close drawer overlay"
     },
+    "logoLoading": {
+      "loading": "Loading"
+    },
     "pagination": {
       "label": "Pagination",
       "firstPage": "First page",

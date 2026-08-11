@@ -33,6 +33,9 @@
       "toggle": "باز و بسته کردن دراور",
       "closeOverlay": "بستن پوشش دراور"
     },
+    "logoLoading": {
+      "loading": "در حال بارگذاری"
+    },
     "pagination": {
       "label": "صفحه‌بندی",
       "firstPage": "صفحه اول",

@@ -59,6 +59,9 @@
       "loadings": {
         "title": "Loadings"
       },
+      "logoLoading": {
+        "title": "Logo Loading"
+      },
       "buttonGroup": {
         "title": "Button Group"
       },

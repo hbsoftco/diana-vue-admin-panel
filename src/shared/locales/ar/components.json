@@ -33,6 +33,9 @@
       "toggle": "تبديل الدرج",
       "closeOverlay": "إغلاق طبقة الدرج"
     },
+    "logoLoading": {
+      "loading": "جارٍ التحميل"
+    },
     "pagination": {
       "label": "ترقيم الصفحات",
       "firstPage": "الصفحة الأولى",
