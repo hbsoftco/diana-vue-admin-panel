@@ -228,7 +228,7 @@ const imageAlerts = `<div class="flex flex-col gap-3">
   </DiAlert>
   <DiAlert variant="info" soft>
     <template #icon>
-      <img src="@/assets/images/logo-mini.png" alt="" class="size-8 rounded-lg object-cover">
+      <img src="@/assets/images/logo-mini.svg" alt="" class="size-8 rounded-lg object-cover">
     </template>
     An info alert with a different image
   </DiAlert>
@@ -249,7 +249,7 @@ const sizedImageAlerts = `<div class="flex flex-col gap-3">
   </DiAlert>
   <DiAlert variant="info" soft>
     <template #icon>
-      <img src="@/assets/images/logo-mini.png" alt="" class="size-8 rounded-lg object-cover">
+      <img src="@/assets/images/logo-mini.svg" alt="" class="size-8 rounded-lg object-cover">
     </template>
     An alert with a medium image
   </DiAlert>
@@ -812,7 +812,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
         <DiAlert variant="info" soft>
           <template #icon>
             <img
-              src="@/assets/images/logo-mini.png"
+              src="@/assets/images/logo-mini.svg"
               alt=""
               class="size-8 rounded-lg object-cover"
             >
@@ -849,7 +849,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
         <DiAlert variant="info" soft>
           <template #icon>
             <img
-              src="@/assets/images/logo-mini.png"
+              src="@/assets/images/logo-mini.svg"
               alt=""
               class="size-8 rounded-lg object-cover"
             >

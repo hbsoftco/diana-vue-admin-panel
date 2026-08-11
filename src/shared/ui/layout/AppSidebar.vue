@@ -78,13 +78,13 @@ watch(
       <RouterLink to="/" class="overflow-hidden">
         <img
           v-if="!isSidebarCollapsed"
-          src="@/assets/images/logo.png"
+          src="@/assets/images/logo.svg"
           :alt="t('layout.sidebar.logoAlt')"
           class="h-8 w-auto transition-all duration-300 ltr:ml-6 rtl:mr-6"
         >
         <img
           v-else
-          src="@/assets/images/logo-mini.png"
+          src="@/assets/images/logo-mini.svg"
           :alt="t('layout.sidebar.logoAlt')"
           class="h-8 w-auto transition-all duration-300"
         >
