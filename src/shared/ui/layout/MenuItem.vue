@@ -5,6 +5,7 @@ import { RouterLink, useRoute } from 'vue-router'
 
 import type { MenuItem } from '@/shared/types/models'
 
+import { useDirection } from '@/shared/composables/use-direction'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 
 type Props = {
@@ -25,6 +26,7 @@ const emit = defineEmits<{
 
 const route = useRoute()
 const { t } = useI18n()
+const { isRtl } = useDirection()
 
 /**
  * Recursively check if a menu item or any of its children has the active route
@@ -56,6 +58,7 @@ const classes = getLevelClasses()
 
 // Tooltip content for collapsed state
 const displayLabel = computed(() => t(props.item.label))
+const directionIcon = computed(() => (isRtl.value ? 'chevronLeft' : 'chevronRight'))
 
 // Show children only when not collapsed or when it's a nested item
 const shouldShowChildren = computed(() => !props.isCollapsed || props.level > 1)
@@ -94,7 +97,7 @@ const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleO
 
       <DiIcon
         v-if="!isCollapsed || level > 1"
-        name="chevronRight"
+        :name="directionIcon"
         :rotate="isExpanded() ? 90 : 0"
         :color="hasActiveRoute() ? 'white' : 'default'"
         size="0.85rem"
