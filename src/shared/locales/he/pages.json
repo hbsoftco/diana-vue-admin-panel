@@ -59,6 +59,9 @@
       "loadings": {
         "title": "מחווני טעינה"
       },
+      "logoLoading": {
+        "title": "טעינת לוגו"
+      },
       "buttonGroup": {
         "title": "קבוצת כפתורים"
       },

@@ -33,6 +33,9 @@
       "toggle": "Ouvrir ou fermer le tiroir",
       "closeOverlay": "Fermer le fond du tiroir"
     },
+    "logoLoading": {
+      "loading": "Chargement"
+    },
     "pagination": {
       "label": "Pagination",
       "firstPage": "Première page",

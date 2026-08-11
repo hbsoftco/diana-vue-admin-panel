@@ -59,6 +59,9 @@
       "loadings": {
         "title": "Chargements"
       },
+      "logoLoading": {
+        "title": "Chargement du logo"
+      },
       "buttonGroup": {
         "title": "Groupe de boutons"
       },

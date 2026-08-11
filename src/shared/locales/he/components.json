@@ -33,6 +33,9 @@
       "toggle": "פתיחת או סגירת מגירה",
       "closeOverlay": "סגירת שכבת המגירה"
     },
+    "logoLoading": {
+      "loading": "טוען"
+    },
     "pagination": {
       "label": "עימוד",
       "firstPage": "עמוד ראשון",

@@ -59,6 +59,9 @@
       "loadings": {
         "title": "مؤشرات التحميل"
       },
+      "logoLoading": {
+        "title": "تحميل الشعار"
+      },
       "buttonGroup": {
         "title": "مجموعة الأزرار"
       },

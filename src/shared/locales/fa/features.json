@@ -285,6 +285,12 @@
         "previous": "صفحه قبل",
         "next": "صفحه بعد"
       },
+      "logoLoading": {
+        "default": "پیش‌فرض",
+        "customText": "متن سفارشی",
+        "differentSize": "اندازه متفاوت لوگو",
+        "withoutIndicator": "بدون نشانگر"
+      },
       "progress": {
         "basic": "پیشرفت پایه",
         "colors": "پیشرفت با رنگ‌های مختلف",

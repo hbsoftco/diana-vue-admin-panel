@@ -285,6 +285,12 @@
         "previous": "الصفحة السابقة",
         "next": "الصفحة التالية"
       },
+      "logoLoading": {
+        "default": "الافتراضي",
+        "customText": "نص مخصص",
+        "differentSize": "حجم شعار مختلف",
+        "withoutIndicator": "بدون مؤشر"
+      },
       "progress": {
         "basic": "التقدم الأساسي",
         "colors": "تقدم بألوان مختلفة",
