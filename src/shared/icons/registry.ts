@@ -23,6 +23,7 @@ import HomeOutlineRoundedIcon from '~icons/material-symbols/home-outline-rounded
 import LogoutIcon from '~icons/material-symbols/logout'
 import UserOutlineRoundedIcon from '~icons/material-symbols/person-outline-rounded'
 import ChevronDownIcon from '~icons/mdi/chevron-down'
+import ChevronLeftIcon from '~icons/mdi/chevron-left'
 import ChevronRightIcon from '~icons/mdi/chevron-right'
 import CloseIcon from '~icons/mingcute/close-line'
 import MedalLineIcon from '~icons/ri/medal-line'
@@ -37,6 +38,7 @@ export const coreIconRegistry = {
   moon: MoonIcon,
   sun: SunIcon,
   bell: BellIcon,
+  chevronLeft: ChevronLeftIcon,
   chevronRight: ChevronRightIcon,
   chevronDown: ChevronDownIcon,
   logout: LogoutIcon,
@@ -77,7 +79,6 @@ export const lazyIconRegistry = {
   magnify: () => import('~icons/mdi/magnify'),
   phone: () => import('~icons/mdi/phone'),
   chevronUp: () => import('~icons/mdi/chevron-up'),
-  chevronLeft: () => import('~icons/mdi/chevron-left'),
   // Material Symbols
   settingsOutlineRounded: () => import('~icons/material-symbols/settings-outline-rounded'),
   folderOutlineRounded: () => import('~icons/material-symbols/folder-outline-rounded'),
