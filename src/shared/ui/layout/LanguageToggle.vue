@@ -15,6 +15,7 @@ const languages = [
   { code: 'es', label: 'Español', dir: 'ltr', flag: '🇪🇸' },
   { code: 'ar', label: 'العربية', dir: 'rtl', flag: '🇸🇦' },
   { code: 'fr', label: 'Français', dir: 'ltr', flag: '🇫🇷' },
+  { code: 'de', label: 'Deutsch', dir: 'ltr', flag: '🇩🇪' },
 ]
 
 const currentLang = useLocalStorage<string>('language', 'en')

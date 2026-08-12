@@ -1,0 +1,64 @@
+{
+  "layout": {
+    "footer": {
+      "copyright": "Copyright © {year} {brand}. Entworfen mit {heart} von {author}. Open Source unter der {license}-Lizenz.",
+      "author": "Dianas Vater"
+    },
+    "sidebar": {
+      "label": "Anwendungsseitenleiste",
+      "logoAlt": "Diana-Logo",
+      "navigation": "Primäre Navigation",
+      "expand": "Seitenleiste erweitern",
+      "collapse": "Seitenleiste einklappen",
+      "openMobile": "Mobile Navigation öffnen",
+      "closeMobile": "Mobile Navigation schließen"
+    },
+    "notifications": {
+      "label": "Benachrichtigungen",
+      "title": "Benachrichtigungen",
+      "viewAll": "Alle Benachrichtigungen anzeigen",
+      "items": {
+        "newMessage": {
+          "title": "Neue Nachricht",
+          "description": "Sie haben eine neue Nachricht von {sender}"
+        },
+        "taskCompleted": {
+          "title": "Aufgabe abgeschlossen",
+          "description": "{project} wurde abgeschlossen"
+        },
+        "meetingReminder": {
+          "title": "Besprechungserinnerung",
+          "description": "Teambesprechung in {count} Minuten"
+        }
+      }
+    },
+    "relativeTime": {
+      "minuteAgo": "Vor {count} Minute",
+      "minutesAgo": "Vor {count} Minuten",
+      "hourAgo": "Vor {count} Stunde",
+      "hoursAgo": "Vor {count} Stunden"
+    },
+    "userMenu": {
+      "label": "Benutzermenü",
+      "avatarAlt": "Avatar für {name}",
+      "dashboard": "Dashboard",
+      "profile": "Profil",
+      "messages": "Nachrichten",
+      "settings": "Einstellungen",
+      "help": "Hilfe",
+      "logout": "Abmelden",
+      "lastLogin": "Letzter Login: {time}"
+    },
+    "theme": {
+      "switchToLight": "Zum hellen Design wechseln",
+      "switchToDark": "Zum dunklen Design wechseln"
+    },
+    "fullscreen": {
+      "enter": "Vollbildmodus aktivieren",
+      "exit": "Vollbildmodus beenden"
+    },
+    "language": {
+      "select": "Sprache auswählen"
+    }
+  }
+}

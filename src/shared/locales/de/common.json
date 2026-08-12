@@ -1,0 +1,20 @@
+{
+  "common": {
+    "actions": {
+      "close": "Schließen",
+      "copy": "Kopieren",
+      "hide": "Ausblenden"
+    },
+    "variants": {
+      "primary": "Primär",
+      "secondary": "Sekundär",
+      "info": "Info",
+      "accent": "Akzent",
+      "success": "Erfolg",
+      "warning": "Warnung",
+      "error": "Fehler",
+      "neutral": "Neutral",
+      "link": "Link"
+    }
+  }
+}
