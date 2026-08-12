@@ -9,7 +9,9 @@
       "logoAlt": "הלוגו של Diana",
       "navigation": "ניווט ראשי",
       "expand": "הרחבת סרגל הצד",
-      "collapse": "כיווץ סרגל הצד"
+      "collapse": "כיווץ סרגל הצד",
+      "openMobile": "פתיחת הניווט במכשיר נייד",
+      "closeMobile": "סגירת הניווט במכשיר נייד"
     },
     "notifications": {
       "label": "התראות",

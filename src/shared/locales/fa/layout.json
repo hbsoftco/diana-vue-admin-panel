@@ -9,7 +9,9 @@
       "logoAlt": "لوگوی Diana",
       "navigation": "ناوبری اصلی",
       "expand": "باز کردن نوار کناری",
-      "collapse": "جمع کردن نوار کناری"
+      "collapse": "جمع کردن نوار کناری",
+      "openMobile": "باز کردن ناوبری موبایل",
+      "closeMobile": "بستن ناوبری موبایل"
     },
     "notifications": {
       "label": "اعلان‌ها",

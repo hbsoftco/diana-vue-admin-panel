@@ -9,7 +9,9 @@
       "logoAlt": "شعار Diana",
       "navigation": "التنقل الرئيسي",
       "expand": "توسيع الشريط الجانبي",
-      "collapse": "طي الشريط الجانبي"
+      "collapse": "طي الشريط الجانبي",
+      "openMobile": "فتح التنقل على الهاتف",
+      "closeMobile": "إغلاق التنقل على الهاتف"
     },
     "notifications": {
       "label": "الإشعارات",

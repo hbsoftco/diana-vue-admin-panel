@@ -9,7 +9,9 @@
       "logoAlt": "Diana logo",
       "navigation": "Primary navigation",
       "expand": "Expand sidebar",
-      "collapse": "Collapse sidebar"
+      "collapse": "Collapse sidebar",
+      "openMobile": "Open mobile navigation",
+      "closeMobile": "Close mobile navigation"
     },
     "notifications": {
       "label": "Notifications",

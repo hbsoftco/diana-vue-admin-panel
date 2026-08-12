@@ -1,24 +1,63 @@
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
-const isSidebarCollapsed = ref(false)
+import { useSidebarViewport } from '@/shared/composables/use-sidebar-viewport'
+
+const isDesktopSidebarCollapsed = ref(false)
+const isMobileSidebarOpen = ref(false)
 
 export function useSidebar() {
+  const { isDesktop, canHover } = useSidebarViewport()
+
+  const toggleDesktopSidebar = () => {
+    isDesktopSidebarCollapsed.value = !isDesktopSidebarCollapsed.value
+  }
+
+  const collapseDesktopSidebar = () => {
+    isDesktopSidebarCollapsed.value = true
+  }
+
+  const expandDesktopSidebar = () => {
+    isDesktopSidebarCollapsed.value = false
+  }
+
+  const toggleMobileSidebar = () => {
+    isMobileSidebarOpen.value = !isMobileSidebarOpen.value
+  }
+
+  const openMobileSidebar = () => {
+    isMobileSidebarOpen.value = true
+  }
+
+  const closeMobileSidebar = () => {
+    isMobileSidebarOpen.value = false
+  }
+
   const toggleSidebar = () => {
-    isSidebarCollapsed.value = !isSidebarCollapsed.value
+    if (isDesktop.value) {
+      toggleDesktopSidebar()
+      return
+    }
+
+    toggleMobileSidebar()
   }
 
-  const collapseSidebar = () => {
-    isSidebarCollapsed.value = true
-  }
-
-  const expandSidebar = () => {
-    isSidebarCollapsed.value = false
-  }
+  watch(isDesktop, (desktop, wasDesktop) => {
+    if (desktop && !wasDesktop) {
+      closeMobileSidebar()
+    }
+  })
 
   return {
-    isSidebarCollapsed,
+    isDesktopSidebarCollapsed,
+    isMobileSidebarOpen,
+    isDesktop,
+    canHover,
     toggleSidebar,
-    collapseSidebar,
-    expandSidebar,
+    toggleDesktopSidebar,
+    collapseDesktopSidebar,
+    expandDesktopSidebar,
+    toggleMobileSidebar,
+    openMobileSidebar,
+    closeMobileSidebar,
   }
 }
