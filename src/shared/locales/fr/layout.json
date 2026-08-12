@@ -9,7 +9,9 @@
       "logoAlt": "Logo Diana",
       "navigation": "Navigation principale",
       "expand": "Développer la barre latérale",
-      "collapse": "Réduire la barre latérale"
+      "collapse": "Réduire la barre latérale",
+      "openMobile": "Ouvrir la navigation mobile",
+      "closeMobile": "Fermer la navigation mobile"
     },
     "notifications": {
       "label": "Notifications",

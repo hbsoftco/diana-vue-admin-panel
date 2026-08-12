@@ -7,6 +7,7 @@ import type { DiPopoverPlacement, DiPopoverSize, DiPopoverWidth } from './types'
 
 type Props = {
   title?: string
+  triggerTag?: 'span' | 'button'
   placement?: DiPopoverPlacement
   size?: DiPopoverSize
   width?: DiPopoverWidth
@@ -16,11 +17,16 @@ type Props = {
   closeOnEscape?: boolean
   persistent?: boolean
   showArrow?: boolean
+  focusOnOpen?: boolean
+  contentClass?: string
+  bodyClass?: string
+  ariaLabel?: string
 }
 
 type CloseReason = 'trigger' | 'outside' | 'escape' | 'programmatic'
 
 const props = withDefaults(defineProps<Props>(), {
+  triggerTag: 'span',
   placement: 'bottom',
   size: 'md',
   width: 'auto',
@@ -30,6 +36,7 @@ const props = withDefaults(defineProps<Props>(), {
   closeOnEscape: true,
   persistent: false,
   showArrow: true,
+  focusOnOpen: true,
 })
 
 const emit = defineEmits<{
@@ -131,10 +138,11 @@ const contentClasses = computed(() => [
   SIZE_CLASSES[props.size],
   WIDTH_CLASSES[props.width],
   PLACEMENT_CLASSES[effectivePlacement.value],
+  props.contentClass,
 ])
 
 const headerClasses = computed(() => HEADER_CLASSES[props.size])
-const bodyPaddingClasses = computed(() => BODY_PADDING_CLASSES[props.size])
+const bodyClasses = computed(() => [BODY_PADDING_CLASSES[props.size], props.bodyClass])
 const footerPaddingClasses = computed(() => FOOTER_PADDING_CLASSES[props.size])
 const arrowClasses = computed(() => ['di-popover__arrow', ARROW_CLASSES[effectivePlacement.value]])
 
@@ -233,6 +241,7 @@ function updatePosition() {
 
   const finalTop = Math.min(Math.max(point.top, viewportPadding), maxTop)
   const finalLeft = Math.min(Math.max(point.left, viewportPadding), maxLeft)
+  const availableHeight = Math.max(0, window.innerHeight - finalTop - viewportPadding)
   const arrowBoundary = 16
   const { side } = placementParts(placement)
 
@@ -254,6 +263,7 @@ function updatePosition() {
     top: `${finalTop}px`,
     left: `${finalLeft}px`,
     width,
+    maxHeight: `${availableHeight}px`,
   }
 }
 
@@ -292,7 +302,7 @@ function onTriggerKeydown(event: KeyboardEvent) {
   if (event.target !== event.currentTarget)
     return
 
-  if (event.key === 'Enter' || event.key === ' ') {
+  if (props.triggerTag === 'span' && (event.key === 'Enter' || event.key === ' ')) {
     event.preventDefault()
     toggle()
   }
@@ -341,7 +351,8 @@ watch(
     addGlobalListeners()
     await nextTick()
     updatePosition()
-    focusContent()
+    if (props.focusOnOpen)
+      focusContent()
     emit('opened')
   },
   { immediate: true },
@@ -362,22 +373,26 @@ onBeforeUnmount(removeGlobalListeners)
 
 <template>
   <span class="inline-flex" :class="width === 'full' && 'w-full'">
-    <span
+    <component
+      :is="triggerTag"
       ref="triggerElement"
       data-di-popover-trigger
       class="inline-flex"
       :class="width === 'full' && 'w-full'"
-      role="button"
-      :tabindex="disabled ? -1 : 0"
+      :type="triggerTag === 'button' ? 'button' : undefined"
+      :disabled="triggerTag === 'button' ? disabled : undefined"
+      :role="triggerTag === 'span' ? 'button' : undefined"
+      :tabindex="triggerTag === 'span' ? (disabled ? -1 : 0) : undefined"
       aria-haspopup="dialog"
+      :aria-label="ariaLabel"
       :aria-expanded="open"
-      :aria-controls="open ? contentId : undefined"
-      :aria-disabled="disabled || undefined"
+      :aria-controls="contentId"
+      :aria-disabled="triggerTag === 'span' ? disabled || undefined : undefined"
       @click="toggle"
       @keydown="onTriggerKeydown"
     >
       <slot name="trigger" :open="open" :disabled="disabled" :toggle="toggle" />
-    </span>
+    </component>
 
     <Teleport to="body">
       <div
@@ -386,7 +401,8 @@ onBeforeUnmount(removeGlobalListeners)
         ref="contentElement"
         role="dialog"
         tabindex="-1"
-        :aria-labelledby="hasHeader ? headerId : undefined"
+        :aria-label="ariaLabel"
+        :aria-labelledby="hasHeader && !ariaLabel ? headerId : undefined"
         :data-placement="effectivePlacement"
         :class="contentClasses"
         :style="contentStyle"
@@ -394,7 +410,7 @@ onBeforeUnmount(removeGlobalListeners)
       >
         <span v-if="showArrow" aria-hidden="true" :class="arrowClasses" :style="arrowStyle" />
 
-        <div class="relative z-10 overflow-hidden rounded-[calc(0.5rem-1px)]">
+        <div class="relative z-10 flex min-h-0 flex-col overflow-hidden rounded-[calc(0.5rem-1px)]">
           <header
             v-if="hasHeader"
             :id="headerId"
@@ -406,7 +422,7 @@ onBeforeUnmount(removeGlobalListeners)
             </slot>
           </header>
 
-          <div :class="bodyPaddingClasses">
+          <div :class="bodyClasses">
             <slot :open="open" :close="() => close()" />
           </div>
 

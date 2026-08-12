@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { defineComponent, nextTick, ref } from 'vue'
 
 import type { DiPopoverPlacement } from '../popover'
@@ -21,6 +21,7 @@ const Harness = defineComponent({
 })
 
 afterEach(() => {
+  vi.unstubAllGlobals()
   document.body.innerHTML = ''
 })
 
@@ -37,11 +38,84 @@ describe('diPopover', () => {
     const trigger = wrapper.get('[data-di-popover-trigger]')
     expect(trigger.attributes('aria-haspopup')).toBe('dialog')
     expect(trigger.attributes('aria-expanded')).toBe('false')
+    expect(trigger.attributes('aria-controls')).toMatch(/^di-popover-/)
 
     await trigger.trigger('click')
 
     expect(trigger.attributes('aria-expanded')).toBe('true')
+    expect(document.body.querySelector('[role="dialog"]')?.id).toBe(
+      trigger.attributes('aria-controls'),
+    )
     expect(document.body.querySelector('[role="dialog"]')?.textContent).toContain('Popover content')
+    wrapper.unmount()
+  })
+
+  it('supports a native button trigger while preserving root attribute fallthrough', async () => {
+    const onMouseenter = vi.fn()
+    const wrapper = mount(DiPopover, {
+      attrs: {
+        'id': 'popover-root',
+        'data-owner': 'shell',
+        'onMouseenter': onMouseenter,
+      },
+      props: { triggerTag: 'button', ariaLabel: 'Open navigation submenu' },
+      slots: { trigger: 'Open', default: 'Popover content' },
+    })
+
+    const trigger = wrapper.get('[data-di-popover-trigger]')
+    expect(wrapper.element.tagName).toBe('SPAN')
+    expect(wrapper.attributes('id')).toBe('popover-root')
+    expect(wrapper.attributes('data-owner')).toBe('shell')
+    expect(trigger.element.tagName).toBe('BUTTON')
+    expect(trigger.attributes('type')).toBe('button')
+    expect(trigger.attributes('role')).toBeUndefined()
+    expect(trigger.attributes('tabindex')).toBeUndefined()
+    expect(trigger.attributes('aria-label')).toBe('Open navigation submenu')
+
+    await wrapper.trigger('mouseenter')
+    expect(onMouseenter).toHaveBeenCalledOnce()
+
+    await trigger.trigger('click')
+    expect(document.body.querySelector('[role="dialog"]')).not.toBeNull()
+    wrapper.unmount()
+  })
+
+  it('can open without moving focus into the content', async () => {
+    const wrapper = mount(DiPopover, {
+      attachTo: document.body,
+      props: { triggerTag: 'button', focusOnOpen: false },
+      slots: { trigger: 'Open', default: '<button type="button">Action</button>' },
+    })
+    const trigger = wrapper.get<HTMLElement>('[data-di-popover-trigger]')
+    trigger.element.focus()
+
+    await trigger.trigger('click')
+    await nextTick()
+
+    expect(document.body.querySelector('[role="dialog"]')).not.toBeNull()
+    expect(document.activeElement).toBe(trigger.element)
+    wrapper.unmount()
+  })
+
+  it('applies content and body classes and supports an explicit dialog label', () => {
+    const wrapper = mount(DiPopover, {
+      attachTo: document.body,
+      props: {
+        open: true,
+        title: 'Visible heading',
+        ariaLabel: 'Navigation submenu',
+        contentClass: 'shell-popover',
+        bodyClass: 'shell-popover-body',
+        focusOnOpen: false,
+      },
+      slots: { trigger: 'Trigger', default: 'Body' },
+    })
+
+    const dialog = document.body.querySelector('[role="dialog"]')
+    expect(dialog?.getAttribute('aria-label')).toBe('Navigation submenu')
+    expect(dialog?.getAttribute('aria-labelledby')).toBeNull()
+    expect(dialog?.classList).toContain('shell-popover')
+    expect(dialog?.querySelector('.shell-popover-body')).not.toBeNull()
     wrapper.unmount()
   })
 
@@ -216,6 +290,32 @@ describe('diPopover', () => {
 
     expect(dialog?.dataset.placement).toBe('bottom-start')
     expect(dialog?.classList).toContain('origin-top-left')
+    wrapper.unmount()
+  })
+
+  it('caps content height with the same viewport padding used for position clamping', async () => {
+    vi.stubGlobal('innerHeight', 600)
+    const wrapper = mount(DiPopover, {
+      attachTo: document.body,
+      props: { placement: 'right-start', open: true },
+      slots: { trigger: 'Trigger', default: 'Tall content' },
+    })
+
+    const trigger = wrapper.get<HTMLElement>('[data-di-popover-trigger]')
+    trigger.element.getBoundingClientRect = () =>
+      ({ top: 200, bottom: 240, left: 20, right: 100, width: 80, height: 40 }) as DOMRect
+    const dialog = document.body.querySelector<HTMLElement>('[role="dialog"]')
+    if (dialog) {
+      dialog.getBoundingClientRect = () =>
+        ({ top: 0, bottom: 900, left: 0, right: 180, width: 180, height: 900 }) as DOMRect
+    }
+
+    window.dispatchEvent(new Event('resize'))
+    await nextTick()
+
+    expect(dialog?.style.top).toBe('8px')
+    expect(dialog?.style.maxHeight).toBe('584px')
+    expect(dialog?.dataset.placement).toBe('right-start')
     wrapper.unmount()
   })
 

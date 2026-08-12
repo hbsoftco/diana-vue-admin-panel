@@ -31,10 +31,8 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
 </script>
 
 <template>
-  <div class="flex h-screen bg-(--color-bg-background)">
-    <AppSidebar />
-
-    <div class="min-w-0 flex-1 flex flex-col">
+  <AppSidebar>
+    <div class="flex h-screen min-w-0 flex-1 flex-col bg-(--color-bg-background)">
       <AppHeader />
 
       <main class="flex-1 overflow-y-auto">
@@ -96,5 +94,5 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
         </footer>
       </main>
     </div>
-  </div>
+  </AppSidebar>
 </template>
