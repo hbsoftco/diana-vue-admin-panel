@@ -1,4 +1,5 @@
 import ar from '@shared/locales/ar'
+import de from '@shared/locales/de'
 import en from '@shared/locales/en'
 import es from '@shared/locales/es'
 import fa from '@shared/locales/fa'
@@ -10,5 +11,5 @@ export const i18n = createI18n({
   legacy: false,
   locale: 'en',
   fallbackLocale: 'en',
-  messages: { en, fa, ar, he, fr, es },
+  messages: { en, fa, ar, he, fr, es, de },
 })

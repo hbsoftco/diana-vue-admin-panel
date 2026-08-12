@@ -1,0 +1,178 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "Dashboards",
+      "crm": {
+        "title": "CRM"
+      },
+      "ecommerce": {
+        "title": "E-Commerce"
+      },
+      "analytics": {
+        "title": "Analysen"
+      },
+      "courses": {
+        "title": "Kurse"
+      },
+      "crypto": {
+        "title": "Krypto"
+      },
+      "hrm": {
+        "title": "HRM"
+      },
+      "jobs": {
+        "title": "Jobs"
+      },
+      "nft": {
+        "title": "NFT"
+      },
+      "personal": {
+        "title": "Persönlich"
+      },
+      "projects": {
+        "title": "Projekte"
+      },
+      "sales": {
+        "title": "Vertrieb"
+      },
+      "stocks": {
+        "title": "Aktien"
+      }
+    },
+    "uiElements": {
+      "title": "UI-Elemente",
+      "alerts": {
+        "title": "Hinweise"
+      },
+      "badge": {
+        "title": "Badges"
+      },
+      "breadcrumb": {
+        "title": "Breadcrumbs"
+      },
+      "buttons": {
+        "title": "Buttons"
+      },
+      "icons": {
+        "title": "Icons"
+      },
+      "loadings": {
+        "title": "Ladeanzeigen"
+      },
+      "logoLoading": {
+        "title": "Logo-Ladeanzeige"
+      },
+      "buttonGroup": {
+        "title": "Schaltflächengruppe"
+      },
+      "cards": {
+        "title": "Karten"
+      },
+      "dropdowns": {
+        "title": "Dropdowns"
+      },
+      "imagesFigures": {
+        "title": "Bilder & Abbildungen"
+      },
+      "linksInteractions": {
+        "title": "Links und Interaktionen"
+      },
+      "listGroup": {
+        "title": "Listengruppe"
+      },
+      "navsTabs": {
+        "title": "Navigationen und Tabs"
+      },
+      "objectFit": {
+        "title": "Objektanpassung"
+      },
+      "pagination": {
+        "title": "Pagination"
+      },
+      "popovers": {
+        "title": "Popovers"
+      },
+      "progress": {
+        "title": "Fortschritt"
+      },
+      "switch": {
+        "title": "Schalter"
+      },
+      "toasts": {
+        "title": "Toasts"
+      },
+      "tooltips": {
+        "title": "Tooltips"
+      },
+      "typography": {
+        "title": "Typografie"
+      }
+    },
+    "forms": {
+      "title": "Formulare",
+      "formElements": {
+        "title": "Formularelemente"
+      },
+      "inputs": {
+        "title": "Eingaben"
+      },
+      "range": {
+        "title": "Bereich"
+      },
+      "rangeSlider": {
+        "title": "Bereichsschieberegler"
+      },
+      "select": {
+        "title": "Auswahl"
+      }
+    },
+    "advancedUi": {
+      "title": "Erweiterte UI",
+      "modals": {
+        "title": "Modale Dialoge"
+      },
+      "accordion": {
+        "title": "Akkordeon"
+      },
+      "carousel": {
+        "title": "Karussell"
+      },
+      "collapse": {
+        "title": "Aufklappbereich"
+      },
+      "navbar": {
+        "title": "Navigationsleiste"
+      },
+      "drawer": {
+        "title": "Drawer"
+      },
+      "rating": {
+        "title": "Bewertung"
+      },
+      "skeleton": {
+        "title": "Skeleton"
+      }
+    },
+    "error": {
+      "401": {
+        "title": "401 Fehler"
+      },
+      "404": {
+        "title": "404 Fehler"
+      },
+      "500": {
+        "title": "500 Fehler"
+      },
+      "title": "Fehler"
+    },
+    "utility": {
+      "title": "Hilfsmittel",
+      "avatar": {
+        "title": "Avatar"
+      },
+      "colors": {
+        "title": "Farben"
+      }
+    }
+  }
+}

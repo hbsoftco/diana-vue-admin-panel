@@ -6,7 +6,7 @@ const root = process.cwd()
 const localeRoot = path.join(root, 'src/shared/locales')
 const sourceRoot = path.join(root, 'src')
 const sourceLocale = 'en'
-const locales = ['en', 'fa', 'ar', 'he', 'fr', 'es']
+const locales = ['en', 'fa', 'ar', 'he', 'fr', 'es', 'de']
 const modules = ['common', 'menu', 'layout', 'components', 'pages', 'features']
 const forbiddenPrefixes = ['variants.', 'features.advanced-ui.', 'features.ui-elements.']
 

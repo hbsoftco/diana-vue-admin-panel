@@ -1,0 +1,77 @@
+{
+  "components": {
+    "alert": {
+      "close": "Hinweis schließen"
+    },
+    "avatar": {
+      "label": "Avatar",
+      "groupLabel": "Avatar-Gruppe",
+      "more": "{count} weitere Avatare",
+      "status": {
+        "online": "Online",
+        "offline": "Offline",
+        "busy": "Beschäftigt",
+        "away": "Abwesend"
+      }
+    },
+    "breadcrumb": {
+      "label": "Breadcrumb-Navigation",
+      "home": "Startseite"
+    },
+    "buttonGroup": {
+      "label": "Schaltflächengruppe"
+    },
+    "carousel": {
+      "label": "Karussell",
+      "previousSlide": "Vorheriger Inhalt",
+      "nextSlide": "Nächster Inhalt",
+      "slidePosition": "Inhalt {current} von {total}",
+      "roleDescription": "Karussell",
+      "slideRoleDescription": "Inhalt"
+    },
+    "drawer": {
+      "toggle": "Drawer ein-/ausblenden",
+      "closeOverlay": "Drawer schließen"
+    },
+    "logoLoading": {
+      "loading": "Laden"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "firstPage": "Erste Seite",
+      "previousPage": "Vorherige Seite",
+      "nextPage": "Nächste Seite",
+      "lastPage": "Letzte Seite"
+    },
+    "rating": {
+      "value": "Bewertung {value} von {max}"
+    },
+    "range": {
+      "setValue": "Wert auf {value} setzen"
+    },
+    "rangeSlider": {
+      "label": "Bereich",
+      "minimum": "Mindestens {label}",
+      "maximum": "Maximal {label}",
+      "moveNearestHandle": "Nächsten Regler auf {value} verschieben"
+    },
+    "select": {
+      "placeholder": "Option auswählen",
+      "empty": "Keine Optionen gefunden",
+      "loading": "Optionen werden geladen",
+      "clearSelection": "Auswahl aufheben",
+      "removeOption": "{option} entfernen"
+    },
+    "toast": {
+      "close": "Benachrichtigung schließen"
+    },
+    "previewCodeCard": {
+      "showPreview": "Vorschau anzeigen",
+      "showCode": "Code anzeigen",
+      "copied": "Kopiert!"
+    },
+    "dropdown": {
+      "menu": "Menü"
+    }
+  }
+}
