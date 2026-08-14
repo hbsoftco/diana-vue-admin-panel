@@ -1,6 +1,7 @@
 import type { MenuItem } from '@/shared/types/models'
 
 export const menuItems: MenuItem[] = [
+  { type: 'label', id: 'main-label', label: 'menu.groups.main' },
   {
     id: 'dashboards',
     label: 'menu.dashboard',
@@ -20,6 +21,7 @@ export const menuItems: MenuItem[] = [
       { id: 'stocks', label: 'menu.stocks', route: '/dashboards/stocks' },
     ],
   },
+  { type: 'label', id: 'components-label', label: 'menu.groups.components' },
   {
     id: 'ui-elements',
     label: 'menu.uiElements',
@@ -89,6 +91,7 @@ export const menuItems: MenuItem[] = [
       { id: 'rating', label: 'menu.rating', route: '/advanced-ui/rating' },
     ],
   },
+  { type: 'label', id: 'system-label', label: 'menu.groups.system' },
   {
     id: 'error',
     label: 'menu.error',

@@ -89,6 +89,41 @@ describe('menuItem direction indicator', () => {
   })
 })
 
+describe('menuItem group label', () => {
+  const labelItem: MenuItemType = {
+    type: 'label',
+    id: 'main-label',
+    label: 'menu.groups.main',
+  }
+
+  it('renders translated non-interactive text with logical alignment', async () => {
+    const wrapper = await mountMenuItem({ item: labelItem })
+    const label = wrapper.get('[data-menu-label]')
+
+    expect(label.text()).toBe('Main')
+    expect(label.element.tagName).toBe('LI')
+    expect(label.classes()).toContain('text-start')
+    expect(label.classes()).toContain('text-menu-prime')
+    expect(wrapper.find('a').exists()).toBe(false)
+    expect(wrapper.find('button').exists()).toBe(false)
+
+    testI18n.global.locale.value = 'fa'
+    await nextTick()
+    expect(label.text()).toBe('اصلی')
+    wrapper.unmount()
+  })
+
+  it('degrades to a token-colored divider in collapsed mode', async () => {
+    const wrapper = await mountMenuItem({ item: labelItem, isCollapsed: true })
+    const label = wrapper.get('[data-menu-label]')
+
+    expect(label.text()).toBe('')
+    expect(label.classes()).toContain('border-(--color-menu-border)')
+    expect(label.find('span').exists()).toBe(false)
+    wrapper.unmount()
+  })
+})
+
 describe('menuItem collapsed flyout', () => {
   it('overrides the popover surface with the sidebar background token', async () => {
     const wrapper = await mountMenuItem({ flyoutEnabled: true, isCollapsed: true })

@@ -903,7 +903,9 @@
     },
     "advancedUi": {
       "navbar": {
-        "comingSoon": "عرض مكوّن شريط التنقل قادم قريباً..."
+        "comingSoon": "عرض مكوّن شريط التنقل قادم قريباً...",
+        "groupedMenu": "قائمة جانبية مجمّعة",
+        "collapsedMenu": "فواصل القائمة الجانبية المطوية"
       },
       "modals": {
         "actions": {

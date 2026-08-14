@@ -903,7 +903,9 @@
     },
     "advancedUi": {
       "navbar": {
-        "comingSoon": "La demostración del componente de barra de navegación estará disponible pronto..."
+        "comingSoon": "La demostración del componente de barra de navegación estará disponible pronto...",
+        "groupedMenu": "Menú lateral agrupado",
+        "collapsedMenu": "Separadores del menú lateral contraído"
       },
       "modals": {
         "actions": {

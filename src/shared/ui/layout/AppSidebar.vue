@@ -6,6 +6,7 @@ import { useRoute } from 'vue-router'
 import type { MenuItem as MenuItemType } from '@/shared/types/models'
 
 import { menuItems } from '@/shared/config/menu'
+import { isMenuLabel } from '@/shared/types/models'
 import DiDrawer from '@/shared/ui/base/DiDrawer.vue'
 import { useSidebar } from '@/shared/utils/use-sidebar'
 
@@ -35,6 +36,9 @@ function findParentMenuIds(
   parentIds: string[] = [],
 ): string[] | null {
   for (const item of items) {
+    if (isMenuLabel(item))
+      continue
+
     // If this item has the target route, return all parent IDs
     if (item.route === targetRoute) {
       return parentIds

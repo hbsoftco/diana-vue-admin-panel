@@ -903,7 +903,9 @@
     },
     "advancedUi": {
       "navbar": {
-        "comingSoon": "Navbar component demo is coming soon..."
+        "comingSoon": "Navbar component demo is coming soon...",
+        "groupedMenu": "Grouped sidebar menu",
+        "collapsedMenu": "Collapsed sidebar dividers"
       },
       "modals": {
         "actions": {
