@@ -903,7 +903,9 @@
     },
     "advancedUi": {
       "navbar": {
-        "comingSoon": "הדגמת רכיב סרגל הניווט תגיע בקרוב..."
+        "comingSoon": "הדגמת רכיב סרגל הניווט תגיע בקרוב...",
+        "groupedMenu": "תפריט צד מקובץ",
+        "collapsedMenu": "מפרידי תפריט צד מכווץ"
       },
       "modals": {
         "actions": {

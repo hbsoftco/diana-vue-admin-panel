@@ -1,5 +1,10 @@
 {
   "menu": {
+    "groups": {
+      "main": "Principal",
+      "components": "Componentes",
+      "system": "Sistema"
+    },
     "dashboard": "Paneles",
     "crm": "CRM",
     "ecommerce": "Comercio electrónico",

@@ -1,5 +1,10 @@
 {
   "menu": {
+    "groups": {
+      "main": "ראשי",
+      "components": "רכיבים",
+      "system": "מערכת"
+    },
     "dashboard": "לוחות בקרה",
     "crm": "CRM",
     "ecommerce": "מסחר אלקטרוני",

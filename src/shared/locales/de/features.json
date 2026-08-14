@@ -903,7 +903,9 @@
     },
     "advancedUi": {
       "navbar": {
-        "comingSoon": "Die Demo der Navbar-Komponente folgt bald ..."
+        "comingSoon": "Die Demo der Navbar-Komponente folgt bald ...",
+        "groupedMenu": "Gruppiertes Seitenmenü",
+        "collapsedMenu": "Trennlinien im eingeklappten Seitenmenü"
       },
       "modals": {
         "actions": {

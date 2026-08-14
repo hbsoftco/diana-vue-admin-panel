@@ -3,10 +3,11 @@ import { computed, onBeforeUnmount, ref, useId, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink, useRoute } from 'vue-router'
 
-import type { MenuItem } from '@/shared/types/models'
+import type { MenuItem, MenuNavigationItem } from '@/shared/types/models'
 import type { DiPopoverPlacement } from '@/shared/ui/base/popover'
 
 import { useDirection } from '@/shared/composables/use-direction'
+import { isMenuLabel } from '@/shared/types/models'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import { DiPopover } from '@/shared/ui/base/popover'
 
@@ -45,6 +46,9 @@ let flyoutCloseTimer: ReturnType<typeof setTimeout> | undefined
  * Recursively check if a menu item or any of its children has the active route
  */
 function hasActiveChild(item: MenuItem): boolean {
+  if (isMenuLabel(item))
+    return false
+
   if (item.route === route.path)
     return true
   if (item.children)
@@ -52,15 +56,20 @@ function hasActiveChild(item: MenuItem): boolean {
   return false
 }
 
+const navigationItem = computed<MenuNavigationItem | null>(() =>
+  isMenuLabel(props.item) ? null : props.item,
+)
 const isExpanded = () => props.expandedMenus.has(props.item.id)
-const hasActiveRoute = () => (props.item.children ? hasActiveChild(props.item) : false)
-const isActive = () => props.item.route === route.path || hasActiveRoute()
+function hasActiveRoute() {
+  return navigationItem.value?.children ? hasActiveChild(navigationItem.value) : false
+}
+const isActive = () => navigationItem.value?.route === route.path || hasActiveRoute()
 const usesFlyout = computed(
   () =>
     props.flyoutEnabled
     && props.isCollapsed
     && props.level === 1
-    && Boolean(props.item.children?.length),
+    && Boolean(navigationItem.value?.children?.length),
 )
 
 // Dynamic classes based on level
@@ -84,7 +93,7 @@ const flyoutPlacement = computed<DiPopoverPlacement>(() =>
 )
 
 // Return DiIcon name based on active route
-const getIconName = () => (props.item.route === route.path ? 'circle' : 'circleOutline')
+const getIconName = () => (navigationItem.value?.route === route.path ? 'circle' : 'circleOutline')
 
 function clearFlyoutCloseTimer() {
   if (flyoutCloseTimer === undefined)
@@ -150,10 +159,23 @@ onBeforeUnmount(clearFlyoutCloseTimer)
 </script>
 
 <template>
-  <li>
+  <li
+    v-if="item.type === 'label'"
+    data-menu-label
+    class="text-start"
+    :class="[
+      isCollapsed && level === 1
+        ? 'mx-3 my-3 border-t border-(--color-menu-border)'
+        : 'mb-1 mt-5 px-3 text-[0.65rem] font-semibold tracking-[0.12em] text-menu-prime uppercase first:mt-1',
+    ]"
+  >
+    <span v-if="!isCollapsed || level > 1">{{ displayLabel }}</span>
+  </li>
+
+  <li v-else-if="navigationItem">
     <!-- Collapsed desktop parent with a hover-capable pointer -->
     <DiPopover
-      v-if="item.children && usesFlyout"
+      v-if="navigationItem.children && usesFlyout"
       v-model:open="isFlyoutOpen"
       trigger-tag="button"
       :aria-label="displayLabel"
@@ -181,7 +203,7 @@ onBeforeUnmount(clearFlyoutCloseTimer)
         >
           <span class="flex items-center justify-center gap-3">
             <DiIcon
-              :name="item.icon || getIconName()"
+              :name="navigationItem.icon || getIconName()"
               size="lg"
               :color="hasActiveRoute() ? 'white' : 'default'"
             />
@@ -203,7 +225,7 @@ onBeforeUnmount(clearFlyoutCloseTimer)
           class="sidebar-scrollbar min-h-0 flex-1 space-y-1 overflow-y-auto"
         >
           <MenuItem
-            v-for="child in item.children"
+            v-for="child in navigationItem.children"
             :key="child.id"
             :item="child"
             :level="level + 1"
@@ -217,7 +239,7 @@ onBeforeUnmount(clearFlyoutCloseTimer)
 
     <!-- Inline parent with children -->
     <button
-      v-else-if="item.children"
+      v-else-if="navigationItem.children"
       type="button"
       :class="[
         classes.parent,
@@ -237,7 +259,7 @@ onBeforeUnmount(clearFlyoutCloseTimer)
         :class="{ 'justify-center': isCollapsed && level === 1 }"
       >
         <DiIcon
-          :name="item.icon || getIconName()"
+          :name="navigationItem.icon || getIconName()"
           size="lg"
           :color="hasActiveRoute() ? 'white' : 'default'"
         />
@@ -255,13 +277,13 @@ onBeforeUnmount(clearFlyoutCloseTimer)
 
     <!-- Item without children -->
     <RouterLink
-      v-else-if="item.route"
-      :to="item.route"
+      v-else-if="navigationItem.route"
+      :to="navigationItem.route"
       :class="[
         classes.link,
         level === 1 ? '' : 'text-menu-prime',
         {
-          'font-semibold': route.path === item.route,
+          'font-semibold': route.path === navigationItem.route,
           'justify-center': isCollapsed && level === 1,
         },
       ]"
@@ -280,12 +302,12 @@ onBeforeUnmount(clearFlyoutCloseTimer)
       leave-active-class="collapse-leave-active motion-reduce:transition-none"
     >
       <ul
-        v-if="item.children && !usesFlyout && isExpanded()"
+        v-if="navigationItem.children && !usesFlyout && isExpanded()"
         :id="submenuId"
         class="ms-4 mt-1 space-y-1 overflow-hidden border-s-2 border-(--color-menu-border) ps-2"
       >
         <MenuItem
-          v-for="child in item.children"
+          v-for="child in navigationItem.children"
           :key="child.id"
           :item="child"
           :level="level + 1"
