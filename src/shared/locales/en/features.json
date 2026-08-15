@@ -902,6 +902,21 @@
       }
     },
     "advancedUi": {
+      "draggable": {
+        "connected": "Connected lists",
+        "backlog": "Backlog",
+        "scheduled": "Scheduled",
+        "basic": "Basic draggable cards",
+        "handle": "Drag handle and custom content",
+        "disabled": "Disabled / read-only",
+        "composed": "Actions, dark theme, and RTL",
+        "listLabel": "Prioritized work cards",
+        "handleLabel": "Drag card to reorder",
+        "disabledLabel": "Read-only work cards",
+        "rtlLabel": "Right-to-left work cards",
+        "approve": "Approve",
+        "approved": "Approved"
+      },
       "navbar": {
         "comingSoon": "Navbar component demo is coming soon...",
         "groupedMenu": "Grouped sidebar menu",

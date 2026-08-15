@@ -137,6 +137,9 @@
       "carousel": {
         "title": "اسلایدشو"
       },
+      "draggable": {
+        "title": "کارت‌های قابل جابه‌جایی"
+      },
       "collapse": {
         "title": "جمع‌شونده"
       },

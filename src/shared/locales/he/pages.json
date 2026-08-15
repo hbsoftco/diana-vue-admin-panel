@@ -137,6 +137,9 @@
       "carousel": {
         "title": "קרוסלה"
       },
+      "draggable": {
+        "title": "כרטיסים נגררים"
+      },
       "collapse": {
         "title": "כיווץ"
       },
