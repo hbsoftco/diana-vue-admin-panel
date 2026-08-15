@@ -137,6 +137,9 @@
       "carousel": {
         "title": "Karussell"
       },
+      "draggable": {
+        "title": "Verschiebbare Karten"
+      },
       "collapse": {
         "title": "Aufklappbereich"
       },

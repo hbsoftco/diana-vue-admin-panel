@@ -902,6 +902,21 @@
       }
     },
     "advancedUi": {
+      "draggable": {
+        "connected": "Listas conectadas",
+        "backlog": "Pendientes",
+        "scheduled": "Programado",
+        "basic": "Tarjetas arrastrables básicas",
+        "handle": "Control de arrastre y contenido personalizado",
+        "disabled": "Desactivado / solo lectura",
+        "composed": "Acciones, tema oscuro y RTL",
+        "listLabel": "Tarjetas de trabajo priorizadas",
+        "handleLabel": "Arrastra la tarjeta para reordenar",
+        "disabledLabel": "Tarjetas de solo lectura",
+        "rtlLabel": "Tarjetas de derecha a izquierda",
+        "approve": "Aprobar",
+        "approved": "Aprobado"
+      },
       "navbar": {
         "comingSoon": "La demostración del componente de barra de navegación estará disponible pronto...",
         "groupedMenu": "Menú lateral agrupado",

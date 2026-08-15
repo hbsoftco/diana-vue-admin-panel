@@ -1,0 +1,28 @@
+.di-draggable__item {
+  transition:
+    opacity 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.di-draggable__chosen {
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-primary) 55%, transparent);
+}
+
+.di-draggable__ghost {
+  opacity: 0.3;
+}
+
+.di-draggable__drag,
+.di-draggable__fallback {
+  cursor: grabbing;
+  opacity: 0.92;
+  box-shadow: var(--shadow-lg);
+  transition: none;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .di-draggable__item {
+    transition: none;
+  }
+}

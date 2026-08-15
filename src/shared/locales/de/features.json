@@ -902,6 +902,21 @@
       }
     },
     "advancedUi": {
+      "draggable": {
+        "connected": "Verbundene Listen",
+        "backlog": "Rückstand",
+        "scheduled": "Geplant",
+        "basic": "Einfache verschiebbare Karten",
+        "handle": "Ziehgriff und eigene Inhalte",
+        "disabled": "Deaktiviert / schreibgeschützt",
+        "composed": "Aktionen, dunkles Design und RTL",
+        "listLabel": "Priorisierte Arbeitskarten",
+        "handleLabel": "Karte zum Sortieren ziehen",
+        "disabledLabel": "Schreibgeschützte Arbeitskarten",
+        "rtlLabel": "Arbeitskarten von rechts nach links",
+        "approve": "Genehmigen",
+        "approved": "Genehmigt"
+      },
       "navbar": {
         "comingSoon": "Die Demo der Navbar-Komponente folgt bald ...",
         "groupedMenu": "Gruppiertes Seitenmenü",

@@ -84,6 +84,7 @@ export const menuItems: MenuItem[] = [
       { id: 'accordion', label: 'menu.accordion', route: '/advanced-ui/accordion' },
       { id: 'collapse', label: 'menu.collapse', route: '/advanced-ui/collapse' },
       { id: 'carousel', label: 'menu.carousel', route: '/advanced-ui/carousel' },
+      { id: 'draggable', label: 'menu.draggable', route: '/advanced-ui/draggable' },
       { id: 'modals', label: 'menu.modals', route: '/advanced-ui/modals' },
       { id: 'drawer', label: 'menu.drawer', route: '/advanced-ui/drawer' },
       { id: 'navbar', label: 'menu.navbar', route: '/advanced-ui/navbar' },

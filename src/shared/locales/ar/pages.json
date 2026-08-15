@@ -137,6 +137,9 @@
       "carousel": {
         "title": "عرض الشرائح"
       },
+      "draggable": {
+        "title": "بطاقات قابلة للسحب"
+      },
       "collapse": {
         "title": "الطي"
       },

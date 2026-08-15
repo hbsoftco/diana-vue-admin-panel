@@ -137,6 +137,9 @@
       "carousel": {
         "title": "Carousel"
       },
+      "draggable": {
+        "title": "Draggable Cards"
+      },
       "collapse": {
         "title": "Collapse"
       },

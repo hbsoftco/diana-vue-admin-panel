@@ -902,6 +902,21 @@
       }
     },
     "advancedUi": {
+      "draggable": {
+        "connected": "Listes connectées",
+        "backlog": "À planifier",
+        "scheduled": "Planifié",
+        "basic": "Cartes déplaçables de base",
+        "handle": "Poignée et contenu personnalisé",
+        "disabled": "Désactivé / lecture seule",
+        "composed": "Actions, thème sombre et RTL",
+        "listLabel": "Cartes de travail prioritaires",
+        "handleLabel": "Faire glisser la carte pour réorganiser",
+        "disabledLabel": "Cartes en lecture seule",
+        "rtlLabel": "Cartes de droite à gauche",
+        "approve": "Approuver",
+        "approved": "Approuvé"
+      },
       "navbar": {
         "comingSoon": "La démo du composant de barre de navigation arrive bientôt...",
         "groupedMenu": "Menu latéral groupé",

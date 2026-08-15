@@ -42,6 +42,17 @@ export const advancedUiRoutes = {
       },
     },
     {
+      path: 'draggable',
+      component: () => import('@/pages/advanced-ui/draggable.vue'),
+      meta: {
+        pageTitle: 'pages.advancedUi.draggable.title',
+        breadcrumb: [
+          { label: 'pages.advancedUi.title', link: '/advanced-ui' },
+          { label: 'pages.advancedUi.draggable.title' },
+        ],
+      },
+    },
+    {
       path: 'collapse',
       component: () => import('@/pages/advanced-ui/collapse.vue'),
       meta: {
