@@ -923,67 +923,19 @@
         "collapsedMenu": "فواصل القائمة الجانبية المطوية"
       },
       "modals": {
-        "actions": {
-          "open": "فتح النافذة",
-          "cancel": "إلغاء",
-          "confirm": "تأكيد",
-          "delete": "حذف"
-        },
-        "basic": {
-          "title": "نافذة أساسية",
-          "header": "عنوان النافذة",
-          "description": "نافذة أساسية بالإعدادات الافتراضية."
-        },
-        "position": {
-          "title": "أنواع الموضع",
-          "topDesc": "تظهر هذه النافذة أعلى الشاشة.",
-          "bottomDesc": "تظهر هذه النافذة أسفل الشاشة."
-        },
-        "size": {
-          "title": "أنواع الحجم",
-          "sm": "هذه نافذة صغيرة.",
-          "lg": "هذه نافذة كبيرة.",
-          "xl": "هذه نافذة كبيرة جداً.",
-          "full": "ملء الشاشة",
-          "fullDesc": "تشغل هذه النافذة الشاشة بالكامل."
-        },
-        "blur": {
-          "title": "تمويه الخلفية",
-          "xs": "تمويه ضئيل جداً.",
-          "sm": "تمويه ضئيل.",
-          "md": "تمويه متوسط."
-        },
-        "behavior": {
-          "title": "خيارات السلوك",
-          "noBackdrop": "عدم الإغلاق من الخلفية",
-          "noEsc": "عدم الإغلاق بزر ESC",
-          "noCloseButton": "بدون زر إغلاق",
-          "noBackdropDesc": "لن يؤدي النقر على الخلفية إلى إغلاق النافذة.",
-          "noEscDesc": "لن يؤدي ضغط ESC إلى إغلاق النافذة.",
-          "noCloseButtonDesc": "لا تحتوي هذه النافذة على زر إغلاق."
-        },
-        "confirmation": {
-          "title": "مربع حوار التأكيد",
-          "open": "حذف الحساب",
-          "header": "حذف الحساب؟",
-          "description": "هل تريد بالتأكيد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء."
-        },
-        "responsive": "نافذة متجاوبة",
-        "responsiveContent": "سلوك متجاوب على الهاتف",
-        "noTransition": "بدون انتقال",
-        "noTransitionContent": "فتح وإغلاق فوريان دون حركة",
-        "borderedWithSlots": "نافذة بحدود وفتحات",
-        "slottedContent": "يوضع محتوى النافذة الرئيسي هنا. يمكنك إضافة أي مكوّن.",
-        "live": {
+        "example": "نافذة أساسية",
+        "open": "فتح النافذة",
+        "title": "عنوان النافذة",
+        "description": "نافذة أساسية بالإعدادات الافتراضية.",
+        "positions": {
+          "title": "Position Variants",
           "top": "Top",
+          "middle": "Middle",
           "bottom": "Bottom",
-          "end": "End",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "إغلاق",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
         }
       },
       "skeletons": {

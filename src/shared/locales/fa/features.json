@@ -923,67 +923,19 @@
         "collapsedMenu": "جداکننده‌های منوی کناری جمع‌شده"
       },
       "modals": {
-        "actions": {
-          "open": "باز کردن مودال",
-          "cancel": "انصراف",
-          "confirm": "تأیید",
-          "delete": "حذف"
-        },
-        "basic": {
-          "title": "مودال پایه",
-          "header": "عنوان مودال",
-          "description": "این یک مودال پایه با تنظیمات پیش‌فرض است."
-        },
-        "position": {
-          "title": "گونه‌های موقعیت",
-          "topDesc": "این مودال در بالای صفحه نمایش داده می‌شود.",
-          "bottomDesc": "این مودال در پایین صفحه نمایش داده می‌شود."
-        },
-        "size": {
-          "title": "گونه‌های اندازه",
-          "sm": "این یک مودال کوچک است.",
-          "lg": "این یک مودال بزرگ است.",
-          "xl": "این یک مودال بسیار بزرگ است.",
-          "full": "تمام‌صفحه",
-          "fullDesc": "این مودال تمام صفحه را می‌پوشاند."
-        },
-        "blur": {
-          "title": "تاری پس‌زمینه",
-          "xs": "تاری بسیار کم پس‌زمینه.",
-          "sm": "تاری کم پس‌زمینه.",
-          "md": "تاری متوسط پس‌زمینه."
-        },
-        "behavior": {
-          "title": "گزینه‌های رفتار",
-          "noBackdrop": "بدون بستن از پس‌زمینه",
-          "noEsc": "بدون بستن با ESC",
-          "noCloseButton": "بدون دکمه بستن",
-          "noBackdropDesc": "کلیک روی پس‌زمینه این مودال را نمی‌بندد.",
-          "noEscDesc": "فشردن کلید ESC این مودال را نمی‌بندد.",
-          "noCloseButtonDesc": "این مودال دکمه بستن ندارد."
-        },
-        "confirmation": {
-          "title": "گفت‌وگوی تأیید",
-          "open": "حذف حساب",
-          "header": "حذف حساب؟",
-          "description": "آیا از حذف حساب خود مطمئن هستید؟ این کار بازگشت‌پذیر نیست."
-        },
-        "responsive": "مودال واکنش‌گرا",
-        "responsiveContent": "رفتار واکنش‌گرا در موبایل",
-        "noTransition": "بدون گذار",
-        "noTransitionContent": "باز و بسته شدن فوری بدون پویانمایی",
-        "borderedWithSlots": "مودال حاشیه‌دار با اسلات",
-        "slottedContent": "محتوای اصلی مودال اینجا قرار می‌گیرد. می‌توانید هر مؤلفه‌ای را قرار دهید.",
-        "live": {
-          "top": "بالا",
-          "bottom": "پایین",
-          "end": "End",
+        "example": "مودال پایه",
+        "open": "باز کردن مودال",
+        "title": "عنوان مودال",
+        "description": "این یک مودال پایه با تنظیمات پیش‌فرض است.",
+        "positions": {
+          "title": "Position Variants",
+          "top": "Top",
+          "middle": "Middle",
+          "bottom": "Bottom",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "بستن",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
         }
       },
       "skeletons": {

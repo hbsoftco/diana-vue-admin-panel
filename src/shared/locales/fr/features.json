@@ -923,67 +923,19 @@
         "collapsedMenu": "Séparateurs du menu latéral réduit"
       },
       "modals": {
-        "actions": {
-          "open": "Ouvrir la fenêtre",
-          "cancel": "Annuler",
-          "confirm": "Confirmer",
-          "delete": "Supprimer"
-        },
-        "basic": {
-          "title": "Fenêtre simple",
-          "header": "Titre de la fenêtre",
-          "description": "Une fenêtre simple avec les paramètres par défaut."
-        },
-        "position": {
-          "title": "Variantes de position",
-          "topDesc": "Cette fenêtre apparaît en haut de l’écran.",
-          "bottomDesc": "Cette fenêtre apparaît en bas de l’écran."
-        },
-        "size": {
-          "title": "Variantes de taille",
-          "sm": "Petite fenêtre.",
-          "lg": "Grande fenêtre.",
-          "xl": "Très grande fenêtre.",
-          "full": "Plein écran",
-          "fullDesc": "Cette fenêtre occupe tout l’écran."
-        },
-        "blur": {
-          "title": "Flou d’arrière-plan",
-          "xs": "Flou très léger.",
-          "sm": "Flou léger.",
-          "md": "Flou moyen."
-        },
-        "behavior": {
-          "title": "Options de comportement",
-          "noBackdrop": "Pas de fermeture par l’arrière-plan",
-          "noEsc": "Pas de fermeture avec Échap",
-          "noCloseButton": "Sans bouton de fermeture",
-          "noBackdropDesc": "Cliquer sur l’arrière-plan ne ferme pas cette fenêtre.",
-          "noEscDesc": "Appuyer sur Échap ne ferme pas cette fenêtre.",
-          "noCloseButtonDesc": "Cette fenêtre n’a pas de bouton de fermeture."
-        },
-        "confirmation": {
-          "title": "Dialogue de confirmation",
-          "open": "Supprimer le compte",
-          "header": "Supprimer le compte ?",
-          "description": "Voulez-vous vraiment supprimer votre compte ? Cette action est irréversible."
-        },
-        "responsive": "Fenêtre adaptative",
-        "responsiveContent": "Comportement adaptatif sur mobile",
-        "noTransition": "Sans transition",
-        "noTransitionContent": "Ouverture et fermeture instantanées sans animation",
-        "borderedWithSlots": "Fenêtre bordée avec emplacements",
-        "slottedContent": "Le contenu principal de la fenêtre se place ici. Vous pouvez ajouter tout composant.",
-        "live": {
+        "example": "Fenêtre simple",
+        "open": "Ouvrir la fenêtre",
+        "title": "Titre de la fenêtre",
+        "description": "Une fenêtre simple avec les paramètres par défaut.",
+        "positions": {
+          "title": "Position Variants",
           "top": "Top",
+          "middle": "Middle",
           "bottom": "Bottom",
-          "end": "End",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "Fermer",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
         }
       },
       "skeletons": {

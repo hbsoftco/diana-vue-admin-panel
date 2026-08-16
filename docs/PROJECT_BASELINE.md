@@ -363,23 +363,23 @@ The typed icon registry contains asynchronous imports from multiple Iconify coll
 
 The following reusable components exist under `src/shared/ui/base`:
 
-| Component      | Implemented responsibility                                                        |
-| -------------- | --------------------------------------------------------------------------------- |
-| `DiAlert`      | Alert variants, layout modes, icons, dismissal, action slots                      |
-| `DiBadge`      | Badge variants, sizes, visual modifiers, click forwarding                         |
-| `DiBreadcrumb` | Linked and active items, icons, separators, variants, RTL behavior                |
-| `DiButton`     | Button/anchor/input rendering, variants, sizes, loading, badges, slots            |
-| `DiCard`       | Card regions, media, accents, actions, configurable presentation                  |
-| `DiCollapse`   | Focus, checkbox, and details-based collapse presentation                          |
-| `DiDrawer`     | Start/end drawer, overlay, responsive open breakpoint, slots                      |
-| `DiDropdown`   | Positioning, alignment, option selection, custom slots, outside-click closing     |
-| `DiIcon`       | Typed synchronous core and lazy icons, transforms, animation, badges              |
-| `DiLoading`    | Spinner, dots, ring, ball, bars, and infinity loading styles                      |
-| `DiModal`      | Teleported modal, positions, sizes, backdrop, Escape closing, body scroll control |
-| `DiRating`     | Full and half values, variants, masks, hover, read-only/disabled, RTL spacing     |
-| `DiSkeleton`   | Rectangle, circle, and text skeleton shapes with size controls                    |
-| `DiSwitch`     | Modeled switch input, label positions, size and variant control                   |
-| `DiTooltip`    | Tooltip content, positions, variants, open state, event forwarding                |
+| Component      | Implemented responsibility                                                    |
+| -------------- | ----------------------------------------------------------------------------- |
+| `DiAlert`      | Alert variants, layout modes, icons, dismissal, action slots                  |
+| `DiBadge`      | Badge variants, sizes, visual modifiers, click forwarding                     |
+| `DiBreadcrumb` | Linked and active items, icons, separators, variants, RTL behavior            |
+| `DiButton`     | Button/anchor/input rendering, variants, sizes, loading, badges, slots        |
+| `DiCard`       | Card regions, media, accents, actions, configurable presentation              |
+| `DiCollapse`   | Focus, checkbox, and details-based collapse presentation                      |
+| `DiDrawer`     | Start/end drawer, overlay, responsive open breakpoint, slots                  |
+| `DiDropdown`   | Positioning, alignment, option selection, custom slots, outside-click closing |
+| `DiIcon`       | Typed synchronous core and lazy icons, transforms, animation, badges          |
+| `DiLoading`    | Spinner, dots, ring, ball, bars, and infinity loading styles                  |
+| `DiModal`      | Native dialog, optional teleport, placement, backdrop, and Escape closing     |
+| `DiRating`     | Full and half values, variants, masks, hover, read-only/disabled, RTL spacing |
+| `DiSkeleton`   | Rectangle, circle, and text skeleton shapes with size controls                |
+| `DiSwitch`     | Modeled switch input, label positions, size and variant control               |
+| `DiTooltip`    | Tooltip content, positions, variants, open state, event forwarding            |
 
 These components have implementation code but do not currently have automated unit or
 component tests.

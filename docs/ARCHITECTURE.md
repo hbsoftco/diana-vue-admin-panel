@@ -239,7 +239,6 @@ Some base components depend on other base components. For example:
 
 - `DiButton` uses `DiBadge` and `DiLoading`.
 - `DiIcon` uses `DiBadge`.
-- `DiModal` uses `DiButton` and `DiIcon`.
 - `DiBreadcrumb` uses `DiIcon`.
 
 ### Layout components

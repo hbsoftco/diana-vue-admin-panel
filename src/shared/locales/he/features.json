@@ -923,67 +923,19 @@
         "collapsedMenu": "מפרידי תפריט צד מכווץ"
       },
       "modals": {
-        "actions": {
-          "open": "פתח חלון",
-          "cancel": "ביטול",
-          "confirm": "אישור",
-          "delete": "מחיקה"
-        },
-        "basic": {
-          "title": "חלון בסיסי",
-          "header": "כותרת החלון",
-          "description": "חלון בסיסי עם הגדרות ברירת המחדל."
-        },
-        "position": {
-          "title": "וריאציות מיקום",
-          "topDesc": "חלון זה מופיע בראש המסך.",
-          "bottomDesc": "חלון זה מופיע בתחתית המסך."
-        },
-        "size": {
-          "title": "וריאציות גודל",
-          "sm": "זהו חלון קטן.",
-          "lg": "זהו חלון גדול.",
-          "xl": "זהו חלון גדול במיוחד.",
-          "full": "מסך מלא",
-          "fullDesc": "חלון זה תופס את כל המסך."
-        },
-        "blur": {
-          "title": "טשטוש רקע",
-          "xs": "טשטוש רקע מזערי.",
-          "sm": "טשטוש רקע קטן.",
-          "md": "טשטוש רקע בינוני."
-        },
-        "behavior": {
-          "title": "אפשרויות התנהגות",
-          "noBackdrop": "ללא סגירה מהרקע",
-          "noEsc": "ללא סגירה עם ESC",
-          "noCloseButton": "ללא כפתור סגירה",
-          "noBackdropDesc": "לחיצה על הרקע לא תסגור את החלון.",
-          "noEscDesc": "לחיצה על ESC לא תסגור את החלון.",
-          "noCloseButtonDesc": "לחלון זה אין כפתור סגירה."
-        },
-        "confirmation": {
-          "title": "דו־שיח אישור",
-          "open": "מחיקת חשבון",
-          "header": "למחוק את החשבון?",
-          "description": "האם למחוק את החשבון? לא ניתן לבטל פעולה זו."
-        },
-        "responsive": "חלון מגיב",
-        "responsiveContent": "התנהגות מגיבה בנייד",
-        "noTransition": "ללא מעבר",
-        "noTransitionContent": "פתיחה וסגירה מיידיות ללא הנפשה",
-        "borderedWithSlots": "חלון עם גבול וחריצים",
-        "slottedContent": "תוכן החלון הראשי מופיע כאן. ניתן להוסיף כל רכיב.",
-        "live": {
+        "example": "חלון בסיסי",
+        "open": "פתח חלון",
+        "title": "כותרת החלון",
+        "description": "חלון בסיסי עם הגדרות ברירת המחדל.",
+        "positions": {
+          "title": "Position Variants",
           "top": "Top",
+          "middle": "Middle",
           "bottom": "Bottom",
-          "end": "End",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "סגירה",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
         }
       },
       "skeletons": {
