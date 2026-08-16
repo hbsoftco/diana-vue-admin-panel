@@ -124,7 +124,8 @@ describe('diModal', () => {
     const wrapper = await mountModal()
     const classes = wrapper.get('dialog').classes()
 
-    expect(classes).toContain('bg-base-content/40')
+    expect(classes).toContain('backdrop:bg-base-content/40')
+    expect(classes).toContain('backdrop:block')
     expect(classes.some(className => className.startsWith('backdrop:backdrop-blur-'))).toBe(false)
     wrapper.unmount()
   })
@@ -138,7 +139,8 @@ describe('diModal', () => {
     const wrapper = await mountModal({ backdropBlur })
     const classes = wrapper.get('dialog').classes()
 
-    expect(classes).toContain('bg-base-content/40')
+    expect(classes).toContain('backdrop:bg-base-content/40')
+    expect(classes).toContain('backdrop:block')
     expect(classes).toContain(expectedClass)
     wrapper.unmount()
   })

@@ -55,7 +55,7 @@ const props = withDefaults(defineProps<ModalProps>(), {
 
   boxClass: '',
 
-  backdropClass: 'bg-base-content/40',
+  backdropClass: 'backdrop:bg-base-content/40',
   backdropBlur: '',
 
   teleport: true,
@@ -93,9 +93,14 @@ const resolvedModalClass = computed(
 
 const resolvedBackdropClasses = computed<string[]>(() => {
   if (props.backdropBlur === 'transparent')
-    return ['bg-transparent', 'backdrop:bg-transparent']
+    return ['bg-transparent', 'backdrop:block', 'backdrop:bg-transparent']
 
-  return [props.backdropClass, BACKDROP_BLUR_CLASSES[props.backdropBlur]].filter(Boolean)
+  return [
+    'bg-transparent',
+    'backdrop:block',
+    props.backdropClass,
+    BACKDROP_BLUR_CLASSES[props.backdropBlur],
+  ].filter(Boolean)
 })
 
 async function open(): Promise<void> {

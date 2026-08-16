@@ -430,8 +430,8 @@ function openMessageModal(recipient: string, widthClass: string) {
     <DiButton @click="openMessageModal('@fat', 'max-w-lg')">
       @fat
     </DiButton>
-    <DiButton @click="openMessageModal('@getbootstrap', 'max-w-2xl')">
-      @getbootstrap
+    <DiButton @click="openMessageModal('@diana', 'max-w-2xl')">
+      @diana
     </DiButton>
   </div>
 
@@ -472,7 +472,7 @@ function openMessageModal(recipient: string, widthClass: string) {
 </script>
 
 <template>
-  <div class="grid gap-6">
+  <div class="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
     <PreviewCodeCard
       :code="basicModalCode"
       language="vue"
@@ -777,8 +777,8 @@ function openMessageModal(recipient: string, widthClass: string) {
         <DiButton @click="openMessageModal('@fat', 'max-w-lg')">
           @fat
         </DiButton>
-        <DiButton @click="openMessageModal('@getbootstrap', 'max-w-2xl')">
-          @getbootstrap
+        <DiButton @click="openMessageModal('@diana', 'max-w-2xl')">
+          @diana
         </DiButton>
       </div>
 

@@ -70,7 +70,7 @@ for (const theme of themes) {
     await trigger.click()
     await expect(dialog).toHaveAttribute('open', '')
     await expect(dialog).toHaveClass(/modal-middle/)
-    await expect(dialog).toHaveClass(/bg-base-content\/40/)
+    await expect(dialog).toHaveClass(/backdrop:bg-base-content\/40/)
     await expect.poll(() => dialog.evaluate(element => element.matches(':modal'))).toBe(true)
 
     const appearance = await dialog.evaluate((element) => {
@@ -81,12 +81,16 @@ for (const theme of themes) {
         backdropFilter: dialogStyle.backdropFilter,
         nativeBackdropFilter: backdropStyle.backdropFilter,
         backgroundColor: dialogStyle.backgroundColor,
+        nativeBackdropBackgroundColor: backdropStyle.backgroundColor,
+        nativeBackdropDisplay: backdropStyle.display,
       }
     })
 
     expect(appearance.backdropFilter).toBe('none')
     expect(appearance.nativeBackdropFilter).toBe('none')
-    expect(appearance.backgroundColor).not.toBe('rgba(0, 0, 0, 0)')
+    expect(appearance.backgroundColor).toBe('rgba(0, 0, 0, 0)')
+    expect(appearance.nativeBackdropBackgroundColor).not.toBe('rgba(0, 0, 0, 0)')
+    expect(appearance.nativeBackdropDisplay).toBe('block')
 
     const viewport = page.viewportSize()
     expect(viewport).not.toBeNull()
@@ -223,7 +227,7 @@ for (const theme of themes) {
         await page.getByRole('button', { name: label, exact: true }).click()
         await expect(dialog).toHaveAttribute('open', '')
         await expect(dialog).toHaveClass(new RegExp(`modal-${placement}`))
-        await expect(dialog).toHaveClass(/bg-base-content\/40/)
+        await expect(dialog).toHaveClass(/backdrop:bg-base-content\/40/)
         await expect(dialog).toHaveClass(/backdrop:backdrop-blur-sm/)
         await dialog.locator('.modal-box').evaluate(async (element) => {
           await Promise.all(element.getAnimations().map(animation => animation.finished))
