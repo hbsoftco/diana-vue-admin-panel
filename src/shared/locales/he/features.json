@@ -936,6 +936,59 @@
           "end": "End",
           "modalTitle": "{placement} modal",
           "description": "This modal uses the {placement} placement."
+        },
+        "persistent": {
+          "title": "Static Backdrop",
+          "open": "Open persistent modal",
+          "modalTitle": "Persistent modal",
+          "description": "Backdrop clicks and Escape are disabled. Use an explicit close control."
+        },
+        "scrollable": {
+          "title": "Scrollable Content",
+          "open": "Open scrollable modal",
+          "modalTitle": "Scrollable modal",
+          "paragraph": "Modal content can scroll independently while the page remains visually separated behind it."
+        },
+        "headerless": {
+          "title": "Headerless Modal",
+          "open": "Open headerless modal",
+          "ariaLabel": "Headerless information modal",
+          "description": "A compact message can omit a visible heading while retaining an accessible name.",
+          "understood": "Understood"
+        },
+        "fullscreen": {
+          "title": "Fullscreen Modal",
+          "open": "Open fullscreen modal",
+          "modalTitle": "Fullscreen modal",
+          "description": "This modal expands to the viewport for immersive or workspace-style content."
+        },
+        "blurred": {
+          "title": "Blurred Backdrop",
+          "open": "Open blurred modal",
+          "modalTitle": "Blurred backdrop",
+          "description": "A medium backdrop blur softens the surrounding page while retaining context."
+        },
+        "rating": {
+          "title": "Inline Rating",
+          "open": "Edit rating",
+          "modalTitle": "Edit rating",
+          "question": "How would you rate this modal experience?"
+        },
+        "nested": {
+          "title": "Nested Modals",
+          "open": "Open parent modal",
+          "parentTitle": "Parent modal",
+          "parentDescription": "Open a smaller dialog without closing this parent.",
+          "openChild": "Open nested modal",
+          "childTitle": "Nested modal",
+          "childDescription": "This dialog is layered above the parent modal."
+        },
+        "varying": {
+          "title": "Varying Modal Content",
+          "modalTitle": "New message to {recipient}",
+          "recipient": "Recipient",
+          "message": "Message",
+          "send": "Send message"
         }
       },
       "skeletons": {

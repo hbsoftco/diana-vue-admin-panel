@@ -55,7 +55,7 @@ const props = withDefaults(defineProps<ModalProps>(), {
 
   boxClass: '',
 
-  backdropClass: 'bg-base-content/10',
+  backdropClass: 'bg-base-content/40',
   backdropBlur: '',
 
   teleport: true,
