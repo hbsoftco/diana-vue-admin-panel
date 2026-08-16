@@ -923,67 +923,72 @@
         "collapsedMenu": "Collapsed sidebar dividers"
       },
       "modals": {
-        "actions": {
-          "open": "Open modal",
-          "cancel": "Cancel",
-          "confirm": "Confirm",
-          "delete": "Delete"
-        },
-        "basic": {
-          "title": "Basic Modal",
-          "header": "Modal Title",
-          "description": "This is a basic modal with default settings."
-        },
-        "position": {
+        "example": "Basic Modal",
+        "open": "Open modal",
+        "title": "Modal Title",
+        "description": "This is a basic modal with default settings.",
+        "positions": {
           "title": "Position Variants",
-          "topDesc": "This modal appears at the top of the screen.",
-          "bottomDesc": "This modal appears at the bottom of the screen."
-        },
-        "size": {
-          "title": "Size Variants",
-          "sm": "This is a small modal.",
-          "lg": "This is a large modal.",
-          "xl": "This is an extra large modal.",
-          "full": "Full Screen",
-          "fullDesc": "This modal takes up the entire screen."
-        },
-        "blur": {
-          "title": "Backdrop Blur",
-          "xs": "Extra small backdrop blur.",
-          "sm": "Small backdrop blur.",
-          "md": "Medium backdrop blur."
-        },
-        "behavior": {
-          "title": "Behavior Options",
-          "noBackdrop": "No Backdrop Close",
-          "noEsc": "No ESC Close",
-          "noCloseButton": "No Close Button",
-          "noBackdropDesc": "Clicking the backdrop will not close this modal.",
-          "noEscDesc": "Pressing the ESC key will not close this modal.",
-          "noCloseButtonDesc": "This modal does not have a close button."
-        },
-        "confirmation": {
-          "title": "Confirmation Dialog",
-          "open": "Delete Account",
-          "header": "Delete Account?",
-          "description": "Are you sure you want to delete your account? This action cannot be undone."
-        },
-        "responsive": "Responsive modal",
-        "responsiveContent": "Responsive behavior on mobile",
-        "noTransition": "Without transition",
-        "noTransitionContent": "Instant open and close without animation",
-        "borderedWithSlots": "Bordered modal with slots",
-        "slottedContent": "Main modal content goes here. You can place any components.",
-        "live": {
           "top": "Top",
+          "middle": "Middle",
           "bottom": "Bottom",
-          "end": "End",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "Close",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
+        },
+        "persistent": {
+          "title": "Static Backdrop",
+          "open": "Open persistent modal",
+          "modalTitle": "Persistent modal",
+          "description": "Backdrop clicks and Escape are disabled. Use an explicit close control."
+        },
+        "scrollable": {
+          "title": "Scrollable Content",
+          "open": "Open scrollable modal",
+          "modalTitle": "Scrollable modal",
+          "paragraph": "Modal content can scroll independently while the page remains visually separated behind it."
+        },
+        "headerless": {
+          "title": "Headerless Modal",
+          "open": "Open headerless modal",
+          "ariaLabel": "Headerless information modal",
+          "description": "A compact message can omit a visible heading while retaining an accessible name.",
+          "understood": "Understood"
+        },
+        "fullscreen": {
+          "title": "Fullscreen Modal",
+          "open": "Open fullscreen modal",
+          "modalTitle": "Fullscreen modal",
+          "description": "This modal expands to the viewport for immersive or workspace-style content."
+        },
+        "blurred": {
+          "title": "Blurred Backdrop",
+          "open": "Open blurred modal",
+          "modalTitle": "Blurred backdrop",
+          "description": "A medium backdrop blur softens the surrounding page while retaining context."
+        },
+        "rating": {
+          "title": "Inline Rating",
+          "open": "Edit rating",
+          "modalTitle": "Edit rating",
+          "question": "How would you rate this modal experience?"
+        },
+        "nested": {
+          "title": "Nested Modals",
+          "open": "Open parent modal",
+          "parentTitle": "Parent modal",
+          "parentDescription": "Open a smaller dialog without closing this parent.",
+          "openChild": "Open nested modal",
+          "childTitle": "Nested modal",
+          "childDescription": "This dialog is layered above the parent modal."
+        },
+        "varying": {
+          "title": "Varying Modal Content",
+          "modalTitle": "New message to {recipient}",
+          "recipient": "Recipient",
+          "message": "Message",
+          "send": "Send message"
         }
       },
       "carousel": {

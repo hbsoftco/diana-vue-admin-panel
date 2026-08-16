@@ -1,456 +1,820 @@
 <script setup lang="ts">
+import { reactive, ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+import DiRating from '@/shared/ui/base/DiRating.vue'
+import DiInput from '@/shared/ui/base/input/DiInput.vue'
+import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
+
+const modalOpen = ref(false)
+const persistentModalOpen = ref(false)
+const scrollableModalOpen = ref(false)
+const headerlessModalOpen = ref(false)
+const fullscreenModalOpen = ref(false)
+const blurredModalOpen = ref(false)
+const ratingModalOpen = ref(false)
+const rating = ref(3)
+const parentModalOpen = ref(false)
+const childModalOpen = ref(false)
+const messageModalOpen = ref(false)
+const messageRecipient = ref('')
+const messageBody = ref('')
+const messageWidth = ref('max-w-lg')
+const positionModals = reactive({
+  top: false,
+  middle: false,
+  bottom: false,
+  start: false,
+  end: false,
+})
+
+const placements = [
+  { value: 'top', labelKey: 'features.advancedUi.modals.positions.top' },
+  { value: 'middle', labelKey: 'features.advancedUi.modals.positions.middle' },
+  { value: 'bottom', labelKey: 'features.advancedUi.modals.positions.bottom' },
+  { value: 'start', labelKey: 'features.advancedUi.modals.positions.start' },
+  { value: 'end', labelKey: 'features.advancedUi.modals.positions.end' },
+] as const
+
+function openMessageModal(recipient: string, widthClass: string) {
+  messageRecipient.value = recipient
+  messageBody.value = ''
+  messageWidth.value = widthClass
+  messageModalOpen.value = true
+}
+
+const basicModalCode = `<script setup lang="ts">
 import { ref } from 'vue'
 
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiModal from '@/shared/ui/base/DiModal.vue'
-import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
-const modalBasic = ref(false)
-const modalTop = ref(false)
-const modalBottom = ref(false)
-const modalStart = ref(false)
-const modalEnd = ref(false)
-const modalSm = ref(false)
-const modalLg = ref(false)
-const modalXl = ref(false)
-const modalFull = ref(false)
-const modalResponsive = ref(false)
-const modalNoCloseBackdrop = ref(false)
-const modalNoEsc = ref(false)
-const modalNoCloseButton = ref(false)
-const modalBlurXs = ref(false)
-const modalBlurSm = ref(false)
-const modalBlurMd = ref(false)
-const modalNoTransition = ref(false)
-const modalBordered = ref(false)
-const modalConfirmation = ref(false)
+const modalOpen = ref(false)
+<\/script>
 
-// Code snippets for PreviewCodeCard
-const basicCode = `<DiModal v-model="modalBasic">
-  <p class="text-center py-12 text-lg">{{ $t('features.advancedUi.modals.basic.description') }}</p>
-</DiModal>
+<template>
+  <DiButton @click="modalOpen = true">
+    {{ $t('features.advancedUi.modals.open') }}
+  </DiButton>
 
-<DiButton @click="modalBasic = true">{{ $t('features.advancedUi.modals.actions.open') }}</DiButton>`
+  <DiModal v-model="modalOpen" aria-labelledby="basic-modal-title">
+    <h2 id="basic-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.title') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.description') }}
+    </p>
 
-const positionCode = `<DiModal v-model="modalTop" position="top">
-  <p class="text-center py-12">{{ $t('features.advancedUi.modals.position.topDesc') }}</p>
-</DiModal>
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
 
-<DiModal v-model="modalBottom" position="bottom">
-  <p class="text-center py-12">{{ $t('features.advancedUi.modals.position.bottomDesc') }}</p>
-</DiModal>`
+const positionVariantsCode = `<script setup lang="ts">
+import { reactive } from 'vue'
 
-const sizeCode = `<DiModal v-model="modalSm" size="sm">
-  <p class="text-center py-8">{{ $t('features.advancedUi.modals.size.sm') }}</p>
-</DiModal>
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
 
-<DiModal v-model="modalLg" size="lg">
-  <p class="text-center py-12">{{ $t('features.advancedUi.modals.size.lg') }}</p>
-</DiModal>
+const positionModals = reactive({
+  top: false,
+  middle: false,
+  bottom: false,
+  start: false,
+  end: false,
+})
 
-<DiModal v-model="modalXl" size="xl">
-  <p class="text-center py-16">{{ $t('features.advancedUi.modals.size.xl') }}</p>
-</DiModal>
+const placements = [
+  { value: 'top', labelKey: 'features.advancedUi.modals.positions.top' },
+  { value: 'middle', labelKey: 'features.advancedUi.modals.positions.middle' },
+  { value: 'bottom', labelKey: 'features.advancedUi.modals.positions.bottom' },
+  { value: 'start', labelKey: 'features.advancedUi.modals.positions.start' },
+  { value: 'end', labelKey: 'features.advancedUi.modals.positions.end' },
+] as const
+<\/script>
 
-<DiModal v-model="modalFull" size="full">
-  <p class="text-center py-32 text-2xl">{{ $t('features.advancedUi.modals.size.fullDesc') }}</p>
-</DiModal>`
-
-const responsiveCode = `<DiModal v-model="modalResponsive" size="xl" responsive>
-  <p class="text-center py-16 text-lg">Responsive behavior on mobile</p>
-</DiModal>`
-
-const closeBehaviorCode = `<DiModal v-model="modalNoCloseBackdrop" :close-on-backdrop="false">
-  <p class="py-8 text-center">{{ $t('features.advancedUi.modals.behavior.noBackdropDesc') }}</p>
-</DiModal>
-
-<DiModal v-model="modalNoEsc" :close-on-esc="false">
-  <p class="py-8 text-center">{{ $t('features.advancedUi.modals.behavior.noEscDesc') }}</p>
-</DiModal>
-
-<DiModal v-model="modalNoCloseButton" :show-close-button="false">
-  <p class="py-12 text-center text-lg">{{ $t('features.advancedUi.modals.behavior.noCloseButtonDesc') }}</p>
-</DiModal>`
-
-const blurCode = `<DiModal v-model="modalBlurXs" backdrop-blur="xs">
-  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.xs') }}</p>
-</DiModal>
-
-<DiModal v-model="modalBlurSm" backdrop-blur="sm">
-  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.sm') }}</p>
-</DiModal>
-
-<DiModal v-model="modalBlurMd" backdrop-blur="md">
-  <p class="py-12 text-center">{{ $t('features.advancedUi.modals.blur.md') }}</p>
-</DiModal>`
-
-const transitionCode = `<DiModal v-model="modalNoTransition" :transition="false">
-  <p class="py-12 text-center text-lg">Instant open/close without animation</p>
-</DiModal>`
-
-const borderedCode = `<DiModal v-model="modalBordered" bordered>
-  <template #header>
-    <h3 class="font-bold text-xl">{{ $t('features.advancedUi.modals.basic.header') }}</h3>
-  </template>
-  <div class="py-6">
-    <p>Main modal content goes here. You can place any components.</p>
+<template>
+  <div class="flex flex-wrap gap-3">
+    <DiButton
+      v-for="placement in placements"
+      :key="placement.value"
+      @click="positionModals[placement.value] = true"
+    >
+      {{ $t(placement.labelKey) }}
+    </DiButton>
   </div>
-  <template #actions>
-    <DiButton variant="ghost">{{ $t('features.advancedUi.modals.actions.cancel') }}</DiButton>
-    <DiButton>{{ $t('features.advancedUi.modals.actions.confirm') }}</DiButton>
-  </template>
-</DiModal>`
 
-const confirmationCode = `<DiModal v-model="modalConfirmation" bordered>
-  <template #header>
-    <h3 class="font-bold text-xl">{{ $t('features.advancedUi.modals.confirmation.header') }}</h3>
-  </template>
-  <p class="py-6">{{ $t('features.advancedUi.modals.confirmation.description') }}</p>
-  <template #actions>
-    <DiButton variant="ghost">{{ $t('features.advancedUi.modals.actions.cancel') }}</DiButton>
-    <DiButton variant="error">{{ $t('features.advancedUi.modals.actions.delete') }}</DiButton>
-  </template>
-</DiModal>`
+  <DiModal
+    v-for="placement in placements"
+    :key="placement.value"
+    v-model="positionModals[placement.value]"
+    :aria-labelledby="\`position-modal-\${placement.value}\`"
+    backdrop-blur="sm"
+    :placement="placement.value"
+  >
+    <h2 :id="\`position-modal-\${placement.value}\`" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.positions.modalTitle', {
+        placement: $t(placement.labelKey),
+      }) }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.positions.description', {
+        placement: $t(placement.labelKey),
+      }) }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const persistentModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const persistentModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="persistentModalOpen = true">
+    {{ $t('features.advancedUi.modals.persistent.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="persistentModalOpen"
+    aria-labelledby="persistent-modal-title"
+    persistent
+    show-close-button
+  >
+    <h2 id="persistent-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.persistent.modalTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.persistent.description') }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const scrollableModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const scrollableModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="scrollableModalOpen = true">
+    {{ $t('features.advancedUi.modals.scrollable.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="scrollableModalOpen"
+    aria-labelledby="scrollable-modal-title"
+    box-class="max-h-[75dvh] overflow-y-auto"
+    show-close-button
+    width-class="max-w-xl"
+  >
+    <h2 id="scrollable-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.scrollable.modalTitle') }}
+    </h2>
+    <div class="space-y-4 py-4">
+      <p v-for="paragraph in 8" :key="paragraph">
+        {{ $t('features.advancedUi.modals.scrollable.paragraph') }}
+      </p>
+    </div>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const headerlessModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const headerlessModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="headerlessModalOpen = true">
+    {{ $t('features.advancedUi.modals.headerless.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="headerlessModalOpen"
+    :aria-label="$t('features.advancedUi.modals.headerless.ariaLabel')"
+    show-close-button
+    width-class="max-w-sm"
+  >
+    <p class="pt-8">
+      {{ $t('features.advancedUi.modals.headerless.description') }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('features.advancedUi.modals.headerless.understood') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const fullscreenModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const fullscreenModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="fullscreenModalOpen = true">
+    {{ $t('features.advancedUi.modals.fullscreen.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="fullscreenModalOpen"
+    aria-labelledby="fullscreen-modal-title"
+    box-class="flex h-dvh max-h-none flex-col rounded-none [&>.modal-action]:mt-auto"
+    modal-class="p-0"
+    show-close-button
+    width-class="w-full max-w-none"
+  >
+    <h2 id="fullscreen-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.fullscreen.modalTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.fullscreen.description') }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const blurredModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const blurredModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="blurredModalOpen = true">
+    {{ $t('features.advancedUi.modals.blurred.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="blurredModalOpen"
+    aria-labelledby="blurred-modal-title"
+    backdrop-blur="md"
+  >
+    <h2 id="blurred-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.blurred.modalTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.blurred.description') }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const ratingModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+import DiRating from '@/shared/ui/base/DiRating.vue'
+
+const ratingModalOpen = ref(false)
+const rating = ref(3)
+<\/script>
+
+<template>
+  <DiButton @click="ratingModalOpen = true">
+    {{ $t('features.advancedUi.modals.rating.open') }}
+  </DiButton>
+
+  <DiModal
+    v-model="ratingModalOpen"
+    aria-labelledby="rating-modal-title"
+    show-close-button
+    width-class="max-w-sm"
+  >
+    <h2 id="rating-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.rating.modalTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.rating.question') }}
+    </p>
+    <DiRating v-model="rating" name="modal-rating" />
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const nestedModalCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const parentModalOpen = ref(false)
+const childModalOpen = ref(false)
+<\/script>
+
+<template>
+  <DiButton @click="parentModalOpen = true">
+    {{ $t('features.advancedUi.modals.nested.open') }}
+  </DiButton>
+
+  <DiModal v-model="parentModalOpen" aria-labelledby="parent-modal-title">
+    <h2 id="parent-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.nested.parentTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.nested.parentDescription') }}
+    </p>
+    <DiButton @click="childModalOpen = true">
+      {{ $t('features.advancedUi.modals.nested.openChild') }}
+    </DiButton>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+
+  <DiModal
+    v-model="childModalOpen"
+    aria-labelledby="child-modal-title"
+    width-class="max-w-xs"
+  >
+    <h2 id="child-modal-title" class="text-lg font-bold">
+      {{ $t('features.advancedUi.modals.nested.childTitle') }}
+    </h2>
+    <p class="py-4">
+      {{ $t('features.advancedUi.modals.nested.childDescription') }}
+    </p>
+
+    <template #actions="{ close }">
+      <DiButton @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
+
+const varyingContentCode = `<script setup lang="ts">
+import { ref } from 'vue'
+
+import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiInput from '@/shared/ui/base/input/DiInput.vue'
+import DiModal from '@/shared/ui/base/DiModal.vue'
+
+const messageModalOpen = ref(false)
+const messageRecipient = ref('')
+const messageBody = ref('')
+const messageWidth = ref('max-w-lg')
+
+function openMessageModal(recipient: string, widthClass: string) {
+  messageRecipient.value = recipient
+  messageBody.value = ''
+  messageWidth.value = widthClass
+  messageModalOpen.value = true
+}
+<\/script>
+
+<template>
+  <div class="flex flex-wrap gap-3">
+    <DiButton @click="openMessageModal('@mdo', 'max-w-sm')">
+      @mdo
+    </DiButton>
+    <DiButton @click="openMessageModal('@fat', 'max-w-lg')">
+      @fat
+    </DiButton>
+    <DiButton @click="openMessageModal('@diana', 'max-w-2xl')">
+      @diana
+    </DiButton>
+  </div>
+
+  <DiModal
+    v-model="messageModalOpen"
+    aria-labelledby="message-modal-title"
+    show-close-button
+    :width-class="messageWidth"
+  >
+    <h2 id="message-modal-title" class="text-xl font-bold">
+      {{ $t('features.advancedUi.modals.varying.modalTitle', { recipient: messageRecipient }) }}
+    </h2>
+    <div class="space-y-4 py-4">
+      <DiInput
+        v-model="messageRecipient"
+        :label="$t('features.advancedUi.modals.varying.recipient')"
+      />
+      <label class="block text-sm font-medium">
+        {{ $t('features.advancedUi.modals.varying.message') }}
+        <textarea
+          v-model="messageBody"
+          class="textarea textarea-bordered mt-1.5 w-full"
+          rows="4"
+        />
+      </label>
+    </div>
+
+    <template #actions="{ close }">
+      <DiButton variant="ghost" @click="close">
+        {{ $t('common.actions.close') }}
+      </DiButton>
+      <DiButton @click="close">
+        {{ $t('features.advancedUi.modals.varying.send') }}
+      </DiButton>
+    </template>
+  </DiModal>
+</template>`
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-start">
-    <!-- Basic Modal -->
+  <div class="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
     <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.basic.title')"
-      accent-color="#8b5cf6"
-      :code="basicCode"
-      language="html"
+      :code="basicModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.example')"
     >
-      <DiButton @click="modalBasic = true">
-        {{ $t('features.advancedUi.modals.actions.open') }}
+      <DiButton @click="modalOpen = true">
+        {{ $t('features.advancedUi.modals.open') }}
       </DiButton>
 
-      <DiModal v-model="modalBasic">
-        <p class="text-center py-12 text-lg">
-          {{ $t('features.advancedUi.modals.basic.description') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Position Variants -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.position.title')"
-      accent-color="#8b5cf6"
-      :code="positionCode"
-      language="html"
-    >
-      <div class="flex gap-4 flex-wrap">
-        <DiButton @click="modalTop = true">
-          {{ $t('features.advancedUi.modals.live.top') }}
-        </DiButton>
-        <DiButton @click="modalBottom = true">
-          {{ $t('features.advancedUi.modals.live.bottom') }}
-        </DiButton>
-        <DiButton @click="modalEnd = true">
-          {{ $t('features.advancedUi.modals.live.end') }}
-        </DiButton>
-        <DiButton @click="modalStart = true">
-          {{ $t('features.advancedUi.modals.live.start') }}
-        </DiButton>
-      </div>
-
-      <DiModal v-model="modalTop" position="top">
-        <p class="text-center py-12">
-          {{ $t('features.advancedUi.modals.position.topDesc') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalBottom" position="bottom">
-        <p class="text-center py-12">
-          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalEnd" position="end">
-        <p class="text-center py-12">
-          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalStart" position="start">
-        <p class="text-center py-12">
-          {{ $t('features.advancedUi.modals.position.bottomDesc') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Size Variants -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.size.title')"
-      accent-color="#8b5cf6"
-      :code="sizeCode"
-      language="html"
-      class="lg:col-span-2"
-    >
-      <div class="flex gap-4 flex-wrap">
-        <DiButton @click="modalSm = true">
-          sm
-        </DiButton>
-        <DiButton @click="modalBasic = true">
-          md (default)
-        </DiButton>
-        <DiButton @click="modalLg = true">
-          lg
-        </DiButton>
-        <DiButton @click="modalXl = true">
-          xl
-        </DiButton>
-        <DiButton @click="modalFull = true">
-          {{ $t('features.advancedUi.modals.size.full') }}
-        </DiButton>
-      </div>
-
-      <DiModal v-model="modalSm" size="sm">
-        <p class="text-center py-8">
-          {{ $t('features.advancedUi.modals.size.sm') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalLg" size="lg">
-        <p class="text-center py-12">
-          {{ $t('features.advancedUi.modals.size.lg') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalXl" size="xl">
-        <p class="text-center py-16">
-          {{ $t('features.advancedUi.modals.size.xl') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalFull" size="full">
-        <p class="text-center py-32 text-2xl">
-          {{ $t('features.advancedUi.modals.size.fullDesc') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Responsive -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.responsive')"
-      accent-color="#8b5cf6"
-      :code="responsiveCode"
-      language="html"
-    >
-      <DiButton @click="modalResponsive = true">
-        {{ $t('features.advancedUi.modals.actions.open') }}
-      </DiButton>
-
-      <DiModal v-model="modalResponsive" size="xl" responsive>
-        <p class="text-center py-16 text-lg">
-          {{ $t('features.advancedUi.modals.responsiveContent') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Behavior Options -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.behavior.title')"
-      accent-color="#8b5cf6"
-      :code="closeBehaviorCode"
-      language="html"
-    >
-      <div class="flex gap-4 flex-wrap">
-        <DiButton @click="modalNoCloseBackdrop = true">
-          {{ $t('features.advancedUi.modals.behavior.noBackdrop') }}
-        </DiButton>
-        <DiButton @click="modalNoEsc = true">
-          {{ $t('features.advancedUi.modals.behavior.noEsc') }}
-        </DiButton>
-        <DiButton @click="modalNoCloseButton = true">
-          {{ $t('features.advancedUi.modals.behavior.noCloseButton') }}
-        </DiButton>
-      </div>
-
-      <DiModal v-model="modalNoCloseBackdrop" :close-on-backdrop="false">
-        <p class="py-8 text-center">
-          {{ $t('features.advancedUi.modals.behavior.noBackdropDesc') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalNoEsc" :close-on-esc="false">
-        <p class="py-8 text-center">
-          {{ $t('features.advancedUi.modals.behavior.noEscDesc') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalNoCloseButton" :show-close-button="false">
-        <p class="py-12 text-center text-lg">
-          {{ $t('features.advancedUi.modals.behavior.noCloseButtonDesc') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Backdrop Blur -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.blur.title')"
-      accent-color="#8b5cf6"
-      :code="blurCode"
-      language="html"
-    >
-      <div class="flex gap-4 flex-wrap">
-        <DiButton @click="modalBlurXs = true">
-          blur-xs
-        </DiButton>
-        <DiButton @click="modalBlurSm = true">
-          blur-sm
-        </DiButton>
-        <DiButton @click="modalBlurMd = true">
-          blur-md
-        </DiButton>
-      </div>
-
-      <DiModal v-model="modalBlurXs" backdrop-blur="xs" :transition="false" position="middle">
-        <p class="py-12 text-center">
-          {{ $t('features.advancedUi.modals.blur.xs') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalBlurSm" backdrop-blur="sm" :transition="false">
-        <p class="py-12 text-center">
-          {{ $t('features.advancedUi.modals.blur.sm') }}
-        </p>
-      </DiModal>
-
-      <DiModal v-model="modalBlurMd" backdrop-blur="md" :transition="false">
-        <p class="py-12 text-center">
-          {{ $t('features.advancedUi.modals.blur.md') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- No Transition -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.noTransition')"
-      accent-color="#8b5cf6"
-      :code="transitionCode"
-      language="html"
-    >
-      <DiButton @click="modalNoTransition = true">
-        {{ $t('features.advancedUi.modals.actions.open') }}
-      </DiButton>
-
-      <DiModal v-model="modalNoTransition" :transition="false">
-        <p class="py-12 text-center text-lg">
-          {{ $t('features.advancedUi.modals.noTransitionContent') }}
-        </p>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Bordered with Header & Actions -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.borderedWithSlots')"
-      accent-color="#8b5cf6"
-      :code="borderedCode"
-      language="html"
-      class="lg:col-span-2"
-    >
-      <DiButton @click="modalBordered = true">
-        {{ $t('features.advancedUi.modals.actions.open') }}
-      </DiButton>
-
-      <DiModal v-model="modalBordered" bordered>
-        <template #header>
-          <h3 class="font-bold text-xl">
-            {{ $t('features.advancedUi.modals.basic.header') }}
-          </h3>
-        </template>
-
-        <div class="py-6">
-          <p>{{ $t('features.advancedUi.modals.slottedContent') }}</p>
-        </div>
-
-        <template #actions>
-          <DiButton variant="ghost">
-            {{ $t('features.advancedUi.modals.actions.cancel') }}
-          </DiButton>
-          <DiButton>{{ $t('features.advancedUi.modals.actions.confirm') }}</DiButton>
-        </template>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <!-- Confirmation Dialog Example -->
-    <PreviewCodeCard
-      :title="$t('features.advancedUi.modals.confirmation.title')"
-      accent-color="#8b5cf6"
-      :code="confirmationCode"
-      language="html"
-      class="lg:col-span-2"
-    >
-      <DiButton variant="error" @click="modalConfirmation = true">
-        {{ $t('features.advancedUi.modals.confirmation.open') }}
-      </DiButton>
-
-      <DiModal v-model="modalConfirmation" bordered>
-        <template #header>
-          <h3 class="font-bold text-xl">
-            {{ $t('features.advancedUi.modals.confirmation.header') }}
-          </h3>
-        </template>
-
-        <p class="py-6">
-          {{ $t('features.advancedUi.modals.confirmation.description') }}
-        </p>
-
-        <template #actions>
-          <DiButton variant="ghost">
-            {{ $t('features.advancedUi.modals.actions.cancel') }}
-          </DiButton>
-          <DiButton variant="error">
-            {{ $t('features.advancedUi.modals.actions.delete') }}
-          </DiButton>
-        </template>
-      </DiModal>
-    </PreviewCodeCard>
-
-    <button class="btn" onclick="my_modal_1.showModal()">
-      {{ $t('features.advancedUi.modals.live.openModal') }}
-    </button>
-    <dialog id="my_modal_1" class="modal modal-top">
-      <div class="modal-box">
-        <h3 class="text-lg font-bold">
-          {{ $t('features.advancedUi.modals.live.hello') }}
-        </h3>
+      <DiModal v-model="modalOpen" aria-labelledby="basic-modal-title">
+        <h2 id="basic-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.title') }}
+        </h2>
         <p class="py-4">
-          {{ $t('features.advancedUi.modals.live.pressEscKeyOrClickTheButtonBelowToClose') }}
+          {{ $t('features.advancedUi.modals.description') }}
         </p>
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">
-              {{ $t('features.advancedUi.modals.live.close') }}
-            </button>
-          </form>
-        </div>
-      </div>
-    </dialog>
-  </div>
 
-  <button class="btn" onclick="my_modal_3.showModal()">
-    {{ $t('features.advancedUi.modals.live.openModal') }}
-  </button>
-  <dialog id="my_modal_3" class="modal">
-    <div class="modal-box">
-      <form method="dialog">
-        <button
-          class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-          :aria-label="$t('common.actions.close')"
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="positionVariantsCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.positions.title')"
+    >
+      <div class="flex flex-wrap gap-3">
+        <DiButton
+          v-for="placement in placements"
+          :key="placement.value"
+          @click="positionModals[placement.value] = true"
         >
-          ✕
-        </button>
-      </form>
-      <h3 class="text-lg font-bold">
-        {{ $t('features.advancedUi.modals.live.hello') }}
-      </h3>
-      <p class="py-4">
-        {{ $t('features.advancedUi.modals.live.pressEscKeyOrClickOnButtonToClose') }}
-      </p>
-    </div>
-  </dialog>
+          {{ $t(placement.labelKey) }}
+        </DiButton>
+      </div>
+
+      <DiModal
+        v-for="placement in placements"
+        :key="placement.value"
+        v-model="positionModals[placement.value]"
+        :aria-labelledby="`position-modal-${placement.value}`"
+        backdrop-blur="sm"
+        :placement="placement.value"
+      >
+        <h2 :id="`position-modal-${placement.value}`" class="text-xl font-bold">
+          {{
+            $t('features.advancedUi.modals.positions.modalTitle', {
+              placement: $t(placement.labelKey),
+            })
+          }}
+        </h2>
+        <p class="py-4">
+          {{
+            $t('features.advancedUi.modals.positions.description', {
+              placement: $t(placement.labelKey),
+            })
+          }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="persistentModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.persistent.title')"
+    >
+      <DiButton @click="persistentModalOpen = true">
+        {{ $t('features.advancedUi.modals.persistent.open') }}
+      </DiButton>
+
+      <DiModal
+        v-model="persistentModalOpen"
+        aria-labelledby="persistent-modal-title"
+        persistent
+        show-close-button
+      >
+        <h2 id="persistent-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.persistent.modalTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.persistent.description') }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="scrollableModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.scrollable.title')"
+    >
+      <DiButton @click="scrollableModalOpen = true">
+        {{ $t('features.advancedUi.modals.scrollable.open') }}
+      </DiButton>
+
+      <DiModal
+        v-model="scrollableModalOpen"
+        aria-labelledby="scrollable-modal-title"
+        box-class="max-h-[75dvh] overflow-y-auto"
+        show-close-button
+        width-class="max-w-xl"
+      >
+        <h2 id="scrollable-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.scrollable.modalTitle') }}
+        </h2>
+        <div class="space-y-4 py-4">
+          <p v-for="paragraph in 8" :key="paragraph">
+            {{ $t('features.advancedUi.modals.scrollable.paragraph') }}
+          </p>
+        </div>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="headerlessModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.headerless.title')"
+    >
+      <DiButton @click="headerlessModalOpen = true">
+        {{ $t('features.advancedUi.modals.headerless.open') }}
+      </DiButton>
+
+      <DiModal
+        v-model="headerlessModalOpen"
+        :aria-label="$t('features.advancedUi.modals.headerless.ariaLabel')"
+        show-close-button
+        width-class="max-w-sm"
+      >
+        <p class="pt-8">
+          {{ $t('features.advancedUi.modals.headerless.description') }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('features.advancedUi.modals.headerless.understood') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="fullscreenModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.fullscreen.title')"
+    >
+      <DiButton @click="fullscreenModalOpen = true">
+        {{ $t('features.advancedUi.modals.fullscreen.open') }}
+      </DiButton>
+
+      <DiModal
+        v-model="fullscreenModalOpen"
+        aria-labelledby="fullscreen-modal-title"
+        box-class="flex h-dvh max-h-none flex-col rounded-none [&>.modal-action]:mt-auto"
+        modal-class="p-0"
+        show-close-button
+        width-class="w-full max-w-none"
+      >
+        <h2 id="fullscreen-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.fullscreen.modalTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.fullscreen.description') }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="blurredModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.blurred.title')"
+    >
+      <DiButton @click="blurredModalOpen = true">
+        {{ $t('features.advancedUi.modals.blurred.open') }}
+      </DiButton>
+
+      <DiModal v-model="blurredModalOpen" aria-labelledby="blurred-modal-title" backdrop-blur="md">
+        <h2 id="blurred-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.blurred.modalTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.blurred.description') }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="ratingModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.rating.title')"
+    >
+      <DiButton @click="ratingModalOpen = true">
+        {{ $t('features.advancedUi.modals.rating.open') }}
+      </DiButton>
+
+      <DiModal
+        v-model="ratingModalOpen"
+        aria-labelledby="rating-modal-title"
+        show-close-button
+        width-class="max-w-sm"
+      >
+        <h2 id="rating-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.rating.modalTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.rating.question') }}
+        </p>
+        <DiRating v-model="rating" name="modal-rating" />
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="nestedModalCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.nested.title')"
+    >
+      <DiButton @click="parentModalOpen = true">
+        {{ $t('features.advancedUi.modals.nested.open') }}
+      </DiButton>
+
+      <DiModal v-model="parentModalOpen" aria-labelledby="parent-modal-title">
+        <h2 id="parent-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.nested.parentTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.nested.parentDescription') }}
+        </p>
+        <DiButton @click="childModalOpen = true">
+          {{ $t('features.advancedUi.modals.nested.openChild') }}
+        </DiButton>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+
+      <DiModal v-model="childModalOpen" aria-labelledby="child-modal-title" width-class="max-w-xs">
+        <h2 id="child-modal-title" class="text-lg font-bold">
+          {{ $t('features.advancedUi.modals.nested.childTitle') }}
+        </h2>
+        <p class="py-4">
+          {{ $t('features.advancedUi.modals.nested.childDescription') }}
+        </p>
+
+        <template #actions="{ close }">
+          <DiButton @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+
+    <PreviewCodeCard
+      :code="varyingContentCode"
+      language="vue"
+      :title="$t('features.advancedUi.modals.varying.title')"
+    >
+      <div class="flex flex-wrap gap-3">
+        <DiButton @click="openMessageModal('@mdo', 'max-w-sm')">
+          @mdo
+        </DiButton>
+        <DiButton @click="openMessageModal('@fat', 'max-w-lg')">
+          @fat
+        </DiButton>
+        <DiButton @click="openMessageModal('@diana', 'max-w-2xl')">
+          @diana
+        </DiButton>
+      </div>
+
+      <DiModal
+        v-model="messageModalOpen"
+        aria-labelledby="message-modal-title"
+        show-close-button
+        :width-class="messageWidth"
+      >
+        <h2 id="message-modal-title" class="text-xl font-bold">
+          {{ $t('features.advancedUi.modals.varying.modalTitle', { recipient: messageRecipient }) }}
+        </h2>
+        <div class="space-y-4 py-4">
+          <DiInput
+            v-model="messageRecipient"
+            :label="$t('features.advancedUi.modals.varying.recipient')"
+          />
+          <label class="block text-sm font-medium">
+            {{ $t('features.advancedUi.modals.varying.message') }}
+            <textarea
+              v-model="messageBody"
+              class="textarea textarea-bordered mt-1.5 w-full"
+              rows="4"
+            />
+          </label>
+        </div>
+
+        <template #actions="{ close }">
+          <DiButton variant="ghost" @click="close">
+            {{ $t('common.actions.close') }}
+          </DiButton>
+          <DiButton @click="close">
+            {{ $t('features.advancedUi.modals.varying.send') }}
+          </DiButton>
+        </template>
+      </DiModal>
+    </PreviewCodeCard>
+  </div>
 </template>

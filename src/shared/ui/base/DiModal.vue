@@ -1,217 +1,231 @@
 <script setup lang="ts">
-import { computed, watch, watchEffect } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
-import type { IconName } from '@/shared/icons/registry'
+type ModalPlacement = 'top' | 'middle' | 'bottom' | 'start' | 'end'
+type BackdropBlur = '' | 'xs' | 'sm' | 'md' | 'lg' | 'transparent'
 
-import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
+type ModalProps = {
+  modelValue: boolean
 
-/* =======================
-   Types
-======================= */
-type ModalPosition = 'top' | 'middle' | 'bottom' | 'start' | 'end'
-type ModalSize = 'sm' | 'md' | 'lg' | 'xl' | 'full'
-type BackdropBlur = 'xs' | 'sm' | 'md'
+  ariaLabel?: string
+  ariaLabelledby?: string
 
-type Props = {
-  modelValue?: boolean
-  position?: ModalPosition
-  size?: ModalSize
-  responsive?: boolean
   closeOnBackdrop?: boolean
   closeOnEsc?: boolean
-  closeIcon?: IconName
   showCloseButton?: boolean
-  customClass?: string
-  backdropBlur?: BackdropBlur | ''
-  contentClass?: string
-  preventScroll?: boolean
-  bordered?: boolean
-  headerPadding?: string
-  contentPadding?: string
-  actionsPadding?: string
-  titleSize?: string
-  closeLabel?: string
+  persistent?: boolean
+
+  placement?: ModalPlacement
+
+  widthClass?: string
+
+  modalClass?: string
+  boxClass?: string
+
+  /**
+   * Tailwind backdrop tint/color classes
+   * Example:
+   * backdrop:bg-black/40
+   */
+  backdropClass?: string
+  backdropBlur?: BackdropBlur
+
+  teleport?: boolean
 }
 
-type Emits = {
-  (e: 'update:modelValue', value: boolean): void
-  (e: 'open'): void
-  (e: 'close'): void
-  (e: 'backdropClick'): void
+type ModalEmitEvents = {
+  'update:modelValue': [value: boolean]
+  'open': []
+  'close': []
 }
 
-/* =======================
-   Defaults
-======================= */
-const props = withDefaults(defineProps<Props>(), {
-  modelValue: false,
-  position: 'middle',
-  size: 'md',
-  responsive: false,
+type ModalPlacementClassMap = {
+  [key in ModalPlacement]: string
+}
+
+const props = withDefaults(defineProps<ModalProps>(), {
   closeOnBackdrop: true,
   closeOnEsc: true,
-  closeIcon: 'xMark',
-  showCloseButton: true,
-  customClass: '',
+  showCloseButton: false,
+  persistent: false,
+
+  placement: 'middle',
+
+  widthClass: 'max-w-lg',
+
+  boxClass: '',
+
+  backdropClass: 'backdrop:bg-base-content/40',
   backdropBlur: '',
-  contentClass: '',
-  preventScroll: true,
-  bordered: false,
-  headerPadding: 'px-5 py-4',
-  contentPadding: 'px-5 py-4',
-  actionsPadding: 'px-5 py-2',
-  titleSize: 'text-lg',
+
+  teleport: true,
 })
 
-const emit = defineEmits<Emits>()
-const { t } = useI18n()
-const resolvedCloseLabel = computed(() => props.closeLabel ?? t('common.actions.close'))
+const emit = defineEmits<ModalEmitEvents>()
 
-/* =======================
-   Static class maps
-======================= */
-const POSITION_CLASSES: Record<ModalPosition, string> = {
-  top: 'modal-top',
-  middle: 'modal-middle',
-  bottom: 'modal-bottom',
-  start: 'modal-start',
-  end: 'modal-end',
+const dialogRef = ref<HTMLDialogElement | null>(null)
+
+const BOTTOM_SHEET_CLASSES = 'rounded-t-2xl rounded-b-none w-full max-w-full pb-safe'
+
+const BACKDROP_BLUR_CLASSES: Record<Exclude<BackdropBlur, 'transparent'>, string> = {
+  '': '',
+  'xs': 'backdrop:backdrop-blur-xs',
+  'sm': 'backdrop:backdrop-blur-sm',
+  'md': 'backdrop:backdrop-blur-md',
+  'lg': 'backdrop:backdrop-blur-lg',
 }
 
-const SIZE_CLASSES: Record<ModalSize, string> = {
-  sm: 'max-w-sm',
-  md: 'max-w-md',
-  lg: 'max-w-lg',
-  xl: 'max-w-xl',
-  full: 'max-w-full w-full h-full',
-}
+const placementClass = computed<string>(() => {
+  const map: ModalPlacementClassMap = {
+    top: 'modal-top items-start justify-items-center',
+    middle: 'modal-middle items-center justify-items-center',
+    bottom: 'modal-bottom items-end justify-items-center',
+    start: 'modal-start items-center justify-items-start',
+    end: 'modal-end items-center justify-items-end',
+  }
 
-/* =======================
-   Computed
-======================= */
-const modalClasses = computed(() =>
-  ['modal', POSITION_CLASSES[props.position], props.customClass, props.modelValue && 'modal-open']
-    .filter(Boolean)
-    .join(' '),
+  return map[props.placement as keyof typeof map]
+})
+
+const resolvedModalClass = computed(
+  () => props.modalClass ?? (props.placement === 'bottom' ? BOTTOM_SHEET_CLASSES : ''),
 )
 
-const boxClasses = computed(() =>
-  [
-    'modal-box',
-    'relative',
-    'p-0',
-    SIZE_CLASSES[props.size],
-    props.responsive && 'w-11/12',
-    props.contentClass,
-  ]
-    .filter(Boolean)
-    .join(' '),
-)
+const resolvedBackdropClasses = computed<string[]>(() => {
+  if (props.backdropBlur === 'transparent')
+    return ['bg-transparent', 'backdrop:block', 'backdrop:bg-transparent']
 
-const backdropClasses = computed(() =>
-  ['modal-backdrop', props.backdropBlur && `backdrop-blur-${props.backdropBlur}`]
-    .filter(Boolean)
-    .join(' '),
-)
+  return [
+    'bg-transparent',
+    'backdrop:block',
+    props.backdropClass,
+    BACKDROP_BLUR_CLASSES[props.backdropBlur],
+  ].filter(Boolean)
+})
 
-const headerClasses = computed(() =>
-  [props.headerPadding, props.bordered && 'border-b border-base-300'].filter(Boolean).join(' '),
-)
+async function open(): Promise<void> {
+  if (!dialogRef.value?.open) {
+    await nextTick()
 
-const actionsClasses = computed(() =>
-  ['modal-action', props.actionsPadding, 'm-0', props.bordered && 'border-t border-base-300']
-    .filter(Boolean)
-    .join(' '),
-)
+    dialogRef.value?.showModal()
 
-/* =======================
-   Methods
-======================= */
-function close() {
-  emit('update:modelValue', false)
-  emit('close')
-}
-
-function handleBackdropClick() {
-  emit('backdropClick')
-  if (props.closeOnBackdrop) {
-    close()
+    emit('open')
   }
 }
 
-function handleEscKey(event: KeyboardEvent) {
-  if (event.key === 'Escape' && props.modelValue) {
-    close()
+function close(): void {
+  if (dialogRef.value?.open) {
+    dialogRef.value.close()
+
+    emit('update:modelValue', false)
+    emit('close')
   }
 }
 
-/* =======================
-   Effects
-======================= */
-watchEffect((onCleanup) => {
-  if (!props.closeOnEsc || !props.modelValue)
+function onCancel(event: Event): void {
+  if (!props.closeOnEsc || props.persistent) {
+    event.preventDefault()
+
     return
+  }
 
-  document.addEventListener('keydown', handleEscKey)
+  close()
+}
 
-  onCleanup(() => {
-    document.removeEventListener('keydown', handleEscKey)
-  })
-})
+function onBackdropClick(event: MouseEvent): void {
+  if (!props.closeOnBackdrop || props.persistent) {
+    return
+  }
+
+  if (event.target === dialogRef.value) {
+    close()
+  }
+}
 
 watch(
   () => props.modelValue,
-  (isOpen) => {
-    if (props.preventScroll) {
-      document.body.style.overflow = isOpen ? 'hidden' : ''
+  async (value: boolean): Promise<void> => {
+    if (value) {
+      await open()
     }
-
-    if (isOpen) {
-      emit('open')
+    else {
+      close()
     }
   },
-  { immediate: true },
+  {
+    immediate: true,
+  },
 )
+
+onMounted(async (): Promise<void> => {
+  if (props.modelValue) {
+    await open()
+  }
+})
+
+defineExpose({
+  open,
+  close,
+})
 </script>
 
 <template>
-  <Teleport to="body">
-    <div :class="modalClasses" role="dialog" aria-modal="true">
-      <!-- Modal Box -->
-      <div :class="boxClasses" @click.stop>
-        <!-- Close Button -->
-        <DiButton
-          v-if="props.showCloseButton"
-          size="sm"
-          :aria-label="resolvedCloseLabel"
-          circle
-          variant="ghost"
-          class="absolute ltr:right-4 rtl:left-4 top-4 z-10"
+  <Teleport v-if="teleport" to="body">
+    <dialog
+      ref="dialogRef"
+      :aria-label="ariaLabel"
+      :aria-labelledby="ariaLabelledby"
+      :class="[placementClass, resolvedModalClass, resolvedBackdropClasses]"
+      class="modal"
+      @cancel="onCancel"
+      @click="onBackdropClick"
+    >
+      <div :class="[widthClass, boxClass]" class="modal-box relative">
+        <button
+          v-if="showCloseButton"
+          class="btn btn-sm btn-circle btn-ghost absolute top-2 end-2"
           @click="close"
         >
-          <DiIcon :name="props.closeIcon" />
-        </DiButton>
+          ✕
+        </button>
 
-        <!-- Header -->
-        <div v-if="$slots.header" :class="headerClasses">
-          <slot name="header" :title-size="props.titleSize" />
-        </div>
+        <slot />
 
-        <!-- Content -->
-        <div :class="props.contentPadding">
-          <slot :close="close" />
-        </div>
-
-        <!-- Actions -->
-        <div v-if="$slots.actions" :class="actionsClasses">
+        <div class="modal-action">
           <slot name="actions" :close="close" />
         </div>
       </div>
 
-      <!-- Backdrop (باید دوم باشه) -->
-      <div :class="backdropClasses" @click="handleBackdropClick" />
-    </div>
+      <slot name="overlay" />
+    </dialog>
   </Teleport>
+
+  <dialog
+    v-else
+    ref="dialogRef"
+    :aria-label="ariaLabel"
+    :aria-labelledby="ariaLabelledby"
+    :class="[placementClass, resolvedModalClass, resolvedBackdropClasses]"
+    class="modal"
+    @cancel="onCancel"
+    @click="onBackdropClick"
+  >
+    <div :class="[widthClass, boxClass]" class="modal-box relative">
+      <button
+        v-if="showCloseButton"
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 end-2"
+        @click="close"
+      >
+        ✕
+      </button>
+
+      <slot />
+
+      <div class="modal-action">
+        <slot name="actions" :close="close" />
+      </div>
+    </div>
+
+    <slot name="overlay" />
+  </dialog>
 </template>

@@ -923,67 +923,72 @@
         "collapsedMenu": "Separadores del menú lateral contraído"
       },
       "modals": {
-        "actions": {
-          "open": "Abrir modal",
-          "cancel": "Cancelar",
-          "confirm": "Confirmar",
-          "delete": "Eliminar"
-        },
-        "basic": {
-          "title": "Modal básico",
-          "header": "Título del modal",
-          "description": "Un modal básico con la configuración predeterminada."
-        },
-        "position": {
-          "title": "Variantes de posición",
-          "topDesc": "Este modal aparece en la parte superior.",
-          "bottomDesc": "Este modal aparece en la parte inferior."
-        },
-        "size": {
-          "title": "Variantes de tamaño",
-          "sm": "Este es un modal pequeño.",
-          "lg": "Este es un modal grande.",
-          "xl": "Este es un modal extragrande.",
-          "full": "Pantalla completa",
-          "fullDesc": "Este modal ocupa toda la pantalla."
-        },
-        "blur": {
-          "title": "Desenfoque del fondo",
-          "xs": "Desenfoque mínimo.",
-          "sm": "Desenfoque pequeño.",
-          "md": "Desenfoque medio."
-        },
-        "behavior": {
-          "title": "Opciones de comportamiento",
-          "noBackdrop": "No cerrar desde el fondo",
-          "noEsc": "No cerrar con ESC",
-          "noCloseButton": "Sin botón de cierre",
-          "noBackdropDesc": "Al pulsar el fondo no se cerrará este modal.",
-          "noEscDesc": "Al pulsar ESC no se cerrará este modal.",
-          "noCloseButtonDesc": "Este modal no tiene botón de cierre."
-        },
-        "confirmation": {
-          "title": "Diálogo de confirmación",
-          "open": "Eliminar cuenta",
-          "header": "¿Eliminar la cuenta?",
-          "description": "¿Seguro que quieres eliminar tu cuenta? Esta acción no se puede deshacer."
-        },
-        "responsive": "Modal adaptable",
-        "responsiveContent": "Comportamiento adaptable en móviles",
-        "noTransition": "Sin transición",
-        "noTransitionContent": "Apertura y cierre instantáneos sin animación",
-        "borderedWithSlots": "Modal con borde y ranuras",
-        "slottedContent": "El contenido principal del modal va aquí. Puedes añadir cualquier componente.",
-        "live": {
+        "example": "Modal básico",
+        "open": "Abrir modal",
+        "title": "Título del modal",
+        "description": "Un modal básico con la configuración predeterminada.",
+        "positions": {
+          "title": "Position Variants",
           "top": "Top",
+          "middle": "Middle",
           "bottom": "Bottom",
-          "end": "End",
           "start": "Start",
-          "openModal": "open modal",
-          "hello": "Hello!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Press ESC key or click the button below to close",
-          "close": "Cerrar",
-          "pressEscKeyOrClickOnButtonToClose": "Press ESC key or click on ✕ button to close"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
+        },
+        "persistent": {
+          "title": "Static Backdrop",
+          "open": "Open persistent modal",
+          "modalTitle": "Persistent modal",
+          "description": "Backdrop clicks and Escape are disabled. Use an explicit close control."
+        },
+        "scrollable": {
+          "title": "Scrollable Content",
+          "open": "Open scrollable modal",
+          "modalTitle": "Scrollable modal",
+          "paragraph": "Modal content can scroll independently while the page remains visually separated behind it."
+        },
+        "headerless": {
+          "title": "Headerless Modal",
+          "open": "Open headerless modal",
+          "ariaLabel": "Headerless information modal",
+          "description": "A compact message can omit a visible heading while retaining an accessible name.",
+          "understood": "Understood"
+        },
+        "fullscreen": {
+          "title": "Fullscreen Modal",
+          "open": "Open fullscreen modal",
+          "modalTitle": "Fullscreen modal",
+          "description": "This modal expands to the viewport for immersive or workspace-style content."
+        },
+        "blurred": {
+          "title": "Blurred Backdrop",
+          "open": "Open blurred modal",
+          "modalTitle": "Blurred backdrop",
+          "description": "A medium backdrop blur softens the surrounding page while retaining context."
+        },
+        "rating": {
+          "title": "Inline Rating",
+          "open": "Edit rating",
+          "modalTitle": "Edit rating",
+          "question": "How would you rate this modal experience?"
+        },
+        "nested": {
+          "title": "Nested Modals",
+          "open": "Open parent modal",
+          "parentTitle": "Parent modal",
+          "parentDescription": "Open a smaller dialog without closing this parent.",
+          "openChild": "Open nested modal",
+          "childTitle": "Nested modal",
+          "childDescription": "This dialog is layered above the parent modal."
+        },
+        "varying": {
+          "title": "Varying Modal Content",
+          "modalTitle": "New message to {recipient}",
+          "recipient": "Recipient",
+          "message": "Message",
+          "send": "Send message"
         }
       },
       "skeletons": {

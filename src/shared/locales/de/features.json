@@ -923,67 +923,72 @@
         "collapsedMenu": "Trennlinien im eingeklappten Seitenmenü"
       },
       "modals": {
-        "actions": {
-          "open": "Modal öffnen",
-          "cancel": "Stornieren",
-          "confirm": "Bestätigen",
-          "delete": "Löschen"
-        },
-        "basic": {
-          "title": "Grundlegendes Modal",
-          "header": "Modaler Titel",
-          "description": "Dies ist ein grundlegendes Modal mit Standardeinstellungen."
-        },
-        "position": {
-          "title": "Positionsvarianten",
-          "topDesc": "Dieses Modal erscheint oben auf dem Bildschirm.",
-          "bottomDesc": "Dieses Modal erscheint am unteren Bildschirmrand."
-        },
-        "size": {
-          "title": "Größenvarianten",
-          "sm": "Dies ist ein kleines Modal.",
-          "lg": "Dies ist ein großes Modal.",
-          "xl": "Dies ist ein extra großes Modal.",
-          "full": "Vollbild",
-          "fullDesc": "Dieses Modal nimmt den gesamten Bildschirm ein."
-        },
-        "blur": {
-          "title": "Hintergrundunschärfe",
-          "xs": "Extra kleine Hintergrundunschärfe.",
-          "sm": "Kleine Hintergrundunschärfe.",
-          "md": "Mittlere Hintergrundunschärfe."
-        },
-        "behavior": {
-          "title": "Verhaltensoptionen",
-          "noBackdrop": "Kein Hintergrund in der Nähe",
-          "noEsc": "Kein ESC-Schließen",
-          "noCloseButton": "Keine Schaltfläche zum Schließen",
-          "noBackdropDesc": "Durch Klicken auf den Hintergrund wird dieses Modal nicht geschlossen.",
-          "noEscDesc": "Durch Drücken der ESC-Taste wird dieses Modal nicht geschlossen.",
-          "noCloseButtonDesc": "Dieses Modal verfügt über keine Schaltfläche zum Schließen."
-        },
-        "confirmation": {
-          "title": "Bestätigungsdialog",
-          "open": "Konto löschen",
-          "header": "Konto löschen?",
-          "description": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden."
-        },
-        "responsive": "Responsives Modal",
-        "responsiveContent": "Responsives Verhalten auf Mobilgeräten",
-        "noTransition": "Ohne Übergang",
-        "noTransitionContent": "Sofortiges Öffnen und Schließen ohne Animation",
-        "borderedWithSlots": "Umrandetes Modal mit Schlitzen",
-        "slottedContent": "Der Hauptinhalt des Modals wird hier angezeigt. Sie können beliebige Komponenten platzieren.",
-        "live": {
-          "top": "Spitze",
-          "bottom": "Unten",
-          "end": "Ende",
+        "example": "Grundlegendes Modal",
+        "open": "Modal öffnen",
+        "title": "Modaler Titel",
+        "description": "Dies ist ein grundlegendes Modal mit Standardeinstellungen.",
+        "positions": {
+          "title": "Position Variants",
+          "top": "Top",
+          "middle": "Middle",
+          "bottom": "Bottom",
           "start": "Start",
-          "openModal": "Offenes Modal",
-          "hello": "Hallo!",
-          "pressEscKeyOrClickTheButtonBelowToClose": "Drücken Sie die ESC-Taste oder klicken Sie auf die Schaltfläche unten, um den Vorgang zu schließen",
-          "close": "Schließen",
-          "pressEscKeyOrClickOnButtonToClose": "Drücken Sie die ESC-Taste oder klicken Sie auf die Schaltfläche ✕, um den Vorgang zu schließen"
+          "end": "End",
+          "modalTitle": "{placement} modal",
+          "description": "This modal uses the {placement} placement."
+        },
+        "persistent": {
+          "title": "Static Backdrop",
+          "open": "Open persistent modal",
+          "modalTitle": "Persistent modal",
+          "description": "Backdrop clicks and Escape are disabled. Use an explicit close control."
+        },
+        "scrollable": {
+          "title": "Scrollable Content",
+          "open": "Open scrollable modal",
+          "modalTitle": "Scrollable modal",
+          "paragraph": "Modal content can scroll independently while the page remains visually separated behind it."
+        },
+        "headerless": {
+          "title": "Headerless Modal",
+          "open": "Open headerless modal",
+          "ariaLabel": "Headerless information modal",
+          "description": "A compact message can omit a visible heading while retaining an accessible name.",
+          "understood": "Understood"
+        },
+        "fullscreen": {
+          "title": "Fullscreen Modal",
+          "open": "Open fullscreen modal",
+          "modalTitle": "Fullscreen modal",
+          "description": "This modal expands to the viewport for immersive or workspace-style content."
+        },
+        "blurred": {
+          "title": "Blurred Backdrop",
+          "open": "Open blurred modal",
+          "modalTitle": "Blurred backdrop",
+          "description": "A medium backdrop blur softens the surrounding page while retaining context."
+        },
+        "rating": {
+          "title": "Inline Rating",
+          "open": "Edit rating",
+          "modalTitle": "Edit rating",
+          "question": "How would you rate this modal experience?"
+        },
+        "nested": {
+          "title": "Nested Modals",
+          "open": "Open parent modal",
+          "parentTitle": "Parent modal",
+          "parentDescription": "Open a smaller dialog without closing this parent.",
+          "openChild": "Open nested modal",
+          "childTitle": "Nested modal",
+          "childDescription": "This dialog is layered above the parent modal."
+        },
+        "varying": {
+          "title": "Varying Modal Content",
+          "modalTitle": "New message to {recipient}",
+          "recipient": "Recipient",
+          "message": "Message",
+          "send": "Send message"
         }
       },
       "carousel": {
