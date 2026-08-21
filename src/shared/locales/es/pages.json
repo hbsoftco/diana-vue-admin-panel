@@ -116,6 +116,9 @@
       "inputs": {
         "title": "Campos de entrada"
       },
+      "checksRadios": {
+        "title": "Casillas y radios"
+      },
       "range": {
         "title": "Rango"
       },

@@ -19,6 +19,18 @@ export const formRoutes = {
       },
     },
     {
+      path: 'form-elements/checks-radios',
+      component: () => import('@/pages/forms/form-elements/checks-radios.vue'),
+      meta: {
+        pageTitle: 'pages.forms.checksRadios.title',
+        breadcrumb: [
+          { label: 'pages.forms.title', link: '/forms' },
+          { label: 'pages.forms.formElements.title' },
+          { label: 'pages.forms.checksRadios.title' },
+        ],
+      },
+    },
+    {
       path: 'form-elements/select',
       component: () => import('@/pages/forms/select.vue'),
       meta: {

@@ -116,6 +116,9 @@
       "inputs": {
         "title": "Inputs"
       },
+      "checksRadios": {
+        "title": "Checks & Radios"
+      },
       "range": {
         "title": "Range"
       },

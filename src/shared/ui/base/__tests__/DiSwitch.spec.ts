@@ -9,7 +9,10 @@ describe('diSwitch', () => {
     const input = wrapper.get('input')
 
     expect(input.attributes('type')).toBe('checkbox')
-    expect(input.classes()).toEqual(expect.arrayContaining(['toggle', 'toggle-primary', 'toggle-md']))
+    expect(input.attributes('role')).toBe('switch')
+    expect(input.classes()).toEqual(
+      expect.arrayContaining(['toggle', 'toggle-primary', 'toggle-md']),
+    )
     expect(input.element.checked).toBe(false)
   })
 
@@ -82,5 +85,37 @@ describe('diSwitch', () => {
     expect(toggle.get('input').attributes('name')).toBe('feature')
     expect(toggle.find('[data-test="unchecked"]').exists()).toBe(true)
     expect(toggle.find('[data-test="checked"]').exists()).toBe(true)
+  })
+
+  it('preserves the default appearance and supports minimal and labeled appearances', () => {
+    const defaultSwitch = mount(DiSwitch, { props: { label: 'Default' } })
+    const minimal = mount(DiSwitch, {
+      props: { appearance: 'minimal', label: 'Minimal notifications', variant: 'success' },
+    })
+    const labeled = mount(DiSwitch, {
+      props: { appearance: 'labeled', label: 'Labeled', variant: 'error' },
+    })
+
+    expect(defaultSwitch.get('input').classes()).not.toContain('di-switch-minimal')
+    expect(defaultSwitch.get('input').classes()).not.toContain('di-switch-labeled-control')
+    expect(minimal.find('label').exists()).toBe(false)
+    expect(minimal.get('input').classes()).toEqual(
+      expect.arrayContaining(['toggle-success', 'di-switch-minimal', 'rounded-full']),
+    )
+    expect(minimal.get('input').attributes('aria-label')).toBe('Minimal notifications')
+    expect(labeled.get('input').classes()).toEqual(
+      expect.arrayContaining(['toggle-error', 'di-switch-labeled-control']),
+    )
+    expect(labeled.find('.di-switch-labeled').exists()).toBe(true)
+  })
+
+  it('uses direction-independent order classes for end labels', () => {
+    const wrapper = mount(DiSwitch, {
+      props: { label: 'Notifications', labelPosition: 'end', modelValue: true },
+    })
+
+    expect(wrapper.get('input').classes()).toContain('order-1')
+    expect(wrapper.get('label').classes()).toContain('order-2')
+    expect(wrapper.get('span').classes()).not.toContain('flex-row-reverse')
   })
 })

@@ -116,6 +116,9 @@
       "inputs": {
         "title": "Champs de saisie"
       },
+      "checksRadios": {
+        "title": "Cases et boutons radio"
+      },
       "range": {
         "title": "Plage"
       },
