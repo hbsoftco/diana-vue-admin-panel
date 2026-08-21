@@ -65,6 +65,11 @@ export const menuItems: MenuItem[] = [
         label: 'menu.formElements',
         children: [
           { id: 'inputs', label: 'menu.inputs', route: '/forms/form-elements/inputs' },
+          {
+            id: 'checks-radios',
+            label: 'menu.checksRadios',
+            route: '/forms/form-elements/checks-radios',
+          },
           { id: 'range', label: 'menu.range', route: '/forms/form-elements/range' },
           {
             id: 'range-slider',

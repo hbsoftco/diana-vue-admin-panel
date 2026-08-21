@@ -116,6 +116,9 @@
       "inputs": {
         "title": "ورودی‌ها"
       },
+      "checksRadios": {
+        "title": "چک‌باکس و رادیو"
+      },
       "range": {
         "title": "بازه"
       },

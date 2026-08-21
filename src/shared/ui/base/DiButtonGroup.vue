@@ -134,12 +134,24 @@ function onKeydown(event: KeyboardEvent) {
   border-end-start-radius: var(--radius-field);
 }
 
+.di-button-group-attached.flex-row:deep(> .peer:first-child + .btn) {
+  margin-inline-start: 0;
+  border-start-start-radius: var(--radius-field);
+  border-end-start-radius: var(--radius-field);
+}
+
 .di-button-group-attached.flex-row:deep(> .btn:last-child) {
   border-start-end-radius: var(--radius-field);
   border-end-end-radius: var(--radius-field);
 }
 
 .di-button-group-attached.flex-col:deep(> .btn:first-child) {
+  border-start-start-radius: var(--radius-field);
+  border-start-end-radius: var(--radius-field);
+}
+
+.di-button-group-attached.flex-col:deep(> .peer:first-child + .btn) {
+  margin-top: 0;
   border-start-start-radius: var(--radius-field);
   border-start-end-radius: var(--radius-field);
 }
@@ -154,12 +166,22 @@ function onKeydown(event: KeyboardEvent) {
   border-end-start-radius: calc(infinity * 1px);
 }
 
+.di-button-group-rounded.flex-row:deep(> .peer:first-child + .btn) {
+  border-start-start-radius: calc(infinity * 1px);
+  border-end-start-radius: calc(infinity * 1px);
+}
+
 .di-button-group-rounded.flex-row:deep(> .btn:last-child) {
   border-start-end-radius: calc(infinity * 1px);
   border-end-end-radius: calc(infinity * 1px);
 }
 
 .di-button-group-rounded.flex-col:deep(> .btn:first-child) {
+  border-start-start-radius: calc(infinity * 1px);
+  border-start-end-radius: calc(infinity * 1px);
+}
+
+.di-button-group-rounded.flex-col:deep(> .peer:first-child + .btn) {
   border-start-start-radius: calc(infinity * 1px);
   border-start-end-radius: calc(infinity * 1px);
 }
