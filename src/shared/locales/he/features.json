@@ -982,6 +982,26 @@
           "medium": "בינוני",
           "large": "גדול"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "העלאת ריבוי קבצים כברירת מחדל",
+          "single": "העלאת קובץ יחיד",
+          "states": "מצבי רשימת קבצים",
+          "interactive": "העלאה אינטראקטיבית",
+          "sizes": "גדלים",
+          "disabled": "מושבת",
+          "invalid": "מצב לא תקין"
+        },
+        "labels": {
+          "gallery": "גלריית מוצר",
+          "galleryHelper": "PNG או JPG עד 5MB לקובץ",
+          "avatar": "תמונת פרופיל",
+          "avatarHelper": "מומלץ תמונה מרובעת",
+          "attachments": "קבצים מצורפים",
+          "invalidHelper": "יש לצרף לפחות קובץ אחד",
+          "invalidError": "אנא צרף לפחות קובץ אחד"
+        }
       }
     },
     "advancedUi": {

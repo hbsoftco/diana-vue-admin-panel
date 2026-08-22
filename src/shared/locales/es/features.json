@@ -982,6 +982,26 @@
           "medium": "Mediano",
           "large": "Grande"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "Subida múltiple predeterminada",
+          "single": "Subida de un solo archivo",
+          "states": "Estados de la lista de archivos",
+          "interactive": "Subida interactiva",
+          "sizes": "Tamaños",
+          "disabled": "Deshabilitado",
+          "invalid": "Estado inválido"
+        },
+        "labels": {
+          "gallery": "Galería del producto",
+          "galleryHelper": "PNG o JPG de hasta 5 MB cada uno",
+          "avatar": "Foto de perfil",
+          "avatarHelper": "Se recomienda una imagen cuadrada",
+          "attachments": "Archivos adjuntos",
+          "invalidHelper": "Se requiere al menos un archivo adjunto",
+          "invalidError": "Adjunta al menos un archivo"
+        }
       }
     },
     "advancedUi": {

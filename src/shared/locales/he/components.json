@@ -72,6 +72,20 @@
     },
     "dropdown": {
       "menu": "תפריט"
+    },
+    "fileUpload": {
+      "clickToUpload": "לחץ להעלאה",
+      "dragAndDrop": "או גרור ושחרר קבצים כאן",
+      "maxSize": "גודל קובץ מקסימלי: {size}",
+      "acceptedTypes": "סוגים נתמכים: {types}",
+      "remove": "הסר את {name}",
+      "fileAdded": "{name} נוסף",
+      "fileRemoved": "{name} הוסר",
+      "uploadComplete": "{name} הועלה בהצלחה",
+      "uploadFailed": "העלאת {name} נכשלה",
+      "rejectedType": "{name} נדחה: סוג קובץ לא נתמך",
+      "rejectedSize": "{name} נדחה: הקובץ גדול מדי",
+      "rejectedCount": "{name} נדחה: התקבל מספר הקבצים המרבי"
     }
   }
 }

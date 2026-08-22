@@ -72,6 +72,20 @@
     },
     "dropdown": {
       "menu": "Menu"
+    },
+    "fileUpload": {
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": "or drag and drop",
+      "maxSize": "Max file size: {size}",
+      "acceptedTypes": "Accepted: {types}",
+      "remove": "Remove {name}",
+      "fileAdded": "{name} added",
+      "fileRemoved": "{name} removed",
+      "uploadComplete": "{name} uploaded successfully",
+      "uploadFailed": "{name} failed to upload",
+      "rejectedType": "{name} was rejected: unsupported file type",
+      "rejectedSize": "{name} was rejected: file is too large",
+      "rejectedCount": "{name} was rejected: maximum number of files reached"
     }
   }
 }

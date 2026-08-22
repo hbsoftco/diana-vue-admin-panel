@@ -72,6 +72,20 @@
     },
     "dropdown": {
       "menu": "القائمة"
+    },
+    "fileUpload": {
+      "clickToUpload": "انقر للرفع",
+      "dragAndDrop": "أو اسحب الملفات وأفلتها هنا",
+      "maxSize": "الحد الأقصى لحجم الملف: {size}",
+      "acceptedTypes": "الأنواع المقبولة: {types}",
+      "remove": "إزالة {name}",
+      "fileAdded": "تمت إضافة {name}",
+      "fileRemoved": "تمت إزالة {name}",
+      "uploadComplete": "تم رفع {name} بنجاح",
+      "uploadFailed": "فشل رفع {name}",
+      "rejectedType": "تم رفض {name}: نوع الملف غير مدعوم",
+      "rejectedSize": "تم رفض {name}: حجم الملف كبير جدًا",
+      "rejectedCount": "تم رفض {name}: تم الوصول إلى الحد الأقصى لعدد الملفات"
     }
   }
 }

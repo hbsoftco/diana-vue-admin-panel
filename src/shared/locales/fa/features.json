@@ -982,6 +982,26 @@
           "medium": "متوسط",
           "large": "بزرگ"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "آپلود چندفایلی پیش‌فرض",
+          "single": "آپلود تک‌فایل",
+          "states": "وضعیت‌های فهرست فایل",
+          "interactive": "آپلود تعاملی",
+          "sizes": "اندازه‌ها",
+          "disabled": "غیرفعال",
+          "invalid": "حالت نامعتبر"
+        },
+        "labels": {
+          "gallery": "گالری محصول",
+          "galleryHelper": "فایل PNG یا JPG تا حداکثر ۵ مگابایت",
+          "avatar": "عکس پروفایل",
+          "avatarHelper": "تصویر مربعی توصیه می‌شود",
+          "attachments": "پیوست‌ها",
+          "invalidHelper": "حداقل یک پیوست الزامی است",
+          "invalidError": "لطفاً حداقل یک فایل پیوست کنید"
+        }
       }
     },
     "advancedUi": {

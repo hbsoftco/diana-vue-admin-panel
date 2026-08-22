@@ -982,6 +982,26 @@
           "medium": "Medium",
           "large": "Groß"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "Standard-Mehrfach-Upload",
+          "single": "Einzeldatei-Upload",
+          "states": "Dateilistenzustände",
+          "interactive": "Interaktiver Upload",
+          "sizes": "Größen",
+          "disabled": "Deaktiviert",
+          "invalid": "Ungültiger Zustand"
+        },
+        "labels": {
+          "gallery": "Produktgalerie",
+          "galleryHelper": "PNG oder JPG bis zu 5 MB pro Datei",
+          "avatar": "Profilbild",
+          "avatarHelper": "Quadratisches Bild empfohlen",
+          "attachments": "Anhänge",
+          "invalidHelper": "Mindestens ein Anhang ist erforderlich",
+          "invalidError": "Bitte mindestens eine Datei anhängen"
+        }
       }
     },
     "advancedUi": {

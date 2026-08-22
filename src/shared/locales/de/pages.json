@@ -127,6 +127,9 @@
       },
       "select": {
         "title": "Auswahl"
+      },
+      "fileUpload": {
+        "title": "Datei-Upload"
       }
     },
     "advancedUi": {

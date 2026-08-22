@@ -3,6 +3,8 @@ import SearchIcon from '~icons/feather/search'
 import FormIcon from '~icons/fluent/form-48-regular'
 import CheckCircleIcon from '~icons/heroicons/check-circle'
 import ChevronDoubleRightIcon from '~icons/heroicons/chevron-double-right-20-solid'
+import CloudArrowUpIcon from '~icons/heroicons/cloud-arrow-up'
+import DocumentIcon from '~icons/heroicons/document'
 import ExclamationTriangleIcon from '~icons/heroicons/exclamation-triangle'
 import HeartIcon from '~icons/heroicons/heart'
 import InformationCircleIcon from '~icons/heroicons/information-circle'
@@ -68,6 +70,8 @@ export const coreIconRegistry = {
   componentDropdown: ComponentDropdownIcon,
   medalLine: MedalLineIcon,
   form48regular: FormIcon,
+  uploadCloud: CloudArrowUpIcon,
+  fileDocument: DocumentIcon,
 } as const
 
 // Lazy icons are limited to feature-specific screens, showcases, and playground examples.
