@@ -77,6 +77,11 @@ export const menuItems: MenuItem[] = [
             route: '/forms/form-elements/range-slider',
           },
           { id: 'select', label: 'menu.select', route: '/forms/form-elements/select' },
+          {
+            id: 'file-upload',
+            label: 'menu.fileUpload',
+            route: '/forms/form-elements/file-upload',
+          },
         ],
       },
     ],

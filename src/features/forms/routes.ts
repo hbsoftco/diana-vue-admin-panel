@@ -66,5 +66,17 @@ export const formRoutes = {
         ],
       },
     },
+    {
+      path: 'form-elements/file-upload',
+      component: () => import('@/pages/forms/form-elements/file-upload.vue'),
+      meta: {
+        pageTitle: 'pages.forms.fileUpload.title',
+        breadcrumb: [
+          { label: 'pages.forms.title', link: '/forms' },
+          { label: 'pages.forms.formElements.title' },
+          { label: 'pages.forms.fileUpload.title' },
+        ],
+      },
+    },
   ],
 }

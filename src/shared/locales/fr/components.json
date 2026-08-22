@@ -72,6 +72,20 @@
     },
     "dropdown": {
       "menu": "Menu"
+    },
+    "fileUpload": {
+      "clickToUpload": "Cliquez pour téléverser",
+      "dragAndDrop": "ou glissez-déposez",
+      "maxSize": "Taille maximale : {size}",
+      "acceptedTypes": "Formats acceptés : {types}",
+      "remove": "Supprimer {name}",
+      "fileAdded": "{name} ajouté",
+      "fileRemoved": "{name} supprimé",
+      "uploadComplete": "{name} téléversé avec succès",
+      "uploadFailed": "Échec du téléversement de {name}",
+      "rejectedType": "{name} refusé : type de fichier non pris en charge",
+      "rejectedSize": "{name} refusé : fichier trop volumineux",
+      "rejectedCount": "{name} refusé : nombre maximal de fichiers atteint"
     }
   }
 }

@@ -982,6 +982,26 @@
           "medium": "متوسط",
           "large": "كبير"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "رفع متعدد الملفات الافتراضي",
+          "single": "رفع ملف واحد",
+          "states": "حالات قائمة الملفات",
+          "interactive": "رفع تفاعلي",
+          "sizes": "الأحجام",
+          "disabled": "معطّل",
+          "invalid": "حالة غير صالحة"
+        },
+        "labels": {
+          "gallery": "معرض المنتج",
+          "galleryHelper": "PNG أو JPG حتى 5 ميغابايت لكل ملف",
+          "avatar": "الصورة الشخصية",
+          "avatarHelper": "يُفضّل صورة مربعة",
+          "attachments": "المرفقات",
+          "invalidHelper": "يلزم إرفاق ملف واحد على الأقل",
+          "invalidError": "يرجى إرفاق ملف واحد على الأقل"
+        }
       }
     },
     "advancedUi": {

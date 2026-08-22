@@ -72,6 +72,20 @@
     },
     "dropdown": {
       "menu": "منو"
+    },
+    "fileUpload": {
+      "clickToUpload": "برای آپلود کلیک کنید",
+      "dragAndDrop": "یا فایل را بکشید و رها کنید",
+      "maxSize": "حداکثر حجم فایل: {size}",
+      "acceptedTypes": "فرمت‌های مجاز: {types}",
+      "remove": "حذف {name}",
+      "fileAdded": "{name} افزوده شد",
+      "fileRemoved": "{name} حذف شد",
+      "uploadComplete": "{name} با موفقیت آپلود شد",
+      "uploadFailed": "آپلود {name} ناموفق بود",
+      "rejectedType": "{name} رد شد: نوع فایل پشتیبانی نمی‌شود",
+      "rejectedSize": "{name} رد شد: حجم فایل بیش از حد مجاز است",
+      "rejectedCount": "{name} رد شد: به حداکثر تعداد فایل مجاز رسیده‌اید"
     }
   }
 }

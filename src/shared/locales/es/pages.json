@@ -127,6 +127,9 @@
       },
       "select": {
         "title": "Selección"
+      },
+      "fileUpload": {
+        "title": "Subida de archivos"
       }
     },
     "advancedUi": {
@@ -161,9 +164,15 @@
     },
     "error": {
       "title": "Error",
-      "401": { "title": "Error 401" },
-      "404": { "title": "Error 404" },
-      "500": { "title": "Error 500" }
+      "401": {
+        "title": "Error 401"
+      },
+      "404": {
+        "title": "Error 404"
+      },
+      "500": {
+        "title": "Error 500"
+      }
     },
     "utility": {
       "title": "Utilidades",

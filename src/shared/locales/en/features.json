@@ -982,6 +982,26 @@
           "medium": "Medium",
           "large": "Large"
         }
+      },
+      "fileUpload": {
+        "sections": {
+          "default": "Default Multi-file Upload",
+          "single": "Single File Upload",
+          "states": "File List States",
+          "interactive": "Interactive Upload",
+          "sizes": "Sizes",
+          "disabled": "Disabled",
+          "invalid": "Invalid State"
+        },
+        "labels": {
+          "gallery": "Product gallery",
+          "galleryHelper": "PNG or JPG up to 5 MB each",
+          "avatar": "Profile photo",
+          "avatarHelper": "Square image recommended",
+          "attachments": "Attachments",
+          "invalidHelper": "At least one attachment is required",
+          "invalidError": "Please attach at least one file"
+        }
       }
     },
     "advancedUi": {
