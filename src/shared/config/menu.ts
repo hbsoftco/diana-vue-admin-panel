@@ -82,6 +82,11 @@ export const menuItems: MenuItem[] = [
             label: 'menu.fileUpload',
             route: '/forms/form-elements/file-upload',
           },
+          {
+            id: 'color-picker',
+            label: 'menu.colorPicker',
+            route: '/forms/form-elements/color-picker',
+          },
         ],
       },
     ],

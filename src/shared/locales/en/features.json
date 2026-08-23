@@ -1002,6 +1002,25 @@
           "invalidHelper": "At least one attachment is required",
           "invalidError": "Please attach at least one file"
         }
+      },
+      "colorPicker": {
+        "sections": {
+          "basic": "Basic Color Picker",
+          "theme": "Theme Color Picker",
+          "compact": "Compact Color Picker",
+          "disabled": "Disabled and Readonly",
+          "defaults": "Different Default Colors"
+        },
+        "labels": {
+          "brand": "Brand color",
+          "theme": "Theme accent",
+          "compact": "Compact picker",
+          "disabled": "Disabled color",
+          "readonly": "Readonly color",
+          "red": "Red",
+          "green": "Green",
+          "blue": "Blue"
+        }
       }
     },
     "advancedUi": {

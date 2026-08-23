@@ -78,5 +78,17 @@ export const formRoutes = {
         ],
       },
     },
+    {
+      path: 'form-elements/color-picker',
+      component: () => import('@/pages/forms/form-elements/color-picker.vue'),
+      meta: {
+        pageTitle: 'pages.forms.colorPicker.title',
+        breadcrumb: [
+          { label: 'pages.forms.title', link: '/forms' },
+          { label: 'pages.forms.formElements.title' },
+          { label: 'pages.forms.colorPicker.title' },
+        ],
+      },
+    },
   ],
 }

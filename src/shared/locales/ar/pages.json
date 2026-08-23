@@ -130,6 +130,9 @@
       },
       "fileUpload": {
         "title": "رفع الملفات"
+      },
+      "colorPicker": {
+        "title": "منتقي الألوان"
       }
     },
     "advancedUi": {
