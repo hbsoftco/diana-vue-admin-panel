@@ -130,6 +130,9 @@
       },
       "fileUpload": {
         "title": "Téléversement de fichiers"
+      },
+      "colorPicker": {
+        "title": "Sélecteur de couleur"
       }
     },
     "advancedUi": {

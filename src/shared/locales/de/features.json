@@ -1002,6 +1002,25 @@
           "invalidHelper": "Mindestens ein Anhang ist erforderlich",
           "invalidError": "Bitte mindestens eine Datei anhängen"
         }
+      },
+      "colorPicker": {
+        "sections": {
+          "basic": "Einfache Farbauswahl",
+          "theme": "Theme-Farbauswahl",
+          "compact": "Kompakte Farbauswahl",
+          "disabled": "Deaktiviert und schreibgeschützt",
+          "defaults": "Verschiedene Standardfarben"
+        },
+        "labels": {
+          "brand": "Markenfarbe",
+          "theme": "Theme-Akzent",
+          "compact": "Kompakte Auswahl",
+          "disabled": "Deaktivierte Farbe",
+          "readonly": "Schreibgeschützte Farbe",
+          "red": "Rot",
+          "green": "Grün",
+          "blue": "Blau"
+        }
       }
     },
     "advancedUi": {

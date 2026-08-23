@@ -130,6 +130,9 @@
       },
       "fileUpload": {
         "title": "העלאת קובץ"
+      },
+      "colorPicker": {
+        "title": "בורר צבעים"
       }
     },
     "advancedUi": {

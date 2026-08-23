@@ -1002,6 +1002,25 @@
           "invalidHelper": "Se requiere al menos un archivo adjunto",
           "invalidError": "Adjunta al menos un archivo"
         }
+      },
+      "colorPicker": {
+        "sections": {
+          "basic": "Selector de color básico",
+          "theme": "Selector de color del tema",
+          "compact": "Selector de color compacto",
+          "disabled": "Deshabilitado y de solo lectura",
+          "defaults": "Diferentes colores predeterminados"
+        },
+        "labels": {
+          "brand": "Color de marca",
+          "theme": "Acento del tema",
+          "compact": "Selector compacto",
+          "disabled": "Color deshabilitado",
+          "readonly": "Color de solo lectura",
+          "red": "Rojo",
+          "green": "Verde",
+          "blue": "Azul"
+        }
       }
     },
     "advancedUi": {

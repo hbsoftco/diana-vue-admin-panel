@@ -130,6 +130,9 @@
       },
       "fileUpload": {
         "title": "Datei-Upload"
+      },
+      "colorPicker": {
+        "title": "Farbauswahl"
       }
     },
     "advancedUi": {

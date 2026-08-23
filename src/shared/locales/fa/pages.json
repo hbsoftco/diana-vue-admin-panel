@@ -130,6 +130,9 @@
       },
       "fileUpload": {
         "title": "آپلود فایل"
+      },
+      "colorPicker": {
+        "title": "انتخاب‌گر رنگ"
       }
     },
     "advancedUi": {
