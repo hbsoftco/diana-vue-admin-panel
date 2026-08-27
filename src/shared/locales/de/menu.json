@@ -3,6 +3,7 @@
     "groups": {
       "main": "Hauptbereich",
       "components": "Komponenten",
+      "mapsIcons": "Karten und Symbole",
       "system": "System"
     },
     "dashboard": "Dashboards",
@@ -60,6 +61,8 @@
     "navbar": "Navigationsleiste",
     "skeleton": "Skeleton",
     "rating": "Bewertung",
+    "map": "Karte",
+    "googleMaps": "Google Maps",
     "error": "Fehler",
     "error401": "401 Fehler",
     "error404": "404 Fehler",

@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "Mapa básico",
+        "loading": "Cargando Google Maps…",
+        "mapLabel": "Mapa de Google centrado en Teherán",
+        "missingKeyTitle": "Se requiere una clave de Google Maps API",
+        "missingKeyDescription": "Añade VITE_GOOGLE_MAPS_API_KEY al archivo .env local y reinicia el servidor de desarrollo.",
+        "loadErrorTitle": "No se pudo cargar Google Maps",
+        "loadErrorDescription": "Comprueba la clave de API, el acceso a Maps JavaScript API, la facturación y la conexión de red.",
+        "retry": "Reintentar"
+      }
+    },
     "error": {
       "statusLabel": "Error {code}",
       "backToHome": "Volver al inicio",

@@ -4,6 +4,7 @@ import { advancedUiRoutes } from '@/features/advanced-ui/routes'
 import { dashboardRoutes } from '@/features/dashboards/routes'
 import { errorRoutes } from '@/features/error/routes'
 import { formRoutes } from '@/features/forms/routes'
+import { mapsIconsRoutes } from '@/features/maps-icons/routes'
 import { uiElementRoutes } from '@/features/ui-elements/routes'
 import { utilityRoutes } from '@/features/utility/routes'
 
@@ -17,6 +18,7 @@ const router = createRouter({
     dashboardRoutes,
     errorRoutes,
     formRoutes,
+    mapsIconsRoutes,
     uiElementRoutes,
     advancedUiRoutes,
     utilityRoutes,

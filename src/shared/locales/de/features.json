@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "Basiskarte",
+        "loading": "Google Maps wird geladen…",
+        "mapLabel": "Auf Teheran zentrierte Google-Karte",
+        "missingKeyTitle": "Google Maps API-Schlüssel erforderlich",
+        "missingKeyDescription": "Füge VITE_GOOGLE_MAPS_API_KEY zur lokalen .env-Datei hinzu und starte den Entwicklungsserver neu.",
+        "loadErrorTitle": "Google Maps konnte nicht geladen werden",
+        "loadErrorDescription": "Prüfe API-Schlüssel, Maps JavaScript API-Zugriff, Abrechnung und Netzwerkverbindung.",
+        "retry": "Erneut versuchen"
+      }
+    },
     "error": {
       "401": {
         "heading": "Sie sind nicht autorisiert",

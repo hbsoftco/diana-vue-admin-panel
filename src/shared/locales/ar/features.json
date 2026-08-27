@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "الخريطة الأساسية",
+        "loading": "جارٍ تحميل خريطة Google…",
+        "mapLabel": "خريطة Google متمركزة على طهران",
+        "missingKeyTitle": "مفتاح Google Maps API مطلوب",
+        "missingKeyDescription": "أضف VITE_GOOGLE_MAPS_API_KEY إلى ملف .env المحلي، ثم أعد تشغيل خادم التطوير.",
+        "loadErrorTitle": "تعذر تحميل خريطة Google",
+        "loadErrorDescription": "تحقق من مفتاح API والوصول إلى Maps JavaScript API وإعدادات الفوترة واتصال الشبكة.",
+        "retry": "إعادة المحاولة"
+      }
+    },
     "error": {
       "statusLabel": "خطأ {code}",
       "backToHome": "العودة إلى الصفحة الرئيسية",

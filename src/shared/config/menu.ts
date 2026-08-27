@@ -107,6 +107,25 @@ export const menuItems: MenuItem[] = [
       { id: 'rating', label: 'menu.rating', route: '/advanced-ui/rating' },
     ],
   },
+  { type: 'label', id: 'maps-icons-label', label: 'menu.groups.mapsIcons' },
+  {
+    id: 'maps-icons-map',
+    label: 'menu.map',
+    icon: 'mapOutline',
+    children: [
+      {
+        id: 'google-maps',
+        label: 'menu.googleMaps',
+        route: '/maps-icons/map/google-maps',
+      },
+    ],
+  },
+  {
+    id: 'maps-icons-icons',
+    label: 'menu.icons',
+    icon: 'componentDropdown',
+    disabled: true,
+  },
   { type: 'label', id: 'system-label', label: 'menu.groups.system' },
   {
     id: 'error',

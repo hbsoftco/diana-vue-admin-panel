@@ -165,6 +165,11 @@
         "title": "Squelette"
       }
     },
+    "mapsIcons": {
+      "title": "Cartes et icônes",
+      "map": { "title": "Carte" },
+      "googleMaps": { "title": "Google Maps" }
+    },
     "error": {
       "title": "Erreur",
       "401": {

@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "Carte de base",
+        "loading": "Chargement de Google Maps…",
+        "mapLabel": "Carte Google centrée sur Téhéran",
+        "missingKeyTitle": "Clé API Google Maps requise",
+        "missingKeyDescription": "Ajoutez VITE_GOOGLE_MAPS_API_KEY au fichier .env local, puis redémarrez le serveur de développement.",
+        "loadErrorTitle": "Impossible de charger Google Maps",
+        "loadErrorDescription": "Vérifiez la clé API, l’accès à Maps JavaScript API, la facturation et la connexion réseau.",
+        "retry": "Réessayer"
+      }
+    },
     "error": {
       "statusLabel": "Erreur {code}",
       "backToHome": "Retour à l’accueil",

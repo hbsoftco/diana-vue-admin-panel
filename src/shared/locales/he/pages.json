@@ -165,6 +165,11 @@
         "title": "שלד טעינה"
       }
     },
+    "mapsIcons": {
+      "title": "מפות וסמלים",
+      "map": { "title": "מפה" },
+      "googleMaps": { "title": "מפות Google" }
+    },
     "error": {
       "title": "שגיאה",
       "401": {

@@ -3,6 +3,7 @@
     "groups": {
       "main": "ראשי",
       "components": "רכיבים",
+      "mapsIcons": "מפות וסמלים",
       "system": "מערכת"
     },
     "dashboard": "לוחות בקרה",
@@ -60,6 +61,8 @@
     "navbar": "סרגל ניווט",
     "skeleton": "שלד טעינה",
     "rating": "דירוג",
+    "map": "מפה",
+    "googleMaps": "מפות Google",
     "error": "שגיאה",
     "error401": "שגיאת 401",
     "error404": "שגיאת 404",

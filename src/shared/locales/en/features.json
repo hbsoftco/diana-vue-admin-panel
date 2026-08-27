@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "Basic Map",
+        "loading": "Loading Google Map…",
+        "mapLabel": "Google Map centered on Tehran",
+        "missingKeyTitle": "Google Maps API key required",
+        "missingKeyDescription": "Add VITE_GOOGLE_MAPS_API_KEY to your local .env file, then restart the development server.",
+        "loadErrorTitle": "Google Map could not be loaded",
+        "loadErrorDescription": "Check the API key, Maps JavaScript API access, billing configuration, and network connection.",
+        "retry": "Try again"
+      }
+    },
     "error": {
       "statusLabel": "Error {code}",
       "backToHome": "Back to Home",

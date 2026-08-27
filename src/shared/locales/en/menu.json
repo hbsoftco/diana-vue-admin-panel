@@ -3,6 +3,7 @@
     "groups": {
       "main": "Main",
       "components": "Components",
+      "mapsIcons": "Maps & Icons",
       "system": "System"
     },
     "dashboard": "Dashboards",
@@ -60,6 +61,8 @@
     "navbar": "Navbar",
     "skeleton": "Skeleton",
     "rating": "Rating",
+    "map": "Map",
+    "googleMaps": "Google Maps",
     "error": "Error",
     "error401": "401 Error",
     "error404": "404 Error",

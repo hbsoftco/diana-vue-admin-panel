@@ -124,6 +124,26 @@ describe('menuItem group label', () => {
   })
 })
 
+describe('menuItem disabled destination', () => {
+  it('renders a visible non-interactive placeholder without creating a broken link', async () => {
+    const wrapper = await mountMenuItem({
+      item: {
+        id: 'future-icons',
+        label: 'menu.icons',
+        icon: 'componentDropdown',
+        disabled: true,
+      },
+    })
+    const placeholder = wrapper.get('[aria-disabled="true"]')
+
+    expect(placeholder.text()).toBe('Icons')
+    expect(placeholder.element.tagName).toBe('SPAN')
+    expect(wrapper.find('a').exists()).toBe(false)
+    expect(wrapper.find('button').exists()).toBe(false)
+    wrapper.unmount()
+  })
+})
+
 describe('menuItem collapsed flyout', () => {
   it('overrides the popover surface with the sidebar background token', async () => {
     const wrapper = await mountMenuItem({ flyoutEnabled: true, isCollapsed: true })

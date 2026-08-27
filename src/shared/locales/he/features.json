@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "מפה בסיסית",
+        "loading": "מפת Google נטענת…",
+        "mapLabel": "מפת Google ממורכזת בטהרן",
+        "missingKeyTitle": "נדרש מפתח Google Maps API",
+        "missingKeyDescription": "הוסיפו את VITE_GOOGLE_MAPS_API_KEY לקובץ .env המקומי והפעילו מחדש את שרת הפיתוח.",
+        "loadErrorTitle": "לא ניתן לטעון את מפת Google",
+        "loadErrorDescription": "בדקו את מפתח ה-API, הגישה ל-Maps JavaScript API, הגדרות החיוב וחיבור הרשת.",
+        "retry": "ניסיון חוזר"
+      }
+    },
     "error": {
       "statusLabel": "שגיאה {code}",
       "backToHome": "חזרה לדף הבית",

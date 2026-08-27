@@ -9,7 +9,7 @@ This template should help get you started developing with Vue 3 in Vite.
 ## Recommended Browser Setup
 
 - Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
 - Firefox:
   - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
@@ -34,6 +34,18 @@ pnpm install
 ```sh
 pnpm dev
 ```
+
+### Google Maps
+
+Enable the Maps JavaScript API in Google Cloud, then add its browser API key to a local `.env`
+file (which must not be committed):
+
+```sh
+VITE_GOOGLE_MAPS_API_KEY=your_api_key
+```
+
+Restrict the key to the Maps JavaScript API and the HTTP referrers used by this application.
+Restart the development server after changing environment variables.
 
 ### Type-Check, Compile and Minify for Production
 

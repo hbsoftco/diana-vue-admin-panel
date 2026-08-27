@@ -1,5 +1,17 @@
 {
   "features": {
+    "mapsIcons": {
+      "googleMaps": {
+        "basicMap": "نقشه پایه",
+        "loading": "در حال بارگذاری نقشه گوگل…",
+        "mapLabel": "نقشه گوگل با مرکزیت تهران",
+        "missingKeyTitle": "کلید API نقشه گوگل لازم است",
+        "missingKeyDescription": "VITE_GOOGLE_MAPS_API_KEY را به فایل محلی .env اضافه کنید و سپس سرور توسعه را دوباره راه‌اندازی کنید.",
+        "loadErrorTitle": "نقشه گوگل بارگذاری نشد",
+        "loadErrorDescription": "کلید API، دسترسی Maps JavaScript API، تنظیمات صورت‌حساب و اتصال شبکه را بررسی کنید.",
+        "retry": "تلاش دوباره"
+      }
+    },
     "error": {
       "statusLabel": "خطای {code}",
       "backToHome": "بازگشت به خانه",

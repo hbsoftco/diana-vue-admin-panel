@@ -295,6 +295,18 @@ onBeforeUnmount(clearFlyoutCloseTimer)
       <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ displayLabel }}</span>
     </RouterLink>
 
+    <!-- Visible placeholder for a navigation destination that has not been implemented yet -->
+    <span
+      v-else-if="navigationItem.disabled"
+      class="cursor-not-allowed opacity-50"
+      :class="[classes.link, { 'justify-center': isCollapsed && level === 1 }]"
+      :title="isCollapsed && level === 1 ? displayLabel : ''"
+      aria-disabled="true"
+    >
+      <DiIcon :name="navigationItem.icon || 'circleOutline'" size="lg" />
+      <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ displayLabel }}</span>
+    </span>
+
     <!-- Recursive inline children, including the no-hover collapsed fallback -->
     <Transition
       name="collapse"

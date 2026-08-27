@@ -23,6 +23,7 @@ import FullscreenIcon from '~icons/material-symbols/fullscreen'
 import FullscreenExitIcon from '~icons/material-symbols/fullscreen-exit'
 import HomeOutlineRoundedIcon from '~icons/material-symbols/home-outline-rounded'
 import LogoutIcon from '~icons/material-symbols/logout'
+import MapOutlineIcon from '~icons/material-symbols/map-outline'
 import UserOutlineRoundedIcon from '~icons/material-symbols/person-outline-rounded'
 import ChevronDownIcon from '~icons/mdi/chevron-down'
 import ChevronLeftIcon from '~icons/mdi/chevron-left'
@@ -44,6 +45,7 @@ export const coreIconRegistry = {
   chevronRight: ChevronRightIcon,
   chevronDown: ChevronDownIcon,
   logout: LogoutIcon,
+  mapOutline: MapOutlineIcon,
   fullscreenExit: FullscreenExitIcon,
   fullscreen: FullscreenIcon,
   circle: CircleIcon,

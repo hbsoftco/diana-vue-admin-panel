@@ -165,6 +165,15 @@
         "title": "Skeleton"
       }
     },
+    "mapsIcons": {
+      "title": "Maps & Icons",
+      "map": {
+        "title": "Map"
+      },
+      "googleMaps": {
+        "title": "Google Maps"
+      }
+    },
     "error": {
       "title": "Error",
       "401": {

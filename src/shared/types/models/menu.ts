@@ -12,6 +12,7 @@ export type MenuNavigationItem = {
   label: string
   icon?: IconName
   route?: string
+  disabled?: boolean
   children?: MenuItem[]
 }
 
