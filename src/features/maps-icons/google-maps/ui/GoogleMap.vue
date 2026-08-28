@@ -6,91 +6,32 @@ import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiLoading from '@/shared/ui/base/DiLoading.vue'
 
-type Coordinates = {
-  lat: number
-  lng: number
-}
+import type { GoogleMapDemoType } from '../google-maps'
 
-type GoogleMapConstructor = new (
-  element: HTMLElement,
-  options: { center: Coordinates, zoom: number },
-) => unknown
+import { createGoogleMapDemo, loadGoogleMaps } from '../google-maps'
 
-type GoogleMapsWindow = Window & {
-  google?: {
-    maps: {
-      Map: GoogleMapConstructor
-    }
-  }
-}
-
-type Props = {
-  apiKey?: string
-  center: Coordinates
-  zoom?: number
-  mapLabel: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  apiKey: '',
-  zoom: 10,
-})
-
+type Props = { apiKey?: string, demo: GoogleMapDemoType, mapLabel: string }
+const props = withDefaults(defineProps<Props>(), { apiKey: '' })
 const { t } = useI18n()
 const mapElement = ref<HTMLElement>()
 const status = ref<'idle' | 'loading' | 'ready' | 'error'>('idle')
 let requestId = 0
 
-function loadGoogleMaps(apiKey: string) {
-  const googleMapsWindow = window as GoogleMapsWindow
-
-  if (googleMapsWindow.google?.maps.Map)
-    return Promise.resolve(googleMapsWindow.google.maps)
-
-  return new Promise<NonNullable<GoogleMapsWindow['google']>['maps']>((resolve, reject) => {
-    const callbackName = `__dianaGoogleMapsReady${Date.now()}`
-    const script = document.createElement('script')
-
-    Object.assign(googleMapsWindow, {
-      [callbackName]: () => {
-        Reflect.deleteProperty(googleMapsWindow, callbackName)
-        const maps = googleMapsWindow.google?.maps
-        if (maps)
-          resolve(maps)
-        else reject(new Error('Google Maps initialized without the maps library'))
-      },
-    })
-
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&callback=${callbackName}&loading=async`
-    script.async = true
-    script.onerror = () => {
-      Reflect.deleteProperty(googleMapsWindow, callbackName)
-      script.remove()
-      reject(new Error('Google Maps script failed to load'))
-    }
-    document.head.append(script)
-  })
-}
-
 async function initializeMap() {
-  if (!props.apiKey) {
+  if (!props.apiKey.trim()) {
     status.value = 'idle'
     return
   }
-
   const currentRequest = ++requestId
   status.value = 'loading'
-
   try {
-    const maps = await loadGoogleMaps(props.apiKey)
+    const maps = await loadGoogleMaps(props.apiKey.trim())
     if (currentRequest !== requestId)
       return
-
     status.value = 'ready'
     await nextTick()
-
     if (mapElement.value)
-      Reflect.construct(maps.Map, [mapElement.value, { center: props.center, zoom: props.zoom }])
+      createGoogleMapDemo(maps, mapElement.value, props.demo)
   }
   catch {
     if (currentRequest === requestId)
@@ -99,7 +40,6 @@ async function initializeMap() {
 }
 
 onMounted(initializeMap)
-
 onBeforeUnmount(() => {
   requestId++
   mapElement.value?.replaceChildren()
@@ -107,30 +47,28 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="relative min-h-96 w-full bg-base-200">
+  <div class="relative h-[18.75rem] w-full overflow-hidden bg-base-200">
     <div
       v-if="status === 'ready'"
       ref="mapElement"
-      class="h-96 w-full"
+      class="h-full w-full"
       role="region"
       :aria-label="mapLabel"
     />
-
     <div
       v-else-if="status === 'loading'"
-      class="flex min-h-96 flex-col items-center justify-center gap-3 text-base-content/70"
+      class="flex h-full flex-col items-center justify-center gap-3 text-base-content/70"
       role="status"
     >
       <DiLoading color="primary" size="lg" />
       <span class="text-sm">{{ t('features.mapsIcons.googleMaps.loading') }}</span>
     </div>
-
-    <div v-else class="flex min-h-96 items-center justify-center p-6">
+    <div v-else class="flex h-full items-center justify-center p-5">
       <DiAlert
         :variant="status === 'error' ? 'error' : 'info'"
         soft
         show-icon
-        custom-class="max-w-2xl"
+        custom-class="w-full"
         :title="
           t(
             status === 'error'
