@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import DiCard from '@/shared/ui/base/DiCard.vue'
+import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
+import { GOOGLE_MAP_DEMOS } from './google-maps'
 import GoogleMap from './ui/GoogleMap.vue'
 
 const { t } = useI18n()
@@ -10,18 +11,15 @@ const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-6">
-    <DiCard
-      :title="t('features.mapsIcons.googleMaps.basicMap')"
-      border
-      body-class="gap-0 p-0 overflow-hidden rounded-b-box"
+  <div class="grid grid-cols-1 items-start gap-6 xl:grid-cols-2">
+    <PreviewCodeCard
+      v-for="demo in GOOGLE_MAP_DEMOS"
+      :key="demo.id"
+      :title="t(demo.titleKey)"
+      :code="demo.code"
+      language="vue"
     >
-      <GoogleMap
-        :api-key="googleMapsApiKey"
-        :center="{ lat: 35.7219, lng: 51.3347 }"
-        :zoom="11"
-        :map-label="t('features.mapsIcons.googleMaps.mapLabel')"
-      />
-    </DiCard>
+      <GoogleMap :api-key="googleMapsApiKey" :demo="demo.id" :map-label="t(demo.labelKey)" />
+    </PreviewCodeCard>
   </div>
 </template>
