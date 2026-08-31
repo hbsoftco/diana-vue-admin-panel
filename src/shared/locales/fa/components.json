@@ -29,6 +29,9 @@
       "roleDescription": "اسلایدشو",
       "slideRoleDescription": "اسلاید"
     },
+    "leafletMaps": {
+      "label": "نقشه تعاملی"
+    },
     "drawer": {
       "toggle": "باز و بسته کردن دراور",
       "closeOverlay": "بستن پوشش دراور"

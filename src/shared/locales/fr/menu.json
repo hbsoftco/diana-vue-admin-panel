@@ -63,6 +63,7 @@
     "rating": "Évaluation",
     "map": "Carte",
     "googleMaps": "Google Maps",
+    "leafletMaps": "Cartes Leaflet",
     "error": "Erreur",
     "error401": "Erreur 401",
     "error404": "Erreur 404",

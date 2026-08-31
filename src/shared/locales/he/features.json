@@ -20,6 +20,26 @@
         "loadErrorTitle": "לא ניתן לטעון את מפת Google",
         "loadErrorDescription": "בדקו את מפתח ה-API, הגישה ל-Maps JavaScript API, הגדרות החיוב וחיבור הרשת.",
         "retry": "ניסיון חוזר"
+      },
+      "leafletMaps": {
+        "basicMap": "מפה בסיסית",
+        "basicMapLabel": "מפה בסיסית של לונדון",
+        "markers": "סמנים וחלונות קופצים",
+        "markersLabel": "מפת אתרי לונדון",
+        "customPopup": "חלון קופץ מותאם",
+        "popupLabel": "מפת פריז עם חלון עשיר",
+        "eiffelTower": "מגדל אייפל",
+        "markerId": "סמן",
+        "tileLayers": "שכבת מפה אחרת",
+        "tileLayerLabel": "מפה טופוגרפית של שווייץ",
+        "interactiveMap": "מפה אינטראקטיבית",
+        "interactiveMapLabel": "מפה לחיצה של ארצות הברית",
+        "clickedCoordinates": "קואורדינטות שנבחרו",
+        "clickInstruction": "לחצו על המפה כדי להציג קואורדינטות.",
+        "advancedMap": "סמנים דינמיים והתאמת גבולות",
+        "advancedMapLabel": "ערי אירופה עם גבולות אוטומטיים",
+        "markerCount": "{count} סמנים",
+        "addRome": "הוספת רומא"
       }
     },
     "error": {

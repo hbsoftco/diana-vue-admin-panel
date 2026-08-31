@@ -20,6 +20,26 @@
         "loadErrorTitle": "نقشه گوگل بارگذاری نشد",
         "loadErrorDescription": "کلید API، دسترسی Maps JavaScript API، تنظیمات صورت‌حساب و اتصال شبکه را بررسی کنید.",
         "retry": "تلاش دوباره"
+      },
+      "leafletMaps": {
+        "basicMap": "نقشه پایه",
+        "basicMapLabel": "نقشه پایه لندن",
+        "markers": "نشانگرها و پنجره‌ها",
+        "markersLabel": "نقشه دیدنی‌های لندن",
+        "customPopup": "پنجره سفارشی",
+        "popupLabel": "نقشه پاریس با پنجره غنی",
+        "eiffelTower": "برج ایفل",
+        "markerId": "نشانگر",
+        "tileLayers": "لایه نقشه متفاوت",
+        "tileLayerLabel": "نقشه توپوگرافی سوئیس",
+        "interactiveMap": "نقشه تعاملی",
+        "interactiveMapLabel": "نقشه قابل کلیک ایالات متحده",
+        "clickedCoordinates": "مختصات انتخاب‌شده",
+        "clickInstruction": "برای مشاهده مختصات روی نقشه کلیک کنید.",
+        "advancedMap": "نشانگرهای پویا و تنظیم محدوده",
+        "advancedMapLabel": "شهرهای اروپا با محدوده خودکار",
+        "markerCount": "{count} نشانگر",
+        "addRome": "افزودن رم"
       }
     },
     "error": {

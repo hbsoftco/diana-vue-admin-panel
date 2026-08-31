@@ -20,6 +20,26 @@
         "loadErrorTitle": "Google Maps konnte nicht geladen werden",
         "loadErrorDescription": "Prüfe API-Schlüssel, Maps JavaScript API-Zugriff, Abrechnung und Netzwerkverbindung.",
         "retry": "Erneut versuchen"
+      },
+      "leafletMaps": {
+        "basicMap": "Basiskarte",
+        "basicMapLabel": "Basiskarte von London",
+        "markers": "Markierungen und Popups",
+        "markersLabel": "Karte der Londoner Sehenswürdigkeiten",
+        "customPopup": "Benutzerdefiniertes Popup",
+        "popupLabel": "Paris-Karte mit erweitertem Popup",
+        "eiffelTower": "Eiffelturm",
+        "markerId": "Markierung",
+        "tileLayers": "Andere Kartenebene",
+        "tileLayerLabel": "Topografische Karte der Schweiz",
+        "interactiveMap": "Interaktive Karte",
+        "interactiveMapLabel": "Klickbare Karte der Vereinigten Staaten",
+        "clickedCoordinates": "Ausgewählte Koordinaten",
+        "clickInstruction": "Klicken Sie auf die Karte, um Koordinaten anzuzeigen.",
+        "advancedMap": "Dynamische Markierungen und Grenzen",
+        "advancedMapLabel": "Europäische Städte mit automatischen Grenzen",
+        "markerCount": "{count} Markierungen",
+        "addRome": "Rom hinzufügen"
       }
     },
     "error": {

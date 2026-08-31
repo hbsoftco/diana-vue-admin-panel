@@ -29,6 +29,9 @@
       "roleDescription": "carousel",
       "slideRoleDescription": "slide"
     },
+    "leafletMaps": {
+      "label": "Interactive map"
+    },
     "drawer": {
       "toggle": "Toggle drawer",
       "closeOverlay": "Close drawer overlay"

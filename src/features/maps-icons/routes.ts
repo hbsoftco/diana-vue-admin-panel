@@ -13,6 +13,18 @@ export const mapsIconsRoutes = {
       redirect: '/maps-icons/map/google-maps',
     },
     {
+      path: 'map/leaflet-maps',
+      component: () => import('@/pages/maps-icons/map/leaflet-maps.vue'),
+      meta: {
+        pageTitle: 'pages.mapsIcons.leafletMaps.title',
+        breadcrumb: [
+          { label: 'pages.mapsIcons.title', link: '/maps-icons' },
+          { label: 'pages.mapsIcons.map.title', link: '/maps-icons/map' },
+          { label: 'pages.mapsIcons.leafletMaps.title' },
+        ],
+      },
+    },
+    {
       path: 'map/google-maps',
       component: () => import('@/pages/maps-icons/map/google-maps.vue'),
       meta: {

@@ -29,6 +29,9 @@
       "roleDescription": "carrousel",
       "slideRoleDescription": "diapositive"
     },
+    "leafletMaps": {
+      "label": "Carte interactive"
+    },
     "drawer": {
       "toggle": "Ouvrir ou fermer le tiroir",
       "closeOverlay": "Fermer le fond du tiroir"

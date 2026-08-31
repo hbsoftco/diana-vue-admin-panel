@@ -29,6 +29,9 @@
       "roleDescription": "קרוסלה",
       "slideRoleDescription": "שקופית"
     },
+    "leafletMaps": {
+      "label": "מפה אינטראקטיבית"
+    },
     "drawer": {
       "toggle": "פתיחת או סגירת מגירה",
       "closeOverlay": "סגירת שכבת המגירה"

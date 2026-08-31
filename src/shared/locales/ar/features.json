@@ -20,6 +20,26 @@
         "loadErrorTitle": "تعذر تحميل خريطة Google",
         "loadErrorDescription": "تحقق من مفتاح API والوصول إلى Maps JavaScript API وإعدادات الفوترة واتصال الشبكة.",
         "retry": "إعادة المحاولة"
+      },
+      "leafletMaps": {
+        "basicMap": "خريطة أساسية",
+        "basicMapLabel": "خريطة لندن الأساسية",
+        "markers": "العلامات والنوافذ المنبثقة",
+        "markersLabel": "خريطة معالم لندن",
+        "customPopup": "نافذة منبثقة مخصصة",
+        "popupLabel": "خريطة باريس مع نافذة منبثقة غنية",
+        "eiffelTower": "برج إيفل",
+        "markerId": "العلامة",
+        "tileLayers": "طبقة خريطة مختلفة",
+        "tileLayerLabel": "خريطة طبوغرافية لسويسرا",
+        "interactiveMap": "خريطة تفاعلية",
+        "interactiveMapLabel": "خريطة تفاعلية للولايات المتحدة",
+        "clickedCoordinates": "الإحداثيات المحددة",
+        "clickInstruction": "انقر على الخريطة لعرض الإحداثيات.",
+        "advancedMap": "علامات ديناميكية وضبط الحدود",
+        "advancedMapLabel": "مدن أوروبية بحدود تلقائية",
+        "markerCount": "{count} علامات",
+        "addRome": "إضافة روما"
       }
     },
     "error": {

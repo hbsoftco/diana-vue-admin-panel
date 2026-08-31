@@ -29,6 +29,9 @@
       "roleDescription": "عرض شرائح",
       "slideRoleDescription": "شريحة"
     },
+    "leafletMaps": {
+      "label": "خريطة تفاعلية"
+    },
     "drawer": {
       "toggle": "تبديل الدرج",
       "closeOverlay": "إغلاق طبقة الدرج"
