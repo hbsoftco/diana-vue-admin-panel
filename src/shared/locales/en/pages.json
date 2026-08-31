@@ -172,6 +172,9 @@
       },
       "googleMaps": {
         "title": "Google Maps"
+      },
+      "leafletMaps": {
+        "title": "Leaflet Maps"
       }
     },
     "error": {

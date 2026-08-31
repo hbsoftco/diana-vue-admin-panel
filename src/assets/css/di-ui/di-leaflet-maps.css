@@ -1,0 +1,28 @@
+@import 'leaflet/dist/leaflet.css';
+
+.di-leaflet-maps .leaflet-control-layers,
+.di-leaflet-maps .leaflet-bar a,
+.di-leaflet-maps .leaflet-popup-content-wrapper,
+.di-leaflet-maps .leaflet-popup-tip {
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+}
+
+.di-leaflet-maps .leaflet-bar a,
+.di-leaflet-maps .leaflet-control-layers {
+  border-color: var(--color-base-300);
+}
+
+.di-leaflet-maps .leaflet-bar a:hover,
+.di-leaflet-maps .leaflet-bar a:focus-visible {
+  background: var(--color-base-200);
+}
+
+.di-leaflet-maps .leaflet-control-attribution {
+  background: color-mix(in oklab, var(--color-base-100) 85%, transparent);
+  color: var(--color-base-content);
+}
+
+.di-leaflet-maps .leaflet-control-attribution a {
+  color: var(--color-primary);
+}

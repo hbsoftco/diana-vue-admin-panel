@@ -118,6 +118,11 @@ export const menuItems: MenuItem[] = [
         label: 'menu.googleMaps',
         route: '/maps-icons/map/google-maps',
       },
+      {
+        id: 'leaflet-maps',
+        label: 'menu.leafletMaps',
+        route: '/maps-icons/map/leaflet-maps',
+      },
     ],
   },
   {

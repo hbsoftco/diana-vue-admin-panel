@@ -145,6 +145,7 @@
 /* Customize daysiui components */
 @import './di-ui/di-btn.css';
 @import './di-ui/di-draggable.css';
+@import './di-ui/di-leaflet-maps.css';
 
 @utility text-menu-prime {
   color: var(--color-menu-prime);

@@ -29,6 +29,9 @@
       "roleDescription": "Karussell",
       "slideRoleDescription": "Inhalt"
     },
+    "leafletMaps": {
+      "label": "Interaktive Karte"
+    },
     "drawer": {
       "toggle": "Drawer ein-/ausblenden",
       "closeOverlay": "Drawer schließen"

@@ -29,6 +29,9 @@
       "roleDescription": "carrusel",
       "slideRoleDescription": "diapositiva"
     },
+    "leafletMaps": {
+      "label": "Mapa interactivo"
+    },
     "drawer": {
       "toggle": "Alternar cajón",
       "closeOverlay": "Cerrar fondo del cajón"

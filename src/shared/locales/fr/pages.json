@@ -168,7 +168,8 @@
     "mapsIcons": {
       "title": "Cartes et icônes",
       "map": { "title": "Carte" },
-      "googleMaps": { "title": "Google Maps" }
+      "googleMaps": { "title": "Google Maps" },
+      "leafletMaps": { "title": "Cartes Leaflet" }
     },
     "error": {
       "title": "Erreur",

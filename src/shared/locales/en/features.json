@@ -20,6 +20,26 @@
         "loadErrorTitle": "Google Map could not be loaded",
         "loadErrorDescription": "Check the API key, Maps JavaScript API access, billing configuration, and network connection.",
         "retry": "Try again"
+      },
+      "leafletMaps": {
+        "basicMap": "Basic Map",
+        "basicMapLabel": "Basic map of London",
+        "markers": "Markers & Popups",
+        "markersLabel": "London landmarks map",
+        "customPopup": "Custom Popup",
+        "popupLabel": "Paris map with a rich popup",
+        "eiffelTower": "Eiffel Tower",
+        "markerId": "Marker",
+        "tileLayers": "Different Tile Layer",
+        "tileLayerLabel": "Topographic map of Switzerland",
+        "interactiveMap": "Interactive Map",
+        "interactiveMapLabel": "Clickable map of the United States",
+        "clickedCoordinates": "Clicked coordinates",
+        "clickInstruction": "Click the map to inspect coordinates.",
+        "advancedMap": "Dynamic Markers & Fit Bounds",
+        "advancedMapLabel": "European cities with automatic bounds",
+        "markerCount": "{count} markers",
+        "addRome": "Add Rome"
       }
     },
     "error": {

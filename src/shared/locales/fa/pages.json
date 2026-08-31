@@ -172,6 +172,9 @@
       },
       "googleMaps": {
         "title": "گوگل مپ"
+      },
+      "leafletMaps": {
+        "title": "نقشه‌های لیف‌لت"
       }
     },
     "error": {

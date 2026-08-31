@@ -63,6 +63,7 @@
     "rating": "דירוג",
     "map": "מפה",
     "googleMaps": "מפות Google",
+    "leafletMaps": "מפות Leaflet",
     "error": "שגיאה",
     "error401": "שגיאת 401",
     "error404": "שגיאת 404",

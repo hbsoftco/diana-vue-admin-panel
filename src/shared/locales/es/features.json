@@ -20,6 +20,26 @@
         "loadErrorTitle": "No se pudo cargar Google Maps",
         "loadErrorDescription": "Comprueba la clave de API, el acceso a Maps JavaScript API, la facturación y la conexión de red.",
         "retry": "Reintentar"
+      },
+      "leafletMaps": {
+        "basicMap": "Mapa básico",
+        "basicMapLabel": "Mapa básico de Londres",
+        "markers": "Marcadores y ventanas",
+        "markersLabel": "Mapa de lugares de Londres",
+        "customPopup": "Ventana personalizada",
+        "popupLabel": "Mapa de París con una ventana enriquecida",
+        "eiffelTower": "Torre Eiffel",
+        "markerId": "Marcador",
+        "tileLayers": "Capa diferente",
+        "tileLayerLabel": "Mapa topográfico de Suiza",
+        "interactiveMap": "Mapa interactivo",
+        "interactiveMapLabel": "Mapa interactivo de Estados Unidos",
+        "clickedCoordinates": "Coordenadas seleccionadas",
+        "clickInstruction": "Haz clic en el mapa para ver las coordenadas.",
+        "advancedMap": "Marcadores dinámicos y límites",
+        "advancedMapLabel": "Ciudades europeas con límites automáticos",
+        "markerCount": "{count} marcadores",
+        "addRome": "Añadir Roma"
       }
     },
     "error": {
