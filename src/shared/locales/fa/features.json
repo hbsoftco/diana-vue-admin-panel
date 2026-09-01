@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "خطای {code}",
-      "backToHome": "بازگشت به خانه",
       "401": {
         "heading": "شما مجاز به دسترسی نیستید",
         "description": "اجازه دسترسی به این صفحه را ندارید. با یک حساب مجاز وارد شوید یا به خانه بازگردید.",
@@ -59,7 +57,9 @@
         "heading": "مشکلی پیش آمد",
         "description": "سرور با مشکلی غیرمنتظره روبه‌رو شد. بعداً دوباره تلاش کنید یا به خانه بازگردید.",
         "illustrationAlt": "تصویر خطای داخلی سرور"
-      }
+      },
+      "statusLabel": "خطای {code}",
+      "backToHome": "بازگشت به خانه"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "در صفحات بزرگ همیشه نمایش داده می‌شود",
         "homepage": "صفحه اصلی",
         "settings": "تنظیمات"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "ورود",
+        "subtitle": "خوش آمدید! برای ادامه، اطلاعات خود را وارد کنید.",
+        "emailLabel": "ایمیل",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "گذرواژه",
+        "passwordPlaceholder": "گذرواژه خود را وارد کنید",
+        "showPassword": "نمایش گذرواژه",
+        "hidePassword": "پنهان کردن گذرواژه",
+        "rememberMe": "مرا به خاطر بسپار",
+        "forgotPassword": "گذرواژه را فراموش کرده‌اید؟",
+        "submit": "ورود",
+        "submitting": "در حال ورود…",
+        "noAccount": "حساب کاربری ندارید؟",
+        "signUp": "ثبت‌نام",
+        "brandTitle": "به دیانا خوش آمدید",
+        "brandSubtitle": "فضای کاری خود را با یک تجربه مدیریتی سریع و در دسترس مدیریت کنید.",
+        "brandArtworkLabel": "اثر گرافیکی انتزاعی برند دیانا",
+        "errors": {
+          "emailRequired": "ایمیل الزامی است.",
+          "emailInvalid": "یک نشانی ایمیل معتبر وارد کنید.",
+          "passwordRequired": "گذرواژه الزامی است."
+        }
       }
     }
   }

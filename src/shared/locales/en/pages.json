@@ -178,7 +178,6 @@
       }
     },
     "error": {
-      "title": "Error",
       "401": {
         "title": "401 Error"
       },
@@ -187,7 +186,8 @@
       },
       "500": {
         "title": "500 Error"
-      }
+      },
+      "title": "Error"
     },
     "utility": {
       "title": "Utility",
@@ -196,6 +196,18 @@
       },
       "colors": {
         "title": "Colors"
+      }
+    },
+    "auth": {
+      "title": "Authentication",
+      "signIn": {
+        "title": "Sign In",
+        "basic": {
+          "title": "Sign In Basic"
+        },
+        "cover": {
+          "title": "Sign In Cover"
+        }
       }
     }
   }

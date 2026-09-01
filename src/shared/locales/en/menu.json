@@ -70,6 +70,10 @@
     "error500": "500 Error",
     "utility": "Utility",
     "avatar": "Avatar",
-    "colors": "Colors"
+    "colors": "Colors",
+    "signInBasic": "Basic",
+    "signInCover": "Cover",
+    "signIn": "Sign In",
+    "authentication": "Authentication"
   }
 }

@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "Error {code}",
-      "backToHome": "Back to Home",
       "401": {
         "heading": "You are not authorized",
         "description": "You do not have permission to access this page. Please sign in with an authorized account or return home.",
@@ -59,7 +57,9 @@
         "heading": "Something went wrong",
         "description": "The server encountered an unexpected problem. Please try again later or return home.",
         "illustrationAlt": "Illustration of an internal server error"
-      }
+      },
+      "statusLabel": "Error {code}",
+      "backToHome": "Back to Home"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "Always visible on large screens",
         "homepage": "Home",
         "settings": "Settings"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "Sign in",
+        "subtitle": "Welcome back! Please enter your details to continue.",
+        "emailLabel": "Email",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot password?",
+        "submit": "Sign in",
+        "submitting": "Signing in…",
+        "noAccount": "Don’t have an account?",
+        "signUp": "Sign up",
+        "brandTitle": "Welcome to Diana",
+        "brandSubtitle": "Manage your workspace with a fast, accessible admin experience.",
+        "brandArtworkLabel": "Abstract Diana branding artwork",
+        "errors": {
+          "emailRequired": "Email is required.",
+          "emailInvalid": "Enter a valid email address.",
+          "passwordRequired": "Password is required."
+        }
       }
     }
   }

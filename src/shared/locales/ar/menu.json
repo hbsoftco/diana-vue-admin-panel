@@ -70,6 +70,10 @@
     "error500": "خطأ 500",
     "utility": "الأدوات",
     "avatar": "الصورة الرمزية",
-    "colors": "الألوان"
+    "colors": "الألوان",
+    "signInBasic": "أساسي",
+    "signInCover": "بغلاف",
+    "signIn": "تسجيل الدخول",
+    "authentication": "المصادقة"
   }
 }

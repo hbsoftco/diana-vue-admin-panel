@@ -167,12 +167,17 @@
     },
     "mapsIcons": {
       "title": "الخرائط والأيقونات",
-      "map": { "title": "الخريطة" },
-      "googleMaps": { "title": "خرائط Google" },
-      "leafletMaps": { "title": "خرائط Leaflet" }
+      "map": {
+        "title": "الخريطة"
+      },
+      "googleMaps": {
+        "title": "خرائط Google"
+      },
+      "leafletMaps": {
+        "title": "خرائط Leaflet"
+      }
     },
     "error": {
-      "title": "خطأ",
       "401": {
         "title": "خطأ 401"
       },
@@ -181,7 +186,8 @@
       },
       "500": {
         "title": "خطأ 500"
-      }
+      },
+      "title": "خطأ"
     },
     "utility": {
       "title": "الأدوات",
@@ -190,6 +196,18 @@
       },
       "colors": {
         "title": "الألوان"
+      }
+    },
+    "auth": {
+      "title": "المصادقة",
+      "signIn": {
+        "title": "تسجيل الدخول",
+        "basic": {
+          "title": "تسجيل الدخول الأساسي"
+        },
+        "cover": {
+          "title": "تسجيل الدخول بالغلاف"
+        }
       }
     }
   }

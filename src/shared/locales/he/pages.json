@@ -167,12 +167,17 @@
     },
     "mapsIcons": {
       "title": "מפות וסמלים",
-      "map": { "title": "מפה" },
-      "googleMaps": { "title": "מפות Google" },
-      "leafletMaps": { "title": "מפות Leaflet" }
+      "map": {
+        "title": "מפה"
+      },
+      "googleMaps": {
+        "title": "מפות Google"
+      },
+      "leafletMaps": {
+        "title": "מפות Leaflet"
+      }
     },
     "error": {
-      "title": "שגיאה",
       "401": {
         "title": "שגיאת 401"
       },
@@ -181,7 +186,8 @@
       },
       "500": {
         "title": "שגיאת 500"
-      }
+      },
+      "title": "שגיאה"
     },
     "utility": {
       "title": "כלים",
@@ -190,6 +196,18 @@
       },
       "colors": {
         "title": "צבעים"
+      }
+    },
+    "auth": {
+      "title": "אימות",
+      "signIn": {
+        "title": "התחברות",
+        "basic": {
+          "title": "התחברות בסיסית"
+        },
+        "cover": {
+          "title": "התחברות עם רקע"
+        }
       }
     }
   }

@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "Error {code}",
-      "backToHome": "Volver al inicio",
       "401": {
         "heading": "No tienes autorización",
         "description": "No tienes permiso para acceder a esta página. Inicia sesión con una cuenta autorizada o vuelve al inicio.",
@@ -59,7 +57,9 @@
         "heading": "Algo salió mal",
         "description": "El servidor encontró un problema inesperado. Inténtalo más tarde o vuelve al inicio.",
         "illustrationAlt": "Ilustración de un error interno del servidor"
-      }
+      },
+      "statusLabel": "Error {code}",
+      "backToHome": "Volver al inicio"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "Always visible on large screens",
         "homepage": "Home",
         "settings": "Settings"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "Iniciar sesión",
+        "subtitle": "¡Bienvenido de nuevo! Introduce tus datos para continuar.",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "{'tu@ejemplo.com'}",
+        "passwordLabel": "Contraseña",
+        "passwordPlaceholder": "Introduce tu contraseña",
+        "showPassword": "Mostrar contraseña",
+        "hidePassword": "Ocultar contraseña",
+        "rememberMe": "Recuérdame",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "submit": "Iniciar sesión",
+        "submitting": "Iniciando sesión…",
+        "noAccount": "¿No tienes una cuenta?",
+        "signUp": "Regístrate",
+        "brandTitle": "Bienvenido a Diana",
+        "brandSubtitle": "Gestiona tu espacio de trabajo con una experiencia de administración rápida y accesible.",
+        "brandArtworkLabel": "Ilustración abstracta de la marca Diana",
+        "errors": {
+          "emailRequired": "El correo electrónico es obligatorio.",
+          "emailInvalid": "Introduce una dirección de correo válida.",
+          "passwordRequired": "La contraseña es obligatoria."
+        }
       }
     }
   }

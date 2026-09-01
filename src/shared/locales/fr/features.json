@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "Erreur {code}",
-      "backToHome": "Retour à l’accueil",
       "401": {
         "heading": "Vous n’êtes pas autorisé",
         "description": "Vous n’avez pas l’autorisation d’accéder à cette page. Connectez-vous avec un compte autorisé ou revenez à l’accueil.",
@@ -59,7 +57,9 @@
         "heading": "Une erreur s’est produite",
         "description": "Le serveur a rencontré un problème inattendu. Réessayez plus tard ou revenez à l’accueil.",
         "illustrationAlt": "Illustration d’une erreur interne du serveur"
-      }
+      },
+      "statusLabel": "Erreur {code}",
+      "backToHome": "Retour à l’accueil"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "Always visible on large screens",
         "homepage": "Home",
         "settings": "Settings"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "Connexion",
+        "subtitle": "Ravi de vous revoir ! Veuillez saisir vos informations pour continuer.",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "{'vous@exemple.com'}",
+        "passwordLabel": "Mot de passe",
+        "passwordPlaceholder": "Saisissez votre mot de passe",
+        "showPassword": "Afficher le mot de passe",
+        "hidePassword": "Masquer le mot de passe",
+        "rememberMe": "Se souvenir de moi",
+        "forgotPassword": "Mot de passe oublié ?",
+        "submit": "Se connecter",
+        "submitting": "Connexion en cours…",
+        "noAccount": "Vous n’avez pas de compte ?",
+        "signUp": "S’inscrire",
+        "brandTitle": "Bienvenue sur Diana",
+        "brandSubtitle": "Gérez votre espace de travail avec une expérience d’administration rapide et accessible.",
+        "brandArtworkLabel": "Illustration abstraite de la marque Diana",
+        "errors": {
+          "emailRequired": "L’e-mail est obligatoire.",
+          "emailInvalid": "Saisissez une adresse e-mail valide.",
+          "passwordRequired": "Le mot de passe est obligatoire."
+        }
       }
     }
   }

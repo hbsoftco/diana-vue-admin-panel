@@ -167,12 +167,17 @@
     },
     "mapsIcons": {
       "title": "Cartes et icônes",
-      "map": { "title": "Carte" },
-      "googleMaps": { "title": "Google Maps" },
-      "leafletMaps": { "title": "Cartes Leaflet" }
+      "map": {
+        "title": "Carte"
+      },
+      "googleMaps": {
+        "title": "Google Maps"
+      },
+      "leafletMaps": {
+        "title": "Cartes Leaflet"
+      }
     },
     "error": {
-      "title": "Erreur",
       "401": {
         "title": "Erreur 401"
       },
@@ -181,7 +186,8 @@
       },
       "500": {
         "title": "Erreur 500"
-      }
+      },
+      "title": "Erreur"
     },
     "utility": {
       "title": "Utilitaires",
@@ -190,6 +196,18 @@
       },
       "colors": {
         "title": "Couleurs"
+      }
+    },
+    "auth": {
+      "title": "Authentification",
+      "signIn": {
+        "title": "Connexion",
+        "basic": {
+          "title": "Connexion simple"
+        },
+        "cover": {
+          "title": "Connexion pleine page"
+        }
       }
     }
   }
