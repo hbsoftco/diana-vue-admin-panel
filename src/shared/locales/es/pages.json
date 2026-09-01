@@ -167,12 +167,17 @@
     },
     "mapsIcons": {
       "title": "Mapas e iconos",
-      "map": { "title": "Mapa" },
-      "googleMaps": { "title": "Google Maps" },
-      "leafletMaps": { "title": "Mapas Leaflet" }
+      "map": {
+        "title": "Mapa"
+      },
+      "googleMaps": {
+        "title": "Google Maps"
+      },
+      "leafletMaps": {
+        "title": "Mapas Leaflet"
+      }
     },
     "error": {
-      "title": "Error",
       "401": {
         "title": "Error 401"
       },
@@ -181,7 +186,8 @@
       },
       "500": {
         "title": "Error 500"
-      }
+      },
+      "title": "Error"
     },
     "utility": {
       "title": "Utilidades",
@@ -190,6 +196,18 @@
       },
       "colors": {
         "title": "Colores"
+      }
+    },
+    "auth": {
+      "title": "Autenticación",
+      "signIn": {
+        "title": "Iniciar sesión",
+        "basic": {
+          "title": "Inicio de sesión básico"
+        },
+        "cover": {
+          "title": "Inicio de sesión con portada"
+        }
       }
     }
   }

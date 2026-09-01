@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import { advancedUiRoutes } from '@/features/advanced-ui/routes'
+import { authRoutes } from '@/features/auth/routes'
 import { dashboardRoutes } from '@/features/dashboards/routes'
 import { errorRoutes } from '@/features/error/routes'
 import { formRoutes } from '@/features/forms/routes'
@@ -15,6 +16,7 @@ const router = createRouter({
       path: '/',
       redirect: '/dashboards/crm',
     },
+    authRoutes,
     dashboardRoutes,
     errorRoutes,
     formRoutes,

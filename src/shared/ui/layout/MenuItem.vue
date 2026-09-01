@@ -291,7 +291,11 @@ onBeforeUnmount(clearFlyoutCloseTimer)
       :title="isCollapsed && level === 1 ? displayLabel : ''"
       @click="handleNavigate"
     >
-      <DiIcon :name="getIconName()" size="5px" :color="isActive() ? 'white' : 'default'" />
+      <DiIcon
+        :name="navigationItem.icon || getIconName()"
+        :size="navigationItem.icon ? 'sm' : '5px'"
+        :color="isActive() ? 'white' : 'default'"
+      />
       <span v-if="!isCollapsed || level > 1" :class="classes.text">{{ displayLabel }}</span>
     </RouterLink>
 

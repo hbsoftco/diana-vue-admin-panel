@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "שגיאה {code}",
-      "backToHome": "חזרה לדף הבית",
       "401": {
         "heading": "אין לך הרשאה",
         "description": "אין לך הרשאה לגשת לדף זה. יש להתחבר עם חשבון מורשה או לחזור לדף הבית.",
@@ -59,7 +57,9 @@
         "heading": "משהו השתבש",
         "description": "השרת נתקל בבעיה בלתי צפויה. נסו שוב מאוחר יותר או חזרו לדף הבית.",
         "illustrationAlt": "איור של שגיאת שרת פנימית"
-      }
+      },
+      "statusLabel": "שגיאה {code}",
+      "backToHome": "חזרה לדף הבית"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "Always visible on large screens",
         "homepage": "Home",
         "settings": "Settings"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "התחברות",
+        "subtitle": "טוב לראותך שוב! נא להזין את הפרטים כדי להמשיך.",
+        "emailLabel": "דוא\"ל",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "סיסמה",
+        "passwordPlaceholder": "הזינו את הסיסמה",
+        "showPassword": "הצגת סיסמה",
+        "hidePassword": "הסתרת סיסמה",
+        "rememberMe": "זכור אותי",
+        "forgotPassword": "שכחת סיסמה?",
+        "submit": "התחברות",
+        "submitting": "מתחבר…",
+        "noAccount": "אין לך חשבון?",
+        "signUp": "הרשמה",
+        "brandTitle": "ברוכים הבאים ל‑Diana",
+        "brandSubtitle": "נהלו את סביבת העבודה שלכם בחוויית ניהול מהירה ונגישה.",
+        "brandArtworkLabel": "יצירת מיתוג מופשטת של Diana",
+        "errors": {
+          "emailRequired": "יש להזין דוא\"ל.",
+          "emailInvalid": "יש להזין כתובת דוא\"ל תקינה.",
+          "passwordRequired": "יש להזין סיסמה."
+        }
       }
     }
   }

@@ -43,8 +43,6 @@
       }
     },
     "error": {
-      "statusLabel": "خطأ {code}",
-      "backToHome": "العودة إلى الصفحة الرئيسية",
       "401": {
         "heading": "غير مصرح لك بالدخول",
         "description": "ليس لديك إذن للوصول إلى هذه الصفحة. سجّل الدخول بحساب مصرح أو عد إلى الصفحة الرئيسية.",
@@ -59,7 +57,9 @@
         "heading": "حدث خطأ ما",
         "description": "واجه الخادم مشكلة غير متوقعة. حاول مرة أخرى لاحقاً أو عد إلى الصفحة الرئيسية.",
         "illustrationAlt": "رسم توضيحي لخطأ داخلي في الخادم"
-      }
+      },
+      "statusLabel": "خطأ {code}",
+      "backToHome": "العودة إلى الصفحة الرئيسية"
     },
     "utility": {
       "avatar": {
@@ -1253,6 +1253,32 @@
         "responsiveHint": "Always visible on large screens",
         "homepage": "Home",
         "settings": "Settings"
+      }
+    },
+    "auth": {
+      "signIn": {
+        "title": "تسجيل الدخول",
+        "subtitle": "مرحبًا بعودتك! يرجى إدخال بياناتك للمتابعة.",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "كلمة المرور",
+        "passwordPlaceholder": "أدخل كلمة المرور",
+        "showPassword": "إظهار كلمة المرور",
+        "hidePassword": "إخفاء كلمة المرور",
+        "rememberMe": "تذكرني",
+        "forgotPassword": "هل نسيت كلمة المرور؟",
+        "submit": "تسجيل الدخول",
+        "submitting": "جارٍ تسجيل الدخول…",
+        "noAccount": "ليس لديك حساب؟",
+        "signUp": "إنشاء حساب",
+        "brandTitle": "مرحبًا بك في ديانا",
+        "brandSubtitle": "أدر مساحة عملك بتجربة إدارة سريعة وسهلة الوصول.",
+        "brandArtworkLabel": "عمل فني تجريدي لعلامة ديانا",
+        "errors": {
+          "emailRequired": "البريد الإلكتروني مطلوب.",
+          "emailInvalid": "أدخل عنوان بريد إلكتروني صالحًا.",
+          "passwordRequired": "كلمة المرور مطلوبة."
+        }
       }
     }
   }

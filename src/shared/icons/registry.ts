@@ -19,6 +19,7 @@ import BellIcon from '~icons/iconoir/bell-notification'
 import CheckIcon from '~icons/material-symbols/check'
 import CircleIcon from '~icons/material-symbols/circle'
 import CircleOutlineIcon from '~icons/material-symbols/circle-outline'
+import FingerprintIcon from '~icons/material-symbols/fingerprint'
 import FullscreenIcon from '~icons/material-symbols/fullscreen'
 import FullscreenExitIcon from '~icons/material-symbols/fullscreen-exit'
 import HomeOutlineRoundedIcon from '~icons/material-symbols/home-outline-rounded'
@@ -31,7 +32,16 @@ import ChevronRightIcon from '~icons/mdi/chevron-right'
 import CloseIcon from '~icons/mingcute/close-line'
 import MedalLineIcon from '~icons/ri/medal-line'
 import HeartBoldIcon from '~icons/solar/heart-bold'
+import AdjustmentsHorizontalIcon from '~icons/tabler/adjustments-horizontal'
+import ArrowsHorizontalIcon from '~icons/tabler/arrows-horizontal'
+import CheckboxIcon from '~icons/tabler/checkbox'
+import ColorPickerIcon from '~icons/tabler/color-picker'
+import CursorTextIcon from '~icons/tabler/cursor-text'
+import FileUploadIcon from '~icons/tabler/file-upload'
+import LayoutAlignMiddleIcon from '~icons/tabler/layout-align-middle'
+import LayoutColumnsIcon from '~icons/tabler/layout-columns'
 import MoonIcon from '~icons/tabler/moon'
+import SelectIcon from '~icons/tabler/select'
 import SunIcon from '~icons/tabler/sun'
 import ComponentDropdownIcon from '~icons/tdesign/component-dropdown'
 
@@ -52,6 +62,7 @@ export const coreIconRegistry = {
   circleOutline: CircleOutlineIcon,
   homeOutlineRounded: HomeOutlineRoundedIcon,
   userOutlineRounded: UserOutlineRoundedIcon,
+  fingerprint: FingerprintIcon,
   lightCheck: CheckIcon,
   heart: HeartIcon,
   star: StarIcon,
@@ -74,6 +85,16 @@ export const coreIconRegistry = {
   form48regular: FormIcon,
   uploadCloud: CloudArrowUpIcon,
   fileDocument: DocumentIcon,
+  // Sidebar submenu icons
+  layoutCentered: LayoutAlignMiddleIcon,
+  layoutSplit: LayoutColumnsIcon,
+  cursorText: CursorTextIcon,
+  checkbox: CheckboxIcon,
+  adjustmentsHorizontal: AdjustmentsHorizontalIcon,
+  arrowsHorizontal: ArrowsHorizontalIcon,
+  selectDropdown: SelectIcon,
+  fileUpload: FileUploadIcon,
+  colorPicker: ColorPickerIcon,
 } as const
 
 // Lazy icons are limited to feature-specific screens, showcases, and playground examples.
@@ -85,6 +106,10 @@ export const lazyIconRegistry = {
   magnify: () => import('~icons/mdi/magnify'),
   phone: () => import('~icons/mdi/phone'),
   chevronUp: () => import('~icons/mdi/chevron-up'),
+  eye: () => import('~icons/mdi/eye-outline'),
+  eyeOff: () => import('~icons/mdi/eye-off-outline'),
+  emailOutline: () => import('~icons/mdi/email-outline'),
+  lockOutline: () => import('~icons/mdi/lock-outline'),
   // Material Symbols
   settingsOutlineRounded: () => import('~icons/material-symbols/settings-outline-rounded'),
   folderOutlineRounded: () => import('~icons/material-symbols/folder-outline-rounded'),

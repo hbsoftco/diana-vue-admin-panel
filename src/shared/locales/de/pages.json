@@ -167,9 +167,15 @@
     },
     "mapsIcons": {
       "title": "Karten und Symbole",
-      "map": { "title": "Karte" },
-      "googleMaps": { "title": "Google Maps" },
-      "leafletMaps": { "title": "Leaflet-Karten" }
+      "map": {
+        "title": "Karte"
+      },
+      "googleMaps": {
+        "title": "Google Maps"
+      },
+      "leafletMaps": {
+        "title": "Leaflet-Karten"
+      }
     },
     "error": {
       "401": {
@@ -190,6 +196,18 @@
       },
       "colors": {
         "title": "Farben"
+      }
+    },
+    "auth": {
+      "title": "Authentifizierung",
+      "signIn": {
+        "title": "Anmelden",
+        "basic": {
+          "title": "Basis-Anmeldung"
+        },
+        "cover": {
+          "title": "Anmeldung mit Titelbild"
+        }
       }
     }
   }

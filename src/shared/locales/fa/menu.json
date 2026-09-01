@@ -70,6 +70,10 @@
     "error500": "خطای ۵۰۰",
     "utility": "ابزارها",
     "avatar": "آواتار",
-    "colors": "رنگ‌ها"
+    "colors": "رنگ‌ها",
+    "signInBasic": "پایه",
+    "signInCover": "تمام‌صفحه",
+    "signIn": "ورود",
+    "authentication": "احراز هویت"
   }
 }

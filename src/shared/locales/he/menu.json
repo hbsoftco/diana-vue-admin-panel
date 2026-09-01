@@ -70,6 +70,10 @@
     "error500": "שגיאת 500",
     "utility": "כלים",
     "avatar": "אווטאר",
-    "colors": "צבעים"
+    "colors": "צבעים",
+    "signInBasic": "בסיסי",
+    "signInCover": "עם רקע",
+    "signIn": "התחברות",
+    "authentication": "אימות"
   }
 }

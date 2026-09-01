@@ -64,27 +64,46 @@ export const menuItems: MenuItem[] = [
         id: 'form-elements',
         label: 'menu.formElements',
         children: [
-          { id: 'inputs', label: 'menu.inputs', route: '/forms/form-elements/inputs' },
+          {
+            id: 'inputs',
+            label: 'menu.inputs',
+            icon: 'cursorText',
+            route: '/forms/form-elements/inputs',
+          },
           {
             id: 'checks-radios',
             label: 'menu.checksRadios',
+            icon: 'checkbox',
             route: '/forms/form-elements/checks-radios',
           },
-          { id: 'range', label: 'menu.range', route: '/forms/form-elements/range' },
+          {
+            id: 'range',
+            label: 'menu.range',
+            icon: 'adjustmentsHorizontal',
+            route: '/forms/form-elements/range',
+          },
           {
             id: 'range-slider',
             label: 'menu.rangeSlider',
+            icon: 'arrowsHorizontal',
             route: '/forms/form-elements/range-slider',
           },
-          { id: 'select', label: 'menu.select', route: '/forms/form-elements/select' },
+          {
+            id: 'select',
+            label: 'menu.select',
+            icon: 'selectDropdown',
+            route: '/forms/form-elements/select',
+          },
           {
             id: 'file-upload',
             label: 'menu.fileUpload',
+            icon: 'fileUpload',
             route: '/forms/form-elements/file-upload',
           },
           {
             id: 'color-picker',
             label: 'menu.colorPicker',
+            icon: 'colorPicker',
             route: '/forms/form-elements/color-picker',
           },
         ],
@@ -149,6 +168,31 @@ export const menuItems: MenuItem[] = [
     children: [
       { id: 'avatar', label: 'menu.avatar', route: '/utility/avatar' },
       { id: 'colors', label: 'menu.colors', route: '/utility/colors' },
+    ],
+  },
+  {
+    id: 'authentication',
+    label: 'menu.authentication',
+    icon: 'fingerprint',
+    children: [
+      {
+        id: 'sign-in',
+        label: 'menu.signIn',
+        children: [
+          {
+            id: 'sign-in-basic',
+            label: 'menu.signInBasic',
+            icon: 'layoutCentered',
+            route: '/auth/sign-in/basic',
+          },
+          {
+            id: 'sign-in-cover',
+            label: 'menu.signInCover',
+            icon: 'layoutSplit',
+            route: '/auth/sign-in/cover',
+          },
+        ],
+      },
     ],
   },
 ]

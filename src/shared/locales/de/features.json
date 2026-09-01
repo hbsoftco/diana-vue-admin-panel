@@ -1254,6 +1254,32 @@
         "homepage": "Heim",
         "settings": "Einstellungen"
       }
+    },
+    "auth": {
+      "signIn": {
+        "title": "Anmelden",
+        "subtitle": "Willkommen zurück! Bitte gib deine Daten ein, um fortzufahren.",
+        "emailLabel": "E-Mail",
+        "emailPlaceholder": "{'du@beispiel.com'}",
+        "passwordLabel": "Passwort",
+        "passwordPlaceholder": "Gib dein Passwort ein",
+        "showPassword": "Passwort anzeigen",
+        "hidePassword": "Passwort verbergen",
+        "rememberMe": "Angemeldet bleiben",
+        "forgotPassword": "Passwort vergessen?",
+        "submit": "Anmelden",
+        "submitting": "Anmeldung läuft…",
+        "noAccount": "Noch kein Konto?",
+        "signUp": "Registrieren",
+        "brandTitle": "Willkommen bei Diana",
+        "brandSubtitle": "Verwalte deinen Arbeitsbereich mit einer schnellen, barrierefreien Admin-Erfahrung.",
+        "brandArtworkLabel": "Abstrakte Diana-Markengrafik",
+        "errors": {
+          "emailRequired": "E-Mail ist erforderlich.",
+          "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
+          "passwordRequired": "Passwort ist erforderlich."
+        }
+      }
     }
   }
 }
