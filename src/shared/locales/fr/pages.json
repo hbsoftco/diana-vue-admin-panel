@@ -208,6 +208,15 @@
         "cover": {
           "title": "Connexion pleine page"
         }
+      },
+      "signUp": {
+        "title": "S'inscrire",
+        "basic": {
+          "title": "Inscription simple"
+        },
+        "cover": {
+          "title": "Inscription pleine page"
+        }
       }
     }
   }

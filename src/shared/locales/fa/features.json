@@ -1279,6 +1279,38 @@
           "emailInvalid": "یک نشانی ایمیل معتبر وارد کنید.",
           "passwordRequired": "گذرواژه الزامی است."
         }
+      },
+      "signUp": {
+        "title": "ایجاد حساب کاربری",
+        "subtitle": "در چند ثانیه ثبت‌نام کنید و فضای کاری خود را مدیریت کنید.",
+        "fullNameLabel": "نام و نام خانوادگی",
+        "fullNamePlaceholder": "نام و نام خانوادگی خود را وارد کنید",
+        "emailLabel": "ایمیل",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "گذرواژه",
+        "passwordPlaceholder": "یک گذرواژه بسازید",
+        "confirmPasswordLabel": "تکرار گذرواژه",
+        "confirmPasswordPlaceholder": "گذرواژه را دوباره وارد کنید",
+        "showPassword": "نمایش گذرواژه",
+        "hidePassword": "پنهان کردن گذرواژه",
+        "agreeToTerms": "با قوانین و مقررات موافقم",
+        "submit": "ثبت‌نام",
+        "submitting": "در حال ایجاد حساب…",
+        "haveAccount": "قبلاً حساب کاربری ساخته‌اید؟",
+        "signIn": "ورود",
+        "brandTitle": "به دیانا بپیوندید",
+        "brandSubtitle": "برای مدیریت فضای کاری خود با تجربه‌ای سریع و در دسترس، یک حساب کاربری بسازید.",
+        "brandArtworkLabel": "اثر گرافیکی انتزاعی برند دیانا",
+        "errors": {
+          "fullNameRequired": "نام و نام خانوادگی الزامی است.",
+          "emailRequired": "ایمیل الزامی است.",
+          "emailInvalid": "یک نشانی ایمیل معتبر وارد کنید.",
+          "passwordRequired": "گذرواژه الزامی است.",
+          "passwordTooShort": "گذرواژه باید حداقل ۸ نویسه باشد.",
+          "confirmPasswordRequired": "لطفاً گذرواژه را تکرار کنید.",
+          "passwordMismatch": "گذرواژه‌ها با هم مطابقت ندارند.",
+          "termsRequired": "باید با قوانین و مقررات موافقت کنید."
+        }
       }
     }
   }

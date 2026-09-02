@@ -3,6 +3,14 @@ import { useI18n } from 'vue-i18n'
 
 import logoUrl from '@/assets/images/logo.svg'
 
+type Props = {
+  title?: string
+  subtitle?: string
+  artworkLabel?: string
+}
+
+defineProps<Props>()
+
 const { t } = useI18n()
 </script>
 
@@ -30,15 +38,15 @@ const { t } = useI18n()
 
     <div class="relative max-w-md">
       <p class="text-3xl font-bold leading-tight xl:text-4xl">
-        {{ t('features.auth.signIn.brandTitle') }}
+        {{ title ?? t('features.auth.signIn.brandTitle') }}
       </p>
       <p class="mt-4 text-base text-primary-content/80">
-        {{ t('features.auth.signIn.brandSubtitle') }}
+        {{ subtitle ?? t('features.auth.signIn.brandSubtitle') }}
       </p>
     </div>
 
     <p class="relative text-sm text-primary-content/70">
-      {{ t('features.auth.signIn.brandArtworkLabel') }}
+      {{ artworkLabel ?? t('features.auth.signIn.brandArtworkLabel') }}
     </p>
   </section>
 </template>

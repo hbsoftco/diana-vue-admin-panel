@@ -193,6 +193,24 @@ export const menuItems: MenuItem[] = [
           },
         ],
       },
+      {
+        id: 'sign-up',
+        label: 'menu.signUp',
+        children: [
+          {
+            id: 'sign-up-basic',
+            label: 'menu.signUpBasic',
+            icon: 'layoutCentered',
+            route: '/auth/sign-up/basic',
+          },
+          {
+            id: 'sign-up-cover',
+            label: 'menu.signUpCover',
+            icon: 'layoutSplit',
+            route: '/auth/sign-up/cover',
+          },
+        ],
+      },
     ],
   },
 ]

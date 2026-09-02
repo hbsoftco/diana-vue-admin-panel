@@ -74,6 +74,9 @@
     "signInBasic": "أساسي",
     "signInCover": "بغلاف",
     "signIn": "تسجيل الدخول",
+    "signUpBasic": "أساسي",
+    "signUpCover": "بغلاف",
+    "signUp": "إنشاء حساب",
     "authentication": "المصادقة"
   }
 }

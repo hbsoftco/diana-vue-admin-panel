@@ -208,6 +208,15 @@
         "cover": {
           "title": "Sign In Cover"
         }
+      },
+      "signUp": {
+        "title": "Sign Up",
+        "basic": {
+          "title": "Sign Up Basic"
+        },
+        "cover": {
+          "title": "Sign Up Cover"
+        }
       }
     }
   }

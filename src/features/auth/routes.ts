@@ -26,5 +26,23 @@ export const authRoutes = {
         pageTitle: 'pages.auth.signIn.cover.title',
       },
     },
+    {
+      path: 'sign-up',
+      redirect: '/auth/sign-up/basic',
+    },
+    {
+      path: 'sign-up/basic',
+      component: () => import('@/pages/auth/sign-up/basic.vue'),
+      meta: {
+        pageTitle: 'pages.auth.signUp.basic.title',
+      },
+    },
+    {
+      path: 'sign-up/cover',
+      component: () => import('@/pages/auth/sign-up/cover.vue'),
+      meta: {
+        pageTitle: 'pages.auth.signUp.cover.title',
+      },
+    },
   ],
 }

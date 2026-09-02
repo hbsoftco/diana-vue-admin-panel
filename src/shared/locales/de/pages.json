@@ -208,6 +208,15 @@
         "cover": {
           "title": "Anmeldung mit Titelbild"
         }
+      },
+      "signUp": {
+        "title": "Registrieren",
+        "basic": {
+          "title": "Registrierung Basis"
+        },
+        "cover": {
+          "title": "Registrierung mit Titelbild"
+        }
       }
     }
   }

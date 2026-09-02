@@ -74,6 +74,9 @@
     "signInBasic": "Simple",
     "signInCover": "Pleine page",
     "signIn": "Connexion",
+    "signUpBasic": "Simple",
+    "signUpCover": "Pleine page",
+    "signUp": "S'inscrire",
     "authentication": "Authentification"
   }
 }
