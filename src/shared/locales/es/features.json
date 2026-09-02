@@ -1279,6 +1279,38 @@
           "emailInvalid": "Introduce una dirección de correo válida.",
           "passwordRequired": "La contraseña es obligatoria."
         }
+      },
+      "signUp": {
+        "title": "Crear cuenta",
+        "subtitle": "Regístrate en segundos y empieza a gestionar tu espacio de trabajo.",
+        "fullNameLabel": "Nombre completo",
+        "fullNamePlaceholder": "Introduce tu nombre completo",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "{'tu@ejemplo.com'}",
+        "passwordLabel": "Contraseña",
+        "passwordPlaceholder": "Crea una contraseña",
+        "confirmPasswordLabel": "Confirmar contraseña",
+        "confirmPasswordPlaceholder": "Vuelve a introducir tu contraseña",
+        "showPassword": "Mostrar contraseña",
+        "hidePassword": "Ocultar contraseña",
+        "agreeToTerms": "Acepto los Términos y Condiciones",
+        "submit": "Registrarse",
+        "submitting": "Creando cuenta…",
+        "haveAccount": "¿Ya tienes una cuenta?",
+        "signIn": "Iniciar sesión",
+        "brandTitle": "Únete a Diana",
+        "brandSubtitle": "Crea una cuenta para gestionar tu espacio de trabajo con una experiencia de administración rápida y accesible.",
+        "brandArtworkLabel": "Ilustración abstracta de la marca Diana",
+        "errors": {
+          "fullNameRequired": "El nombre completo es obligatorio.",
+          "emailRequired": "El correo electrónico es obligatorio.",
+          "emailInvalid": "Introduce una dirección de correo válida.",
+          "passwordRequired": "La contraseña es obligatoria.",
+          "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+          "confirmPasswordRequired": "Confirma tu contraseña.",
+          "passwordMismatch": "Las contraseñas no coinciden.",
+          "termsRequired": "Debes aceptar los Términos y Condiciones."
+        }
       }
     }
   }

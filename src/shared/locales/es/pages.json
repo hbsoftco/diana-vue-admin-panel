@@ -208,6 +208,15 @@
         "cover": {
           "title": "Inicio de sesión con portada"
         }
+      },
+      "signUp": {
+        "title": "Registrarse",
+        "basic": {
+          "title": "Registro básico"
+        },
+        "cover": {
+          "title": "Registro con portada"
+        }
       }
     }
   }

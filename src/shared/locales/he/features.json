@@ -1279,6 +1279,38 @@
           "emailInvalid": "יש להזין כתובת דוא\"ל תקינה.",
           "passwordRequired": "יש להזין סיסמה."
         }
+      },
+      "signUp": {
+        "title": "יצירת חשבון",
+        "subtitle": "הירשמו תוך שניות והתחילו לנהל את סביבת העבודה שלכם.",
+        "fullNameLabel": "שם מלא",
+        "fullNamePlaceholder": "הזינו את שמכם המלא",
+        "emailLabel": "דוא\"ל",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "סיסמה",
+        "passwordPlaceholder": "צרו סיסמה",
+        "confirmPasswordLabel": "אימות סיסמה",
+        "confirmPasswordPlaceholder": "הזינו את הסיסמה שוב",
+        "showPassword": "הצגת סיסמה",
+        "hidePassword": "הסתרת סיסמה",
+        "agreeToTerms": "אני מסכים/ה לתנאים ולהגבלות",
+        "submit": "הרשמה",
+        "submitting": "יוצר חשבון…",
+        "haveAccount": "כבר יש לך חשבון?",
+        "signIn": "התחברות",
+        "brandTitle": "הצטרפו ל‑Diana",
+        "brandSubtitle": "צרו חשבון כדי לנהל את סביבת העבודה שלכם בחוויית ניהול מהירה ונגישה.",
+        "brandArtworkLabel": "יצירת מיתוג מופשטת של Diana",
+        "errors": {
+          "fullNameRequired": "יש להזין שם מלא.",
+          "emailRequired": "יש להזין דוא\"ל.",
+          "emailInvalid": "יש להזין כתובת דוא\"ל תקינה.",
+          "passwordRequired": "יש להזין סיסמה.",
+          "passwordTooShort": "הסיסמה חייבת לכלול לפחות 8 תווים.",
+          "confirmPasswordRequired": "יש לאמת את הסיסמה.",
+          "passwordMismatch": "הסיסמאות אינן תואמות.",
+          "termsRequired": "עליך להסכים לתנאים ולהגבלות."
+        }
       }
     }
   }

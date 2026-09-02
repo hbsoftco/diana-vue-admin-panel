@@ -74,6 +74,9 @@
     "signInBasic": "Básico",
     "signInCover": "Con portada",
     "signIn": "Iniciar sesión",
+    "signUpBasic": "Básico",
+    "signUpCover": "Con portada",
+    "signUp": "Registrarse",
     "authentication": "Autenticación"
   }
 }

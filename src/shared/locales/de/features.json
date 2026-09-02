@@ -1279,6 +1279,38 @@
           "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
           "passwordRequired": "Passwort ist erforderlich."
         }
+      },
+      "signUp": {
+        "title": "Konto erstellen",
+        "subtitle": "Registriere dich in wenigen Sekunden und verwalte deinen Arbeitsbereich.",
+        "fullNameLabel": "Vollständiger Name",
+        "fullNamePlaceholder": "Gib deinen vollständigen Namen ein",
+        "emailLabel": "E-Mail",
+        "emailPlaceholder": "{'du@beispiel.com'}",
+        "passwordLabel": "Passwort",
+        "passwordPlaceholder": "Erstelle ein Passwort",
+        "confirmPasswordLabel": "Passwort bestätigen",
+        "confirmPasswordPlaceholder": "Passwort erneut eingeben",
+        "showPassword": "Passwort anzeigen",
+        "hidePassword": "Passwort verbergen",
+        "agreeToTerms": "Ich stimme den Allgemeinen Geschäftsbedingungen zu",
+        "submit": "Registrieren",
+        "submitting": "Konto wird erstellt…",
+        "haveAccount": "Du hast bereits ein Konto?",
+        "signIn": "Anmelden",
+        "brandTitle": "Werde Teil von Diana",
+        "brandSubtitle": "Erstelle ein Konto, um deinen Arbeitsbereich mit einer schnellen, barrierefreien Admin-Erfahrung zu verwalten.",
+        "brandArtworkLabel": "Abstrakte Diana-Markengrafik",
+        "errors": {
+          "fullNameRequired": "Vollständiger Name ist erforderlich.",
+          "emailRequired": "E-Mail ist erforderlich.",
+          "emailInvalid": "Gib eine gültige E-Mail-Adresse ein.",
+          "passwordRequired": "Passwort ist erforderlich.",
+          "passwordTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+          "confirmPasswordRequired": "Bitte bestätige dein Passwort.",
+          "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+          "termsRequired": "Du musst den Allgemeinen Geschäftsbedingungen zustimmen."
+        }
       }
     }
   }

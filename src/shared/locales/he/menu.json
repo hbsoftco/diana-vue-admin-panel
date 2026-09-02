@@ -74,6 +74,9 @@
     "signInBasic": "בסיסי",
     "signInCover": "עם רקע",
     "signIn": "התחברות",
+    "signUpBasic": "בסיסי",
+    "signUpCover": "עם רקע",
+    "signUp": "הרשמה",
     "authentication": "אימות"
   }
 }

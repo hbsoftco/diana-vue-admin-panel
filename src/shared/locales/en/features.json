@@ -1279,6 +1279,38 @@
           "emailInvalid": "Enter a valid email address.",
           "passwordRequired": "Password is required."
         }
+      },
+      "signUp": {
+        "title": "Create account",
+        "subtitle": "Sign up in seconds and start managing your workspace.",
+        "fullNameLabel": "Full name",
+        "fullNamePlaceholder": "Enter your full name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Create a password",
+        "confirmPasswordLabel": "Confirm password",
+        "confirmPasswordPlaceholder": "Re-enter your password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "agreeToTerms": "I agree to the Terms & Conditions",
+        "submit": "Sign up",
+        "submitting": "Creating account…",
+        "haveAccount": "Already have an account?",
+        "signIn": "Sign in",
+        "brandTitle": "Join Diana",
+        "brandSubtitle": "Create an account to manage your workspace with a fast, accessible admin experience.",
+        "brandArtworkLabel": "Abstract Diana branding artwork",
+        "errors": {
+          "fullNameRequired": "Full name is required.",
+          "emailRequired": "Email is required.",
+          "emailInvalid": "Enter a valid email address.",
+          "passwordRequired": "Password is required.",
+          "passwordTooShort": "Password must be at least 8 characters.",
+          "confirmPasswordRequired": "Please confirm your password.",
+          "passwordMismatch": "Passwords do not match.",
+          "termsRequired": "You must agree to the Terms & Conditions."
+        }
       }
     }
   }

@@ -74,6 +74,9 @@
     "signInBasic": "پایه",
     "signInCover": "تمام‌صفحه",
     "signIn": "ورود",
+    "signUpBasic": "پایه",
+    "signUpCover": "تمام‌صفحه",
+    "signUp": "ثبت‌نام",
     "authentication": "احراز هویت"
   }
 }

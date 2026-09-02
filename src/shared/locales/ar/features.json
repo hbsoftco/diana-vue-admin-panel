@@ -1279,6 +1279,38 @@
           "emailInvalid": "أدخل عنوان بريد إلكتروني صالحًا.",
           "passwordRequired": "كلمة المرور مطلوبة."
         }
+      },
+      "signUp": {
+        "title": "إنشاء حساب",
+        "subtitle": "سجّل خلال ثوانٍ وابدأ في إدارة مساحة عملك.",
+        "fullNameLabel": "الاسم الكامل",
+        "fullNamePlaceholder": "أدخل اسمك الكامل",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "{'you@example.com'}",
+        "passwordLabel": "كلمة المرور",
+        "passwordPlaceholder": "أنشئ كلمة مرور",
+        "confirmPasswordLabel": "تأكيد كلمة المرور",
+        "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+        "showPassword": "إظهار كلمة المرور",
+        "hidePassword": "إخفاء كلمة المرور",
+        "agreeToTerms": "أوافق على الشروط والأحكام",
+        "submit": "إنشاء حساب",
+        "submitting": "جارٍ إنشاء الحساب…",
+        "haveAccount": "لديك حساب بالفعل؟",
+        "signIn": "تسجيل الدخول",
+        "brandTitle": "انضم إلى ديانا",
+        "brandSubtitle": "أنشئ حسابًا لإدارة مساحة عملك بتجربة إدارة سريعة وسهلة الوصول.",
+        "brandArtworkLabel": "عمل فني تجريدي لعلامة ديانا",
+        "errors": {
+          "fullNameRequired": "الاسم الكامل مطلوب.",
+          "emailRequired": "البريد الإلكتروني مطلوب.",
+          "emailInvalid": "أدخل عنوان بريد إلكتروني صالحًا.",
+          "passwordRequired": "كلمة المرور مطلوبة.",
+          "passwordTooShort": "يجب ألا تقل كلمة المرور عن 8 أحرف.",
+          "confirmPasswordRequired": "يرجى تأكيد كلمة المرور.",
+          "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+          "termsRequired": "يجب الموافقة على الشروط والأحكام."
+        }
       }
     }
   }
