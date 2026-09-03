@@ -217,6 +217,15 @@
         "cover": {
           "title": "Registro con portada"
         }
+      },
+      "resetPassword": {
+        "title": "Restablecer contraseña",
+        "basic": {
+          "title": "Restablecer contraseña básico"
+        },
+        "cover": {
+          "title": "Restablecer contraseña con portada"
+        }
       }
     }
   }

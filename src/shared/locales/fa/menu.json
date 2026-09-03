@@ -77,6 +77,9 @@
     "signUpBasic": "پایه",
     "signUpCover": "تمام‌صفحه",
     "signUp": "ثبت‌نام",
+    "resetPasswordBasic": "پایه",
+    "resetPasswordCover": "تمام‌صفحه",
+    "resetPassword": "بازنشانی گذرواژه",
     "authentication": "احراز هویت"
   }
 }

@@ -77,6 +77,9 @@
     "signUpBasic": "أساسي",
     "signUpCover": "بغلاف",
     "signUp": "إنشاء حساب",
+    "resetPasswordBasic": "أساسي",
+    "resetPasswordCover": "بغلاف",
+    "resetPassword": "إعادة تعيين كلمة المرور",
     "authentication": "المصادقة"
   }
 }

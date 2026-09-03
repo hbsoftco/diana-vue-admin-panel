@@ -77,6 +77,9 @@
     "signUpBasic": "בסיסי",
     "signUpCover": "עם רקע",
     "signUp": "הרשמה",
+    "resetPasswordBasic": "בסיסי",
+    "resetPasswordCover": "עם רקע",
+    "resetPassword": "איפוס סיסמה",
     "authentication": "אימות"
   }
 }

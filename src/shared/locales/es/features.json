@@ -1311,6 +1311,25 @@
           "passwordMismatch": "Las contraseñas no coinciden.",
           "termsRequired": "Debes aceptar los Términos y Condiciones."
         }
+      },
+      "resetPassword": {
+        "title": "Restablecer contraseña",
+        "subtitle": "Introduce el correo de tu cuenta y te enviaremos un enlace para restablecer tu contraseña.",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "{'tu@ejemplo.com'}",
+        "submit": "Enviar enlace de restablecimiento",
+        "submitting": "Enviando enlace…",
+        "successTitle": "Revisa tu bandeja de entrada",
+        "successMessage": "Si existe una cuenta para este correo, se ha enviado un enlace de restablecimiento.",
+        "rememberPassword": "¿Recuerdas tu contraseña?",
+        "signIn": "Iniciar sesión",
+        "brandTitle": "Restablece tu contraseña de Diana",
+        "brandSubtitle": "Te enviaremos un enlace seguro por correo para que vuelvas a acceder a tu espacio de trabajo.",
+        "brandArtworkLabel": "Ilustración abstracta de la marca Diana",
+        "errors": {
+          "emailRequired": "El correo electrónico es obligatorio.",
+          "emailInvalid": "Introduce una dirección de correo válida."
+        }
       }
     }
   }
