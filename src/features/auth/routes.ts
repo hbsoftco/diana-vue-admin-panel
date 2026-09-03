@@ -44,5 +44,23 @@ export const authRoutes = {
         pageTitle: 'pages.auth.signUp.cover.title',
       },
     },
+    {
+      path: 'reset-password',
+      redirect: '/auth/reset-password/basic',
+    },
+    {
+      path: 'reset-password/basic',
+      component: () => import('@/pages/auth/reset-password/basic.vue'),
+      meta: {
+        pageTitle: 'pages.auth.resetPassword.basic.title',
+      },
+    },
+    {
+      path: 'reset-password/cover',
+      component: () => import('@/pages/auth/reset-password/cover.vue'),
+      meta: {
+        pageTitle: 'pages.auth.resetPassword.cover.title',
+      },
+    },
   ],
 }

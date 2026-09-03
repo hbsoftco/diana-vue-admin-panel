@@ -77,6 +77,9 @@
     "signUpBasic": "Basis",
     "signUpCover": "Titelbild",
     "signUp": "Registrieren",
+    "resetPasswordBasic": "Basis",
+    "resetPasswordCover": "Titelbild",
+    "resetPassword": "Passwort zurücksetzen",
     "authentication": "Authentifizierung"
   }
 }

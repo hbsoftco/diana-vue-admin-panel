@@ -217,6 +217,15 @@
         "cover": {
           "title": "Sign Up Cover"
         }
+      },
+      "resetPassword": {
+        "title": "Reset Password",
+        "basic": {
+          "title": "Reset Password Basic"
+        },
+        "cover": {
+          "title": "Reset Password Cover"
+        }
       }
     }
   }

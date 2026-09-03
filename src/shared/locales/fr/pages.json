@@ -217,6 +217,15 @@
         "cover": {
           "title": "Inscription pleine page"
         }
+      },
+      "resetPassword": {
+        "title": "Réinitialiser le mot de passe",
+        "basic": {
+          "title": "Réinitialisation simple"
+        },
+        "cover": {
+          "title": "Réinitialisation pleine page"
+        }
       }
     }
   }

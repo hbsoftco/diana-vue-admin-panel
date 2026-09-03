@@ -1311,6 +1311,25 @@
           "passwordMismatch": "Les mots de passe ne correspondent pas.",
           "termsRequired": "Vous devez accepter les Conditions Générales."
         }
+      },
+      "resetPassword": {
+        "title": "Réinitialiser le mot de passe",
+        "subtitle": "Saisissez l’e-mail de votre compte et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "{'vous@exemple.com'}",
+        "submit": "Envoyer le lien de réinitialisation",
+        "submitting": "Envoi du lien…",
+        "successTitle": "Consultez votre boîte de réception",
+        "successMessage": "Si un compte existe pour cet e-mail, un lien de réinitialisation a été envoyé.",
+        "rememberPassword": "Vous vous souvenez de votre mot de passe ?",
+        "signIn": "Se connecter",
+        "brandTitle": "Réinitialisez votre mot de passe Diana",
+        "brandSubtitle": "Nous vous enverrons un lien sécurisé par e-mail pour retrouver l’accès à votre espace de travail.",
+        "brandArtworkLabel": "Illustration abstraite de la marque Diana",
+        "errors": {
+          "emailRequired": "L’e-mail est obligatoire.",
+          "emailInvalid": "Saisissez une adresse e-mail valide."
+        }
       }
     }
   }

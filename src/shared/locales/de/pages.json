@@ -217,6 +217,15 @@
         "cover": {
           "title": "Registrierung mit Titelbild"
         }
+      },
+      "resetPassword": {
+        "title": "Passwort zurücksetzen",
+        "basic": {
+          "title": "Passwort zurücksetzen Basis"
+        },
+        "cover": {
+          "title": "Passwort zurücksetzen mit Titelbild"
+        }
       }
     }
   }

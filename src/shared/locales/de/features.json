@@ -1311,6 +1311,25 @@
           "passwordMismatch": "Die Passwörter stimmen nicht überein.",
           "termsRequired": "Du musst den Allgemeinen Geschäftsbedingungen zustimmen."
         }
+      },
+      "resetPassword": {
+        "title": "Passwort zurücksetzen",
+        "subtitle": "Gib die E-Mail-Adresse deines Kontos ein und wir senden dir einen Link zum Zurücksetzen deines Passworts.",
+        "emailLabel": "E-Mail",
+        "emailPlaceholder": "{'du@beispiel.com'}",
+        "submit": "Link zum Zurücksetzen senden",
+        "submitting": "Link wird gesendet…",
+        "successTitle": "Prüfe deinen Posteingang",
+        "successMessage": "Falls ein Konto für diese E-Mail-Adresse existiert, wurde ein Link zum Zurücksetzen gesendet.",
+        "rememberPassword": "Erinnerst du dich an dein Passwort?",
+        "signIn": "Anmelden",
+        "brandTitle": "Setze dein Diana-Passwort zurück",
+        "brandSubtitle": "Wir senden dir einen sicheren Link per E-Mail, damit du wieder in deinen Arbeitsbereich gelangst.",
+        "brandArtworkLabel": "Abstrakte Diana-Markengrafik",
+        "errors": {
+          "emailRequired": "E-Mail ist erforderlich.",
+          "emailInvalid": "Gib eine gültige E-Mail-Adresse ein."
+        }
       }
     }
   }

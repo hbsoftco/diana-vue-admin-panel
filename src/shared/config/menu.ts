@@ -144,12 +144,12 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
-  {
-    id: 'maps-icons-icons',
-    label: 'menu.icons',
-    icon: 'componentDropdown',
-    disabled: true,
-  },
+  // {
+  //   id: 'maps-icons-icons',
+  //   label: 'menu.icons',
+  //   icon: 'componentDropdown',
+  //   disabled: true,
+  // },
   { type: 'label', id: 'system-label', label: 'menu.groups.system' },
   {
     id: 'error',
@@ -208,6 +208,24 @@ export const menuItems: MenuItem[] = [
             label: 'menu.signUpCover',
             icon: 'layoutSplit',
             route: '/auth/sign-up/cover',
+          },
+        ],
+      },
+      {
+        id: 'reset-password',
+        label: 'menu.resetPassword',
+        children: [
+          {
+            id: 'reset-password-basic',
+            label: 'menu.resetPasswordBasic',
+            icon: 'layoutCentered',
+            route: '/auth/reset-password/basic',
+          },
+          {
+            id: 'reset-password-cover',
+            label: 'menu.resetPasswordCover',
+            icon: 'layoutSplit',
+            route: '/auth/reset-password/cover',
           },
         ],
       },

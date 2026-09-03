@@ -77,6 +77,9 @@
     "signUpBasic": "Simple",
     "signUpCover": "Pleine page",
     "signUp": "S'inscrire",
+    "resetPasswordBasic": "Simple",
+    "resetPasswordCover": "Pleine page",
+    "resetPassword": "Réinitialiser le mot de passe",
     "authentication": "Authentification"
   }
 }

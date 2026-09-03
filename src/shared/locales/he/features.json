@@ -1311,6 +1311,25 @@
           "passwordMismatch": "הסיסמאות אינן תואמות.",
           "termsRequired": "עליך להסכים לתנאים ולהגבלות."
         }
+      },
+      "resetPassword": {
+        "title": "איפוס סיסמה",
+        "subtitle": "הזינו את כתובת הדוא\"ל של החשבון ונשלח לכם קישור לאיפוס הסיסמה.",
+        "emailLabel": "דוא\"ל",
+        "emailPlaceholder": "{'you@example.com'}",
+        "submit": "שליחת קישור לאיפוס",
+        "submitting": "שולח קישור…",
+        "successTitle": "בדקו את תיבת הדואר הנכנס",
+        "successMessage": "אם קיים חשבון עבור כתובת דוא\"ל זו, נשלח אליו קישור לאיפוס.",
+        "rememberPassword": "נזכרתם בסיסמה?",
+        "signIn": "התחברות",
+        "brandTitle": "אפסו את סיסמת ה‑Diana שלכם",
+        "brandSubtitle": "נשלח לכם קישור מאובטח בדוא\"ל כדי שתחזרו לסביבת העבודה שלכם.",
+        "brandArtworkLabel": "יצירת מיתוג מופשטת של Diana",
+        "errors": {
+          "emailRequired": "יש להזין דוא\"ל.",
+          "emailInvalid": "יש להזין כתובת דוא\"ל תקינה."
+        }
       }
     }
   }
