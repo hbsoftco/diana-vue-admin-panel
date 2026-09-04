@@ -43,7 +43,6 @@ declare module 'vue' {
     'IMdi:magnify': typeof import('~icons/mdi/magnify')['default']
     'IMdi:phone': typeof import('~icons/mdi/phone')['default']
     'IMdi:video': typeof import('~icons/mdi/video')['default']
-    IMdiDotsVertical: typeof import('~icons/mdi/dots-vertical')['default']
     'IRi:amazonFill': typeof import('~icons/ri/amazon-fill')['default']
     'ISimpleIcons:kakaotalk': typeof import('~icons/simple-icons/kakaotalk')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

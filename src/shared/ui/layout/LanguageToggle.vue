@@ -3,7 +3,6 @@ import { useLocalStorage } from '@vueuse/core'
 import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 
 const { locale, t } = useI18n()
@@ -20,6 +19,11 @@ const languages = [
 
 const currentLang = useLocalStorage<string>('language', 'en')
 const languageToggleLabel = computed(() => t('layout.language.select'))
+const currentFlag = computed(() => languages.find(l => l.code === currentLang.value)?.flag)
+
+function selectLanguage(code: string) {
+  currentLang.value = code
+}
 
 watch(
   currentLang,
@@ -36,42 +40,32 @@ watch(
 
 <template>
   <DiDropdown
-    v-model="currentLang"
-    :options="languages"
-    size="md"
-    label-key="label"
-    value-key="code"
-    position="bottom"
-    align="center"
-    close-on-click
-    width="w-38"
-    border="border border-content"
+    class="btn btn-ghost btn-circle btn-sm"
+    group="header"
+    placement="bottom"
+    role="menu"
+    panel-class="w-44 p-1"
+    :aria-label="languageToggleLabel"
+    :title="languageToggleLabel"
   >
-    <!-- Trigger -->
     <template #trigger>
-      <DiButton
-        size="sm"
-        variant="ghost"
-        circle
-        :aria-label="languageToggleLabel"
-        :title="languageToggleLabel"
-      >
-        <span class="text-lg">
-          {{ languages.find((l) => l.code === currentLang)?.flag }}
-        </span>
-      </DiButton>
+      <span class="text-lg">{{ currentFlag }}</span>
     </template>
 
-    <!-- Option -->
-    <template #option="{ option, select, selected }">
+    <template #default>
       <button
-        class="flex w-full items-center gap-2 px-2 py-1"
-        :class="{ 'bg-base-200': selected }"
-        @click="select"
+        v-for="language in languages"
+        :key="language.code"
+        type="button"
+        role="menuitem"
+        class="flex w-full items-center gap-2 rounded-field px-2 py-1.5 hover:bg-base-200 focus:bg-base-200 focus:outline-none"
+        :class="{ 'bg-base-200': language.code === currentLang }"
+        :aria-current="language.code === currentLang ? 'true' : undefined"
+        @click="selectLanguage(language.code)"
       >
-        <span class="emoji-flag">{{ option.flag }}</span>
-        <span class="language-name" :lang="option.code">{{ option.label }}</span>
-        <span v-if="selected" class="rtl:mr-auto ltr:ml-auto">✓</span>
+        <span class="emoji-flag">{{ language.flag }}</span>
+        <span class="language-name" :lang="language.code">{{ language.label }}</span>
+        <span v-if="language.code === currentLang" class="ltr:ml-auto rtl:mr-auto">✓</span>
       </button>
     </template>
   </DiDropdown>

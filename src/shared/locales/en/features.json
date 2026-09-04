@@ -139,7 +139,20 @@
         "userMenu": "User menu",
         "openMenu": "Open user menu",
         "userAvatar": "User avatar",
-        "lastLogin": "Last login: 2 hours ago"
+        "lastLogin": "Last login: 2 hours ago",
+        "account": "Account",
+        "basic": "Basic menu",
+        "placement": "Placement & auto-flip",
+        "stayOpen": "Stay open on click",
+        "stayOpenHint": "With close-on-content-click disabled the panel stays open while you toggle several items.",
+        "controlled": "Controlled open state",
+        "toggleExternally": "Toggle externally",
+        "exclusiveGroup": "Exclusive group",
+        "richContent": "Rich content",
+        "keyboardHint": "Arrow keys move between items, Escape closes and restores focus, and typing jumps to a match.",
+        "columns": "Columns",
+        "filters": "Filters",
+        "sort": "Sort"
       },
       "popover": {
         "basic": "Basic Popover",

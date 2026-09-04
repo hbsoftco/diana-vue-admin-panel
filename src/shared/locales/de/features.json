@@ -139,7 +139,20 @@
         "userMenu": "Benutzermenü",
         "openMenu": "Benutzermenü öffnen",
         "userAvatar": "Benutzer-Avatar",
-        "lastLogin": "Letzter Login: vor 2 Stunden"
+        "lastLogin": "Letzter Login: vor 2 Stunden",
+        "account": "Konto",
+        "basic": "Basismenü",
+        "placement": "Platzierung & Auto-Umklappen",
+        "stayOpen": "Beim Klick geöffnet bleiben",
+        "stayOpenHint": "Wenn close-on-content-click deaktiviert ist, bleibt das Panel offen, während du mehrere Einträge umschaltest.",
+        "controlled": "Gesteuerter Öffnungszustand",
+        "toggleExternally": "Von außen umschalten",
+        "exclusiveGroup": "Exklusive Gruppe",
+        "richContent": "Reichhaltiger Inhalt",
+        "keyboardHint": "Pfeiltasten wechseln zwischen Einträgen, Escape schließt und gibt den Fokus zurück, Tippen springt zu einem Treffer.",
+        "columns": "Spalten",
+        "filters": "Filter",
+        "sort": "Sortieren"
       },
       "popover": {
         "basic": "Grundlegendes Popover",

@@ -139,7 +139,20 @@
         "userMenu": "תפריט משתמש",
         "openMenu": "פתח תפריט משתמש",
         "userAvatar": "תמונת משתמש",
-        "lastLogin": "כניסה אחרונה: לפני שעתיים"
+        "lastLogin": "כניסה אחרונה: לפני שעתיים",
+        "account": "חשבון",
+        "basic": "תפריט בסיסי",
+        "placement": "מיקום והיפוך אוטומטי",
+        "stayOpen": "להישאר פתוח בלחיצה",
+        "stayOpenHint": "כאשר close-on-content-click מושבת, הפאנל נשאר פתוח בזמן החלפת מספר פריטים.",
+        "controlled": "מצב פתיחה מבוקר",
+        "toggleExternally": "החלפה מבחוץ",
+        "exclusiveGroup": "קבוצה בלעדית",
+        "richContent": "תוכן עשיר",
+        "keyboardHint": "מקשי החיצים מנווטים בין הפריטים, Escape סוגר ומחזיר את הפוקוס, והקלדה קופצת להתאמה.",
+        "columns": "עמודות",
+        "filters": "מסננים",
+        "sort": "מיון"
       },
       "popover": {
         "basic": "חלונית קופצת בסיסית",
