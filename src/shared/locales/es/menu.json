@@ -51,6 +51,7 @@
     "select": "Selección",
     "fileUpload": "Subida de archivos",
     "colorPicker": "Selector de color",
+    "otpInput": "Entrada OTP",
     "advancedUi": "Interfaz avanzada",
     "accordion": "Acordeón",
     "collapse": "Colapso",
@@ -80,6 +81,9 @@
     "resetPasswordBasic": "Básico",
     "resetPasswordCover": "Con portada",
     "resetPassword": "Restablecer contraseña",
+    "twoStepBasic": "Básico",
+    "twoStepCover": "Con portada",
+    "twoStep": "Verificación en dos pasos",
     "authentication": "Autenticación"
   }
 }

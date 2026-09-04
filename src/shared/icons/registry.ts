@@ -46,7 +46,9 @@ import LayoutColumnsIcon from '~icons/tabler/layout-columns'
 import LockQuestionIcon from '~icons/tabler/lock-question'
 import LoginIcon from '~icons/tabler/login'
 import MoonIcon from '~icons/tabler/moon'
+import PasswordIcon from '~icons/tabler/password'
 import SelectIcon from '~icons/tabler/select'
+import ShieldCheckIcon from '~icons/tabler/shield-check'
 import SunIcon from '~icons/tabler/sun'
 import UserPlusIcon from '~icons/tabler/user-plus'
 import ComponentDropdownIcon from '~icons/tdesign/component-dropdown'
@@ -99,6 +101,7 @@ export const coreIconRegistry = {
   signIn: LoginIcon,
   signUp: UserPlusIcon,
   resetPassword: LockQuestionIcon,
+  twoStepVerification: ShieldCheckIcon,
   layoutCentered: LayoutAlignMiddleIcon,
   layoutSplit: LayoutColumnsIcon,
   cursorText: CursorTextIcon,
@@ -108,6 +111,7 @@ export const coreIconRegistry = {
   selectDropdown: SelectIcon,
   fileUpload: FileUploadIcon,
   colorPicker: ColorPickerIcon,
+  otpInput: PasswordIcon,
 } as const
 
 // Lazy icons are limited to feature-specific screens, showcases, and playground examples.

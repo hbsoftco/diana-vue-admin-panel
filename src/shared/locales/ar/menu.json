@@ -51,6 +51,7 @@
     "select": "الاختيار",
     "fileUpload": "رفع الملفات",
     "colorPicker": "منتقي الألوان",
+    "otpInput": "إدخال OTP",
     "advancedUi": "واجهة مستخدم متقدمة",
     "accordion": "الأكورديون",
     "collapse": "الطي",
@@ -80,6 +81,9 @@
     "resetPasswordBasic": "أساسي",
     "resetPasswordCover": "بغلاف",
     "resetPassword": "إعادة تعيين كلمة المرور",
+    "twoStepBasic": "أساسي",
+    "twoStepCover": "بغلاف",
+    "twoStep": "التحقق بخطوتين",
     "authentication": "المصادقة"
   }
 }

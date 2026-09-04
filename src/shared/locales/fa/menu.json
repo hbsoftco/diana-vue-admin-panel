@@ -51,6 +51,7 @@
     "select": "انتخاب‌گر",
     "fileUpload": "آپلود فایل",
     "colorPicker": "انتخاب‌گر رنگ",
+    "otpInput": "ورودی OTP",
     "advancedUi": "رابط کاربری پیشرفته",
     "accordion": "Accordion",
     "collapse": "جمع‌شونده",
@@ -80,6 +81,9 @@
     "resetPasswordBasic": "پایه",
     "resetPasswordCover": "تمام‌صفحه",
     "resetPassword": "بازنشانی گذرواژه",
+    "twoStepBasic": "پایه",
+    "twoStepCover": "تمام‌صفحه",
+    "twoStep": "تأیید دو مرحله‌ای",
     "authentication": "احراز هویت"
   }
 }

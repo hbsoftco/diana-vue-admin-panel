@@ -107,6 +107,12 @@ export const menuItems: MenuItem[] = [
             icon: 'colorPicker',
             route: '/forms/form-elements/color-picker',
           },
+          {
+            id: 'otp-input',
+            label: 'menu.otpInput',
+            icon: 'otpInput',
+            route: '/forms/form-elements/otp-input',
+          },
         ],
       },
     ],
@@ -230,6 +236,25 @@ export const menuItems: MenuItem[] = [
             label: 'menu.resetPasswordCover',
             icon: 'layoutSplit',
             route: '/auth/reset-password/cover',
+          },
+        ],
+      },
+      {
+        id: 'two-step',
+        label: 'menu.twoStep',
+        icon: 'twoStepVerification',
+        children: [
+          {
+            id: 'two-step-basic',
+            label: 'menu.twoStepBasic',
+            icon: 'layoutCentered',
+            route: '/auth/two-step/basic',
+          },
+          {
+            id: 'two-step-cover',
+            label: 'menu.twoStepCover',
+            icon: 'layoutSplit',
+            route: '/auth/two-step/cover',
           },
         ],
       },

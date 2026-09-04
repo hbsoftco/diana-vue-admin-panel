@@ -1076,6 +1076,27 @@
           "green": "Verde",
           "blue": "Azul"
         }
+      },
+      "otpInput": {
+        "sections": {
+          "basic": "Uso básico",
+          "sizes": "Tamaños",
+          "lengths": "Longitudes",
+          "states": "Deshabilitado y error",
+          "live": "Demo en vivo"
+        },
+        "aria": {
+          "code": "Código de verificación",
+          "shortCode": "Código de 4 dígitos"
+        },
+        "messages": {
+          "error": "El código no coincide. Inténtalo de nuevo.",
+          "autoFocusNote": "Pasa la prop auto-focus para enfocar la primera casilla automáticamente al montarse. Desactivado en esta página porque varios campos la comparten."
+        },
+        "live": {
+          "result": "Has introducido: {code}",
+          "empty": "Esperando entrada…"
+        }
       }
     },
     "advancedUi": {
@@ -1346,6 +1367,27 @@
         "errors": {
           "emailRequired": "El correo electrónico es obligatorio.",
           "emailInvalid": "Introduce una dirección de correo válida."
+        }
+      },
+      "twoStep": {
+        "title": "Verificación en dos pasos",
+        "subtitle": "Introduce el código de 6 dígitos enviado a tu correo o teléfono.",
+        "codeAriaLabel": "Código de verificación",
+        "digitAriaLabel": "Dígito {index} de {length}",
+        "submit": "Verificar",
+        "submitting": "Verificando…",
+        "successTitle": "Verificado",
+        "successMessage": "Tu identidad ha sido confirmada.",
+        "resend": "Reenviar código",
+        "resendCooldown": "Reenviar código en {seconds} s",
+        "didNotGetCode": "¿No recibiste un código?",
+        "backToSignIn": "Volver a iniciar sesión",
+        "brandTitle": "Verifica que eres tú",
+        "brandSubtitle": "Introduce el código que te enviamos para terminar de proteger tu espacio de trabajo de Diana.",
+        "brandArtworkLabel": "Ilustración abstracta de la marca Diana",
+        "errors": {
+          "codeRequired": "Introduce el código de verificación.",
+          "codeIncomplete": "Introduce el código de 6 dígitos completo."
         }
       }
     }

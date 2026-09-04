@@ -133,6 +133,9 @@
       },
       "colorPicker": {
         "title": "בורר צבעים"
+      },
+      "otpInput": {
+        "title": "קלט OTP"
       }
     },
     "advancedUi": {
@@ -225,6 +228,15 @@
         },
         "cover": {
           "title": "איפוס סיסמה עם רקע"
+        }
+      },
+      "twoStep": {
+        "title": "אימות דו-שלבי",
+        "basic": {
+          "title": "אימות דו-שלבי בסיסי"
+        },
+        "cover": {
+          "title": "אימות דו-שלבי עם רקע"
         }
       }
     }

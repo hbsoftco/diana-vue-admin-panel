@@ -1076,6 +1076,27 @@
           "green": "Vert",
           "blue": "Bleu"
         }
+      },
+      "otpInput": {
+        "sections": {
+          "basic": "Utilisation de base",
+          "sizes": "Tailles",
+          "lengths": "Longueurs",
+          "states": "Désactivé et erreur",
+          "live": "Démo en direct"
+        },
+        "aria": {
+          "code": "Code de vérification",
+          "shortCode": "Code à 4 chiffres"
+        },
+        "messages": {
+          "error": "Le code ne correspond pas. Veuillez réessayer.",
+          "autoFocusNote": "Passez la prop auto-focus pour donner le focus à la première case au montage. Désactivé sur cette page car plusieurs champs la partagent."
+        },
+        "live": {
+          "result": "Vous avez saisi : {code}",
+          "empty": "En attente de saisie…"
+        }
       }
     },
     "advancedUi": {
@@ -1346,6 +1367,27 @@
         "errors": {
           "emailRequired": "L’e-mail est obligatoire.",
           "emailInvalid": "Saisissez une adresse e-mail valide."
+        }
+      },
+      "twoStep": {
+        "title": "Vérification en deux étapes",
+        "subtitle": "Saisissez le code à 6 chiffres envoyé par e-mail ou par SMS.",
+        "codeAriaLabel": "Code de vérification",
+        "digitAriaLabel": "Chiffre {index} sur {length}",
+        "submit": "Vérifier",
+        "submitting": "Vérification…",
+        "successTitle": "Vérifié",
+        "successMessage": "Votre identité a été confirmée.",
+        "resend": "Renvoyer le code",
+        "resendCooldown": "Renvoyer le code dans {seconds} s",
+        "didNotGetCode": "Vous n’avez pas reçu de code ?",
+        "backToSignIn": "Retour à la connexion",
+        "brandTitle": "Vérifiez que c’est bien vous",
+        "brandSubtitle": "Saisissez le code que nous vous avons envoyé pour finaliser la sécurisation de votre espace Diana.",
+        "brandArtworkLabel": "Illustration abstraite de la marque Diana",
+        "errors": {
+          "codeRequired": "Saisissez le code de vérification.",
+          "codeIncomplete": "Saisissez le code à 6 chiffres en entier."
         }
       }
     }

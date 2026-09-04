@@ -1076,6 +1076,27 @@
           "green": "Green",
           "blue": "Blue"
         }
+      },
+      "otpInput": {
+        "sections": {
+          "basic": "Basic Usage",
+          "sizes": "Sizes",
+          "lengths": "Lengths",
+          "states": "Disabled & Error",
+          "live": "Live Demo"
+        },
+        "aria": {
+          "code": "Verification code",
+          "shortCode": "4-digit code"
+        },
+        "messages": {
+          "error": "That code didn't match. Please try again.",
+          "autoFocusNote": "Pass the auto-focus prop to focus the first box automatically on mount. Turned off on this page since several inputs share it."
+        },
+        "live": {
+          "result": "You entered: {code}",
+          "empty": "Waiting for input…"
+        }
       }
     },
     "advancedUi": {
@@ -1346,6 +1367,27 @@
         "errors": {
           "emailRequired": "Email is required.",
           "emailInvalid": "Enter a valid email address."
+        }
+      },
+      "twoStep": {
+        "title": "Two-step verification",
+        "subtitle": "Enter the 6-digit code sent to your email or phone.",
+        "codeAriaLabel": "Verification code",
+        "digitAriaLabel": "Digit {index} of {length}",
+        "submit": "Verify",
+        "submitting": "Verifying…",
+        "successTitle": "Verified",
+        "successMessage": "Your identity has been confirmed.",
+        "resend": "Resend code",
+        "resendCooldown": "Resend code in {seconds}s",
+        "didNotGetCode": "Didn't get a code?",
+        "backToSignIn": "Back to sign in",
+        "brandTitle": "Verify it's you",
+        "brandSubtitle": "Enter the code we sent you to finish securing your Diana workspace.",
+        "brandArtworkLabel": "Abstract Diana branding artwork",
+        "errors": {
+          "codeRequired": "Enter the verification code.",
+          "codeIncomplete": "Enter the full 6-digit code."
         }
       }
     }

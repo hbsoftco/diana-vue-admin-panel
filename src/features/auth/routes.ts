@@ -23,6 +23,10 @@ export const authRoutes = {
       redirect: '/auth/reset-password/basic',
     },
     {
+      path: 'two-step',
+      redirect: '/auth/two-step/basic',
+    },
+    {
       path: '',
       component: AuthBasicLayout,
       children: [
@@ -45,6 +49,13 @@ export const authRoutes = {
           component: () => import('@/pages/auth/reset-password/basic.vue'),
           meta: {
             pageTitle: 'pages.auth.resetPassword.basic.title',
+          },
+        },
+        {
+          path: 'two-step/basic',
+          component: () => import('@/pages/auth/two-step/basic.vue'),
+          meta: {
+            pageTitle: 'pages.auth.twoStep.basic.title',
           },
         },
       ],
@@ -75,6 +86,14 @@ export const authRoutes = {
           meta: {
             pageTitle: 'pages.auth.resetPassword.cover.title',
             brandVariant: 'reset-password',
+          },
+        },
+        {
+          path: 'two-step/cover',
+          component: () => import('@/pages/auth/two-step/cover.vue'),
+          meta: {
+            pageTitle: 'pages.auth.twoStep.cover.title',
+            brandVariant: 'two-step',
           },
         },
       ],

@@ -133,6 +133,9 @@
       },
       "colorPicker": {
         "title": "Farbauswahl"
+      },
+      "otpInput": {
+        "title": "OTP-Eingabe"
       }
     },
     "advancedUi": {
@@ -225,6 +228,15 @@
         },
         "cover": {
           "title": "Passwort zurücksetzen mit Titelbild"
+        }
+      },
+      "twoStep": {
+        "title": "Zweistufige Verifizierung",
+        "basic": {
+          "title": "Zweistufige Verifizierung Basis"
+        },
+        "cover": {
+          "title": "Zweistufige Verifizierung mit Titelbild"
         }
       }
     }
