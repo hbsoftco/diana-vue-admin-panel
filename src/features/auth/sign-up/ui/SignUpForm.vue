@@ -4,7 +4,6 @@ import { useI18n } from 'vue-i18n'
 
 import DiCheckbox from '@/shared/ui/base/checkbox/DiCheckbox.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import { DiInput } from '@/shared/ui/base/input'
 
 export type SignUpPayload = {
@@ -24,8 +23,6 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/
 const MIN_PASSWORD_LENGTH = 8
 
 const uid = useId()
-const passwordId = `${uid}-password`
-const confirmPasswordId = `${uid}-confirm-password`
 const headingId = `${uid}-heading`
 
 const fullName = ref('')
@@ -33,10 +30,13 @@ const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
 const agreeToTerms = ref(false)
-const showPassword = ref(false)
-const showConfirmPassword = ref(false)
 const submitting = ref(false)
 const submitted = ref(false)
+
+const passwordToggleLabels = computed(() => ({
+  show: t('features.auth.signUp.showPassword'),
+  hide: t('features.auth.signUp.hidePassword'),
+}))
 
 const fullNameErrorKey = computed(() =>
   fullName.value.trim() ? '' : 'features.auth.signUp.errors.fullNameRequired',
@@ -87,26 +87,7 @@ const agreeToTermsError = computed(() =>
   submitted.value && agreeToTermsErrorKey.value ? t(agreeToTermsErrorKey.value) : '',
 )
 
-const passwordToggleLabel = computed(() =>
-  showPassword.value
-    ? t('features.auth.signUp.hidePassword')
-    : t('features.auth.signUp.showPassword'),
-)
-const confirmPasswordToggleLabel = computed(() =>
-  showConfirmPassword.value
-    ? t('features.auth.signUp.hidePassword')
-    : t('features.auth.signUp.showPassword'),
-)
-
 const canSubmit = computed(() => agreeToTerms.value && !submitting.value)
-
-function togglePassword() {
-  showPassword.value = !showPassword.value
-}
-
-function toggleConfirmPassword() {
-  showConfirmPassword.value = !showConfirmPassword.value
-}
 
 async function onSubmit() {
   submitted.value = true
@@ -159,15 +140,12 @@ async function onSubmit() {
         type="text"
         name="fullName"
         autocomplete="name"
+        prefix-icon="user"
         :label="t('features.auth.signUp.fullNameLabel')"
         :placeholder="t('features.auth.signUp.fullNamePlaceholder')"
         :error="fullNameError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="user" />
-        </template>
-      </DiInput>
+      />
 
       <DiInput
         v-model="email"
@@ -175,71 +153,40 @@ async function onSubmit() {
         name="email"
         autocomplete="email"
         inputmode="email"
+        prefix-icon="mail"
         :label="t('features.auth.signUp.emailLabel')"
         :placeholder="t('features.auth.signUp.emailPlaceholder')"
         :error="emailError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="emailOutline" />
-        </template>
-      </DiInput>
+      />
 
       <DiInput
-        :id="passwordId"
         v-model="password"
-        :type="showPassword ? 'text' : 'password'"
+        type="password"
         name="password"
         autocomplete="new-password"
+        prefix-icon="lock"
+        show-password-toggle
+        :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signUp.passwordLabel')"
         :placeholder="t('features.auth.signUp.passwordPlaceholder')"
         :error="passwordError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="lockOutline" />
-        </template>
-        <template #suffix>
-          <button
-            type="button"
-            class="inline-flex items-center rounded-sm p-0.5 text-base-content/55 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            :aria-label="passwordToggleLabel"
-            :aria-pressed="showPassword"
-            :aria-controls="passwordId"
-            @click="togglePassword"
-          >
-            <DiIcon :name="showPassword ? 'eyeOff' : 'eye'" />
-          </button>
-        </template>
-      </DiInput>
+      />
 
       <DiInput
-        :id="confirmPasswordId"
         v-model="confirmPassword"
-        :type="showConfirmPassword ? 'text' : 'password'"
+        type="password"
         name="confirmPassword"
         autocomplete="new-password"
+        prefix-icon="lock"
+        show-password-toggle
+        :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signUp.confirmPasswordLabel')"
         :placeholder="t('features.auth.signUp.confirmPasswordPlaceholder')"
         :error="confirmPasswordError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="lockOutline" />
-        </template>
-        <template #suffix>
-          <button
-            type="button"
-            class="inline-flex items-center rounded-sm p-0.5 text-base-content/55 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            :aria-label="confirmPasswordToggleLabel"
-            :aria-pressed="showConfirmPassword"
-            :aria-controls="confirmPasswordId"
-            @click="toggleConfirmPassword"
-          >
-            <DiIcon :name="showConfirmPassword ? 'eyeOff' : 'eye'" />
-          </button>
-        </template>
-      </DiInput>
+      />
 
       <DiCheckbox v-model="agreeToTerms" size="xs" :error="agreeToTermsError" required>
         <template #label>

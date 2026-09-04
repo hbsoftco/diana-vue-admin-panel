@@ -4,7 +4,6 @@ import { useI18n } from 'vue-i18n'
 
 import DiCheckbox from '@/shared/ui/base/checkbox/DiCheckbox.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import { DiInput } from '@/shared/ui/base/input'
 
 export type SignInPayload = {
@@ -22,15 +21,18 @@ const { t } = useI18n()
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/
 
 const uid = useId()
-const passwordId = `${uid}-password`
 const headingId = `${uid}-heading`
 
 const email = ref('')
 const password = ref('')
 const rememberMe = ref(false)
-const showPassword = ref(false)
 const submitting = ref(false)
 const submitted = ref(false)
+
+const passwordToggleLabels = computed(() => ({
+  show: t('features.auth.signIn.showPassword'),
+  hide: t('features.auth.signIn.hidePassword'),
+}))
 
 const emailErrorKey = computed(() => {
   const value = email.value.trim()
@@ -51,16 +53,6 @@ const emailError = computed(() =>
 const passwordError = computed(() =>
   submitted.value && passwordErrorKey.value ? t(passwordErrorKey.value) : '',
 )
-
-const passwordToggleLabel = computed(() =>
-  showPassword.value
-    ? t('features.auth.signIn.hidePassword')
-    : t('features.auth.signIn.showPassword'),
-)
-
-function togglePassword() {
-  showPassword.value = !showPassword.value
-}
 
 async function onSubmit() {
   submitted.value = true
@@ -105,43 +97,26 @@ async function onSubmit() {
         name="email"
         autocomplete="email"
         inputmode="email"
+        prefix-icon="mail"
         :label="t('features.auth.signIn.emailLabel')"
         :placeholder="t('features.auth.signIn.emailPlaceholder')"
         :error="emailError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="emailOutline" />
-        </template>
-      </DiInput>
+      />
 
       <DiInput
-        :id="passwordId"
         v-model="password"
-        :type="showPassword ? 'text' : 'password'"
+        type="password"
         name="password"
         autocomplete="current-password"
+        prefix-icon="lock"
+        show-password-toggle
+        :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signIn.passwordLabel')"
         :placeholder="t('features.auth.signIn.passwordPlaceholder')"
         :error="passwordError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="lockOutline" />
-        </template>
-        <template #suffix>
-          <button
-            type="button"
-            class="inline-flex items-center rounded-sm p-0.5 text-base-content/55 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            :aria-label="passwordToggleLabel"
-            :aria-pressed="showPassword"
-            :aria-controls="passwordId"
-            @click="togglePassword"
-          >
-            <DiIcon :name="showPassword ? 'eyeOff' : 'eye'" />
-          </button>
-        </template>
-      </DiInput>
+      />
 
       <div class="flex flex-wrap items-center justify-between gap-2">
         <DiCheckbox v-model="rememberMe" size="xs">

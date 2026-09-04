@@ -1,10 +1,19 @@
 <script setup lang="ts">
 import type { StyleValue } from 'vue'
 
-import { computed, useAttrs, useId } from 'vue'
+import { computed, ref, useAttrs, useId, watch } from 'vue'
 
-import type { DiInputSize, DiInputType, DiInputValue, DiInputVariant } from './types'
+import type { IconName } from '@/shared/icons/registry'
 
+import type {
+  DiInputPasswordToggleLabels,
+  DiInputSize,
+  DiInputType,
+  DiInputValue,
+  DiInputVariant,
+} from './types'
+
+import DiIcon from '../DiIcon.vue'
 import DiLoading from '../DiLoading.vue'
 import { INPUT_SIZE_CLASSES } from './sizes'
 import { INPUT_VARIANT_CLASSES } from './variants'
@@ -23,6 +32,30 @@ type Props = {
   readonly?: boolean
   loading?: boolean
   required?: boolean
+  /**
+   * Decorative icon rendered before the text. The `prefix` slot, when
+   * provided, takes precedence over this prop.
+   */
+  prefixIcon?: IconName
+  /**
+   * Decorative icon rendered after the text. Lower precedence than the
+   * `suffix` slot and the password toggle, higher than the error icon.
+   */
+  suffixIcon?: IconName
+  /**
+   * With `type="password"`, render an interactive show/hide button as the
+   * suffix. Clicking it toggles the resolved input type between `password`
+   * and `text` and swaps the eye / eye-off icon. Ignored for other types
+   * and when a `suffix` slot is supplied.
+   */
+  showPasswordToggle?: boolean
+  /** Translated accessible labels for the password toggle button. */
+  passwordToggleLabels?: DiInputPasswordToggleLabels
+  /**
+   * Show a status icon inside the control while in the error state. Used
+   * when a `suffix` slot, password toggle, and `suffixIcon` are all absent.
+   */
+  showErrorIcon?: boolean
 }
 
 defineOptions({ inheritAttrs: false })
@@ -35,9 +68,16 @@ const props = withDefaults(defineProps<Props>(), {
   readonly: false,
   loading: false,
   required: false,
+  showPasswordToggle: false,
+  showErrorIcon: false,
+  passwordToggleLabels: () => ({ show: 'Show password', hide: 'Hide password' }),
 })
 
-defineSlots<{
+const emit = defineEmits<{
+  passwordVisibilityChange: [visible: boolean]
+}>()
+
+const slots = defineSlots<{
   prefix?: () => unknown
   suffix?: () => unknown
 }>()
@@ -62,6 +102,35 @@ const describedBy = computed(() => {
   return ids.filter(Boolean).join(' ') || undefined
 })
 
+const isPasswordInput = computed(() => props.type === 'password')
+const hasPasswordToggle = computed(() => isPasswordInput.value && props.showPasswordToggle)
+const passwordVisible = ref(false)
+const resolvedType = computed<DiInputType>(() =>
+  hasPasswordToggle.value && passwordVisible.value ? 'text' : props.type,
+)
+const passwordToggleLabel = computed(() =>
+  passwordVisible.value ? props.passwordToggleLabels.hide : props.passwordToggleLabels.show,
+)
+
+// Reset the reveal state if the field stops being a password field.
+watch(isPasswordInput, (isPassword) => {
+  if (!isPassword)
+    passwordVisible.value = false
+})
+
+const hasPrefix = computed(() => Boolean(slots.prefix || props.prefixIcon))
+const suffixMode = computed<'slot' | 'toggle' | 'icon' | 'error' | null>(() => {
+  if (slots.suffix)
+    return 'slot'
+  if (hasPasswordToggle.value)
+    return 'toggle'
+  if (props.suffixIcon)
+    return 'icon'
+  if (props.showErrorIcon && validationState.value === 'error')
+    return 'error'
+  return null
+})
+
 const rootClasses = computed(() => ['w-full', attrs.class])
 const rootStyle = computed(() => attrs.style as StyleValue)
 const inputAttrs = computed(() => {
@@ -78,6 +147,7 @@ const controlClasses = computed(() => [
   'input w-full max-w-none bg-base-100 border-base-300 focus-within:border-base-content/30 focus-within:outline-none focus-within:ring-2',
   sizeClasses.value.control,
   sizeClasses.value.icon,
+  sizeClasses.value.gap,
   validationState.value === 'error'
     ? 'input-error focus-within:ring-error/25'
     : validationState.value === 'success'
@@ -87,6 +157,14 @@ const controlClasses = computed(() => [
 const nativeInputClasses = computed(() => [
   'min-w-0 grow bg-transparent outline-none placeholder:text-base-content/40 disabled:cursor-not-allowed',
   sizeClasses.value.content,
+])
+const affixClasses = computed(() => [
+  'inline-flex shrink-0 items-center justify-center text-base-content/55',
+  props.disabled && 'opacity-50',
+])
+const toggleClasses = computed(() => [
+  'inline-flex shrink-0 items-center justify-center rounded-md text-base-content/55 transition-colors hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50',
+  sizeClasses.value.toggle,
 ])
 const messageClasses = computed(() => [
   'mt-1.5 block text-xs',
@@ -126,6 +204,14 @@ function onInput(event: Event) {
 
   model.value = input.value
 }
+
+function togglePasswordVisibility() {
+  if (props.disabled)
+    return
+
+  passwordVisible.value = !passwordVisible.value
+  emit('passwordVisibilityChange', passwordVisible.value)
+}
 </script>
 
 <template>
@@ -136,14 +222,16 @@ function onInput(event: Event) {
     </label>
 
     <div :class="controlClasses">
-      <span v-if="$slots.prefix" class="shrink-0 text-base-content/55">
-        <slot name="prefix" />
+      <span v-if="hasPrefix" :class="affixClasses">
+        <slot name="prefix">
+          <DiIcon v-if="prefixIcon" :name="prefixIcon" />
+        </slot>
       </span>
 
       <input
         :id="controlId"
         v-bind="inputAttrs"
-        :type="type"
+        :type="resolvedType"
         :value="model ?? ''"
         :placeholder="placeholder"
         :disabled="disabled"
@@ -156,9 +244,31 @@ function onInput(event: Event) {
         @input="onInput"
       >
 
-      <span v-if="$slots.suffix" class="shrink-0 text-base-content/55">
+      <span v-if="suffixMode === 'slot'" :class="affixClasses">
         <slot name="suffix" />
       </span>
+      <button
+        v-else-if="suffixMode === 'toggle'"
+        type="button"
+        :class="toggleClasses"
+        :disabled="disabled"
+        :aria-label="passwordToggleLabel"
+        :aria-pressed="passwordVisible"
+        :aria-controls="controlId"
+        @click="togglePasswordVisibility"
+      >
+        <DiIcon :name="passwordVisible ? 'eyeOff' : 'eye'" />
+      </button>
+      <span v-else-if="suffixMode === 'icon'" :class="affixClasses">
+        <DiIcon :name="suffixIcon!" />
+      </span>
+      <span
+        v-else-if="suffixMode === 'error'"
+        class="inline-flex shrink-0 items-center justify-center text-error"
+      >
+        <DiIcon name="xCircle" />
+      </span>
+
       <DiLoading
         v-if="loading"
         class="shrink-0"

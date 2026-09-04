@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import { DiInput } from '@/shared/ui/base/input'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 const name = ref('')
 const email = ref('')
-const showPassword = ref(false)
 
 const basicCode = `<script setup lang="ts">
 import { ref } from 'vue'
@@ -43,9 +40,9 @@ const typesCode = `<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
 </div>`
 
 const sizesCode = `<div class="space-y-4">
-  <DiInput size="sm" label="Small input" placeholder="Small" />
-  <DiInput size="md" label="Medium input" placeholder="Medium" />
-  <DiInput size="lg" label="Large input" placeholder="Large" />
+  <DiInput size="sm" label="Small input" placeholder="Small" prefix-icon="mail" />
+  <DiInput size="md" label="Medium input" placeholder="Medium" prefix-icon="mail" />
+  <DiInput size="lg" label="Large input" placeholder="Large" prefix-icon="mail" />
 </div>`
 
 const statesCode = `<div class="space-y-4">
@@ -54,48 +51,46 @@ const statesCode = `<div class="space-y-4">
   <DiInput label="Loading input" placeholder="Fetching account details" loading />
 </div>`
 
-const slotsCode = `<script setup lang="ts">
-import { ref } from 'vue'
+const slotsCode = `<div class="space-y-4">
+  <!-- Prefix icon only -->
+  <DiInput type="email" label="Email" placeholder="name@example.com" prefix-icon="mail" />
 
-import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
-import { DiInput } from '@/shared/ui/base/input'
+  <!-- Suffix icon only -->
+  <DiInput type="search" label="Search" placeholder="Search projects" suffix-icon="search" />
 
-const showPassword = ref(false)
-<\/script>
+  <!-- Prefix and suffix together -->
+  <DiInput label="Event date" placeholder="Pick a date" prefix-icon="calendarDays" suffix-icon="chevronDown" />
 
-<template>
-  <div class="space-y-4">
-    <DiInput type="search" label="Search" placeholder="Search projects">
-      <template #prefix>
-        <DiIcon name="search" />
-      </template>
-      <template #suffix>
-        <kbd class="kbd kbd-sm">⌘K</kbd>
-      </template>
-    </DiInput>
-    <DiInput
-      :type="showPassword ? 'text' : 'password'"
-      label="Password"
-      placeholder="Enter password"
-    >
-      <template #prefix>
-        <DiIcon name="userOutlineRounded" />
-      </template>
-      <template #suffix>
-        <DiButton
-          variant="ghost"
-          size="xs"
-          square
-          :aria-label="showPassword ? 'Hide password' : 'Show password'"
-          @click="showPassword = !showPassword"
-        >
-          {{ showPassword ? 'Hide' : 'Show' }}
-        </DiButton>
-      </template>
-    </DiInput>
-  </div>
-</template>`
+  <!-- Built-in password show/hide toggle -->
+  <DiInput
+    type="password"
+    label="Password"
+    placeholder="Enter password"
+    prefix-icon="lock"
+    show-password-toggle
+    :password-toggle-labels="{ show: 'Show password', hide: 'Hide password' }"
+  />
+
+  <!-- Error state with status icon -->
+  <DiInput
+    model-value="not-an-email"
+    type="email"
+    label="Email"
+    prefix-icon="mail"
+    show-error-icon
+    error="Enter a valid email address."
+  />
+
+  <!-- Custom slot content still overrides the icon props -->
+  <DiInput type="search" label="Command" placeholder="Search">
+    <template #prefix>
+      <kbd class="kbd kbd-sm">⌘</kbd>
+    </template>
+    <template #suffix>
+      <kbd class="kbd kbd-sm">K</kbd>
+    </template>
+  </DiInput>
+</div>`
 
 const validationCode = `<div class="space-y-4">
   <DiInput
@@ -199,16 +194,19 @@ const variantsCode = `<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       <div class="space-y-4">
         <DiInput
           size="sm"
+          prefix-icon="mail"
           :label="$t('features.forms.inputs.labels.small')"
           :placeholder="$t('features.forms.inputs.sizes.small')"
         />
         <DiInput
           size="md"
+          prefix-icon="mail"
           :label="$t('features.forms.inputs.labels.medium')"
           :placeholder="$t('features.forms.inputs.sizes.medium')"
         />
         <DiInput
           size="lg"
+          prefix-icon="mail"
           :label="$t('features.forms.inputs.labels.large')"
           :placeholder="$t('features.forms.inputs.sizes.large')"
         />
@@ -244,45 +242,56 @@ const variantsCode = `<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       :title="$t('features.forms.inputs.sections.slots')"
       accent-color="#8b5cf6"
       :code="slotsCode"
-      language="vue"
+      language="html"
     >
       <div class="space-y-4">
         <DiInput
+          type="email"
+          prefix-icon="mail"
+          :label="$t('features.forms.inputs.labels.emailShort')"
+          placeholder="name@example.com"
+        />
+        <DiInput
           type="search"
+          suffix-icon="search"
           :label="$t('features.forms.inputs.labels.search')"
           :placeholder="$t('features.forms.inputs.placeholders.projects')"
-        >
-          <template #prefix>
-            <DiIcon name="search" />
-          </template>
-          <template #suffix>
-            <kbd class="kbd kbd-sm">⌘K</kbd>
-          </template>
-        </DiInput>
+        />
         <DiInput
-          :type="showPassword ? 'text' : 'password'"
+          prefix-icon="calendarDays"
+          suffix-icon="chevronDown"
+          :label="$t('features.forms.inputs.labels.text')"
+          :placeholder="$t('features.forms.inputs.placeholders.text')"
+        />
+        <DiInput
+          type="password"
+          prefix-icon="lock"
+          show-password-toggle
+          :password-toggle-labels="{
+            show: $t('features.forms.inputs.actions.showPassword'),
+            hide: $t('features.forms.inputs.actions.hidePassword'),
+          }"
           :label="$t('features.forms.inputs.labels.password')"
           :placeholder="$t('features.forms.inputs.placeholders.enterPassword')"
+        />
+        <DiInput
+          model-value="invalid-email"
+          type="email"
+          prefix-icon="mail"
+          show-error-icon
+          :label="$t('features.forms.inputs.labels.emailError')"
+          :error="$t('features.forms.inputs.validation.email')"
+        />
+        <DiInput
+          type="search"
+          :label="$t('features.forms.inputs.labels.search')"
+          :placeholder="$t('features.forms.inputs.placeholders.search')"
         >
           <template #prefix>
-            <DiIcon name="userOutlineRounded" />
+            <kbd class="kbd kbd-sm">⌘</kbd>
           </template>
           <template #suffix>
-            <DiButton
-              variant="ghost"
-              size="xs"
-              square
-              :aria-label="
-                showPassword
-                  ? $t('features.forms.inputs.actions.hidePassword')
-                  : $t('features.forms.inputs.actions.showPassword')
-              "
-              @click="showPassword = !showPassword"
-            >
-              {{
-                showPassword ? $t('common.actions.hide') : $t('features.forms.inputs.actions.show')
-              }}
-            </DiButton>
+            <kbd class="kbd kbd-sm">K</kbd>
           </template>
         </DiInput>
       </div>

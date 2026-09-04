@@ -37,6 +37,8 @@ import ArrowsHorizontalIcon from '~icons/tabler/arrows-horizontal'
 import CheckboxIcon from '~icons/tabler/checkbox'
 import ColorPickerIcon from '~icons/tabler/color-picker'
 import CursorTextIcon from '~icons/tabler/cursor-text'
+import EyeIcon from '~icons/tabler/eye'
+import EyeOffIcon from '~icons/tabler/eye-off'
 import FileUploadIcon from '~icons/tabler/file-upload'
 import LayoutAlignMiddleIcon from '~icons/tabler/layout-align-middle'
 import LayoutColumnsIcon from '~icons/tabler/layout-columns'
@@ -85,6 +87,9 @@ export const coreIconRegistry = {
   form48regular: FormIcon,
   uploadCloud: CloudArrowUpIcon,
   fileDocument: DocumentIcon,
+  // Form control icons (DiInput prefix/suffix, password visibility toggle)
+  eye: EyeIcon,
+  eyeOff: EyeOffIcon,
   // Sidebar submenu icons
   layoutCentered: LayoutAlignMiddleIcon,
   layoutSplit: LayoutColumnsIcon,
@@ -106,10 +111,9 @@ export const lazyIconRegistry = {
   magnify: () => import('~icons/mdi/magnify'),
   phone: () => import('~icons/mdi/phone'),
   chevronUp: () => import('~icons/mdi/chevron-up'),
-  eye: () => import('~icons/mdi/eye-outline'),
-  eyeOff: () => import('~icons/mdi/eye-off-outline'),
-  emailOutline: () => import('~icons/mdi/email-outline'),
-  lockOutline: () => import('~icons/mdi/lock-outline'),
+  // Tabler (form field affixes)
+  mail: () => import('~icons/tabler/mail'),
+  lock: () => import('~icons/tabler/lock'),
   // Material Symbols
   settingsOutlineRounded: () => import('~icons/material-symbols/settings-outline-rounded'),
   folderOutlineRounded: () => import('~icons/material-symbols/folder-outline-rounded'),
