@@ -70,9 +70,21 @@ watch(
         @click="select"
       >
         <span class="emoji-flag">{{ option.flag }}</span>
-        <span>{{ option.label }}</span>
+        <span class="language-name" :lang="option.code">{{ option.label }}</span>
         <span v-if="selected" class="rtl:mr-auto ltr:ml-auto">✓</span>
       </button>
     </template>
   </DiDropdown>
 </template>
+
+<style scoped>
+/*
+ * Force the Persian/Arabic entries to render in the project's Persian font
+ * ('Dana', matching html:lang(fa|ar) body in assets/css/style.css) even when
+ * the active panel locale is something else. Other entries are untouched.
+ */
+.language-name[lang='fa'],
+.language-name[lang='ar'] {
+  font-family: 'Dana', sans-serif;
+}
+</style>
