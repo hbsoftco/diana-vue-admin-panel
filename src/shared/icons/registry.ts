@@ -40,11 +40,15 @@ import CursorTextIcon from '~icons/tabler/cursor-text'
 import EyeIcon from '~icons/tabler/eye'
 import EyeOffIcon from '~icons/tabler/eye-off'
 import FileUploadIcon from '~icons/tabler/file-upload'
+import FormsIcon from '~icons/tabler/forms'
 import LayoutAlignMiddleIcon from '~icons/tabler/layout-align-middle'
 import LayoutColumnsIcon from '~icons/tabler/layout-columns'
+import LockQuestionIcon from '~icons/tabler/lock-question'
+import LoginIcon from '~icons/tabler/login'
 import MoonIcon from '~icons/tabler/moon'
 import SelectIcon from '~icons/tabler/select'
 import SunIcon from '~icons/tabler/sun'
+import UserPlusIcon from '~icons/tabler/user-plus'
 import ComponentDropdownIcon from '~icons/tdesign/component-dropdown'
 
 // Core icons render synchronously because the application shell, navigation, or reusable
@@ -91,6 +95,10 @@ export const coreIconRegistry = {
   eye: EyeIcon,
   eyeOff: EyeOffIcon,
   // Sidebar submenu icons
+  forms: FormsIcon,
+  signIn: LoginIcon,
+  signUp: UserPlusIcon,
+  resetPassword: LockQuestionIcon,
   layoutCentered: LayoutAlignMiddleIcon,
   layoutSplit: LayoutColumnsIcon,
   cursorText: CursorTextIcon,
