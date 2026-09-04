@@ -238,6 +238,15 @@
         "cover": {
           "title": "Zweistufige Verifizierung mit Titelbild"
         }
+      },
+      "lockScreen": {
+        "title": "Sperrbildschirm",
+        "basic": {
+          "title": "Sperrbildschirm Basis"
+        },
+        "cover": {
+          "title": "Sperrbildschirm mit Titelbild"
+        }
       }
     }
   }

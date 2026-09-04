@@ -44,6 +44,7 @@ import FormsIcon from '~icons/tabler/forms'
 import LayoutAlignMiddleIcon from '~icons/tabler/layout-align-middle'
 import LayoutColumnsIcon from '~icons/tabler/layout-columns'
 import LockQuestionIcon from '~icons/tabler/lock-question'
+import LockSquareIcon from '~icons/tabler/lock-square'
 import LoginIcon from '~icons/tabler/login'
 import MoonIcon from '~icons/tabler/moon'
 import PasswordIcon from '~icons/tabler/password'
@@ -102,6 +103,7 @@ export const coreIconRegistry = {
   signUp: UserPlusIcon,
   resetPassword: LockQuestionIcon,
   twoStepVerification: ShieldCheckIcon,
+  lockScreen: LockSquareIcon,
   layoutCentered: LayoutAlignMiddleIcon,
   layoutSplit: LayoutColumnsIcon,
   cursorText: CursorTextIcon,

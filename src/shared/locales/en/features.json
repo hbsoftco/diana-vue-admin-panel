@@ -1389,6 +1389,26 @@
           "codeRequired": "Enter the verification code.",
           "codeIncomplete": "Enter the full 6-digit code."
         }
+      },
+      "lockScreen": {
+        "subtitle": "Enter your password to unlock.",
+        "avatarAlt": "Avatar for {name}",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "submit": "Unlock",
+        "submitting": "Unlocking…",
+        "successTitle": "Unlocked",
+        "successMessage": "Redirecting you to your workspace…",
+        "notYou": "Not you?",
+        "signInDifferent": "Sign in as a different user",
+        "brandTitle": "Welcome back",
+        "brandSubtitle": "Enter your password to pick up right where you left off.",
+        "brandArtworkLabel": "Abstract Diana branding artwork",
+        "errors": {
+          "passwordRequired": "Password is required."
+        }
       }
     }
   }

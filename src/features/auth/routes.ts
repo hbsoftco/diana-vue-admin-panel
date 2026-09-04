@@ -27,6 +27,10 @@ export const authRoutes = {
       redirect: '/auth/two-step/basic',
     },
     {
+      path: 'lock-screen',
+      redirect: '/auth/lock-screen/basic',
+    },
+    {
       path: '',
       component: AuthBasicLayout,
       children: [
@@ -56,6 +60,13 @@ export const authRoutes = {
           component: () => import('@/pages/auth/two-step/basic.vue'),
           meta: {
             pageTitle: 'pages.auth.twoStep.basic.title',
+          },
+        },
+        {
+          path: 'lock-screen/basic',
+          component: () => import('@/pages/auth/lock-screen/basic.vue'),
+          meta: {
+            pageTitle: 'pages.auth.lockScreen.basic.title',
           },
         },
       ],
@@ -94,6 +105,14 @@ export const authRoutes = {
           meta: {
             pageTitle: 'pages.auth.twoStep.cover.title',
             brandVariant: 'two-step',
+          },
+        },
+        {
+          path: 'lock-screen/cover',
+          component: () => import('@/pages/auth/lock-screen/cover.vue'),
+          meta: {
+            pageTitle: 'pages.auth.lockScreen.cover.title',
+            brandVariant: 'lock-screen',
           },
         },
       ],

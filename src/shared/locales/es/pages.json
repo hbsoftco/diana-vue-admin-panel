@@ -238,6 +238,15 @@
         "cover": {
           "title": "Verificación en dos pasos con portada"
         }
+      },
+      "lockScreen": {
+        "title": "Pantalla bloqueada",
+        "basic": {
+          "title": "Pantalla bloqueada básico"
+        },
+        "cover": {
+          "title": "Pantalla bloqueada con portada"
+        }
       }
     }
   }

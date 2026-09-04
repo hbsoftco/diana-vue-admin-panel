@@ -238,6 +238,15 @@
         "cover": {
           "title": "Vérification en deux étapes pleine page"
         }
+      },
+      "lockScreen": {
+        "title": "Écran verrouillé",
+        "basic": {
+          "title": "Écran verrouillé simple"
+        },
+        "cover": {
+          "title": "Écran verrouillé pleine page"
+        }
       }
     }
   }

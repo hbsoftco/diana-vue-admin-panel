@@ -238,6 +238,15 @@
         "cover": {
           "title": "Two-Step Verification Cover"
         }
+      },
+      "lockScreen": {
+        "title": "Lock Screen",
+        "basic": {
+          "title": "Lock Screen Basic"
+        },
+        "cover": {
+          "title": "Lock Screen Cover"
+        }
       }
     }
   }

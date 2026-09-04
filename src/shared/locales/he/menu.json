@@ -84,6 +84,9 @@
     "twoStepBasic": "בסיסי",
     "twoStepCover": "עם רקע",
     "twoStep": "אימות דו-שלבי",
+    "lockScreenBasic": "בסיסי",
+    "lockScreenCover": "עם רקע",
+    "lockScreen": "נעילת מסך",
     "authentication": "אימות"
   }
 }

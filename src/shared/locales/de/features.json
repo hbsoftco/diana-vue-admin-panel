@@ -1389,6 +1389,26 @@
           "codeRequired": "Gib den Bestätigungscode ein.",
           "codeIncomplete": "Gib den vollständigen 6-stelligen Code ein."
         }
+      },
+      "lockScreen": {
+        "subtitle": "Gib dein Passwort ein, um den Bildschirm zu entsperren.",
+        "avatarAlt": "Avatar von {name}",
+        "passwordLabel": "Passwort",
+        "passwordPlaceholder": "Gib dein Passwort ein",
+        "showPassword": "Passwort anzeigen",
+        "hidePassword": "Passwort verbergen",
+        "submit": "Entsperren",
+        "submitting": "Wird entsperrt…",
+        "successTitle": "Entsperrt",
+        "successMessage": "Du wirst zu deinem Arbeitsbereich weitergeleitet…",
+        "notYou": "Nicht du?",
+        "signInDifferent": "Als anderer Benutzer anmelden",
+        "brandTitle": "Willkommen zurück",
+        "brandSubtitle": "Gib dein Passwort ein, um genau dort weiterzumachen, wo du aufgehört hast.",
+        "brandArtworkLabel": "Abstrakte Diana-Markengrafik",
+        "errors": {
+          "passwordRequired": "Passwort ist erforderlich."
+        }
       }
     }
   }

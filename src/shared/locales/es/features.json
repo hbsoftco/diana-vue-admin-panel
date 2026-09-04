@@ -1389,6 +1389,26 @@
           "codeRequired": "Introduce el código de verificación.",
           "codeIncomplete": "Introduce el código de 6 dígitos completo."
         }
+      },
+      "lockScreen": {
+        "subtitle": "Introduce tu contraseña para desbloquear.",
+        "avatarAlt": "Avatar de {name}",
+        "passwordLabel": "Contraseña",
+        "passwordPlaceholder": "Introduce tu contraseña",
+        "showPassword": "Mostrar contraseña",
+        "hidePassword": "Ocultar contraseña",
+        "submit": "Desbloquear",
+        "submitting": "Desbloqueando…",
+        "successTitle": "Desbloqueado",
+        "successMessage": "Redirigiéndote a tu espacio de trabajo…",
+        "notYou": "¿No eres tú?",
+        "signInDifferent": "Iniciar sesión con otro usuario",
+        "brandTitle": "Bienvenido de nuevo",
+        "brandSubtitle": "Introduce tu contraseña para continuar justo donde lo dejaste.",
+        "brandArtworkLabel": "Ilustración abstracta de la marca Diana",
+        "errors": {
+          "passwordRequired": "La contraseña es obligatoria."
+        }
       }
     }
   }

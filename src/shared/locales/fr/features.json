@@ -1389,6 +1389,26 @@
           "codeRequired": "Saisissez le code de vérification.",
           "codeIncomplete": "Saisissez le code à 6 chiffres en entier."
         }
+      },
+      "lockScreen": {
+        "subtitle": "Saisissez votre mot de passe pour déverrouiller.",
+        "avatarAlt": "Avatar de {name}",
+        "passwordLabel": "Mot de passe",
+        "passwordPlaceholder": "Saisissez votre mot de passe",
+        "showPassword": "Afficher le mot de passe",
+        "hidePassword": "Masquer le mot de passe",
+        "submit": "Déverrouiller",
+        "submitting": "Déverrouillage…",
+        "successTitle": "Déverrouillé",
+        "successMessage": "Redirection vers votre espace de travail…",
+        "notYou": "Ce n'est pas vous ?",
+        "signInDifferent": "Se connecter avec un autre compte",
+        "brandTitle": "Content de vous revoir",
+        "brandSubtitle": "Saisissez votre mot de passe pour reprendre exactement là où vous en étiez.",
+        "brandArtworkLabel": "Illustration abstraite de la marque Diana",
+        "errors": {
+          "passwordRequired": "Le mot de passe est obligatoire."
+        }
       }
     }
   }
