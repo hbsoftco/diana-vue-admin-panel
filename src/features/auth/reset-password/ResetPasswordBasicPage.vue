@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import logoUrl from '@/assets/images/logo.svg'
+import DiLogo from '@/shared/ui/base/DiLogo.vue'
 
 import ResetPasswordForm from './ui/ResetPasswordForm.vue'
 
@@ -12,7 +12,7 @@ const { t } = useI18n()
   <div class="flex min-h-screen items-center justify-center p-4 sm:p-6">
     <div class="w-full max-w-md">
       <RouterLink to="/" class="mb-8 flex justify-center">
-        <img :src="logoUrl" :alt="t('layout.sidebar.logoAlt')" class="h-9 w-auto">
+        <DiLogo :label="t('layout.sidebar.logoAlt')" class="h-9 w-auto text-base-content" />
       </RouterLink>
 
       <div class="card border border-base-300 bg-base-100 shadow-sm">

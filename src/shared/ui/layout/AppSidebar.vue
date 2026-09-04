@@ -8,6 +8,7 @@ import type { MenuItem as MenuItemType } from '@/shared/types/models'
 import { menuItems } from '@/shared/config/menu'
 import { isMenuLabel } from '@/shared/types/models'
 import DiDrawer from '@/shared/ui/base/DiDrawer.vue'
+import DiLogo from '@/shared/ui/base/DiLogo.vue'
 import { useSidebar } from '@/shared/utils/use-sidebar'
 
 import MenuItem from './MenuItem.vue'
@@ -118,18 +119,17 @@ watch(usesCollapsedInlineMenus, (isActive) => {
       >
         <div class="flex h-16 items-center border-b border-(--color-menu-border) px-4">
           <RouterLink to="/" class="overflow-hidden" @click="handleNavigate">
-            <img
+            <DiLogo
               v-if="!isDesktopCollapsed"
-              src="@/assets/images/logo.svg"
-              :alt="t('layout.sidebar.logoAlt')"
-              class="ms-6 h-8 w-auto transition-all duration-300 motion-reduce:transition-none"
-            >
-            <img
+              :label="t('layout.sidebar.logoAlt')"
+              class="ms-6 h-8 w-auto text-primary-content transition-all duration-300 motion-reduce:transition-none"
+            />
+            <DiLogo
               v-else
-              src="@/assets/images/logo-mini.svg"
-              :alt="t('layout.sidebar.logoAlt')"
-              class="h-8 w-auto transition-all duration-300 motion-reduce:transition-none"
-            >
+              variant="mini"
+              :label="t('layout.sidebar.logoAlt')"
+              class="h-8 w-auto text-primary-content transition-all duration-300 motion-reduce:transition-none"
+            />
           </RouterLink>
         </div>
 

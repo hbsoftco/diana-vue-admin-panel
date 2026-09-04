@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 
 import type { Size } from '@/shared/types/models'
 
-import logoMiniUrl from '@/assets/images/logo-mini.svg'
+import DiLogo from '@/shared/ui/base/DiLogo.vue'
 
 type Props = {
   text?: string
@@ -38,7 +38,7 @@ const loadingText = computed(() => props.text ?? t('components.logoLoading.loadi
     aria-live="polite"
     aria-busy="true"
   >
-    <img :src="logoMiniUrl" alt="" :class="logoClasses">
+    <DiLogo variant="mini" :class="logoClasses" />
 
     <span class="text-sm text-base-content/70">{{ loadingText }}</span>
 

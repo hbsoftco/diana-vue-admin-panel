@@ -14,7 +14,7 @@ describe('diLogoLoading', () => {
       'aria-busy': 'true',
       'aria-live': 'polite',
     })
-    expect(wrapper.get('img').attributes('src')).toBeTruthy()
+    expect(wrapper.get('svg.di-logo').attributes('viewBox')).toBe('0 0 357 216')
     expect(wrapper.text()).toContain('Loading')
     expect(wrapper.find('.di-logo-loading__indicator').exists()).toBe(true)
   })
@@ -34,7 +34,7 @@ describe('diLogoLoading', () => {
     })
 
     expect(wrapper.text()).toContain('Loading your content...')
-    expect(wrapper.get('img').classes()).toContain('w-32')
+    expect(wrapper.get('svg.di-logo').classes()).toContain('w-32')
   })
 
   it('hides the indicator when requested', () => {

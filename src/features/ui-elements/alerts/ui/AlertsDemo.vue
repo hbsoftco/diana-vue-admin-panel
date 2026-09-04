@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
+import DiLogo from '@/shared/ui/base/DiLogo.vue'
 import PreviewCodeCard from '@/shared/ui/patterns/PreviewCodeCard.vue'
 
 const customClosePrimary = ref(true)
@@ -228,7 +229,7 @@ const imageAlerts = `<div class="flex flex-col gap-3">
   </DiAlert>
   <DiAlert variant="info" soft>
     <template #icon>
-      <img src="@/assets/images/logo-mini.svg" alt="" class="size-8 rounded-lg object-cover">
+      <DiLogo variant="mini" class="size-8 rounded-lg text-base-content" />
     </template>
     An info alert with a different image
   </DiAlert>
@@ -249,7 +250,7 @@ const sizedImageAlerts = `<div class="flex flex-col gap-3">
   </DiAlert>
   <DiAlert variant="info" soft>
     <template #icon>
-      <img src="@/assets/images/logo-mini.svg" alt="" class="size-8 rounded-lg object-cover">
+      <DiLogo variant="mini" class="size-8 rounded-lg text-base-content" />
     </template>
     An alert with a medium image
   </DiAlert>
@@ -811,11 +812,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
         </DiAlert>
         <DiAlert variant="info" soft>
           <template #icon>
-            <img
-              src="@/assets/images/logo-mini.svg"
-              alt=""
-              class="size-8 rounded-lg object-cover"
-            >
+            <DiLogo variant="mini" class="size-8 rounded-lg text-base-content" />
           </template>{{ $t('features.uiElements.alert.live.anInfoAlertWithADifferentImage') }}
         </DiAlert>
         <DiAlert variant="success" soft>
@@ -848,11 +845,7 @@ const additionalContent = `<div class="grid gap-4 lg:grid-cols-2">
         </DiAlert>
         <DiAlert variant="info" soft>
           <template #icon>
-            <img
-              src="@/assets/images/logo-mini.svg"
-              alt=""
-              class="size-8 rounded-lg object-cover"
-            >
+            <DiLogo variant="mini" class="size-8 rounded-lg text-base-content" />
           </template>{{ $t('features.uiElements.alert.live.anAlertWithAMediumImage') }}
         </DiAlert>
         <DiAlert variant="warning" soft>
