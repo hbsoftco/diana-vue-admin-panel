@@ -1076,6 +1076,27 @@
           "green": "ירוק",
           "blue": "כחול"
         }
+      },
+      "otpInput": {
+        "sections": {
+          "basic": "שימוש בסיסי",
+          "sizes": "גדלים",
+          "lengths": "אורכים",
+          "states": "מושבת ושגיאה",
+          "live": "הדגמה חיה"
+        },
+        "aria": {
+          "code": "קוד אימות",
+          "shortCode": "קוד בן 4 ספרות"
+        },
+        "messages": {
+          "error": "הקוד לא תואם. נסו שוב.",
+          "autoFocusNote": "העבירו את auto-focus כדי למקד את התיבה הראשונה אוטומטית עם הטעינה. מושבת בעמוד זה משום שכמה שדות משותפים בו."
+        },
+        "live": {
+          "result": "הוזן: {code}",
+          "empty": "ממתין לקלט…"
+        }
       }
     },
     "advancedUi": {
@@ -1346,6 +1367,27 @@
         "errors": {
           "emailRequired": "יש להזין דוא\"ל.",
           "emailInvalid": "יש להזין כתובת דוא\"ל תקינה."
+        }
+      },
+      "twoStep": {
+        "title": "אימות דו-שלבי",
+        "subtitle": "הזינו את הקוד בן 6 הספרות שנשלח לדוא\"ל או לטלפון שלכם.",
+        "codeAriaLabel": "קוד אימות",
+        "digitAriaLabel": "ספרה {index} מתוך {length}",
+        "submit": "אימות",
+        "submitting": "מאמת…",
+        "successTitle": "האימות הושלם",
+        "successMessage": "זהותכם אומתה.",
+        "resend": "שליחת קוד מחדש",
+        "resendCooldown": "שליחה מחדש בעוד {seconds} שניות",
+        "didNotGetCode": "לא קיבלתם קוד?",
+        "backToSignIn": "חזרה להתחברות",
+        "brandTitle": "אמתו שזה אתם",
+        "brandSubtitle": "הזינו את הקוד ששלחנו לכם כדי להשלים את אבטחת סביבת העבודה שלכם ב-Diana.",
+        "brandArtworkLabel": "יצירת מיתוג מופשטת של Diana",
+        "errors": {
+          "codeRequired": "יש להזין את קוד האימות.",
+          "codeIncomplete": "יש להזין את הקוד בן 6 הספרות במלואו."
         }
       }
     }

@@ -133,6 +133,9 @@
       },
       "colorPicker": {
         "title": "Sélecteur de couleur"
+      },
+      "otpInput": {
+        "title": "Saisie OTP"
       }
     },
     "advancedUi": {
@@ -225,6 +228,15 @@
         },
         "cover": {
           "title": "Réinitialisation pleine page"
+        }
+      },
+      "twoStep": {
+        "title": "Vérification en deux étapes",
+        "basic": {
+          "title": "Vérification en deux étapes simple"
+        },
+        "cover": {
+          "title": "Vérification en deux étapes pleine page"
         }
       }
     }

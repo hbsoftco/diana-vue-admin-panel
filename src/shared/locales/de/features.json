@@ -1076,6 +1076,27 @@
           "green": "Grün",
           "blue": "Blau"
         }
+      },
+      "otpInput": {
+        "sections": {
+          "basic": "Grundlegende Verwendung",
+          "sizes": "Größen",
+          "lengths": "Längen",
+          "states": "Deaktiviert & Fehler",
+          "live": "Live-Demo"
+        },
+        "aria": {
+          "code": "Bestätigungscode",
+          "shortCode": "4-stelliger Code"
+        },
+        "messages": {
+          "error": "Der Code stimmt nicht überein. Bitte versuche es erneut.",
+          "autoFocusNote": "Übergib die auto-focus-Prop, um beim Mounten automatisch das erste Feld zu fokussieren. Auf dieser Seite deaktiviert, da mehrere Felder sie gemeinsam nutzen."
+        },
+        "live": {
+          "result": "Eingegeben: {code}",
+          "empty": "Warte auf Eingabe…"
+        }
       }
     },
     "advancedUi": {
@@ -1346,6 +1367,27 @@
         "errors": {
           "emailRequired": "E-Mail ist erforderlich.",
           "emailInvalid": "Gib eine gültige E-Mail-Adresse ein."
+        }
+      },
+      "twoStep": {
+        "title": "Zweistufige Verifizierung",
+        "subtitle": "Gib den 6-stelligen Code ein, der an deine E-Mail-Adresse oder dein Telefon gesendet wurde.",
+        "codeAriaLabel": "Bestätigungscode",
+        "digitAriaLabel": "Ziffer {index} von {length}",
+        "submit": "Verifizieren",
+        "submitting": "Wird verifiziert…",
+        "successTitle": "Verifiziert",
+        "successMessage": "Deine Identität wurde bestätigt.",
+        "resend": "Code erneut senden",
+        "resendCooldown": "Code erneut senden in {seconds}s",
+        "didNotGetCode": "Keinen Code erhalten?",
+        "backToSignIn": "Zurück zur Anmeldung",
+        "brandTitle": "Bestätige, dass du es bist",
+        "brandSubtitle": "Gib den Code ein, den wir dir gesendet haben, um deinen Diana-Arbeitsbereich abzusichern.",
+        "brandArtworkLabel": "Abstrakte Diana-Markengrafik",
+        "errors": {
+          "codeRequired": "Gib den Bestätigungscode ein.",
+          "codeIncomplete": "Gib den vollständigen 6-stelligen Code ein."
         }
       }
     }

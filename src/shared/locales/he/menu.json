@@ -51,6 +51,7 @@
     "select": "בחירה",
     "fileUpload": "העלאת קובץ",
     "colorPicker": "בורר צבעים",
+    "otpInput": "קלט OTP",
     "advancedUi": "ממשק משתמש מתקדם",
     "accordion": "אקורדיון",
     "collapse": "כיווץ",
@@ -80,6 +81,9 @@
     "resetPasswordBasic": "בסיסי",
     "resetPasswordCover": "עם רקע",
     "resetPassword": "איפוס סיסמה",
+    "twoStepBasic": "בסיסי",
+    "twoStepCover": "עם רקע",
+    "twoStep": "אימות דו-שלבי",
     "authentication": "אימות"
   }
 }

@@ -133,6 +133,9 @@
       },
       "colorPicker": {
         "title": "Color Picker"
+      },
+      "otpInput": {
+        "title": "OTP Input"
       }
     },
     "advancedUi": {
@@ -225,6 +228,15 @@
         },
         "cover": {
           "title": "Reset Password Cover"
+        }
+      },
+      "twoStep": {
+        "title": "Two-Step Verification",
+        "basic": {
+          "title": "Two-Step Verification Basic"
+        },
+        "cover": {
+          "title": "Two-Step Verification Cover"
         }
       }
     }

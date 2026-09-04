@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { nextTick } from 'vue'
 import { createMemoryHistory, createRouter } from 'vue-router'
 
@@ -9,6 +9,7 @@ import { menuItems } from '@/shared/config/menu'
 import { testI18n } from '@/shared/ui/base/__tests__/setup'
 
 import SignInForm from '../sign-in/ui/SignInForm.vue'
+import TwoStepVerificationForm from '../two-step/ui/TwoStepVerificationForm.vue'
 
 function mountForm() {
   const router = createRouter({
@@ -17,6 +18,15 @@ function mountForm() {
   })
 
   return mount(SignInForm, { global: { plugins: [router] } })
+}
+
+function mountTwoStepForm() {
+  const router = createRouter({
+    history: createMemoryHistory(),
+    routes: [{ path: '/:pathMatch(.*)*', component: { template: '<div />' } }],
+  })
+
+  return mount(TwoStepVerificationForm, { global: { plugins: [router] } })
 }
 
 describe('sign-in form', () => {
@@ -110,5 +120,63 @@ describe('authentication sidebar menu entry', () => {
     expect(cover?.icon).toBe('layoutSplit')
     for (const icon of [basic?.icon, cover?.icon])
       expect(icon).not.toMatch(/^circle/)
+  })
+
+  it('nests "Two Step Verification" under "Authentication" with Basic and Cover leaf routes', () => {
+    const authentication = findById(menuItems, 'authentication')
+    const twoStep = authentication?.children?.find(
+      (child): child is MenuNavigationItem => child.type !== 'label' && child.id === 'two-step',
+    )
+
+    expect(twoStep).toBeDefined()
+    expect(twoStep?.icon).toBe('twoStepVerification')
+    expect(twoStep?.route).toBeUndefined()
+    expect(twoStep?.children?.map(child => child.type !== 'label' && child.route)).toEqual([
+      '/auth/two-step/basic',
+      '/auth/two-step/cover',
+    ])
+  })
+
+  it('reuses the Basic and Cover icons for the Two Step Verification leaves', () => {
+    const basic = findById(menuItems, 'two-step-basic')
+    const cover = findById(menuItems, 'two-step-cover')
+
+    expect(basic?.icon).toBe('layoutCentered')
+    expect(cover?.icon).toBe('layoutSplit')
+  })
+})
+
+describe('two-step verification form', () => {
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('keeps the Verify button disabled until the code is fully entered', async () => {
+    const wrapper = mountTwoStepForm()
+    const boxes = wrapper.findAll<HTMLInputElement>('input')
+    const submit = wrapper.get('button[type="submit"]')
+
+    expect(boxes).toHaveLength(6)
+    expect(submit.attributes('disabled')).toBeDefined()
+
+    for (const box of boxes)
+      await box.setValue('1')
+
+    expect(submit.attributes('disabled')).toBeUndefined()
+  })
+
+  it('starts a 30s cooldown on resend and re-enables the button when it elapses', async () => {
+    vi.useFakeTimers()
+    const wrapper = mountTwoStepForm()
+    const resend = wrapper.findAll('button').find(button => button.text().includes('Resend'))!
+
+    expect(resend.attributes('disabled')).toBeUndefined()
+
+    await resend.trigger('click')
+    expect(resend.attributes('disabled')).toBeDefined()
+    expect(resend.text()).toContain('30')
+
+    await vi.advanceTimersByTimeAsync(30_000)
+    expect(resend.attributes('disabled')).toBeUndefined()
   })
 })

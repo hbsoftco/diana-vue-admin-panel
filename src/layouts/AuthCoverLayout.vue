@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 
 import AuthBrandPanel from './AuthBrandPanel.vue'
 
-type AuthBrandVariant = 'sign-in' | 'sign-up' | 'reset-password'
+type AuthBrandVariant = 'sign-in' | 'sign-up' | 'reset-password' | 'two-step'
 
 const BRAND_KEYS: Record<
   AuthBrandVariant,
@@ -25,6 +25,11 @@ const BRAND_KEYS: Record<
     title: 'features.auth.resetPassword.brandTitle',
     subtitle: 'features.auth.resetPassword.brandSubtitle',
     artworkLabel: 'features.auth.resetPassword.brandArtworkLabel',
+  },
+  'two-step': {
+    title: 'features.auth.twoStep.brandTitle',
+    subtitle: 'features.auth.twoStep.brandSubtitle',
+    artworkLabel: 'features.auth.twoStep.brandArtworkLabel',
   },
 }
 

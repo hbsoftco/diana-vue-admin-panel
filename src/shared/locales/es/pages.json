@@ -133,6 +133,9 @@
       },
       "colorPicker": {
         "title": "Selector de color"
+      },
+      "otpInput": {
+        "title": "Entrada OTP"
       }
     },
     "advancedUi": {
@@ -225,6 +228,15 @@
         },
         "cover": {
           "title": "Restablecer contraseña con portada"
+        }
+      },
+      "twoStep": {
+        "title": "Verificación en dos pasos",
+        "basic": {
+          "title": "Verificación en dos pasos básico"
+        },
+        "cover": {
+          "title": "Verificación en dos pasos con portada"
         }
       }
     }

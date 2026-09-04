@@ -90,5 +90,17 @@ export const formRoutes = {
         ],
       },
     },
+    {
+      path: 'form-elements/otp-input',
+      component: () => import('@/pages/forms/form-elements/otp-input.vue'),
+      meta: {
+        pageTitle: 'pages.forms.otpInput.title',
+        breadcrumb: [
+          { label: 'pages.forms.title', link: '/forms' },
+          { label: 'pages.forms.formElements.title' },
+          { label: 'pages.forms.otpInput.title' },
+        ],
+      },
+    },
   ],
 }
