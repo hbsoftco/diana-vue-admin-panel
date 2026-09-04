@@ -32,4 +32,18 @@ describe('languageToggle', () => {
     expect(wrapper.get('button[aria-label]').attributes('aria-label')).toBe('Sprache auswählen')
     expect(wrapper.text()).toContain('🇩🇪')
   })
+
+  it('tags the Persian and Arabic entries with a script lang so they keep the Persian font', async () => {
+    const wrapper = mount(LanguageToggle)
+
+    await wrapper.get('[role="button"]').trigger('mousedown')
+
+    const labelFor = (text: string) =>
+      wrapper.findAll('ul button .language-name').find(node => node.text() === text)
+
+    expect(labelFor('فارسی')?.attributes('lang')).toBe('fa')
+    expect(labelFor('العربية')?.attributes('lang')).toBe('ar')
+    // Other entries are tagged with their own locale, never the Persian-script lang.
+    expect(labelFor('English')?.attributes('lang')).toBe('en')
+  })
 })
