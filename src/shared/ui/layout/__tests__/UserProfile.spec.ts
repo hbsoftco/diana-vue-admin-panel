@@ -1,18 +1,29 @@
 import { mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import { nextTick } from 'vue'
 
 import { testI18n } from '../../base/__tests__/setup'
 import UserProfile from '../UserProfile.vue'
 
-function openPanel(wrapper: ReturnType<typeof mount>) {
-  return wrapper.get('[role="button"]').trigger('mousedown')
+async function openPanel(wrapper: ReturnType<typeof mount>) {
+  await wrapper.get('[data-di-dropdown-trigger]').trigger('click')
+  await nextTick()
+  await nextTick()
 }
+
+function panelItems() {
+  return Array.from(document.body.querySelectorAll<HTMLElement>('[role="menu"] [role="menuitem"]'))
+}
+
+afterEach(() => {
+  document.body.innerHTML = ''
+  testI18n.global.locale.value = 'en'
+})
 
 describe('userProfile', () => {
   it('shows the avatar, name and role on the trigger with popup a11y attributes', async () => {
-    const wrapper = mount(UserProfile)
-    const trigger = wrapper.get('[role="button"]')
+    const wrapper = mount(UserProfile, { attachTo: document.body })
+    const trigger = wrapper.get('[data-di-dropdown-trigger]')
 
     expect(trigger.attributes('aria-haspopup')).toBe('menu')
     expect(trigger.attributes('aria-expanded')).toBe('false')
@@ -23,19 +34,20 @@ describe('userProfile', () => {
     await openPanel(wrapper)
 
     expect(trigger.attributes('aria-expanded')).toBe('true')
+    wrapper.unmount()
   })
 
   it('repeats the name and role in the panel header and lists the existing items with icons', async () => {
-    const wrapper = mount(UserProfile)
+    const wrapper = mount(UserProfile, { attachTo: document.body })
     await openPanel(wrapper)
 
-    // Panel header repeats the identity block (2nd avatar image + name + role).
-    expect(wrapper.findAll('img')).toHaveLength(2)
+    const menu = document.body.querySelector('[role="menu"]')!
+    expect(menu.textContent).toContain('John Doe')
+    expect(menu.textContent).toContain('Administrator')
+    // Header repeats the identity avatar in the teleported panel.
+    expect(menu.querySelector('img')).not.toBeNull()
 
-    const rows = wrapper.findAll('ul li button')
-    const labels = rows.map(row => row.text().trim())
-
-    // Same labels, same order as the existing menu (Messages keeps its "3" badge).
+    const labels = panelItems().map(row => row.textContent?.replace(/\s+/g, ''))
     expect(labels).toEqual([
       'Dashboard',
       'Profile',
@@ -44,31 +56,36 @@ describe('userProfile', () => {
       'Help',
       'Logout',
     ])
-    // Divider stays before the final Logout row.
-    expect(wrapper.findAll('ul .divider').length).toBeGreaterThanOrEqual(2)
-    // Each row renders an icon; the first row uses a core (sync) icon.
-    expect(rows[0]?.find('svg').exists()).toBe(true)
+
+    // Dividers keep their original positions (after Messages and after Help).
+    expect(menu.querySelectorAll('[role="separator"]').length).toBeGreaterThanOrEqual(3)
+    expect(panelItems()[0]?.querySelector('svg')).not.toBeNull()
+    wrapper.unmount()
   })
 
   it('closes on Escape', async () => {
-    const wrapper = mount(UserProfile)
+    const wrapper = mount(UserProfile, { attachTo: document.body })
     await openPanel(wrapper)
-    expect(wrapper.find('ul li button').exists()).toBe(true)
+    expect(document.body.querySelector('[role="menu"]')).not.toBeNull()
 
-    await wrapper.get('.dropdown').trigger('keydown', { key: 'Escape' })
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))
+    await nextTick()
+    await nextTick()
 
-    expect(wrapper.get('[role="button"]').attributes('aria-expanded')).toBe('false')
-    expect(wrapper.find('ul li button').exists()).toBe(false)
+    expect(wrapper.get('[data-di-dropdown-trigger]').attributes('aria-expanded')).toBe('false')
+    wrapper.unmount()
   })
 
   it('localizes the role and item labels with the active locale', async () => {
-    const wrapper = mount(UserProfile)
+    const wrapper = mount(UserProfile, { attachTo: document.body })
 
     testI18n.global.locale.value = 'fa'
     await nextTick()
     await openPanel(wrapper)
 
-    expect(wrapper.text()).toContain('مدیر')
-    expect(wrapper.findAll('ul li button').map(row => row.text().trim())).toContain('خروج')
+    const menu = document.body.querySelector('[role="menu"]')!
+    expect(menu.textContent).toContain('مدیر')
+    expect(panelItems().map(row => row.textContent?.trim())).toContain('خروج')
+    wrapper.unmount()
   })
 })

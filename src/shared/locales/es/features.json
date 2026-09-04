@@ -139,7 +139,20 @@
         "userMenu": "Menú de usuario",
         "openMenu": "Abrir menú de usuario",
         "userAvatar": "Avatar del usuario",
-        "lastLogin": "Último acceso: hace 2 horas"
+        "lastLogin": "Último acceso: hace 2 horas",
+        "account": "Cuenta",
+        "basic": "Menú básico",
+        "placement": "Ubicación y volteo automático",
+        "stayOpen": "Permanecer abierto al hacer clic",
+        "stayOpenHint": "Con close-on-content-click desactivado, el panel permanece abierto mientras alternas varios elementos.",
+        "controlled": "Estado de apertura controlado",
+        "toggleExternally": "Alternar desde fuera",
+        "exclusiveGroup": "Grupo exclusivo",
+        "richContent": "Contenido enriquecido",
+        "keyboardHint": "Las flechas mueven entre elementos, Escape cierra y devuelve el foco, y al escribir salta a una coincidencia.",
+        "columns": "Columnas",
+        "filters": "Filtros",
+        "sort": "Ordenar"
       },
       "popover": {
         "basic": "Popover básico",

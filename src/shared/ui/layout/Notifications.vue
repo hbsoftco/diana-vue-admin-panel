@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import DiButton from '@/shared/ui/base/DiButton.vue'
+import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 
 type RelativeTime = {
   count: number
@@ -58,11 +58,7 @@ const notifications = ref<Notification[]>([
 ])
 
 const unreadCount = computed(() => notifications.value.filter(n => n.unread).length)
-const showNotifications = ref(false)
-
-function toggleNotifications() {
-  showNotifications.value = !showNotifications.value
-}
+const notificationsLabel = computed(() => t('layout.notifications.label'))
 
 function markAsRead(id: number) {
   const notification = notifications.value.find(n => n.id === id)
@@ -86,68 +82,67 @@ function formatRelativeTime(time: RelativeTime) {
 </script>
 
 <template>
-  <div class="relative">
-    <DiButton
-      size="sm"
-      variant="ghost"
-      circle
-      :aria-label="t('layout.notifications.label')"
-      :title="t('layout.notifications.label')"
-      class="relative"
-      @click="toggleNotifications"
-    >
+  <DiDropdown
+    class="btn btn-ghost btn-circle btn-sm relative"
+    group="header"
+    placement="bottom-end"
+    role="dialog"
+    panel-class="w-80"
+    :aria-label="notificationsLabel"
+    :title="notificationsLabel"
+  >
+    <template #trigger>
       <i-iconoir-bell-notification class="text-sm" />
       <span
         v-if="unreadCount > 0"
-        class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full text-[10px] text-error-content flex items-center justify-center"
+        class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-secondary text-[10px] text-error-content"
       >
         {{ unreadCount > 9 ? '9+' : unreadCount }}
       </span>
-    </DiButton>
+    </template>
 
-    <!-- Notifications Dropdown -->
-    <div
-      v-if="showNotifications"
-      class="absolute right-0 mt-2 w-80 bg-base-100 border border-base-300 rounded-lg shadow-lg z-50"
-      @click.stop
-    >
-      <div class="p-4 border-b border-base-300">
+    <template #default>
+      <div class="border-b border-base-300 p-4">
         <h3 class="font-semibold">
           {{ t('layout.notifications.title') }}
         </h3>
       </div>
+
       <div class="max-h-96 overflow-y-auto">
-        <div
+        <button
           v-for="notification in notifications"
           :key="notification.id"
-          class="p-4 border-b border-base-300 hover:bg-base-200 cursor-pointer transition-colors"
+          type="button"
+          data-di-dropdown-no-close
+          class="block w-full border-b border-base-300 p-4 text-start transition-colors hover:bg-base-200 focus:bg-base-200 focus:outline-none"
           :class="{ 'bg-base-200/50': notification.unread }"
           @click="markAsRead(notification.id)"
         >
-          <div class="flex justify-between items-start gap-2">
-            <div class="flex-1 min-w-0">
-              <p class="font-medium text-sm truncate">
+          <div class="flex items-start justify-between gap-2">
+            <div class="min-w-0 flex-1">
+              <p class="truncate text-sm font-medium">
                 {{ t(notification.titleKey) }}
               </p>
-              <p class="text-xs text-base-content/60 mt-1">
+              <p class="mt-1 text-xs text-base-content/60">
                 {{ t(notification.descriptionKey, notification.descriptionParams) }}
               </p>
-              <p class="text-xs text-base-content/40 mt-1">
+              <p class="mt-1 text-xs text-base-content/40">
                 {{ formatRelativeTime(notification.time) }}
               </p>
             </div>
             <span
               v-if="notification.unread"
-              class="w-2 h-2 bg-primary rounded-full shrink-0 mt-1"
+              class="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary"
             />
           </div>
-        </div>
+        </button>
       </div>
-      <div class="p-3 text-center border-t border-base-300">
-        <button class="btn btn-ghost btn-sm w-full">
+
+      <div class="border-t border-base-300 p-3 text-center">
+        <button type="button" class="btn btn-ghost btn-sm w-full">
           {{ t('layout.notifications.viewAll') }}
         </button>
       </div>
-    </div>
-  </div>
+    </template>
+  </DiDropdown>
 </template>
