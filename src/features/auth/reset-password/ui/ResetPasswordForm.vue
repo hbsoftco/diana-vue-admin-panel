@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { computed, ref, useId } from 'vue'
+import { useId } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import { DiInput } from '@/shared/ui/base/input'
+
+import { emailKey, useAuthForm } from '../../composables/use-auth-form'
 
 export type ResetPasswordPayload = {
   email: string
@@ -16,51 +18,20 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/
+const headingId = `${useId()}-heading`
 
-const uid = useId()
-const headingId = `${uid}-heading`
-
-const email = ref('')
-const submitting = ref(false)
-const submitted = ref(false)
-const succeeded = ref(false)
-
-const emailErrorKey = computed(() => {
-  const value = email.value.trim()
-  if (!value)
-    return 'features.auth.resetPassword.errors.emailRequired'
-  if (!EMAIL_PATTERN.test(value))
-    return 'features.auth.resetPassword.errors.emailInvalid'
-  return ''
+const { fields, errors, submitting, succeeded, handleSubmit } = useAuthForm({
+  tag: 'ResetPassword',
+  fields: { email: '' },
+  trimFields: ['email'],
+  validators: {
+    email: emailKey(
+      'features.auth.resetPassword.errors.emailRequired',
+      'features.auth.resetPassword.errors.emailInvalid',
+    ),
+  },
+  onSubmit: payload => emit('submit', payload),
 })
-
-const emailError = computed(() =>
-  submitted.value && emailErrorKey.value ? t(emailErrorKey.value) : '',
-)
-
-async function onSubmit() {
-  submitted.value = true
-
-  if (emailErrorKey.value || submitting.value)
-    return
-
-  submitting.value = true
-
-  const payload: ResetPasswordPayload = {
-    email: email.value.trim(),
-  }
-
-  // UI-only build: fake the network round-trip and report the collected values.
-  await new Promise(resolve => setTimeout(resolve, 1200))
-
-  // eslint-disable-next-line no-console
-  console.log('[ResetPassword] submit', payload)
-  emit('submit', payload)
-
-  submitting.value = false
-  succeeded.value = true
-}
 </script>
 
 <template>
@@ -89,10 +60,10 @@ async function onSubmit() {
       class="space-y-5"
       novalidate
       :aria-labelledby="headingId"
-      @submit.prevent="onSubmit"
+      @submit.prevent="handleSubmit"
     >
       <DiInput
-        v-model="email"
+        v-model="fields.email"
         type="email"
         name="email"
         autocomplete="email"
@@ -100,7 +71,7 @@ async function onSubmit() {
         prefix-icon="mail"
         :label="t('features.auth.resetPassword.emailLabel')"
         :placeholder="t('features.auth.resetPassword.emailPlaceholder')"
-        :error="emailError"
+        :error="errors.email"
         required
       />
 

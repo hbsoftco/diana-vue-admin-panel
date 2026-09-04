@@ -4,9 +4,9 @@ import { useI18n } from 'vue-i18n'
 import DiLogo from '@/shared/ui/base/DiLogo.vue'
 
 type Props = {
-  title?: string
-  subtitle?: string
-  artworkLabel?: string
+  title: string
+  subtitle: string
+  artworkLabel: string
 }
 
 defineProps<Props>()
@@ -38,15 +38,15 @@ const { t } = useI18n()
 
     <div class="relative max-w-md">
       <p class="text-3xl font-bold leading-tight xl:text-4xl">
-        {{ title ?? t('features.auth.signIn.brandTitle') }}
+        {{ title }}
       </p>
       <p class="mt-4 text-base text-primary-content/80">
-        {{ subtitle ?? t('features.auth.signIn.brandSubtitle') }}
+        {{ subtitle }}
       </p>
     </div>
 
     <p class="relative text-sm text-primary-content/70">
-      {{ artworkLabel ?? t('features.auth.signIn.brandArtworkLabel') }}
+      {{ artworkLabel }}
     </p>
   </section>
 </template>
