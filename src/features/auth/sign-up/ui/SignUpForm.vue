@@ -1,10 +1,20 @@
 <script setup lang="ts">
-import { computed, ref, useId } from 'vue'
+import { computed, useId } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import DiCheckbox from '@/shared/ui/base/checkbox/DiCheckbox.vue'
+import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import { DiInput } from '@/shared/ui/base/input'
+
+import {
+  checkedKey,
+  emailKey,
+  matchKey,
+  minLenKey,
+  requiredKey,
+  useAuthForm,
+} from '../../composables/use-auth-form'
 
 export type SignUpPayload = {
   fullName: string
@@ -19,108 +29,45 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/
 const MIN_PASSWORD_LENGTH = 8
+const headingId = `${useId()}-heading`
 
-const uid = useId()
-const headingId = `${uid}-heading`
-
-const fullName = ref('')
-const email = ref('')
-const password = ref('')
-const confirmPassword = ref('')
-const agreeToTerms = ref(false)
-const submitting = ref(false)
-const submitted = ref(false)
+const { fields, errors, submitting, succeeded, handleSubmit } = useAuthForm({
+  tag: 'SignUp',
+  fields: {
+    fullName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    agreeToTerms: false,
+  },
+  trimFields: ['fullName', 'email'],
+  omitFields: ['confirmPassword'],
+  validators: {
+    fullName: requiredKey('features.auth.signUp.errors.fullNameRequired'),
+    email: emailKey(
+      'features.auth.signUp.errors.emailRequired',
+      'features.auth.signUp.errors.emailInvalid',
+    ),
+    password: minLenKey(
+      MIN_PASSWORD_LENGTH,
+      'features.auth.signUp.errors.passwordRequired',
+      'features.auth.signUp.errors.passwordTooShort',
+    ),
+    confirmPassword: matchKey(
+      'password',
+      'features.auth.signUp.errors.confirmPasswordRequired',
+      'features.auth.signUp.errors.passwordMismatch',
+    ),
+    agreeToTerms: checkedKey('features.auth.signUp.errors.termsRequired'),
+  },
+  onSubmit: payload => emit('submit', payload),
+})
 
 const passwordToggleLabels = computed(() => ({
   show: t('features.auth.signUp.showPassword'),
   hide: t('features.auth.signUp.hidePassword'),
 }))
-
-const fullNameErrorKey = computed(() =>
-  fullName.value.trim() ? '' : 'features.auth.signUp.errors.fullNameRequired',
-)
-
-const emailErrorKey = computed(() => {
-  const value = email.value.trim()
-  if (!value)
-    return 'features.auth.signUp.errors.emailRequired'
-  if (!EMAIL_PATTERN.test(value))
-    return 'features.auth.signUp.errors.emailInvalid'
-  return ''
-})
-
-const passwordErrorKey = computed(() => {
-  if (!password.value)
-    return 'features.auth.signUp.errors.passwordRequired'
-  if (password.value.length < MIN_PASSWORD_LENGTH)
-    return 'features.auth.signUp.errors.passwordTooShort'
-  return ''
-})
-
-const confirmPasswordErrorKey = computed(() => {
-  if (!confirmPassword.value)
-    return 'features.auth.signUp.errors.confirmPasswordRequired'
-  if (confirmPassword.value !== password.value)
-    return 'features.auth.signUp.errors.passwordMismatch'
-  return ''
-})
-
-const agreeToTermsErrorKey = computed(() =>
-  agreeToTerms.value ? '' : 'features.auth.signUp.errors.termsRequired',
-)
-
-const fullNameError = computed(() =>
-  submitted.value && fullNameErrorKey.value ? t(fullNameErrorKey.value) : '',
-)
-const emailError = computed(() =>
-  submitted.value && emailErrorKey.value ? t(emailErrorKey.value) : '',
-)
-const passwordError = computed(() =>
-  submitted.value && passwordErrorKey.value ? t(passwordErrorKey.value) : '',
-)
-const confirmPasswordError = computed(() =>
-  submitted.value && confirmPasswordErrorKey.value ? t(confirmPasswordErrorKey.value) : '',
-)
-const agreeToTermsError = computed(() =>
-  submitted.value && agreeToTermsErrorKey.value ? t(agreeToTermsErrorKey.value) : '',
-)
-
-const canSubmit = computed(() => agreeToTerms.value && !submitting.value)
-
-async function onSubmit() {
-  submitted.value = true
-
-  if (
-    fullNameErrorKey.value
-    || emailErrorKey.value
-    || passwordErrorKey.value
-    || confirmPasswordErrorKey.value
-    || agreeToTermsErrorKey.value
-    || submitting.value
-  ) {
-    return
-  }
-
-  submitting.value = true
-
-  const payload: SignUpPayload = {
-    fullName: fullName.value.trim(),
-    email: email.value.trim(),
-    password: password.value,
-    agreeToTerms: agreeToTerms.value,
-  }
-
-  // UI-only build: fake the network round-trip and report the collected values.
-  await new Promise(resolve => setTimeout(resolve, 1200))
-
-  // eslint-disable-next-line no-console
-  console.log('[SignUp] submit', payload)
-  emit('submit', payload)
-
-  submitting.value = false
-}
 </script>
 
 <template>
@@ -134,21 +81,37 @@ async function onSubmit() {
       </p>
     </header>
 
-    <form class="space-y-5" novalidate :aria-labelledby="headingId" @submit.prevent="onSubmit">
+    <DiAlert
+      v-if="succeeded"
+      variant="success"
+      soft
+      show-icon
+      role="status"
+      :title="t('features.auth.signUp.successTitle')"
+      :description="t('features.auth.signUp.successMessage')"
+    />
+
+    <form
+      v-else
+      class="space-y-5"
+      novalidate
+      :aria-labelledby="headingId"
+      @submit.prevent="handleSubmit"
+    >
       <DiInput
-        v-model="fullName"
+        v-model="fields.fullName"
         type="text"
         name="fullName"
         autocomplete="name"
         prefix-icon="user"
         :label="t('features.auth.signUp.fullNameLabel')"
         :placeholder="t('features.auth.signUp.fullNamePlaceholder')"
-        :error="fullNameError"
+        :error="errors.fullName"
         required
       />
 
       <DiInput
-        v-model="email"
+        v-model="fields.email"
         type="email"
         name="email"
         autocomplete="email"
@@ -156,12 +119,12 @@ async function onSubmit() {
         prefix-icon="mail"
         :label="t('features.auth.signUp.emailLabel')"
         :placeholder="t('features.auth.signUp.emailPlaceholder')"
-        :error="emailError"
+        :error="errors.email"
         required
       />
 
       <DiInput
-        v-model="password"
+        v-model="fields.password"
         type="password"
         name="password"
         autocomplete="new-password"
@@ -170,12 +133,12 @@ async function onSubmit() {
         :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signUp.passwordLabel')"
         :placeholder="t('features.auth.signUp.passwordPlaceholder')"
-        :error="passwordError"
+        :error="errors.password"
         required
       />
 
       <DiInput
-        v-model="confirmPassword"
+        v-model="fields.confirmPassword"
         type="password"
         name="confirmPassword"
         autocomplete="new-password"
@@ -184,11 +147,11 @@ async function onSubmit() {
         :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signUp.confirmPasswordLabel')"
         :placeholder="t('features.auth.signUp.confirmPasswordPlaceholder')"
-        :error="confirmPasswordError"
+        :error="errors.confirmPassword"
         required
       />
 
-      <DiCheckbox v-model="agreeToTerms" size="xs" :error="agreeToTermsError" required>
+      <DiCheckbox v-model="fields.agreeToTerms" size="xs" :error="errors.agreeToTerms" required>
         <template #label>
           <span class="text-xs font-medium text-base-content">
             {{ t('features.auth.signUp.agreeToTerms') }}
@@ -201,7 +164,6 @@ async function onSubmit() {
         native-type="submit"
         block
         :loading="submitting"
-        :disabled="!canSubmit"
         custom-class="mt-1"
       >
         {{ submitting ? t('features.auth.signUp.submitting') : t('features.auth.signUp.submit') }}

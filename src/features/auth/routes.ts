@@ -1,3 +1,5 @@
+import AuthBasicLayout from '@/layouts/AuthBasicLayout.vue'
+import AuthCoverLayout from '@/layouts/AuthCoverLayout.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 
 export const authRoutes = {
@@ -13,54 +15,69 @@ export const authRoutes = {
       redirect: '/auth/sign-in/basic',
     },
     {
-      path: 'sign-in/basic',
-      component: () => import('@/pages/auth/sign-in/basic.vue'),
-      meta: {
-        pageTitle: 'pages.auth.signIn.basic.title',
-      },
-    },
-    {
-      path: 'sign-in/cover',
-      component: () => import('@/pages/auth/sign-in/cover.vue'),
-      meta: {
-        pageTitle: 'pages.auth.signIn.cover.title',
-      },
-    },
-    {
       path: 'sign-up',
       redirect: '/auth/sign-up/basic',
-    },
-    {
-      path: 'sign-up/basic',
-      component: () => import('@/pages/auth/sign-up/basic.vue'),
-      meta: {
-        pageTitle: 'pages.auth.signUp.basic.title',
-      },
-    },
-    {
-      path: 'sign-up/cover',
-      component: () => import('@/pages/auth/sign-up/cover.vue'),
-      meta: {
-        pageTitle: 'pages.auth.signUp.cover.title',
-      },
     },
     {
       path: 'reset-password',
       redirect: '/auth/reset-password/basic',
     },
     {
-      path: 'reset-password/basic',
-      component: () => import('@/pages/auth/reset-password/basic.vue'),
-      meta: {
-        pageTitle: 'pages.auth.resetPassword.basic.title',
-      },
+      path: '',
+      component: AuthBasicLayout,
+      children: [
+        {
+          path: 'sign-in/basic',
+          component: () => import('@/pages/auth/sign-in/basic.vue'),
+          meta: {
+            pageTitle: 'pages.auth.signIn.basic.title',
+          },
+        },
+        {
+          path: 'sign-up/basic',
+          component: () => import('@/pages/auth/sign-up/basic.vue'),
+          meta: {
+            pageTitle: 'pages.auth.signUp.basic.title',
+          },
+        },
+        {
+          path: 'reset-password/basic',
+          component: () => import('@/pages/auth/reset-password/basic.vue'),
+          meta: {
+            pageTitle: 'pages.auth.resetPassword.basic.title',
+          },
+        },
+      ],
     },
     {
-      path: 'reset-password/cover',
-      component: () => import('@/pages/auth/reset-password/cover.vue'),
-      meta: {
-        pageTitle: 'pages.auth.resetPassword.cover.title',
-      },
+      path: '',
+      component: AuthCoverLayout,
+      children: [
+        {
+          path: 'sign-in/cover',
+          component: () => import('@/pages/auth/sign-in/cover.vue'),
+          meta: {
+            pageTitle: 'pages.auth.signIn.cover.title',
+            brandVariant: 'sign-in',
+          },
+        },
+        {
+          path: 'sign-up/cover',
+          component: () => import('@/pages/auth/sign-up/cover.vue'),
+          meta: {
+            pageTitle: 'pages.auth.signUp.cover.title',
+            brandVariant: 'sign-up',
+          },
+        },
+        {
+          path: 'reset-password/cover',
+          component: () => import('@/pages/auth/reset-password/cover.vue'),
+          meta: {
+            pageTitle: 'pages.auth.resetPassword.cover.title',
+            brandVariant: 'reset-password',
+          },
+        },
+      ],
     },
   ],
 }

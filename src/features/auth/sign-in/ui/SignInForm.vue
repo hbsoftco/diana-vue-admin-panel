@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { computed, ref, useId } from 'vue'
+import { computed, useId } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import DiCheckbox from '@/shared/ui/base/checkbox/DiCheckbox.vue'
+import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import { DiInput } from '@/shared/ui/base/input'
+
+import { emailKey, requiredKey, useAuthForm } from '../../composables/use-auth-form'
 
 export type SignInPayload = {
   email: string
@@ -18,65 +21,26 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/
+const headingId = `${useId()}-heading`
 
-const uid = useId()
-const headingId = `${uid}-heading`
-
-const email = ref('')
-const password = ref('')
-const rememberMe = ref(false)
-const submitting = ref(false)
-const submitted = ref(false)
+const { fields, errors, submitting, succeeded, handleSubmit } = useAuthForm({
+  tag: 'SignIn',
+  fields: { email: '', password: '', rememberMe: false },
+  trimFields: ['email'],
+  validators: {
+    email: emailKey(
+      'features.auth.signIn.errors.emailRequired',
+      'features.auth.signIn.errors.emailInvalid',
+    ),
+    password: requiredKey('features.auth.signIn.errors.passwordRequired', { trim: false }),
+  },
+  onSubmit: payload => emit('submit', payload),
+})
 
 const passwordToggleLabels = computed(() => ({
   show: t('features.auth.signIn.showPassword'),
   hide: t('features.auth.signIn.hidePassword'),
 }))
-
-const emailErrorKey = computed(() => {
-  const value = email.value.trim()
-  if (!value)
-    return 'features.auth.signIn.errors.emailRequired'
-  if (!EMAIL_PATTERN.test(value))
-    return 'features.auth.signIn.errors.emailInvalid'
-  return ''
-})
-
-const passwordErrorKey = computed(() =>
-  password.value ? '' : 'features.auth.signIn.errors.passwordRequired',
-)
-
-const emailError = computed(() =>
-  submitted.value && emailErrorKey.value ? t(emailErrorKey.value) : '',
-)
-const passwordError = computed(() =>
-  submitted.value && passwordErrorKey.value ? t(passwordErrorKey.value) : '',
-)
-
-async function onSubmit() {
-  submitted.value = true
-
-  if (emailErrorKey.value || passwordErrorKey.value || submitting.value)
-    return
-
-  submitting.value = true
-
-  const payload: SignInPayload = {
-    email: email.value.trim(),
-    password: password.value,
-    rememberMe: rememberMe.value,
-  }
-
-  // UI-only build: fake the network round-trip and report the collected values.
-  await new Promise(resolve => setTimeout(resolve, 1200))
-
-  // eslint-disable-next-line no-console
-  console.log('[SignIn] submit', payload)
-  emit('submit', payload)
-
-  submitting.value = false
-}
 </script>
 
 <template>
@@ -90,9 +54,25 @@ async function onSubmit() {
       </p>
     </header>
 
-    <form class="space-y-5" novalidate :aria-labelledby="headingId" @submit.prevent="onSubmit">
+    <DiAlert
+      v-if="succeeded"
+      variant="success"
+      soft
+      show-icon
+      role="status"
+      :title="t('features.auth.signIn.successTitle')"
+      :description="t('features.auth.signIn.successMessage')"
+    />
+
+    <form
+      v-else
+      class="space-y-5"
+      novalidate
+      :aria-labelledby="headingId"
+      @submit.prevent="handleSubmit"
+    >
       <DiInput
-        v-model="email"
+        v-model="fields.email"
         type="email"
         name="email"
         autocomplete="email"
@@ -100,12 +80,12 @@ async function onSubmit() {
         prefix-icon="mail"
         :label="t('features.auth.signIn.emailLabel')"
         :placeholder="t('features.auth.signIn.emailPlaceholder')"
-        :error="emailError"
+        :error="errors.email"
         required
       />
 
       <DiInput
-        v-model="password"
+        v-model="fields.password"
         type="password"
         name="password"
         autocomplete="current-password"
@@ -114,12 +94,12 @@ async function onSubmit() {
         :password-toggle-labels="passwordToggleLabels"
         :label="t('features.auth.signIn.passwordLabel')"
         :placeholder="t('features.auth.signIn.passwordPlaceholder')"
-        :error="passwordError"
+        :error="errors.password"
         required
       />
 
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <DiCheckbox v-model="rememberMe" size="xs">
+        <DiCheckbox v-model="fields.rememberMe" size="xs">
           <template #label>
             <span class="text-xs font-medium text-base-content">
               {{ t('features.auth.signIn.rememberMe') }}
@@ -128,7 +108,7 @@ async function onSubmit() {
         </DiCheckbox>
 
         <RouterLink
-          to="/auth/forgot-password"
+          to="/auth/reset-password"
           class="text-xs font-medium text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           {{ t('features.auth.signIn.forgotPassword') }}
