@@ -63,6 +63,7 @@ export const menuItems: MenuItem[] = [
       {
         id: 'form-elements',
         label: 'menu.formElements',
+        icon: 'forms',
         children: [
           {
             id: 'inputs',
@@ -178,6 +179,7 @@ export const menuItems: MenuItem[] = [
       {
         id: 'sign-in',
         label: 'menu.signIn',
+        icon: 'signIn',
         children: [
           {
             id: 'sign-in-basic',
@@ -196,6 +198,7 @@ export const menuItems: MenuItem[] = [
       {
         id: 'sign-up',
         label: 'menu.signUp',
+        icon: 'signUp',
         children: [
           {
             id: 'sign-up-basic',
@@ -214,6 +217,7 @@ export const menuItems: MenuItem[] = [
       {
         id: 'reset-password',
         label: 'menu.resetPassword',
+        icon: 'resetPassword',
         children: [
           {
             id: 'reset-password-basic',
