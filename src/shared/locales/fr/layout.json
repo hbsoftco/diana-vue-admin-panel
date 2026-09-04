@@ -41,6 +41,7 @@
     "userMenu": {
       "label": "Menu utilisateur",
       "avatarAlt": "Avatar de {name}",
+      "role": "Administrateur",
       "dashboard": "Tableau de bord",
       "profile": "Profil",
       "messages": "Messages",

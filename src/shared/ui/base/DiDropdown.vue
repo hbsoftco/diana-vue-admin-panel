@@ -40,7 +40,7 @@ const emit = defineEmits<{
  * Slots
  * ---------------------------------- */
 const slots = defineSlots<{
-  trigger?: any
+  trigger?: (props: { open: boolean }) => any
   option?: any
   header?: any
   footer?: any
@@ -258,6 +258,21 @@ function handleTriggerMouseDown(event: MouseEvent) {
   toggle()
 }
 
+function handleTriggerKeydown(event: KeyboardEvent) {
+  if (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+    event.preventDefault()
+    toggle()
+  }
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && isOpen.value) {
+    event.preventDefault()
+    close()
+    triggerRef.value?.focus()
+  }
+}
+
 function handleMouseEnter() {
   if (props.hover) {
     open()
@@ -277,16 +292,20 @@ function handleMouseLeave() {
     :class="dropdownClasses"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    @keydown="handleKeydown"
   >
     <!-- Trigger -->
     <div
       ref="triggerRef"
       role="button"
       tabindex="0"
+      aria-haspopup="menu"
+      :aria-expanded="isOpen"
       :class="triggerClass"
       @mousedown="handleTriggerMouseDown"
+      @keydown="handleTriggerKeydown"
     >
-      <slot name="trigger">
+      <slot name="trigger" :open="isOpen">
         <button :class="buttonClass">
           {{ t('components.dropdown.menu') }}
         </button>

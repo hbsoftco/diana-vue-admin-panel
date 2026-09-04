@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import userAvatarUrl from '@assets/images/user.png'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import DiAvatar from '@/shared/ui/base/avatar/DiAvatar.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
 import DiDropdown from '@/shared/ui/base/DiDropdown.vue'
 import DiIcon from '@/shared/ui/base/DiIcon.vue'
@@ -11,18 +13,21 @@ const { t } = useI18n()
 
 const user = {
   name: 'John Doe',
-  email: 'john@example.com',
 }
 
+const userRole = computed(() => t('layout.userMenu.role'))
+
+// Existing user-menu items — labels, values, order and dividers are unchanged.
+// Only per-row icons were added so each row can render icon + label like the reference.
 const menuOptions = computed(() => [
-  { label: t('layout.userMenu.dashboard'), value: 'dashboard' },
-  { label: t('layout.userMenu.profile'), value: 'profile' },
-  { label: t('layout.userMenu.messages'), value: 'messages', badge: '3' },
+  { label: t('layout.userMenu.dashboard'), value: 'dashboard', icon: 'homeOutlineRounded' },
+  { label: t('layout.userMenu.profile'), value: 'profile', icon: 'userOutlineRounded' },
+  { label: t('layout.userMenu.messages'), value: 'messages', icon: 'mail', badge: '3' },
   { divider: true },
-  { label: t('layout.userMenu.settings'), value: 'settings' },
-  { label: t('layout.userMenu.help'), value: 'help' },
+  { label: t('layout.userMenu.settings'), value: 'settings', icon: 'settingsOutlineRounded' },
+  { label: t('layout.userMenu.help'), value: 'help', icon: 'questionMarkCircle' },
   { divider: true },
-  { label: t('layout.userMenu.logout'), value: 'logout' },
+  { label: t('layout.userMenu.logout'), value: 'logout', icon: 'logout' },
 ])
 
 const userMenuLabel = computed(() => t('layout.userMenu.label'))
@@ -45,50 +50,60 @@ const lastLogin = computed(() =>
       size="md"
       position="bottom"
       align="end"
+      shadow="shadow-lg"
       border="border border-solid border-content"
     >
-      <template #trigger>
+      <!-- Trigger: avatar + name + role, toggles the panel on click / Enter / Space -->
+      <template #trigger="{ open }">
         <DiButton
           variant="ghost"
-          class="px-2"
           rounded
+          class="px-2"
           :aria-label="userMenuLabel"
           :title="userMenuLabel"
         >
-          <div>
-            <DiIcon name="user" size="md" />
-          </div>
-          <span class="hidden lg:block text-di-sm font-semibold">{{ user.name }}</span>
-          <DiIcon name="arrowDown" size="sm" />
+          <DiAvatar :src="userAvatarUrl" :alt="userAvatarAlt" size="sm" shape="circle" />
+          <span class="hidden text-start leading-tight lg:flex lg:flex-col">
+            <span class="text-di-sm font-semibold">{{ user.name }}</span>
+            <span class="text-xs text-base-content/60">{{ userRole }}</span>
+          </span>
+          <DiIcon
+            name="arrowDown"
+            size="sm"
+            class="hidden transition-transform lg:block"
+            :rotate="open ? 180 : 0"
+          />
         </DiButton>
       </template>
 
+      <!-- Panel header: repeats avatar + name + role -->
       <template #header>
         <div class="flex items-center gap-3 px-3 py-2">
-          <div class="avatar">
-            <div class="w-10 rounded-full">
-              <img src="@assets/images/user.png" :alt="userAvatarAlt">
-            </div>
-          </div>
-          <div>
-            <div class="font-semibold">
+          <DiAvatar :src="userAvatarUrl" :alt="userAvatarAlt" size="md" shape="circle" />
+          <div class="min-w-0">
+            <div class="truncate text-di-sm font-semibold text-base-content">
               {{ user.name }}
             </div>
-            <div class="text-xs opacity-70">
-              {{ user.email }}
+            <div class="truncate text-xs text-base-content/60">
+              {{ userRole }}
             </div>
           </div>
         </div>
       </template>
 
+      <!-- Rows: icon + label, hover handled by the daisyUI menu (theme-aware) -->
       <template #option="{ option, select, selected: isSelected }">
         <button
-          class="flex items-center gap-3 w-full"
-          :class="{ 'bg-base-200': isSelected }"
+          class="flex w-full items-center gap-3"
+          :class="[
+            { 'bg-base-200 font-medium': isSelected },
+            option.value === 'logout' ? 'text-error' : 'text-base-content',
+          ]"
           @click="select"
         >
+          <DiIcon :name="option.icon" size="md" class="shrink-0" />
           <span>{{ option.label }}</span>
-          <span v-if="option.badge" class="badge badge-sm ltr:ml-auto rtl:mr-auto">
+          <span v-if="option.badge" class="badge badge-primary badge-sm ltr:ml-auto rtl:mr-auto">
             {{ option.badge }}
           </span>
         </button>

@@ -41,6 +41,7 @@
     "userMenu": {
       "label": "תפריט משתמש",
       "avatarAlt": "האווטאר של {name}",
+      "role": "מנהל",
       "dashboard": "לוח בקרה",
       "profile": "פרופיל",
       "messages": "הודעות",

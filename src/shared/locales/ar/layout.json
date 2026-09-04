@@ -41,6 +41,7 @@
     "userMenu": {
       "label": "قائمة المستخدم",
       "avatarAlt": "الصورة الرمزية لـ {name}",
+      "role": "مدير",
       "dashboard": "لوحة المعلومات",
       "profile": "الملف الشخصي",
       "messages": "الرسائل",
