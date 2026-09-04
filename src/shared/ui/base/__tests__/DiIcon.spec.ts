@@ -9,8 +9,8 @@ describe('diIcon', () => {
     const coreIconNames = Object.keys(coreIconRegistry)
     const lazyIconNames = Object.keys(lazyIconRegistry)
 
-    expect(coreIconNames).toHaveLength(33)
-    expect(lazyIconNames).toHaveLength(28)
+    expect(coreIconNames).toHaveLength(48)
+    expect(lazyIconNames).toHaveLength(30)
     expect(coreIconNames.filter(name => lazyIconNames.includes(name))).toEqual([])
   })
 

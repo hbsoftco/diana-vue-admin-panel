@@ -4,6 +4,14 @@ import { defineComponent } from 'vue'
 
 import DiInput from '../input/DiInput.vue'
 
+const iconStub = defineComponent({
+  name: 'DiIcon',
+  props: { name: { type: String, required: true } },
+  template: '<i class="di-icon-stub" :data-name="name" />',
+})
+
+const withIconStub = { global: { stubs: { DiIcon: iconStub } } }
+
 describe('diInput', () => {
   it('renders a neutral DaisyUI input with md defaults', () => {
     const wrapper = mount(DiInput, { props: { placeholder: 'Your name' } })
@@ -84,7 +92,7 @@ describe('diInput', () => {
     })
 
     expect(wrapper.get('.input').classes()).toEqual(
-      expect.arrayContaining(['input-lg', '[&_svg]:size-5']),
+      expect.arrayContaining(['input-lg', '[&_svg]:size-6', 'gap-2.5']),
     )
     expect(wrapper.find('[data-test="prefix"]').exists()).toBe(true)
     expect(wrapper.find('[data-test="suffix"]').exists()).toBe(true)
@@ -122,5 +130,106 @@ describe('diInput', () => {
 
     expect(inputs[0]!.attributes('id')).not.toBe(inputs[1]!.attributes('id'))
     expect(labels[0]!.attributes('for')).toBe(inputs[0]!.attributes('id'))
+  })
+
+  it('renders prefix and suffix icons from props', () => {
+    const wrapper = mount(DiInput, {
+      ...withIconStub,
+      props: { prefixIcon: 'mail', suffixIcon: 'search' },
+    })
+    const icons = wrapper.findAll('.di-icon-stub')
+
+    expect(icons).toHaveLength(2)
+    expect(icons[0]!.attributes('data-name')).toBe('mail')
+    expect(icons[1]!.attributes('data-name')).toBe('search')
+  })
+
+  it('lets the prefix slot override the prefixIcon prop', () => {
+    const wrapper = mount(DiInput, {
+      ...withIconStub,
+      props: { prefixIcon: 'mail' },
+      slots: { prefix: '<span data-test="custom-prefix">@</span>' },
+    })
+
+    expect(wrapper.find('[data-test="custom-prefix"]').exists()).toBe(true)
+    expect(wrapper.find('.di-icon-stub').exists()).toBe(false)
+  })
+
+  it('scales the icon slot with the control size', () => {
+    const small = mount(DiInput, { props: { size: 'sm', prefixIcon: 'mail' }, ...withIconStub })
+    const large = mount(DiInput, { props: { size: 'lg', prefixIcon: 'mail' }, ...withIconStub })
+
+    expect(small.get('.input').classes()).toEqual(
+      expect.arrayContaining(['[&_svg]:size-4', 'gap-1.5']),
+    )
+    expect(large.get('.input').classes()).toEqual(
+      expect.arrayContaining(['[&_svg]:size-6', 'gap-2.5']),
+    )
+  })
+
+  it('toggles password visibility through the built-in suffix button', async () => {
+    const wrapper = mount(DiInput, {
+      ...withIconStub,
+      props: {
+        type: 'password',
+        showPasswordToggle: true,
+        passwordToggleLabels: { show: 'Show password', hide: 'Hide password' },
+      },
+    })
+    const input = wrapper.get('input')
+    const toggle = wrapper.get('button')
+
+    expect(input.attributes('type')).toBe('password')
+    expect(toggle.attributes('aria-label')).toBe('Show password')
+    expect(toggle.attributes('aria-pressed')).toBe('false')
+    expect(toggle.attributes('aria-controls')).toBe(input.attributes('id'))
+    expect(wrapper.get('.di-icon-stub').attributes('data-name')).toBe('eye')
+
+    await toggle.trigger('click')
+
+    expect(input.attributes('type')).toBe('text')
+    expect(toggle.attributes('aria-label')).toBe('Hide password')
+    expect(toggle.attributes('aria-pressed')).toBe('true')
+    expect(wrapper.get('.di-icon-stub').attributes('data-name')).toBe('eyeOff')
+    expect(wrapper.emitted('passwordVisibilityChange')).toEqual([[true]])
+
+    await toggle.trigger('click')
+    expect(input.attributes('type')).toBe('password')
+    expect(wrapper.emitted('passwordVisibilityChange')).toEqual([[true], [false]])
+  })
+
+  it('keeps the suffix slot ahead of the password toggle', () => {
+    const wrapper = mount(DiInput, {
+      ...withIconStub,
+      props: { type: 'password', showPasswordToggle: true },
+      slots: { suffix: '<span data-test="suffix-slot">x</span>' },
+    })
+
+    expect(wrapper.find('[data-test="suffix-slot"]').exists()).toBe(true)
+    expect(wrapper.find('button').exists()).toBe(false)
+  })
+
+  it('shows an error status icon only when no other suffix is present', () => {
+    const bare = mount(DiInput, {
+      ...withIconStub,
+      props: { error: 'Required', showErrorIcon: true },
+    })
+    expect(bare.get('.di-icon-stub').attributes('data-name')).toBe('xCircle')
+
+    const withToggle = mount(DiInput, {
+      ...withIconStub,
+      props: { type: 'password', showPasswordToggle: true, error: 'Required', showErrorIcon: true },
+    })
+    const names = withToggle.findAll('.di-icon-stub').map(icon => icon.attributes('data-name'))
+    expect(names).not.toContain('xCircle')
+  })
+
+  it('dims affix icons in the disabled state', () => {
+    const wrapper = mount(DiInput, {
+      ...withIconStub,
+      props: { prefixIcon: 'mail', disabled: true },
+    })
+
+    expect(wrapper.get('.di-icon-stub').element.parentElement?.className).toContain('opacity-50')
   })
 })

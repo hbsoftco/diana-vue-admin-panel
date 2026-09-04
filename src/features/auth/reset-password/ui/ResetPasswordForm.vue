@@ -4,7 +4,6 @@ import { useI18n } from 'vue-i18n'
 
 import DiAlert from '@/shared/ui/base/DiAlert.vue'
 import DiButton from '@/shared/ui/base/DiButton.vue'
-import DiIcon from '@/shared/ui/base/DiIcon.vue'
 import { DiInput } from '@/shared/ui/base/input'
 
 export type ResetPasswordPayload = {
@@ -98,15 +97,12 @@ async function onSubmit() {
         name="email"
         autocomplete="email"
         inputmode="email"
+        prefix-icon="mail"
         :label="t('features.auth.resetPassword.emailLabel')"
         :placeholder="t('features.auth.resetPassword.emailPlaceholder')"
         :error="emailError"
         required
-      >
-        <template #prefix>
-          <DiIcon name="emailOutline" />
-        </template>
-      </DiInput>
+      />
 
       <DiButton
         variant="primary"
