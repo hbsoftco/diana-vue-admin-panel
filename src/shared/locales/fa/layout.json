@@ -41,6 +41,7 @@
     "userMenu": {
       "label": "منوی کاربر",
       "avatarAlt": "آواتار {name}",
+      "role": "مدیر",
       "dashboard": "داشبورد",
       "profile": "پروفایل",
       "messages": "پیام‌ها",
