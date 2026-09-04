@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import logoUrl from '@/assets/images/logo.svg'
+import DiLogo from '@/shared/ui/base/DiLogo.vue'
 
 type Props = {
   title?: string
@@ -30,11 +30,11 @@ const { t } = useI18n()
       <circle cx="80" cy="330" r="6" class="fill-primary-content/40" />
     </svg>
 
-    <img
-      :src="logoUrl"
-      :alt="t('layout.sidebar.logoAlt')"
-      class="relative h-9 w-auto brightness-0 invert"
-    >
+    <DiLogo
+      mono
+      :label="t('layout.sidebar.logoAlt')"
+      class="relative h-9 w-auto text-primary-content"
+    />
 
     <div class="relative max-w-md">
       <p class="text-3xl font-bold leading-tight xl:text-4xl">

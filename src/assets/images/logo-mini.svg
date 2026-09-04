@@ -3,11 +3,11 @@
   <g id="di-mark">
     <!-- D -->
     <path fill="#854CFE" d="M82 15L208 14C255 14 290 53 290 109C290 169 255 205 202 212L83 213V143H140L143 168L194 167C220 164 236 143 236 112C236 82 218 65 200 64L83 63L82 15Z"/>
-    <!-- white crossbar -->
-    <rect x="2" y="94" width="202" height="38" rx="1.5" fill="#FFFFFF"/>
+    <!-- crossbar (theme-aware) -->
+    <rect x="2" y="94" width="202" height="38" rx="1.5" fill="currentColor"/>
 
     <!-- i -->
     <ellipse cx="325" cy="28" rx="30" ry="26" fill="#854CFE"/>
-    <rect x="303" y="65" width="43" height="145" rx="1.5" fill="#FFFFFF"/>
+    <rect x="303" y="65" width="43" height="145" rx="1.5" fill="currentColor"/>
   </g>
 </svg>

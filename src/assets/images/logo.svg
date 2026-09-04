@@ -3,18 +3,18 @@
   <g id="diana-logo">
     <!-- D -->
     <path fill="#854CFE" d="M98 16H262C326 17 373 65 373 133C373 205 327 254 257 273C248 275 240 275 231 275H99C97 275 96 274 96 272L97 186H175L176 211C176 214 177 217 179 219H244C282 217 307 191 307 154C307 113 283 80 244 74L98 75V16Z"/>
-    <!-- white crossbar -->
-    <rect x="2" y="122" width="261" height="51" rx="2" fill="#FFFFFF"/>
+    <!-- crossbar (theme-aware) -->
+    <rect x="2" y="122" width="261" height="51" rx="2" fill="currentColor"/>
 
     <!-- i -->
     <ellipse cx="428" cy="35" rx="38" ry="33" fill="#854CFE"/>
-    <rect x="400" y="83" width="55" height="190" rx="1.5" fill="#FFFFFF"/>
+    <rect x="400" y="83" width="55" height="190" rx="1.5" fill="currentColor"/>
 
-    <!-- white A -->
-    <path fill="#FFFFFF" d="M595 52L468 231L469 272H503L593 143L598 147L627 194L625 196H569L552 231L648 232L674 272L716 271L715 233L595 52Z"/>
+    <!-- A (theme-aware) -->
+    <path fill="currentColor" d="M595 52L468 231L469 272H503L593 143L598 147L627 194L625 196H569L552 231L648 232L674 272L716 271L715 233L595 52Z"/>
 
     <!-- N -->
-    <path fill="#FFFFFF" d="M733 67L786 67L899 194L900 68H956V237L933 272H893L785 154V271L764 273L732 271L733 67Z"/>
+    <path fill="currentColor" d="M733 67L786 67L899 194L900 68H956V237L933 272H893L785 154V271L764 273L732 271L733 67Z"/>
 
     <!-- purple A -->
     <path fill="#854CFE" fill-rule="evenodd" clip-rule="evenodd" d="M1076 66H1116L1232 269L1231 272H1174L1147 230L1032 231L1003 272H948L947 271L1076 66ZM1092 139L1058 192L1121 193L1125 190L1102 151L1092 139Z"/>
