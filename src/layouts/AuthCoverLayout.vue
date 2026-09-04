@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 
 import AuthBrandPanel from './AuthBrandPanel.vue'
 
-type AuthBrandVariant = 'sign-in' | 'sign-up' | 'reset-password' | 'two-step'
+type AuthBrandVariant = 'sign-in' | 'sign-up' | 'reset-password' | 'two-step' | 'lock-screen'
 
 const BRAND_KEYS: Record<
   AuthBrandVariant,
@@ -30,6 +30,11 @@ const BRAND_KEYS: Record<
     title: 'features.auth.twoStep.brandTitle',
     subtitle: 'features.auth.twoStep.brandSubtitle',
     artworkLabel: 'features.auth.twoStep.brandArtworkLabel',
+  },
+  'lock-screen': {
+    title: 'features.auth.lockScreen.brandTitle',
+    subtitle: 'features.auth.lockScreen.brandSubtitle',
+    artworkLabel: 'features.auth.lockScreen.brandArtworkLabel',
   },
 }
 

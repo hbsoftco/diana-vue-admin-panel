@@ -84,6 +84,9 @@
     "twoStepBasic": "Básico",
     "twoStepCover": "Con portada",
     "twoStep": "Verificación en dos pasos",
+    "lockScreenBasic": "Básico",
+    "lockScreenCover": "Con portada",
+    "lockScreen": "Pantalla bloqueada",
     "authentication": "Autenticación"
   }
 }

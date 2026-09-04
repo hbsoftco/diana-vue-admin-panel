@@ -84,6 +84,9 @@
     "twoStepBasic": "Simple",
     "twoStepCover": "Pleine page",
     "twoStep": "Vérification en deux étapes",
+    "lockScreenBasic": "Simple",
+    "lockScreenCover": "Pleine page",
+    "lockScreen": "Écran verrouillé",
     "authentication": "Authentification"
   }
 }

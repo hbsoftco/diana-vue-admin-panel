@@ -84,6 +84,9 @@
     "twoStepBasic": "Basis",
     "twoStepCover": "Titelbild",
     "twoStep": "Zweistufige Verifizierung",
+    "lockScreenBasic": "Basis",
+    "lockScreenCover": "Titelbild",
+    "lockScreen": "Sperrbildschirm",
     "authentication": "Authentifizierung"
   }
 }

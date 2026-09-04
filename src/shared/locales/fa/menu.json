@@ -84,6 +84,9 @@
     "twoStepBasic": "پایه",
     "twoStepCover": "تمام‌صفحه",
     "twoStep": "تأیید دو مرحله‌ای",
+    "lockScreenBasic": "پایه",
+    "lockScreenCover": "تمام‌صفحه",
+    "lockScreen": "قفل صفحه",
     "authentication": "احراز هویت"
   }
 }

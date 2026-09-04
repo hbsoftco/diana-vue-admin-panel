@@ -84,6 +84,9 @@
     "twoStepBasic": "أساسي",
     "twoStepCover": "بغلاف",
     "twoStep": "التحقق بخطوتين",
+    "lockScreenBasic": "أساسي",
+    "lockScreenCover": "بغلاف",
+    "lockScreen": "قفل الشاشة",
     "authentication": "المصادقة"
   }
 }

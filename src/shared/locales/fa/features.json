@@ -1389,6 +1389,26 @@
           "codeRequired": "کد تأیید را وارد کنید.",
           "codeIncomplete": "کد ۶ رقمی را به‌طور کامل وارد کنید."
         }
+      },
+      "lockScreen": {
+        "subtitle": "برای باز کردن قفل، گذرواژه خود را وارد کنید.",
+        "avatarAlt": "تصویر پروفایل {name}",
+        "passwordLabel": "گذرواژه",
+        "passwordPlaceholder": "گذرواژه خود را وارد کنید",
+        "showPassword": "نمایش گذرواژه",
+        "hidePassword": "پنهان کردن گذرواژه",
+        "submit": "باز کردن قفل",
+        "submitting": "در حال باز کردن قفل…",
+        "successTitle": "قفل باز شد",
+        "successMessage": "در حال انتقال شما به فضای کاری…",
+        "notYou": "شما نیستید؟",
+        "signInDifferent": "ورود با کاربری دیگر",
+        "brandTitle": "خوش برگشتید",
+        "brandSubtitle": "گذرواژه خود را وارد کنید تا درست از همان‌جا که مانده بودید ادامه دهید.",
+        "brandArtworkLabel": "اثر گرافیکی انتزاعی برند دیانا",
+        "errors": {
+          "passwordRequired": "گذرواژه الزامی است."
+        }
       }
     }
   }

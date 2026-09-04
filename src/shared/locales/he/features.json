@@ -1389,6 +1389,26 @@
           "codeRequired": "יש להזין את קוד האימות.",
           "codeIncomplete": "יש להזין את הקוד בן 6 הספרות במלואו."
         }
+      },
+      "lockScreen": {
+        "subtitle": "הזינו סיסמה כדי לבטל את הנעילה.",
+        "avatarAlt": "תמונת הפרופיל של {name}",
+        "passwordLabel": "סיסמה",
+        "passwordPlaceholder": "הזינו את הסיסמה שלכם",
+        "showPassword": "הצגת סיסמה",
+        "hidePassword": "הסתרת סיסמה",
+        "submit": "ביטול נעילה",
+        "submitting": "מבטל נעילה…",
+        "successTitle": "הנעילה בוטלה",
+        "successMessage": "מעביר אתכם לסביבת העבודה שלכם…",
+        "notYou": "לא אתם?",
+        "signInDifferent": "התחברות כמשתמש אחר",
+        "brandTitle": "ברוכים השבים",
+        "brandSubtitle": "הזינו את הסיסמה כדי להמשיך בדיוק מהמקום שבו הפסקתם.",
+        "brandArtworkLabel": "יצירת מיתוג מופשטת של Diana",
+        "errors": {
+          "passwordRequired": "יש להזין סיסמה."
+        }
       }
     }
   }

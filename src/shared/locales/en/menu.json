@@ -84,6 +84,9 @@
     "twoStepBasic": "Basic",
     "twoStepCover": "Cover",
     "twoStep": "Two Step Verification",
+    "lockScreenBasic": "Basic",
+    "lockScreenCover": "Cover",
+    "lockScreen": "Lock Screen",
     "authentication": "Authentication"
   }
 }

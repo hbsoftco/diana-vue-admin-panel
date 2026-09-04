@@ -7,7 +7,9 @@ import type { MenuItem, MenuNavigationItem } from '@/shared/types/models'
 
 import { menuItems } from '@/shared/config/menu'
 import { testI18n } from '@/shared/ui/base/__tests__/setup'
+import DiAvatar from '@/shared/ui/base/avatar/DiAvatar.vue'
 
+import LockScreenForm from '../lock-screen/ui/LockScreenForm.vue'
 import SignInForm from '../sign-in/ui/SignInForm.vue'
 import TwoStepVerificationForm from '../two-step/ui/TwoStepVerificationForm.vue'
 
@@ -27,6 +29,16 @@ function mountTwoStepForm() {
   })
 
   return mount(TwoStepVerificationForm, { global: { plugins: [router] } })
+}
+
+async function mountLockScreenForm(initialPath = '/auth/lock-screen/basic') {
+  const router = createRouter({
+    history: createMemoryHistory(),
+    routes: [{ path: '/:pathMatch(.*)*', component: { template: '<div />' } }],
+  })
+  await router.push(initialPath)
+
+  return mount(LockScreenForm, { global: { plugins: [router] } })
 }
 
 describe('sign-in form', () => {
@@ -144,6 +156,29 @@ describe('authentication sidebar menu entry', () => {
     expect(basic?.icon).toBe('layoutCentered')
     expect(cover?.icon).toBe('layoutSplit')
   })
+
+  it('nests "Lock Screen" under "Authentication" with Basic and Cover leaf routes', () => {
+    const authentication = findById(menuItems, 'authentication')
+    const lockScreen = authentication?.children?.find(
+      (child): child is MenuNavigationItem => child.type !== 'label' && child.id === 'lock-screen',
+    )
+
+    expect(lockScreen).toBeDefined()
+    expect(lockScreen?.icon).toBe('lockScreen')
+    expect(lockScreen?.route).toBeUndefined()
+    expect(lockScreen?.children?.map(child => child.type !== 'label' && child.route)).toEqual([
+      '/auth/lock-screen/basic',
+      '/auth/lock-screen/cover',
+    ])
+  })
+
+  it('reuses the Basic and Cover icons for the Lock Screen leaves', () => {
+    const basic = findById(menuItems, 'lock-screen-basic')
+    const cover = findById(menuItems, 'lock-screen-cover')
+
+    expect(basic?.icon).toBe('layoutCentered')
+    expect(cover?.icon).toBe('layoutSplit')
+  })
 })
 
 describe('two-step verification form', () => {
@@ -178,5 +213,39 @@ describe('two-step verification form', () => {
 
     await vi.advanceTimersByTimeAsync(30_000)
     expect(resend.attributes('disabled')).toBeUndefined()
+  })
+})
+
+describe('lock screen form', () => {
+  it('shows the locked user\'s avatar and name, and requires only a password', async () => {
+    const wrapper = await mountLockScreenForm()
+
+    expect(wrapper.findComponent(DiAvatar).exists()).toBe(true)
+    expect(wrapper.text()).toContain('John Doe')
+    expect(wrapper.get('input[name="password"]').attributes('type')).toBe('password')
+
+    await wrapper.get('form').trigger('submit')
+    expect(wrapper.text()).toContain('Password is required.')
+  })
+
+  it('toggles password visibility using DiInput\'s built-in toggle', async () => {
+    const wrapper = await mountLockScreenForm()
+    const passwordInput = wrapper.get('input[name="password"]')
+    const toggle = wrapper.get('button[type="button"]')
+
+    await toggle.trigger('click')
+    expect(passwordInput.attributes('type')).toBe('text')
+  })
+
+  it('links "sign in as a different user" to the Basic sign-in page from the Basic layout', async () => {
+    const wrapper = await mountLockScreenForm('/auth/lock-screen/basic')
+
+    expect(wrapper.get('a').attributes('href')).toBe('/auth/sign-in/basic')
+  })
+
+  it('links "sign in as a different user" to the Cover sign-in page from the Cover layout', async () => {
+    const wrapper = await mountLockScreenForm('/auth/lock-screen/cover')
+
+    expect(wrapper.get('a').attributes('href')).toBe('/auth/sign-in/cover')
   })
 })

@@ -258,6 +258,25 @@ export const menuItems: MenuItem[] = [
           },
         ],
       },
+      {
+        id: 'lock-screen',
+        label: 'menu.lockScreen',
+        icon: 'lockScreen',
+        children: [
+          {
+            id: 'lock-screen-basic',
+            label: 'menu.lockScreenBasic',
+            icon: 'layoutCentered',
+            route: '/auth/lock-screen/basic',
+          },
+          {
+            id: 'lock-screen-cover',
+            label: 'menu.lockScreenCover',
+            icon: 'layoutSplit',
+            route: '/auth/lock-screen/cover',
+          },
+        ],
+      },
     ],
   },
 ]

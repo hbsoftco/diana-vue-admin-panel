@@ -1389,6 +1389,26 @@
           "codeRequired": "أدخل رمز التحقق.",
           "codeIncomplete": "أدخل الرمز المكوّن من 6 أرقام كاملًا."
         }
+      },
+      "lockScreen": {
+        "subtitle": "أدخل كلمة المرور لإلغاء القفل.",
+        "avatarAlt": "الصورة الرمزية لـ {name}",
+        "passwordLabel": "كلمة المرور",
+        "passwordPlaceholder": "أدخل كلمة المرور",
+        "showPassword": "إظهار كلمة المرور",
+        "hidePassword": "إخفاء كلمة المرور",
+        "submit": "إلغاء القفل",
+        "submitting": "جارٍ إلغاء القفل…",
+        "successTitle": "تم إلغاء القفل",
+        "successMessage": "جارٍ تحويلك إلى مساحة عملك…",
+        "notYou": "ألست أنت؟",
+        "signInDifferent": "تسجيل الدخول بمستخدم آخر",
+        "brandTitle": "مرحبًا بعودتك",
+        "brandSubtitle": "أدخل كلمة المرور لمتابعة العمل من حيث توقفت تمامًا.",
+        "brandArtworkLabel": "عمل فني تجريدي لعلامة ديانا",
+        "errors": {
+          "passwordRequired": "كلمة المرور مطلوبة."
+        }
       }
     }
   }
