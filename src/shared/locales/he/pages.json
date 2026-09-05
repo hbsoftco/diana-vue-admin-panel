@@ -248,6 +248,18 @@
           "title": "נעילת מסך עם רקע"
         }
       }
+    },
+    "tables": {
+      "title": "טבלאות",
+      "tables": {
+        "title": "טבלאות"
+      },
+      "gridJsTables": {
+        "title": "טבלאות Grid JS"
+      },
+      "dataTables": {
+        "title": "טבלאות נתונים"
+      }
     }
   }
 }

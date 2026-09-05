@@ -43,6 +43,7 @@ import FileUploadIcon from '~icons/tabler/file-upload'
 import FormsIcon from '~icons/tabler/forms'
 import LayoutAlignMiddleIcon from '~icons/tabler/layout-align-middle'
 import LayoutColumnsIcon from '~icons/tabler/layout-columns'
+import LayoutGridIcon from '~icons/tabler/layout-grid'
 import LockQuestionIcon from '~icons/tabler/lock-question'
 import LockSquareIcon from '~icons/tabler/lock-square'
 import LoginIcon from '~icons/tabler/login'
@@ -51,6 +52,8 @@ import PasswordIcon from '~icons/tabler/password'
 import SelectIcon from '~icons/tabler/select'
 import ShieldCheckIcon from '~icons/tabler/shield-check'
 import SunIcon from '~icons/tabler/sun'
+import TableIcon from '~icons/tabler/table'
+import TableOptionsIcon from '~icons/tabler/table-options'
 import UserPlusIcon from '~icons/tabler/user-plus'
 import ComponentDropdownIcon from '~icons/tdesign/component-dropdown'
 
@@ -114,6 +117,9 @@ export const coreIconRegistry = {
   fileUpload: FileUploadIcon,
   colorPicker: ColorPickerIcon,
   otpInput: PasswordIcon,
+  table: TableIcon,
+  layoutGrid: LayoutGridIcon,
+  tableOptions: TableOptionsIcon,
 } as const
 
 // Lazy icons are limited to feature-specific screens, showcases, and playground examples.
@@ -128,6 +134,9 @@ export const lazyIconRegistry = {
   // Tabler (form field affixes)
   mail: () => import('~icons/tabler/mail'),
   lock: () => import('~icons/tabler/lock'),
+  // Tabler (table row actions)
+  pencil: () => import('~icons/tabler/pencil'),
+  download: () => import('~icons/tabler/download'),
   // Material Symbols
   settingsOutlineRounded: () => import('~icons/material-symbols/settings-outline-rounded'),
   folderOutlineRounded: () => import('~icons/material-symbols/folder-outline-rounded'),

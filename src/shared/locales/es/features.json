@@ -1410,6 +1410,92 @@
           "passwordRequired": "La contraseña es obligatoria."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} próximamente.",
+      "tables": {
+        "sections": {
+          "basic": "Tablas básicas",
+          "bordered": "Tablas con bordes",
+          "borderedPrimary": "Borde primario",
+          "borderedSuccess": "Borde de éxito",
+          "borderedWarning": "Borde de advertencia",
+          "borderless": "Tabla sin bordes",
+          "groupDividers": "Separadores de grupos",
+          "stripedRows": "Filas a rayas",
+          "stripedColumns": "Columnas a rayas",
+          "colorPrimary": "Tabla primaria",
+          "colorSecondary": "Tabla secundaria",
+          "colorWarning": "Tabla de advertencia",
+          "colorDanger": "Tabla de peligro",
+          "colorDark": "Tabla oscura",
+          "successStriped": "Tabla de éxito con filas a rayas",
+          "hoverable": "Filas con efecto hover",
+          "hoverableStriped": "Filas con hover y rayas",
+          "headPrimary": "Encabezado de tabla primario",
+          "headWarning": "Encabezado de tabla de advertencia",
+          "headSuccess": "Encabezado de tabla de éxito",
+          "headInfo": "Encabezado de tabla informativo",
+          "headSecondary": "Encabezado de tabla secundario",
+          "headDanger": "Encabezado de tabla de peligro",
+          "footer": "Tabla con pie de tabla",
+          "captionBottom": "Tabla con leyenda",
+          "captionTop": "Tabla con leyenda superior",
+          "active": "Tabla activa",
+          "small": "Tabla compacta",
+          "allVariants": "Todas las variantes de color",
+          "nesting": "Tabla anidada",
+          "responsive": "Siempre responsiva"
+        },
+        "columns": {
+          "id": "#",
+          "name": "Nombre",
+          "status": "Estado",
+          "actions": "Acciones",
+          "role": "Rol",
+          "date": "Fecha",
+          "team": "Equipo",
+          "progress": "Progreso",
+          "customer": "Cliente",
+          "amount": "Importe",
+          "item": "Artículo",
+          "qty": "Cant.",
+          "price": "Precio",
+          "subtotal": "Subtotal",
+          "total": "Total",
+          "select": "Seleccionar",
+          "category": "Categoría",
+          "revenue": "Ingresos",
+          "columnOne": "Columna 1",
+          "columnTwo": "Columna 2",
+          "order": "Pedido"
+        },
+        "statuses": {
+          "active": "Activo",
+          "inactive": "Inactivo",
+          "paid": "Pagado",
+          "cancelled": "Cancelado"
+        },
+        "actions": {
+          "download": "Descargar",
+          "delete": "Eliminar",
+          "editAria": "Editar {name}",
+          "deleteAria": "Eliminar {name}"
+        },
+        "misc": {
+          "groupAlpha": "Equipo Alfa",
+          "groupBeta": "Equipo Beta",
+          "moreMembers": "y {count} más",
+          "captionBottomText": "Tabla 1: actividad reciente del equipo.",
+          "captionTopText": "Tabla 2: resumen trimestral del proyecto.",
+          "selectRow": "Seleccionar {name}",
+          "nestedOrderItems": "Artículos del pedido",
+          "variantDefault": "Predeterminado",
+          "variantDanger": "Peligro",
+          "variantLight": "Claro",
+          "variantDark": "Oscuro"
+        }
+      }
     }
   }
 }

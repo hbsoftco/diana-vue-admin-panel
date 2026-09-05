@@ -1410,6 +1410,92 @@
           "passwordRequired": "יש להזין סיסמה."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} בקרוב.",
+      "tables": {
+        "sections": {
+          "basic": "טבלאות בסיסיות",
+          "bordered": "טבלאות עם מסגרת",
+          "borderedPrimary": "מסגרת ראשית",
+          "borderedSuccess": "מסגרת הצלחה",
+          "borderedWarning": "מסגרת אזהרה",
+          "borderless": "טבלה ללא מסגרת",
+          "groupDividers": "מפרידי קבוצות בטבלה",
+          "stripedRows": "שורות מפוספסות",
+          "stripedColumns": "עמודות מפוספסות",
+          "colorPrimary": "טבלה ראשית",
+          "colorSecondary": "טבלה משנית",
+          "colorWarning": "טבלת אזהרה",
+          "colorDanger": "טבלת סכנה",
+          "colorDark": "טבלה כהה",
+          "successStriped": "טבלת הצלחה עם שורות מפוספסות",
+          "hoverable": "שורות עם ריחוף",
+          "hoverableStriped": "שורות עם ריחוף ופספוסים",
+          "headPrimary": "כותרת טבלה ראשית",
+          "headWarning": "כותרת טבלת אזהרה",
+          "headSuccess": "כותרת טבלת הצלחה",
+          "headInfo": "כותרת טבלת מידע",
+          "headSecondary": "כותרת טבלה משנית",
+          "headDanger": "כותרת טבלת סכנה",
+          "footer": "טבלה עם כותרת תחתונה",
+          "captionBottom": "טבלה עם כיתוב",
+          "captionTop": "טבלה עם כיתוב עליון",
+          "active": "טבלה פעילה",
+          "small": "טבלה קטנה",
+          "allVariants": "כל גווני הצבע",
+          "nesting": "טבלה מקוננת",
+          "responsive": "תמיד רספונסיבית"
+        },
+        "columns": {
+          "id": "#",
+          "name": "שם",
+          "status": "סטטוס",
+          "actions": "פעולות",
+          "role": "תפקיד",
+          "date": "תאריך",
+          "team": "צוות",
+          "progress": "התקדמות",
+          "customer": "לקוח",
+          "amount": "סכום",
+          "item": "פריט",
+          "qty": "כמות",
+          "price": "מחיר",
+          "subtotal": "סכום ביניים",
+          "total": "סה\"כ",
+          "select": "בחירה",
+          "category": "קטגוריה",
+          "revenue": "הכנסה",
+          "columnOne": "עמודה 1",
+          "columnTwo": "עמודה 2",
+          "order": "הזמנה"
+        },
+        "statuses": {
+          "active": "פעיל",
+          "inactive": "לא פעיל",
+          "paid": "שולם",
+          "cancelled": "בוטל"
+        },
+        "actions": {
+          "download": "הורדה",
+          "delete": "מחיקה",
+          "editAria": "עריכת {name}",
+          "deleteAria": "מחיקת {name}"
+        },
+        "misc": {
+          "groupAlpha": "צוות אלפא",
+          "groupBeta": "צוות בטא",
+          "moreMembers": "ועוד {count}",
+          "captionBottomText": "טבלה 1: פעילות הצוות האחרונה.",
+          "captionTopText": "טבלה 2: סיכום הפרויקט הרבעוני.",
+          "selectRow": "בחירת {name}",
+          "nestedOrderItems": "פריטי ההזמנה",
+          "variantDefault": "ברירת מחדל",
+          "variantDanger": "סכנה",
+          "variantLight": "בהיר",
+          "variantDark": "כהה"
+        }
+      }
     }
   }
 }

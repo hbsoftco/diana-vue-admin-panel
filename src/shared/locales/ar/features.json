@@ -1410,6 +1410,92 @@
           "passwordRequired": "كلمة المرور مطلوبة."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} قريبًا.",
+      "tables": {
+        "sections": {
+          "basic": "الجداول الأساسية",
+          "bordered": "الجداول ذات الحدود",
+          "borderedPrimary": "حدود أساسية",
+          "borderedSuccess": "حدود نجاح",
+          "borderedWarning": "حدود تحذير",
+          "borderless": "جدول بدون حدود",
+          "groupDividers": "فواصل مجموعات الجدول",
+          "stripedRows": "صفوف مخططة",
+          "stripedColumns": "أعمدة مخططة",
+          "colorPrimary": "جدول أساسي",
+          "colorSecondary": "جدول ثانوي",
+          "colorWarning": "جدول تحذير",
+          "colorDanger": "جدول خطر",
+          "colorDark": "جدول داكن",
+          "successStriped": "جدول النجاح بصفوف مخططة",
+          "hoverable": "صفوف قابلة للتحويم",
+          "hoverableStriped": "صفوف قابلة للتحويم بصفوف مخططة",
+          "headPrimary": "رأس جدول أساسي",
+          "headWarning": "رأس جدول تحذير",
+          "headSuccess": "رأس جدول نجاح",
+          "headInfo": "رأس جدول معلوماتي",
+          "headSecondary": "رأس جدول ثانوي",
+          "headDanger": "رأس جدول خطر",
+          "footer": "جدول بتذييل",
+          "captionBottom": "جدول بعنوان توضيحي",
+          "captionTop": "جدول بعنوان توضيحي علوي",
+          "active": "جدول نشط",
+          "small": "جدول صغير",
+          "allVariants": "جميع الأنماط اللونية",
+          "nesting": "جدول متداخل",
+          "responsive": "متجاوب دائمًا"
+        },
+        "columns": {
+          "id": "#",
+          "name": "الاسم",
+          "status": "الحالة",
+          "actions": "الإجراءات",
+          "role": "الدور",
+          "date": "التاريخ",
+          "team": "الفريق",
+          "progress": "التقدم",
+          "customer": "العميل",
+          "amount": "المبلغ",
+          "item": "العنصر",
+          "qty": "الكمية",
+          "price": "السعر",
+          "subtotal": "المجموع الفرعي",
+          "total": "الإجمالي",
+          "select": "تحديد",
+          "category": "الفئة",
+          "revenue": "الإيرادات",
+          "columnOne": "العمود 1",
+          "columnTwo": "العمود 2",
+          "order": "الطلب"
+        },
+        "statuses": {
+          "active": "نشط",
+          "inactive": "غير نشط",
+          "paid": "مدفوع",
+          "cancelled": "ملغى"
+        },
+        "actions": {
+          "download": "تنزيل",
+          "delete": "حذف",
+          "editAria": "تعديل {name}",
+          "deleteAria": "حذف {name}"
+        },
+        "misc": {
+          "groupAlpha": "الفريق ألفا",
+          "groupBeta": "الفريق بيتا",
+          "moreMembers": "و{count} آخرين",
+          "captionBottomText": "الجدول 1: نشاط الفريق الأخير.",
+          "captionTopText": "الجدول 2: ملخص المشروع الفصلي.",
+          "selectRow": "تحديد {name}",
+          "nestedOrderItems": "عناصر الطلب",
+          "variantDefault": "افتراضي",
+          "variantDanger": "خطر",
+          "variantLight": "فاتح",
+          "variantDark": "داكن"
+        }
+      }
     }
   }
 }

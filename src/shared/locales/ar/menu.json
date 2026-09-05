@@ -4,7 +4,8 @@
       "main": "الرئيسية",
       "components": "المكوّنات",
       "mapsIcons": "الخرائط والأيقونات",
-      "system": "النظام"
+      "system": "النظام",
+      "tablesCharts": "الجداول والرسوم البيانية"
     },
     "dashboard": "لوحات المعلومات",
     "crm": "CRM",
@@ -87,6 +88,11 @@
     "lockScreenBasic": "أساسي",
     "lockScreenCover": "بغلاف",
     "lockScreen": "قفل الشاشة",
-    "authentication": "المصادقة"
+    "authentication": "المصادقة",
+    "tablesTables": "الجداول",
+    "tablesGridJsTables": "جداول Grid JS",
+    "tablesDataTables": "جداول البيانات",
+    "tables": "الجداول",
+    "charts": "الرسوم البيانية"
   }
 }

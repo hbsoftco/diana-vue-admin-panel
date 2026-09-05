@@ -248,6 +248,18 @@
           "title": "Pantalla bloqueada con portada"
         }
       }
+    },
+    "tables": {
+      "title": "Tablas",
+      "tables": {
+        "title": "Tablas"
+      },
+      "gridJsTables": {
+        "title": "Tablas Grid JS"
+      },
+      "dataTables": {
+        "title": "Tablas de datos"
+      }
     }
   }
 }
