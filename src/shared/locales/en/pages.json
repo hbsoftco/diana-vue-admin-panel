@@ -248,6 +248,18 @@
           "title": "Lock Screen Cover"
         }
       }
+    },
+    "tables": {
+      "title": "Tables",
+      "tables": {
+        "title": "Tables"
+      },
+      "gridJsTables": {
+        "title": "Grid JS Tables"
+      },
+      "dataTables": {
+        "title": "Data Tables"
+      }
     }
   }
 }

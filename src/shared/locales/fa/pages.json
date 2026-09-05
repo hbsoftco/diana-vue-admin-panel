@@ -248,6 +248,18 @@
           "title": "قفل صفحه تمام‌صفحه"
         }
       }
+    },
+    "tables": {
+      "title": "جدول‌ها",
+      "tables": {
+        "title": "جدول‌ها"
+      },
+      "gridJsTables": {
+        "title": "جدول‌های Grid JS"
+      },
+      "dataTables": {
+        "title": "جدول‌های داده"
+      }
     }
   }
 }

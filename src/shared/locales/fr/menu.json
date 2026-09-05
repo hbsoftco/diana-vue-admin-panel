@@ -4,7 +4,8 @@
       "main": "Principal",
       "components": "Composants",
       "mapsIcons": "Cartes et icônes",
-      "system": "Système"
+      "system": "Système",
+      "tablesCharts": "Tableaux et graphiques"
     },
     "dashboard": "Tableaux de bord",
     "crm": "CRM",
@@ -87,6 +88,11 @@
     "lockScreenBasic": "Simple",
     "lockScreenCover": "Pleine page",
     "lockScreen": "Écran verrouillé",
-    "authentication": "Authentification"
+    "authentication": "Authentification",
+    "tablesTables": "Tableaux",
+    "tablesGridJsTables": "Tableaux Grid JS",
+    "tablesDataTables": "Tableaux de données",
+    "tables": "Tableaux",
+    "charts": "Graphiques"
   }
 }

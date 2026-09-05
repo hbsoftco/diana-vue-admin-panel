@@ -248,6 +248,18 @@
           "title": "Sperrbildschirm mit Titelbild"
         }
       }
+    },
+    "tables": {
+      "title": "Tabellen",
+      "tables": {
+        "title": "Tabellen"
+      },
+      "gridJsTables": {
+        "title": "Grid-JS-Tabellen"
+      },
+      "dataTables": {
+        "title": "Datentabellen"
+      }
     }
   }
 }

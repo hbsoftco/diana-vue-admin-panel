@@ -1410,6 +1410,92 @@
           "passwordRequired": "Password is required."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} is coming soon.",
+      "tables": {
+        "sections": {
+          "basic": "Basic Tables",
+          "bordered": "Bordered Tables",
+          "borderedPrimary": "Bordered Primary",
+          "borderedSuccess": "Bordered Success",
+          "borderedWarning": "Bordered Warning",
+          "borderless": "Table Without Borders",
+          "groupDividers": "Table Group Dividers",
+          "stripedRows": "Striped Rows",
+          "stripedColumns": "Striped Columns",
+          "colorPrimary": "Primary Table",
+          "colorSecondary": "Secondary Table",
+          "colorWarning": "Warning Table",
+          "colorDanger": "Danger Table",
+          "colorDark": "Dark Table",
+          "successStriped": "Success Table With Striped Rows",
+          "hoverable": "Hoverable Rows",
+          "hoverableStriped": "Hoverable Rows With Striped Rows",
+          "headPrimary": "Primary Table Head",
+          "headWarning": "Warning Table Head",
+          "headSuccess": "Success Table Head",
+          "headInfo": "Info Table Head",
+          "headSecondary": "Secondary Table Head",
+          "headDanger": "Danger Table Head",
+          "footer": "Table With Footer",
+          "captionBottom": "Table With Caption",
+          "captionTop": "Table With Top Caption",
+          "active": "Active Table",
+          "small": "Small Table",
+          "allVariants": "All Color Variants",
+          "nesting": "Nested Table",
+          "responsive": "Always Responsive"
+        },
+        "columns": {
+          "id": "#",
+          "name": "Name",
+          "status": "Status",
+          "actions": "Actions",
+          "role": "Role",
+          "date": "Date",
+          "team": "Team",
+          "progress": "Progress",
+          "customer": "Customer",
+          "amount": "Amount",
+          "item": "Item",
+          "qty": "Qty",
+          "price": "Price",
+          "subtotal": "Subtotal",
+          "total": "Total",
+          "select": "Select",
+          "category": "Category",
+          "revenue": "Revenue",
+          "columnOne": "Column 1",
+          "columnTwo": "Column 2",
+          "order": "Order"
+        },
+        "statuses": {
+          "active": "Active",
+          "inactive": "Inactive",
+          "paid": "Paid",
+          "cancelled": "Cancelled"
+        },
+        "actions": {
+          "download": "Download",
+          "delete": "Delete",
+          "editAria": "Edit {name}",
+          "deleteAria": "Delete {name}"
+        },
+        "misc": {
+          "groupAlpha": "Team Alpha",
+          "groupBeta": "Team Beta",
+          "moreMembers": "+{count} more",
+          "captionBottomText": "Table 1: Recent team activity.",
+          "captionTopText": "Table 2: Quarterly project summary.",
+          "selectRow": "Select {name}",
+          "nestedOrderItems": "Order items",
+          "variantDefault": "Default",
+          "variantDanger": "Danger",
+          "variantLight": "Light",
+          "variantDark": "Dark"
+        }
+      }
     }
   }
 }

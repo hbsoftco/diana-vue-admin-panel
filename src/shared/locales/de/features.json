@@ -1410,6 +1410,92 @@
           "passwordRequired": "Passwort ist erforderlich."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} folgt in Kürze.",
+      "tables": {
+        "sections": {
+          "basic": "Einfache Tabellen",
+          "bordered": "Tabellen mit Rahmen",
+          "borderedPrimary": "Primärer Rahmen",
+          "borderedSuccess": "Erfolgsrahmen",
+          "borderedWarning": "Warnrahmen",
+          "borderless": "Tabelle ohne Rahmen",
+          "groupDividers": "Gruppentrenner in der Tabelle",
+          "stripedRows": "Gestreifte Zeilen",
+          "stripedColumns": "Gestreifte Spalten",
+          "colorPrimary": "Primäre Tabelle",
+          "colorSecondary": "Sekundäre Tabelle",
+          "colorWarning": "Warntabelle",
+          "colorDanger": "Gefahrentabelle",
+          "colorDark": "Dunkle Tabelle",
+          "successStriped": "Erfolgstabelle mit gestreiften Zeilen",
+          "hoverable": "Zeilen mit Hover-Effekt",
+          "hoverableStriped": "Zeilen mit Hover-Effekt und Streifen",
+          "headPrimary": "Primärer Tabellenkopf",
+          "headWarning": "Warn-Tabellenkopf",
+          "headSuccess": "Erfolgs-Tabellenkopf",
+          "headInfo": "Info-Tabellenkopf",
+          "headSecondary": "Sekundärer Tabellenkopf",
+          "headDanger": "Gefahren-Tabellenkopf",
+          "footer": "Tabelle mit Fußzeile",
+          "captionBottom": "Tabelle mit Beschriftung",
+          "captionTop": "Tabelle mit oberer Beschriftung",
+          "active": "Aktive Tabelle",
+          "small": "Kompakte Tabelle",
+          "allVariants": "Alle Farbvarianten",
+          "nesting": "Verschachtelte Tabelle",
+          "responsive": "Immer responsiv"
+        },
+        "columns": {
+          "id": "#",
+          "name": "Name",
+          "status": "Status",
+          "actions": "Aktionen",
+          "role": "Rolle",
+          "date": "Datum",
+          "team": "Team",
+          "progress": "Fortschritt",
+          "customer": "Kunde",
+          "amount": "Betrag",
+          "item": "Artikel",
+          "qty": "Menge",
+          "price": "Preis",
+          "subtotal": "Zwischensumme",
+          "total": "Gesamt",
+          "select": "Auswählen",
+          "category": "Kategorie",
+          "revenue": "Umsatz",
+          "columnOne": "Spalte 1",
+          "columnTwo": "Spalte 2",
+          "order": "Bestellung"
+        },
+        "statuses": {
+          "active": "Aktiv",
+          "inactive": "Inaktiv",
+          "paid": "Bezahlt",
+          "cancelled": "Storniert"
+        },
+        "actions": {
+          "download": "Herunterladen",
+          "delete": "Löschen",
+          "editAria": "{name} bearbeiten",
+          "deleteAria": "{name} löschen"
+        },
+        "misc": {
+          "groupAlpha": "Team Alpha",
+          "groupBeta": "Team Beta",
+          "moreMembers": "und {count} weitere",
+          "captionBottomText": "Tabelle 1: Aktuelle Teamaktivität.",
+          "captionTopText": "Tabelle 2: Vierteljährliche Projektübersicht.",
+          "selectRow": "{name} auswählen",
+          "nestedOrderItems": "Bestellpositionen",
+          "variantDefault": "Standard",
+          "variantDanger": "Gefahr",
+          "variantLight": "Hell",
+          "variantDark": "Dunkel"
+        }
+      }
     }
   }
 }

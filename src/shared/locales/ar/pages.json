@@ -248,6 +248,18 @@
           "title": "قفل الشاشة بالغلاف"
         }
       }
+    },
+    "tables": {
+      "title": "الجداول",
+      "tables": {
+        "title": "الجداول"
+      },
+      "gridJsTables": {
+        "title": "جداول Grid JS"
+      },
+      "dataTables": {
+        "title": "جداول البيانات"
+      }
     }
   }
 }

@@ -4,7 +4,8 @@
       "main": "Main",
       "components": "Components",
       "mapsIcons": "Maps & Icons",
-      "system": "System"
+      "system": "System",
+      "tablesCharts": "Tables & Charts"
     },
     "dashboard": "Dashboards",
     "crm": "CRM",
@@ -87,6 +88,11 @@
     "lockScreenBasic": "Basic",
     "lockScreenCover": "Cover",
     "lockScreen": "Lock Screen",
-    "authentication": "Authentication"
+    "authentication": "Authentication",
+    "tablesTables": "Tables",
+    "tablesGridJsTables": "Grid JS Tables",
+    "tablesDataTables": "Data Tables",
+    "tables": "Tables",
+    "charts": "Charts"
   }
 }

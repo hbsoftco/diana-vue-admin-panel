@@ -248,6 +248,18 @@
           "title": "Écran verrouillé pleine page"
         }
       }
+    },
+    "tables": {
+      "title": "Tableaux",
+      "tables": {
+        "title": "Tableaux"
+      },
+      "gridJsTables": {
+        "title": "Tableaux Grid JS"
+      },
+      "dataTables": {
+        "title": "Tableaux de données"
+      }
     }
   }
 }

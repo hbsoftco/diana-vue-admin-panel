@@ -279,4 +279,38 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
+  { type: 'label', id: 'tables-charts-label', label: 'menu.groups.tablesCharts' },
+  {
+    id: 'tables',
+    label: 'menu.tables',
+    icon: 'table',
+    children: [
+      {
+        id: 'tables-tables',
+        label: 'menu.tablesTables',
+        icon: 'table',
+        route: '/tables/tables',
+      },
+      {
+        id: 'tables-grid-js-tables',
+        label: 'menu.tablesGridJsTables',
+        icon: 'layoutGrid',
+        route: '/tables/grid-js-tables',
+      },
+      {
+        id: 'tables-data-tables',
+        label: 'menu.tablesDataTables',
+        icon: 'tableOptions',
+        route: '/tables/data-tables',
+      },
+    ],
+  },
+  // Reserved for a future task, following the same "reserve the slot, keep it
+  // out of the live menu" approach already used above for maps-icons-icons.
+  // {
+  //   id: 'charts',
+  //   label: 'menu.charts',
+  //   icon: 'chartBar',
+  //   disabled: true,
+  // },
 ]

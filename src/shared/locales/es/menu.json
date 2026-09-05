@@ -4,7 +4,8 @@
       "main": "Principal",
       "components": "Componentes",
       "mapsIcons": "Mapas e iconos",
-      "system": "Sistema"
+      "system": "Sistema",
+      "tablesCharts": "Tablas y gráficos"
     },
     "dashboard": "Paneles",
     "crm": "CRM",
@@ -87,6 +88,11 @@
     "lockScreenBasic": "Básico",
     "lockScreenCover": "Con portada",
     "lockScreen": "Pantalla bloqueada",
-    "authentication": "Autenticación"
+    "authentication": "Autenticación",
+    "tablesTables": "Tablas",
+    "tablesGridJsTables": "Tablas Grid JS",
+    "tablesDataTables": "Tablas de datos",
+    "tables": "Tablas",
+    "charts": "Gráficos"
   }
 }

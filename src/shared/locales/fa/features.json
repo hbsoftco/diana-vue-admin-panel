@@ -1410,6 +1410,92 @@
           "passwordRequired": "گذرواژه الزامی است."
         }
       }
+    },
+    "tables": {
+      "comingSoon": "{name} به‌زودی ارائه می‌شود.",
+      "tables": {
+        "sections": {
+          "basic": "جدول‌های پایه",
+          "bordered": "جدول‌های حاشیه‌دار",
+          "borderedPrimary": "حاشیه‌دار اصلی",
+          "borderedSuccess": "حاشیه‌دار موفقیت",
+          "borderedWarning": "حاشیه‌دار هشدار",
+          "borderless": "جدول بدون حاشیه",
+          "groupDividers": "جداکننده گروه‌های جدول",
+          "stripedRows": "ردیف‌های راه‌راه",
+          "stripedColumns": "ستون‌های راه‌راه",
+          "colorPrimary": "جدول اصلی",
+          "colorSecondary": "جدول ثانویه",
+          "colorWarning": "جدول هشدار",
+          "colorDanger": "جدول خطر",
+          "colorDark": "جدول تیره",
+          "successStriped": "جدول موفقیت با ردیف‌های راه‌راه",
+          "hoverable": "ردیف‌های قابل هاور",
+          "hoverableStriped": "ردیف‌های قابل هاور با ردیف‌های راه‌راه",
+          "headPrimary": "سربرگ جدول اصلی",
+          "headWarning": "سربرگ جدول هشدار",
+          "headSuccess": "سربرگ جدول موفقیت",
+          "headInfo": "سربرگ جدول اطلاعاتی",
+          "headSecondary": "سربرگ جدول ثانویه",
+          "headDanger": "سربرگ جدول خطر",
+          "footer": "جدول با پاورقی",
+          "captionBottom": "جدول با عنوان توضیحی",
+          "captionTop": "جدول با عنوان توضیحی بالا",
+          "active": "جدول فعال",
+          "small": "جدول کوچک",
+          "allVariants": "همه گونه‌های رنگی",
+          "nesting": "جدول تودرتو",
+          "responsive": "همیشه واکنش‌گرا"
+        },
+        "columns": {
+          "id": "#",
+          "name": "نام",
+          "status": "وضعیت",
+          "actions": "عملیات",
+          "role": "نقش",
+          "date": "تاریخ",
+          "team": "تیم",
+          "progress": "پیشرفت",
+          "customer": "مشتری",
+          "amount": "مبلغ",
+          "item": "مورد",
+          "qty": "تعداد",
+          "price": "قیمت",
+          "subtotal": "جمع جزء",
+          "total": "جمع کل",
+          "select": "انتخاب",
+          "category": "دسته‌بندی",
+          "revenue": "درآمد",
+          "columnOne": "ستون ۱",
+          "columnTwo": "ستون ۲",
+          "order": "سفارش"
+        },
+        "statuses": {
+          "active": "فعال",
+          "inactive": "غیرفعال",
+          "paid": "پرداخت‌شده",
+          "cancelled": "لغوشده"
+        },
+        "actions": {
+          "download": "دانلود",
+          "delete": "حذف",
+          "editAria": "ویرایش {name}",
+          "deleteAria": "حذف {name}"
+        },
+        "misc": {
+          "groupAlpha": "تیم آلفا",
+          "groupBeta": "تیم بتا",
+          "moreMembers": "و {count} نفر دیگر",
+          "captionBottomText": "جدول ۱: فعالیت اخیر تیم.",
+          "captionTopText": "جدول ۲: خلاصه فصلی پروژه.",
+          "selectRow": "انتخاب {name}",
+          "nestedOrderItems": "اقلام سفارش",
+          "variantDefault": "پیش‌فرض",
+          "variantDanger": "خطر",
+          "variantLight": "روشن",
+          "variantDark": "تیره"
+        }
+      }
     }
   }
 }

@@ -4,7 +4,8 @@
       "main": "ראשי",
       "components": "רכיבים",
       "mapsIcons": "מפות וסמלים",
-      "system": "מערכת"
+      "system": "מערכת",
+      "tablesCharts": "טבלאות ותרשימים"
     },
     "dashboard": "לוחות בקרה",
     "crm": "CRM",
@@ -87,6 +88,11 @@
     "lockScreenBasic": "בסיסי",
     "lockScreenCover": "עם רקע",
     "lockScreen": "נעילת מסך",
-    "authentication": "אימות"
+    "authentication": "אימות",
+    "tablesTables": "טבלאות",
+    "tablesGridJsTables": "טבלאות Grid JS",
+    "tablesDataTables": "טבלאות נתונים",
+    "tables": "טבלאות",
+    "charts": "תרשימים"
   }
 }
